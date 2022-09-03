@@ -1,7 +1,7 @@
 import {
 	AbsoluteFill,
+	Img,
 	interpolate,
-	Sequence,
 	spring,
 	useCurrentFrame,
 	useVideoConfig,
@@ -13,7 +13,8 @@ import {LyonJSLogo} from '../components/LyonJSLogo';
 export const Sponsor: React.FC<{
 	companyName?: string;
 	backgroundImg?: string;
-}> = ({companyName = 'Evilcorp', backgroundImg}) => {
+	sponsorLogo?: string;
+}> = ({companyName = 'Evilcorp', backgroundImg, sponsorLogo}) => {
 	const frame = useCurrentFrame();
 	const {fps, height} = useVideoConfig();
 
@@ -40,6 +41,16 @@ export const Sponsor: React.FC<{
 	const titleDeblur = interpolate(frame - TITLE_DELAY, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
+
+	const SPONSOR_LOGO_DELAY = 30;
+	const sponsorOpacity = interpolate(
+		frame - SPONSOR_LOGO_DELAY,
+		[0, 20],
+		[0, 1],
+		{
+			extrapolateRight: 'clamp',
+		}
+	);
 
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white'}}>
@@ -82,6 +93,18 @@ export const Sponsor: React.FC<{
 				>
 					{companyName}
 				</Title>
+
+				{sponsorLogo && (
+					<Img
+						style={{
+							opacity: sponsorOpacity,
+							position: 'absolute',
+							right: 20,
+							bottom: 20,
+						}}
+						src={sponsorLogo}
+					/>
+				)}
 			</AbsoluteFill>
 		</AbsoluteFill>
 	);

@@ -43,6 +43,10 @@ export const RemotionVideo: React.FC = () => {
 					id="Sponsor"
 					fps={30}
 					durationInFrames={120}
+					defaultProps={{
+						sponsorLogo:
+							'https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg',
+					}}
 				/>
 			</Folder>
 		</>

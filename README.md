@@ -37,6 +37,10 @@ When you want to generate a video for announcing the sponsor of an event, you wa
 - [Workflow to trigger for sponsor](https://github.com/lyonjs/social-video-generator/actions/workflows/render-sponsor.yml)
 - [Example](https://github.com/lyonjs/social-video-generator/issues/1#issuecomment-1236144787)
 
+Available parameters:
+- `companyName` 
+- `backgroundImg`
+
 ## Docs of Remotion
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).

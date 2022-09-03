@@ -1,37 +1,50 @@
-import {Composition} from 'remotion';
-import {HelloWorld} from './HelloWorld';
-import {Logo} from './HelloWorld/Logo';
-
-// Each <Composition> is an entry in the sidebar!
+import {Composition, Folder} from 'remotion';
+import {Sponsor} from './sponsor/Sponsor';
+import {LyonJSLogo} from './components/LyonJSLogo';
+import {ImageBackground} from './components/ImageBackground';
+import {Title} from './components/Title';
 
 export const RemotionVideo: React.FC = () => {
 	return (
 		<>
-			<Composition
-				// You can take the "id" to render a video:
-				// npx remotion render src/index.tsx <id> out/video.mp4
-				id="HelloWorld"
-				component={HelloWorld}
-				durationInFrames={150}
-				fps={30}
-				width={1920}
-				height={1080}
-				// You can override these props for each render:
-				// https://www.remotion.dev/docs/parametrized-rendering
-				defaultProps={{
-					titleText: 'Welcome to Remotion',
-					titleColor: 'black',
-				}}
-			/>
-			{/* Mount any React component to make it show up in the sidebar and work on it individually! */}
-			<Composition
-				id="OnlyLogo"
-				component={Logo}
-				durationInFrames={150}
-				fps={30}
-				width={1920}
-				height={1080}
-			/>
+			<Folder name="Components">
+				<Composition
+					component={LyonJSLogo}
+					width={1200}
+					height={1200}
+					id="LyonJSLogo"
+					fps={30}
+					durationInFrames={120}
+				/>
+				<Composition
+					component={ImageBackground}
+					width={1200}
+					height={1200}
+					id="ImageBackground"
+					fps={30}
+					durationInFrames={120}
+					defaultProps={{animated: true}}
+				/>
+				<Composition
+					component={Title}
+					width={1200}
+					height={1200}
+					id="Title"
+					fps={30}
+					durationInFrames={120}
+					defaultProps={{children: 'Hello'}}
+				/>
+			</Folder>
+			<Folder name="Sponsor">
+				<Composition
+					component={Sponsor}
+					width={1200}
+					height={1200}
+					id="Sponsor"
+					fps={30}
+					durationInFrames={120}
+				/>
+			</Folder>
 		</>
 	);
 };

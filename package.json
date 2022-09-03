@@ -23,6 +23,7 @@
 	"devDependencies": {
 		"@types/react": "^18.0.6",
 		"@types/web": "^0.0.61",
+		"husky": "^8.0.1",
 		"prettier": "^2.7.1"
 	}
 }

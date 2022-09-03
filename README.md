@@ -1,6 +1,9 @@
 # LyonJS meetup social trailer videos generator
 
-Welcome to your Remotion project!
+![Twitter](https://img.shields.io/twitter/follow/LyonJS?style=social)
+
+This github project use Remotion to generate video for LyonJS social network.
+We could generate video directly with Github Action workflows.
 
 ## Commands
 

@@ -22,25 +22,20 @@ pnpm start
 pnpm run upgrade
 ```
 
-## Available Trailer to render
-
-- Sponsor
+**Format code with prettier**
 
 ```console
-yarn sponsor
+pnpm format
 ```
 
-- Meetup / Location + Date
+## Available trailers to render
 
-```console
-yarn meetup
-```
+### Sponsor video presentation
 
-- Talk & Speakers
+When you want to generate a video for announcing the sponsor of an event, you wan use this workflow
 
-```console
-yarn talk
-```
+- [Workflow to trigger for sponsor](https://github.com/lyonjs/social-video-generator/actions/workflows/render-sponsor.yml)
+- [Example](https://github.com/lyonjs/social-video-generator/issues/1#issuecomment-1236144787)
 
 ## Docs of Remotion
 

@@ -2,14 +2,19 @@ import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import defaultBackgroundImage from '../assets/defaultBackgroundImage.jpeg';
 
-export const ImageBackground: React.FC<{src?: string; animated?: boolean}> = ({
+export const ImageBackground: React.FC<{
+	src?: string;
+	animated?: boolean;
+	animationDuration?: number;
+}> = ({
 	src = defaultBackgroundImage,
 	animated = false,
+	animationDuration = 60,
 }) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const ANIMATION_DURATION = 60;
-	const ANIMATION_DELAY = 30;
+	const ANIMATION_DURATION = animationDuration;
+	const ANIMATION_DELAY = ANIMATION_DURATION / 2;
 	let blur = 0;
 	let greyscale = 0;
 

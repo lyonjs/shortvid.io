@@ -46,6 +46,20 @@ Available parameters:
 - `backgroundImg` Url of an image for background
 - `sponsorLogo` Url of sponsor Logo
 
+### Talk video presentation
+
+When you want to generate a video for announcing a specific talk
+
+- [Workflow to trigger for sponsor](https://github.com/lyonjs/social-video-generator/actions/workflows/render-talk.yml)
+- [Example](https://github.com/lyonjs/social-video-generator/issues/1)
+
+Available parameters:
+
+- `speakersNames`: string;
+- `talkTitle`: string;
+- `speakerPicture?`: string;
+- `titleSize?`: string;
+
 ## Docs of Remotion
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).

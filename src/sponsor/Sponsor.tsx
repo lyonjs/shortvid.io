@@ -10,10 +10,10 @@ import {ImageBackground} from '../components/ImageBackground';
 import {Title} from '../components/Title';
 import {LyonJSLogo} from '../components/LyonJSLogo';
 
-export const Sponsor: React.FC<{companyName?: string, backgroundImg?: string}> = ({
-	companyName = 'Evilcorp',
-	backgroundImg,
-}) => {
+export const Sponsor: React.FC<{
+	companyName?: string;
+	backgroundImg?: string;
+}> = ({companyName = 'Evilcorp', backgroundImg}) => {
 	const frame = useCurrentFrame();
 	const {fps, height} = useVideoConfig();
 
@@ -43,7 +43,7 @@ export const Sponsor: React.FC<{companyName?: string, backgroundImg?: string}> =
 
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white'}}>
-			<ImageBackground animated src={backgroundImg}/>
+			<ImageBackground animated src={backgroundImg} />
 			<LyonJSLogo
 				style={{
 					position: 'absolute',

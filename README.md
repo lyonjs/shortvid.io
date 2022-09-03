@@ -38,7 +38,8 @@ When you want to generate a video for announcing the sponsor of an event, you wa
 - [Example](https://github.com/lyonjs/social-video-generator/issues/1#issuecomment-1236144787)
 
 Available parameters:
-- `companyName` 
+
+- `companyName`
 - `backgroundImg`
 
 ## Docs of Remotion

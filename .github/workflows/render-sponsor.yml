@@ -6,6 +6,9 @@ on:
         description: "What is the name of the sponsor company?"
         required: true
         default: "Example"
+      backgroundImg:
+        deprecationMessage: "If you want to use custom image for background"
+        required: false
 jobs:
   render:
     name: Render video

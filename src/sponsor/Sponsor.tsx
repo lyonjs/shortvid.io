@@ -22,8 +22,8 @@ export const Sponsor: React.FC<{
 	const lyonJSLogoAppear = spring({
 		frame: frame - LYONJS_DELAY,
 		fps,
-		from: -700,
-		to: -100,
+		from: -400,
+		to: 50,
 		durationInFrames: 30,
 	});
 	const lyonJSLogoDeblur = interpolate(frame - LYONJS_DELAY, [0, 20], [5, 0], {
@@ -58,15 +58,19 @@ export const Sponsor: React.FC<{
 			<LyonJSLogo
 				style={{
 					position: 'absolute',
-					top: 10,
+					top: 60,
 					right: lyonJSLogoAppear,
-					width: '80%',
-					height: 'auto',
+					width: 'auto',
+					height: '300px',
 					filter: `blur(${lyonJSLogoDeblur}px)`,
 				}}
 			/>
 
-			<AbsoluteFill>
+			<AbsoluteFill
+				style={{
+					justifyContent: 'flex-end',
+				}}
+			>
 				<Title
 					style={{
 						fontSize: 70,
@@ -81,26 +85,28 @@ export const Sponsor: React.FC<{
 					Meetup sponsorisé par:
 				</Title>
 
-				<Title
-					style={{
-						color: 'white',
-						position: 'absolute',
-						left: '10%',
-						top: height / 2,
-						opacity: titleOpacity,
-						filter: `blur(${titleDeblur}px)`,
-					}}
-				>
-					{companyName}
-				</Title>
+				{!sponsorLogo && (
+					<Title
+						style={{
+							color: 'white',
+							position: 'absolute',
+							left: '10%',
+							top: height / 2,
+							opacity: titleOpacity,
+							filter: `blur(${titleDeblur}px)`,
+						}}
+					>
+						{companyName}
+					</Title>
+				)}
 
 				{sponsorLogo && (
 					<Img
 						style={{
+							display: 'block',
 							opacity: sponsorOpacity,
-							position: 'absolute',
-							right: 20,
-							bottom: 20,
+							margin: '0 auto 100px',
+							height: '500px',
 						}}
 						src={sponsorLogo}
 					/>

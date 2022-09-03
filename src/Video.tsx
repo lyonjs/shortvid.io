@@ -48,6 +48,17 @@ export const RemotionVideo: React.FC = () => {
 							'https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg',
 					}}
 				/>
+				<Composition
+					component={Sponsor}
+					width={1200}
+					height={1200}
+					id="SponsorWithoutLogo"
+					fps={30}
+					durationInFrames={120}
+					defaultProps={{
+						companyName: 'EvilCorp',
+					}}
+				/>
 			</Folder>
 		</>
 	);

@@ -42,8 +42,9 @@ When you want to generate a video for announcing the sponsor of an event, you wa
 
 Available parameters:
 
-- `companyName`
-- `backgroundImg`
+- `companyName` Name of the company
+- `backgroundImg` Url of an image for background
+- `sponsorLogo` Url of sponsor Logo
 
 ## Docs of Remotion
 

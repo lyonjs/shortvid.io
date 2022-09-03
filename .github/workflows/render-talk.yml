@@ -34,7 +34,7 @@ jobs:
       - run: echo $WORKFLOW_INPUT > input-props.json
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
-      - run: pnpm remotion render src/index.tsx Talk out/talk-${{github.run_id}}.mp4 --props="./input-props.json"
+      - run: pnpm remotion render src/index.tsx TalkWithoutPicture out/talk-${{github.run_id}}.mp4 --props="./input-props.json"
       - uses: actions/upload-artifact@v2
         with:
           name: talk-${{github.run_id}}

@@ -62,7 +62,7 @@ jobs:
         env:
           WORKFLOW_INPUT: ${{ toJson(matrix.event.inputs) }}
       - run: pnpm remotion render src/index.tsx ${{matrix.composition.name}} out/${{matrix.composition.name}}.mp4 --props="./input-props.json"
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: video
           path: out

@@ -34,7 +34,7 @@ jobs:
         name: 🎬 Generating video
       - run: pnpm remotion still src/index.tsx Sponsor --props="./input-props.json" --frame 119
         name: 📷 Generating last image
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: sponsor-${{github.event.inputs.companyName}}
           path: out

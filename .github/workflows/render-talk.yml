@@ -39,7 +39,7 @@ jobs:
         name: 🎬 Generating video
       - run: pnpm remotion still src/index.tsx TalkWithoutPicture --props="./input-props.json" --frame 119
         name: 📷 Generating last image
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: talk-${{github.run_id}}
           path: out

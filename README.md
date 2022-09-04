@@ -10,6 +10,9 @@ We could generate video directly with Github Action workflows.
 
 ## Available trailers to render
 
+In order to let you generate videos without installing this repository locally, you can use Github Action workflows to generate video and image based on an input form.
+Take a look at the job artifact to get generated video and image.
+
 ### Sponsor video presentation
 
 When you want to generate a video for announcing the sponsor of an event, you wan use this workflow

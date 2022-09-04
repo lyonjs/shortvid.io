@@ -32,9 +32,13 @@ jobs:
           version: 7
           run_install: true
       - run: echo $WORKFLOW_INPUT > input-props.json
+        name: Preparing props
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
       - run: pnpm remotion render src/index.tsx TalkWithoutPicture out/talk-${{github.run_id}}.mp4 --props="./input-props.json"
+        name: 🎬 Generating video
+      - run: pnpm remotion still src/index.tsx TalkWithoutPicture --props="./input-props.json" --frame 119
+        name: 📷 Generating last image
       - uses: actions/upload-artifact@v2
         with:
           name: talk-${{github.run_id}}

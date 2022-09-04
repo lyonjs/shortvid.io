@@ -1,35 +1,12 @@
 # LyonJS meetup social trailer videos generator
 
+[![🚧 Integration](https://github.com/lyonjs/social-video-generator/actions/workflows/integration.yml/badge.svg)](https://github.com/lyonjs/social-video-generator/actions/workflows/integration.yml)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/lyonjs/social-video-generator/main)
+![GitHub](https://img.shields.io/github/license/lyonjs/social-video-generator)
 ![Twitter](https://img.shields.io/twitter/follow/LyonJS?style=social)
 
 This github project use Remotion to generate video for LyonJS social network.
 We could generate video directly with Github Action workflows.
-
-## Commands
-
-**Install Dependencies**
-
-```console
-pnpm i
-```
-
-**Start Preview**
-
-```console
-pnpm start
-```
-
-**Upgrade Remotion**
-
-```console
-pnpm run upgrade
-```
-
-**Format code with prettier**
-
-```console
-pnpm format
-```
 
 ## Available trailers to render
 
@@ -61,7 +38,3 @@ Available parameters:
 - `talkTitle`: string;
 - `speakerPicture?`: string;
 - `titleSize?`: string;
-
-## Docs of Remotion
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).

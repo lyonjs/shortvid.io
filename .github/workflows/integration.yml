@@ -18,6 +18,7 @@ jobs:
           version: 7
           run_install: true
       - run: pnpm run test
+
   format:
     name: 💅 Check format
     runs-on: ubuntu-latest
@@ -30,3 +31,38 @@ jobs:
           version: 7
           run_install: true
       - run: pnpm prettier --check .
+
+  generateVideos:
+    needs:
+      - test
+      - format
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        composition:
+          - name: "Sponsor"
+            props:
+              companyName: "Foo"
+          - name: "TalkWithoutPicture"
+            props:
+              title: "Example of a Title"
+              speakersNames: "John Doe"
+    name: 📽 Generating ${{matrix.composition.name}}
+    steps:
+      - run: sudo apt update
+      - run: sudo apt install ffmpeg
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        with:
+          version: 7
+          run_install: true
+      - run: echo $WORKFLOW_INPUT > input-props.json
+        env:
+          WORKFLOW_INPUT: ${{ toJson(matrix.event.inputs) }}
+      - run: pnpm remotion render src/index.tsx ${{matrix.composition.name}} out/${{matrix.composition.name}}.mp4 --props="./input-props.json"
+      - uses: actions/upload-artifact@v2
+        with:
+          name: video
+          path: out

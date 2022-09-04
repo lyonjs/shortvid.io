@@ -1,16 +1,16 @@
 {
 	"name": "social-video-generator",
 	"version": "1.0.0",
+	"private": true,
 	"description": "My Remotion video",
 	"scripts": {
 		"format": "prettier --write .",
 		"start": "remotion preview src/index.tsx",
-		"build": "remotion render src/index.tsx HelloWorld out/video.mp4",
 		"upgrade": "remotion upgrade",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
 	},
 	"repository": {},
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"dependencies": {
 		"@remotion/cli": "^3.0.0",
 		"@remotion/eslint-config": "^3.0.0",

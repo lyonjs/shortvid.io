@@ -3,6 +3,10 @@
 	"version": "1.0.0",
 	"private": true,
 	"description": "My Remotion video",
+	"main": "dist/component.js",
+	"files": [
+		"dist/*"
+	],
 	"scripts": {
 		"start": "remotion preview ./src/index.tsx",
 		"upgrade": "remotion upgrade",

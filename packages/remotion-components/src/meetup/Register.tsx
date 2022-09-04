@@ -2,11 +2,11 @@ import {
 	AbsoluteFill,
 	Img,
 	spring,
+	staticFile,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
 
-import meetupLogo from '../assets/meetup-logo.png';
 import {Title} from '../components/Title';
 
 export const Register: React.FC<{size?: number}> = ({size = 200}) => {
@@ -39,7 +39,7 @@ export const Register: React.FC<{size?: number}> = ({size = 200}) => {
 			>
 				<Title style={{fontSize: 40}}>⬆️ Inscriptions sur</Title>
 				<Img
-					src={meetupLogo}
+					src={staticFile('/meetup-logo.png')}
 					style={{
 						height: size,
 						width: 'auto',

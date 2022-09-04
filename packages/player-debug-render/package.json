@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"scripts": {
+		"dev": "next",
+		"build": "next build && next export",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@remotion/player": "3.2.12",
+		"next": "latest",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"remotion": "3.2.12"
+	},
+	"devDependencies": {
+		"@types/node": "^18.0.0",
+		"@types/react": "^18.0.14",
+		"@types/react-dom": "^18.0.5",
+		"typescript": "^4.7.4"
+	}
+}

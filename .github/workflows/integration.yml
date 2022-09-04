@@ -6,6 +6,18 @@ on:
       - "main"
 
 jobs:
+  test:
+    name: 🧪 Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        with:
+          version: 7
+          run_install: true
+      - run: pnpm run test
   format:
     name: 💅 Check format
     runs-on: ubuntu-latest

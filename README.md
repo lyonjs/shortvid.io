@@ -18,10 +18,7 @@ Take a look at the job artifact to get generated video and image.
 When you want to generate a video for announcing the sponsor of an event, you wan use this workflow
 
 - [Workflow to trigger for sponsor](https://github.com/lyonjs/social-video-generator/actions/workflows/render-sponsor.yml)
-
-https://user-images.githubusercontent.com/6263857/188305341-6f2ae2ae-e861-4b6c-978e-55e86fe8a70f.mp4
-
-Available parameters:
+  Available parameters:
 
 - `companyName` Name of the company
 - `backgroundImg` Url of an image for background
@@ -32,14 +29,22 @@ Available parameters:
 When you want to generate a video for announcing a specific talk
 
 - [Workflow to trigger for talk](https://github.com/lyonjs/social-video-generator/actions/workflows/render-talk.yml)
-
-https://user-images.githubusercontent.com/6263857/188305325-8465abfb-c872-432c-a600-2ed8a9b5bffa.mp4
-
-Available parameters:
+  Available parameters:
 
 - `speakersNames`: string;
 - `talkTitle`: string;
 - `speakerPicture?`: string;
 - `titleSize?`: string;
 
-## [✍️Contributing](./CONTRIBUTING.md)
+### Meetup announce video
+
+- [Workflow to trigger for meetup](https://github.com/lyonjs/social-video-generator/actions/workflows/render-meetup.yml)
+  Available parameters:
+
+- `title`: string;
+- `date`: string;
+- `backgroundImg` Url of an image for background
+
+## ✍️Contributing
+
+[Take a look at the contributing documentation](./CONTRIBUTING.md)

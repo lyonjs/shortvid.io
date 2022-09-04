@@ -31,7 +31,7 @@ Available parameters:
 
 When you want to generate a video for announcing a specific talk
 
-- [Workflow to trigger for sponsor](https://github.com/lyonjs/social-video-generator/actions/workflows/render-talk.yml)
+- [Workflow to trigger for talk](https://github.com/lyonjs/social-video-generator/actions/workflows/render-talk.yml)
 
 https://user-images.githubusercontent.com/6263857/188305325-8465abfb-c872-432c-a600-2ed8a9b5bffa.mp4
 

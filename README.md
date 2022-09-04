@@ -38,7 +38,8 @@ pnpm format
 When you want to generate a video for announcing the sponsor of an event, you wan use this workflow
 
 - [Workflow to trigger for sponsor](https://github.com/lyonjs/social-video-generator/actions/workflows/render-sponsor.yml)
-- [Example](https://github.com/lyonjs/social-video-generator/issues/1#issuecomment-1236144787)
+
+https://user-images.githubusercontent.com/6263857/188305341-6f2ae2ae-e861-4b6c-978e-55e86fe8a70f.mp4
 
 Available parameters:
 
@@ -51,7 +52,8 @@ Available parameters:
 When you want to generate a video for announcing a specific talk
 
 - [Workflow to trigger for sponsor](https://github.com/lyonjs/social-video-generator/actions/workflows/render-talk.yml)
-- [Example](https://github.com/lyonjs/social-video-generator/issues/1)
+
+https://user-images.githubusercontent.com/6263857/188305325-8465abfb-c872-432c-a600-2ed8a9b5bffa.mp4
 
 Available parameters:
 

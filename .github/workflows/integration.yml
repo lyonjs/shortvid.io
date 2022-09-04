@@ -47,6 +47,11 @@ jobs:
             props:
               title: "Example of a Title"
               speakersNames: "John Doe"
+          - name: "Meetup"
+            props:
+              title: "#76 - LyonJS de la rentrée 🦁"
+              date: "28 septembre 2022"
+
     name: 📽 Generating ${{matrix.composition.name}}
     steps:
       - run: sudo apt update

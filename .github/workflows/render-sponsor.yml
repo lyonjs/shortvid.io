@@ -27,6 +27,7 @@ jobs:
           version: 7
           run_install: true
       - run: echo $WORKFLOW_INPUT > input-props.json
+        working-directory: packages/remotion-components
         name: Preparing props
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}

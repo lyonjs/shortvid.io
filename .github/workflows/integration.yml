@@ -17,7 +17,7 @@ jobs:
         with:
           version: 7
           run_install: true
-      - run: pnpm run test --if-present --recursive
+      - run: pnpm run --recursive --if-present test
 
   format:
     name: 💅 Check format
@@ -64,6 +64,7 @@ jobs:
           version: 7
           run_install: true
       - run: echo $WORKFLOW_INPUT > input-props.json
+        working-directory: packages/remotion-components
         env:
           WORKFLOW_INPUT: ${{ toJson(matrix.event.inputs) }}
       - run: pnpm remotion render src/index.tsx ${{matrix.composition.name}} out/${{matrix.composition.name}}.mp4 --props="./input-props.json"

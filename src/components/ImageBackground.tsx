@@ -36,16 +36,27 @@ export const ImageBackground: React.FC<{
 	}
 
 	return (
-		<Img
-			src={src}
-			style={{
-				position: 'absolute',
-				width: '100%',
-				height: '100%',
-				objectFit: 'cover',
-				transform: 'scale(1.1)',
-				filter: `grayscale(${greyscale}) blur(${blur}px) `,
-			}}
-		/>
+		<>
+			<Img
+				src={src}
+				style={{
+					position: 'absolute',
+					width: '100%',
+					height: '100%',
+					objectFit: 'cover',
+					transform: 'scale(1.1)',
+					filter: `grayscale(${greyscale}) blur(${blur}px) `,
+				}}
+			/>
+			<div
+				style={{
+					position: 'absolute',
+					width: '100%',
+					height: '100%',
+					backgroundImage:
+						'linear-gradient(to top, rgba(12,12,12,1), rgba(255,0,0,0))',
+				}}
+			/>
+		</>
 	);
 };

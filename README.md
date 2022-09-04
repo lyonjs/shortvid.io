@@ -38,3 +38,5 @@ Available parameters:
 - `talkTitle`: string;
 - `speakerPicture?`: string;
 - `titleSize?`: string;
+
+## [✍️Contributing](./CONTRIBUTING.md)

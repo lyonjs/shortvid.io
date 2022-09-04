@@ -4,7 +4,7 @@ specifiers:
   '@remotion/cli': 3.2.12
   '@remotion/eslint-config': 3.2.12
   '@types/react': 18.0.18
-  '@types/web': 0.0.61
+  '@types/web': 0.0.72
   eslint: 8.23.0
   husky: 8.0.1
   prettier: 2.7.1
@@ -25,7 +25,7 @@ dependencies:
 
 devDependencies:
   '@types/react': 18.0.18
-  '@types/web': 0.0.61
+  '@types/web': 0.0.72
   husky: 8.0.1
   prettier: 2.7.1
   pretty-quick: 3.1.3_prettier@2.7.1
@@ -294,8 +294,8 @@ packages:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
-  /@types/web/0.0.61:
-    resolution: {integrity: sha512-lQ4M3OSh8eFj55fz1RJsLhCubET/7duOXoKcxVaUXYXyxikD9BA+WWrqAn5CjJxrc82b7zFY4OCVIeVdkPLaGg==}
+  /@types/web/0.0.72:
+    resolution: {integrity: sha512-8ELWTmT6gpjH+mFCN6jja/pmXBZTOjSvfnBcxwP7xKC9tkqLNVxtQX/o2W0c1VcUR2ZFPoPSNH7YtdZQfHOvmg==}
     dev: true
 
   /@types/yauzl/2.10.0:

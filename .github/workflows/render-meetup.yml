@@ -33,9 +33,11 @@ jobs:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
       - run: pnpm remotion render src/index.tsx Meetup out/meetup-${{github.run_id}}.mp4 --props="./input-props.json"
         name: 🎬 Generating video
+        working-directory: packages/remotion-components
       - run: pnpm remotion still src/index.tsx Meetup --props="./input-props.json" --frame 119
         name: 📷 Generating last image
+        working-directory: packages/remotion-components
       - uses: actions/upload-artifact@v3
         with:
           name: meetup-${{github.run_id}}
-          path: out
+          path: packages/remotion-components/out

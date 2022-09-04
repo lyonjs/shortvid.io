@@ -11,12 +11,14 @@ pnpm i
 **Start Preview**
 
 ```console
+cd packages/remotion-components
 pnpm start
 ```
 
 **Upgrade Remotion**
 
 ```console
+cd packages/remotion-components
 pnpm run upgrade
 ```
 

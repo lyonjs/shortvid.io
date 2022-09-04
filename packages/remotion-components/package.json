@@ -1,0 +1,24 @@
+{
+	"name": "remotion-components",
+	"version": "1.0.0",
+	"private": true,
+	"description": "My Remotion video",
+	"scripts": {
+		"start": "remotion preview ./src/index.tsx",
+		"upgrade": "remotion upgrade",
+		"test": "eslint ./src --ext ts,tsx,js,jsx && tsc"
+	},
+	"repository": {},
+	"license": "MIT",
+	"dependencies": {
+		"@remotion/cli": "3.2.12",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"remotion": "3.2.12"
+	},
+	"devDependencies": {
+		"@types/react": "18.0.18",
+		"@types/web": "0.0.72",
+		"typescript": "4.8.2"
+	}
+}

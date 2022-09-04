@@ -32,9 +32,11 @@ jobs:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
       - run: pnpm remotion render src/index.tsx Sponsor out/sponsor-${{github.event.inputs.companyName}}.mp4 --props="./input-props.json"
         name: 🎬 Generating video
+        working-directory: packages/remotion-components
       - run: pnpm remotion still src/index.tsx Sponsor --props="./input-props.json" --frame 119
         name: 📷 Generating last image
+        working-directory: packages/remotion-components
       - uses: actions/upload-artifact@v3
         with:
           name: sponsor-${{github.event.inputs.companyName}}
-          path: out
+          path: packages/remotion-components/out

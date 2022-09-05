@@ -1,4 +1,4 @@
-import {Composition, Folder} from 'remotion';
+import {Composition, Folder, staticFile} from 'remotion';
 import {Sponsor} from './sponsor/Sponsor';
 import {LyonJSLogo} from './components/LyonJSLogo';
 import {ImageBackground} from './components/ImageBackground';
@@ -6,7 +6,6 @@ import {Title} from './components/Title';
 import {Talk} from './talk/Talk';
 import {Speaker} from './components/Speaker';
 
-import logo from './assets/lyonjs-squared.png';
 import {Meetup} from './meetup/Meetup';
 import {Register} from './meetup/Register';
 
@@ -22,7 +21,7 @@ export const RemotionVideo: React.FC = () => {
 					fps={30}
 					durationInFrames={120}
 					defaultProps={{
-						src: logo,
+						src: staticFile('/lyonjs-squared.png'),
 					}}
 				/>
 				<Composition
@@ -88,7 +87,7 @@ export const RemotionVideo: React.FC = () => {
 					defaultProps={{
 						speakersNames: 'John Doe',
 						talkTitle: 'Is JS an awesome programing language?',
-						speakerPicture: logo,
+						speakerPicture: staticFile('/lyonjs-squared.png'),
 					}}
 				/>
 				<Composition

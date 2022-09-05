@@ -73,3 +73,17 @@ jobs:
         with:
           name: video
           path: packages/remotion-components/out
+
+  nextjs:
+    name: ⚛️ NextJS application
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+      - uses: pnpm/action-setup@v2.2.2
+        name: Install pnpm
+        with:
+          version: 7
+          run_install: true
+      - run: pnpm build
+        working-directory: packages/remotion-components

@@ -86,3 +86,4 @@ jobs:
           version: 7
           run_install: true
       - run: pnpm build
+        working-directory: packages/remotion-components

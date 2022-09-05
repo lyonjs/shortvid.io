@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function MyApp({Component, pageProps}) {
+export default ({Component, pageProps}) => {
 	return (
 		<main>
 			<h1>Social video preview generator</h1>
@@ -28,4 +28,4 @@ export default function MyApp({Component, pageProps}) {
 			<Component {...pageProps} />
 		</main>
 	);
-}
+};

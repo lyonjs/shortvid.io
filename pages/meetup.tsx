@@ -1,7 +1,7 @@
 import {Player} from '@remotion/player';
-import {Meetup as MeetupComponent} from '../../remotion-components/src/components';
-import {useInputChange} from '../components/hooks/onInputChange';
-import {Form, Input} from '../components/input';
+import {Meetup as MeetupComponent} from '../src/components';
+import {useInputChange} from '../src/components/hooks/onInputChange';
+import {Form, Input} from '../src/components/input';
 
 const Meetup = () => {
 	const [title, setTitle] = useInputChange('Example');

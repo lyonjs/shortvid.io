@@ -1,7 +1,7 @@
 import {Player} from '@remotion/player';
-import {Sponsor as SponsorComponent} from '../../remotion-components/src/components';
-import {useInputChange} from '../components/hooks/onInputChange';
-import {Form, Input} from '../components/input';
+import {Sponsor as SponsorComponent} from '../src/components';
+import {useInputChange} from '../src/components/hooks/onInputChange';
+import {Form, Input} from '../src/components/input';
 
 const Sponsor = () => {
 	const [companyName, setCompanyName] = useInputChange('Evilcorp');

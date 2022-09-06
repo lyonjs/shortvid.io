@@ -1,7 +1,7 @@
 import {Player} from '@remotion/player';
-import {Talk as TalkComponent} from '../../remotion-components/src/components';
-import {useInputChange} from '../components/hooks/onInputChange';
-import {Form, Input} from '../components/input';
+import {Talk as TalkComponent} from '../src/components';
+import {useInputChange} from '../src/components/hooks/onInputChange';
+import {Form, Input} from '../src/components/input';
 
 const Talk = () => {
 	const [talkTitle, setTalkTitle] = useInputChange('Example');

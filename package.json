@@ -5,7 +5,26 @@
 	"description": "My Remotion video",
 	"repository": {},
 	"license": "MIT",
+	"scripts": {
+		"start": "remotion preview ./src/index.tsx",
+		"upgrade": "remotion upgrade",
+		"test": "eslint ./src --ext ts,tsx,js,jsx && tsc",
+		"build": "next build",
+		"dev": "next dev"
+	},
+	"dependencies": {
+		"@remotion/player": "3.2.12",
+		"@remotion/cli": "3.2.12",
+		"next": "latest",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"remotion": "3.2.12"
+	},
 	"devDependencies": {
+		"@types/node": "^18.0.0",
+		"@types/react": "^18.0.14",
+		"@types/react-dom": "^18.0.5",
+		"@types/web": "0.0.72",
 		"@remotion/eslint-config": "3.2.12",
 		"eslint": "8.23.0",
 		"husky": "8.0.1",

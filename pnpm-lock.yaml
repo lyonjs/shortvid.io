@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@remotion/cli': 3.2.13
       '@remotion/eslint-config': 3.2.13
-      '@remotion/player': 3.2.12
+      '@remotion/player': 3.2.13
       '@types/node': 18.7.15
       '@types/react': 18.0.18
       '@types/react-dom': 18.0.6
@@ -22,7 +22,7 @@ importers:
       typescript: 4.8.2
     dependencies:
       '@remotion/cli': 3.2.13_biqbaboplfbrettd7655fr4n2y
-      '@remotion/player': 3.2.12_biqbaboplfbrettd7655fr4n2y
+      '@remotion/player': 3.2.13_biqbaboplfbrettd7655fr4n2y
       next: 12.2.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -346,17 +346,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
-    dev: false
-
-  /@remotion/player/3.2.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-/+h+r9/2YiC3RK5+BKkcT8YhyOxNE6XZmkCY0lNSntNLT/CufruEK1tkm+iQr+gtqOngcb/+dsSLmJPGqP2+Hw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
     dev: false
 
   /@remotion/player/3.2.13_biqbaboplfbrettd7655fr4n2y:

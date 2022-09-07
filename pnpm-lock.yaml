@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@remotion/cli': 3.2.13
       '@remotion/eslint-config': 3.2.13
-      '@remotion/player': 3.2.12
+      '@remotion/player': 3.2.13
       '@types/node': 18.7.15
       '@types/react': 18.0.18
       '@types/react-dom': 18.0.6
@@ -18,15 +18,15 @@ importers:
       pretty-quick: 3.1.3
       react: 18.2.0
       react-dom: 18.2.0
-      remotion: 3.2.12
+      remotion: 3.2.13
       typescript: 4.8.2
     dependencies:
       '@remotion/cli': 3.2.13_biqbaboplfbrettd7655fr4n2y
-      '@remotion/player': 3.2.12_biqbaboplfbrettd7655fr4n2y
+      '@remotion/player': 3.2.13_biqbaboplfbrettd7655fr4n2y
       next: 12.2.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@remotion/eslint-config': 3.2.13_yqf6kl63nyoq5megxukfnom5rm
       '@types/node': 18.7.15
@@ -346,17 +346,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
-    dev: false
-
-  /@remotion/player/3.2.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-/+h+r9/2YiC3RK5+BKkcT8YhyOxNE6XZmkCY0lNSntNLT/CufruEK1tkm+iQr+gtqOngcb/+dsSLmJPGqP2+Hw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
     dev: false
 
   /@remotion/player/3.2.13_biqbaboplfbrettd7655fr4n2y:
@@ -2426,16 +2415,6 @@ packages:
     resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
     engines: {node: '>=8'}
     dev: true
-
-  /remotion/3.2.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-OVmalv6JFnc40eUXWJAM/FDPQ/MYEWHtfWlaaT/+ddWmbRTbhswGVO6WtubtWmsqwUJAmFg1go81josfupzMpw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
 
   /remotion/3.2.13_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-7Mp0u7GRaJ3PIn61iHuc1AphSpvOYef41ZvonTayiZU39D3c4xR1tIvrsQgaKE/I4c1iAXQBp1duaPoLNPcHbw==}

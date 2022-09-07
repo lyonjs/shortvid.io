@@ -1,0 +1,83 @@
+body {
+	background-color: #282c34;
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+main {
+	max-width: 50rem;
+	margin: 0 auto;
+}
+
+main > article {
+	margin-bottom: 2rem;
+}
+
+nav > ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav > ul > li {
+	padding: 0.3rem 0.5rem;
+	background: white;
+	border-radius: 4px;
+}
+
+nav > ul > li:hover {
+	transform: scale(1.1);
+	transition: all 100ms ease-out;
+}
+
+li a {
+	color: #1c1c1c;
+	text-decoration: none;
+}
+
+form > a {
+	color: #5e5e5e;
+	padding: 1rem 0.5rem;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background: #efdb50;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+form > a:hover {
+	transform: scale(1.05);
+	transition: all 100ms ease-out;
+}
+
+.chapo header {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.chapo header h1 {
+	margin-left: 2rem;
+}
+
+.generation-block {
+	display: flex;
+}
+
+code {
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 0.8rem;
+	display: block;
+	background: #1c1c1c;
+	padding: 1rem 2rem;
+	word-break: break-all;
+}
+
+code:hover {
+	background: #444444;
+}

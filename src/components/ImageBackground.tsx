@@ -22,8 +22,6 @@ export const ImageBackground: React.FC<{
 	let blur = 0;
 	let greyscale = 0;
 
-	console.log(src);
-
 	if (animated) {
 		blur = spring({
 			frame: frame - ANIMATION_DELAY,

@@ -5,7 +5,7 @@ export const TalkTitles: React.FC<{
 	speakersNames: string;
 	titleSize: string;
 	talkTitle: string;
-}> = ({speakersNames, titleSize, talkTitle}) => {
+}> = ({speakersNames, titleSize = '50', talkTitle}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -24,14 +24,15 @@ export const TalkTitles: React.FC<{
 		<>
 			<Title
 				style={{
-					color: 'white',
+					width: '100%',
+					color: '#efdb50',
 					position: 'absolute',
 					fontSize: 70,
-					left: '10%',
-					right: '10%',
-					top: '50%',
+					top: '55%',
 					opacity: titleOpacity,
 					filter: `blur(${titleDeblur}px)`,
+					textAlign: 'center',
+					textShadow: '2px 2px 0px black',
 				}}
 			>
 				{speakersNames}
@@ -39,14 +40,16 @@ export const TalkTitles: React.FC<{
 
 			<Title
 				style={{
+					width: '100%',
 					color: 'white',
 					position: 'absolute',
-					fontSize: titleSize,
-					left: '10%',
-					right: '10%',
-					top: '60%',
+					fontSize: `${titleSize}px`,
+					top: '70%',
 					opacity: titleOpacity,
 					filter: `blur(${titleDeblur}px)`,
+					textAlign: 'center',
+					paddingLeft: '50px',
+					paddingRight: '50px',
 				}}
 			>
 				{talkTitle}

@@ -14,7 +14,7 @@ export const Talk: React.FC<{
 	speakersNames,
 	talkTitle,
 	speakerPicture,
-	titleSize = '80px',
+	titleSize = '80',
 	backgroundImg,
 }) => {
 	return (

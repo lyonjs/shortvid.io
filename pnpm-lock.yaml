@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@remotion/cli': 3.2.12
+      '@remotion/cli': 3.2.13
       '@remotion/eslint-config': 3.2.12
       '@remotion/player': 3.2.12
       '@types/node': ^18.0.0
@@ -21,7 +21,7 @@ importers:
       remotion: 3.2.12
       typescript: 4.8.2
     dependencies:
-      '@remotion/cli': 3.2.12_biqbaboplfbrettd7655fr4n2y
+      '@remotion/cli': 3.2.13_biqbaboplfbrettd7655fr4n2y
       '@remotion/player': 3.2.12_biqbaboplfbrettd7655fr4n2y
       next: 12.2.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -261,8 +261,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@remotion/bundler/3.2.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-+ftTF91xkZ9ZfD6AuGLdDuWbzYCiGbbkmRTqMLDaf8AErReXIIZ/wyp9nJEasRaX4b5n/1FnAMnL5grsjpnomQ==}
+  /@remotion/bundler/3.2.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-ui96uubjzKUh0BEriPM4iWLXuQ1+jSc59XWJeP/kfKvkebT0M4+N1zsaoQ6smV5Mo9+SvVY8rCv8+mi/hmjnAA==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -272,7 +272,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-refresh: 0.9.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
       style-loader: 2.0.0_webpack@5.72.0
       webpack: 5.72.0_esbuild@0.14.19
     transitivePeerDependencies:
@@ -281,24 +281,24 @@ packages:
       - webpack-cli
     dev: false
 
-  /@remotion/cli/3.2.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ifdnE2d6wps8HpKHHO5fjnDPHsos4SoWwLkuriGVFbeVbIW7b0A2B6IeKj+CmZh6Qzs3XnUJ6jMwcFvKIDg2uA==}
+  /@remotion/cli/3.2.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-vi8NiCCvWzgSCVXfEwMHi+6DgBi/Z+0yaT/YFWr401ejrZfjVR2lwpT7D1tVVMr/6F5Vg7uHh04DDw2rC4GnyQ==}
     hasBin: true
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@remotion/bundler': 3.2.12_biqbaboplfbrettd7655fr4n2y
-      '@remotion/media-utils': 3.2.12_biqbaboplfbrettd7655fr4n2y
-      '@remotion/player': 3.2.12_biqbaboplfbrettd7655fr4n2y
-      '@remotion/renderer': 3.2.12_biqbaboplfbrettd7655fr4n2y
+      '@remotion/bundler': 3.2.13_biqbaboplfbrettd7655fr4n2y
+      '@remotion/media-utils': 3.2.13_biqbaboplfbrettd7655fr4n2y
+      '@remotion/player': 3.2.13_biqbaboplfbrettd7655fr4n2y
+      '@remotion/renderer': 3.2.13_biqbaboplfbrettd7655fr4n2y
       better-opn: 2.1.1
       dotenv: 9.0.2
       memfs: 3.4.3
       minimist: 1.2.6
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
       semver: 7.3.5
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -337,15 +337,15 @@ packages:
       - typescript
     dev: true
 
-  /@remotion/media-utils/3.2.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-P+l8YMZ+P3T7ag1UHISj3Wc60g9mgdm1YKZ/rwVxhBOZhgOwN19fj2a97cftmO19pofmTDxBQC3LbgNaiXi9jA==}
+  /@remotion/media-utils/3.2.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-fS62yZ63qnI5UwKli7qf6EBuf4SSVPmHKNwA7GeYBth05Tr8sHojs+in+hEvAAtM9q+S96zFRv3X9bYDB2imsQ==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
     dev: false
 
   /@remotion/player/3.2.12_biqbaboplfbrettd7655fr4n2y:
@@ -359,8 +359,19 @@ packages:
       remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
     dev: false
 
-  /@remotion/renderer/3.2.12_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-iA3WM+T3tTEsF+mHansjENi+Cu3WH6rYBDLTp4hRaOBkgfYaMgf6OM3y8/E5iQoZ8408uY8VQSTLhIQN77iivA==}
+  /@remotion/player/3.2.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Y5kC6uvrVEKdo1p3Dbxw8ImTxTtDNTTmhCtzpXeIHRtaWgZ6pTDtQORqjyXn6SPaXeK9Z3SOeCKHFPOp+TFnTA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
+    dev: false
+
+  /@remotion/renderer/3.2.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-jIDHQj4Le1XUwaayVzZkyaAO2+M4u5N5BvKSXlgGBf/60e5QgaJPAHF5mTSYqWU/H1lIyv25oisk6NxlmBP5Ew==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -369,7 +380,7 @@ packages:
       extract-zip: 2.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
       source-map: 0.8.0-beta.0
       ws: 8.7.0
     transitivePeerDependencies:
@@ -2418,6 +2429,16 @@ packages:
 
   /remotion/3.2.12_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-OVmalv6JFnc40eUXWJAM/FDPQ/MYEWHtfWlaaT/+ddWmbRTbhswGVO6WtubtWmsqwUJAmFg1go81josfupzMpw==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /remotion/3.2.13_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-7Mp0u7GRaJ3PIn61iHuc1AphSpvOYef41ZvonTayiZU39D3c4xR1tIvrsQgaKE/I4c1iAXQBp1duaPoLNPcHbw==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'

@@ -18,7 +18,7 @@ importers:
       pretty-quick: 3.1.3
       react: 18.2.0
       react-dom: 18.2.0
-      remotion: 3.2.12
+      remotion: 3.2.13
       typescript: 4.8.2
     dependencies:
       '@remotion/cli': 3.2.13_biqbaboplfbrettd7655fr4n2y
@@ -26,7 +26,7 @@ importers:
       next: 12.2.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.2.13_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@remotion/eslint-config': 3.2.12_yqf6kl63nyoq5megxukfnom5rm
       '@types/node': 18.7.14

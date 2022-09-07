@@ -18,7 +18,7 @@
 		"next": "latest",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"remotion": "3.2.12"
+		"remotion": "3.2.13"
 	},
 	"devDependencies": {
 		"@types/node": "^18.0.0",

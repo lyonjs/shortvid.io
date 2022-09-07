@@ -13,7 +13,6 @@ const Talk = () => {
 
 	return (
 		<>
-			<h2>Talk</h2>
 			<div className="generation-block">
 				<Player
 					autoPlay
@@ -22,6 +21,7 @@ const Talk = () => {
 					style={{
 						height: '400px',
 						width: '400px',
+						boxShadow: '0 0 5px -1px #000000',
 					}}
 					durationInFrames={120}
 					compositionWidth={1200}
@@ -38,33 +38,37 @@ const Talk = () => {
 				/>
 
 				<Form>
-					<Input setValue={setTalkTitle} value={talkTitle} label="talkTitle" />
+					<Input setValue={setTalkTitle} value={talkTitle} label="Title" />
 					<Input
 						setValue={setSpeakerPicture}
 						value={speakerPicture}
-						label="speakerPicture"
+						label="Speaker picture"
 					/>
 					<Input
 						setValue={setSpeakersNames}
 						value={speakersNames}
-						label="speakersNames"
+						label="Speakers names"
 					/>
-					<Input setValue={setTitleSize} value={titleSize} label="titleSize" />
+					<Input
+						setValue={setTitleSize}
+						value={titleSize}
+						label="Title font size"
+					/>
 					<Input
 						setValue={setBackgroundImg}
 						value={backgroundImg}
-						label="backgroundImg"
+						label="Background Image"
 					/>
 					<a
 						href="https://github.com/lyonjs/social-video-generator/actions/workflows/render-talk.yml"
 						target="_blank"
 					>
-						Generate your video
+						Generate your video 🎬
 					</a>
 				</Form>
 			</div>
 
-			<h3>Generate the video locally</h3>
+			<h3>Generate the video locally 🔗</h3>
 			<Code>
 				pnpm remotion render src/index.tsx Talk out/sponsor.mp4 --props=&apos;
 				{JSON.stringify({talkTitle, speakersNames, speakerPicture, titleSize})}

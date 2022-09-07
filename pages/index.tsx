@@ -11,8 +11,6 @@ const Home = () => {
 
 	return (
 		<>
-			<h2>Meetup</h2>
-
 			<div className="generation-block">
 				<Player
 					autoPlay
@@ -21,6 +19,7 @@ const Home = () => {
 					style={{
 						height: '400px',
 						width: '400px',
+						boxShadow: '0 0 5px -1px #000000',
 					}}
 					durationInFrames={120}
 					compositionWidth={1200}
@@ -40,18 +39,18 @@ const Home = () => {
 					<Input
 						setValue={setBackgroundImg}
 						value={backgroundImg}
-						label="Url of background image"
+						label="Background image url"
 					/>
 					<a
 						href="https://github.com/lyonjs/social-video-generator/actions/workflows/render-meetup.yml"
 						target="_blank"
 					>
-						Generate your video
+						Generate your video 🎬
 					</a>
 				</Form>
 			</div>
 
-			<h3>Generate the video locally</h3>
+			<h3>Generate the video locally 🔗</h3>
 			<Code>
 				pnpm remotion render src/index.tsx Meetup out/meetup.mp4 --props=&apos;
 				{JSON.stringify({title, date, backgroundImg})}&apos;

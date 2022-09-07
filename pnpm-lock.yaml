@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@remotion/cli': 3.2.13
-      '@remotion/eslint-config': 3.2.12
+      '@remotion/eslint-config': 3.2.13
       '@remotion/player': 3.2.12
       '@types/node': 18.7.15
       '@types/react': 18.0.18
@@ -28,7 +28,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       remotion: 3.2.12_biqbaboplfbrettd7655fr4n2y
     devDependencies:
-      '@remotion/eslint-config': 3.2.12_yqf6kl63nyoq5megxukfnom5rm
+      '@remotion/eslint-config': 3.2.13_yqf6kl63nyoq5megxukfnom5rm
       '@types/node': 18.7.15
       '@types/react': 18.0.18
       '@types/react-dom': 18.0.6
@@ -310,12 +310,12 @@ packages:
       - webpack-cli
     dev: false
 
-  /@remotion/eslint-config/3.2.12_yqf6kl63nyoq5megxukfnom5rm:
-    resolution: {integrity: sha512-T+WDW9zNPeiVV/6Sv8x6ieqMzPL4uKM5UpVKeyfHOVPPZK9soAAT0FgqMqlGHnp3O6xEtjtA6dai3B6y4RsTvw==}
+  /@remotion/eslint-config/3.2.13_yqf6kl63nyoq5megxukfnom5rm:
+    resolution: {integrity: sha512-MrfIHlY0Uvi/OtzqaiQ8o191sqHemg2NqoZ6YXE9sS+ponQX1u4OGv4RptNbqUbd+ebAwDdStWNr0jdTLMYvGA==}
     peerDependencies:
       eslint: '>=7.15.0'
     dependencies:
-      '@remotion/eslint-plugin': 3.2.12_yqf6kl63nyoq5megxukfnom5rm
+      '@remotion/eslint-plugin': 3.2.13_yqf6kl63nyoq5megxukfnom5rm
       '@typescript-eslint/eslint-plugin': 5.19.0_byhsgqzeu3ookwson3u4dq2zfi
       '@typescript-eslint/parser': 5.19.0_yqf6kl63nyoq5megxukfnom5rm
       eslint: 8.23.0
@@ -327,8 +327,8 @@ packages:
       - typescript
     dev: true
 
-  /@remotion/eslint-plugin/3.2.12_yqf6kl63nyoq5megxukfnom5rm:
-    resolution: {integrity: sha512-jlLiOrcZp13crutuDacWd9zuR9gWyy9y16D2gEd/TRoYkWfP3JiBqywERV4P2cmww9+5Qi0kgCPlPTzRBlJlxA==}
+  /@remotion/eslint-plugin/3.2.13_yqf6kl63nyoq5megxukfnom5rm:
+    resolution: {integrity: sha512-WxcW6F0oWvwB5H0J5qSD8GO/CKnCtl2dCNo0F5Tlo/jvE+SO6AqPul/oxUScCKgpKllDi0IJGpb8PbJySkTwuQ==}
     dependencies:
       '@typescript-eslint/utils': 5.19.0_yqf6kl63nyoq5megxukfnom5rm
     transitivePeerDependencies:

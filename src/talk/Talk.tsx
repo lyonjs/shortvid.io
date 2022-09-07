@@ -1,89 +1,39 @@
-import {
-	AbsoluteFill,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
 import {ImageBackground} from '../components/ImageBackground';
 import {LyonJSLogo} from '../components/LyonJSLogo';
-import {Title} from '../components/Title';
-import {Speaker} from '../components/Speaker';
+import {TalkSpeakerPicture} from './TalkSpeakerPicture';
+import {TalkTitles} from './TalkTitles';
 
 export const Talk: React.FC<{
 	speakersNames: string;
 	talkTitle: string;
+	backgroundImg?: string;
 	speakerPicture?: string;
 	titleSize?: string;
-}> = ({speakersNames, talkTitle, speakerPicture, titleSize = '80px'}) => {
-	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-
-	const PICTURE_DELAY = 20;
-	const pictureDrop = spring({
-		frame: frame - PICTURE_DELAY,
-		fps,
-		from: -600,
-		to: 100,
-		durationInFrames: 30,
-	});
-
-	const TITLE_DELAY = 30;
-	const titleOpacity = spring({
-		frame: frame - TITLE_DELAY,
-		fps,
-		from: 0,
-		to: 1,
-		durationInFrames: 60,
-	});
-	const titleDeblur = interpolate(frame - TITLE_DELAY, [0, 20], [5, 0], {
-		extrapolateRight: 'clamp',
-	});
-
+}> = ({
+	speakersNames,
+	talkTitle,
+	speakerPicture,
+	titleSize = '80px',
+	backgroundImg,
+}) => {
 	return (
 		<AbsoluteFill>
-			<ImageBackground animated animationDuration={30} />
+			<Sequence from={0} name="Background">
+				<ImageBackground animated animationDuration={30} src={backgroundImg} />
+			</Sequence>
 			<AbsoluteFill>
-				{speakerPicture && (
-					<Speaker
-						style={{
-							position: 'absolute',
-							top: pictureDrop,
-							left: 330,
-						}}
-						src={speakerPicture}
+				<Sequence from={20} name="Picture">
+					<TalkSpeakerPicture speakerPicture={speakerPicture} />
+				</Sequence>
+
+				<Sequence from={30} name="Titles">
+					<TalkTitles
+						speakersNames={speakersNames}
+						titleSize={titleSize}
+						talkTitle={talkTitle}
 					/>
-				)}
-
-				<Title
-					style={{
-						color: 'white',
-						position: 'absolute',
-						fontSize: 70,
-						left: '10%',
-						right: '10%',
-						top: '50%',
-						opacity: titleOpacity,
-						filter: `blur(${titleDeblur}px)`,
-					}}
-				>
-					{speakersNames}
-				</Title>
-
-				<Title
-					style={{
-						color: 'white',
-						position: 'absolute',
-						fontSize: titleSize,
-						left: '10%',
-						right: '10%',
-						top: '60%',
-						opacity: titleOpacity,
-						filter: `blur(${titleDeblur}px)`,
-					}}
-				>
-					{talkTitle}
-				</Title>
+				</Sequence>
 
 				<LyonJSLogo
 					style={{

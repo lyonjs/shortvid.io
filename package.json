@@ -13,19 +13,19 @@
 		"dev": "next dev"
 	},
 	"dependencies": {
-		"@remotion/player": "3.2.13",
-		"@remotion/cli": "3.2.13",
+		"@remotion/player": "3.2.14",
+		"@remotion/cli": "3.2.14",
 		"next": "latest",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"remotion": "3.2.13"
+		"remotion": "3.2.14"
 	},
 	"devDependencies": {
 		"@types/node": "18.7.15",
 		"@types/react": "18.0.18",
 		"@types/react-dom": "18.0.6",
 		"@types/web": "0.0.72",
-		"@remotion/eslint-config": "3.2.13",
+		"@remotion/eslint-config": "3.2.14",
 		"eslint": "8.23.0",
 		"husky": "8.0.1",
 		"prettier": "2.7.1",

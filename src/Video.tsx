@@ -81,7 +81,7 @@ export const RemotionVideo: React.FC = () => {
 					component={Talk}
 					width={1200}
 					height={1200}
-					id="Talk"
+					id="TalkWithPicture"
 					fps={30}
 					durationInFrames={120}
 					defaultProps={{
@@ -94,7 +94,7 @@ export const RemotionVideo: React.FC = () => {
 					component={Talk}
 					width={1200}
 					height={1200}
-					id="TalkWithoutPicture"
+					id="Talk"
 					fps={30}
 					durationInFrames={120}
 					defaultProps={{

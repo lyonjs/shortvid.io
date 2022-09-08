@@ -17,6 +17,9 @@ on:
       speakerPicture:
         description: "Url of the profile picture of the speaker"
         required: false
+      backgroundImg:
+        description: "If you want to use custom image for background"
+        required: false
 jobs:
   render:
     name: Render video
@@ -35,9 +38,9 @@ jobs:
         name: Preparing props
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
-      - run: pnpm remotion render src/index.tsx TalkWithoutPicture out/talk-${{github.run_id}}.mp4 --props="./input-props.json"
+      - run: pnpm remotion render src/index.tsx Talk out/talk-${{github.run_id}}.mp4 --props="./input-props.json"
         name: 🎬 Generating video
-      - run: pnpm remotion still src/index.tsx TalkWithoutPicture --props="./input-props.json" --frame 119
+      - run: pnpm remotion still src/index.tsx Talk --props="./input-props.json" --frame 119
         name: 📷 Generating last image
       - uses: actions/upload-artifact@v3
         with:

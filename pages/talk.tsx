@@ -9,6 +9,8 @@ const Talk = () => {
 	const [speakerPicture, setSpeakerPicture] = useInputChange();
 	const [speakersNames, setSpeakersNames] = useInputChange('John Doe');
 	const [titleSize, setTitleSize] = useInputChange('80');
+	const [backgroundImg, setBackgroundImg] = useInputChange();
+
 	return (
 		<>
 			<h2>Talk</h2>
@@ -31,6 +33,7 @@ const Talk = () => {
 						speakersNames,
 						speakerPicture,
 						titleSize,
+						backgroundImg,
 					}}
 				/>
 
@@ -47,6 +50,11 @@ const Talk = () => {
 						label="speakersNames"
 					/>
 					<Input setValue={setTitleSize} value={titleSize} label="titleSize" />
+					<Input
+						setValue={setBackgroundImg}
+						value={backgroundImg}
+						label="backgroundImg"
+					/>
 					<a
 						href="https://github.com/lyonjs/social-video-generator/actions/workflows/render-talk.yml"
 						target="_blank"
@@ -58,8 +66,7 @@ const Talk = () => {
 
 			<h3>Generate the video locally</h3>
 			<Code>
-				pnpm remotion render src/index.tsx TalkWithoutPicture out/sponsor.mp4
-				--props=&apos;
+				pnpm remotion render src/index.tsx Talk out/sponsor.mp4 --props=&apos;
 				{JSON.stringify({talkTitle, speakersNames, speakerPicture, titleSize})}
 				&apos;
 			</Code>

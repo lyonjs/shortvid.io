@@ -8,7 +8,7 @@ const Talk = () => {
 	const [talkTitle, setTalkTitle] = useInputChange('Example');
 	const [speakerPicture, setSpeakerPicture] = useInputChange();
 	const [speakersNames, setSpeakersNames] = useInputChange('John Doe');
-	const [titleSize, setTitleSize] = useInputChange('80');
+	const [titleSize, setTitleSize] = useInputChange('50');
 	const [backgroundImg, setBackgroundImg] = useInputChange();
 
 	return (

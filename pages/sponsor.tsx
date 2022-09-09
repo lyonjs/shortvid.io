@@ -11,8 +11,6 @@ const Sponsor = () => {
 
 	return (
 		<>
-			<h2>Sponsor</h2>
-
 			<div className="generation-block">
 				<Player
 					autoPlay
@@ -21,6 +19,7 @@ const Sponsor = () => {
 					style={{
 						height: '400px',
 						width: '400px',
+						boxShadow: '0 0 5px -1px #000000',
 					}}
 					durationInFrames={120}
 					compositionWidth={1200}
@@ -38,28 +37,28 @@ const Sponsor = () => {
 					<Input
 						setValue={setCompanyName}
 						value={companyName}
-						label="companyName"
+						label="Company"
 					/>
 					<Input
 						setValue={setBackgroundImg}
 						value={backgroundImg}
-						label="Url of background image"
+						label="Background image url"
 					/>
 					<Input
 						setValue={setSponsorLogo}
 						value={sponsorLogo}
-						label="Url of sponsor logo"
+						label="Sponsor logo url"
 					/>
 					<a
 						href="https://github.com/lyonjs/social-video-generator/actions/workflows/render-sponsor.yml"
 						target="_blank"
 					>
-						Generate your video
+						Generate your video 🎬
 					</a>
 				</Form>
 			</div>
 
-			<h3>Generate the video locally</h3>
+			<h3>Generate the video locally 🔗</h3>
 			<Code>
 				pnpm remotion render src/index.tsx Sponsor out/sponsor.mp4
 				--props=&apos;

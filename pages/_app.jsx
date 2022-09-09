@@ -1,9 +1,12 @@
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 import './app.css';
 import {LyonJSLogo} from '../src/components/LyonJSLogo';
 
 export default ({Component, pageProps}) => {
+	const router = useRouter();
+
 	return (
 		<main>
 			<article className="chapo">
@@ -19,21 +22,21 @@ export default ({Component, pageProps}) => {
 
 			<nav>
 				<ul>
-					<li>
-						<Link href="/">
-							<a>Meetup announce video generation</a>
-						</Link>
-					</li>
-					<li>
-						<Link href="/talk">
-							<a>Talk subject video generation</a>
-						</Link>
-					</li>
-					<li>
-						<Link href="/sponsor">
-							<a>Sponsor video generation</a>
-						</Link>
-					</li>
+					<Link href="/">
+						<li className={router.asPath === '/' ? 'active' : null}>
+							<a>Meetup announce generator</a>
+						</li>
+					</Link>
+					<Link href="/talk">
+						<li className={router.asPath === '/talk' ? 'active' : null}>
+							<a>Talk subject generator</a>
+						</li>
+					</Link>
+					<Link href="/sponsor">
+						<li className={router.asPath === '/sponsor' ? 'active' : null}>
+							<a>Sponsor video generator</a>
+						</li>
+					</Link>
 				</ul>
 			</nav>
 			<Component {...pageProps} />

@@ -14,6 +14,10 @@ main > article {
 	margin-bottom: 2rem;
 }
 
+nav {
+	padding: 1rem 0 3rem;
+}
+
 nav > ul {
 	display: flex;
 	justify-content: space-between;
@@ -23,14 +27,22 @@ nav > ul {
 }
 
 nav > ul > li {
-	padding: 0.3rem 0.5rem;
+	padding: 0.8rem 1.4rem;
 	background: white;
-	border-radius: 4px;
+	border-radius: 8px;
+	transition: 200ms;
+	cursor: pointer;
+	font-weight: bold;
+	box-shadow: 0 0 5px -1px #000000;
+}
+
+nav > ul > li.active {
+	background: #efdb50;
 }
 
 nav > ul > li:hover {
-	transform: scale(1.1);
-	transition: all 100ms ease-out;
+	transform: scale(1.05);
+	transition: all 200ms ease-out;
 }
 
 li a {
@@ -39,19 +51,21 @@ li a {
 }
 
 form > a {
-	color: #5e5e5e;
-	padding: 1rem 0.5rem;
+	color: black;
+	padding: 0.6rem 0.5rem;
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 	background: #efdb50;
 	border-radius: 4px;
 	text-decoration: none;
+	margin-top: 1rem;
+	transition: 200ms;
 }
 
 form > a:hover {
 	transform: scale(1.05);
-	transition: all 100ms ease-out;
+	transition: all 200ms ease-out;
 }
 
 .chapo header {
@@ -66,6 +80,7 @@ form > a:hover {
 
 .generation-block {
 	display: flex;
+	padding-bottom: 1rem;
 }
 
 code {

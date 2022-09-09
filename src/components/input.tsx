@@ -6,7 +6,7 @@ export const Form: React.FC<{children: ReactNode}> = ({children}) => {
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				margin: '20px 20px',
+				margin: '0 20px',
 				gap: '20px',
 			}}
 		>
@@ -22,10 +22,25 @@ export const Input: React.FC<{
 }> = ({value, setValue, label}) => {
 	return (
 		<label
-			style={{display: 'flex', width: '350px', justifyContent: 'space-between'}}
+			style={{
+				display: 'flex',
+				flexDirection: 'column',
+				width: '350px',
+				fontWeight: 'bold',
+				gap: '10px',
+			}}
 		>
 			{label}
-			<input name={label} value={value} onChange={setValue} />
+			<input
+				name={label}
+				value={value}
+				style={{
+					padding: '10px',
+					borderRadius: '5px',
+					border: 'none',
+				}}
+				onChange={setValue}
+			/>
 		</label>
 	);
 };

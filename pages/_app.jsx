@@ -40,6 +40,7 @@ export default ({Component, pageProps}) => {
 				</ul>
 			</nav>
 			<Component {...pageProps} />
+			<footer>Made with ❤️ and JS</footer>
 		</main>
 	);
 };

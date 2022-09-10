@@ -58,12 +58,10 @@ const Sponsor = () => {
 				</Form>
 			</div>
 
-			<h3>Generate the video locally 🔗</h3>
-			<Code>
-				pnpm remotion render src/index.tsx Sponsor out/sponsor.mp4
-				--props=&apos;
-				{JSON.stringify({companyName, backgroundImg, sponsorLogo})}&apos;
-			</Code>
+			<Code
+				composition="Sponsor"
+				params={{companyName, backgroundImg, sponsorLogo}}
+			/>
 		</>
 	);
 };

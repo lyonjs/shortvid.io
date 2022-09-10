@@ -68,12 +68,10 @@ const Talk = () => {
 				</Form>
 			</div>
 
-			<h3>Generate the video locally 🔗</h3>
-			<Code>
-				pnpm remotion render src/index.tsx Talk out/sponsor.mp4 --props=&apos;
-				{JSON.stringify({talkTitle, speakersNames, speakerPicture, titleSize})}
-				&apos;
-			</Code>
+			<Code
+				composition="Talk"
+				params={{talkTitle, speakersNames, speakerPicture, titleSize}}
+			/>
 		</>
 	);
 };

@@ -6,7 +6,6 @@ export const Form: React.FC<{children: ReactNode}> = ({children}) => {
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				marginLeft: '1rem',
 				gap: '1rem',
 			}}
 		>

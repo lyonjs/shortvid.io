@@ -8,7 +8,7 @@ importers:
       '@remotion/eslint-config': 3.2.14
       '@remotion/player': 3.2.14
       '@types/node': 18.7.15
-      '@types/react': 18.0.18
+      '@types/react': 18.0.19
       '@types/react-dom': 18.0.6
       '@types/web': 0.0.72
       eslint: 8.22.0
@@ -30,7 +30,7 @@ importers:
     devDependencies:
       '@remotion/eslint-config': 3.2.14_eslint@8.22.0+typescript@4.8.3
       '@types/node': 18.7.15
-      '@types/react': 18.0.18
+      '@types/react': 18.0.19
       '@types/react-dom': 18.0.6
       '@types/web': 0.0.72
       eslint: 8.22.0
@@ -414,11 +414,11 @@ packages:
   /@types/react-dom/18.0.6:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
-      '@types/react': 18.0.18
+      '@types/react': 18.0.19
     dev: true
 
-  /@types/react/18.0.18:
-    resolution: {integrity: sha512-6hI08umYs6NaiHFEEGioXnxJ+oEhY3eRz8VCUaudZmGdtvPviCJB8mgaMxaDWAdPSYd4eFavrPk2QIolwbLYrg==}
+  /@types/react/18.0.19:
+    resolution: {integrity: sha512-BDc3Q+4Q3zsn7k9xZrKfjWyJsSlEDMs38gD1qp2eDazLCdcPqAT+vq1ND+Z8AGel/UiwzNUk8ptpywgNQcJ1MQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2

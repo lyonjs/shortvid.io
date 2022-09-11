@@ -13,7 +13,7 @@ export const ImageBackground: React.FC<{
 }> = ({
 	src = staticFile('/defaultBackgroundImage.jpeg'),
 	animated = false,
-	animationDuration = 60,
+	animationDuration = 30,
 }) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();

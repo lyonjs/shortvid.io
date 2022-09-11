@@ -1,12 +1,13 @@
 import Head from 'next/head';
 
+import '../styles/globals.css';
 import './app.css';
 import {LyonJSLogo} from '../src/components/LyonJSLogo';
 import {ActiveLink} from '../src/components/ActiveLink';
 
 export default ({Component, pageProps}) => {
 	return (
-		<main>
+		<main className="mx-auto px-4">
 			<Head>
 				<title>LyonJS - social video generator</title>
 				<link rel="icon" href="/lyonjs-squared.png" />
@@ -49,12 +50,12 @@ export default ({Component, pageProps}) => {
 					content="https://social-video-generator.vercel.app/screenshot.png"
 				/>
 			</Head>
-			<article className="chapo">
-				<header>
+			<article className="mb-3">
+				<header className="flex items-center my-9">
 					<LyonJSLogo style={{height: '40px', display: 'block'}} />
-					<h1>LyonJS - Social video preview generator</h1>
+					<h1 className="text-2xl md:text-3xl ml-2">Social video generator</h1>
 					<a
-						className="github"
+						className="ml-auto"
 						href="https://github.com/lyonjs/social-video-generator"
 					>
 						Repository
@@ -72,37 +73,37 @@ export default ({Component, pageProps}) => {
 					</a>
 					.
 				</p>
-				<p>
+				<p className="mt-2">
 					Videos can be generated through Github workflow or directly locally if
 					you have installed the project.
 				</p>
-				<p>
+				<p className="mt-2">
 					This project uses <a href="https://nextjs.org/">NextJS</a> and{' '}
 					<a href="https://www.remotion.dev/">Remotion</a> libraries.
 				</p>
 			</article>
 
 			<nav>
-				<ul>
+				<ul className="flex flex-col md:flex-row py-5 pb-9">
 					<ActiveLink href="/">
 						<li>
 							<a>🗓 Meetup announce generator</a>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/talk">
-						<li>
+						<li className="md:ml-5">
 							<a>🎤 Talk subject generator</a>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/sponsor">
-						<li>
+						<li className="md:ml-5">
 							<a>🍕 Sponsor video generator</a>
 						</li>
 					</ActiveLink>
 				</ul>
 			</nav>
 			<Component {...pageProps} />
-			<footer>Made with ❤️ and JS</footer>
+			<footer className="mt-6 text-right">Made with ❤️ and JS</footer>
 		</main>
 	);
 };

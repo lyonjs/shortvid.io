@@ -10,22 +10,7 @@ a {
 }
 
 main {
-	max-width: 50rem;
-	padding: 0 0.8rem;
-	margin: 0 auto;
-}
-
-footer {
-	margin-top: 3rem;
-	text-align: right;
-}
-
-main > article {
-	margin-bottom: 2rem;
-}
-
-.github {
-	margin-left: auto;
+	max-width: 60rem;
 }
 
 a {
@@ -35,19 +20,6 @@ a {
 a:hover,
 .github:focus {
 	color: white;
-}
-
-nav {
-	padding: 1rem 0 3rem;
-}
-
-nav > ul {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 nav > ul > li {
@@ -100,16 +72,6 @@ form > a:hover {
 	transform: scale(1.05);
 	color: #1c1c1c;
 	transition: all 200ms ease-out;
-}
-
-.chapo header {
-	margin-top: 2rem;
-	display: flex;
-	align-items: center;
-}
-
-.chapo header h1 {
-	margin-left: 2rem;
 }
 
 .generation-block {

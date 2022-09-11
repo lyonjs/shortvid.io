@@ -15,9 +15,9 @@ export const Code: React.FC<{
 
 	return (
 		<>
-			<h3>Generate the video locally 🔗</h3>
+			<h3 className="text-xl my-6">Generate the video locally 🔗</h3>
 
-			<p>
+			<p className="my-4">
 				Please make sure to have <a href="https://pnpm.io/">pnpm</a> installed
 				then{' '}
 				<a href="https://github.com/lyonjs/social-video-generator">

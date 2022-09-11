@@ -58,10 +58,11 @@ export const RemotionVideo: React.FC = () => {
 					height={1200}
 					id="Sponsor"
 					fps={30}
-					durationInFrames={120}
+					durationInFrames={200}
 					defaultProps={{
+						sponsorLocalisation: 'Rue des paillettes - Lyon',
 						sponsorLogo:
-							'https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg',
+							'https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png',
 					}}
 				/>
 				<Composition
@@ -70,7 +71,7 @@ export const RemotionVideo: React.FC = () => {
 					height={1200}
 					id="SponsorWithoutLogo"
 					fps={30}
-					durationInFrames={120}
+					durationInFrames={200}
 					defaultProps={{
 						companyName: 'EvilCorp',
 					}}
@@ -86,7 +87,7 @@ export const RemotionVideo: React.FC = () => {
 					durationInFrames={120}
 					defaultProps={{
 						speakersNames: 'John Doe',
-						talkTitle: 'Is JS an awesome programing language?',
+						talkTitle: 'Is JS an awesome programing language ?',
 						speakerPicture: staticFile('/lyonjs-squared.png'),
 					}}
 				/>

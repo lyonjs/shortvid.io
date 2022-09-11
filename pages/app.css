@@ -81,6 +81,7 @@ form > a:hover {
 .generation-block {
 	display: flex;
 	padding-bottom: 1rem;
+	justify-content: space-between;
 }
 
 code {

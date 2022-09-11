@@ -1,6 +1,6 @@
 import {AbsoluteFill, Sequence} from 'remotion';
 import {ImageBackground} from '../components/ImageBackground';
-import {MeetupTitle} from './MeetupTitle';
+import {MeetupPresentation} from './MeetupPresentation';
 import {Register} from './Register';
 import {MeetupDate} from './MeetupDate';
 
@@ -14,7 +14,7 @@ export const Meetup: React.FC<{
 			<ImageBackground animated src={backgroundImg} />
 
 			<Sequence from={40} durationInFrames={130}>
-				<MeetupTitle title={title} />
+				<MeetupPresentation title={title} />
 			</Sequence>
 			{date && (
 				<Sequence from={120}>

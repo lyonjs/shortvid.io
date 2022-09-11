@@ -21,7 +21,7 @@ const Home = () => {
 						width: '400px',
 						boxShadow: '0 0 5px -1px #000000',
 					}}
-					durationInFrames={120}
+					durationInFrames={270}
 					compositionWidth={1200}
 					compositionHeight={1200}
 					fps={30}

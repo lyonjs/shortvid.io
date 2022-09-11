@@ -11,33 +11,27 @@ import {Title} from '../components/Title';
 
 export const Register: React.FC<{size?: number}> = ({size = 200}) => {
 	const frame = useCurrentFrame();
-	const {fps, height} = useVideoConfig();
+	const {fps} = useVideoConfig();
 
-	const drop = spring({
-		frame,
-		from: height / 2,
-		to: 10,
-		fps,
-		durationInFrames: 30,
-	});
+	const drop = spring({frame, from: 0, to: 100, fps, durationInFrames: 30});
 	const opacity = spring({frame, from: 0, to: 1, fps, durationInFrames: 30});
 
 	return (
 		<AbsoluteFill>
 			<div
 				style={{
+					width: '100%',
 					display: 'flex',
 					position: 'absolute',
-					top: drop,
-					left: 100,
+					bottom: drop,
 					color: 'white',
 					justifyContent: 'center',
-					flexDirection: 'column',
 					alignItems: 'center',
 					opacity,
+					gap: 30,
 				}}
 			>
-				<Title style={{fontSize: 40}}>⬆️ Inscriptions sur</Title>
+				<Title style={{fontSize: 40}}>Inscriptions sur</Title>
 				<Img
 					src={staticFile('/meetup-logo.png')}
 					style={{

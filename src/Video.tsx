@@ -110,7 +110,7 @@ export const RemotionVideo: React.FC = () => {
 					height={1200}
 					id="Meetup"
 					fps={30}
-					durationInFrames={120}
+					durationInFrames={270}
 					defaultProps={{
 						title: '#76 - LyonJS de la rentrée 🦁',
 						date: '28 septembre 2022',

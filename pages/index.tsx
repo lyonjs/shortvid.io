@@ -50,11 +50,7 @@ const Home = () => {
 				</Form>
 			</div>
 
-			<h3>Generate the video locally 🔗</h3>
-			<Code>
-				pnpm remotion render src/index.tsx Meetup out/meetup.mp4 --props=&apos;
-				{JSON.stringify({title, date, backgroundImg})}&apos;
-			</Code>
+			<Code composition="Meetup" params={{title, date, backgroundImg}} />
 		</>
 	);
 };

@@ -1,4 +1,4 @@
-import React, {ChangeEvent, ReactNode} from 'react';
+import React, {ChangeEvent, FormEvent, ReactNode} from 'react';
 
 export const Form: React.FC<{children: ReactNode}> = ({children}) => {
 	return (
@@ -16,7 +16,7 @@ export const Form: React.FC<{children: ReactNode}> = ({children}) => {
 
 export const Input: React.FC<{
 	value?: string;
-	setValue: (event: ChangeEvent) => void;
+	setValue: (event: FormEvent<HTMLInputElement>) => void;
 	label: string;
 }> = ({value, setValue, label}) => {
 	return (
@@ -31,6 +31,7 @@ export const Input: React.FC<{
 		>
 			{label}
 			<input
+				type="text"
 				name={label}
 				value={value}
 				style={{

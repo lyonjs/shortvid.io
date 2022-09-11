@@ -8,6 +8,7 @@ const Sponsor = () => {
 	const [companyName, setCompanyName] = useInputChange('Evilcorp');
 	const [backgroundImg, setBackgroundImg] = useInputChange();
 	const [sponsorLogo, setSponsorLogo] = useInputChange();
+	const [sponsorLocalisation, setSponsorLocalisation] = useInputChange();
 
 	return (
 		<>
@@ -21,7 +22,7 @@ const Sponsor = () => {
 						width: '400px',
 						boxShadow: '0 0 5px -1px #000000',
 					}}
-					durationInFrames={120}
+					durationInFrames={200}
 					compositionWidth={1200}
 					compositionHeight={1200}
 					fps={30}
@@ -29,6 +30,7 @@ const Sponsor = () => {
 					inputProps={{
 						companyName,
 						backgroundImg,
+						sponsorLocalisation,
 						sponsorLogo,
 					}}
 				/>
@@ -48,6 +50,11 @@ const Sponsor = () => {
 						setValue={setSponsorLogo}
 						value={sponsorLogo}
 						label="Sponsor logo url"
+					/>
+					<Input
+						setValue={setSponsorLocalisation}
+						value={sponsorLocalisation}
+						label="Sponsor localisation"
 					/>
 					<a
 						href="https://github.com/lyonjs/social-video-generator/actions/workflows/render-sponsor.yml"

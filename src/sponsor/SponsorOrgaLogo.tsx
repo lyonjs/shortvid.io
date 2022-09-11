@@ -21,10 +21,10 @@ export const SponsorOrgaLogo: React.FC = () => {
 		<LyonJSLogo
 			style={{
 				position: 'absolute',
-				top: 60,
+				bottom: 60,
 				right: lyonJSLogoAppear,
+				height: 100,
 				width: 'auto',
-				height: '300px',
 				filter: `blur(${lyonJSLogoDeblur}px)`,
 			}}
 		/>

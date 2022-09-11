@@ -9,6 +9,9 @@ on:
       backgroundImg:
         description: "If you want to use custom image for background"
         required: false
+      localisation:
+        description: "What is the localisation of the sponsor company ?"
+        required: false
       sponsorLogo:
         description: "If you want to use custom image for sponsor logo"
         required: false

@@ -23,6 +23,19 @@ main > article {
 	margin-bottom: 2rem;
 }
 
+.github {
+	margin-left: auto;
+}
+
+a {
+	color: #efdb50;
+}
+
+a:hover,
+.github:focus {
+	color: white;
+}
+
 nav {
 	padding: 1rem 0 3rem;
 }
@@ -54,6 +67,10 @@ nav > ul > li:hover {
 	transition: all 200ms ease-out;
 }
 
+li a:hover {
+	color: #1c1c1c;
+}
+
 li a {
 	color: #1c1c1c;
 	text-decoration: none;
@@ -74,6 +91,7 @@ form > a {
 
 form > a:hover {
 	transform: scale(1.05);
+	color: #1c1c1c;
 	transition: all 200ms ease-out;
 }
 

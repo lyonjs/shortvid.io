@@ -1,11 +1,11 @@
-import {useCallback, useState} from 'react';
+import {FormEvent, useCallback, useState} from 'react';
 
-export const useInputChange = (defaultValue?: any) => {
-	const [value, setValue] = useState(defaultValue);
+export const useInputChange = (defaultValue?: string) => {
+	const [value, setValue] = useState<string>(defaultValue || '');
 	const onValueChange = useCallback(
-		(event: any) => setValue(event.target.value),
+		(event: FormEvent<HTMLInputElement>) => setValue(event.currentTarget.value),
 		[]
 	);
 
-	return [value, onValueChange];
+	return [value, onValueChange] as const;
 };

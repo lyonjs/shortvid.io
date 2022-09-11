@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+import Head from 'next/head';
 
 import './app.css';
 import {LyonJSLogo} from '../src/components/LyonJSLogo';
@@ -9,6 +10,48 @@ export default ({Component, pageProps}) => {
 
 	return (
 		<main>
+			<Head>
+				<title>LyonJS - social video generator</title>
+				<link rel="icon" href="/lyonjs-squared.png" />
+				<meta name="title" content="LyonJS - social video generator" />
+				<meta
+					name="description"
+					content="This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association."
+				/>
+
+				<meta property="og:type" content="website" />
+				<meta
+					property="og:url"
+					content="https://social-video-generator.vercel.app/"
+				/>
+				<meta property="og:title" content="LyonJS - social video generator" />
+				<meta
+					property="og:description"
+					content="This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association."
+				/>
+				<meta
+					property="og:image"
+					content="https://social-video-generator.vercel.app/screenshot.png"
+				/>
+
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta
+					property="twitter:url"
+					content="https://social-video-generator.vercel.app/"
+				/>
+				<meta
+					property="twitter:title"
+					content="LyonJS - social video generator"
+				/>
+				<meta
+					property="twitter:description"
+					content="This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association."
+				/>
+				<meta
+					property="twitter:image"
+					content="https://social-video-generator.vercel.app/screenshot.png"
+				/>
+			</Head>
 			<article className="chapo">
 				<header>
 					<LyonJSLogo style={{height: '40px', display: 'block'}} />

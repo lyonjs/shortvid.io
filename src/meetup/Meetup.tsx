@@ -3,7 +3,6 @@ import {ImageBackground} from '../components/ImageBackground';
 import {MeetupTitle} from './MeetupTitle';
 import {Register} from './Register';
 import {MeetupDate} from './MeetupDate';
-import {LyonJSLogo} from '../components/LyonJSLogo';
 
 export const Meetup: React.FC<{
 	backgroundImg?: string;
@@ -14,25 +13,17 @@ export const Meetup: React.FC<{
 		<AbsoluteFill>
 			<ImageBackground animated src={backgroundImg} />
 
-			<Sequence from={15}>
+			<Sequence from={40} durationInFrames={130}>
 				<MeetupTitle title={title} />
 			</Sequence>
 			{date && (
-				<Sequence from={40}>
+				<Sequence from={120}>
 					<MeetupDate date={date} />
 				</Sequence>
 			)}
-			<Sequence from={80}>
+			<Sequence from={150}>
 				<Register />
 			</Sequence>
-			<LyonJSLogo
-				style={{
-					position: 'absolute',
-					bottom: 30,
-					right: 30,
-					height: 100,
-				}}
-			/>
 		</AbsoluteFill>
 	);
 };

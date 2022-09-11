@@ -89,17 +89,17 @@ export default ({Component, pageProps}) => {
 				<ul>
 					<Link href="/">
 						<li className={router.asPath === '/' ? 'active' : null}>
-							<a>Meetup announce generator</a>
+							<a>🗓 Meetup announce generator</a>
 						</li>
 					</Link>
 					<Link href="/talk">
 						<li className={router.asPath === '/talk' ? 'active' : null}>
-							<a>Talk subject generator</a>
+							<a>🎤 Talk subject generator</a>
 						</li>
 					</Link>
 					<Link href="/sponsor">
 						<li className={router.asPath === '/sponsor' ? 'active' : null}>
-							<a>Sponsor video generator</a>
+							<a>🍕 Sponsor video generator</a>
 						</li>
 					</Link>
 				</ul>

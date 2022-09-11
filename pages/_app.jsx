@@ -1,13 +1,10 @@
-import Link from 'next/link';
-import {useRouter} from 'next/router';
 import Head from 'next/head';
 
 import './app.css';
 import {LyonJSLogo} from '../src/components/LyonJSLogo';
+import {ActiveLink} from '../src/components/ActiveLink';
 
 export default ({Component, pageProps}) => {
-	const router = useRouter();
-
 	return (
 		<main>
 			<Head>
@@ -87,21 +84,21 @@ export default ({Component, pageProps}) => {
 
 			<nav>
 				<ul>
-					<Link href="/">
-						<li className={router.asPath === '/' ? 'active' : null}>
+					<ActiveLink href="/">
+						<li>
 							<a>🗓 Meetup announce generator</a>
 						</li>
-					</Link>
-					<Link href="/talk">
-						<li className={router.asPath === '/talk' ? 'active' : null}>
+					</ActiveLink>
+					<ActiveLink href="/talk">
+						<li>
 							<a>🎤 Talk subject generator</a>
 						</li>
-					</Link>
-					<Link href="/sponsor">
-						<li className={router.asPath === '/sponsor' ? 'active' : null}>
+					</ActiveLink>
+					<ActiveLink href="/sponsor">
+						<li>
 							<a>🍕 Sponsor video generator</a>
 						</li>
-					</Link>
+					</ActiveLink>
 				</ul>
 			</nav>
 			<Component {...pageProps} />

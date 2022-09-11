@@ -84,20 +84,20 @@ export default ({Component, pageProps}) => {
 			</article>
 
 			<nav>
-				<ul className="flex flex-col md:flex-row py-5 pb-9">
+				<ul className="flex flex-col justify-between md:flex-row py-5 pb-9">
 					<ActiveLink href="/">
 						<li>
-							<a>🗓 Meetup announce generator</a>
+							<a>🗓 Meetup announce</a>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/talk">
 						<li className="md:ml-5">
-							<a>🎤 Talk subject generator</a>
+							<a>🎤 Talk subject</a>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/sponsor">
 						<li className="md:ml-5">
-							<a>🍕 Sponsor video generator</a>
+							<a>🍕 Sponsor video</a>
 						</li>
 					</ActiveLink>
 				</ul>

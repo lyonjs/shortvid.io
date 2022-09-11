@@ -9,14 +9,6 @@ a {
 	color: #efdb50;
 }
 
-main {
-	max-width: 60rem;
-}
-
-a {
-	color: #efdb50;
-}
-
 a:hover,
 .github:focus {
 	color: white;
@@ -53,6 +45,10 @@ li a {
 
 form {
 	margin-top: 1rem;
+}
+
+form input {
+	color: #1c1c1c;
 }
 
 form > a {

@@ -19,6 +19,7 @@ const Home = () => {
 					controls
 					loop
 					style={{
+						flexShrink: '0',
 						height: '400px',
 						width: '400px',
 						boxShadow: '0 0 5px -1px #000000',

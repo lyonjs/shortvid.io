@@ -1,7 +1,9 @@
 import React, {FormEvent, ReactNode} from 'react';
 
 export const Form: React.FC<{children: ReactNode}> = ({children}) => {
-	return <form className="flex flex-col gap-3 md:ml-24">{children}</form>;
+	return (
+		<form className="flex flex-col gap-3 md:ml-12 shrink grow">{children}</form>
+	);
 };
 
 export const Input: React.FC<{
@@ -14,7 +16,7 @@ export const Input: React.FC<{
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				width: '350px',
+				width: '100%',
 				fontWeight: 'bold',
 				gap: '10px',
 			}}

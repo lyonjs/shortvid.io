@@ -1,28 +1,41 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Title} from '../components/Title';
+import {Lottie} from '@remotion/lottie';
+import {useLottie} from '../components/hooks/useLottie';
 
 export const MeetupDate: React.FC<{date: string}> = ({date}) => {
 	const frame = useCurrentFrame();
-	const {fps, width} = useVideoConfig();
+	const {fps} = useVideoConfig();
+	const illustration = useLottie('lf20_syoyrvic');
 
-	const left = spring({
+	const fromBottom = spring({
 		frame,
-		from: width,
-		to: width * 0.2,
+		from: 0,
+		to: 380,
 		fps,
-		durationInFrames: 30,
+		durationInFrames: 50,
 	});
+
+	if (!illustration) {
+		return null;
+	}
 
 	return (
 		<AbsoluteFill style={{color: 'white'}}>
+			<Lottie
+				loop
+				style={{filter: 'drop-shadow(0px 0px 10px #000000)'}}
+				animationData={illustration}
+			/>
+			;
 			<Title
 				style={{
 					position: 'absolute',
-					top: 800,
-					left,
-					fontSize: 60,
-					width,
-					padding: '0 0 0 300px',
+					bottom: fromBottom,
+					fontSize: 80,
+					padding: '0 30px',
+					textAlign: 'center',
+					width: '100%',
 				}}
 			>
 				{date}

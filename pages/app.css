@@ -11,6 +11,7 @@ a {
 
 main {
 	max-width: 50rem;
+	padding: 0 0.8rem;
 	margin: 0 auto;
 }
 
@@ -42,6 +43,7 @@ nav {
 
 nav > ul {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	list-style: none;
 	margin: 0;
@@ -50,6 +52,7 @@ nav > ul {
 
 nav > ul > li {
 	padding: 0.8rem 1.4rem;
+	margin-top: 1rem;
 	background: white;
 	border-radius: 8px;
 	transition: 200ms;
@@ -74,6 +77,10 @@ li a:hover {
 li a {
 	color: #1c1c1c;
 	text-decoration: none;
+}
+
+form {
+	margin-top: 1rem;
 }
 
 form > a {
@@ -107,6 +114,8 @@ form > a:hover {
 
 .generation-block {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding-bottom: 1rem;
 	justify-content: space-between;
 }
@@ -154,4 +163,23 @@ form > a:hover {
 
 .command:hover {
 	background: #444444;
+}
+
+@media screen and (min-width: 768px) {
+	nav > ul {
+		flex-direction: row;
+	}
+
+	nav > ul > li {
+		margin: 0;
+	}
+
+	.generation-block {
+		flex-direction: row;
+		align-items: normal;
+	}
+
+	form {
+		margin-top: 0;
+	}
 }

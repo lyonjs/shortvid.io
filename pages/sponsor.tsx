@@ -5,10 +5,16 @@ import {Form, Input} from '../src/components/input';
 import {Code} from '../src/components/Code';
 
 const Sponsor = () => {
-	const [companyName, setCompanyName] = useInputChange('Evilcorp');
-	const [backgroundImg, setBackgroundImg] = useInputChange();
-	const [sponsorLogo, setSponsorLogo] = useInputChange();
-	const [sponsorLocalisation, setSponsorLocalisation] = useInputChange();
+	const [companyName, setCompanyName] = useInputChange<string>('Evilcorp');
+	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
+		undefined
+	);
+	const [sponsorLogo, setSponsorLogo] = useInputChange<string | undefined>(
+		undefined
+	);
+	const [sponsorLocalisation, setSponsorLocalisation] = useInputChange<
+		string | undefined
+	>(undefined);
 
 	return (
 		<>

@@ -15,15 +15,14 @@ const Home = () => {
 		<>
 			<div className="generation-block">
 				<Player
+					className="shrink-0 shadow-lg"
+					style={{
+						width: '400px',
+						height: '400px',
+					}}
 					autoPlay
 					controls
 					loop
-					style={{
-						flexShrink: '0',
-						height: '400px',
-						width: '400px',
-						boxShadow: '0 0 5px -1px #000000',
-					}}
 					durationInFrames={270}
 					compositionWidth={1200}
 					compositionHeight={1200}

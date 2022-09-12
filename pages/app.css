@@ -1,17 +1,5 @@
-body {
-	background-color: #282c34;
-	color: white;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
 a {
 	color: #efdb50;
-}
-
-a:hover,
-.github:focus {
-	color: white;
 }
 
 nav > ul > li {
@@ -76,51 +64,6 @@ form > a:hover {
 	align-items: center;
 	padding-bottom: 1rem;
 	justify-content: space-between;
-}
-
-.command {
-	position: relative;
-	cursor: pointer;
-	border-radius: 4px;
-	font-size: 1.2rem;
-	display: block;
-	background: #1c1c1c;
-	padding: 1rem 2rem;
-	word-break: break-all;
-}
-
-@keyframes popup {
-	0% {
-		top: 0;
-	}
-
-	50% {
-		opacity: 1;
-	}
-
-	100% {
-		top: -2rem;
-		opacity: 0;
-	}
-}
-
-.command.animated::after {
-	animation: 2s ease-in popup;
-}
-
-.command::after {
-	position: absolute;
-	padding: 0.2rem 0.3rem;
-	background: #efdb50;
-	color: #1c1c1c;
-	border-radius: 4px;
-	right: 0;
-	content: 'Command copied in clipboard';
-	opacity: 0;
-}
-
-.command:hover {
-	background: #444444;
 }
 
 @media screen and (min-width: 768px) {

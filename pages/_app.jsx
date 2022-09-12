@@ -55,7 +55,7 @@ export default ({Component, pageProps}) => {
 					<LyonJSLogo style={{height: '40px', display: 'block'}} />
 					<h1 className="text-2xl md:text-3xl ml-2">Social video generator</h1>
 					<a
-						className="ml-auto"
+						className="ml-auto hover:text-white"
 						href="https://github.com/lyonjs/social-video-generator"
 					>
 						Repository

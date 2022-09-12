@@ -2,7 +2,7 @@ import {MouseEvent, useCallback} from 'react';
 
 export const Code: React.FC<{
 	composition: string;
-	params: {[key: string]: string};
+	params: {[key: string]: string | undefined};
 }> = ({params, composition}) => {
 	const onClickHandler = useCallback((event: MouseEvent) => {
 		const element = event.target as HTMLElement;

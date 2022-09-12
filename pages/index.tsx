@@ -5,9 +5,11 @@ import {Form, Input} from '../src/components/input';
 import {Code} from '../src/components/Code';
 
 const Home = () => {
-	const [title, setTitle] = useInputChange('Example');
-	const [date, setDate] = useInputChange('28 septembre 2022');
-	const [backgroundImg, setBackgroundImg] = useInputChange();
+	const [title, setTitle] = useInputChange<string>('Example');
+	const [date, setDate] = useInputChange<string>('28 septembre 2022');
+	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
+		undefined
+	);
 
 	return (
 		<>

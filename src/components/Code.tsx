@@ -6,18 +6,21 @@ export const Code: React.FC<{
 }> = ({params, composition}) => {
 	const onClickHandler = useCallback((event: MouseEvent) => {
 		const element = event.target as HTMLElement;
+		const notification = element.querySelector('.notif');
+
+		console.log(notification);
 		if (element.textContent) {
 			navigator.clipboard.writeText(element.textContent);
-			element.classList.add('animated');
-			setTimeout(() => element.classList.remove('animated'), 2000);
+			notification?.classList.add('animate-popup');
+			setTimeout(() => notification?.classList.remove('animate-popup'), 2000);
 		}
 	}, []);
 
 	return (
 		<>
-			<h3>Generate the video locally 🔗</h3>
+			<h3 className="text-xl my-6">Generate the video locally 🔗</h3>
 
-			<p>
+			<p className="my-4">
 				Please make sure to have <a href="https://pnpm.io/">pnpm</a> installed
 				then{' '}
 				<a href="https://github.com/lyonjs/social-video-generator">
@@ -27,10 +30,16 @@ export const Code: React.FC<{
 				and run <code>pnpm install</code>.
 			</p>
 
-			<code className="command" onClick={onClickHandler}>
+			<code
+				className="relative cursor-pointer rounded-lg block py-3 px-5 break-all text-lg bg-stone-900 hover:bg-stone-700"
+				onClick={onClickHandler}
+			>
 				pnpm remotion render src/index.tsx {composition} out/{composition}.mp4
 				--props=&apos;
 				{JSON.stringify(params)}&apos;
+				<div className="notif absolute py-2 px-3 bg-amber-300 text-neutral-900 rounded-lg opacity-0 right-0 top-0 pointer-events-none">
+					Command copied in clipboard
+				</div>
 			</code>
 		</>
 	);

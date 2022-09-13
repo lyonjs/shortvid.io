@@ -91,7 +91,7 @@ export default ({Component, pageProps}) => {
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/meetup">
-						<li>
+						<li className="md:ml-5">
 							<a>🗓 Meetup announce</a>
 						</li>
 					</ActiveLink>

@@ -3,7 +3,15 @@ import {Meetup} from '../src/meetup/Meetup';
 import {Talk} from '../src/talk/Talk';
 import {Sponsor} from '../src/sponsor/Sponsor';
 
-const VIDEO_LIST = [
+interface Video {
+	id: string;
+	template: React.FC<any>;
+	params: {
+		[key: string]: string;
+	};
+}
+
+const VIDEO_LIST: Video[] = [
 	{
 		id: 'Meetup announce',
 		template: Meetup,
@@ -24,6 +32,7 @@ const VIDEO_LIST = [
 			backgroundImg:
 				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
 			speakerPicture: 'https://avatars2.githubusercontent.com/u/22420399?v=4',
+			titleSize: '50',
 		},
 	},
 	{
@@ -43,15 +52,15 @@ const VIDEO_LIST = [
 const Home = () => {
 	return (
 		<>
-			<h2 className="text-xl pb-4 font-bold">
+			<h2 className="text-2xl pb-4 font-bold">
 				Here you can find a set of example videos
 			</h2>
-			<section className="grid grid-cols-2 gap-4">
+			<section className="grid grid-cols-2 gap-12 py-4">
 				{VIDEO_LIST.map((video) => {
 					return (
 						<article key={video.id}>
 							<header>
-								<h3 className="text-l pb-3 text-yellow-300 font-bold">
+								<h3 className="text-xl pb-3 text-yellow-300 font-bold">
 									{video.id}
 								</h3>
 							</header>
@@ -62,7 +71,7 @@ const Home = () => {
 								className="shrink-0 shadow-lg"
 								style={{
 									width: '100%',
-									height: '400px',
+									height: '350px',
 								}}
 								durationInFrames={270}
 								compositionWidth={1200}

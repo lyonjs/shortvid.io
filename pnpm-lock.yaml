@@ -9,7 +9,7 @@ importers:
       '@remotion/lottie': 3.2.14
       '@remotion/player': 3.2.14
       '@types/node': 18.7.15
-      '@types/react': 18.0.19
+      '@types/react': 18.0.20
       '@types/react-dom': 18.0.6
       '@types/web': 0.0.72
       autoprefixer: 10.4.10
@@ -37,7 +37,7 @@ importers:
     devDependencies:
       '@remotion/eslint-config': 3.2.14_eslint@8.23.1+typescript@4.8.3
       '@types/node': 18.7.15
-      '@types/react': 18.0.19
+      '@types/react': 18.0.20
       '@types/react-dom': 18.0.6
       '@types/web': 0.0.72
       autoprefixer: 10.4.10_postcss@8.4.16
@@ -442,11 +442,11 @@ packages:
   /@types/react-dom/18.0.6:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
-      '@types/react': 18.0.19
+      '@types/react': 18.0.20
     dev: true
 
-  /@types/react/18.0.19:
-    resolution: {integrity: sha512-BDc3Q+4Q3zsn7k9xZrKfjWyJsSlEDMs38gD1qp2eDazLCdcPqAT+vq1ND+Z8AGel/UiwzNUk8ptpywgNQcJ1MQ==}
+  /@types/react/18.0.20:
+    resolution: {integrity: sha512-MWul1teSPxujEHVwZl4a5HxQ9vVNsjTchVA+xRqv/VYGCuKGAU6UhfrTdF5aBefwD1BHUD8i/zq+O/vyCm/FrA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2

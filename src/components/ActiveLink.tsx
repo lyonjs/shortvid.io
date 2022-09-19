@@ -9,7 +9,7 @@ type ActiveLinkProps = LinkProps & {
 
 export const ActiveLink: FC<ActiveLinkProps> = ({
 	children,
-	activeClassName = 'active',
+	activeClassName = 'bg-yellow-300',
 	href,
 }) => {
 	const {asPath} = useRouter();

@@ -2,26 +2,6 @@ a {
 	color: #efdb50;
 }
 
-nav > ul > li {
-	padding: 0.8rem 1.4rem;
-	margin-top: 1rem;
-	background: white;
-	border-radius: 8px;
-	transition: 200ms;
-	cursor: pointer;
-	font-weight: bold;
-	box-shadow: 0 0 5px -1px #000000;
-}
-
-nav > ul > li.active {
-	background: #efdb50;
-}
-
-nav > ul > li:hover {
-	transform: scale(1.05);
-	transition: all 200ms ease-out;
-}
-
 li a:hover {
 	color: #1c1c1c;
 }
@@ -59,14 +39,6 @@ form > a:hover {
 }
 
 @media screen and (min-width: 768px) {
-	nav > ul {
-		flex-direction: row;
-	}
-
-	nav > ul > li {
-		margin: 0;
-	}
-
 	form {
 		margin-top: 0;
 	}

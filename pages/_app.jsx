@@ -87,6 +87,11 @@ export default ({Component, pageProps}) => {
 				<ul className="flex flex-col justify-between md:flex-row py-5 pb-9">
 					<ActiveLink href="/">
 						<li>
+							<a>🏠 Home</a>
+						</li>
+					</ActiveLink>
+					<ActiveLink href="/meetup">
+						<li className="md:ml-5">
 							<a>🗓 Meetup announce</a>
 						</li>
 					</ActiveLink>

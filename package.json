@@ -13,17 +13,17 @@
 		"dev": "next dev"
 	},
 	"dependencies": {
-		"@remotion/cli": "3.2.16",
-		"@remotion/lottie": "3.2.16",
-		"@remotion/player": "3.2.16",
+		"@remotion/cli": "3.2.21",
+		"@remotion/lottie": "3.2.21",
+		"@remotion/player": "3.2.21",
 		"lottie-web": "5.9.6",
 		"next": "latest",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"remotion": "3.2.16"
+		"remotion": "3.2.21"
 	},
 	"devDependencies": {
-		"@remotion/eslint-config": "3.2.16",
+		"@remotion/eslint-config": "3.2.21",
 		"@types/node": "18.7.15",
 		"@types/react": "18.0.20",
 		"@types/react-dom": "18.0.6",

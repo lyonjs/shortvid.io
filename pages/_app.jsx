@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 import '../styles/globals.css';
-import './app.css';
 import {LyonJSLogo} from '../src/components/LyonJSLogo';
 import {ActiveLink} from '../src/components/ActiveLink';
 
@@ -86,22 +85,22 @@ export default ({Component, pageProps}) => {
 			<nav>
 				<ul className="flex flex-col justify-between md:flex-row py-5 pb-9">
 					<ActiveLink href="/">
-						<li className="py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
+						<li className="text-black py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 							<a>🏠 Home</a>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/meetup">
-						<li className="mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
+						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 							<a>🗓 Meetup announce</a>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/talk">
-						<li className="mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
+						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 							<a>🎤 Talk subject</a>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/sponsor">
-						<li className="mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
+						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 							<a>🍕 Sponsor video</a>
 						</li>
 					</ActiveLink>

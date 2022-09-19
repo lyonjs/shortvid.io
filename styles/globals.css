@@ -10,3 +10,7 @@ body {
 main {
 	max-width: 50rem;
 }
+
+p a {
+	color: #efdb50;
+}

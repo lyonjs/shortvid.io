@@ -12,7 +12,7 @@ importers:
       '@types/react': 18.0.20
       '@types/react-dom': 18.0.6
       '@types/web': 0.0.73
-      autoprefixer: 10.4.10
+      autoprefixer: 10.4.11
       eslint: 8.23.1
       husky: 8.0.1
       lottie-web: 5.9.6
@@ -40,7 +40,7 @@ importers:
       '@types/react': 18.0.20
       '@types/react-dom': 18.0.6
       '@types/web': 0.0.73
-      autoprefixer: 10.4.10_postcss@8.4.16
+      autoprefixer: 10.4.11_postcss@8.4.16
       eslint: 8.23.1
       husky: 8.0.1
       postcss: 8.4.16
@@ -829,8 +829,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /autoprefixer/10.4.10_postcss@8.4.16:
-    resolution: {integrity: sha512-nMaiDARyp1e74c8IeAXkr+BmFKa8By4Zak7tyaNPF09Iu39WFpNXOWrVirmXjKr+5cOyERwvtbMOLYz6iBJYgQ==}
+  /autoprefixer/10.4.11_postcss@8.4.16:
+    resolution: {integrity: sha512-5lHp6DgRodxlBLSkzHOTcufWFflH1ewfy2hvFQyjrblBFlP/0Yh4O/Wrg4ow8WRlN3AAUFFLAQwX8hTptzqVHg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:

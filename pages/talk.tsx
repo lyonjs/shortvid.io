@@ -17,7 +17,7 @@ const Talk = () => {
 
 	return (
 		<>
-			<div className="generation-block">
+			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
 				<Player
 					autoPlay
 					controls

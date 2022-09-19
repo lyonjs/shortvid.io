@@ -58,14 +58,6 @@ form > a:hover {
 	transition: all 200ms ease-out;
 }
 
-.generation-block {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 1rem;
-	justify-content: space-between;
-}
-
 @media screen and (min-width: 768px) {
 	nav > ul {
 		flex-direction: row;
@@ -73,11 +65,6 @@ form > a:hover {
 
 	nav > ul > li {
 		margin: 0;
-	}
-
-	.generation-block {
-		flex-direction: row;
-		align-items: normal;
 	}
 
 	form {

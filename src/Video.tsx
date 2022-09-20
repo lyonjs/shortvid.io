@@ -60,7 +60,7 @@ export const RemotionVideo: React.FC = () => {
 					fps={30}
 					durationInFrames={200}
 					defaultProps={{
-						sponsorLocalisation: 'Rue des paillettes - Lyon',
+						sponsorLocalisation: '94 Rue Robert - Lyon',
 					}}
 				/>
 				<Composition

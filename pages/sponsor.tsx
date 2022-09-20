@@ -16,6 +16,8 @@ const Sponsor = () => {
 		string | undefined
 	>(undefined);
 
+	const props = {companyName, backgroundImg, sponsorLogo, sponsorLocalisation};
+
 	return (
 		<>
 			<div className="generation-block">
@@ -33,12 +35,7 @@ const Sponsor = () => {
 					compositionHeight={1200}
 					fps={30}
 					component={SponsorComponent}
-					inputProps={{
-						companyName,
-						backgroundImg,
-						sponsorLocalisation,
-						sponsorLogo,
-					}}
+					inputProps={props}
 				/>
 
 				<Form>
@@ -71,10 +68,7 @@ const Sponsor = () => {
 				</Form>
 			</div>
 
-			<Code
-				composition="Sponsor"
-				params={{companyName, backgroundImg, sponsorLogo}}
-			/>
+			<Code composition="Sponsor" params={props} />
 		</>
 	);
 };

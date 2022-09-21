@@ -6,7 +6,7 @@ import {ActiveLink} from '../src/components/ActiveLink';
 
 export default ({Component, pageProps}) => {
 	return (
-		<main className="mx-auto px-4">
+		<main className="mx-auto p-4">
 			<Head>
 				<title>LyonJS - social video generator</title>
 				<link rel="icon" href="/lyonjs-squared.png" />
@@ -51,13 +51,13 @@ export default ({Component, pageProps}) => {
 			</Head>
 			<article className="mb-3">
 				<header className="flex items-center my-9">
-					<LyonJSLogo style={{height: '40px', display: 'block'}} />
-					<h1 className="text-2xl md:text-3xl ml-2">Social video generator</h1>
+					<LyonJSLogo style={{height: '60px', display: 'block'}} />
+					<h1 className="text-2xl md:text-3xl ml-5">Social video generator</h1>
 					<a
-						className="ml-auto hover:text-white"
+						className="ml-auto border-2 px-4 py-2 rounded-md hover:bg-white hover:text-black transition-all duration-200 font-bold"
 						href="https://github.com/lyonjs/social-video-generator"
 					>
-						Repository
+						👨🏼‍💻 Repository
 					</a>
 				</header>
 				<p>
@@ -107,7 +107,7 @@ export default ({Component, pageProps}) => {
 				</ul>
 			</nav>
 			<Component {...pageProps} />
-			<footer className="mt-6 text-right">Made with ❤️ and JS</footer>
+			<footer className="mt-6 text-right">Made with 💛 and JS</footer>
 		</main>
 	);
 };

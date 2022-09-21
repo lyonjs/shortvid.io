@@ -5,10 +5,12 @@
 body {
 	background-color: #282c34;
 	color: white;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 main {
 	max-width: 50rem;
+}
+
+p a {
+	color: #efdb50;
 }

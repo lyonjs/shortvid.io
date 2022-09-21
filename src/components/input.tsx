@@ -2,7 +2,9 @@ import React, {FormEvent, ReactNode} from 'react';
 
 export const Form: React.FC<{children: ReactNode}> = ({children}) => {
 	return (
-		<form className="flex flex-col gap-3 md:ml-12 shrink grow">{children}</form>
+		<form className="mt-0 md:mt-2 flex flex-col gap-3 md:ml-12 shrink grow">
+			{children}
+		</form>
 	);
 };
 
@@ -23,6 +25,7 @@ export const Input: React.FC<{
 		>
 			{label}
 			<input
+				className="text-black"
 				type="text"
 				name={label}
 				value={value}

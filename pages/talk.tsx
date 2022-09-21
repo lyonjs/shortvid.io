@@ -14,6 +14,13 @@ const Talk = () => {
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined
 	);
+	const props = {
+		talkTitle,
+		speakersNames,
+		speakerPicture,
+		titleSize,
+		backgroundImg,
+	};
 
 	return (
 		<>
@@ -32,13 +39,7 @@ const Talk = () => {
 					compositionHeight={1200}
 					fps={30}
 					component={TalkComponent}
-					inputProps={{
-						talkTitle,
-						speakersNames,
-						speakerPicture,
-						titleSize,
-						backgroundImg,
-					}}
+					inputProps={props}
 				/>
 
 				<Form>
@@ -72,10 +73,7 @@ const Talk = () => {
 				</Form>
 			</div>
 
-			<Code
-				composition="Talk"
-				params={{talkTitle, speakersNames, speakerPicture, titleSize}}
-			/>
+			<Code composition="Talk" params={props} />
 		</>
 	);
 };

@@ -10,6 +10,7 @@ const Home = () => {
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined
 	);
+	const props = {title, date, backgroundImg};
 
 	return (
 		<>
@@ -28,11 +29,7 @@ const Home = () => {
 					compositionHeight={1200}
 					fps={30}
 					component={MeetupComponent}
-					inputProps={{
-						title,
-						date,
-						backgroundImg,
-					}}
+					inputProps={props}
 				/>
 
 				<Form>
@@ -52,7 +49,7 @@ const Home = () => {
 				</Form>
 			</div>
 
-			<Code composition="Meetup" params={{title, date, backgroundImg}} />
+			<Code composition="Meetup" params={props} />
 		</>
 	);
 };

@@ -24,7 +24,8 @@ export const TalkSpeakerPicture: React.FC<{speakerPicture?: string}> = ({
 			style={{
 				position: 'absolute',
 				top: pictureDrop,
-				left: 330,
+				left: '50%',
+				transform: 'translate(-50%, 0)',
 			}}
 			src={speakerPicture}
 		/>

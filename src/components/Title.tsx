@@ -8,6 +8,7 @@ export const Title: React.FC<{
 		style={{
 			fontFamily: 'Helvetica',
 			fontSize: 100,
+			fontWeight: 'bold',
 			...style,
 		}}
 	>

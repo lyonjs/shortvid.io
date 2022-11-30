@@ -2,6 +2,7 @@ import {Player} from '@remotion/player';
 import {Meetup} from '../src/meetup/Meetup';
 import {Talk} from '../src/talk/Talk';
 import {Sponsor} from '../src/sponsor/Sponsor';
+import {Event} from '../src/event/Event';
 
 interface Video {
 	id: string;
@@ -45,6 +46,13 @@ const VIDEO_LIST: Video[] = [
 				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
 			sponsorLogo:
 				'https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg',
+		},
+	},
+	{
+		id: 'Event',
+		template: Event,
+		params: {
+			title: 'Apéro JS 🍾',
 		},
 	},
 ];

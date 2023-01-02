@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"@remotion/cli": "3.2.31",
+		"@remotion/google-fonts": "^3.3.15",
 		"@remotion/lottie": "3.2.31",
 		"@remotion/player": "3.2.31",
 		"lottie-web": "5.9.6",

@@ -9,6 +9,7 @@ import {Speaker} from './components/Speaker';
 import {Meetup} from './meetup/Meetup';
 import {Register} from './meetup/Register';
 import {Event} from './event/Event';
+import {Celebration} from "./others/Celebration";
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -140,6 +141,16 @@ export const RemotionVideo: React.FC = () => {
 						title: 'Apéro JS de Noël 🎄',
 						lottieAsset: 'lf20_UDstUT',
 					}}
+				/>
+			</Folder>
+			<Folder name="Others">
+				<Composition
+					component={Celebration}
+					width={1200}
+					height={1200}
+					id="Celebration"
+					fps={30}
+					durationInFrames={730}
 				/>
 			</Folder>
 		</>

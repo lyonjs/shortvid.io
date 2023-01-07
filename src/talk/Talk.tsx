@@ -18,7 +18,11 @@ export const Talk: React.FC<{
 	backgroundImg,
 }) => {
 	return (
-		<AbsoluteFill>
+		<AbsoluteFill
+			style={{
+				overflow: 'hidden',
+			}}
+		>
 			<Sequence from={0} name="Background">
 				<ImageBackground animated animationDuration={30} src={backgroundImg} />
 			</Sequence>

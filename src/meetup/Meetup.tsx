@@ -10,7 +10,11 @@ export const Meetup: React.FC<{
 	date?: string;
 }> = ({backgroundImg, title, date}) => {
 	return (
-		<AbsoluteFill>
+		<AbsoluteFill
+			style={{
+				overflow: 'hidden',
+			}}
+		>
 			<ImageBackground animated src={backgroundImg} />
 
 			<Sequence from={40} durationInFrames={130}>

@@ -16,7 +16,11 @@ export const Event: React.FC<{
 	paillettesAsset = 'lf20_tiviyc3p',
 }) => {
 	return (
-		<AbsoluteFill>
+		<AbsoluteFill
+			style={{
+				overflow: 'hidden',
+			}}
+		>
 			<ImageBackground animated src={backgroundImg} />
 			<Sequence from={50} durationInFrames={130} name="Paillette">
 				<Paillettes assetLink={paillettesAsset} />

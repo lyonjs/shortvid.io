@@ -86,27 +86,27 @@ export default ({Component, pageProps}) => {
 				<ul className="flex flex-col justify-between md:flex-row py-5 pb-9">
 					<ActiveLink href="/">
 						<li className="text-black py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
-							<a>🏠 Home</a>
+							<span>🏠 Home</span>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/meetup">
 						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
-							<a>🗓 Meetup</a>
+							<span>🗓 Meetup</span>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/talk">
 						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
-							<a>🎤 Talk</a>
+							<span>🎤 Talk</span>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/sponsor">
 						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
-							<a>🍕 Sponsor</a>
+							<span>🍕 Sponsor</span>
 						</li>
 					</ActiveLink>
 					<ActiveLink href="/event">
 						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
-							<a>🎉 Event</a>
+							<span>🎉 Event</span>
 						</li>
 					</ActiveLink>
 				</ul>

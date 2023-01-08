@@ -27,7 +27,7 @@
 		"@types/node": "18.11.18",
 		"@types/react": "18.0.21",
 		"@types/react-dom": "18.0.10",
-		"@types/web": "0.0.75",
+		"@types/web": "0.0.86",
 		"autoprefixer": "10.4.13",
 		"eslint": "8.25.0",
 		"husky": "8.0.3",

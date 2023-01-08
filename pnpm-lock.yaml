@@ -8,7 +8,7 @@ specifiers:
   '@types/node': 18.11.18
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.10
-  '@types/web': 0.0.75
+  '@types/web': 0.0.86
   autoprefixer: 10.4.13
   eslint: 8.25.0
   husky: 8.0.3
@@ -38,7 +38,7 @@ devDependencies:
   '@types/node': 18.11.18
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.10
-  '@types/web': 0.0.75
+  '@types/web': 0.0.86
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.25.0
   husky: 8.0.3
@@ -452,8 +452,8 @@ packages:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
-  /@types/web/0.0.75:
-    resolution: {integrity: sha512-42MBIWop5E6TENKBwwMONJfctJsHc5o1k6Fn3FOXsPz892cW6wuiWGPvQh+Tle+yaAMaIpRsdOnlFMDKUKkdGw==}
+  /@types/web/0.0.86:
+    resolution: {integrity: sha512-d8mYKwcKvkMSlxlDovHyRD7GhNpe10ti4GaX4dR0lsQqk+2l9Y72PU2yPpYlRajQrpfuOWlgGqs8jpbSU9udpg==}
     dev: true
 
   /@types/yauzl/2.10.0:

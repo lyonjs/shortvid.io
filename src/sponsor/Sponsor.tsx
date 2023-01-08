@@ -17,7 +17,7 @@ export const Sponsor: React.FC<{
 	sponsorLogo,
 }) => {
 	return (
-		<AbsoluteFill style={{backgroundColor: 'white'}}>
+		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Sequence from={0} name="Background">
 				<ImageBackground animated src={backgroundImg} />
 			</Sequence>

@@ -18,10 +18,10 @@ export const Sponsor: React.FC<{
 }) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
-			<Sequence from={0} name="Background">
+			<Sequence name="Background">
 				<ImageBackground animated src={backgroundImg} />
 			</Sequence>
-			<Sequence from={0} name="Lottie Thanks">
+			<Sequence name="Lottie Thanks">
 				<SponsorThanks />
 			</Sequence>
 			<Sequence from={20} name="LyonJS">

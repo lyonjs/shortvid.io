@@ -23,7 +23,7 @@ export const Talk: React.FC<{
 				overflow: 'hidden',
 			}}
 		>
-			<Sequence from={0} name="Background">
+			<Sequence name="Background">
 				<ImageBackground animated animationDuration={30} src={backgroundImg} />
 			</Sequence>
 			<AbsoluteFill>

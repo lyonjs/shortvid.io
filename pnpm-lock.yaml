@@ -12,7 +12,7 @@ specifiers:
   autoprefixer: 10.4.12
   eslint: 8.25.0
   husky: 8.0.3
-  lottie-web: 5.9.6
+  lottie-web: 5.10.1
   next: latest
   postcss: 8.4.18
   prettier: 2.8.2
@@ -25,9 +25,9 @@ specifiers:
 
 dependencies:
   '@remotion/cli': 3.2.31_react-dom@18.2.0+react@18.2.0
-  '@remotion/lottie': 3.2.31_510db0541b746677aefbf3e002c49a56
+  '@remotion/lottie': 3.2.31_b7ab0da5b16461e4e2a82c85c9dabde4
   '@remotion/player': 3.2.31_react-dom@18.2.0+react@18.2.0
-  lottie-web: 5.9.6
+  lottie-web: 5.10.1
   next: 13.1.1_react-dom@18.2.0+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -342,14 +342,14 @@ packages:
       - typescript
     dev: true
 
-  /@remotion/lottie/3.2.31_510db0541b746677aefbf3e002c49a56:
+  /@remotion/lottie/3.2.31_b7ab0da5b16461e4e2a82c85c9dabde4:
     resolution: {integrity: sha512-R8RPqGBXuLx3Q7l/895M6hO5gxVNGc1S520liv995251RqnACGORdNlXONzayKLGohdS05iRLR2VxT+zGLWYxw==}
     peerDependencies:
       lottie-web: ^5
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      lottie-web: 5.9.6
+      lottie-web: 5.10.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       remotion: 3.2.31_react-dom@18.2.0+react@18.2.0
@@ -2080,8 +2080,8 @@ packages:
     dependencies:
       js-tokens: 4.0.0
 
-  /lottie-web/5.9.6:
-    resolution: {integrity: sha512-JFs7KsHwflugH5qIXBpB4905yC1Sub2MZWtl/elvO/QC6qj1ApqbUZJyjzJseJUtVpgiDaXQLjBlIJGS7UUUXA==}
+  /lottie-web/5.10.1:
+    resolution: {integrity: sha512-u17bVNf/vA3oK9Wkyb1Vpo83WUIEQwaT0GeEN0qcvaExizyJ/RjmcbjSDj0CnwQCtpGqTgYhqprCC7cTWuXMNw==}
     dev: false
 
   /lru-cache/6.0.0:

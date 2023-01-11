@@ -1,7 +1,9 @@
 import {AbsoluteFill, Sequence} from 'remotion';
 import {TalkSpeakerPicture} from '../talk/TalkSpeakerPicture';
+import {Speaker} from './TouraineTech2023';
+import {Title} from './Title';
 
-export const Speakers: React.FC<{speakers: string[]}> = ({speakers}) => {
+export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	return (
 		<Sequence from={20} name="Picture">
 			<AbsoluteFill
@@ -17,18 +19,43 @@ export const Speakers: React.FC<{speakers: string[]}> = ({speakers}) => {
 					const shadowColor = index % 2 === 0 ? '#6abfad' : '#222333';
 
 					return (
-						<TalkSpeakerPicture
+						<div
 							style={{
-								position: 'relative',
-								left: 'unset',
-								transform: 'translate(0)',
-								width: 250,
-								height: 250,
-								border: 'none',
-								boxShadow: `0 0 0 10px white, 0 0 0 20px ${shadowColor}`,
+								display: 'flex',
+								flexDirection: 'column',
 							}}
-							speakerPicture={speaker}
-						/>
+						>
+							<TalkSpeakerPicture
+								key={speaker.name}
+								style={{
+									display: 'block',
+									position: 'relative',
+									left: 'unset',
+									transform: 'translate(0)',
+									width: 250,
+									height: 250,
+									border: 'none',
+									boxShadow: `0 0 0 10px white, 0 0 0 20px ${shadowColor}`,
+								}}
+								speakerPicture={speaker.picture}
+							/>
+							<Title
+								title={speaker.name}
+								style={{
+									position: 'relative',
+									left: 'unset',
+									bottom: '-20%',
+									transform: 'translate(0)',
+									width: 250,
+									height: 100,
+									fontSize: '30px',
+									fontWeight: 700,
+									color: '#222333',
+									textShadow: `1px 1px 1px white`,
+								}}
+								delay={40}
+							/>
+						</div>
 					);
 				})}
 			</AbsoluteFill>

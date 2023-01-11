@@ -154,10 +154,18 @@ export const RemotionVideo: React.FC = () => {
 						height={720}
 						defaultProps={{
 							title:
-								"Remotion : le 7 ème art à portée de composants web et d'API 🎬",
+								"Remotion : le 7ème art à porté de composants web et d'API 🎬",
 							speakers: [
-								'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
-								'https://pbs.twimg.com/profile_images/1530252527769374721/C9SKUOQ9_400x400.jpg',
+								{
+									name: 'Mickaël Alves',
+									picture:
+										'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
+								},
+								{
+									name: 'Antoine Caron',
+									picture:
+										'https://pbs.twimg.com/profile_images/1530252527769374721/C9SKUOQ9_400x400.jpg',
+								},
 							],
 							date: '22 février 2023',
 							time: '14h00',

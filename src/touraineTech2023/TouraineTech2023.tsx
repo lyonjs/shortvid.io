@@ -6,13 +6,26 @@ import {Title} from './Title';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
 
-export const TouraineTech2023: React.FC<{
+export interface Speaker {
+	picture: string;
+	name: string;
+}
+
+export interface TouraineTechProps {
 	title: string;
-	speakers: string[];
+	speakers: Speaker[];
 	date: string;
 	time: string;
 	location: string;
-}> = ({title, speakers, date, time, location}) => {
+}
+
+export const TouraineTech2023: React.FC<TouraineTechProps> = ({
+	title,
+	speakers,
+	date,
+	time,
+	location,
+}) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Logo />

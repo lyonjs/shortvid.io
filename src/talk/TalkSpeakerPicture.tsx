@@ -1,10 +1,11 @@
 import {Speaker} from '../components/Speaker';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {CSSProperties} from "react";
+import {CSSProperties} from 'react';
 
-export const TalkSpeakerPicture: React.FC<{style?: CSSProperties, speakerPicture?: string}> = ({
-	style, speakerPicture,
-}) => {
+export const TalkSpeakerPicture: React.FC<{
+	style?: CSSProperties;
+	speakerPicture?: string;
+}> = ({style, speakerPicture}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

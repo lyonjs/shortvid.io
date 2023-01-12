@@ -10,6 +10,7 @@ import {Meetup} from './meetup/Meetup';
 import {Register} from './meetup/Register';
 import {Event} from './event/Event';
 import {TouraineTech2023} from './touraineTech2023/TouraineTech2023';
+import {SponsorTouraineTech2023} from './touraineTech2023/SponsorTouraineTech2023';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -170,6 +171,18 @@ export const RemotionVideo: React.FC = () => {
 							date: '22 février 2023',
 							time: '14h00',
 							location: 'Salle 1',
+						}}
+					/>
+					<Composition
+						id="SponsorTouraineTech2023"
+						component={SponsorTouraineTech2023}
+						durationInFrames={150}
+						fps={30}
+						width={1280}
+						height={720}
+						defaultProps={{
+							message: 'Merci à notre sponsor',
+							sponsorLogo: 'https://touraine.tech/_nuxt/img/1337c46.svg',
 						}}
 					/>
 				</Folder>

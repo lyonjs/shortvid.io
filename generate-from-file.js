@@ -29,27 +29,43 @@ const run = async () => {
 		const fileContent = await readFile(jsonFile, 'utf-8');
 		const talks = JSON.parse(fileContent);
 		talks.forEach((talk, index) => {
-			info(`Rendering video ${index + 1}/${talks.length}`);
 			const speakerNames = talk.speakers
 				.map((speaker) => speaker.name)
 				.join('-');
+			info(`Rendering video ${index + 1}/${talks.length}`, speakerNames);
 			const fileName = `${talk.id}-${camelCase(speakerNames)}`;
-			childProcess.spawnSync('pnpm', [
-				'remotion',
-				'render',
-				composition,
-				`out/${fileName}.mp4`,
-				`--props=${JSON.stringify(talk)}`,
-			]);
+			const renderVideo = childProcess.spawnSync(
+				'pnpm',
+				[
+					'remotion',
+					'render',
+					composition,
+					`out/${fileName}.mp4`,
+					`--props=${JSON.stringify(talk)}`,
+					`--log=error`,
+				],
+				{stdio: 'inherit'}
+			);
+			if (renderVideo.stderr) {
+				error(renderVideo.stderr);
+			}
 			info(`File out/${fileName}.mp4`);
-			childProcess.spawnSync('pnpm', [
-				'remotion',
-				'still',
-				composition,
-				`out/${fileName}.jpeg`,
-				`--props=${JSON.stringify(talk)}`,
-				`--frame=-1`,
-			]);
+			const renderImage = childProcess.spawnSync(
+				'pnpm',
+				[
+					'remotion',
+					'still',
+					composition,
+					`out/${fileName}.jpeg`,
+					`--props=${JSON.stringify(talk)}`,
+					`--frame=-1`,
+					`--log=error`,
+				],
+				{stdio: 'inherit'}
+			);
+			if (renderImage.stderr) {
+				error(renderImage.stderr);
+			}
 			info(`File out/${fileName}.jpeg`);
 		});
 	} catch (error) {

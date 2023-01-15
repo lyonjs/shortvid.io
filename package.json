@@ -30,7 +30,7 @@
 		"@types/web": "0.0.87",
 		"autoprefixer": "10.4.13",
 		"debug": "4.3.4",
-		"eslint": "8.31.0",
+		"eslint": "8.32.0",
 		"husky": "8.0.3",
 		"lodash": "4.17.21",
 		"postcss": "8.4.21",

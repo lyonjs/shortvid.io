@@ -11,6 +11,7 @@ import {Register} from './meetup/Register';
 import {Event} from './event/Event';
 import {TouraineTech2023} from './touraineTech2023/TouraineTech2023';
 import {SponsorTouraineTech2023} from './touraineTech2023/SponsorTouraineTech2023';
+import {Snowcamp} from './snowcamp/Snowcamp';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -183,6 +184,35 @@ export const RemotionVideo: React.FC = () => {
 						defaultProps={{
 							message: 'Merci à notre sponsor',
 							sponsorLogo: 'https://touraine.tech/_nuxt/img/1337c46.svg',
+						}}
+					/>
+				</Folder>
+				<Folder name="Snowcamp">
+					<Composition
+						id="Snowcamp"
+						component={Snowcamp}
+						durationInFrames={150}
+						fps={30}
+						width={1280}
+						height={720}
+						defaultProps={{
+							title:
+								"Remotion : le 7ème art à porté de composants web et d'API 🎬",
+							speakers: [
+								{
+									name: 'Mickaël Alves',
+									picture:
+										'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
+								},
+								{
+									name: 'Antoine Caron',
+									picture:
+										'https://pbs.twimg.com/profile_images/1530252527769374721/C9SKUOQ9_400x400.jpg',
+								},
+							],
+							date: '27 janvier 2023',
+							time: '14h00',
+							location: 'Salle Kilimanjaro',
 						}}
 					/>
 				</Folder>

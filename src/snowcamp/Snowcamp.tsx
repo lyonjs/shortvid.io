@@ -5,7 +5,6 @@ import {Speakers} from './Speakers';
 import {Background} from './Background';
 import React from 'react';
 import {Snow} from './Snow';
-import {Log} from '@remotion/cli/dist/log';
 import {Logo} from './Logo';
 
 export interface Speaker {
@@ -38,7 +37,7 @@ export const Snowcamp: React.FC<TouraineTechProps> = ({
 			</Sequence>
 			<Sequence from={50}>
 				<Logo />
-				<Speakers speakers={speakers} />
+				{speakers && <Speakers speakers={speakers} />}
 				<Title title={title} />
 			</Sequence>
 			<Sequence from={70}>

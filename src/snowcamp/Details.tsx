@@ -1,6 +1,6 @@
 import {Lottie} from '@remotion/lottie';
 import {useLottie} from '../components/hooks/useLottie';
-import {Sequence, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Details: React.FC<{
 	date: string;

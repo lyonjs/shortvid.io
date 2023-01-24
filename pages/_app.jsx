@@ -109,6 +109,11 @@ export default ({Component, pageProps}) => {
 							<span>🎉 Event</span>
 						</li>
 					</ActiveLink>
+					<ActiveLink href="/snowcamp">
+						<li className="text-black mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
+							<span>🫕 Snowcamp</span>
+						</li>
+					</ActiveLink>
 				</ul>
 			</nav>
 			<Component {...pageProps} />

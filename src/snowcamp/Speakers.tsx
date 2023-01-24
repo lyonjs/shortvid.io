@@ -1,4 +1,4 @@
-import {AbsoluteFill, Sequence} from 'remotion';
+import {AbsoluteFill} from 'remotion';
 import {TalkSpeakerPicture} from '../talk/TalkSpeakerPicture';
 import {Title} from './Title';
 import {Speaker} from './Snowcamp';
@@ -19,6 +19,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 
 				return (
 					<div
+						key={speaker.name}
 						style={{
 							display: 'flex',
 							flexDirection: 'column',

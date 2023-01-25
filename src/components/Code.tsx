@@ -1,5 +1,5 @@
 import {MouseEvent, useCallback} from 'react';
-import {TouraineTechProps} from '../snowcamp/Snowcamp';
+import {TouraineTechProps} from '../conference/snowcamp/Snowcamp';
 
 export const Code: React.FC<{
 	composition: string;

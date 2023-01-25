@@ -16,7 +16,7 @@
 		"@remotion/cli": "3.3.37",
 		"@remotion/lottie": "3.3.37",
 		"@remotion/player": "3.3.37",
-		"lottie-web": "5.10.1",
+		"lottie-web": "5.10.2",
 		"next": "^13.1.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",

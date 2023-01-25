@@ -3,7 +3,7 @@ import {Logo} from './Logo';
 import {LeftTriangle} from './LeftTriangle';
 import {RightTriangle} from './RightTriangle';
 import {Title} from './Title';
-import {SponsorLogo} from '../sponsor/SponsorLogo';
+import {SponsorLogo} from '../../sponsor/SponsorLogo';
 
 export interface SponsorProps {
 	message: string;

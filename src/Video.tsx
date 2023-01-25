@@ -9,9 +9,10 @@ import {Speaker} from './components/Speaker';
 import {Meetup} from './meetup/Meetup';
 import {Register} from './meetup/Register';
 import {Event} from './event/Event';
-import {TouraineTech2023} from './touraineTech2023/TouraineTech2023';
-import {SponsorTouraineTech2023} from './touraineTech2023/SponsorTouraineTech2023';
-import {Snowcamp} from './snowcamp/Snowcamp';
+import {TouraineTech2023} from './conference/touraineTech2023/TouraineTech2023';
+import {SponsorTouraineTech2023} from './conference/touraineTech2023/SponsorTouraineTech2023';
+import {Snowcamp} from './conference/snowcamp/Snowcamp';
+import {VeryTechTrip} from './conference/very-tech-trip/VeryTechTrip';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -213,6 +214,30 @@ export const RemotionVideo: React.FC = () => {
 							date: '27 janvier 2023',
 							time: '14h00',
 							location: 'Salle Kilimanjaro',
+						}}
+					/>
+				</Folder>
+				<Folder name="VeryTechTrip">
+					<Composition
+						width={720}
+						height={720}
+						id="VeryTechTrip"
+						fps={30}
+						durationInFrames={150}
+						component={VeryTechTrip}
+						defaultProps={{
+							title:
+								'⚡Une application résiliente, dans un monde partiellement dégradé ⚡',
+							speakers: [
+								{
+									name: 'Pascal Martin',
+									picture:
+										'https://img.appcraft.events/v7/evt/avbj73dx10X2Ww/files/PRKH4Oxc81ItXQ.jpg?force_format=&h=400&w=400',
+								},
+							],
+							date: '2 février 2023',
+							time: '14h15',
+							location: 'Salle 1',
 						}}
 					/>
 				</Folder>

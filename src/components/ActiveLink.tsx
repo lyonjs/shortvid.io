@@ -1,5 +1,5 @@
 import {Children, cloneElement, FC, ReactElement, ReactNode} from 'react';
-import Link, {LinkProps} from 'next/link';
+import {LinkProps} from 'next/link';
 import {useRouter} from 'next/router';
 
 type ActiveLinkProps = LinkProps & {
@@ -22,10 +22,10 @@ export const ActiveLink: FC<ActiveLinkProps> = ({
 			: childClassName;
 
 	return (
-		<Link href={href}>
+		<a href={href as string}>
 			{cloneElement(child, {
 				className: className || null,
 			})}
-		</Link>
+		</a>
 	);
 };

@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@remotion/cli': 3.3.34
-  '@remotion/eslint-config': 3.3.34
-  '@remotion/lottie': 3.3.34
-  '@remotion/player': 3.3.34
+  '@remotion/cli': 3.3.37
+  '@remotion/eslint-config': 3.3.37
+  '@remotion/lottie': 3.3.37
+  '@remotion/player': 3.3.37
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -23,24 +23,24 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-json-editor-ajrm: ^2.5.13
-  remotion: 3.3.34
+  remotion: 3.3.37
   tailwindcss: 3.2.4
   typescript: 4.9.4
   yargs: 17.6.2
 
 dependencies:
-  '@remotion/cli': 3.3.34_biqbaboplfbrettd7655fr4n2y
-  '@remotion/lottie': 3.3.34_w6vq3jnrmrq6jyvifsc4twv54q
-  '@remotion/player': 3.3.34_biqbaboplfbrettd7655fr4n2y
+  '@remotion/cli': 3.3.37_biqbaboplfbrettd7655fr4n2y
+  '@remotion/lottie': 3.3.37_w6vq3jnrmrq6jyvifsc4twv54q
+  '@remotion/player': 3.3.37_biqbaboplfbrettd7655fr4n2y
   lottie-web: 5.10.1
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-json-editor-ajrm: 2.5.13_biqbaboplfbrettd7655fr4n2y
-  remotion: 3.3.34_biqbaboplfbrettd7655fr4n2y
+  remotion: 3.3.37_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
-  '@remotion/eslint-config': 3.3.34_7uibuqfxkfaozanbtbziikiqje
+  '@remotion/eslint-config': 3.3.37_7uibuqfxkfaozanbtbziikiqje
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -481,8 +481,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@remotion/bundler/3.3.34_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-sC4IgalMGaOrPop43UZAPIUmLYPmVTvbKjyd1a/IwStX6qeUPOy+mDTH+k6gK+b8mrdVk25ndDB4GOJ5CMpWEw==}
+  /@remotion/bundler/3.3.37_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-vA79r6AcojbKbxrbgjIZIN6IqGjfFy7IB4GMZw8zL5cFOXIVpJOgNHyu4rXXgWEqmkIOe0Q02U0uo5hihhaFYQ==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -492,7 +492,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-refresh: 0.9.0
-      remotion: 3.3.34_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.3.37_biqbaboplfbrettd7655fr4n2y
       style-loader: 2.0.0_webpack@5.74.0
       webpack: 5.74.0_esbuild@0.16.12
     transitivePeerDependencies:
@@ -501,17 +501,17 @@ packages:
       - webpack-cli
     dev: false
 
-  /@remotion/cli/3.3.34_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ZAdsLAcsQA+q6wYLbaL63ODa+rEm6a5qOLKCmw71JFObotnf0rQkIAK/HWymqkjytam3qVl/F4nPYBbgWZauDg==}
+  /@remotion/cli/3.3.37_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-q9e6UIv11suwr/OC18rlgvWmdVdm0X17DwB54OoOsv3ZJqP2xuEJruKMTUqASrgvU6w26Rt+XgLWSDnD3hJQQg==}
     hasBin: true
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@remotion/bundler': 3.3.34_biqbaboplfbrettd7655fr4n2y
-      '@remotion/media-utils': 3.3.34_biqbaboplfbrettd7655fr4n2y
-      '@remotion/player': 3.3.34_biqbaboplfbrettd7655fr4n2y
-      '@remotion/renderer': 3.3.34_biqbaboplfbrettd7655fr4n2y
+      '@remotion/bundler': 3.3.37_biqbaboplfbrettd7655fr4n2y
+      '@remotion/media-utils': 3.3.37_biqbaboplfbrettd7655fr4n2y
+      '@remotion/player': 3.3.37_biqbaboplfbrettd7655fr4n2y
+      '@remotion/renderer': 3.3.37_biqbaboplfbrettd7655fr4n2y
       better-opn: 2.1.1
       dotenv: 9.0.2
       memfs: 3.4.3
@@ -519,7 +519,7 @@ packages:
       prompts: 2.4.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.3.34_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.3.37_biqbaboplfbrettd7655fr4n2y
       semver: 7.3.5
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -531,68 +531,68 @@ packages:
       - webpack-cli
     dev: false
 
-  /@remotion/compositor-darwin-arm64/3.3.34:
-    resolution: {integrity: sha512-tDoVRogZwURRWjzg3q6xAPEwJC0dfraPWJRIgN8C0Bl7iIesQlBhzPKBJOf0MK74hj+ElddbsznRLEiFfJUenA==}
+  /@remotion/compositor-darwin-arm64/3.3.37:
+    resolution: {integrity: sha512-GE2+pP5BKHW6ci4G/C/u7fwJB5fRzWeD8fb0H/XyDEhWF7P9iDzFiuP7qJ2DQV3zoFD4dQdejdtcbXfNASxyXg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-darwin-x64/3.3.34:
-    resolution: {integrity: sha512-51h7pA91oNuPlYwQORWC+jzCRyIV81gRGU3h0mVK/8f2LEnL8VLD0NZ1HyahRI6LPvexg6TaxWx6fKgOaVjUkw==}
+  /@remotion/compositor-darwin-x64/3.3.37:
+    resolution: {integrity: sha512-ZXgxuTMNnVW4imbEZXW7GFcDdII0vvl5pJosYoi8EMhd43lFueeYcqg/HymfO2Jy+xpa+t/fnJY1k4JkfQlXqg==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-arm64-gnu/3.3.34:
-    resolution: {integrity: sha512-vi9ugPJH4JgRrOYc+h9mjYtsYKU0LhqRB+MdPBYYO2ictn1BNTmKuh+BaqX2m03PHm06+ynAGpAu9WXW34l9iw==}
+  /@remotion/compositor-linux-arm64-gnu/3.3.37:
+    resolution: {integrity: sha512-+YwOkWzwc5kQfeecGvjJsKfgOBHmckZHPzY98vT4mWOMx7XmgDxGHFv2F/6Wspzfp7p2tdUEaPYRUGLgWQMNHQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-arm64-musl/3.3.34:
-    resolution: {integrity: sha512-uhzR6PVUfA/1aSxO+J9xBIDK1+K+jGn89U80jKYs4ITKnjMTxZHfj6ftwqLxu/1DBRBnhrvWyUgCTcwMWMI8SQ==}
+  /@remotion/compositor-linux-arm64-musl/3.3.37:
+    resolution: {integrity: sha512-1867spL7IqWzXF6lH+X3tZz56AbuhUhNXEYROmNGsOxKPYrhXCR5UYRobDb7etnOMB9nUMqTaiEBd7RZ/E4Vvw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-x64-gnu/3.3.34:
-    resolution: {integrity: sha512-WnrJM8JM1G3gTlkJptRn1gxVLXzn+qG5joIqeMrRvYONU0qjNJn23Cc3IsPFV45ldq1gVK2T91K4DCEPQGS15w==}
+  /@remotion/compositor-linux-x64-gnu/3.3.37:
+    resolution: {integrity: sha512-qECLQtmBDaXtpGon6Hoylfjwzuh64aSoXdjPzJE9a7vaIDDnc0Jb8RwjBk5YYYVdvEpCOix9Uod9SZD09nEInQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-x64-musl/3.3.34:
-    resolution: {integrity: sha512-UHWKilAn6qH9GqwBjK2QT+Y1lIgjbtziVCeRNRah2+rJ/w5nmV9u8kFNtPLDkpLhpORz/nr8G2fqF1v74T5KAw==}
+  /@remotion/compositor-linux-x64-musl/3.3.37:
+    resolution: {integrity: sha512-noTdgJkHD5DQVNiezPKJGZ+gDx3v7gmrLkxITKvEY+S7lAL8CMX/5PR5i/6CH7/In9vhxmtj/QuMhtiBMWC9QQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-win32-x64-msvc/3.3.34:
-    resolution: {integrity: sha512-z2zq1RXFEaeIlz5e0ZuEeNTUfwd3Ph/g8SmgHmdDEI0c2LxsGteyCHiAG/rsIB7XVlPR7i1RXsG8GgMxkQAmJA==}
+  /@remotion/compositor-win32-x64-msvc/3.3.37:
+    resolution: {integrity: sha512-o5+uZsyrW/y+/cPKW21bxIjqZapmSA9JpURGCrZx6mYQQn5KnPJQWQ8W00l+qMPMipZDtb4JLTmX/WRTuJ7yzA==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/eslint-config/3.3.34_7uibuqfxkfaozanbtbziikiqje:
-    resolution: {integrity: sha512-dj0XoAF8kEHVriHV1IiefsLByVSCqiv54SsDXrt6CNUl5xIGx9YTRZuUGBe5cmZkuOOD9WqdwWOLWqZiqukgSw==}
+  /@remotion/eslint-config/3.3.37_7uibuqfxkfaozanbtbziikiqje:
+    resolution: {integrity: sha512-EHyaPHltsCMG9QhVDHm3QmIhh/xQrDj5OlQpdpoJMaL1FrUq7EIVCw2s43K4vFLUO/uvbNz2ix7auWcxKY8A3A==}
     peerDependencies:
       eslint: '>=7.15.0'
     dependencies:
-      '@remotion/eslint-plugin': 3.3.34_7uibuqfxkfaozanbtbziikiqje
+      '@remotion/eslint-plugin': 3.3.37_7uibuqfxkfaozanbtbziikiqje
       '@typescript-eslint/eslint-plugin': 5.19.0_6wwj2chze5hd74lkpbaoqtsoia
       '@typescript-eslint/parser': 5.19.0_7uibuqfxkfaozanbtbziikiqje
       eslint: 8.32.0
@@ -604,8 +604,8 @@ packages:
       - typescript
     dev: true
 
-  /@remotion/eslint-plugin/3.3.34_7uibuqfxkfaozanbtbziikiqje:
-    resolution: {integrity: sha512-3a5vYrez5IxxlX/h0eifeB3X7t+fE7XYvormDWihJssmHlbs7bG93iFgeJoYm2ALDx8jqLj03Z01ihJf7I8KJQ==}
+  /@remotion/eslint-plugin/3.3.37_7uibuqfxkfaozanbtbziikiqje:
+    resolution: {integrity: sha512-plzC5Z+ArsO7v/fAncH8ucLYxcKBoGidIWSEjwTUJMg2wv14HKpVXQgsBR9c+cNqf0iKDRuubQLTtUExyAzEqw==}
     dependencies:
       '@typescript-eslint/utils': 5.19.0_7uibuqfxkfaozanbtbziikiqje
     transitivePeerDependencies:
@@ -614,8 +614,8 @@ packages:
       - typescript
     dev: true
 
-  /@remotion/lottie/3.3.34_w6vq3jnrmrq6jyvifsc4twv54q:
-    resolution: {integrity: sha512-xbVoiVpwr5Uo0xyBWgVk/wP6v7O3cC70hnN2alXIyV781XH6wdXwd9MaSuoKhgZf8e5MjUGmZuix/hB8It/1Jg==}
+  /@remotion/lottie/3.3.37_w6vq3jnrmrq6jyvifsc4twv54q:
+    resolution: {integrity: sha512-BNrGyeZ/XCLHZ+WyuUE14A7mN2E8+oPcROdwF1ORJ8gdK2rOFp+nvmaS/3m6/n1VSvc+xuknBzNI8tJGxFMdMg==}
     peerDependencies:
       lottie-web: ^5
       react: '>=16.8.0'
@@ -624,33 +624,33 @@ packages:
       lottie-web: 5.10.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.3.34_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.3.37_biqbaboplfbrettd7655fr4n2y
     dev: false
 
-  /@remotion/media-utils/3.3.34_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-YUkjBPWWT7lI7uNq/gfa2S78cXg2MUpVSYmIkBGSsW5dyGbpEzDW6Py00Xbx95YmqoL6YVDbIqtBiQfg8fxg1g==}
+  /@remotion/media-utils/3.3.37_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-SxN1rZ3kRHoVqoue9BFc/4ZZiMWG5HiQKXNbdOOYbWv0pu8UZp3jq12xei+cBCyXfhvMOmL2XPHuqHAwPX90Ig==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.3.34_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.3.37_biqbaboplfbrettd7655fr4n2y
     dev: false
 
-  /@remotion/player/3.3.34_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ICxshTWkGGjjlfvW1mvZtJU3OKc6EYFSSJjW+CRLTvlXwQSqpYUMlTtQQqGSgzPTkauiztQnCiniZEXzMYgEEA==}
+  /@remotion/player/3.3.37_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-kec6OijUWO+6OLVGbV19m9RXoUxjllHSnoBmQpHpCKXg/waoPAo5pIRpb5VCTrPYsPzjF65jKZw/kUidvf0GcA==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.3.34_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.3.37_biqbaboplfbrettd7655fr4n2y
     dev: false
 
-  /@remotion/renderer/3.3.34_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-gjDUDQQD+Se1slynJZbTfVJUYTPujt0qXixoWkz+/BABhl9gweRstFw97W/jfZ/e5p3w/Onefui3cXaMjZDDaw==}
+  /@remotion/renderer/3.3.37_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-suUHotjx51lihgDk9Ewk9obtEP3LZIhrpPIC741QvMtNDhuoyIg+Of8ar1BdnrWXLNtt1OUK9VLdqZt4VofOjg==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -659,17 +659,17 @@ packages:
       extract-zip: 2.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      remotion: 3.3.34_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.3.37_biqbaboplfbrettd7655fr4n2y
       source-map: 0.8.0-beta.0
       ws: 8.7.0
     optionalDependencies:
-      '@remotion/compositor-darwin-arm64': 3.3.34
-      '@remotion/compositor-darwin-x64': 3.3.34
-      '@remotion/compositor-linux-arm64-gnu': 3.3.34
-      '@remotion/compositor-linux-arm64-musl': 3.3.34
-      '@remotion/compositor-linux-x64-gnu': 3.3.34
-      '@remotion/compositor-linux-x64-musl': 3.3.34
-      '@remotion/compositor-win32-x64-msvc': 3.3.34
+      '@remotion/compositor-darwin-arm64': 3.3.37
+      '@remotion/compositor-darwin-x64': 3.3.37
+      '@remotion/compositor-linux-arm64-gnu': 3.3.37
+      '@remotion/compositor-linux-arm64-musl': 3.3.37
+      '@remotion/compositor-linux-x64-gnu': 3.3.37
+      '@remotion/compositor-linux-x64-musl': 3.3.37
+      '@remotion/compositor-win32-x64-msvc': 3.3.37
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -2830,8 +2830,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /remotion/3.3.34_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-O3FlCVL6Pj9h5C7poW1su1wHvK0UlF/zaiQc61NbknJJXSmYRczijrRjnM3ssi6eNKlSF4oCVOn4uuwLUMX7wg==}
+  /remotion/3.3.37_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-27ckEb01S8UhGA1qFJP/PI2tZ8JlM4KDrhNn5AaZLTSPCMbRMGTWSnZSu5jvbm1NJm/9E4KUKxReifIvvkxsVQ==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'

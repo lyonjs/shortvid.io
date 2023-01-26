@@ -1,8 +1,11 @@
 # Social video generator
 
+![social video generator](./banner.png)
+
 [![🚧 Integration](https://github.com/lyonjs/social-video-generator/actions/workflows/integration.yml/badge.svg)](https://github.com/lyonjs/social-video-generator/actions/workflows/integration.yml)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/lyonjs/social-video-generator/main)
 ![GitHub](https://img.shields.io/github/license/lyonjs/social-video-generator)
+![GitHub Repo stars](https://img.shields.io/github/stars/lyonjs/social-video-generator?style=social)
 
 ## 📚 Story behind this project
 

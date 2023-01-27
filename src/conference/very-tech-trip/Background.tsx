@@ -12,7 +12,8 @@ const Rect: React.FC<{style?: CSSProperties}> = ({style}) => {
 			style={{
 				borderRadius: '2rem',
 				border: '1px solid white',
-				...style,
+        filter: 'blur(3px)',
+        ...style,
 			}}
 		/>
 	);
@@ -22,8 +23,9 @@ const Fill: React.FC<{style?: CSSProperties}> = ({style}) => {
 	return (
 		<div
 			style={{
-				backgroundColor: '#000599',
+				backgroundColor: '#3f4494',
 				borderRadius: '2rem',
+        filter: 'blur(4px)',
 				...style,
 			}}
 		/>
@@ -55,6 +57,7 @@ export const Background = () => {
 					left: 24,
 					width: enlargingPill,
 					height: 48,
+          filter: 'blur(3px)',
 				}}
 			/>
 			<div
@@ -64,6 +67,7 @@ export const Background = () => {
 					right: 30,
 					top: 200,
 					gap: 20,
+          filter: 'blur(3px)',
 				}}
 			>
 				<Fill

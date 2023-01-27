@@ -30,7 +30,7 @@ export const Title: React.FC<{
 				opacity: titleOpacity,
 				textAlign: 'center',
 				filter: `blur(${titleDeblur}px)`,
-				textShadow: '`1px 1px 3px white`',
+				textShadow: 'px 2px 2px #e95900',
 				...style,
 			}}
 		>

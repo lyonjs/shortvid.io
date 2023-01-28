@@ -14,7 +14,8 @@ import {SponsorTouraineTech2023} from './conference/touraineTech2023/SponsorTour
 import {Snowcamp} from './conference/snowcamp/Snowcamp';
 import {VeryTechTrip} from './conference/very-tech-trip/VeryTechTrip';
 import {Replay} from './conference/touraineTech2023/Replay';
-import {Mixit2023} from "./conference/mixit2023/Mixit2023";
+import {Mixit2023} from './conference/mixit2023/Mixit2023';
+import {MixitSponsor} from './conference/mixit2023/MixitSponsor';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -294,6 +295,21 @@ export const RemotionVideo: React.FC = () => {
 							date: '22 février 2023',
 							time: '14h00',
 							location: 'Salle 1',
+						}}
+					/>
+					<Composition
+						id="Mixit-Sponsor"
+						component={MixitSponsor}
+						durationInFrames={150}
+						fps={30}
+						width={720}
+						height={720}
+						defaultProps={{
+							picture: 'https://mixitconf.org/images/sponsors/logo-viseo.svg',
+							category: 'Gold',
+							background:
+								'https://live.staticflickr.com/65535/52097860061_1609b2a1c6_b_d.jpg',
+							name: 'LyonJS',
 						}}
 					/>
 				</Folder>

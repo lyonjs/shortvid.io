@@ -4,7 +4,7 @@ import {Logo} from './Logo';
 import {Title} from '../touraineTech2023/Title';
 import {Speakers} from './Speakers';
 import {Details} from './Details';
-import {Talk} from "../types";
+import {Talk} from '../types';
 
 export const Mixit2023: React.FC<Talk> = ({
 	title,
@@ -14,7 +14,13 @@ export const Mixit2023: React.FC<Talk> = ({
 	location,
 }) => {
 	return (
-		<AbsoluteFill style={{backgroundColor: '#2c233d', overflow: 'hidden'}}>
+		<AbsoluteFill
+			style={{
+				backgroundColor: '#2c233d',
+				overflow: 'hidden',
+				fontFamily: 'Noto Sans,sans-serif',
+			}}
+		>
 			<Logo />
 			<Speakers speakers={speakers} />
 			<Title

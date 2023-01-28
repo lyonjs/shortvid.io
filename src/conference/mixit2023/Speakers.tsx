@@ -1,7 +1,7 @@
 import {AbsoluteFill, Sequence} from 'remotion';
 import {TalkSpeakerPicture} from '../../talk/TalkSpeakerPicture';
 import {Title} from './Title';
-import {Speaker} from "../types";
+import {Speaker} from '../types';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	return (

@@ -23,7 +23,6 @@ export const Title: React.FC<{
 	return (
 		<div
 			style={{
-				fontFamily: 'Noto Sans,sans-serif',
 				fontWeight: 900,
 				fontSize: '38px',
 				color: 'white',

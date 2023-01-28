@@ -32,7 +32,7 @@
 		"@types/react-json-editor-ajrm": "^2.5.3",
 		"autoprefixer": "10.4.13",
 		"debug": "4.3.4",
-		"eslint": "8.32.0",
+		"eslint": "8.33.0",
 		"husky": "8.0.3",
 		"lodash": "4.17.21",
 		"postcss": "8.4.21",

@@ -9,7 +9,9 @@ import {
 export const LyonSkyline = () => {
 	const frame = useCurrentFrame();
 	const {durationInFrames} = useVideoConfig();
-	const slide = interpolate(frame, [0, durationInFrames], [-10, 0]);
+	const slide = interpolate(frame, [0, durationInFrames - 40], [-10, 0], {
+		extrapolateRight: 'clamp',
+	});
 	return (
 		<Img
 			src={staticFile('/images/conferences/mxt-skyline.svg')}

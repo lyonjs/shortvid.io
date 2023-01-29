@@ -2,6 +2,7 @@ import {AbsoluteFill, Sequence} from 'remotion';
 import {BackgroundPicture} from './BackgroundPicture';
 import {BigLogo} from './BigLogo';
 import {Thanks} from './Thanks';
+import {LyonSkyline} from './LyonSkyline';
 
 export const MixitSponsor: React.FC<{
 	name: string;
@@ -26,6 +27,9 @@ export const MixitSponsor: React.FC<{
 			</Sequence>
 			<Sequence from={70}>
 				<Thanks name={name} picture={picture} category={category} />
+			</Sequence>
+			<Sequence from={45}>
+				<LyonSkyline />
 			</Sequence>
 		</AbsoluteFill>
 	);

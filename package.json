@@ -28,7 +28,7 @@
 		"@types/node": "18.11.18",
 		"@types/react": "18.0.27",
 		"@types/react-dom": "18.0.10",
-		"@types/web": "0.0.89",
+		"@types/web": "0.0.90",
 		"@types/react-json-editor-ajrm": "^2.5.3",
 		"autoprefixer": "10.4.13",
 		"debug": "4.3.4",

@@ -1,31 +1,27 @@
 # Contribution documentation
 
-## Commands
+## Installation
 
-**Install Dependencies**
+In order to install project, please install Node current LTS version.
+
+- Fetch repository
+- Install [pnpm](https://pnpm.io/) and [ffmpeg](https://ffmpeg.org/)
+- Install dependencies with [pnpm](https://pnpm.io/)
+
+Remotion also maintain a [great installation doc that could help you too](https://www.remotion.dev/docs/).
+
+## Start preview website
 
 ```console
-pnpm i
+pnpm dev
 ```
 
-**Start Preview**
+A Next App will start on port `3000`, showing our preview website.
+
+## Start Remotion dev environement
 
 ```console
 pnpm start
 ```
 
-**Upgrade Remotion**
-
-```console
-pnpm run upgrade
-```
-
-**Format code with prettier**
-
-```console
-pnpm format
-```
-
-## Docs of Remotion
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
+Remotion will start on port `3000`

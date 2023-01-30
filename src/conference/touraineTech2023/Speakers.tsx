@@ -1,5 +1,5 @@
 import {AbsoluteFill, Sequence} from 'remotion';
-import {TalkSpeakerPicture} from '../talk/TalkSpeakerPicture';
+import {TalkSpeakerPicture} from '../../talk/TalkSpeakerPicture';
 import {Speaker} from './TouraineTech2023';
 import {Title} from './Title';
 

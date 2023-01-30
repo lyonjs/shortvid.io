@@ -5,6 +5,7 @@ specifiers:
   '@remotion/eslint-config': 3.3.37
   '@remotion/lottie': 3.3.37
   '@remotion/player': 3.3.37
+  '@remotion/shapes': ^3.3.37
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -32,6 +33,7 @@ dependencies:
   '@remotion/cli': 3.3.37_biqbaboplfbrettd7655fr4n2y
   '@remotion/lottie': 3.3.37_gn5hpwitoxbsx6uavhmqddmj5q
   '@remotion/player': 3.3.37_biqbaboplfbrettd7655fr4n2y
+  '@remotion/shapes': 3.3.37_biqbaboplfbrettd7655fr4n2y
   lottie-web: 5.10.2
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -676,6 +678,16 @@ packages:
       - utf-8-validate
     dev: false
 
+  /@remotion/shapes/3.3.37_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-tXt4PMGDhsiNW6oeJx+aekPoVNJyLnxBJ6O2PJiXmrWGUavLvGqsZqOHuQxV/wYP0fCXSOGraJVMpZYiIDRgSA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@swc/helpers/0.4.14:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
@@ -1267,7 +1279,7 @@ packages:
     dev: false
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
     dev: true
 
   /cross-spawn/7.0.3:

@@ -1,5 +1,5 @@
 import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../components/hooks/useLottie';
+import {useLottie} from '../../components/hooks/useLottie';
 import {interpolate, useCurrentFrame} from 'remotion';
 
 export const Snow = () => {

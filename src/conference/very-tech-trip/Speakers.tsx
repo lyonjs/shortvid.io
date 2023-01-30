@@ -28,22 +28,22 @@ const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 					borderRadius: '30px',
 					height: 150,
 					width: 150,
-          border: '4px solid white',
-          boxShadow: '4px 5px 0 #e95900',
-        }}
+					border: '4px solid white',
+					boxShadow: '4px 5px 0 #e95900',
+				}}
 			/>
 			<div
 				style={{
 					flexGrow: 1,
 					fontWeight: 600,
-          textShadow: '2px 2px 2px #e95900',
+					textShadow: '2px 2px 2px #e95900',
 				}}
 			>
 				{name}
 				<span
 					style={{
 						color: '#e95900',
-            paddingLeft: 5,
+						paddingLeft: 5,
 					}}
 				>
 					.

@@ -167,7 +167,7 @@ export const RemotionVideo: React.FC = () => {
 								{
 									name: 'Antoine Caron',
 									picture:
-										'https://pbs.twimg.com/profile_images/1530252527769374721/C9SKUOQ9_400x400.jpg',
+										'https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg',
 								},
 							],
 							date: '22 février 2023',
@@ -208,7 +208,7 @@ export const RemotionVideo: React.FC = () => {
 								{
 									name: 'Antoine Caron',
 									picture:
-										'https://pbs.twimg.com/profile_images/1530252527769374721/C9SKUOQ9_400x400.jpg',
+										'https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg',
 								},
 							],
 							date: '27 janvier 2023',

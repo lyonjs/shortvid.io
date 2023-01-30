@@ -20,7 +20,7 @@ const sampleData: TouraineTechProps = {
 		{
 			name: 'Antoine Caron',
 			picture:
-				'https://pbs.twimg.com/profile_images/1530252527769374721/C9SKUOQ9_400x400.jpg',
+				'https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg',
 		},
 	],
 	date: '27 janvier 2023',
@@ -36,6 +36,12 @@ interface TalkTemplate {
 }
 
 const Template: Record<string, TalkTemplate> = {
+	VeryTechTrip: {
+		compositionName: 'VeryTechTrip',
+		component: VeryTechTrip,
+		width: 720,
+		height: 720,
+	},
 	Snowcamp: {
 		compositionName: 'Snowcamp',
 		component: Snowcamp,
@@ -48,17 +54,11 @@ const Template: Record<string, TalkTemplate> = {
 		width: 1280,
 		height: 720,
 	},
-	VeryTechTrip: {
-		compositionName: 'VeryTechTrip',
-		component: VeryTechTrip,
-		width: 720,
-		height: 720,
-	},
 };
 
 const Conference = () => {
 	const [data, setData] = useState(sampleData);
-	const [currentTemplate, setTemplate] = useState(Template.Snowcamp);
+	const [currentTemplate, setTemplate] = useState(Object.values(Template)[0]);
 
 	const onChange = useCallback((e: ChangeEvent<HTMLSelectElement>) => {
 		setTemplate(Template[e.target.value]);

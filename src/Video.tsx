@@ -13,6 +13,7 @@ import {TouraineTech2023} from './conference/touraineTech2023/TouraineTech2023';
 import {SponsorTouraineTech2023} from './conference/touraineTech2023/SponsorTouraineTech2023';
 import {Snowcamp} from './conference/snowcamp/Snowcamp';
 import {VeryTechTrip} from './conference/very-tech-trip/VeryTechTrip';
+import {Replay} from './conference/touraineTech2023/Replay';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -185,6 +186,31 @@ export const RemotionVideo: React.FC = () => {
 						defaultProps={{
 							message: 'Merci à notre sponsor',
 							sponsorLogo: 'https://touraine.tech/_nuxt/img/1337c46.svg',
+						}}
+					/>
+					<Composition
+						width={1920}
+						height={1080}
+						id="TouraineTechReplay"
+						fps={60}
+						durationInFrames={300}
+						component={Replay}
+						defaultProps={{
+							title:
+								"Remotion : le 7ème art à porté de composants web et d'API 🎬",
+							speakers: [
+								{
+									name: 'Mickaël Alves',
+									picture:
+										'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
+								},
+								{
+									name: 'Antoine Caron',
+									picture:
+										'https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg',
+								},
+							],
+							type: 'Conférence',
 						}}
 					/>
 				</Folder>

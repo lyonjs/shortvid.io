@@ -21,7 +21,7 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<span
+		<div
 			style={{
 				fontFamily: 'Noto Sans,sans-serif',
 				fontWeight: 900,
@@ -38,6 +38,6 @@ export const Title: React.FC<{
 			}}
 		>
 			{title}
-		</span>
+		</div>
 	);
 };

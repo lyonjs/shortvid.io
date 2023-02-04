@@ -5,7 +5,8 @@ import {CSSProperties} from 'react';
 export const TalkSpeakerPicture: React.FC<{
 	style?: CSSProperties;
 	speakerPicture?: string;
-}> = ({style, speakerPicture}) => {
+	top?: number;
+}> = ({style, speakerPicture, top = 100}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -17,7 +18,7 @@ export const TalkSpeakerPicture: React.FC<{
 		frame,
 		fps,
 		from: -600,
-		to: 100,
+		to: top,
 		durationInFrames: 30,
 	});
 

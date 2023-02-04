@@ -72,6 +72,7 @@ export default ({Component, pageProps}) => {
 					</a>
 					.
 				</p>
+
 				<p className="mt-2">
 					Videos can be generated through Github workflow or directly locally if
 					you have installed the project.

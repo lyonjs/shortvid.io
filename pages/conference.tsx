@@ -55,13 +55,7 @@ const Template: Record<string, TalkTemplate> = {
 		width: 1280,
 		height: 720,
 	},
-	VeryTechTrip: {
-		compositionName: 'VeryTechTrip',
-		component: VeryTechTrip,
-		width: 720,
-		height: 720,
-	},
-	Mixit:{
+	Mixit: {
 		compositionName: 'Mixit2023',
 		component: Mixit2023,
 		width: 1280,

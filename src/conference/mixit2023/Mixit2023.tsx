@@ -26,7 +26,7 @@ export const Mixit2023: React.FC<Talk> = ({
 			<Title
 				title={title}
 				style={{
-					maxWidth: '80%',
+					maxWidth: '90%',
 					left: 0,
 					right: 0,
 					margin: '0 auto',

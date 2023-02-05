@@ -8,7 +8,7 @@ import {VeryTechTrip} from '../src/conference/very-tech-trip/VeryTechTrip';
 import {TouraineTechProps} from '../src/conference/snowcamp/Snowcamp';
 import {Snowcamp} from '../src/conference/snowcamp/Snowcamp';
 import {TouraineTech2023} from '../src/conference/touraineTech2023/TouraineTech2023';
-import {Mixit2023} from '../src/conference/mixit2023/Mixit2023';
+import {MixitIntroTalk} from '../src/conference/mixit2023/MixitIntroTalk';
 
 const sampleData: TouraineTechProps = {
 	title: "Remotion : le 7ème art à portée de composants web et d'API 🎬",
@@ -57,7 +57,7 @@ const Template: Record<string, TalkTemplate> = {
 	},
 	Mixit: {
 		compositionName: 'Mixit2023',
-		component: Mixit2023,
+		component: MixitIntroTalk,
 		width: 1280,
 		height: 720,
 	},

@@ -14,6 +14,12 @@ import {SponsorTouraineTech2023} from './conference/touraineTech2023/SponsorTour
 import {Snowcamp} from './conference/snowcamp/Snowcamp';
 import {VeryTechTrip} from './conference/very-tech-trip/VeryTechTrip';
 import {Replay} from './conference/touraineTech2023/Replay';
+import {Mixit2023} from './conference/mixit2023/Mixit2023';
+import {MixitSponsor} from './conference/mixit2023/MixitSponsor';
+import {MixitIntro} from './conference/mixit2023/MixitIntro';
+import {MixitIntroTalk} from './conference/mixit2023/MixitIntroTalk';
+
+import {defaultTalkValues} from './conference/data/defaultValues';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -156,25 +162,7 @@ export const RemotionVideo: React.FC = () => {
 						fps={30}
 						width={1280}
 						height={720}
-						defaultProps={{
-							title:
-								"Remotion : le 7ème art à porté de composants web et d'API 🎬",
-							speakers: [
-								{
-									name: 'Mickaël Alves',
-									picture:
-										'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
-								},
-								{
-									name: 'Antoine Caron',
-									picture:
-										'https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg',
-								},
-							],
-							date: '22 février 2023',
-							time: '14h00',
-							location: 'Salle 1',
-						}}
+						defaultProps={defaultTalkValues}
 					/>
 					<Composition
 						id="SponsorTouraineTech2023"
@@ -222,25 +210,7 @@ export const RemotionVideo: React.FC = () => {
 						fps={30}
 						width={1280}
 						height={720}
-						defaultProps={{
-							title:
-								"Remotion : le 7ème art à porté de composants web et d'API 🎬",
-							speakers: [
-								{
-									name: 'Mickaël Alves',
-									picture:
-										'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
-								},
-								{
-									name: 'Antoine Caron',
-									picture:
-										'https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg',
-								},
-							],
-							date: '27 janvier 2023',
-							time: '14h00',
-							location: 'Salle Kilimanjaro',
-						}}
+						defaultProps={defaultTalkValues}
 					/>
 				</Folder>
 				<Folder name="VeryTechTrip">
@@ -251,19 +221,49 @@ export const RemotionVideo: React.FC = () => {
 						fps={30}
 						durationInFrames={150}
 						component={VeryTechTrip}
+						defaultProps={defaultTalkValues}
+					/>
+				</Folder>
+				<Folder name="Mixit2023">
+					<Composition
+						id="Mixit2023"
+						component={Mixit2023}
+						durationInFrames={150}
+						fps={30}
+						width={1280}
+						height={720}
+						defaultProps={defaultTalkValues}
+					/>
+					<Composition
+						id="Mixit-Intro"
+						component={MixitIntro}
+						durationInFrames={150}
+						fps={30}
+						width={1280}
+						height={720}
+					/>
+					<Composition
+						id="Mixit-Intro-Talk"
+						component={MixitIntroTalk}
+						durationInFrames={150}
+						fps={30}
+						width={1280}
+						height={720}
+						defaultProps={defaultTalkValues}
+					/>
+					<Composition
+						id="Mixit-Sponsor"
+						component={MixitSponsor}
+						durationInFrames={150}
+						fps={30}
+						width={720}
+						height={720}
 						defaultProps={{
-							title:
-								'⚡Une application résiliente, dans un monde partiellement dégradé ⚡',
-							speakers: [
-								{
-									name: 'Pascal Martin',
-									picture:
-										'https://img.appcraft.events/v7/evt/avbj73dx10X2Ww/files/PRKH4Oxc81ItXQ.jpg?force_format=&h=400&w=400',
-								},
-							],
-							date: '2 février 2023',
-							time: '14h15',
-							location: 'Salle 1',
+							picture: 'https://mixitconf.org/images/sponsors/logo-viseo.svg',
+							category: 'tour de cou',
+							background:
+								'https://live.staticflickr.com/65535/52097860061_1609b2a1c6_b_d.jpg',
+							name: 'LyonJS',
 						}}
 					/>
 				</Folder>

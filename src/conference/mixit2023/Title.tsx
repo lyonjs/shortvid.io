@@ -21,14 +21,14 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<div
+		<span
 			style={{
-				fontWeight: 900,
-				fontSize: '38px',
+				fontFamily: 'Lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
+				fontWeight: 500,
+				fontSize: '40px',
 				color: 'white',
 				position: 'absolute',
-				bottom: '180px',
-				width: '100%',
+				bottom: '200px',
 				textAlign: 'center',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
@@ -37,6 +37,6 @@ export const Title: React.FC<{
 			}}
 		>
 			{title}
-		</div>
+		</span>
 	);
 };

@@ -18,6 +18,7 @@ import {Mixit2023} from './conference/mixit2023/Mixit2023';
 import {MixitSponsor} from './conference/mixit2023/MixitSponsor';
 import {MixitIntro} from './conference/mixit2023/MixitIntro';
 import {MixitIntroTalk} from './conference/mixit2023/MixitIntroTalk';
+import {Devoxx2023} from './conference/devoxx2023/Devoxx2023';
 
 import {defaultTalkValues} from './conference/data/defaultValues';
 
@@ -265,6 +266,17 @@ export const RemotionVideo: React.FC = () => {
 								'https://live.staticflickr.com/65535/52097860061_1609b2a1c6_b_d.jpg',
 							name: 'LyonJS',
 						}}
+					/>
+				</Folder>
+				<Folder name="Devoxx2023">
+					<Composition
+						id="Devoxx2023"
+						component={Devoxx2023}
+						durationInFrames={300}
+						fps={30}
+						width={1280}
+						height={720}
+						defaultProps={defaultTalkValues}
 					/>
 				</Folder>
 			</Folder>

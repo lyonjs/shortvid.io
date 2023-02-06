@@ -11,7 +11,7 @@ export const defaultTalkValues = {
 			picture: 'https://ca.slack-edge.com/T108ZKPMF-U5M2F1A69-36e4b6574de8-192',
 		},
 	],
-	date: '22 février 2023',
+	date: '22 février',
 	time: '14h00',
 	location: 'Salle 1',
 };

@@ -8,16 +8,12 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {Talk} from '../types';
-import {Baloon5} from './Baloon5';
-import {Baloon1} from './Baloon1';
-import {Baloon4} from './Baloon4';
-import {Baloon3} from './Baloon3';
-import {Baloon2} from './Baloon2';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {Title} from './Title';
 import React from 'react';
 import {Details} from './Details';
+import Balloons from './Balloons';
 
 export const Devoxx2023: React.FC<Talk> = ({
 	title,
@@ -62,12 +58,8 @@ export const Devoxx2023: React.FC<Talk> = ({
 						src={staticFile('images/conferences/devoxx/devoxx-background.jpg')}
 					/>
 				</Sequence>
-				<Sequence name="Baloons">
-					<Baloon5 />
-					<Baloon1 />
-					<Baloon2 />
-					<Baloon4 />
-					<Baloon3 />
+				<Sequence name="Balloons">
+					<Balloons />
 				</Sequence>
 			</AbsoluteFill>
 			<Sequence from={10}>
@@ -83,7 +75,7 @@ export const Devoxx2023: React.FC<Talk> = ({
 					style={{
 						zIndex: 1,
 						position: 'absolute',
-						bottom: 150,
+						bottom: 130,
 						maxWidth: '90%',
 						left: 0,
 						right: 0,
@@ -91,7 +83,7 @@ export const Devoxx2023: React.FC<Talk> = ({
 					}}
 				/>
 			</Sequence>
-			<Sequence from={35}>
+			<Sequence from={40}>
 				<Details date={date} time={time} location={location} />
 			</Sequence>
 		</>

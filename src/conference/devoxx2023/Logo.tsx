@@ -5,8 +5,9 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+import React from 'react';
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -21,7 +22,7 @@ export const Logo = () => {
 	return (
 		<Img
 			src={staticFile('/images/conferences/devoxx/devoxx.png')}
-			width={150}
+			width={100}
 			height="auto"
 			style={{
 				position: 'absolute',

@@ -26,6 +26,7 @@
 		"remotion": "3.3.39"
 	},
 	"devDependencies": {
+		"@iconify/react": "^4.1.0",
 		"@remotion/eslint-config": "3.3.39",
 		"@types/node": "18.11.19",
 		"@types/react": "18.0.27",

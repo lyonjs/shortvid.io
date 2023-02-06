@@ -1,6 +1,6 @@
 import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
-export const Baloon5: React.FC = () => {
+export const Balloon5: React.FC = () => {
 	const frame = useCurrentFrame();
 
 	const moveRightFirst = interpolate(frame, [0, 200], [200, -300], {

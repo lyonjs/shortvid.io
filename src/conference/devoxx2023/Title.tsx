@@ -43,6 +43,7 @@ export const Title: React.FC<{
 				textShadow: `0 0 5px #000`,
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
+				lineHeight: 1.4,
 				...style,
 			}}
 		>

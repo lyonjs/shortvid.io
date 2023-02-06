@@ -9,10 +9,8 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 			<AbsoluteFill
 				style={{
 					width: '100%',
-					display: 'flex',
-					flexDirection: 'row',
-					justifyContent: 'center',
-					gap: 300,
+					display: 'grid',
+					gridTemplateColumns: `repeat(${speakers.length}, 1fr)`,
 				}}
 			>
 				{speakers.map((speaker) => {
@@ -31,7 +29,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									left: 'unset',
 									bottom: '-5%',
 								}}
-								top={40}
+								top={60}
 							/>
 							<TalkSpeakerPicture
 								key={speaker.name}
@@ -47,7 +45,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									borderRadius: '50% 20% / 10% 40%',
 								}}
 								speakerPicture={speaker.picture}
-								top={80}
+								top={90}
 							/>
 						</div>
 					);

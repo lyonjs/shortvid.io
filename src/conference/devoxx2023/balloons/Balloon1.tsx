@@ -1,20 +1,21 @@
 import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
-export const Baloon3: React.FC = () => {
+export const Balloon1: React.FC = () => {
 	const frame = useCurrentFrame();
 
-	const moveUp = interpolate(frame, [0, 1000], [0, 800], {
+	const moveDown = interpolate(frame, [0, 600], [100, -300], {
 		extrapolateRight: 'clamp',
 	});
 
 	return (
 		<Img
-			src={staticFile('images/conferences/devoxx/baloon3.png')}
+			src={staticFile('images/conferences/devoxx/baloon1.png')}
 			style={{
 				position: 'absolute',
-				left: 600,
-				bottom: moveUp,
+				left: 200,
+				bottom: moveDown,
 				width: '20%',
+				filter: 'blur(1px)',
 			}}
 		/>
 	);

@@ -1,7 +1,6 @@
-import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../components/hooks/useLottie';
-import {Sequence, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
+import {Icon} from '@iconify/react';
 
 const {fontFamily} = loadFont();
 
@@ -12,110 +11,76 @@ export const Details: React.FC<{
 }> = ({date, time, location}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const illustrationDate = useLottie('lf20_ak90tqhe');
-	const illustrationHour = useLottie('lf20_nv5aXa');
-	const illustrationLocation = useLottie('lf20_PgZU3O');
+	const DELAY = 10;
 
-	const drop = spring({frame, from: -20, to: 0, fps, durationInFrames: 30});
-	const opacity = spring({frame, from: 0, to: 1, fps, durationInFrames: 30});
+	const opacity = spring({
+		frame: frame - 80,
+		from: 0,
+		to: 1,
+		fps,
+		durationInFrames: 30,
+	});
 
-	if (!illustrationHour || !illustrationDate || !illustrationLocation) {
-		return null;
-	}
+	const detailsConfig = [
+		{
+			data: date,
+			icon: 'mdi:calendar',
+		},
+		{
+			data: time,
+			icon: 'mdi:clock',
+		},
+		{
+			data: location,
+			icon: 'mdi:map-marker-radius-outline',
+		},
+	];
 
 	return (
-		<Sequence from={40} name="Details">
-			<div
-				style={{
-					fontFamily,
-					fontWeight: 700,
-					fontSize: '25px',
-					color: 'white',
-					position: 'absolute',
-					bottom: 0,
-					display: 'flex',
-					width: '100%',
-					justifyContent: 'space-around',
-					alignItems: 'center',
-				}}
-			>
-				<div
-					style={{
-						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-						gap: '1rem',
-					}}
-				>
-					<Lottie
+		<div
+			style={{
+				fontFamily,
+				fontWeight: 700,
+				fontSize: '25px',
+				color: 'white',
+				position: 'absolute',
+				bottom: 30,
+				display: 'grid',
+				gridTemplateColumns: 'repeat(3, 1fr)',
+				width: '100%',
+			}}
+		>
+			{detailsConfig.map((item, index) => {
+				const drop = spring({
+					frame: frame - (80 + index * DELAY),
+					from: -100,
+					to: 0,
+					fps,
+					durationInFrames: 30,
+				});
+
+				return (
+					<div
 						style={{
-							width: '100px',
-							filter: 'none',
-						}}
-						playbackRate={1.5}
-						animationData={illustrationDate}
-					/>
-					<span
-						style={{
-							position: 'relative',
-							bottom: drop,
 							opacity,
+							position: 'relative',
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							gap: '1rem',
+							bottom: drop,
 						}}
 					>
-						{date}
-					</span>
-				</div>
-				<div
-					style={{
-						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-						gap: '2rem',
-					}}
-				>
-					<Lottie
-						style={{
-							width: '50px',
-							filter: 'none',
-						}}
-						animationData={illustrationHour}
-					/>
-					<span
-						style={{
-							position: 'relative',
-							bottom: drop,
-							opacity,
-						}}
-					>
-						{time}
-					</span>
-				</div>
-				<div
-					style={{
-						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-						gap: '1rem',
-					}}
-				>
-					<Lottie
-						style={{
-							width: '60px',
-							filter: 'none',
-						}}
-						animationData={illustrationLocation}
-					/>
-					<span
-						style={{
-							position: 'relative',
-							bottom: drop,
-							opacity,
-						}}
-					>
-						{location}
-					</span>
-				</div>
-			</div>
-		</Sequence>
+						<Icon
+							icon={item.icon}
+							style={{
+								fontSize: 40,
+							}}
+						/>
+						<span>{item.data}</span>
+					</div>
+				);
+			})}
+		</div>
 	);
 };

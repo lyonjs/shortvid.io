@@ -2,13 +2,9 @@ import {Sequence} from 'remotion';
 import {Logo} from './Logo';
 import {RightTriangle} from './RightTriangle';
 import {LeftTriangle} from './LeftTriangle';
-import {Speakers} from './Speakers';
 import {Title} from './Title';
-import {Details} from './Details';
 import {AbsoluteFill} from 'remotion';
 import {Speaker} from './TouraineTech2023';
-import {useLottie} from '../../components/hooks/useLottie';
-import {Lottie} from '@remotion/lottie';
 import {Type} from './Type';
 import {BigSpeakers} from './BigSpeakers';
 

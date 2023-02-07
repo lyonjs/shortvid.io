@@ -38,7 +38,7 @@ const Home = () => {
 				/>
 
 				<Form>
-					<Input setValue={setTitle} value={title} label="Title" />
+					<Input setValue={setTitle} value={title} label="SpeakerName" />
 					<Input
 						setValue={setLottieAsset}
 						value={lottieAsset}

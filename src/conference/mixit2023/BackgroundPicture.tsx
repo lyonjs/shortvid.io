@@ -1,10 +1,4 @@
-import {
-	Img,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, interpolate, useCurrentFrame} from 'remotion';
 
 export const BackgroundPicture: React.FC<{picture: string}> = ({picture}) => {
 	const frame = useCurrentFrame();

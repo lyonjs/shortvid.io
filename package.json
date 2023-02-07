@@ -13,6 +13,7 @@
 		"dev": "next dev"
 	},
 	"dependencies": {
+		"@remotion/google-fonts": "^3.3.39",
 		"@remotion/cli": "3.3.39",
 		"@remotion/lottie": "3.3.39",
 		"@remotion/player": "3.3.39",
@@ -25,12 +26,13 @@
 		"remotion": "3.3.39"
 	},
 	"devDependencies": {
+		"@iconify/react": "^4.1.0",
 		"@remotion/eslint-config": "3.3.39",
 		"@types/node": "18.11.19",
 		"@types/react": "18.0.27",
 		"@types/react-dom": "18.0.10",
-		"@types/web": "0.0.90",
 		"@types/react-json-editor-ajrm": "^2.5.3",
+		"@types/web": "0.0.90",
 		"autoprefixer": "10.4.13",
 		"debug": "4.3.4",
 		"eslint": "8.33.0",

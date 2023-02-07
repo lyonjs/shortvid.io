@@ -1,10 +1,4 @@
-import {
-	Img,
-	interpolate,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 export const BigLogo: React.FC = () => {
 	const frame = useCurrentFrame();

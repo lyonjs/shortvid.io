@@ -4,7 +4,7 @@ export const Thanks: React.FC<{
 	name: string;
 	picture: string;
 	category: string;
-}> = ({name, picture, category}) => {
+}> = ({picture, category}) => {
 	const frame = useCurrentFrame();
 	const fadeIn = interpolate(frame, [0, 20], [0, 1], {
 		extrapolateRight: 'clamp',

@@ -43,7 +43,11 @@ const Talk = () => {
 				/>
 
 				<Form>
-					<Input setValue={setTalkTitle} value={talkTitle} label="Title" />
+					<Input
+						setValue={setTalkTitle}
+						value={talkTitle}
+						label="SpeakerName"
+					/>
 					<Input
 						setValue={setSpeakerPicture}
 						value={speakerPicture}
@@ -57,7 +61,7 @@ const Talk = () => {
 					<Input
 						setValue={setTitleSize}
 						value={titleSize}
-						label="Title font size"
+						label="SpeakerName font size"
 					/>
 					<Input
 						setValue={setBackgroundImg}

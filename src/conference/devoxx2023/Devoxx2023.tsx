@@ -53,7 +53,7 @@ export const Devoxx2023: React.FC<Talk> = ({
 					filter: `blur(${blur}px) brightness(${darkscale})`,
 				}}
 			>
-				<Sequence>
+				<Sequence name="Background">
 					<Img
 						src={staticFile('images/conferences/devoxx/devoxx-background.jpg')}
 					/>

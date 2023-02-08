@@ -14,15 +14,15 @@
 	},
 	"dependencies": {
 		"@remotion/cli": "3.3.41",
-		"@remotion/google-fonts": "^3.3.41",
+		"@remotion/google-fonts": "3.3.41",
 		"@remotion/lottie": "3.3.41",
 		"@remotion/player": "3.3.41",
-		"@remotion/shapes": "^3.3.41",
+		"@remotion/shapes": "3.3.41",
 		"lottie-web": "5.10.2",
-		"next": "^13.1.1",
+		"next": "^13.1.6",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"react-json-editor-ajrm": "^2.5.13",
+		"react-json-editor-ajrm": "^2.5.14",
 		"remotion": "3.3.41"
 	},
 	"devDependencies": {

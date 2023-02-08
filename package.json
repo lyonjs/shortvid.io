@@ -13,11 +13,11 @@
 		"dev": "next dev"
 	},
 	"dependencies": {
-		"@remotion/google-fonts": "^3.3.39",
 		"@remotion/cli": "3.3.41",
+		"@remotion/google-fonts": "^3.3.41",
 		"@remotion/lottie": "3.3.41",
 		"@remotion/player": "3.3.41",
-		"@remotion/shapes": "^3.3.37",
+		"@remotion/shapes": "^3.3.41",
 		"lottie-web": "5.10.2",
 		"next": "^13.1.1",
 		"react": "18.2.0",

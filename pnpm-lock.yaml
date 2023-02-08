@@ -4,10 +4,10 @@ specifiers:
   '@iconify/react': ^4.1.0
   '@remotion/cli': 3.3.41
   '@remotion/eslint-config': 3.3.41
-  '@remotion/google-fonts': ^3.3.39
+  '@remotion/google-fonts': ^3.3.41
   '@remotion/lottie': 3.3.41
   '@remotion/player': 3.3.41
-  '@remotion/shapes': ^3.3.37
+  '@remotion/shapes': ^3.3.41
   '@types/node': 18.11.19
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -33,10 +33,10 @@ specifiers:
 
 dependencies:
   '@remotion/cli': 3.3.41_biqbaboplfbrettd7655fr4n2y
-  '@remotion/google-fonts': 3.3.40_biqbaboplfbrettd7655fr4n2y
+  '@remotion/google-fonts': 3.3.41_biqbaboplfbrettd7655fr4n2y
   '@remotion/lottie': 3.3.41_gn5hpwitoxbsx6uavhmqddmj5q
   '@remotion/player': 3.3.41_biqbaboplfbrettd7655fr4n2y
-  '@remotion/shapes': 3.3.37_biqbaboplfbrettd7655fr4n2y
+  '@remotion/shapes': 3.3.41_biqbaboplfbrettd7655fr4n2y
   lottie-web: 5.10.2
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -633,10 +633,10 @@ packages:
       - typescript
     dev: true
 
-  /@remotion/google-fonts/3.3.40_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-B+p+qL3eRm3EVKDWgnxweW1OeAaewWtgqmmAd86Gv2rXgPp8Oed8R9rwD1MJalhQy3GloudMUi3LCxGjSLS8Tw==}
+  /@remotion/google-fonts/3.3.41_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-iTEqtHMhs2DwJPXDelSFemkRoi+tP8tf4INQl5eumLhSMkAhzyZHwtW85h0Otg74N5gFkG1cw0pgcgjtnvQ8AQ==}
     dependencies:
-      remotion: 3.3.40_biqbaboplfbrettd7655fr4n2y
+      remotion: 3.3.41_biqbaboplfbrettd7655fr4n2y
     transitivePeerDependencies:
       - react
       - react-dom
@@ -664,6 +664,10 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       remotion: 3.3.41_biqbaboplfbrettd7655fr4n2y
+    dev: false
+
+  /@remotion/paths/3.3.41:
+    resolution: {integrity: sha512-/IWEsDyQbbSVQKojXGiSfgvn7fSMWJscFvIvF2ZbbcbzJFD7YGIxlYD1R8Xo4aWC0veU0M8fP/60BrYm9u+C8w==}
     dev: false
 
   /@remotion/player/3.3.41_biqbaboplfbrettd7655fr4n2y:
@@ -704,12 +708,13 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@remotion/shapes/3.3.37_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-tXt4PMGDhsiNW6oeJx+aekPoVNJyLnxBJ6O2PJiXmrWGUavLvGqsZqOHuQxV/wYP0fCXSOGraJVMpZYiIDRgSA==}
+  /@remotion/shapes/3.3.41_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-745vVadzQa2LSg8kb3WXqnUuUd1EqViz3nMJHRbbEKbH6W/RcmxTxZgrdk92TPNIeWZbgi74WIdEZpqnKK4sHA==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
+      '@remotion/paths': 3.3.41
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -2866,16 +2871,6 @@ packages:
     resolution: {integrity: sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==}
     engines: {node: '>=8'}
     dev: true
-
-  /remotion/3.3.40_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ncNaQhOvU/PYxg1IWnsUaVNeUu03a9llrPo349UukQFpZGuGRnbVZtT/jOohNDoIR+ZIS8mCcixryaxIru3vIw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
 
   /remotion/3.3.41_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-Pq3UIvm3WOHfF9cgoBEEZLWpmQ48vwuzUBc7qijy8k/zRvoTeShAAbKjMEEIjufoSpelCWF3tgnpx6ZzwrP4hA==}

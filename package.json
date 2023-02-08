@@ -14,20 +14,20 @@
 	},
 	"dependencies": {
 		"@remotion/google-fonts": "^3.3.39",
-		"@remotion/cli": "3.3.39",
-		"@remotion/lottie": "3.3.39",
-		"@remotion/player": "3.3.39",
+		"@remotion/cli": "3.3.41",
+		"@remotion/lottie": "3.3.41",
+		"@remotion/player": "3.3.41",
 		"@remotion/shapes": "^3.3.37",
 		"lottie-web": "5.10.2",
 		"next": "^13.1.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-json-editor-ajrm": "^2.5.13",
-		"remotion": "3.3.39"
+		"remotion": "3.3.41"
 	},
 	"devDependencies": {
 		"@iconify/react": "^4.1.0",
-		"@remotion/eslint-config": "3.3.39",
+		"@remotion/eslint-config": "3.3.41",
 		"@types/node": "18.11.19",
 		"@types/react": "18.0.27",
 		"@types/react-dom": "18.0.10",

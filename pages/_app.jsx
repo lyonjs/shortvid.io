@@ -1,7 +1,8 @@
 import Head from 'next/head';
 
 import '../styles/globals.css';
-import {NavBar} from '../components/NavBar';
+import {Header} from '../src/components/site/Header';
+import {NavBar} from '../src/components/site/NavBar';
 
 export default ({Component, pageProps}) => {
 	return (
@@ -48,8 +49,8 @@ export default ({Component, pageProps}) => {
 					content="https://social-video-generator.vercel.app/screenshot.png"
 				/>
 			</Head>
-			<article className="mb-6">
-				<NavBar />
+			<article className="mb-3">
+				<Header />
 				<p>
 					This application is developed and maintained by the{' '}
 					<a href="https://github.com/lyonjs/social-video-generator/graphs/contributors">
@@ -72,6 +73,7 @@ export default ({Component, pageProps}) => {
 					<a href="https://www.remotion.dev/">Remotion</a> libraries.
 				</p>
 			</article>
+			<NavBar />
 			<Component {...pageProps} />
 			<footer className="mt-6 text-right">Made with 💛 and JS</footer>
 		</main>

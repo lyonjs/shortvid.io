@@ -1,6 +1,6 @@
 import {useInputChange} from '../src/components/hooks/onInputChange';
 import {Player} from '@remotion/player';
-import {Form, Input} from '../src/components/input';
+import {Form, Input} from '../src/components/site/forms/input';
 import {Code} from '../src/components/Code';
 import {Event} from '../src/event/Event';
 

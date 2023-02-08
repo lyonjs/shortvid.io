@@ -1,8 +1,8 @@
 import {useInputChange} from '../src/components/hooks/onInputChange';
 import {Player} from '@remotion/player';
 import {Meetup as MeetupComponent} from '../src/meetup/Meetup';
-import {Form, Input} from '../src/components/input';
 import {Code} from '../src/components/Code';
+import {Form, Input} from '../src/components/site/forms/input';
 
 const Home = () => {
 	const [title, setTitle] = useInputChange<string>('Example');

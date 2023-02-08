@@ -1,7 +1,7 @@
 import {Player} from '@remotion/player';
 import {Sponsor as SponsorComponent} from '../src/components';
 import {useInputChange} from '../src/components/hooks/onInputChange';
-import {Form, Input} from '../src/components/input';
+import {Form, Input} from '../src/components/site/forms/input';
 import {Code} from '../src/components/Code';
 
 const Sponsor = () => {

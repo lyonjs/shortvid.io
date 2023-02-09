@@ -9,6 +9,7 @@ import {TouraineTechProps} from '../src/conference/snowcamp/Snowcamp';
 import {Snowcamp} from '../src/conference/snowcamp/Snowcamp';
 import {TouraineTech2023} from '../src/conference/touraineTech2023/TouraineTech2023';
 import {MixitIntroTalk} from '../src/conference/mixit2023/MixitIntroTalk';
+import {Devoxx2023} from '../src/conference/devoxx2023/Devoxx2023';
 
 const sampleData: TouraineTechProps = {
 	title: "Remotion : le 7ème art à portée de composants web et d'API 🎬",
@@ -37,10 +38,16 @@ interface TalkTemplate {
 }
 
 const Template: Record<string, TalkTemplate> = {
-	VeryTechTrip: {
-		compositionName: 'VeryTechTrip',
-		component: VeryTechTrip,
-		width: 720,
+	Devoxx: {
+		compositionName: 'Devoxx2023',
+		component: Devoxx2023,
+		width: 1280,
+		height: 720,
+	},
+	Mixit: {
+		compositionName: 'Mixit2023',
+		component: MixitIntroTalk,
+		width: 1280,
 		height: 720,
 	},
 	Snowcamp: {
@@ -55,10 +62,10 @@ const Template: Record<string, TalkTemplate> = {
 		width: 1280,
 		height: 720,
 	},
-	Mixit: {
-		compositionName: 'Mixit2023',
-		component: MixitIntroTalk,
-		width: 1280,
+	VeryTechTrip: {
+		compositionName: 'VeryTechTrip',
+		component: VeryTechTrip,
+		width: 720,
 		height: 720,
 	},
 };

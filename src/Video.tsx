@@ -21,6 +21,7 @@ import {MixitIntroTalk} from './conference/mixit2023/MixitIntroTalk';
 import {Devoxx2023} from './conference/devoxx2023/Devoxx2023';
 
 import {defaultTalkValues} from './conference/data/defaultValues';
+import {ReplayLyonJS} from './conference/lyonJS/Replay';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -277,6 +278,29 @@ export const RemotionVideo: React.FC = () => {
 						width={1280}
 						height={720}
 						defaultProps={defaultTalkValues}
+					/>
+				</Folder>
+				<Folder name="LyonJS">
+					<Composition
+						width={1920}
+						height={1080}
+						id="LyonJSReplay"
+						fps={60}
+						durationInFrames={300}
+						component={ReplayLyonJS}
+						defaultProps={{
+							title: 'Meetup #80 : Projet XState',
+							speakers: [
+								{
+									name: 'Maxime Blanc',
+									picture:
+										'https://ca.slack-edge.com/T108ZKPMF-U3VL71HHU-179292d5d86f-512',
+								},
+							],
+							date: '8 férvrier 2023',
+							sponsor:
+								'https://s3.eu-west-3.amazonaws.com/moovijob.prod/1494438/Horizontal_Black_Logo-Zenika.png',
+						}}
 					/>
 				</Folder>
 			</Folder>

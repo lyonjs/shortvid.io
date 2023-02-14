@@ -1,9 +1,10 @@
 import {MouseEvent, useCallback} from 'react';
 import {TouraineTechProps} from '../conference/snowcamp/Snowcamp';
+import {ReplayProps} from '../../pages/replay';
 
 export const Code: React.FC<{
 	composition: string;
-	params: {[key: string]: string | undefined} | TouraineTechProps;
+	params: {[key: string]: string | undefined} | TouraineTechProps | ReplayProps;
 }> = ({params, composition}) => {
 	const onClickHandler = useCallback((event: MouseEvent) => {
 		const element = event.target as HTMLElement;

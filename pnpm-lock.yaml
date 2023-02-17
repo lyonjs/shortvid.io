@@ -29,7 +29,7 @@ specifiers:
   remotion: 3.3.41
   tailwindcss: 3.2.6
   typescript: 4.9.5
-  yargs: 17.6.2
+  yargs: 17.7.0
 
 dependencies:
   '@remotion/cli': 3.3.41_biqbaboplfbrettd7655fr4n2y
@@ -62,7 +62,7 @@ devDependencies:
   pretty-quick: 3.1.3_prettier@2.8.4
   tailwindcss: 3.2.6_postcss@8.4.21
   typescript: 4.9.5
-  yargs: 17.6.2
+  yargs: 17.7.0
 
 packages:
 
@@ -3514,8 +3514,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /yargs/17.6.2:
-    resolution: {integrity: sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==}
+  /yargs/17.7.0:
+    resolution: {integrity: sha512-dwqOPg5trmrre9+v8SUo2q/hAwyKoVfu8OC1xPHKJGNdxAvPl4sKxL4vBnh3bQz/ZvvGAFeA5H3ou2kcOY8sQQ==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 8.0.1

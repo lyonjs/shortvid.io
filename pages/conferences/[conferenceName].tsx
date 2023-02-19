@@ -1,15 +1,16 @@
-import {ChangeEvent, useCallback, useState} from 'react';
+import {
+	Snowcamp,
+	TouraineTechProps,
+} from '../../src/conference/snowcamp/Snowcamp';
+import {Devoxx2023} from '../../src/conference/devoxx2023/Devoxx2023';
+import {MixitIntroTalk} from '../../src/conference/mixit2023/MixitIntroTalk';
+import {TouraineTech2023} from '../../src/conference/touraineTech2023/TouraineTech2023';
+import {VeryTechTrip} from '../../src/conference/very-tech-trip/VeryTechTrip';
 import {Player} from '@remotion/player';
-import {Code} from '../src/components/Code';
-
+import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
-import JSONInput from 'react-json-editor-ajrm/index';
-import {VeryTechTrip} from '../src/conference/very-tech-trip/VeryTechTrip';
-import {TouraineTechProps} from '../src/conference/snowcamp/Snowcamp';
-import {Snowcamp} from '../src/conference/snowcamp/Snowcamp';
-import {TouraineTech2023} from '../src/conference/touraineTech2023/TouraineTech2023';
-import {MixitIntroTalk} from '../src/conference/mixit2023/MixitIntroTalk';
-import {Devoxx2023} from '../src/conference/devoxx2023/Devoxx2023';
+import {useState} from 'react';
+import {Code} from '../../src/components/Code';
 
 const sampleData: TouraineTechProps = {
 	title: "Remotion : le 7ème art à portée de composants web et d'API 🎬",
@@ -56,7 +57,7 @@ const Template: Record<string, TalkTemplate> = {
 		width: 1280,
 		height: 720,
 	},
-	TouraineTech2023: {
+	TouraineTech: {
 		compositionName: 'TouraineTech2023',
 		component: TouraineTech2023,
 		width: 1280,
@@ -69,27 +70,29 @@ const Template: Record<string, TalkTemplate> = {
 		height: 720,
 	},
 };
-
-const Conference = () => {
+const Conference: React.FC<{conference: string}> = ({conference}) => {
+	const currentTemplate = Template[conference];
 	const [data, setData] = useState(sampleData);
-	const [currentTemplate, setTemplate] = useState(Object.values(Template)[0]);
-
-	const onChange = useCallback((e: ChangeEvent<HTMLSelectElement>) => {
-		setTemplate(Template[e.target.value]);
-	}, []);
 
 	return (
-		<>
-			<div className="flex flex-col gap-10 pb-4 justify-center items-center">
-				<select
-					id="Component"
-					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-					onChange={onChange}
-				>
-					{Object.keys(Template).map((value) => (
-						<option key={value}>{value}</option>
+		<div>
+			<nav className="my-4">
+				<h1 className="text-2xl pb-4 font-bold">
+					List of available templates for partner conferences:
+				</h1>
+
+				<ul className="list-disc pl-8">
+					{Object.keys(Template).map((name) => (
+						<li key={name}>
+							<a href={`/conferences/${name}`}>{name}</a>
+						</li>
 					))}
-				</select>
+				</ul>
+			</nav>
+
+			<h2 className="text-2xl pb-4 font-bold">{conference}</h2>
+
+			<div className="flex flex-col gap-10 pb-4 justify-center items-center">
 				<Player
 					autoPlay
 					controls
@@ -131,8 +134,29 @@ const Conference = () => {
 				composition={currentTemplate.compositionName}
 				params={data || sampleData}
 			/>
-		</>
+		</div>
 	);
 };
+
+export async function getStaticPaths() {
+	return {
+		paths: Object.keys(Template).map((key) => ({
+			params: {conferenceName: key},
+		})),
+		fallback: false,
+	};
+}
+
+export async function getStaticProps({
+	params,
+}: {
+	params: {conferenceName: string};
+}) {
+	return {
+		props: {
+			conference: params.conferenceName,
+		},
+	};
+}
 
 export default Conference;

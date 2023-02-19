@@ -27,7 +27,7 @@ specifiers:
   react-dom: 18.2.0
   react-json-editor-ajrm: ^2.5.14
   remotion: 3.3.41
-  tailwindcss: 3.2.6
+  tailwindcss: 3.2.7
   typescript: 4.9.5
   yargs: 17.7.0
 
@@ -60,7 +60,7 @@ devDependencies:
   postcss: 8.4.21
   prettier: 2.8.4
   pretty-quick: 3.1.3_prettier@2.8.4
-  tailwindcss: 3.2.6_postcss@8.4.21
+  tailwindcss: 3.2.7_postcss@8.4.21
   typescript: 4.9.5
   yargs: 17.7.0
 
@@ -3204,8 +3204,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwindcss/3.2.6_postcss@8.4.21:
-    resolution: {integrity: sha512-BfgQWZrtqowOQMC2bwaSNe7xcIjdDEgixWGYOd6AL0CbKHJlvhfdbINeAW76l1sO+1ov/MJ93ODJ9yluRituIw==}
+  /tailwindcss/3.2.7_postcss@8.4.21:
+    resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:

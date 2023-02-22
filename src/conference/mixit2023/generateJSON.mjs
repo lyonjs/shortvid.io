@@ -3,7 +3,6 @@ import fetch from 'node-fetch';
 import path, {dirname} from 'path';
 import {fileURLToPath} from 'url';
 import {format} from 'date-fns';
-import en from 'prettier/esm/parser-yaml.mjs';
 
 const YEAR = 2023;
 const BASE_URL = 'https://mixitconf.org/en';

@@ -1,4 +1,4 @@
-import {AbsoluteFill, Audio, staticFile} from 'remotion';
+import {AbsoluteFill} from 'remotion';
 import {MixitIntro} from './MixitIntro';
 import {Talk} from '../types';
 import {Mixit2023} from './Mixit2023';
@@ -12,7 +12,6 @@ export const MixitIntroTalk: React.FC<Talk> = ({
 }) => {
 	return (
 		<AbsoluteFill>
-			<Audio src={staticFile('sounds/legend.mp3')} startFrom={200} />
 			<MixitIntro />
 			<Mixit2023
 				title={title}

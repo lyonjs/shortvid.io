@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
-        with:
-          cache: "pnpm"
       - uses: pnpm/action-setup@v2.2.4
         name: Install pnpm
         with:
           version: 7
           run_install: true
+      - uses: actions/setup-node@main
+        with:
+          cache: pnpm
       - run: pnpm run test
 
   format:
@@ -26,14 +26,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
-        with:
-          cache: "pnpm"
       - uses: pnpm/action-setup@v2.2.4
         name: Install pnpm
         with:
           version: 7
           run_install: true
+      - uses: actions/setup-node@main
+        with:
+          cache: pnpm
       - run: pnpm prettier --check .
 
   generateVideos:
@@ -61,14 +61,14 @@ jobs:
       - run: sudo apt update
       - run: sudo apt install ffmpeg
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
-        with:
-          cache: "pnpm"
       - uses: pnpm/action-setup@v2.2.4
         name: Install pnpm
         with:
           version: 7
           run_install: true
+      - uses: actions/setup-node@main
+        with:
+          cache: pnpm
       - run: echo $WORKFLOW_INPUT > input-props.json
         env:
           WORKFLOW_INPUT: ${{ toJson(matrix.event.inputs) }}
@@ -83,12 +83,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
-        with:
-          cache: "pnpm"
       - uses: pnpm/action-setup@v2.2.4
         name: Install pnpm
         with:
           version: 7
           run_install: true
+      - uses: actions/setup-node@main
+        with:
+          cache: pnpm
       - run: pnpm build

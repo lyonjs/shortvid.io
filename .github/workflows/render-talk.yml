@@ -28,12 +28,14 @@ jobs:
       - run: sudo apt update
       - run: sudo apt install ffmpeg
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
       - uses: pnpm/action-setup@v2.2.4
         name: Install pnpm
         with:
           version: 7
-          run_install: true
+      - uses: actions/setup-node@main
+        with:
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --prefer-offline
       - run: echo $WORKFLOW_INPUT > input-props.json
         name: Preparing props
         env:

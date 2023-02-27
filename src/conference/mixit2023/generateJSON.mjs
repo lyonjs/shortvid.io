@@ -40,7 +40,7 @@ const run = async () => {
 				name: `${found.firstname} ${found.lastname}`,
 				picture:
 					found.photoUrl ||
-					'https://t3.ftcdn.net/jpg/02/09/37/00/360_F_209370065_JLXhrc5inEmGl52SyvSPeVB23hB6IjrR.jpg',
+					'https://img.freepik.com/icones-gratuites/utilisateur_318-159711.jpg',
 			};
 		}),
 	}));

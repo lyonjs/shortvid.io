@@ -23,6 +23,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							style={{
 								display: 'flex',
 								flexDirection: 'column',
+								alignItems: 'center',
 							}}
 						>
 							<TalkSpeakerPicture
@@ -46,7 +47,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									left: 'unset',
 									bottom: '-20%',
 									transform: 'translate(0)',
-									width: 250,
 									height: 100,
 									fontSize: '30px',
 									fontWeight: 700,

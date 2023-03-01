@@ -7,11 +7,6 @@ import {Mountains} from './Mountains';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 
-export interface Speaker {
-	picture: string;
-	name: string;
-}
-
 export interface AlpesCraftProps {
 	title: string;
 	date: string;

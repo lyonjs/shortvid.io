@@ -22,6 +22,7 @@ import {Devoxx2023} from './conference/devoxx2023/Devoxx2023';
 
 import {defaultTalkValues} from './conference/data/defaultValues';
 import {ReplayLyonJS} from './conference/lyonJS/Replay';
+import {AlpesCraft} from './conference/alpescraft/Alpescraft';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -156,6 +157,21 @@ export const RemotionVideo: React.FC = () => {
 				/>
 			</Folder>
 			<Folder name="Conference">
+				<Folder name="AlpesCraft">
+					<Composition
+						id="Alpescraft"
+						component={AlpesCraft}
+						durationInFrames={150}
+						fps={30}
+						width={1280}
+						height={720}
+						defaultProps={{
+							title: 'Conférence AlpesCraft',
+							date: '1 et 2 Juin 2023',
+							location: 'Grenoble - Alpexpo',
+						}}
+					/>
+				</Folder>
 				<Folder name="Touraine-Tech-2023">
 					<Composition
 						id="TouraineTech2023"

@@ -1,4 +1,3 @@
-import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
 import {Sponsor} from './sponsor/Sponsor';
 import {LyonJSLogo} from './components/LyonJSLogo';

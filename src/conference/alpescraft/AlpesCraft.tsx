@@ -6,11 +6,6 @@ import {ImageBackground} from '../../components/ImageBackground';
 import {Mountains} from './Mountains';
 import {Logo} from './Logo';
 
-export interface Speaker {
-	picture: string;
-	name: string;
-}
-
 export interface AlpesCraftProps {
 	title: string;
 	date: string;

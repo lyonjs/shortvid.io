@@ -1,10 +1,4 @@
-import {
-	Easing,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Easing, interpolate, useCurrentFrame} from 'remotion';
 
 export const Title: React.FC<{
 	title: string;
@@ -12,7 +6,6 @@ export const Title: React.FC<{
 	delay?: number;
 }> = ({title, style, delay = 0}) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
 
 	const fromTop = interpolate(frame, [0, 20], [-100, 400], {
 		easing: Easing.elastic(1.2),

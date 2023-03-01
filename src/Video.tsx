@@ -22,7 +22,7 @@ import {Devoxx2023} from './conference/devoxx2023/Devoxx2023';
 
 import {defaultTalkValues} from './conference/data/defaultValues';
 import {ReplayLyonJS} from './conference/lyonJS/Replay';
-import {AlpesCraft} from './conference/alpescraft/Alpescraft';
+import {AlpesCraft} from './conference/alpescraft/AlpesCraft';
 
 export const RemotionVideo: React.FC = () => {
 	return (

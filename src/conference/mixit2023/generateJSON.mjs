@@ -32,13 +32,15 @@ const run = async () => {
 		title: talk.title,
 		date: format(new Date(talk.start), 'dd/MM/yyyy'),
 		location: ROOM_MAPPING[talk.room],
-		time: format(new Date(talk.start), 'hh:mm'),
+		time: format(new Date(talk.start), 'H:mm'),
 		speakers: talk.speakerIds.map((id) => {
 			const found = speakers.find((speaker) => speaker.login === id) || {};
 
 			return {
 				name: `${found.firstname} ${found.lastname}`,
-				picture: found.photoUrl,
+				picture:
+					found.photoUrl ||
+					'https://img.freepik.com/icones-gratuites/utilisateur_318-159711.jpg',
 			};
 		}),
 	}));

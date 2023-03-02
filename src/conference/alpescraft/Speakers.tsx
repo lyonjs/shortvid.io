@@ -10,6 +10,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 				width: '100%',
 				display: 'grid',
 				gridTemplateColumns: `repeat(${speakers.length}, 1fr)`,
+				padding: '0 70px',
 			}}
 		>
 			{speakers.map((speaker) => {
@@ -35,7 +36,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								borderRadius: '50% 20% / 10% 40%',
 							}}
 							speakerPicture={speaker.picture}
-							top={30}
+							top={60}
 						/>
 						<SpeakersName name={speaker.name} />
 					</div>

@@ -6,7 +6,7 @@ export const SpeakersName: React.FC<{
 }> = ({name}) => {
 	const frame = useCurrentFrame();
 
-	const nameAppear = interpolate(frame, [18, 38], [0, 50], {
+	const nameAppear = interpolate(frame, [18, 38], [0, 80], {
 		easing: Easing.elastic(1),
 		extrapolateRight: 'clamp',
 	});

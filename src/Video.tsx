@@ -1,3 +1,4 @@
+import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
 import {Sponsor} from './sponsor/Sponsor';
 import {LyonJSLogo} from './components/LyonJSLogo';
@@ -161,13 +162,26 @@ export const RemotionVideo: React.FC = () => {
 					<Composition
 						id="Alpescraft"
 						component={AlpesCraft}
-						durationInFrames={150}
+						durationInFrames={200}
 						fps={30}
 						width={1280}
 						height={720}
 						defaultProps={{
 							title: 'Conférence AlpesCraft',
+							speakers: [
+								{
+									name: 'Mickaël Alves',
+									picture:
+										'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
+								},
+								{
+									name: 'Antoine Caron',
+									picture:
+										'https://ca.slack-edge.com/T108ZKPMF-U5M2F1A69-36e4b6574de8-192',
+								},
+							],
 							date: '1 et 2 Juin 2023',
+							time: '14h00',
 							location: 'Grenoble - Alpexpo',
 						}}
 					/>

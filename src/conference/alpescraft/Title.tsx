@@ -1,9 +1,9 @@
+import React from 'react';
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
 
 export const Title: React.FC<{
 	title: string;
 	style?: React.CSSProperties;
-	delay?: number;
 }> = ({title, style}) => {
 	const frame = useCurrentFrame();
 
@@ -23,9 +23,13 @@ export const Title: React.FC<{
 				position: 'absolute',
 				top: fromTop,
 				width: '100%',
+				height: '130px',
 				padding: '0 95px',
 				textAlign: 'center',
 				textShadow: '`1px 1px 3px white`',
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
 				opacity: titleOpacity,
 				...style,
 			}}

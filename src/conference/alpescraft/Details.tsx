@@ -1,21 +1,24 @@
+import React from 'react';
 import {Lottie} from '@remotion/lottie';
 import {useLottie} from '../../components/hooks/useLottie';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Details: React.FC<{
 	date: string;
+	time?: string;
 	location: string;
-}> = ({date, location}) => {
+}> = ({date, time, location}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const illustrationDate = useLottie('lf20_ak90tqhe');
+	const illustrationHour = useLottie('lf20_nv5aXa');
 	const illustrationLocation = useLottie('lf20_PgZU3O');
 
 	const durationInFrames = 30;
 	const drop = spring({frame, from: -20, to: 0, fps, durationInFrames});
 	const opacity = spring({frame, from: 0, to: 1, fps, durationInFrames});
 
-	if (!illustrationDate || !illustrationLocation) {
+	if (!illustrationHour || !illustrationDate || !illustrationLocation) {
 		return null;
 	}
 
@@ -23,28 +26,30 @@ export const Details: React.FC<{
 		<div
 			style={{
 				fontWeight: 700,
-				fontSize: '32px',
+				fontSize: '25px',
 				color: 'white',
 				position: 'absolute',
-				bottom: '5rem',
+				bottom: '3rem',
 				display: 'flex',
 				width: '100%',
 				justifyContent: 'center',
 				alignItems: 'center',
-				gap: '7rem',
+				flexWrap: 'wrap',
+				columnGap: '7rem',
 			}}
 		>
 			<div
 				style={{
 					display: 'flex',
-					justifyContent: 'center',
+					justifyContent: 'flex-end',
 					alignItems: 'center',
 					gap: '1rem',
+					flex: '1 0 20%',
 				}}
 			>
 				<Lottie
 					style={{
-						width: '130px',
+						width: '110px',
 						filter: 'none',
 					}}
 					playbackRate={1.5}
@@ -63,14 +68,14 @@ export const Details: React.FC<{
 			<div
 				style={{
 					display: 'flex',
-					justifyContent: 'center',
 					alignItems: 'center',
 					gap: '1rem',
+					flex: '1 0 20%',
 				}}
 			>
 				<Lottie
 					style={{
-						width: '80px',
+						width: '70px',
 						filter: 'none',
 					}}
 					animationData={illustrationLocation}
@@ -85,6 +90,34 @@ export const Details: React.FC<{
 					{location}
 				</span>
 			</div>
+			{time && (
+				<div
+					style={{
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+						gap: '2rem',
+						flexBasis: '100%',
+					}}
+				>
+					<Lottie
+						style={{
+							width: '50px',
+							filter: 'none',
+						}}
+						animationData={illustrationHour}
+					/>
+					<span
+						style={{
+							position: 'relative',
+							bottom: drop,
+							opacity,
+						}}
+					>
+						{time}
+					</span>
+				</div>
+			)}
 		</div>
 	);
 };

@@ -6,6 +6,7 @@ specifiers:
   '@remotion/eslint-config': 3.3.44
   '@remotion/google-fonts': 3.3.44
   '@remotion/lottie': 3.3.44
+  '@remotion/noise': ^3.3.58
   '@remotion/player': 3.3.44
   '@remotion/shapes': 3.3.44
   '@types/node': 18.14.0
@@ -37,6 +38,7 @@ dependencies:
   '@remotion/cli': 3.3.44_biqbaboplfbrettd7655fr4n2y
   '@remotion/google-fonts': 3.3.44_biqbaboplfbrettd7655fr4n2y
   '@remotion/lottie': 3.3.44_gn5hpwitoxbsx6uavhmqddmj5q
+  '@remotion/noise': 3.3.58_biqbaboplfbrettd7655fr4n2y
   '@remotion/player': 3.3.44_biqbaboplfbrettd7655fr4n2y
   '@remotion/shapes': 3.3.44_biqbaboplfbrettd7655fr4n2y
   date-fns: 2.29.3
@@ -673,6 +675,16 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       remotion: 3.3.44_biqbaboplfbrettd7655fr4n2y
+    dev: false
+
+  /@remotion/noise/3.3.58_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-UXAHXBipKTRUzoqRKo1FPWZ8kc9NPEsWcgroa7pRkcnsUKdmXCC88IPLCjeenFe+R9MW56OgV7Zs/EN5llCx8A==}
+    dependencies:
+      remotion: 3.3.58_biqbaboplfbrettd7655fr4n2y
+      simplex-noise: 4.0.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
     dev: false
 
   /@remotion/paths/3.3.44:
@@ -2999,6 +3011,16 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /remotion/3.3.58_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-WZufbiN7dOsyKfGKkpH+k9ggAbFaykUBbPK7Pfk0/F6DBpkSAcKhtnyd59Q139mQg2AzFcauJZ/ztnbHgCm88g==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /require-directory/2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -3118,6 +3140,10 @@ packages:
 
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
+
+  /simplex-noise/4.0.1:
+    resolution: {integrity: sha512-zl/+bdSqW7HJOQ0oDbxrNYaF4F5ik0i7M6YOYmEoIJNtg16NpvWaTTM1Y7oV/7T0jFljawLgYPS81Uu2rsfo1A==}
+    dev: false
 
   /sisteransi/1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}

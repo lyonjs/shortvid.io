@@ -16,6 +16,7 @@
 		"@remotion/cli": "3.3.44",
 		"@remotion/google-fonts": "3.3.44",
 		"@remotion/lottie": "3.3.44",
+		"@remotion/noise": "^3.3.58",
 		"@remotion/player": "3.3.44",
 		"@remotion/shapes": "3.3.44",
 		"date-fns": "^2.29.3",

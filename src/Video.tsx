@@ -22,6 +22,7 @@ import {Devoxx2023} from './conference/devoxx2023/Devoxx2023';
 
 import {defaultTalkValues} from './conference/data/defaultValues';
 import {ReplayLyonJS} from './conference/lyonJS/Replay';
+import {Vercel} from './sponsor/newSponsor/Vercel';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -66,6 +67,16 @@ export const RemotionVideo: React.FC = () => {
 				/>
 			</Folder>
 			<Folder name="Sponsor">
+				<Folder name="NewSponsor">
+					<Composition
+						component={Vercel}
+						width={1920}
+						height={1080}
+						id="VercelAnnouncement"
+						fps={60}
+						durationInFrames={300}
+					/>
+				</Folder>
 				<Composition
 					component={Sponsor}
 					width={1200}

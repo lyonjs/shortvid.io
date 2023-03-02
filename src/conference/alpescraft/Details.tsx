@@ -11,8 +11,9 @@ export const Details: React.FC<{
 	const illustrationDate = useLottie('lf20_ak90tqhe');
 	const illustrationLocation = useLottie('lf20_PgZU3O');
 
-	const drop = spring({frame, from: -20, to: 0, fps, durationInFrames: 30});
-	const opacity = spring({frame, from: 0, to: 1, fps, durationInFrames: 30});
+	const durationInFrames = 30;
+	const drop = spring({frame, from: -20, to: 0, fps, durationInFrames});
+	const opacity = spring({frame, from: 0, to: 1, fps, durationInFrames});
 
 	if (!illustrationDate || !illustrationLocation) {
 		return null;
@@ -21,7 +22,6 @@ export const Details: React.FC<{
 	return (
 		<div
 			style={{
-				fontFamily: 'Noto Sans,sans-serif',
 				fontWeight: 700,
 				fontSize: '32px',
 				color: 'white',

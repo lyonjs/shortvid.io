@@ -18,8 +18,14 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 	location,
 }) => {
 	return (
-		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
-			<Sequence>
+		<AbsoluteFill
+			style={{
+				backgroundColor: 'white',
+				overflow: 'hidden',
+				fontFamily: 'Noto Sans,sans-serif',
+			}}
+		>
+			<Sequence name="Background">
 				<ImageBackground
 					animated
 					src={staticFile(
@@ -27,14 +33,14 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 					)}
 				/>
 			</Sequence>
-			<Sequence from={20}>
+			<Sequence name="Mountains-decorations" from={20}>
 				<Mountains />
 			</Sequence>
-			<Sequence from={30}>
+			<Sequence name="Logo-&-title" from={30}>
 				<Title title={title} />
 				<Logo />
 			</Sequence>
-			<Sequence from={60}>
+			<Sequence name="Details" from={60}>
 				<Details date={date} location={location} />
 			</Sequence>
 		</AbsoluteFill>

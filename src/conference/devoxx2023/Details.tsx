@@ -61,6 +61,7 @@ export const Details: React.FC<{
 
 				return (
 					<div
+						key={`detail-${index}`}
 						style={{
 							opacity,
 							position: 'relative',

@@ -15,6 +15,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 			{speakers.map((speaker) => {
 				return (
 					<div
+						key={speaker.name}
 						style={{
 							display: 'flex',
 							flexDirection: 'column',
@@ -31,7 +32,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							top={60}
 						/>
 						<TalkSpeakerPicture
-							key={speaker.name}
 							style={{
 								display: 'block',
 								position: 'relative',

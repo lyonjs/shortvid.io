@@ -36,6 +36,7 @@ interface TalkTemplate {
 	width: number;
 	height: number;
 	compositionName: string;
+	durationInFrames: number;
 }
 
 const Template: Record<string, TalkTemplate> = {
@@ -44,30 +45,35 @@ const Template: Record<string, TalkTemplate> = {
 		component: Devoxx2023,
 		width: 1280,
 		height: 720,
+		durationInFrames: 300,
 	},
 	Mixit: {
 		compositionName: 'Mixit2023',
 		component: MixitIntroTalk,
 		width: 1280,
 		height: 720,
+		durationInFrames: 150,
 	},
 	Snowcamp: {
 		compositionName: 'Snowcamp',
 		component: Snowcamp,
 		width: 1280,
 		height: 720,
+		durationInFrames: 150,
 	},
 	TouraineTech: {
 		compositionName: 'TouraineTech2023',
 		component: TouraineTech2023,
 		width: 1280,
 		height: 720,
+		durationInFrames: 150,
 	},
 	VeryTechTrip: {
 		compositionName: 'VeryTechTrip',
 		component: VeryTechTrip,
 		width: 720,
 		height: 720,
+		durationInFrames: 150,
 	},
 };
 const Conference: React.FC<{conference: string}> = ({conference}) => {
@@ -102,7 +108,7 @@ const Conference: React.FC<{conference: string}> = ({conference}) => {
 						width: '800px',
 						height: '450px',
 					}}
-					durationInFrames={120}
+					durationInFrames={currentTemplate.durationInFrames}
 					compositionWidth={currentTemplate.width}
 					compositionHeight={currentTemplate.height}
 					fps={30}

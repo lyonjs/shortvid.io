@@ -51,11 +51,7 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 				{speakers ? <Speakers speakers={speakers} /> : <Logo />}
 			</Sequence>
 			<Sequence name="Details" from={60}>
-				{time ? (
-					<Details date={date} time={time} location={location} />
-				) : (
-					<Details date={date} location={location} />
-				)}
+				<Details date={date} time={time} location={location} />
 			</Sequence>
 		</AbsoluteFill>
 	);

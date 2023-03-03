@@ -1,3 +1,4 @@
+import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
 import {Sponsor} from './sponsor/Sponsor';
 import {LyonJSLogo} from './components/LyonJSLogo';
@@ -161,15 +162,11 @@ export const RemotionVideo: React.FC = () => {
 					<Composition
 						id="Alpescraft"
 						component={AlpesCraft}
-						durationInFrames={150}
+						durationInFrames={200}
 						fps={30}
 						width={1280}
 						height={720}
-						defaultProps={{
-							title: 'Conférence AlpesCraft',
-							date: '1 et 2 Juin 2023',
-							location: 'Grenoble - Alpexpo',
-						}}
+						defaultProps={defaultTalkValues}
 					/>
 				</Folder>
 				<Folder name="Touraine-Tech-2023">

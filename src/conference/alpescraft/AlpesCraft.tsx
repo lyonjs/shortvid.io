@@ -5,17 +5,27 @@ import {Details} from './Details';
 import {ImageBackground} from '../../components/ImageBackground';
 import {Mountains} from './Mountains';
 import {Logo} from './Logo';
+import {Speakers} from './Speakers';
+
+export interface Speaker {
+	picture: string;
+	name: string;
+}
 
 export interface AlpesCraftProps {
 	title: string;
 	date: string;
+	time?: string;
 	location: string;
+	speakers?: Speaker[];
 }
 
 export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 	title,
 	date,
+	time,
 	location,
+	speakers,
 }) => {
 	return (
 		<AbsoluteFill
@@ -38,10 +48,10 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 			</Sequence>
 			<Sequence name="Logo-&-title" from={30}>
 				<Title title={title} />
-				<Logo />
+				{speakers ? <Speakers speakers={speakers} /> : <Logo />}
 			</Sequence>
 			<Sequence name="Details" from={60}>
-				<Details date={date} location={location} />
+				<Details date={date} time={time} location={location} />
 			</Sequence>
 		</AbsoluteFill>
 	);

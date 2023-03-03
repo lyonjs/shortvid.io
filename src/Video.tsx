@@ -166,24 +166,7 @@ export const RemotionVideo: React.FC = () => {
 						fps={30}
 						width={1280}
 						height={720}
-						defaultProps={{
-							title: 'Conférence AlpesCraft',
-							speakers: [
-								{
-									name: 'Mickaël Alves',
-									picture:
-										'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
-								},
-								{
-									name: 'Antoine Caron',
-									picture:
-										'https://ca.slack-edge.com/T108ZKPMF-U5M2F1A69-36e4b6574de8-192',
-								},
-							],
-							date: '1 et 2 Juin 2023',
-							time: '14h00',
-							location: 'Grenoble - Alpexpo',
-						}}
+						defaultProps={defaultTalkValues}
 					/>
 				</Folder>
 				<Folder name="Touraine-Tech-2023">

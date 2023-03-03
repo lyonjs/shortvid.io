@@ -81,6 +81,7 @@ const Template: Record<string, TalkTemplate> = {
 		component: AlpesCraft,
 		width: 1280,
 		height: 720,
+		durationInFrames: 200,
 	},
 };
 const Conference: React.FC<{conference: string}> = ({conference}) => {

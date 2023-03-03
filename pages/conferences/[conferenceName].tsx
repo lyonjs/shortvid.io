@@ -11,6 +11,7 @@ import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
 import {useState} from 'react';
 import {Code} from '../../src/components/Code';
+import {AlpesCraft} from '../../src/conference/alpescraft/AlpesCraft';
 
 const sampleData: TouraineTechProps = {
 	title: "Remotion : le 7ème art à portée de composants web et d'API 🎬",
@@ -74,6 +75,12 @@ const Template: Record<string, TalkTemplate> = {
 		width: 720,
 		height: 720,
 		durationInFrames: 150,
+	},
+	AlpesCraft: {
+		compositionName: 'AlpesCraft',
+		component: AlpesCraft,
+		width: 1280,
+		height: 720,
 	},
 };
 const Conference: React.FC<{conference: string}> = ({conference}) => {

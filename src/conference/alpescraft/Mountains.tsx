@@ -1,9 +1,4 @@
-import {
-	Easing,
-	interpolate,
-	Sequence,
-	useCurrentFrame,
-} from 'remotion';
+import {Easing, interpolate, Sequence, useCurrentFrame} from 'remotion';
 import {SingleMountain} from './SingleMountain';
 
 export const Mountains = () => {

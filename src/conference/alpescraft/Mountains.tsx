@@ -1,7 +1,5 @@
 import {
-	AbsoluteFill,
 	Easing,
-	Img,
 	interpolate,
 	Sequence,
 	useCurrentFrame,

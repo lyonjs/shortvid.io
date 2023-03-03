@@ -1,5 +1,5 @@
 import React from 'react';
-import {Easing, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {Img, staticFile} from 'remotion';
 
 export const SingleMountain: React.FC<{
 	style?: React.CSSProperties;

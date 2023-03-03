@@ -4,7 +4,7 @@ export const Title: React.FC<{
 	title: string;
 	style?: React.CSSProperties;
 	delay?: number;
-}> = ({title, style, delay = 0}) => {
+}> = ({title, style}) => {
 	const frame = useCurrentFrame();
 
 	const fromTop = interpolate(frame, [0, 20], [-100, 370], {

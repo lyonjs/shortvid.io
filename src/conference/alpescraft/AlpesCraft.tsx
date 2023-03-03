@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 import {Title} from './Title';
 import {Details} from './Details';

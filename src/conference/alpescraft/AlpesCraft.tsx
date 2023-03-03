@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Sequence, staticFile, Easing} from 'remotion';
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 import {Title} from './Title';
 import {Details} from './Details';
 import {ImageBackground} from '../../components/ImageBackground';

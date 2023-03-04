@@ -1,4 +1,4 @@
-import {Composition, Folder, staticFile} from 'remotion';
+import {Composition, Folder, staticFile, Still} from 'remotion';
 import {Sponsor} from './sponsor/Sponsor';
 import {LyonJSLogo} from './components/LyonJSLogo';
 import {ImageBackground} from './components/ImageBackground';
@@ -22,6 +22,9 @@ import {Devoxx2023} from './conference/devoxx2023/Devoxx2023';
 
 import {defaultTalkValues} from './conference/data/defaultValues';
 import {ReplayLyonJS} from './conference/lyonJS/Replay';
+import {LayerOneSpeaker} from './conference/lyonJS/LayerOneSpeaker';
+import {LayerTwoSpeaker} from './conference/lyonJS/LayerTwoSpeaker';
+import {LayerFullScreen} from './conference/lyonJS/LayerFullScreen';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -301,6 +304,24 @@ export const RemotionVideo: React.FC = () => {
 							sponsor:
 								'https://s3.eu-west-3.amazonaws.com/moovijob.prod/1494438/Horizontal_Black_Logo-Zenika.png',
 						}}
+					/>
+					<Still
+						id="LyonJSLayerFullScreen"
+						component={LayerFullScreen}
+						width={1920}
+						height={1080}
+					/>
+					<Still
+						id="LyonJSLayerOneSpeaker"
+						component={LayerOneSpeaker}
+						width={1920}
+						height={1080}
+					/>
+					<Still
+						id="LyonJSLayerTwoSpeaker"
+						component={LayerTwoSpeaker}
+						width={1920}
+						height={1080}
 					/>
 				</Folder>
 			</Folder>

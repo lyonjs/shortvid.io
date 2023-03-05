@@ -7,7 +7,7 @@ export const Title: React.FC<{
 }> = ({title, style}) => {
 	const frame = useCurrentFrame();
 
-	const fromTop = interpolate(frame, [0, 20], [-100, 370], {
+	const fromTop = interpolate(frame, [0, 20], [-100, 385], {
 		easing: Easing.elastic(1.2),
 		extrapolateRight: 'clamp',
 	});
@@ -18,7 +18,7 @@ export const Title: React.FC<{
 		<span
 			style={{
 				fontWeight: 900,
-				fontSize: '3rem',
+				fontSize: '2.6rem',
 				color: 'white',
 				position: 'absolute',
 				top: fromTop,

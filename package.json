@@ -5,6 +5,7 @@
 	"description": "My Remotion video",
 	"repository": {},
 	"license": "MIT",
+	"main": "./src/index.tsx",
 	"scripts": {
 		"start": "remotion preview ./src/index.tsx",
 		"upgrade": "remotion upgrade",

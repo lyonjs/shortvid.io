@@ -1,5 +1,5 @@
 import React from 'react';
-import {LyonJSLogo} from '../components/LyonJSLogo';
+import {EventLogo} from '../components/EventLogo';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const SponsorOrgaLogo: React.FC = () => {
@@ -18,7 +18,7 @@ export const SponsorOrgaLogo: React.FC = () => {
 	});
 
 	return (
-		<LyonJSLogo
+		<EventLogo
 			style={{
 				position: 'absolute',
 				bottom: 60,

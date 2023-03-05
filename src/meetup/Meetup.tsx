@@ -4,11 +4,19 @@ import {MeetupPresentation} from './MeetupPresentation';
 import {Register} from './Register';
 import {MeetupDate} from './MeetupDate';
 
-export const Meetup: React.FC<{
+export interface MeetupProps {
+	eventLogo?: string;
 	backgroundImg?: string;
 	title: string;
 	date?: string;
-}> = ({backgroundImg, title, date}) => {
+}
+
+export const Meetup = ({
+	backgroundImg,
+	title,
+	date,
+	eventLogo,
+}: MeetupProps) => {
 	return (
 		<AbsoluteFill
 			style={{
@@ -18,7 +26,7 @@ export const Meetup: React.FC<{
 			<ImageBackground animated src={backgroundImg} />
 
 			<Sequence from={40} durationInFrames={130}>
-				<MeetupPresentation title={title} />
+				<MeetupPresentation title={title} eventLogo={eventLogo} />
 			</Sequence>
 			{date && (
 				<Sequence from={120}>

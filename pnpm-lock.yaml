@@ -13,6 +13,7 @@ specifiers:
   '@types/react-dom': 18.0.11
   '@types/react-json-editor-ajrm': ^2.5.3
   '@types/web': 0.0.96
+  '@vercel/analytics': ^0.1.11
   autoprefixer: 10.4.13
   date-fns: ^2.29.3
   debug: 4.3.4
@@ -39,6 +40,7 @@ dependencies:
   '@remotion/lottie': 3.3.62_gn5hpwitoxbsx6uavhmqddmj5q
   '@remotion/player': 3.3.62_biqbaboplfbrettd7655fr4n2y
   '@remotion/shapes': 3.3.62_biqbaboplfbrettd7655fr4n2y
+  '@vercel/analytics': 0.1.11_react@18.2.0
   date-fns: 2.29.3
   lottie-web: 5.10.2
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
@@ -927,6 +929,14 @@ packages:
       '@typescript-eslint/types': 5.19.0
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@webassemblyjs/ast/1.11.1:
     resolution: {integrity: sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw==}

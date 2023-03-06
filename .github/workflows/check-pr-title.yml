@@ -1,0 +1,19 @@
+name: 🏷 Check pull request title
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - ready_for_review
+
+jobs:
+  pullRequestTitle:
+    name: 🏷 Check pull request title
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Slashgear/action-check-pr-title@v4.3.0
+        with:
+          regexp: '^(revert: )?(chore|ci|docs|feat|fix|perf|refactor|style|test)\(.{1,15}\): .{1,50}'

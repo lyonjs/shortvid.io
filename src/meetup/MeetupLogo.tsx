@@ -1,9 +1,12 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {LyonJSLogo} from '../components/LyonJSLogo';
+import {EventLogo} from '../components/EventLogo';
 
-export const MeetupLogo: React.FC<{endAnimationShift: number}> = ({
-	endAnimationShift,
-}) => {
+export interface MeetupLogoProps {
+	eventLogo?: string;
+	endAnimationShift: number;
+}
+
+export const MeetupLogo = ({eventLogo, endAnimationShift}: MeetupLogoProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -38,7 +41,8 @@ export const MeetupLogo: React.FC<{endAnimationShift: number}> = ({
 
 	return (
 		<AbsoluteFill style={{display: 'flex', alignItems: 'center'}}>
-			<LyonJSLogo
+			<EventLogo
+				src={eventLogo}
 				style={{
 					position: 'absolute',
 					top: 150,

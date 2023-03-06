@@ -1,6 +1,6 @@
 import {Composition, Folder, staticFile} from 'remotion';
 import {Sponsor} from './sponsor/Sponsor';
-import {LyonJSLogo} from './components/LyonJSLogo';
+import {EventLogo} from './components/EventLogo';
 import {ImageBackground} from './components/ImageBackground';
 import {Title} from './components/Title';
 import {Talk} from './talk/Talk';
@@ -40,10 +40,10 @@ export const RemotionVideo: React.FC = () => {
 					}}
 				/>
 				<Composition
-					component={LyonJSLogo}
+					component={EventLogo}
 					width={1200}
 					height={1200}
-					id="LyonJSLogo"
+					id="EventLogo"
 					fps={30}
 					durationInFrames={120}
 				/>

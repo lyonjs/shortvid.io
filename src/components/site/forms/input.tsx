@@ -8,11 +8,14 @@ export const Form: React.FC<{children: ReactNode}> = ({children}) => {
 	);
 };
 
-export const Input: React.FC<{
+export interface InputProps {
 	value?: string;
 	setValue: (event: FormEvent<HTMLInputElement>) => void;
 	label: string;
-}> = ({value, setValue, label}) => {
+	placeholder?: string;
+}
+
+export const Input = ({value, setValue, label, placeholder}: InputProps) => {
 	return (
 		<label
 			style={{
@@ -34,6 +37,7 @@ export const Input: React.FC<{
 					borderRadius: '5px',
 					border: 'none',
 				}}
+				placeholder={placeholder}
 				onChange={setValue}
 			/>
 		</label>

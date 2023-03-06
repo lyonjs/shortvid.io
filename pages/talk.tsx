@@ -10,6 +10,7 @@ const Talk = () => {
 		string | undefined
 	>(undefined);
 	const [speakersNames, setSpeakersNames] = useInputChange<string>('John Doe');
+	const [eventLogo, setEventLogo] = useInputChange<string>('');
 	const [titleSize, setTitleSize] = useInputChange<string>('50');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined
@@ -20,6 +21,7 @@ const Talk = () => {
 		speakerPicture,
 		titleSize,
 		backgroundImg,
+		eventLogo,
 	};
 
 	return (
@@ -67,6 +69,12 @@ const Talk = () => {
 						setValue={setBackgroundImg}
 						value={backgroundImg}
 						label="Background Image"
+					/>
+					<Input
+						setValue={setEventLogo}
+						value={eventLogo}
+						label="Event Logo (optional)"
+						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
 					/>
 					<a
 						className="text-black py-2 px-4 text-center text-xl font-bold bg-yellow-300 rounded-xl mt-4 hover:scale-105"

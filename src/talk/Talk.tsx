@@ -1,16 +1,18 @@
 import {AbsoluteFill, Sequence} from 'remotion';
 import {ImageBackground} from '../components/ImageBackground';
-import {LyonJSLogo} from '../components/LyonJSLogo';
+import {EventLogo} from '../components/EventLogo';
 import {TalkSpeakerPicture} from './TalkSpeakerPicture';
 import {TalkTitles} from './TalkTitles';
 
 export const Talk: React.FC<{
+	eventLogo?: string;
 	speakersNames: string;
 	talkTitle: string;
 	backgroundImg?: string;
 	speakerPicture?: string;
 	titleSize?: string;
 }> = ({
+	eventLogo,
 	speakersNames,
 	talkTitle,
 	speakerPicture,
@@ -39,7 +41,8 @@ export const Talk: React.FC<{
 					/>
 				</Sequence>
 
-				<LyonJSLogo
+				<EventLogo
+					src={eventLogo}
 					style={{
 						position: 'absolute',
 						bottom: 30,

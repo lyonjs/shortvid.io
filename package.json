@@ -18,6 +18,7 @@
 		"@remotion/lottie": "3.3.62",
 		"@remotion/player": "3.3.62",
 		"@remotion/shapes": "3.3.62",
+		"@vercel/analytics": "^0.1.11",
 		"date-fns": "^2.29.3",
 		"lottie-web": "5.10.2",
 		"next": "^13.1.6",

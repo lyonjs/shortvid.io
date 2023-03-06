@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import {Analytics} from '@vercel/analytics/react';
 
 import '../styles/globals.css';
 import {Header} from '../src/components/site/Header';
@@ -90,6 +91,7 @@ export default ({Component, pageProps}) => {
 				</a>
 				<span className="block">Made with 💛 and JS</span>
 			</footer>
+			<Analytics />
 		</main>
 	);
 };

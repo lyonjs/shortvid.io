@@ -327,12 +327,18 @@ export const RemotionVideo: React.FC = () => {
 					<Still
 						id="LyonJSLayerOneSpeaker"
 						component={LayerOneSpeaker}
+						defaultProps={{
+							title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+						}}
 						width={1920}
 						height={1080}
 					/>
 					<Still
 						id="LyonJSLayerTwoSpeaker"
 						component={LayerTwoSpeaker}
+						defaultProps={{
+							title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+						}}
 						width={1920}
 						height={1080}
 					/>

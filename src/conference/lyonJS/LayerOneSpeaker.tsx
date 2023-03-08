@@ -3,8 +3,10 @@ import React from 'react';
 import {RightTriangle} from './RightTriangle';
 import {LeftTriangle} from './LeftTriangle';
 import {GreenScreen} from './GreenScreen';
+import {LayerTitle} from './LayerTitle';
 
-export const LayerOneSpeaker: React.FC = () => {
+type Props = {title: string};
+export const LayerOneSpeaker: React.FC<Props> = ({title}) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<RightTriangle />
@@ -26,6 +28,13 @@ export const LayerOneSpeaker: React.FC = () => {
 					position: 'absolute',
 					bottom: 0,
 					right: 0,
+				}}
+			/>
+			<LayerTitle
+				title={title}
+				style={{
+					width: 'calc(70% - 30px)',
+					marginTop: '-30px',
 				}}
 			/>
 		</AbsoluteFill>

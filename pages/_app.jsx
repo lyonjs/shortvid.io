@@ -7,6 +7,9 @@ import {Header} from '../src/components/site/Header';
 import {NavBar} from '../src/components/site/NavBar';
 
 export default ({Component, pageProps}) => {
+	if (Component.noLayout) {
+		return <Component {...pageProps} />;
+	}
 	return (
 		<main className="mx-auto p-4">
 			<Head>

@@ -27,8 +27,6 @@ const Fullscreen = () => {
 	const title = params.get('title') || '';
 	const mode = params.get('mode') as LayerMode;
 
-	console.log('render');
-
 	return (
 		<Player
 			style={{

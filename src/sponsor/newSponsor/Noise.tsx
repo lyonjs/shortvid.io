@@ -1,5 +1,5 @@
-import {noise3D} from '@remotion/noise';
 import React from 'react';
+import {noise3D} from '@remotion/noise';
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 
 const OVERSCAN_MARGIN = 100;
@@ -38,7 +38,7 @@ export const Noise: React.FC<{
 							cx={x + dx}
 							cy={y + dy}
 							r={circleRadius}
-							fill="#A9A9A9"
+							fill="#2c2c30"
 							opacity={opacity}
 						/>
 					);

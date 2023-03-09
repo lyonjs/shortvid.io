@@ -74,7 +74,7 @@ export const RemotionVideo: React.FC = () => {
 						height={1080}
 						id="VercelAnnouncement"
 						fps={60}
-						durationInFrames={300}
+						durationInFrames={750}
 					/>
 				</Folder>
 				<Composition

@@ -10,7 +10,7 @@ export const GreenScreen: React.FC<{style?: React.CSSProperties}> = ({
 				margin: 30,
 				aspectRatio: '16/9',
 				border: '10px solid white',
-				backgroundColor: 'green',
+				backgroundColor: '#00FF00',
 				flexShrink: '0',
 				...style,
 			}}

@@ -12,7 +12,7 @@ specifiers:
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@types/react-json-editor-ajrm': ^2.5.3
-  '@types/web': 0.0.96
+  '@types/web': 0.0.97
   '@vercel/analytics': ^0.1.11
   autoprefixer: 10.4.14
   date-fns: ^2.29.3
@@ -57,7 +57,7 @@ devDependencies:
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@types/react-json-editor-ajrm': 2.5.3
-  '@types/web': 0.0.96
+  '@types/web': 0.0.97
   autoprefixer: 10.4.14_postcss@8.4.21
   debug: 4.3.4
   eslint: 8.36.0
@@ -807,8 +807,8 @@ packages:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: true
 
-  /@types/web/0.0.96:
-    resolution: {integrity: sha512-F/p5tX0DALjtpePoQOiAIU1X46s9Ad+Utese2MBdIQWTc6DgNlLiLhIwxCOIfXfTjATPz5GVSDFZSSsC9//daw==}
+  /@types/web/0.0.97:
+    resolution: {integrity: sha512-L/yutbI+KBNJMiSYzARdLy3MKhkiXa95m/5OYn8UoLti9CFvEp21+xrb8CioY+9Ofxd9D3ZWB6c7Zzu3LlIzNg==}
     dev: true
 
   /@types/yauzl/2.10.0:

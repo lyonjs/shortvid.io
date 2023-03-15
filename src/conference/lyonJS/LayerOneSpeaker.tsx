@@ -37,6 +37,10 @@ export const LayerOneSpeaker: React.FC<Props> = ({title}) => {
 					marginTop: '-30px',
 				}}
 			/>
+			<Img
+				src="https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg"
+				style={{position: 'absolute', top: 10, right: 20, width: 300}}
+			/>
 		</AbsoluteFill>
 	);
 };

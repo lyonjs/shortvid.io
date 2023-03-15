@@ -28,8 +28,8 @@ export const LayerTwoSpeaker: React.FC<Props> = ({title}) => {
 					paddingTop: 150,
 				}}
 			>
-				<GreenScreen style={{width: '50%', margin: 20}} />
-				<GreenScreen style={{width: '50%', margin: 20}} />
+				<GreenScreen style={{flex: 1, margin: 20}} />
+				<GreenScreen style={{flex: 1, margin: 20}} />
 			</div>
 			<div
 				style={{
@@ -41,6 +41,10 @@ export const LayerTwoSpeaker: React.FC<Props> = ({title}) => {
 			>
 				<LayerTitle title={title} />
 			</div>
+			<Img
+				src="https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg"
+				style={{position: 'absolute', top: 10, right: 20, width: 300}}
+			/>
 		</AbsoluteFill>
 	);
 };

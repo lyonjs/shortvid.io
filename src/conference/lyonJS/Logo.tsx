@@ -14,7 +14,7 @@ export const Logo = () => {
 		fps,
 		from: -200,
 		to: 20,
-		durationInFrames: 30,
+		durationInFrames: 60,
 	});
 
 	return (

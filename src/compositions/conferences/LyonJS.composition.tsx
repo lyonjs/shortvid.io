@@ -13,7 +13,7 @@ export const LyonJSComposition: React.FC = () => {
 				height={1080}
 				id="LyonJSReplay"
 				fps={60}
-				durationInFrames={300}
+				durationInFrames={320}
 				component={ReplayLyonJS}
 				defaultProps={{
 					title: 'Meetup #80 : Projet XState',

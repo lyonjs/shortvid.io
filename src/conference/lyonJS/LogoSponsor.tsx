@@ -12,7 +12,7 @@ export const LogoSponsor: React.FC<{sponsor: string}> = ({sponsor}) => {
 		fps,
 		from: -200,
 		to: 40,
-		durationInFrames: 30,
+		durationInFrames: 60,
 	});
 
 	return (

@@ -1,10 +1,4 @@
-import {
-	Audio,
-	interpolate,
-	Sequence,
-	staticFile,
-	useVideoConfig,
-} from 'remotion';
+import {Audio, interpolate, Sequence, staticFile} from 'remotion';
 import {Logo} from './Logo';
 import {RightTriangle} from './RightTriangle';
 import {LeftTriangle} from './LeftTriangle';

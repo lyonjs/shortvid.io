@@ -40,6 +40,8 @@ export const LyonJSComposition: React.FC = () => {
 				component={LayerOneSpeaker}
 				defaultProps={{
 					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+					sponsorLogoUrl:
+						'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg',
 				}}
 				width={1920}
 				height={1080}
@@ -49,6 +51,8 @@ export const LyonJSComposition: React.FC = () => {
 				component={LayerTwoSpeaker}
 				defaultProps={{
 					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+					sponsorLogoUrl:
+						'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg',
 				}}
 				width={1920}
 				height={1080}

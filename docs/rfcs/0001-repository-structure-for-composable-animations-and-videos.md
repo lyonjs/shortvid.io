@@ -27,22 +27,59 @@ Now it's time to get started, so let's take advantage of this RFC to study a pro
 
 [Describe the proposed changes or additions to the project.]
 
-## Alternatives
+For this we need to reshape our repository structure in order to be able to extend it.
 
-[Discuss any alternative approaches that were considered, and explain why they were rejected.]
+### NextJS app
+
+- Migrate to _App directory structure_
+- For now forms a duplicated between page generation, we need to study the possibility to generate "video" generation page dynamically.
+- SVG website should be "debranded" of LyonJS logo by default in order to let user see the possibility offered by SVG project.
+
+### Backend app
+
+- Create a directory name `server` in which should be an index.ts file exposing an HTTP server that can generate video on a API.
+- API should handle `/video/$pathtoComposition/$composotionName`, and all props could be passed by queryParams to generate MP4 video.
+- API should handle `/frame/$pathtoComposition/$composotionName/[format]/[frameId]`, and all props could be passed by queryParams to generate image with format.
+- Server should use `Fastify` library (why, because why not)
+
+### Src (Remotion app)
+
+- remove `src/components.tsx` file as it a proxy that is completely useless
+- use dynamic import to load composition inside Video.tsx and other composition definition
+
+```
+-- src
+----app #for web application
+----design
+------animations
+------atoms
+----template
+----conferences
+------mixit
+------...
+```
+
+### Public
+
+Public directory is a bit of a mess has it is shared between nextJs app public files and remotions assets
+Let changes that.
+
+- What is in root directory should have no choice to be there (for example robots.txt, favicon or any other file for the website that coult not be in a subpath)
+- Then, a `asset` directory should be created with sub directories `images`, `sounds`.
+- In `image`, each conference should have its own directory to be able to clean it more easily.
 
 ## Potential Impacts
 
 [Explain any potential impacts or risks associated with implementing this RFC.]
 
+- Build and repository structure
+- Documentation and install process
+- End user extension and customisation
+
 ## References
 
 [List any references, resources, or other relevant information.]
 
-## Acknowledgments
-
-[Optional: acknowledge any individuals or organizations who provided input or assistance in the development of this RFC.]
-
-## Appendices
-
-[Optional: provide any additional information or details that support this RFC, such as code samples or diagrams.]
+- [Next App directory](https://nextjs.org/blog/next-13#new-app-directory-beta)
+- [Remotion, generation from server example](https://www.remotion.dev/docs/ssr)
+- [Fastify documenation](https://www.fastify.io/)

@@ -7,11 +7,9 @@ import {
 	useSelectChange,
 } from '../../src/components/hooks/onInputChange';
 import LayerByMode from '../../src/components/site/LayerByMode';
-import {useRouter} from 'next/router';
 import {SelectInput} from '../../src/components/site/forms/selectInput';
 
 const Layers = () => {
-	const router = useRouter();
 	const [copied, setCopied] = useState(false);
 	const [mode, setMode] = useSelectChange<LayerMode>('one');
 	const [title, setTitle] = useInputChange<string>('LyonJS');
@@ -58,12 +56,12 @@ const Layers = () => {
 					options={['one', 'two', 'full']}
 				/>
 				<Input setValue={setTitle} value={title} label="Talk title" />
-				<Input setValue={setSponsor} value={sponsor} label="Date" />
+				<Input setValue={setSponsor} value={sponsor} label="Sponsor image" />
 				<button
 					type="button"
 					className="font-bold mt-4"
 					onClick={() => {
-						router.push(layerUrl);
+						window.open(layerUrl, '_blank');
 					}}
 				>
 					Display Layer 👀

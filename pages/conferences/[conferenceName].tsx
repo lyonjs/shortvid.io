@@ -1,7 +1,4 @@
-import {
-	Snowcamp,
-	TouraineTechProps,
-} from '../../src/conference/snowcamp/Snowcamp';
+import {Snowcamp} from '../../src/conference/snowcamp/Snowcamp';
 import {Devoxx2023} from '../../src/conference/devoxx2023/Devoxx2023';
 import {MixitIntroTalk} from '../../src/conference/mixit2023/MixitIntroTalk';
 import {TouraineTech2023} from '../../src/conference/touraineTech2023/TouraineTech2023';
@@ -12,25 +9,7 @@ import locale from 'react-json-editor-ajrm/locale/en';
 import {useState} from 'react';
 import {Code} from '../../src/components/Code';
 import {AlpesCraft} from '../../src/conference/alpescraft/AlpesCraft';
-
-const sampleData: TouraineTechProps = {
-	title: "Remotion : le 7ème art à portée de composants web et d'API 🎬",
-	speakers: [
-		{
-			name: 'Mickaël Alves',
-			picture:
-				'https://pbs.twimg.com/profile_images/1452247219709566977/5Xzmgun-_400x400.jpg',
-		},
-		{
-			name: 'Antoine Caron',
-			picture:
-				'https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg',
-		},
-	],
-	date: '27 janvier 2023',
-	time: '14h00',
-	location: 'Salle Kilimanjaro',
-};
+import {defaultTalkValues} from '../../src/conference/data/defaultValues';
 
 interface TalkTemplate {
 	component: React.FC<any>;
@@ -86,7 +65,7 @@ const Template: Record<string, TalkTemplate> = {
 };
 const Conference: React.FC<{conference: string}> = ({conference}) => {
 	const currentTemplate = Template[conference];
-	const [data, setData] = useState(sampleData);
+	const [data, setData] = useState(defaultTalkValues);
 
 	return (
 		<div>
@@ -121,10 +100,10 @@ const Conference: React.FC<{conference: string}> = ({conference}) => {
 					compositionHeight={currentTemplate.height}
 					fps={30}
 					component={currentTemplate.component}
-					inputProps={data || sampleData}
+					inputProps={data || defaultTalkValues}
 				/>
 				<JSONInput
-					placeholder={sampleData}
+					placeholder={defaultTalkValues}
 					theme="light_mitsuketa_tribute"
 					locale={locale}
 					colors={{
@@ -146,7 +125,7 @@ const Conference: React.FC<{conference: string}> = ({conference}) => {
 
 			<Code
 				composition={currentTemplate.compositionName}
-				params={data || sampleData}
+				params={data || defaultTalkValues}
 			/>
 		</div>
 	);

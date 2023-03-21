@@ -8,7 +8,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 	dropTop,
 }) => {
 	return (
-		<Sequence from={20} name="Picture">
+		<Sequence from={60} name="Picture">
 			<AbsoluteFill
 				style={{
 					width: '100%',
@@ -55,7 +55,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									color: 'white',
 									textShadow: `0px 0px 3px black`,
 								}}
-								delay={40}
+								delay={50}
 							/>
 						</div>
 					);

@@ -1,4 +1,4 @@
-import {Sequence} from 'remotion';
+import {Audio, interpolate, Sequence, staticFile} from 'remotion';
 import {Logo} from './Logo';
 import {RightTriangle} from './RightTriangle';
 import {LeftTriangle} from './LeftTriangle';
@@ -27,15 +27,20 @@ export const ReplayLyonJS: React.FC<LyonJSReplayType> = ({
 	date,
 	sponsor,
 }) => {
-	console.log(date);
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
+			<Audio
+				src={staticFile('sounds/tech-logo.mp3')}
+				volume={(f) =>
+					interpolate(f, [0, 260, 320], [1, 1, 0], {extrapolateRight: 'clamp'})
+				}
+			/>
 			<Logo />
 			<LogoSponsor sponsor={sponsor} />
 			<RightTriangle />
 			<LeftTriangle />
 			<BigSpeakers speakers={speakers} dropTop={220} />
-			<Sequence from={60}>
+			<Sequence from={165}>
 				<Title
 					title={title}
 					style={{
@@ -48,7 +53,7 @@ export const ReplayLyonJS: React.FC<LyonJSReplayType> = ({
 					}}
 				/>
 			</Sequence>
-			<Sequence from={40}>
+			<Sequence from={140}>
 				<Details date={date} />
 			</Sequence>
 		</AbsoluteFill>

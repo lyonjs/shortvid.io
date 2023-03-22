@@ -48,13 +48,6 @@ const Home = () => {
 						label="Event Logo (optional)"
 						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
 					/>
-					<a
-						className="text-black py-2 px-4 text-center text-xl font-bold bg-yellow-300 rounded-xl mt-4 hover:scale-105"
-						href="https://github.com/lyonjs/social-video-generator/actions/workflows/render-meetup.yml"
-						target="_blank"
-					>
-						Generate your video 🎬
-					</a>
 				</Form>
 			</div>
 

@@ -9,8 +9,6 @@ export const RightBanner: React.FC<{slideInValue: number}> = ({
 			style={{
 				...sideBannerRootStyle,
 				right: `${slideInValue}px`,
-				filter:
-					'drop-shadow(0px 15px 0px #003272) drop-shadow(0px -15px 0px #67AAFF)',
 			}}
 		>
 			<span

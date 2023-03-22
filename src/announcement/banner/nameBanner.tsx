@@ -19,12 +19,13 @@ export const NameBanner: React.FC<{name: string}> = ({name}) => {
 	return (
 		<span
 			style={{
+				zIndex: 2,
 				width: '100%',
 				position: 'absolute',
 				bottom: 0,
 				height: 130,
 				filter:
-					'drop-shadow(0px 15px 0px #003272) drop-shadow(0px -15px 0px #67AAFF)',
+					'drop-shadow(-15px 15px 2px #003272) drop-shadow(-15px -15px 2px #67AAFF)',
 			}}
 		>
 			<span

@@ -6,7 +6,7 @@ export const sideBannerRootStyle: CSSProperties = {
 	bottom: 0,
 	height: 130,
 	filter:
-		'drop-shadow(-15px 15px 0px #003272) drop-shadow(-15px -15px 0px #67AAFF)',
+		'drop-shadow(-15px 15px 2px #003272) drop-shadow(-15px -15px 2px #67AAFF)',
 };
 
 export const sideBannerStyle: CSSProperties = {

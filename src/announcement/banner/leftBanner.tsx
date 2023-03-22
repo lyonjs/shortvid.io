@@ -8,6 +8,7 @@ export const LeftBanner: React.FC<{slideInValue: number}> = ({
 		<span
 			style={{
 				...sideBannerRootStyle,
+				zIndex: 3,
 				left: `${slideInValue}px`,
 			}}
 		>

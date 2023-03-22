@@ -11,7 +11,7 @@ export const ExpertName: React.FC<{expertName: string}> = ({expertName}) => {
 	const slideIn = spring({
 		frame: frame - 60,
 		from: -150,
-		to: 0,
+		to: 30,
 		fps,
 		durationInFrames: 60,
 	});

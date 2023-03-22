@@ -59,13 +59,6 @@ const Sponsor = () => {
 						value={sponsorLocalisation}
 						label="Sponsor localisation"
 					/>
-					<a
-						className="text-black py-2 px-4 text-center text-xl font-bold bg-yellow-300 rounded-xl mt-4 hover:scale-105"
-						href="https://github.com/lyonjs/social-video-generator/actions/workflows/render-sponsor.yml"
-						target="_blank"
-					>
-						Generate your video 🎬
-					</a>
 				</Form>
 			</div>
 

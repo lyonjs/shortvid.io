@@ -1,3 +1,5 @@
+'use client';
+
 import {EventLogo} from '../EventLogo';
 
 export const Header: React.FC = () => {

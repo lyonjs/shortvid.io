@@ -1,10 +1,12 @@
-import {useInputChange} from '../src/components/hooks/onInputChange';
-import {Player} from '@remotion/player';
-import {Meetup as MeetupComponent} from '../src/meetup/Meetup';
-import {Code} from '../src/components/Code';
-import {Form, Input} from '../src/components/site/forms/input';
+'use client';
 
-const Home = () => {
+import {useInputChange} from '../../src/components/hooks/onInputChange';
+import {Player} from '@remotion/player';
+import {Meetup as MeetupComponent} from '../../src/meetup/Meetup';
+import {Code} from '../../src/components/Code';
+import {Form, Input} from '../../src/components/site/forms/input';
+
+const MeetupPage = () => {
 	const [title, setTitle] = useInputChange<string>('Example');
 	const [eventLogo, setEventLogo] = useInputChange<string>('');
 	const [date, setDate] = useInputChange<string>('28 septembre 2022');
@@ -56,4 +58,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default MeetupPage;

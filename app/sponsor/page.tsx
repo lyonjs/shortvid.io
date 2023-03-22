@@ -1,10 +1,12 @@
-import {Player} from '@remotion/player';
-import {Sponsor as SponsorComponent} from '../src/components';
-import {useInputChange} from '../src/components/hooks/onInputChange';
-import {Form, Input} from '../src/components/site/forms/input';
-import {Code} from '../src/components/Code';
+'use client';
 
-const Sponsor = () => {
+import {Player} from '@remotion/player';
+import {Sponsor as SponsorComponent} from '../../src/components';
+import {useInputChange} from '../../src/components/hooks/onInputChange';
+import {Form, Input} from '../../src/components/site/forms/input';
+import {Code} from '../../src/components/Code';
+
+const SponsorPage = () => {
 	const [companyName, setCompanyName] = useInputChange<string>('Evilcorp');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined
@@ -67,4 +69,4 @@ const Sponsor = () => {
 	);
 };
 
-export default Sponsor;
+export default SponsorPage;

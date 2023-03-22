@@ -1,6 +1,6 @@
 import {MouseEvent, useCallback} from 'react';
 import {TouraineTechProps} from '../conference/snowcamp/Snowcamp';
-import {ReplayProps} from '../../pages/replay';
+import {ReplayProps} from '../../app/replay/page';
 
 export const Code: React.FC<{
 	composition: string;

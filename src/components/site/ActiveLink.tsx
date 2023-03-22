@@ -1,6 +1,8 @@
+'use client';
+
 import {Children, cloneElement, FC, ReactElement, ReactNode} from 'react';
 import {LinkProps} from 'next/link';
-import {useRouter} from 'next/router';
+import {usePathname} from 'next/navigation';
 
 type ActiveLinkProps = LinkProps & {
 	children: ReactNode;
@@ -12,12 +14,12 @@ export const ActiveLink: FC<ActiveLinkProps> = ({
 	activeClassName = 'bg-yellow-300',
 	href,
 }) => {
-	const {asPath} = useRouter();
+	const pathname = usePathname();
 	const child = Children.only(children) as ReactElement;
 	const childClassName = child?.props?.className || '';
 
 	const className =
-		asPath === href
+		pathname === href
 			? `${childClassName} ${activeClassName}`.trim()
 			: childClassName;
 

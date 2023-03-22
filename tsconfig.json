@@ -1,21 +1,35 @@
 {
-	"compilerOptions": {
-		"target": "ES2018",
-		"module": "commonjs",
-		"jsx": "preserve",
-		"outDir": "./dist",
-		"strict": true,
-		"noEmit": true,
-		"lib": ["es2015"],
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
-		"allowJs": true,
-		"incremental": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"moduleResolution": "node"
-	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "jsx": "preserve",
+    "outDir": "./dist",
+    "strict": true,
+    "noEmit": true,
+    "lib": [
+      "es2015"
+    ],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

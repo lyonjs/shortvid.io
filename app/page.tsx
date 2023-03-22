@@ -1,3 +1,5 @@
+'use client';
+
 import {Player} from '@remotion/player';
 import {Meetup} from '../src/meetup/Meetup';
 import {Talk} from '../src/talk/Talk';

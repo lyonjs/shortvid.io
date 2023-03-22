@@ -21,7 +21,7 @@
 		"@vercel/analytics": "^0.1.11",
 		"date-fns": "^2.29.3",
 		"lottie-web": "5.10.2",
-		"next": "^13.1.6",
+		"next": "^13.2.4",
 		"node-fetch": "^3.3.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",

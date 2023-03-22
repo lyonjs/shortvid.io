@@ -1,0 +1,13 @@
+name: 🏷 PR size labeler
+
+on: [pull_request]
+
+jobs:
+  pr-labeler:
+    runs-on: ubuntu-latest
+    name: Label the PR size
+    steps:
+      - uses: BedrockStreaming/pr-size-labeler@v1.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          exclude_files: .lock

@@ -5,8 +5,8 @@ import {LeftTriangle} from './LeftTriangle';
 import {GreenScreen} from './GreenScreen';
 import {LayerTitle} from './LayerTitle';
 
-type Props = {title: string};
-export const LayerOneSpeaker: React.FC<Props> = ({title}) => {
+type Props = {title: string; sponsorLogoUrl: string};
+export const LayerOneSpeaker: React.FC<Props> = ({title, sponsorLogoUrl}) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<RightTriangle />
@@ -38,7 +38,7 @@ export const LayerOneSpeaker: React.FC<Props> = ({title}) => {
 				}}
 			/>
 			<Img
-				src="https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg"
+				src={sponsorLogoUrl}
 				style={{position: 'absolute', top: 10, right: 20, width: 300}}
 			/>
 		</AbsoluteFill>

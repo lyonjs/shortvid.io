@@ -2,11 +2,11 @@
 
 import React from 'react';
 import {Player} from '@remotion/player';
-import {Meetup} from '../src/meetup/Meetup';
-import {Talk} from '../src/talk/Talk';
-import {Sponsor} from '../src/sponsor/Sponsor';
-import {Event} from '../src/event/Event';
-import RootLayout from '../src/components/site/RootLayout';
+import {Meetup} from '../remotion/compositions/templates/meetup/Meetup';
+import {Talk} from '../remotion/compositions/templates/talk/Talk';
+import {Sponsor} from '../remotion/compositions/templates/sponsor/Sponsor';
+import {Event} from '../remotion/compositions/templates/event/Event';
+import RootLayout from '../src/app/RootLayout';
 
 interface Video {
 	id: string;

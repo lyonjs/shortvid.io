@@ -2,12 +2,12 @@
 
 import {ChangeEvent, useCallback, useState} from 'react';
 import {Player} from '@remotion/player';
-import {Code} from '../../../src/components/Code';
+import {Code} from '../../../src/app/Code';
 
 import locale from 'react-json-editor-ajrm/locale/en';
 import JSONInput from 'react-json-editor-ajrm/index';
-import {Speaker} from '../../../src/conference/snowcamp/Snowcamp';
-import {ReplayLyonJS} from '../../../src/conference/lyonJS/Replay';
+import {Speaker} from '../../../remotion/compositions/showcases/snowcamp/Snowcamp';
+import {ReplayLyonJS} from '../../../remotion/compositions/showcases/lyonJS/Replay';
 
 export interface ReplayProps {
 	title: string;

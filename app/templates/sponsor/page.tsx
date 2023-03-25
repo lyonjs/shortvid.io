@@ -1,10 +1,10 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {Sponsor as SponsorComponent} from '../../../src/components';
-import {useInputChange} from '../../../src/components/hooks/onInputChange';
-import {Form, Input} from '../../../src/components/site/forms/input';
-import {Code} from '../../../src/components/Code';
+import {useInputChange} from '../../../src/hooks/onInputChange';
+import {Form, Input} from '../../../src/app/forms/input';
+import {Code} from '../../../src/app/Code';
+import {Sponsor} from '../../../remotion/compositions/templates/sponsor/Sponsor';
 
 export default function SponsorPage() {
 	const [companyName, setCompanyName] = useInputChange<string>('Evilcorp');
@@ -36,7 +36,7 @@ export default function SponsorPage() {
 					compositionWidth={1200}
 					compositionHeight={1200}
 					fps={30}
-					component={SponsorComponent}
+					component={Sponsor}
 					inputProps={props}
 				/>
 

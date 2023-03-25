@@ -2,7 +2,7 @@
 
 import {Player} from '@remotion/player';
 import {useSearchParams} from 'next/navigation';
-import LayerByMode from '../../../../src/components/site/LayerByMode';
+import LayerByMode from '../../../../src/app/LayerByMode';
 import {LayerMode} from '../../../../src/types/layerMode.types';
 
 export default function LayerScreenMode({params}: {params: {mode: string}}) {

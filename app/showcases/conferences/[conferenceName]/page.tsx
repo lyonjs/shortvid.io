@@ -84,7 +84,7 @@ export default function ConferencePage({
 				<ul className="list-disc pl-8">
 					{Object.keys(Template).map((name) => (
 						<li key={name}>
-							<a href={`/templates/conferences/${name}`}>{name}</a>
+							<a href={`/showcases/conferences/${name}`}>{name}</a>
 						</li>
 					))}
 				</ul>

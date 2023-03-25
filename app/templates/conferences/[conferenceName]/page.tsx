@@ -1,17 +1,17 @@
 'use client';
 
-import {Snowcamp} from '../../../src/conference/snowcamp/Snowcamp';
-import {Devoxx2023} from '../../../src/conference/devoxx2023/Devoxx2023';
-import {MixitIntroTalk} from '../../../src/conference/mixit2023/MixitIntroTalk';
-import {TouraineTech2023} from '../../../src/conference/touraineTech2023/TouraineTech2023';
-import {VeryTechTrip} from '../../../src/conference/very-tech-trip/VeryTechTrip';
+import {Snowcamp} from '../../../../src/conference/snowcamp/Snowcamp';
+import {Devoxx2023} from '../../../../src/conference/devoxx2023/Devoxx2023';
+import {MixitIntroTalk} from '../../../../src/conference/mixit2023/MixitIntroTalk';
+import {TouraineTech2023} from '../../../../src/conference/touraineTech2023/TouraineTech2023';
+import {VeryTechTrip} from '../../../../src/conference/very-tech-trip/VeryTechTrip';
 import {Player} from '@remotion/player';
 import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
 import {useState} from 'react';
-import {defaultTalkValues} from '../../../src/conference/data/defaultValues';
-import {AlpesCraft} from '../../../src/conference/alpescraft/AlpesCraft';
-import {Code} from '../../../src/components/Code';
+import {defaultTalkValues} from '../../../../src/conference/data/defaultValues';
+import {AlpesCraft} from '../../../../src/conference/alpescraft/AlpesCraft';
+import {Code} from '../../../../src/components/Code';
 
 interface TalkTemplate {
 	component: React.FC<any>;
@@ -65,7 +65,11 @@ const Template: Record<string, TalkTemplate> = {
 		durationInFrames: 200,
 	},
 };
-const ConferencePage = ({params}: {params: {conferenceName: string}}) => {
+export default function ConferencePage({
+	params,
+}: {
+	params: {conferenceName: string};
+}) {
 	const conference = params.conferenceName;
 	const currentTemplate = Template[conference];
 	const [data, setData] = useState(defaultTalkValues);
@@ -80,7 +84,7 @@ const ConferencePage = ({params}: {params: {conferenceName: string}}) => {
 				<ul className="list-disc pl-8">
 					{Object.keys(Template).map((name) => (
 						<li key={name}>
-							<a href={`/conferences/${name}`}>{name}</a>
+							<a href={`/templates/conferences/${name}`}>{name}</a>
 						</li>
 					))}
 				</ul>
@@ -133,6 +137,4 @@ const ConferencePage = ({params}: {params: {conferenceName: string}}) => {
 			/>
 		</div>
 	);
-};
-
-export default ConferencePage;
+}

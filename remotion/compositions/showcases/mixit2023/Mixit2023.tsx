@@ -4,7 +4,7 @@ import {Logo} from './Logo';
 import {Title} from '../touraineTech2023/Title';
 import {Speakers} from './Speakers';
 import {Details} from './Details';
-import {Talk} from '../../../../src/types/conferences.types';
+import {Talk} from '../../../types/conferences.types';
 
 export const Mixit2023: React.FC<Talk> = ({
 	title,

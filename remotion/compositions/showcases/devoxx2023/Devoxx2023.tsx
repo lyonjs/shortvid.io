@@ -7,7 +7,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Talk} from '../../../../src/types/conferences.types';
+import {Talk} from '../../../types/conferences.types';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {Title} from './Title';

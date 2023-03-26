@@ -1,5 +1,5 @@
 import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../../src/hooks/useLottie';
+import {useLottie} from '../../hooks/useLottie';
 import {AbsoluteFill} from 'remotion';
 import {CSSProperties} from 'react';
 

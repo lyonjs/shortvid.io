@@ -1,6 +1,6 @@
 'use client';
 
-import {useInputChange} from '../../../src/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/onInputChange';
 import {Player} from '@remotion/player';
 import {Meetup as MeetupComponent} from '../../../remotion/compositions/templates/meetup/Meetup';
 import {Code} from '../../../src/app/Code';

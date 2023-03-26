@@ -1,7 +1,7 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {useInputChange} from '../../../src/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/onInputChange';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {Sponsor} from '../../../remotion/compositions/templates/sponsor/Sponsor';

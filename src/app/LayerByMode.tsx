@@ -1,5 +1,5 @@
 import React from 'react';
-import {LayerMode} from '../types/layerMode.types';
+import {LayerMode} from './types/layerMode.types';
 import {LayerTwoSpeaker} from '../../remotion/compositions/showcases/lyonJS/LayerTwoSpeaker';
 import {LayerFullScreen} from '../../remotion/compositions/showcases/lyonJS/LayerFullScreen';
 import {LayerOneSpeaker} from '../../remotion/compositions/showcases/lyonJS/LayerOneSpeaker';

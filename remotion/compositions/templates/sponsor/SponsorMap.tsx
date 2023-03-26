@@ -1,5 +1,5 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {useLottie} from '../../../../src/hooks/useLottie';
+import {useLottie} from '../../../hooks/useLottie';
 import {Lottie} from '@remotion/lottie';
 import {Title} from '../../../design/atoms/Title';
 

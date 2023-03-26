@@ -1,7 +1,7 @@
 import {AbsoluteFill} from 'remotion';
 import {TalkSpeakerPicture} from '../../templates/talk/TalkSpeakerPicture';
 import {SpeakerName} from './SpeakerName';
-import {Speaker} from '../../../../src/types/conferences.types';
+import {Speaker} from '../../../types/conferences.types';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	return (

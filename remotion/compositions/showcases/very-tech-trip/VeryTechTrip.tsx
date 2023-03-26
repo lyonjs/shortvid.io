@@ -8,7 +8,7 @@ import {Speakers} from './Speakers';
 import {Title} from './Title';
 import {Details} from './Details';
 import {Logo} from './Logo';
-import {Talk} from '../../../../src/types/conferences.types';
+import {Talk} from '../../../types/conferences.types';
 
 export const VeryTechTrip: React.FC<Talk> = ({title, speakers, time}) => {
 	const frame = useCurrentFrame();

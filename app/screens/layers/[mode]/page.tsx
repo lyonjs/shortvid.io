@@ -3,7 +3,7 @@
 import {Player} from '@remotion/player';
 import {useSearchParams} from 'next/navigation';
 import LayerByMode from '../../../../src/app/LayerByMode';
-import {LayerMode} from '../../../../src/types/layerMode.types';
+import {LayerMode} from '../../../../src/app/types/layerMode.types';
 
 export default function LayerScreenMode({params}: {params: {mode: string}}) {
 	const mode = params.mode as LayerMode;

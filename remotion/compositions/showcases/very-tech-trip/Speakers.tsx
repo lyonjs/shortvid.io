@@ -1,5 +1,5 @@
 import {Img, Sequence} from 'remotion';
-import {Speaker as SpeakerType} from '../../../../src/types/conferences.types';
+import {Speaker as SpeakerType} from '../../../types/conferences.types';
 import React from 'react';
 import {FadeIn} from './FadeIn';
 

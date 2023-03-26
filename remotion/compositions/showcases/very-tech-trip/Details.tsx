@@ -1,7 +1,7 @@
 import {spring} from 'remotion';
 import {useVideoConfig} from 'remotion';
 import {useCurrentFrame} from 'remotion';
-import {useLottie} from '../../../../src/hooks/useLottie';
+import {useLottie} from '../../../hooks/useLottie';
 import React, {CSSProperties} from 'react';
 import {Lottie} from '@remotion/lottie';
 

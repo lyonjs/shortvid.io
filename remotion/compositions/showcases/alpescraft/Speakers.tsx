@@ -1,6 +1,6 @@
 import React from 'react';
 import {TalkSpeakerPicture} from '../../templates/talk/TalkSpeakerPicture';
-import {Speaker} from '../../../../src/types/conferences.types';
+import {Speaker} from '../../../types/conferences.types';
 import {SpeakersName} from './SpeakersName';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {

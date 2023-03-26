@@ -1,5 +1,5 @@
 import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../../../src/hooks/useLottie';
+import {useLottie} from '../../../hooks/useLottie';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Type: React.FC<{type: string}> = ({type}) => {

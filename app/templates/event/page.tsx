@@ -1,10 +1,10 @@
 'use client';
 
-import {useInputChange} from '../../../src/components/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/onInputChange';
 import {Player} from '@remotion/player';
-import {Form, Input} from '../../../src/components/site/forms/input';
-import {Code} from '../../../src/components/Code';
-import {Event} from '../../../src/event/Event';
+import {Form, Input} from '../../../src/app/forms/input';
+import {Code} from '../../../src/app/Code';
+import {Event} from '../../../remotion/compositions/templates/event/Event';
 
 export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾');

@@ -1,10 +1,10 @@
 'use client';
 
-import {useInputChange} from '../../../src/components/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/onInputChange';
 import {Player} from '@remotion/player';
-import {Meetup as MeetupComponent} from '../../../src/meetup/Meetup';
-import {Code} from '../../../src/components/Code';
-import {Form, Input} from '../../../src/components/site/forms/input';
+import {Meetup as MeetupComponent} from '../../../remotion/compositions/templates/meetup/Meetup';
+import {Code} from '../../../src/app/Code';
+import {Form, Input} from '../../../src/app/forms/input';
 
 export default function MeetupPage() {
 	const [title, setTitle] = useInputChange<string>('Example');

@@ -6,9 +6,9 @@
 	"repository": {},
 	"license": "MIT",
 	"scripts": {
-		"start": "remotion preview ./src/index.tsx",
+		"start": "remotion preview remotion/index.tsx",
 		"upgrade": "remotion upgrade",
-		"test": "eslint ./src --ext ts,tsx,js,jsx && tsc",
+		"test": "eslint remotion --ext ts,tsx,js,jsx && tsc",
 		"build": "next build",
 		"dev": "next dev"
 	},

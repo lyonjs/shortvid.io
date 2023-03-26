@@ -1,10 +1,10 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {Talk as TalkComponent} from '../../../src/components';
-import {useInputChange} from '../../../src/components/hooks/onInputChange';
-import {Form, Input} from '../../../src/components/site/forms/input';
-import {Code} from '../../../src/components/Code';
+import {useInputChange} from '../../../src/app/hooks/onInputChange';
+import {Form, Input} from '../../../src/app/forms/input';
+import {Code} from '../../../src/app/Code';
+import {Talk} from '../../../remotion/compositions/templates/talk/Talk';
 
 export default function TalkPage() {
 	const [talkTitle, setTalkTitle] = useInputChange<string>('Example');
@@ -42,7 +42,7 @@ export default function TalkPage() {
 					compositionWidth={1200}
 					compositionHeight={1200}
 					fps={30}
-					component={TalkComponent}
+					component={Talk}
 					inputProps={props}
 				/>
 

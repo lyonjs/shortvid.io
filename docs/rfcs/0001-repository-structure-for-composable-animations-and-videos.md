@@ -11,7 +11,7 @@ We started with @CruuzAzul this project a few months ago first to generate the t
 For the sake of simplicity and speed, copy and paste may have been used excessively to duplicate behaviors and displays.
 
 Then the project evolved to allow to manage event templates other than LyonJS (conferences and partner meetups).
-We continued to stack _Compositions_ Remotion in the [Video.tsx](../../src/Video.tsx) file, thinking that we would change that later.
+We continued to stack _Compositions_ Remotion in the [Video.tsx](../../remotion/Video.tsx) file, thinking that we would change that later.
 
 ## Motivation 💪🏼
 

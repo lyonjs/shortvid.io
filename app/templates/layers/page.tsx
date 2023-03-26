@@ -1,15 +1,15 @@
 'use client';
 
 import {useCallback, useState} from 'react';
-import {LayerMode} from '../../../src/types/layerMode.types';
+import {LayerMode} from '../../../src/app/types/layerMode.types';
 import {Player} from '@remotion/player';
-import {Form, Input} from '../../../src/components/site/forms/input';
+import {Form, Input} from '../../../src/app/forms/input';
 import {
 	useInputChange,
 	useSelectChange,
-} from '../../../src/components/hooks/onInputChange';
-import LayerByMode from '../../../src/components/site/LayerByMode';
-import {SelectInput} from '../../../src/components/site/forms/selectInput';
+} from '../../../src/app/hooks/onInputChange';
+import LayerByMode from '../../../src/app/LayerByMode';
+import {SelectInput} from '../../../src/app/forms/selectInput';
 
 export default function LayersPage() {
 	const [copied, setCopied] = useState(false);

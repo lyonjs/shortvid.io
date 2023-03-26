@@ -1,8 +1,12 @@
+'use client';
+
+import React from 'react';
 import {Player} from '@remotion/player';
 import {Meetup} from '../src/meetup/Meetup';
 import {Talk} from '../src/talk/Talk';
 import {Sponsor} from '../src/sponsor/Sponsor';
 import {Event} from '../src/event/Event';
+import RootLayout from '../src/components/site/RootLayout';
 
 interface Video {
 	id: string;
@@ -70,9 +74,9 @@ const PARTNERS = [
 	},
 ];
 
-const Home = () => {
+export default function Home() {
 	return (
-		<>
+		<RootLayout>
 			<h2 className="text-2xl pb-4 font-bold">
 				What is the goal of this projet ?
 			</h2>
@@ -170,8 +174,6 @@ const Home = () => {
 					);
 				})}
 			</section>
-		</>
+		</RootLayout>
 	);
-};
-
-export default Home;
+}

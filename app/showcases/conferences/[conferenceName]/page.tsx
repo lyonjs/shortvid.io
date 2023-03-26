@@ -1,15 +1,17 @@
-import {Snowcamp} from '../../src/conference/snowcamp/Snowcamp';
-import {Devoxx2023} from '../../src/conference/devoxx2023/Devoxx2023';
-import {MixitIntroTalk} from '../../src/conference/mixit2023/MixitIntroTalk';
-import {TouraineTech2023} from '../../src/conference/touraineTech2023/TouraineTech2023';
-import {VeryTechTrip} from '../../src/conference/very-tech-trip/VeryTechTrip';
+'use client';
+
+import {Snowcamp} from '../../../../src/conference/snowcamp/Snowcamp';
+import {Devoxx2023} from '../../../../src/conference/devoxx2023/Devoxx2023';
+import {MixitIntroTalk} from '../../../../src/conference/mixit2023/MixitIntroTalk';
+import {TouraineTech2023} from '../../../../src/conference/touraineTech2023/TouraineTech2023';
+import {VeryTechTrip} from '../../../../src/conference/very-tech-trip/VeryTechTrip';
 import {Player} from '@remotion/player';
 import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
 import {useState} from 'react';
-import {Code} from '../../src/components/Code';
-import {AlpesCraft} from '../../src/conference/alpescraft/AlpesCraft';
-import {defaultTalkValues} from '../../src/conference/data/defaultValues';
+import {defaultTalkValues} from '../../../../src/conference/data/defaultValues';
+import {AlpesCraft} from '../../../../src/conference/alpescraft/AlpesCraft';
+import {Code} from '../../../../src/components/Code';
 
 interface TalkTemplate {
 	component: React.FC<any>;
@@ -63,7 +65,12 @@ const Template: Record<string, TalkTemplate> = {
 		durationInFrames: 200,
 	},
 };
-const Conference: React.FC<{conference: string}> = ({conference}) => {
+export default function ConferencePage({
+	params,
+}: {
+	params: {conferenceName: string};
+}) {
+	const conference = params.conferenceName;
 	const currentTemplate = Template[conference];
 	const [data, setData] = useState(defaultTalkValues);
 
@@ -77,7 +84,7 @@ const Conference: React.FC<{conference: string}> = ({conference}) => {
 				<ul className="list-disc pl-8">
 					{Object.keys(Template).map((name) => (
 						<li key={name}>
-							<a href={`/conferences/${name}`}>{name}</a>
+							<a href={`/showcases/conferences/${name}`}>{name}</a>
 						</li>
 					))}
 				</ul>
@@ -118,6 +125,7 @@ const Conference: React.FC<{conference: string}> = ({conference}) => {
 					height="300px"
 					width="800px"
 					onChange={(event: {jsObject: any}) => {
+						console.log(event.jsObject);
 						setData(event.jsObject);
 					}}
 				/>
@@ -129,27 +137,4 @@ const Conference: React.FC<{conference: string}> = ({conference}) => {
 			/>
 		</div>
 	);
-};
-
-export async function getStaticPaths() {
-	return {
-		paths: Object.keys(Template).map((key) => ({
-			params: {conferenceName: key},
-		})),
-		fallback: false,
-	};
 }
-
-export async function getStaticProps({
-	params,
-}: {
-	params: {conferenceName: string};
-}) {
-	return {
-		props: {
-			conference: params.conferenceName,
-		},
-	};
-}
-
-export default Conference;

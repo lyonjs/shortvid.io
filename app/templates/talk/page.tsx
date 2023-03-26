@@ -1,10 +1,12 @@
-import {Player} from '@remotion/player';
-import {Talk as TalkComponent} from '../src/components';
-import {useInputChange} from '../src/components/hooks/onInputChange';
-import {Form, Input} from '../src/components/site/forms/input';
-import {Code} from '../src/components/Code';
+'use client';
 
-const Talk = () => {
+import {Player} from '@remotion/player';
+import {Talk as TalkComponent} from '../../../src/components';
+import {useInputChange} from '../../../src/components/hooks/onInputChange';
+import {Form, Input} from '../../../src/components/site/forms/input';
+import {Code} from '../../../src/components/Code';
+
+export default function TalkPage() {
 	const [talkTitle, setTalkTitle] = useInputChange<string>('Example');
 	const [speakerPicture, setSpeakerPicture] = useInputChange<
 		string | undefined
@@ -82,6 +84,4 @@ const Talk = () => {
 			<Code composition="Talk" params={props} />
 		</>
 	);
-};
-
-export default Talk;
+}

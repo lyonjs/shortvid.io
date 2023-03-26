@@ -1,11 +1,13 @@
+'use client';
+
 import {ChangeEvent, useCallback, useState} from 'react';
 import {Player} from '@remotion/player';
-import {Code} from '../src/components/Code';
+import {Code} from '../../../src/components/Code';
 
 import locale from 'react-json-editor-ajrm/locale/en';
 import JSONInput from 'react-json-editor-ajrm/index';
-import {Speaker} from '../src/conference/snowcamp/Snowcamp';
-import {ReplayLyonJS} from '../src/conference/lyonJS/Replay';
+import {Speaker} from '../../../src/conference/snowcamp/Snowcamp';
+import {ReplayLyonJS} from '../../../src/conference/lyonJS/Replay';
 
 export interface ReplayProps {
 	title: string;
@@ -43,7 +45,7 @@ const Template: Record<string, ReplayTemplate> = {
 	},
 };
 
-const Replay = () => {
+export default function ReplayPage() {
 	const [data, setData] = useState(sampleData);
 	const [currentTemplate, setTemplate] = useState(Object.values(Template)[0]);
 
@@ -106,6 +108,4 @@ const Replay = () => {
 			/>
 		</>
 	);
-};
-
-export default Replay;
+}

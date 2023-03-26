@@ -1,4 +1,3 @@
-import React from 'react';
 import {ActiveLink} from './ActiveLink';
 
 export const NavBar: React.FC = () => {
@@ -10,27 +9,27 @@ export const NavBar: React.FC = () => {
 						<span>🏠 Home</span>
 					</li>
 				</ActiveLink>
-				<ActiveLink href="/meetup">
+				<ActiveLink href="/templates/meetup">
 					<li className="text-black text-center mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 						<span>🗓 Meetup</span>
 					</li>
 				</ActiveLink>
-				<ActiveLink href="/talk">
+				<ActiveLink href="/templates/talk">
 					<li className="text-black text-center mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 						<span>🎤 Talk</span>
 					</li>
 				</ActiveLink>
-				<ActiveLink href="/sponsor">
+				<ActiveLink href="/templates/sponsor">
 					<li className="text-black text-center mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 						<span>🍕 Sponsor</span>
 					</li>
 				</ActiveLink>
-				<ActiveLink href="/event">
+				<ActiveLink href="/templates/event">
 					<li className="text-black text-center mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 						<span>🎉 Event</span>
 					</li>
 				</ActiveLink>
-				<ActiveLink href="/conferences/Mixit">
+				<ActiveLink href="/showcases/conferences/Mixit">
 					<li className="text-black text-center mt-2 md:mt-0 md:ml-5 py-2 px-4 bg-white rounded-lg cursor-pointer font-bold shadow-yellow-300 hover:scale-105">
 						<span>🫱🏼‍🫲🏽 Conference</span>
 					</li>

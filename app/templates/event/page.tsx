@@ -1,10 +1,12 @@
-import {useInputChange} from '../src/components/hooks/onInputChange';
-import {Player} from '@remotion/player';
-import {Form, Input} from '../src/components/site/forms/input';
-import {Code} from '../src/components/Code';
-import {Event} from '../src/event/Event';
+'use client';
 
-const Home = () => {
+import {useInputChange} from '../../../src/components/hooks/onInputChange';
+import {Player} from '@remotion/player';
+import {Form, Input} from '../../../src/components/site/forms/input';
+import {Code} from '../../../src/components/Code';
+import {Event} from '../../../src/event/Event';
+
+export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾');
 	const [lottieAsset, setLottieAsset] = useInputChange<string | undefined>(
 		undefined
@@ -60,6 +62,4 @@ const Home = () => {
 			<Code composition="Event" params={props} />
 		</>
 	);
-};
-
-export default Home;
+}

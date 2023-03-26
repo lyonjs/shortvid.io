@@ -1,15 +1,17 @@
-import React, {useCallback, useState} from 'react';
-import {LayerMode} from '../../src/types/layerMode.types';
+'use client';
+
+import {useCallback, useState} from 'react';
+import {LayerMode} from '../../../src/types/layerMode.types';
 import {Player} from '@remotion/player';
-import {Form, Input} from '../../src/components/site/forms/input';
+import {Form, Input} from '../../../src/components/site/forms/input';
 import {
 	useInputChange,
 	useSelectChange,
-} from '../../src/components/hooks/onInputChange';
-import LayerByMode from '../../src/components/site/LayerByMode';
-import {SelectInput} from '../../src/components/site/forms/selectInput';
+} from '../../../src/components/hooks/onInputChange';
+import LayerByMode from '../../../src/components/site/LayerByMode';
+import {SelectInput} from '../../../src/components/site/forms/selectInput';
 
-const Layers = () => {
+export default function LayersPage() {
 	const [copied, setCopied] = useState(false);
 	const [mode, setMode] = useSelectChange<LayerMode>('one');
 	const [title, setTitle] = useInputChange<string>('LyonJS');
@@ -21,7 +23,7 @@ const Layers = () => {
 		title,
 		sponsor,
 	};
-	const layerUrl = `/layers/${mode}/?title=${title}&sponsor=${encodeURIComponent(
+	const layerUrl = `/screens/layers/${mode}/?title=${title}&sponsor=${encodeURIComponent(
 		sponsor
 	)}`;
 
@@ -76,8 +78,4 @@ const Layers = () => {
 			</Form>
 		</div>
 	);
-};
-
-Layers.noLayout = false;
-
-export default Layers;
+}

@@ -16,6 +16,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 			{speakers.map((speaker) => {
 				return (
 					<div
+						key={speaker.name}
 						style={{
 							display: 'flex',
 							flexDirection: 'column',

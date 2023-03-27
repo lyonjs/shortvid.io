@@ -1,5 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title as AtomTitle} from "../../../design/atoms/Title";
+import {Title as AtomTitle} from '../../../design/atoms/Title';
 
 export const Title: React.FC<{
 	title: string;

@@ -1,5 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title as AtomTitle} from "../../../design/atoms/Title";
+import {Title as AtomTitle} from '../../../design/atoms/Title';
 
 export const Title: React.FC<{
 	title: string;
@@ -33,7 +33,7 @@ export const Title: React.FC<{
 				textShadow: 'px 2px 2px #e95900',
 				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 				// @ts-ignore
-				"-webkit-line-clamp": '3',
+				'-webkit-line-clamp': '3',
 				...style,
 			}}
 		>

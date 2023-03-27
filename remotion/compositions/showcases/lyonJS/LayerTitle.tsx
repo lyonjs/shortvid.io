@@ -1,6 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
-import {Title as AtomTitle} from "../../../design/atoms/Title";
+import {Title as AtomTitle} from '../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();
 

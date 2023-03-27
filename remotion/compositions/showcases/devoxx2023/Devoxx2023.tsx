@@ -69,10 +69,7 @@ export const Devoxx2023: React.FC<Talk> = ({
 				<Speakers speakers={speakers} />
 			</Sequence>
 			<Sequence from={25}>
-				<Title
-					title={title}
-					delay={ANIMATION_DELAY}
-				/>
+				<Title title={title} delay={ANIMATION_DELAY} />
 			</Sequence>
 			<Sequence from={40}>
 				<Details date={date} time={time} location={location} />

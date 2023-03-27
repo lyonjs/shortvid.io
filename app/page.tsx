@@ -95,14 +95,14 @@ export default function Home() {
 				If you are a meetup or conference organizer and you are interested in
 				this tool and you would like to have some help,{' '}
 				<a href="https://github.com/lyonjs/social-video-generator/discussions/categories/conference-meetup-communication">
-					don't hesitate to open a discussion on our Github and we will see what
-					can be done.
+					don&lsquo;t hesitate to open a discussion on our Github and we will
+					see what can be done.
 				</a>
 			</p>
 
 			<p className="mt-2">
-				We know it's a pain to generate all the communication materials for an
-				event, so this project allows us to generate everything from
+				We know it&lsquo;s a pain to generate all the communication materials
+				for an event, so this project allows us to generate everything from
 				configuration JSON.
 			</p>
 

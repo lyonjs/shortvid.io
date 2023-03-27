@@ -57,7 +57,7 @@ export const Speakers: React.FC<{speakers: SpeakerType[]}> = ({speakers}) => {
 	return (
 		<div style={{position: 'relative', top: 280 - 40 * speakers.length}}>
 			{speakers.map((speaker, index) => (
-				<Sequence from={index * 20} name={speaker.name}>
+				<Sequence from={index * 20} name={speaker.name} key={speaker.name}>
 					<FadeIn>
 						<Speaker key={speaker.name} speaker={speaker} index={index} />
 					</FadeIn>

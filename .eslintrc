@@ -1,9 +1,7 @@
 {
-	"extends": "@remotion",
+	"extends": ["next/core-web-vitals"],
+	"plugins": ["@remotion"],
 	"globals": {
 		"process": true
-	},
-	"rules": {
-		"no-unused-vars": ["error", {"vars": "all", "args": "none"}]
 	}
 }

@@ -77,6 +77,7 @@ export const Details: React.FC<{
 
 				return (
 					<div
+						key={item.icon}
 						style={{
 							opacity,
 							position: 'relative',

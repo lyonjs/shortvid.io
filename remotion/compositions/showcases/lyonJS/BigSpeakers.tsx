@@ -23,6 +23,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 
 					return (
 						<div
+							key={speaker.name}
 							style={{
 								display: 'flex',
 								flexDirection: 'column',

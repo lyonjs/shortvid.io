@@ -1,4 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Title as AtomTitle} from "../../../design/atoms/Title";
 
 export const Title: React.FC<{
 	title: string;
@@ -21,9 +22,8 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<span
+		<AtomTitle
 			style={{
-				fontWeight: 800,
 				fontSize: '32px',
 				color: 'white',
 				position: 'absolute',
@@ -31,10 +31,13 @@ export const Title: React.FC<{
 				textAlign: 'center',
 				filter: `blur(${titleDeblur}px)`,
 				textShadow: 'px 2px 2px #e95900',
+				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+				// @ts-ignore
+				"-webkit-line-clamp": '3',
 				...style,
 			}}
 		>
 			{title}
-		</span>
+		</AtomTitle>
 	);
 };

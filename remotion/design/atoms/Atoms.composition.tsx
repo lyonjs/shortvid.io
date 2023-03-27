@@ -40,7 +40,7 @@ export const AtomsComposition: React.FC = () => {
 				id="Title"
 				fps={30}
 				durationInFrames={120}
-				defaultProps={{children: 'Hello'}}
+				defaultProps={{children: 'Remotion : le 7ème art à porté de composants web et d\'API 🎬 avec bcp de text en plus pour pouvoir voir si les points se rajoute a la fin parceque les titres trop long, c\'est NON ! et vraiment non parce que pour l\'instant des fois ça passe mais moi je veux pas OK ?'}}
 			/>
 		</Folder>
 	);

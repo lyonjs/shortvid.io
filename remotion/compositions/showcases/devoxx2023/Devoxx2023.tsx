@@ -72,15 +72,6 @@ export const Devoxx2023: React.FC<Talk> = ({
 				<Title
 					title={title}
 					delay={ANIMATION_DELAY}
-					style={{
-						zIndex: 1,
-						position: 'absolute',
-						bottom: 130,
-						maxWidth: '90%',
-						left: 0,
-						right: 0,
-						margin: '0 auto',
-					}}
 				/>
 			</Sequence>
 			<Sequence from={40}>

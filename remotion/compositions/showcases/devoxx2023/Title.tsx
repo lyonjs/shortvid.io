@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	Img,
 	interpolate,
@@ -7,15 +8,14 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
-import React from 'react';
+import {Title as AtomTitle} from '../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();
 
 export const Title: React.FC<{
 	title: string;
-	style?: React.CSSProperties;
 	delay?: number;
-}> = ({title, style, delay = 0}) => {
+}> = ({title, delay = 0}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -32,19 +32,24 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<span
+		<AtomTitle
 			style={{
 				fontFamily,
 				color: '#fff',
 				fontSize: 40,
-				fontWeight: 'bold',
-				padding: 10,
+				padding: '0 10px',
 				textAlign: 'center',
 				textShadow: `0 0 5px #000`,
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
 				lineHeight: 1.4,
-				...style,
+				zIndex: 1,
+				position: 'absolute',
+				bottom: 130,
+				maxWidth: '90%',
+				left: 0,
+				right: 0,
+				margin: '0 auto',
 			}}
 		>
 			{title}
@@ -60,6 +65,6 @@ export const Title: React.FC<{
 					left: '50%',
 				}}
 			/>
-		</span>
+		</AtomTitle>
 	);
 };

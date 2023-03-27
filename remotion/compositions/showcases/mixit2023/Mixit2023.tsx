@@ -1,10 +1,10 @@
 import {AbsoluteFill} from 'remotion';
 import {LyonSkyline} from './LyonSkyline';
 import {Logo} from './Logo';
-import {Title} from '../touraineTech2023/Title';
 import {Speakers} from './Speakers';
 import {Details} from './Details';
 import {Talk} from '../../../types/conferences.types';
+import {Title} from "./Title";
 
 export const Mixit2023: React.FC<Talk> = ({
 	title,
@@ -26,7 +26,6 @@ export const Mixit2023: React.FC<Talk> = ({
 			<Title
 				title={title}
 				style={{
-					maxWidth: '90%',
 					left: 0,
 					right: 0,
 					margin: '0 auto',

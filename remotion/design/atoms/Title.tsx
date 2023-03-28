@@ -1,26 +1,27 @@
-import {CSSProperties} from 'react';
+import React from "react";
+
 export const Title: React.FC<{
-	style?: CSSProperties;
+	style?: React.CSSProperties;
 	children: React.ReactNode;
 }> = ({style, children}) => (
 	<h1
-		style={{
-			fontFamily: 'Helvetica',
-			fontSize: 50,
-			fontWeight: 'bold',
-			margin: 0,
-			width: '100%',
-			height: 'max-content',
-			display: '-webkit-box',
-			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-			// @ts-ignore
-			'-webkit-box-orient': 'vertical',
-			'-webkit-line-clamp': '2',
-			textOverflow: 'ellipsis',
-			overflow: 'hidden',
-			padding: '0 20px',
-			...style,
-		}}
+		style={
+			{
+				'-webkit-box-orient': 'vertical',
+				'-webkit-line-clamp': '2',
+				display: '-webkit-box',
+				fontFamily: 'Helvetica',
+				fontSize: 50,
+				fontWeight: 'bold',
+				height: 'max-content',
+				margin: 0,
+				overflow: 'hidden',
+				padding: '0 20px',
+				textOverflow: 'ellipsis',
+				width: '100%',
+				...style,
+			} as React.CSSProperties
+		}
 	>
 		{children}
 	</h1>

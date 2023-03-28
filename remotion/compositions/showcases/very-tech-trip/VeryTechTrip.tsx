@@ -46,12 +46,6 @@ export const VeryTechTrip: React.FC<Talk> = ({title, speakers, time}) => {
 			<Sequence from={50}>
 				<Title
 					title={title}
-					style={{
-						bottom: '130px',
-						width: '100%',
-						padding: '0 25px',
-						textAlign: 'center',
-					}}
 				/>
 			</Sequence>
 			<Sequence from={70}>

@@ -6,7 +6,7 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {Speaker} from './TouraineTech2023';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
@@ -56,11 +56,13 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									gap: 80,
 								}}
 							>
-								<Title
+								<TalkTitle
 									title={speaker.name}
 									style={{
 										position: 'relative',
+										left: 'unset',
 										bottom: '-20%',
+										transform: 'translate(0)',
 										width: 250,
 										height: 100,
 										fontSize: '30px',

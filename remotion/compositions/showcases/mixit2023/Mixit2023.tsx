@@ -4,7 +4,7 @@ import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {Details} from './Details';
 import {Talk} from '../../../types/conferences.types';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 
 export const Mixit2023: React.FC<Talk> = ({
 	title,
@@ -23,7 +23,7 @@ export const Mixit2023: React.FC<Talk> = ({
 		>
 			<Logo />
 			<Speakers speakers={speakers} />
-			<Title
+			<TalkTitle
 				title={title}
 				style={{
 					left: 0,

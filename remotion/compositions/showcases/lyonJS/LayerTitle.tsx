@@ -1,6 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
-import {Title as AtomTitle} from '../../../design/atoms/Title';
+import {Title} from '../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();
 
@@ -11,7 +11,7 @@ type Props = {
 
 export const LayerTitle: React.FC<Props> = ({title, style}) => {
 	return (
-		<AtomTitle
+		<Title
 			style={{
 				fontFamily,
 				fontWeight: 900,
@@ -26,10 +26,11 @@ export const LayerTitle: React.FC<Props> = ({title, style}) => {
 				alignItems: 'center',
 				justifyContent: 'center',
 				lineHeight: '52px',
+				height: 'auto',
 				...style,
 			}}
 		>
 			{title}
-		</AtomTitle>
+		</Title>
 	);
 };

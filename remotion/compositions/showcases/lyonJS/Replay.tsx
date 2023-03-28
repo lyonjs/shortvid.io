@@ -2,7 +2,7 @@ import {Audio, interpolate, Sequence, staticFile} from 'remotion';
 import {Logo} from './Logo';
 import {RightTriangle} from './RightTriangle';
 import {LeftTriangle} from './LeftTriangle';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {AbsoluteFill} from 'remotion';
 import {BigSpeakers} from './BigSpeakers';
 import React from 'react';
@@ -41,7 +41,7 @@ export const ReplayLyonJS: React.FC<LyonJSReplayType> = ({
 			<LeftTriangle />
 			<BigSpeakers speakers={speakers} dropTop={220} />
 			<Sequence from={165}>
-				<Title
+				<TalkTitle
 					title={title}
 					style={{
 						fontSize: '48px',

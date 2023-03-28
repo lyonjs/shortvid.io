@@ -1,8 +1,8 @@
 import React from 'react';
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
-import {Title as AtomTitle} from '../../../design/atoms/Title';
+import {Title} from '../../../design/atoms/Title';
 
-export const Title: React.FC<{
+export const TalkTitle: React.FC<{
 	title: string;
 }> = ({title}) => {
 	const frame = useCurrentFrame();
@@ -15,7 +15,7 @@ export const Title: React.FC<{
 	const titleOpacity = interpolate(frame, [5, 15], [0, 1]);
 
 	return (
-		<AtomTitle
+		<Title
 			style={{
 				fontSize: '2.6rem',
 				color: 'white',
@@ -28,6 +28,6 @@ export const Title: React.FC<{
 			}}
 		>
 			{title}
-		</AtomTitle>
+		</Title>
 	);
 };

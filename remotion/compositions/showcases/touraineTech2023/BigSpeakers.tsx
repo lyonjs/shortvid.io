@@ -6,8 +6,8 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {Speaker} from './TouraineTech2023';
-import {Title} from './Title';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
+import {TalkTitle} from './TalkTitle';
 
 export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 	speakers,
@@ -60,18 +60,16 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									gap: 40,
 								}}
 							>
-								<Title
+								<TalkTitle
 									title={speaker.name}
 									style={{
-										bottom: 'auto',
+										bottom: dropTop,
 										fontSize: '38px',
 										width: 350,
 										height: 200,
 										fontWeight: 700,
 										color: '#222333',
 										textShadow: `1px 1px 1px white`,
-										position: 'relative',
-										transform: 'translateY(200px)',
 									}}
 									delay={40}
 								/>

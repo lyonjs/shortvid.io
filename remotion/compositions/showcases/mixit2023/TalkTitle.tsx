@@ -1,7 +1,7 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title as AtomTitle} from '../../../design/atoms/Title';
+import {Title} from '../../../design/atoms/Title';
 
-export const Title: React.FC<{
+export const TalkTitle: React.FC<{
 	title: string;
 	style?: React.CSSProperties;
 	delay?: number;
@@ -22,7 +22,7 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<AtomTitle
+		<Title
 			style={{
 				fontFamily: 'Lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
 				fontWeight: 500,
@@ -38,6 +38,6 @@ export const Title: React.FC<{
 			}}
 		>
 			{title}
-		</AtomTitle>
+		</Title>
 	);
 };

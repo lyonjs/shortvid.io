@@ -10,7 +10,7 @@ import {
 import {Talk} from '../../../types/conferences.types';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import React from 'react';
 import {Details} from './Details';
 import Balloons from './Balloons';
@@ -69,7 +69,7 @@ export const Devoxx2023: React.FC<Talk> = ({
 				<Speakers speakers={speakers} />
 			</Sequence>
 			<Sequence from={25}>
-				<Title title={title} delay={ANIMATION_DELAY} />
+				<TalkTitle title={title} delay={ANIMATION_DELAY} />
 			</Sequence>
 			<Sequence from={40}>
 				<Details date={date} time={time} location={location} />

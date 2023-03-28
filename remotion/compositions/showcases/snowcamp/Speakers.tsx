@@ -1,5 +1,6 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {Speaker} from './Snowcamp';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
@@ -48,15 +49,18 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								gap: 40,
 							}}
 						>
-							<Title
+							<TalkTitle
 								title={speaker.name}
 								style={{
 									position: 'relative',
+									left: 'unset',
 									bottom: '-20%',
+									transform: 'translate(0)',
 									width: 250,
 									height: 100,
 									fontSize: '30px',
 									fontWeight: 700,
+									color: 'white',
 								}}
 								delay={40}
 							/>

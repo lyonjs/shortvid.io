@@ -1,7 +1,7 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title as AtomTitle} from '../../../design/atoms/Title';
+import {Title} from '../../../design/atoms/Title';
 
-export const Title: React.FC<{
+export const TalkTitle: React.FC<{
 	title: string;
 	delay?: number;
 }> = ({title}) => {
@@ -21,7 +21,7 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<AtomTitle
+		<Title
 			style={
 				{
 					'-webkit-line-clamp': '3',
@@ -39,6 +39,6 @@ export const Title: React.FC<{
 			}
 		>
 			{title}
-		</AtomTitle>
+		</Title>
 	);
 };

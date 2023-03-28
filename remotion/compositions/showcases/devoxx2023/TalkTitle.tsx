@@ -8,11 +8,11 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
-import {Title as AtomTitle} from '../../../design/atoms/Title';
+import {Title} from '../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();
 
-export const Title: React.FC<{
+export const TalkTitle: React.FC<{
 	title: string;
 	delay?: number;
 }> = ({title, delay = 0}) => {
@@ -32,7 +32,7 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<AtomTitle
+		<Title
 			style={{
 				fontFamily,
 				color: '#fff',
@@ -65,6 +65,6 @@ export const Title: React.FC<{
 					left: '50%',
 				}}
 			/>
-		</AtomTitle>
+		</Title>
 	);
 };

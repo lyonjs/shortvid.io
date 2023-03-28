@@ -1,11 +1,7 @@
-import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {loadFont} from '@remotion/google-fonts/Aldrich';
-import {Title as AtomTitle} from '../../../design/atoms/Title';
+import {Title} from '../../../design/atoms/Title';
 
-const {fontFamily} = loadFont();
-
-export const Title: React.FC<{
+export const TalkTitle: React.FC<{
 	title: string;
 	style?: React.CSSProperties;
 	delay?: number;
@@ -26,9 +22,9 @@ export const Title: React.FC<{
 	});
 
 	return (
-		<AtomTitle
+		<Title
 			style={{
-				fontFamily,
+				fontFamily: 'Noto Sans,sans-serif',
 				fontSize: '38px',
 				color: 'white',
 				position: 'absolute',
@@ -36,11 +32,11 @@ export const Title: React.FC<{
 				textAlign: 'center',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
-				textShadow: `0px 0px 3px black`,
+				textShadow: '`1px 1px 3px white`',
 				...style,
 			}}
 		>
 			{title}
-		</AtomTitle>
+		</Title>
 	);
 };

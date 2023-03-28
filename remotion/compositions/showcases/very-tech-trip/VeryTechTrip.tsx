@@ -44,9 +44,7 @@ export const VeryTechTrip: React.FC<Talk> = ({title, speakers, time}) => {
 				<Speakers speakers={speakers} />
 			</Sequence>
 			<Sequence from={50}>
-				<Title
-					title={title}
-				/>
+				<Title title={title} />
 			</Sequence>
 			<Sequence from={70}>
 				<Img

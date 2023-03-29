@@ -11,7 +11,8 @@
 		"lint": "eslint remotion --ext ts,tsx,js,jsx",
 		"test": "jest",
 		"build": "next build",
-		"dev": "next dev"
+		"dev": "next dev",
+		"test:format": "pnpm lint && tsc"
 	},
 	"dependencies": {
 		"@remotion/cli": "3.3.79",

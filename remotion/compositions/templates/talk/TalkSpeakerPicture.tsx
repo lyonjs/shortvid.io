@@ -1,4 +1,4 @@
-import {Speaker} from '../../../design/atoms/Speaker';
+import {AvatarPicture} from '../../../design/atoms/AvatarPicture';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {CSSProperties} from 'react';
 
@@ -23,7 +23,7 @@ export const TalkSpeakerPicture: React.FC<{
 	});
 
 	return (
-		<Speaker
+		<AvatarPicture
 			style={{
 				position: 'absolute',
 				top: pictureDrop,

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
-import {Speaker} from './Speaker';
+import {AvatarPicture} from './AvatarPicture';
 import {EventLogo} from './EventLogo';
 import {ImageBackground} from './ImageBackground';
 import {Title} from './Title';
@@ -9,7 +9,7 @@ export const AtomsComposition: React.FC = () => {
 	return (
 		<Folder name="Atoms">
 			<Composition
-				component={Speaker}
+				component={AvatarPicture}
 				width={1200}
 				height={1200}
 				id="Speaker"

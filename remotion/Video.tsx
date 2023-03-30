@@ -8,10 +8,8 @@ import {AtomsComposition} from './design/atoms/Atoms.composition';
 export const RemotionVideo: React.FC = () => {
 	return (
 		<>
-			<Folder name="Compositions">
-				<TemplatesComposition />
-				<ShowcasesComposition />
-			</Folder>
+			<TemplatesComposition />
+			<ShowcasesComposition />
 			<Folder name="Design">
 				<AtomsComposition />
 			</Folder>

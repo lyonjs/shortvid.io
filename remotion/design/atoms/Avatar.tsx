@@ -1,7 +1,7 @@
 import {CSSProperties} from 'react';
 import {Img} from 'remotion';
 
-export const AvatarPicture: React.FC<{
+export const Avatar: React.FC<{
 	style?: CSSProperties;
 	src: string;
 	size?: number;

@@ -12,7 +12,7 @@ export const AtomsComposition: React.FC = () => {
 				component={Avatar}
 				width={1200}
 				height={1200}
-				id="Speaker"
+				id="Avatar"
 				fps={30}
 				durationInFrames={120}
 				defaultProps={{

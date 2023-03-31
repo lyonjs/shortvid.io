@@ -12,7 +12,6 @@ export const AvatarWithCaption: React.FC<{
 	return (
 		<div
 			style={{
-				position: 'relative',
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',

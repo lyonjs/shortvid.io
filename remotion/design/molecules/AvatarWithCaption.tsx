@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {Avatar} from '../atoms/Avatar';
 import {Title} from '../atoms/Title';
 
 export const AvatarWithCaption: React.FC<{
 	avatarPictureUrl: string;
-	caption: string;
+	caption: ReactNode;
 	avatarStyle?: React.CSSProperties;
 	captionStyle?: React.CSSProperties;
 	style?: React.CSSProperties;

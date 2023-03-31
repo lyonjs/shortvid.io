@@ -2,54 +2,57 @@ import {Img, Sequence} from 'remotion';
 import {Speaker as SpeakerType} from '../../../types/conferences.types';
 import React from 'react';
 import {FadeIn} from './FadeIn';
+import {Title} from '../touraineTech2023/Title';
+import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 	speaker: {name, picture},
 	index,
 }) => {
 	return (
-		<div
-			style={{
-				display: 'flex',
-				alignItems: 'start',
-				gap: '64px',
-				fontSize: '32px',
-				width: '700px',
-				padding: '0 42px',
-				position: 'absolute',
-				top: index * 100 - 10,
-				left: index * 90,
-			}}
-		>
-			<Img
-				src={picture}
-				style={{
-					display: 'block',
+		<>
+			<AvatarWithCaption
+				avatarPictureUrl={picture}
+				avatarStyle={{
 					borderRadius: '30px',
 					height: 150,
 					width: 150,
 					border: '4px solid white',
 					boxShadow: '4px 5px 0 #e95900',
 				}}
-			/>
-			<div
-				style={{
-					flexGrow: 1,
+				caption={
+					<>
+						{name}
+						<span
+							style={{
+								color: '#e95900',
+								paddingLeft: 5,
+							}}
+						>
+							.
+						</span>
+					</>
+				}
+				captionStyle={{
 					fontWeight: 600,
 					textShadow: '2px 2px 2px #e95900',
+					fontSize: '32px',
+					flexGrow: 1,
+					width: '50%',
+					marginTop: 0,
 				}}
-			>
-				{name}
-				<span
-					style={{
-						color: '#e95900',
-						paddingLeft: 5,
-					}}
-				>
-					.
-				</span>
-			</div>
-		</div>
+				style={{
+					gap: 64,
+					flexDirection: 'row',
+					alignItems: 'flex-start',
+					padding: '0 42px',
+					position: 'absolute',
+					top: index * 100 - 10,
+					left: index * 90,
+					width: 700,
+				}}
+			/>
+		</>
 	);
 };
 

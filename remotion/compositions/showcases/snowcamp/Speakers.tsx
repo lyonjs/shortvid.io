@@ -1,9 +1,19 @@
-import {AbsoluteFill} from 'remotion';
-import {TalkSpeakerPicture} from '../../templates/talk/TalkSpeakerPicture';
+import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Title} from './Title';
 import {Speaker} from './Snowcamp';
+import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+
+	const pictureDrop = spring({
+		frame: frame,
+		fps,
+		from: -600,
+		to: 100,
+		durationInFrames: 30,
+	});
 	return (
 		<AbsoluteFill
 			style={{
@@ -25,34 +35,34 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							flexDirection: 'column',
 						}}
 					>
-						<TalkSpeakerPicture
-							key={speaker.name}
-							style={{
-								display: 'block',
+						<AvatarWithCaption
+							avatarPictureUrl={speaker.picture}
+							avatarStyle={{
 								position: 'relative',
-								left: 'unset',
-								transform: 'translate(0)',
 								width: 250,
 								height: 250,
 								border: 'none',
 								boxShadow: `0 0 0 10px white, 0 0 0 20px ${shadowColor}`,
+								top: pictureDrop,
 							}}
-							speakerPicture={speaker.picture}
-						/>
-						<Title
-							title={speaker.name}
+							caption={
+								<Title
+									title={speaker.name}
+									style={{
+										position: 'relative',
+										bottom: '-20%',
+										width: 250,
+										height: 100,
+										fontSize: '30px',
+										fontWeight: 700,
+										color: 'white',
+									}}
+									delay={40}
+								/>
+							}
 							style={{
-								position: 'relative',
-								left: 'unset',
-								bottom: '-20%',
-								transform: 'translate(0)',
-								width: 250,
-								height: 100,
-								fontSize: '30px',
-								fontWeight: 700,
-								color: 'white',
+								gap: 40,
 							}}
-							delay={40}
 						/>
 					</div>
 				);

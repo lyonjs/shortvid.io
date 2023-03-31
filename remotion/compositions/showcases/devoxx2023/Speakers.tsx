@@ -1,9 +1,20 @@
-import {AbsoluteFill} from 'remotion';
-import {TalkSpeakerPicture} from '../../templates/talk/TalkSpeakerPicture';
+import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {SpeakerName} from './SpeakerName';
 import {Speaker} from '../../../types/conferences.types';
+import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+
+	const pictureDrop = spring({
+		frame,
+		fps,
+		from: -600,
+		to: 30,
+		durationInFrames: 30,
+	});
+
 	return (
 		<AbsoluteFill
 			style={{
@@ -22,17 +33,9 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							alignItems: 'center',
 						}}
 					>
-						<SpeakerName
-							title={speaker.name}
-							style={{
-								position: 'relative',
-								left: 'unset',
-								bottom: '-5%',
-							}}
-							top={60}
-						/>
-						<TalkSpeakerPicture
-							style={{
+						<AvatarWithCaption
+							avatarPictureUrl={speaker.picture}
+							avatarStyle={{
 								display: 'block',
 								position: 'relative',
 								left: 'unset',
@@ -42,9 +45,25 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								border: 'none',
 								boxShadow: `0 0 0 10px white, 0 0 0 13px #f88224`,
 								borderRadius: '50% 20% / 10% 40%',
+								top: pictureDrop,
 							}}
-							speakerPicture={speaker.picture}
-							top={90}
+							caption={
+								<SpeakerName
+									title={speaker.name}
+									style={{
+										position: 'relative',
+										left: 'unset',
+										bottom: '-5%',
+									}}
+									top={30}
+								/>
+							}
+							captionStyle={{
+								fontSize: 30,
+							}}
+							style={{
+								flexDirection: 'column-reverse',
+							}}
 						/>
 					</div>
 				);

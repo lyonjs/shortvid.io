@@ -11,6 +11,7 @@ import {EventLogo} from '../../../design/atoms/EventLogo';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Title} from '../../../design/atoms/Title';
 import React from 'react';
+import {TalkSpeaker} from './TalkSpeaker';
 
 export const Talk: React.FC<{
 	eventLogo?: string;
@@ -30,17 +31,7 @@ export const Talk: React.FC<{
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const pictureAnimationDelay = 20;
 	const titlesAnimationDelay = 30;
-
-	const pictureDrop = spring({
-		frame: frame - pictureAnimationDelay,
-		fps,
-		from: -600,
-		to: 100,
-		durationInFrames: 30,
-	});
-
 	const titleOpacity = spring({
 		frame: frame - titlesAnimationDelay,
 		fps,
@@ -57,18 +48,6 @@ export const Talk: React.FC<{
 		}
 	);
 
-	const titleStyle = {
-		width: '100%',
-		color: '#efdb50',
-		position: 'absolute',
-		fontSize: 70,
-		top: '55%',
-		opacity: titleOpacity,
-		filter: `blur(${titleDeblur}px)`,
-		textAlign: 'center',
-		textShadow: '2px 2px 0px black',
-	} as React.CSSProperties;
-
 	return (
 		<AbsoluteFill
 			style={{
@@ -79,25 +58,25 @@ export const Talk: React.FC<{
 				<ImageBackground animated animationDuration={30} src={backgroundImg} />
 			</Sequence>
 			<AbsoluteFill>
-				<Sequence from={pictureAnimationDelay} name="Speaker">
-					{speakerPicture ? (
-						<AvatarWithCaption
-							avatarPictureUrl={speakerPicture}
-							caption={speakersNames}
-							avatarStyle={{
-								position: 'absolute',
-								left: '50%',
-								transform: 'translate(-50%, 0)',
-								top: pictureDrop,
-							}}
-							captionStyle={titleStyle}
-						/>
-					) : (
-						<Title style={titleStyle}>{speakersNames}</Title>
-					)}
+				<Sequence from={20} name="Speaker">
+					<TalkSpeaker
+						speakerPicture={speakerPicture}
+						speakersNames={speakersNames}
+						SpeakerNameStyle={{
+							width: '100%',
+							color: '#efdb50',
+							position: 'absolute',
+							fontSize: 70,
+							top: '55%',
+							opacity: titleOpacity,
+							filter: `blur(${titleDeblur}px)`,
+							textAlign: 'center',
+							textShadow: '2px 2px 0px black',
+						}}
+					/>
 				</Sequence>
 
-				<Sequence from={30} name="Title">
+				<Sequence from={titlesAnimationDelay} name="Title">
 					<Title
 						style={{
 							width: '100%',

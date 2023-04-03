@@ -1,28 +1,24 @@
 import React from 'react';
+import {Text} from './Text';
 
 export const Title: React.FC<{
 	style?: React.CSSProperties;
 	children: React.ReactNode;
 }> = ({style, children}) => (
-	<h1
+	<Text
 		style={
 			{
 				'-webkit-box-orient': 'vertical',
 				'-webkit-line-clamp': '2',
 				display: '-webkit-box',
-				fontFamily: 'Helvetica',
-				fontSize: 50,
+				fontSize: '3.2rem',
 				fontWeight: 'bold',
-				height: 'max-content',
-				margin: 0,
 				overflow: 'hidden',
-				padding: '0 20px',
 				textOverflow: 'ellipsis',
-				width: '100%',
 				...style,
 			} as React.CSSProperties
 		}
 	>
 		{children}
-	</h1>
+	</Text>
 );

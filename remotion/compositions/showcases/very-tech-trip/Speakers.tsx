@@ -1,8 +1,7 @@
-import {Img, Sequence} from 'remotion';
+import {Sequence} from 'remotion';
 import {Speaker as SpeakerType} from '../../../types/conferences.types';
 import React from 'react';
 import {FadeIn} from './FadeIn';
-import {Title} from '../touraineTech2023/Title';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({

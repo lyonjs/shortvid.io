@@ -51,7 +51,6 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 							<AvatarWithCaption
 								avatarPictureUrl={speaker.picture}
 								avatarStyle={{
-									position: 'relative',
 									width: 350,
 									height: 350,
 									border: 'none',

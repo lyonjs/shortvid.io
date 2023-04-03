@@ -8,7 +8,6 @@ import {
 } from 'remotion';
 import {ImageBackground} from '../../../design/atoms/ImageBackground';
 import {EventLogo} from '../../../design/atoms/EventLogo';
-import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Title} from '../../../design/atoms/Title';
 import React from 'react';
 import {TalkSpeaker} from './TalkSpeaker';

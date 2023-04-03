@@ -50,10 +50,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 						<AvatarWithCaption
 							avatarPictureUrl={speaker.picture}
 							avatarStyle={{
-								display: 'block',
-								position: 'relative',
-								left: 'unset',
-								transform: 'translate(0)',
 								width: 200,
 								height: 200,
 								border: 'none',

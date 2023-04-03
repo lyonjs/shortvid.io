@@ -23,6 +23,7 @@ export const AvatarWithCaption: React.FC<{
 		>
 			<Avatar
 				style={{
+					position: 'relative',
 					...avatarStyle,
 				}}
 				src={avatarPictureUrl}

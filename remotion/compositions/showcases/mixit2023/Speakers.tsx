@@ -47,7 +47,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							<AvatarWithCaption
 								avatarPictureUrl={speaker.picture}
 								avatarStyle={{
-									position: 'relative',
 									width: 250,
 									height: 250,
 									border: 'none',

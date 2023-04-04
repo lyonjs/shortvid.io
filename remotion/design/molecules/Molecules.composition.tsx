@@ -1,7 +1,8 @@
 import React from 'react';
-import {Composition, Folder} from 'remotion';
+import {Composition, Folder, staticFile} from 'remotion';
 import {AvatarWithCaption} from './AvatarWithCaption';
 import {IconWithCaption} from './IconWithCaption';
+import {Details} from './Details';
 
 export const MoleculesComposition: React.FC = () => {
 	return (
@@ -31,6 +32,19 @@ export const MoleculesComposition: React.FC = () => {
 						color: 'black',
 						padding: 20,
 					},
+				}}
+			/>
+			<Composition
+				component={Details}
+				width={1200}
+				height={1200}
+				id="Details"
+				fps={30}
+				durationInFrames={150}
+				defaultProps={{
+					date: '19 Décembre 2023',
+					time: '17h30',
+					location: 'Salle 1',
 				}}
 			/>
 		</Folder>

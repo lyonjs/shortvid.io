@@ -2,8 +2,8 @@ import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
 import {Avatar} from './Avatar';
 import {EventLogo} from './EventLogo';
-import {ImageBackground} from './ImageBackground';
 import {Title} from './Title';
+import {BackgroundFiller} from './BackgroundFiller';
 import {Text} from './Text';
 
 export const AtomsComposition: React.FC = () => {
@@ -26,13 +26,22 @@ export const AtomsComposition: React.FC = () => {
 				durationInFrames={120}
 			/>
 			<Composition
-				component={ImageBackground}
+				component={BackgroundFiller}
 				width={1200}
 				height={1200}
 				id="ImageBackground"
 				fps={30}
 				durationInFrames={120}
-				defaultProps={{animated: true}}
+				defaultProps={{imageUrl: staticFile('/defaultBackgroundImage.jpeg')}}
+			/>
+			<Composition
+				component={BackgroundFiller}
+				width={1200}
+				height={1200}
+				id="LottieBackground"
+				fps={30}
+				durationInFrames={120}
+				defaultProps={{lottieAssetLink: 'lf20_dwGMPRJ7zu'}}
 			/>
 			<Composition
 				component={Text}

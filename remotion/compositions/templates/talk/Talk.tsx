@@ -3,13 +3,14 @@ import {
 	interpolate,
 	Sequence,
 	spring,
+	staticFile,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {ImageBackground} from '../../../design/atoms/ImageBackground';
 import {EventLogo} from '../../../design/atoms/EventLogo';
-import {Title} from '../../../design/atoms/Title';
+import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 import React from 'react';
+import {Title} from '../../../design/atoms/Title';
 import {TalkSpeaker} from './TalkSpeaker';
 
 export const Talk: React.FC<{
@@ -25,10 +26,27 @@ export const Talk: React.FC<{
 	talkTitle,
 	speakerPicture,
 	titleSize = '80',
-	backgroundImg,
+	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
 }) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
+	const ANIMATION_DURATION = 30;
+	const ANIMATION_DELAY = ANIMATION_DURATION / 2;
+
+	const blur = spring({
+		frame: frame - ANIMATION_DELAY,
+		fps,
+		from: 0,
+		to: 5,
+		durationInFrames: ANIMATION_DURATION,
+	});
+	const greyscale = spring({
+		frame: frame - ANIMATION_DELAY,
+		fps,
+		from: 0,
+		to: 5,
+		durationInFrames: ANIMATION_DURATION,
+	});
 
 	const titlesAnimationDelay = 30;
 	const titleOpacity = spring({
@@ -54,7 +72,10 @@ export const Talk: React.FC<{
 			}}
 		>
 			<Sequence name="Background">
-				<ImageBackground animated animationDuration={30} src={backgroundImg} />
+				<BackgroundFiller
+					imageUrl={backgroundImg}
+					style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
+				/>
 			</Sequence>
 			<AbsoluteFill>
 				<Sequence from={20} name="Speaker">

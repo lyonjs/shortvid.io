@@ -1,11 +1,18 @@
 import React from 'react';
-import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+import {
+	AbsoluteFill,
+	Sequence,
+	spring,
+	staticFile,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
-import {ImageBackground} from '../../../design/atoms/ImageBackground';
 import {Mountains} from './Mountains';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
+import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
 export interface Speaker {
 	picture: string;
@@ -27,6 +34,26 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 	location,
 	speakers,
 }) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+	const ANIMATION_DURATION = 30;
+	const ANIMATION_DELAY = ANIMATION_DURATION / 2;
+
+	const blur = spring({
+		frame: frame - ANIMATION_DELAY,
+		fps,
+		from: 0,
+		to: 5,
+		durationInFrames: ANIMATION_DURATION,
+	});
+	const greyscale = spring({
+		frame: frame - ANIMATION_DELAY,
+		fps,
+		from: 0,
+		to: 5,
+		durationInFrames: ANIMATION_DURATION,
+	});
+
 	return (
 		<AbsoluteFill
 			style={{
@@ -36,11 +63,11 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 			}}
 		>
 			<Sequence name="Background">
-				<ImageBackground
-					animated
-					src={staticFile(
+				<BackgroundFiller
+					imageUrl={staticFile(
 						'/images/conferences/alpescraft/alpescraft-background.webp'
 					)}
+					style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
 				/>
 			</Sequence>
 			<Sequence name="Mountains-decorations" from={20}>

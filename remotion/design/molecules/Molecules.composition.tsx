@@ -13,7 +13,6 @@ export const MoleculesComposition: React.FC = () => {
 				fps={30}
 				durationInFrames={120}
 				defaultProps={{
-					avatarPictureUrl: staticFile('/lyonjs-squared.png'),
 					caption: 'Association Lyon.Js',
 				}}
 			/>

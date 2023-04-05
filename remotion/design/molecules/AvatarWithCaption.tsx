@@ -3,7 +3,7 @@ import {Avatar} from '../atoms/Avatar';
 import {Title} from '../atoms/Title';
 
 export const AvatarWithCaption: React.FC<{
-	avatarPictureUrl: string;
+	avatarPictureUrl?: string;
 	caption: ReactNode;
 	avatarStyle?: React.CSSProperties;
 	captionStyle?: React.CSSProperties;

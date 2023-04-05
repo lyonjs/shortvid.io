@@ -6,7 +6,7 @@ labels: ''
 assignees: ''
 ---
 
-<!--- Provide a general summary of the feature in the TalkTitle above -->
+<!--- Provide a general summary of the feature in the Title above -->
 
 # Feature Request 👨🏼‍💻
 

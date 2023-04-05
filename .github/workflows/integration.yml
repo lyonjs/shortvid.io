@@ -49,7 +49,7 @@ jobs:
               companyName: "Foo"
           - name: "Talk"
             props:
-              title: "Example of a TalkTitle"
+              title: "Example of a Title"
               speakersNames: "John Doe"
           - name: "Meetup"
             props:

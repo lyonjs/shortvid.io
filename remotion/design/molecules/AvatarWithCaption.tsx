@@ -31,6 +31,7 @@ export const AvatarWithCaption: React.FC<{
 			<Title
 				style={{
 					fontSize: '4.5rem',
+					color: 'white',
 					...captionStyle,
 				}}
 			>

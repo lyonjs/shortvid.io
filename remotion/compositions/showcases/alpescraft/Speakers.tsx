@@ -60,11 +60,8 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							caption={<SpeakersName name={speaker.name} />}
 							captionStyle={{
 								position: 'relative',
-								color: 'white',
 								marginTop: 0,
 								fontSize: 30,
-								fontWeight: 'bold',
-								textAlign: 'center',
 								textShadow: `0 0 20px #00000099`,
 								top: nameAppear,
 								opacity: nameOpacity,

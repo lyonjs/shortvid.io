@@ -14,8 +14,7 @@ export const SpeakerName: React.FC<{
 	title: string;
 	style?: React.CSSProperties;
 	delay?: number;
-	top?: number;
-}> = ({title, style, delay = 0, top = 100}) => {
+}> = ({title, style, delay = 0}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -23,7 +22,7 @@ export const SpeakerName: React.FC<{
 		frame: frame - delay,
 		fps,
 		from: -600,
-		to: top,
+		to: 30,
 		durationInFrames: 30,
 	});
 

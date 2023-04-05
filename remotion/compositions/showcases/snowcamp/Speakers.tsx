@@ -54,7 +54,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 										height: 100,
 										fontSize: '30px',
 										fontWeight: 700,
-										color: 'white',
 									}}
 									delay={40}
 								/>

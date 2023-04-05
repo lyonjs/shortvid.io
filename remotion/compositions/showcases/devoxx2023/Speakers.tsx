@@ -51,7 +51,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 										left: 'unset',
 										bottom: '-5%',
 									}}
-									top={30}
 								/>
 							}
 							captionStyle={{

@@ -66,7 +66,6 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 											fontSize: '45px',
 											width: 350,
 											height: 200,
-											color: 'white',
 											textShadow: `0px 0px 3px black`,
 											left: '50%',
 											transform: 'translateX(-50%)',

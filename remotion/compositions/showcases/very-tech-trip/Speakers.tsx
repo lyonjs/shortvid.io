@@ -19,19 +19,6 @@ const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 					border: '4px solid white',
 					boxShadow: '4px 5px 0 #e95900',
 				}}
-				caption={
-					<>
-						{name}
-						<span
-							style={{
-								color: '#e95900',
-								paddingLeft: 5,
-							}}
-						>
-							.
-						</span>
-					</>
-				}
 				captionStyle={{
 					fontWeight: 600,
 					textShadow: '2px 2px 2px #e95900',
@@ -50,7 +37,17 @@ const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 					left: index * 90,
 					width: 700,
 				}}
-			/>
+			>
+				{name}
+				<span
+					style={{
+						color: '#e95900',
+						paddingLeft: 5,
+					}}
+				>
+					.
+				</span>
+			</AvatarWithCaption>
 		</>
 	);
 };

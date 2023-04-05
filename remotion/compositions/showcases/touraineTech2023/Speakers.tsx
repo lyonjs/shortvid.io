@@ -52,26 +52,25 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									boxShadow: `0 0 0 10px white, 0 0 0 20px ${shadowColor}`,
 									top: pictureDrop,
 								}}
-								caption={
-									<Title
-										title={speaker.name}
-										style={{
-											position: 'relative',
-											bottom: '-20%',
-											width: 250,
-											height: 100,
-											fontSize: '30px',
-											fontWeight: 700,
-											color: '#222333',
-											textShadow: `1px 1px 1px white`,
-										}}
-										delay={40}
-									/>
-								}
 								style={{
 									gap: 80,
 								}}
-							/>
+							>
+								<Title
+									title={speaker.name}
+									style={{
+										position: 'relative',
+										bottom: '-20%',
+										width: 250,
+										height: 100,
+										fontSize: '30px',
+										fontWeight: 700,
+										color: '#222333',
+										textShadow: `1px 1px 1px white`,
+									}}
+									delay={40}
+								/>
+							</AvatarWithCaption>
 						</div>
 					);
 				})}

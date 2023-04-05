@@ -58,22 +58,21 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									borderRadius: '50% 20% / 10% 40%',
 									top: pictureDrop,
 								}}
-								caption={
-									<Title
-										title={speaker.name}
-										style={{
-											bottom: dropTop,
-											fontSize: '45px',
-											width: 350,
-											height: 200,
-											textShadow: `0px 0px 3px black`,
-											left: '50%',
-											transform: 'translateX(-50%)',
-										}}
-										delay={50}
-									/>
-								}
-							/>
+							>
+								<Title
+									title={speaker.name}
+									style={{
+										bottom: dropTop,
+										fontSize: '45px',
+										width: 350,
+										height: 200,
+										textShadow: `0px 0px 3px black`,
+										left: '50%',
+										transform: 'translateX(-50%)',
+									}}
+									delay={50}
+								/>
+							</AvatarWithCaption>
 						</div>
 					);
 				})}

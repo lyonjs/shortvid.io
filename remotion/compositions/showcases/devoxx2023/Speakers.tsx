@@ -43,23 +43,22 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								borderRadius: '50% 20% / 10% 40%',
 								top: pictureDrop,
 							}}
-							caption={
-								<SpeakerName
-									title={speaker.name}
-									style={{
-										position: 'relative',
-										left: 'unset',
-										bottom: '-5%',
-									}}
-								/>
-							}
 							captionStyle={{
 								fontSize: 30,
 							}}
 							style={{
 								flexDirection: 'column-reverse',
 							}}
-						/>
+						>
+							<SpeakerName
+								title={speaker.name}
+								style={{
+									position: 'relative',
+									left: 'unset',
+									bottom: '-5%',
+								}}
+							/>
+						</AvatarWithCaption>
 					</div>
 				);
 			})}

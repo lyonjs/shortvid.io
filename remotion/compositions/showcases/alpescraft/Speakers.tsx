@@ -57,7 +57,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								borderRadius: '50% 20% / 10% 40%',
 								top: pictureDrop,
 							}}
-							caption={<SpeakersName name={speaker.name} />}
 							captionStyle={{
 								position: 'relative',
 								marginTop: 0,
@@ -66,7 +65,9 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								top: nameAppear,
 								opacity: nameOpacity,
 							}}
-						/>
+						>
+							<SpeakersName name={speaker.name} />
+						</AvatarWithCaption>
 					</div>
 				);
 			})}

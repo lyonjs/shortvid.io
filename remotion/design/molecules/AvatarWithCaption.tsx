@@ -3,12 +3,20 @@ import {Avatar} from '../atoms/Avatar';
 import {Title} from '../atoms/Title';
 
 export const AvatarWithCaption: React.FC<{
+	children?: ReactNode;
 	avatarPictureUrl?: string;
-	caption: ReactNode;
+	caption?: ReactNode;
 	avatarStyle?: React.CSSProperties;
 	captionStyle?: React.CSSProperties;
 	style?: React.CSSProperties;
-}> = ({avatarPictureUrl, caption, avatarStyle, captionStyle, style}) => {
+}> = ({
+	children,
+	avatarPictureUrl,
+	caption,
+	avatarStyle,
+	captionStyle,
+	style,
+}) => {
 	return (
 		<div
 			style={{
@@ -35,7 +43,8 @@ export const AvatarWithCaption: React.FC<{
 					...captionStyle,
 				}}
 			>
-				{caption}
+				{children}
+				{!children && caption}
 			</Title>
 		</div>
 	);

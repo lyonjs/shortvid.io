@@ -7,5 +7,5 @@ it('Loads and display the atom "Title"', () => {
 	const title = screen.getByRole('heading');
 
 	expect(title.textContent).toEqual('Title test');
-	expect(title.getAttribute('style')).toContain('color: red');
+	expect(title.firstElementChild.getAttribute('style')).toContain('color: red');
 });

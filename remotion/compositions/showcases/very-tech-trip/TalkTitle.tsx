@@ -22,21 +22,19 @@ export const TalkTitle: React.FC<{
 
 	return (
 		<Title
-			style={
-				{
-					'-webkit-line-clamp': '3',
-					bottom: '130px',
-					color: 'white',
-					filter: `blur(${titleDeblur}px)`,
-					fontSize: '32px',
-					opacity: titleOpacity,
-					padding: '0 25px',
-					position: 'absolute',
-					textAlign: 'center',
-					textShadow: 'px 2px 2px #e95900',
-					width: '100%',
-				} as React.CSSProperties
-			}
+			style={{
+				WebkitLineClamp: '3',
+				bottom: '130px',
+				color: 'white',
+				filter: `blur(${titleDeblur}px)`,
+				fontSize: '32px',
+				opacity: titleOpacity,
+				padding: '0 25px',
+				position: 'absolute',
+				textAlign: 'center',
+				textShadow: 'px 2px 2px #e95900',
+				width: '100%',
+			}}
 		>
 			{title}
 		</Title>

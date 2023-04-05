@@ -5,7 +5,7 @@ export const Text: React.FC<{
 	style?: React.CSSProperties;
 }> = ({children, style}) => {
 	return (
-		<p
+		<span
 			style={{
 				fontFamily: 'Helvetica',
 				height: 'max-content',
@@ -17,6 +17,6 @@ export const Text: React.FC<{
 			}}
 		>
 			{children}
-		</p>
+		</span>
 	);
 };

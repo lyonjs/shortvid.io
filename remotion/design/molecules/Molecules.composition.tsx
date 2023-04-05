@@ -2,7 +2,7 @@ import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
 import {AvatarWithCaption} from './AvatarWithCaption';
 
-export const MoleculessComposition: React.FC = () => {
+export const MoleculesComposition: React.FC = () => {
 	return (
 		<Folder name="Molecules">
 			<Composition

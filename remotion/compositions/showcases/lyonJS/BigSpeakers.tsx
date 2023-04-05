@@ -1,14 +1,32 @@
-import {AbsoluteFill, Sequence} from 'remotion';
-import {TalkSpeakerPicture} from '../../templates/talk/TalkSpeakerPicture';
+import {
+	AbsoluteFill,
+	Sequence,
+	spring,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 import {Title} from './Title';
 import {Speaker} from './Replay';
+import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 	speakers,
 	dropTop,
 }) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+
+	const animationDelay = 60;
+	const pictureDrop = spring({
+		frame: frame - animationDelay,
+		fps,
+		from: -600,
+		to: dropTop,
+		durationInFrames: 30,
+	});
+
 	return (
-		<Sequence from={60} name="Picture">
+		<Sequence from={animationDelay} name="Picture">
 			<AbsoluteFill
 				style={{
 					width: '100%',
@@ -27,37 +45,34 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 							style={{
 								display: 'flex',
 								flexDirection: 'column',
+								position: 'relative',
 							}}
 						>
-							<TalkSpeakerPicture
-								key={speaker.name}
-								style={{
-									display: 'block',
-									position: 'relative',
-									left: 'unset',
-									transform: 'translate(0)',
+							<AvatarWithCaption
+								avatarPictureUrl={speaker.picture}
+								avatarStyle={{
 									width: 350,
 									height: 350,
 									border: 'none',
 									boxShadow: `0 0 0 10px white, 0 0 0 20px ${shadowColor}`,
 									borderRadius: '50% 20% / 10% 40%',
+									top: pictureDrop,
 								}}
-								top={dropTop}
-								speakerPicture={speaker.picture}
-							/>
-							<Title
-								title={speaker.name}
-								style={{
-									bottom: dropTop,
-									fontSize: '45px',
-									width: 350,
-									height: 200,
-									fontWeight: 700,
-									color: 'white',
-									textShadow: `0px 0px 3px black`,
-								}}
-								delay={50}
-							/>
+							>
+								<Title
+									title={speaker.name}
+									style={{
+										bottom: dropTop,
+										fontSize: '45px',
+										width: 350,
+										height: 200,
+										textShadow: `0px 0px 3px black`,
+										left: '50%',
+										transform: 'translateX(-50%)',
+									}}
+									delay={50}
+								/>
+							</AvatarWithCaption>
 						</div>
 					);
 				})}

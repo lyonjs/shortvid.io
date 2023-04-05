@@ -1,14 +1,31 @@
-import {AbsoluteFill, Sequence} from 'remotion';
-import {TalkSpeakerPicture} from '../../templates/talk/TalkSpeakerPicture';
+import {
+	AbsoluteFill,
+	Sequence,
+	spring,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 import {Speaker} from './TouraineTech2023';
 import {Title} from './Title';
+import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 	speakers,
 	dropTop,
 }) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+
+	const animationDelay = 20;
+	const pictureDrop = spring({
+		frame: frame - animationDelay,
+		fps,
+		from: -600,
+		to: dropTop,
+		durationInFrames: 30,
+	});
 	return (
-		<Sequence from={20} name="Picture">
+		<Sequence from={animationDelay} name="Picture">
 			<AbsoluteFill
 				style={{
 					width: '100%',
@@ -29,34 +46,36 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 								flexDirection: 'column',
 							}}
 						>
-							<TalkSpeakerPicture
-								key={speaker.name}
-								style={{
-									display: 'block',
+							<AvatarWithCaption
+								avatarPictureUrl={speaker.picture}
+								avatarStyle={{
 									position: 'relative',
-									left: 'unset',
-									transform: 'translate(0)',
 									width: 350,
 									height: 350,
 									border: 'none',
 									boxShadow: `0 0 0 10px white, 0 0 0 20px ${shadowColor}`,
+									top: pictureDrop,
 								}}
-								top={dropTop}
-								speakerPicture={speaker.picture}
-							/>
-							<Title
-								title={speaker.name}
 								style={{
-									bottom: dropTop,
-									fontSize: '38px',
-									width: 350,
-									height: 200,
-									fontWeight: 700,
-									color: '#222333',
-									textShadow: `1px 1px 1px white`,
+									gap: 40,
 								}}
-								delay={40}
-							/>
+							>
+								<Title
+									title={speaker.name}
+									style={{
+										bottom: 'auto',
+										fontSize: '38px',
+										width: 350,
+										height: 200,
+										fontWeight: 700,
+										color: '#222333',
+										textShadow: `1px 1px 1px white`,
+										position: 'relative',
+										transform: 'translateY(200px)',
+									}}
+									delay={40}
+								/>
+							</AvatarWithCaption>
 						</div>
 					);
 				})}

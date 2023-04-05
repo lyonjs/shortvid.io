@@ -1,8 +1,8 @@
 import React from 'react';
-import {Composition, Folder, staticFile} from 'remotion';
+import {Composition, Folder} from 'remotion';
 import {AvatarWithCaption} from './AvatarWithCaption';
+import {TalkDetails} from './TalkDetails';
 import {IconWithCaption} from './IconWithCaption';
-import {Details} from './Details';
 
 export const MoleculesComposition: React.FC = () => {
 	return (
@@ -35,7 +35,7 @@ export const MoleculesComposition: React.FC = () => {
 				}}
 			/>
 			<Composition
-				component={Details}
+				component={TalkDetails}
 				width={1200}
 				height={1200}
 				id="Details"

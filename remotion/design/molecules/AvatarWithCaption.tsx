@@ -5,7 +5,7 @@ import {Title} from '../atoms/Title';
 export const AvatarWithCaption: React.FC<{
 	children?: ReactNode;
 	avatarPictureUrl?: string;
-	caption?: ReactNode;
+	caption?: string;
 	avatarStyle?: React.CSSProperties;
 	captionStyle?: React.CSSProperties;
 	style?: React.CSSProperties;

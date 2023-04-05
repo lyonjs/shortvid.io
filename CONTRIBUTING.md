@@ -10,19 +10,21 @@ In order to install project, please install Node current LTS version.
 
 Remotion also maintain a [great installation doc that could help you too](https://www.remotion.dev/docs/).
 
-## How to generate local video 
+## How to generate local video
 
 Inside the repo
 
 ```console
 pnpm install
 ```
-In windows create a props with local file json, it's much easier :)
+
+In windows create a props with local file json, it's much easier 😊
+
 ```console
 pnpm remotion render Devoxx2023 out/Devoxx2023.mp4 --props=filejson/test.json
-````
-<img width="859" alt="image" src="https://user-images.githubusercontent.com/1814314/230098734-fb6fdabb-e6a3-451a-b4e3-7cc4dea647fa.png">
+```
 
+<img width="859" alt="image" src="https://user-images.githubusercontent.com/1814314/230098734-fb6fdabb-e6a3-451a-b4e3-7cc4dea647fa.png">
 
 ## Start preview website
 
@@ -39,4 +41,3 @@ pnpm start
 ```
 
 Remotion will start on port `3000`
-

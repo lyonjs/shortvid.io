@@ -15,9 +15,6 @@ export const AtomsComposition: React.FC = () => {
 				id="Avatar"
 				fps={30}
 				durationInFrames={120}
-				defaultProps={{
-					src: staticFile('/lyonjs-squared.png'),
-				}}
 			/>
 			<Composition
 				component={EventLogo}

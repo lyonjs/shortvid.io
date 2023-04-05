@@ -1,6 +1,6 @@
 import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
-import {Speaker} from './Speaker';
+import {Avatar} from './Avatar';
 import {EventLogo} from './EventLogo';
 import {ImageBackground} from './ImageBackground';
 import {Title} from './Title';
@@ -9,15 +9,12 @@ export const AtomsComposition: React.FC = () => {
 	return (
 		<Folder name="Atoms">
 			<Composition
-				component={Speaker}
+				component={Avatar}
 				width={1200}
 				height={1200}
-				id="Speaker"
+				id="Avatar"
 				fps={30}
 				durationInFrames={120}
-				defaultProps={{
-					src: staticFile('/lyonjs-squared.png'),
-				}}
 			/>
 			<Composition
 				component={EventLogo}

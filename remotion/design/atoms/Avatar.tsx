@@ -1,11 +1,11 @@
 import {CSSProperties} from 'react';
-import {Img} from 'remotion';
+import {Img, staticFile} from 'remotion';
 
-export const Speaker: React.FC<{
+export const Avatar: React.FC<{
 	style?: CSSProperties;
-	src: string;
+	src?: string;
 	size?: number;
-}> = ({style, src, size = 500}) => {
+}> = ({style, src = staticFile('defaultAvatar.png'), size = 500}) => {
 	return (
 		<Img
 			style={{

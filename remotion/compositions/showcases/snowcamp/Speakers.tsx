@@ -1,7 +1,8 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {Speaker} from './Snowcamp';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
+import {Text} from '../../../design/atoms/Text';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	const frame = useCurrentFrame();
@@ -45,21 +46,21 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								top: pictureDrop,
 							}}
 							style={{
-								gap: 40,
+								gap: 60,
 							}}
 						>
-							<Title
-								title={speaker.name}
+							<Text
 								style={{
 									position: 'relative',
 									bottom: '-20%',
 									width: 250,
 									height: 100,
-									fontSize: '30px',
+									fontSize: 30,
 									fontWeight: 700,
 								}}
-								delay={40}
-							/>
+							>
+								{speaker.name}
+							</Text>
 						</AvatarWithCaption>
 					</div>
 				);

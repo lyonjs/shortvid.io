@@ -49,14 +49,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								gap: 40,
 							}}
 						>
-							<Text style={{fontSize: 30, width: 'auto'}}>
-								<SpeakerName
-									title={speaker.name}
-									style={{
-										position: 'relative',
-									}}
-								/>
-							</Text>
+							<SpeakerName title={speaker.name} />
 						</AvatarWithCaption>
 					</div>
 				);

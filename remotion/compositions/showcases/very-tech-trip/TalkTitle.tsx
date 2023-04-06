@@ -27,7 +27,7 @@ export const TalkTitle: React.FC<{
 				bottom: '130px',
 				color: 'white',
 				filter: `blur(${titleDeblur}px)`,
-				fontSize: '32px',
+				fontSize: '2rem',
 				opacity: titleOpacity,
 				padding: '0 25px',
 				position: 'absolute',

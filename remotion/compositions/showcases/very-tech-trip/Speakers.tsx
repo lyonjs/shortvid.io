@@ -35,7 +35,7 @@ const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 					style={{
 						fontWeight: 600,
 						textShadow: '2px 2px 2px #e95900',
-						fontSize: 32,
+						fontSize: '2rem',
 						marginTop: 0,
 						textAlign: 'left',
 						paddingLeft: 0,

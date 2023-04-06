@@ -5,7 +5,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {Speaker} from './Replay';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
@@ -59,16 +59,14 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									top: pictureDrop,
 								}}
 							>
-								<Title
+								<TalkTitle
 									title={speaker.name}
 									style={{
 										bottom: dropTop,
-										fontSize: '45px',
 										width: 350,
 										height: 200,
-										textShadow: `0px 0px 3px black`,
-										left: '50%',
-										transform: 'translateX(-50%)',
+										fontWeight: 700,
+										padding: 0,
 									}}
 									delay={50}
 								/>

@@ -13,6 +13,8 @@ export const Text: React.FC<{
 				padding: '0 20px',
 				width: '100%',
 				fontSize: '1.5rem',
+				color: 'white',
+				textAlign: 'center',
 				...style,
 			}}
 		>

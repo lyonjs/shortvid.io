@@ -63,12 +63,9 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									title={speaker.name}
 									style={{
 										bottom: dropTop,
-										fontSize: '45px',
 										width: 350,
 										height: 200,
 										fontWeight: 700,
-										color: 'white',
-										textShadow: `0px 0px 3px black`,
 										padding: 0,
 									}}
 									delay={50}

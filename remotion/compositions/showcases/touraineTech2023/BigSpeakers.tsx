@@ -1,5 +1,6 @@
 import {
 	AbsoluteFill,
+	interpolate,
 	Sequence,
 	spring,
 	useCurrentFrame,
@@ -7,7 +8,7 @@ import {
 } from 'remotion';
 import {Speaker} from './TouraineTech2023';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
-import {TalkTitle} from './TalkTitle';
+import {Text} from '../../../design/atoms/Text';
 
 export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 	speakers,
@@ -23,6 +24,18 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 		from: -600,
 		to: dropTop,
 		durationInFrames: 30,
+	});
+
+	const titleOpacity = spring({
+		frame: frame - animationDelay * 2,
+		fps,
+		from: 0,
+		to: 1,
+		durationInFrames: 60,
+	});
+
+	const titleDeblur = interpolate(frame - animationDelay * 2, [0, 20], [5, 0], {
+		extrapolateRight: 'clamp',
 	});
 	return (
 		<Sequence from={animationDelay} name="Picture">
@@ -60,9 +73,9 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									gap: 40,
 								}}
 							>
-								<TalkTitle
-									title={speaker.name}
+								<Text
 									style={{
+										position: 'absolute',
 										bottom: dropTop,
 										fontSize: '38px',
 										width: 350,
@@ -70,9 +83,12 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 										fontWeight: 700,
 										color: '#222333',
 										textShadow: `1px 1px 1px white`,
+										opacity: titleOpacity,
+										filter: `blur(${titleDeblur}px)`,
 									}}
-									delay={40}
-								/>
+								>
+									{speaker.name}
+								</Text>
 							</AvatarWithCaption>
 						</div>
 					);

@@ -45,11 +45,8 @@ export const ReplayLyonJS: React.FC<LyonJSReplayType> = ({
 					title={title}
 					style={{
 						fontSize: '48px',
-						margin: '0 auto',
 						bottom: '200px',
 						padding: '0 60px',
-						left: 0,
-						right: 0,
 					}}
 				/>
 			</Sequence>

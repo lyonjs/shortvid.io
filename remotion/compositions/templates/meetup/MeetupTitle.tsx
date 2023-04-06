@@ -26,11 +26,11 @@ export const MeetupTitle: React.FC<{
 	return (
 		<Title
 			style={{
-				color: 'white',
+				width,
 				position: 'absolute',
 				bottom: fromBottom - toBottom,
+				left: 0,
 				fontSize: 70,
-				width,
 				textAlign: 'center',
 			}}
 		>

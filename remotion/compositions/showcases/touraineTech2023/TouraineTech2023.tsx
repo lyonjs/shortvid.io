@@ -2,7 +2,7 @@ import {AbsoluteFill} from 'remotion';
 import {Logo} from './Logo';
 import {LeftTriangle} from './LeftTriangle';
 import {RightTriangle} from './RightTriangle';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
 
@@ -32,7 +32,7 @@ export const TouraineTech2023: React.FC<TouraineTechProps> = ({
 			<RightTriangle />
 			<LeftTriangle />
 			<Speakers speakers={speakers} />
-			<Title title={title} />
+			<TalkTitle title={title} />
 			<Details date={date} time={time} location={location} />
 		</AbsoluteFill>
 	);

@@ -2,7 +2,7 @@ import {Sequence} from 'remotion';
 import {Logo} from './Logo';
 import {RightTriangle} from './RightTriangle';
 import {LeftTriangle} from './LeftTriangle';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {AbsoluteFill} from 'remotion';
 import {Speaker} from './TouraineTech2023';
 import {Type} from './Type';
@@ -22,7 +22,7 @@ export const Replay: React.FC<ReplayType> = ({title, speakers, type}) => {
 			<LeftTriangle />
 			<BigSpeakers speakers={speakers} dropTop={250} />
 			<Sequence from={60}>
-				<Title
+				<TalkTitle
 					title={title}
 					style={{
 						fontSize: '48px',

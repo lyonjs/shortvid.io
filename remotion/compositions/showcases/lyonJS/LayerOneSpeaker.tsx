@@ -34,6 +34,7 @@ export const LayerOneSpeaker: React.FC<Props> = ({title, sponsorLogoUrl}) => {
 				title={title}
 				style={{
 					width: 'calc(70% - 30px)',
+					marginTop: '-30px',
 				}}
 			/>
 			<Img

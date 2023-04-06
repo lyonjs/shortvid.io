@@ -36,8 +36,6 @@ export const LayerTwoSpeaker: React.FC<Props> = ({title, sponsorLogoUrl}) => {
 					zIndex: 2,
 					flex: 1,
 					display: 'flex',
-					justifyContent: 'center',
-					alignItems: 'center',
 					width: '70%',
 				}}
 			>

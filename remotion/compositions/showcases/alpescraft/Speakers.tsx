@@ -9,7 +9,6 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Text} from '../../../design/atoms/Text';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	const frame = useCurrentFrame();
@@ -58,20 +57,16 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								borderRadius: '50% 20% / 10% 40%',
 								top: pictureDrop,
 							}}
+							captionStyle={{
+								position: 'relative',
+								marginTop: 0,
+								fontSize: 30,
+								textShadow: `0 0 20px #00000099`,
+								top: nameAppear,
+								opacity: nameOpacity,
+							}}
 						>
-							<Text
-								style={{
-									position: 'relative',
-									marginTop: 0,
-									fontSize: 30,
-									fontWeight: 'bold',
-									textShadow: `0 0 20px #00000099`,
-									top: nameAppear,
-									opacity: nameOpacity,
-								}}
-							>
-								<SpeakersName name={speaker.name} />
-							</Text>
+							<SpeakersName name={speaker.name} />
 						</AvatarWithCaption>
 					</div>
 				);

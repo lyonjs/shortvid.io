@@ -1,42 +1,42 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title} from '../../../design/atoms/Title';
 
-export const TalkTitle: React.FC<{
+export const Title: React.FC<{
 	title: string;
+	style?: React.CSSProperties;
 	delay?: number;
-}> = ({title}) => {
+}> = ({title, style, delay = 0}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
 	const titleOpacity = spring({
-		frame,
+		frame: frame - delay,
 		fps,
 		from: 0,
 		to: 1,
 		durationInFrames: 60,
 	});
 
-	const titleDeblur = interpolate(frame, [0, 20], [5, 0], {
+	const titleDeblur = interpolate(frame - delay, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 
 	return (
-		<Title
+		<div
 			style={{
-				WebkitLineClamp: '3',
-				bottom: '130px',
+				fontWeight: 900,
+				fontSize: '38px',
 				color: 'white',
-				filter: `blur(${titleDeblur}px)`,
-				fontSize: '32px',
-				opacity: titleOpacity,
-				padding: '0 25px',
 				position: 'absolute',
-				textAlign: 'center',
-				textShadow: 'px 2px 2px #e95900',
+				bottom: '180px',
 				width: '100%',
+				textAlign: 'center',
+				opacity: titleOpacity,
+				filter: `blur(${titleDeblur}px)`,
+				textShadow: '`1px 1px 3px white`',
+				...style,
 			}}
 		>
 			{title}
-		</Title>
+		</div>
 	);
 };

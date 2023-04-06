@@ -1,10 +1,10 @@
 import React from 'react';
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
-import {Title} from '../../../design/atoms/Title';
 
-export const TalkTitle: React.FC<{
+export const Title: React.FC<{
 	title: string;
-}> = ({title}) => {
+	style?: React.CSSProperties;
+}> = ({title, style}) => {
 	const frame = useCurrentFrame();
 
 	const fromTop = interpolate(frame, [0, 20], [-100, 385], {
@@ -15,19 +15,26 @@ export const TalkTitle: React.FC<{
 	const titleOpacity = interpolate(frame, [5, 15], [0, 1]);
 
 	return (
-		<Title
+		<span
 			style={{
+				fontWeight: 900,
 				fontSize: '2.6rem',
 				color: 'white',
 				position: 'absolute',
 				top: fromTop,
+				width: '100%',
+				height: '130px',
 				padding: '0 95px',
 				textAlign: 'center',
 				textShadow: '`1px 1px 3px white`',
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
 				opacity: titleOpacity,
+				...style,
 			}}
 		>
 			{title}
-		</Title>
+		</span>
 	);
 };

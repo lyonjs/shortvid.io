@@ -2,7 +2,7 @@ import {AbsoluteFill} from 'remotion';
 import {Logo} from './Logo';
 import {LeftTriangle} from './LeftTriangle';
 import {RightTriangle} from './RightTriangle';
-import {TalkTitle} from './TalkTitle';
+import {Title} from './Title';
 import {SponsorLogo} from '../../templates/sponsor/SponsorLogo';
 
 export interface SponsorProps {
@@ -19,7 +19,7 @@ export const SponsorTouraineTech2023: React.FC<SponsorProps> = ({
 			<Logo />
 			<RightTriangle />
 			<LeftTriangle />
-			<TalkTitle title={message} />
+			<Title title={message} />
 			<SponsorLogo
 				sponsorLogo={sponsorLogo}
 				style={{

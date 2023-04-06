@@ -5,7 +5,7 @@ import {AbsoluteFill, Img, Sequence, Audio, staticFile} from 'remotion';
 import React from 'react';
 import {Background} from './Background';
 import {Speakers} from './Speakers';
-import {TalkTitle} from './TalkTitle';
+import {Title} from './Title';
 import {Details} from './Details';
 import {Logo} from './Logo';
 import {Talk} from '../../../types/conferences.types';
@@ -44,7 +44,15 @@ export const VeryTechTrip: React.FC<Talk> = ({title, speakers, time}) => {
 				<Speakers speakers={speakers} />
 			</Sequence>
 			<Sequence from={50}>
-				<TalkTitle title={title} />
+				<Title
+					title={title}
+					style={{
+						bottom: '130px',
+						width: '100%',
+						padding: '0 25px',
+						textAlign: 'center',
+					}}
+				/>
 			</Sequence>
 			<Sequence from={70}>
 				<Img

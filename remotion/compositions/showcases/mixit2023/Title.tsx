@@ -1,7 +1,6 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title} from '../../../design/atoms/Title';
 
-export const TalkTitle: React.FC<{
+export const Title: React.FC<{
 	title: string;
 	style?: React.CSSProperties;
 	delay?: number;
@@ -22,13 +21,14 @@ export const TalkTitle: React.FC<{
 	});
 
 	return (
-		<Title
+		<span
 			style={{
-				fontFamily: 'Noto Sans,sans-serif',
-				fontSize: '38px',
+				fontFamily: 'Lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
+				fontWeight: 500,
+				fontSize: '40px',
 				color: 'white',
 				position: 'absolute',
-				bottom: '180px',
+				bottom: '200px',
 				textAlign: 'center',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
@@ -37,6 +37,6 @@ export const TalkTitle: React.FC<{
 			}}
 		>
 			{title}
-		</Title>
+		</span>
 	);
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {ImageBackground} from '../../../design/atoms/ImageBackground';
 import {Mountains} from './Mountains';
@@ -47,7 +47,7 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 				<Mountains />
 			</Sequence>
 			<Sequence name="Logo-&-title" from={30}>
-				<Title title={title} />
+				<TalkTitle title={title} />
 				{speakers ? <Speakers speakers={speakers} /> : <Logo />}
 			</Sequence>
 			<Sequence name="Details" from={60}>

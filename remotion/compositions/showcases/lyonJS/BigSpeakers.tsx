@@ -33,7 +33,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 		durationInFrames: 60,
 	});
 
-	const nameDeblur = interpolate(
+	const nameUnblur = interpolate(
 		frame - (animationDelay + 50),
 		[0, 20],
 		[5, 0],
@@ -86,7 +86,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 										fontSize: '2.8rem',
 										position: 'absolute',
 										opacity: nameOpacity,
-										filter: `blur(${nameDeblur}px)`,
+										filter: `blur(${nameUnblur}px)`,
 										textShadow: `0px 0px 3px black`,
 									}}
 								>

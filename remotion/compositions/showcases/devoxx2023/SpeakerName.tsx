@@ -22,7 +22,7 @@ export const SpeakerName: React.FC<{
 		frame: frame - delay,
 		fps,
 		from: -600,
-		to: 30,
+		to: 40,
 		durationInFrames: 30,
 	});
 

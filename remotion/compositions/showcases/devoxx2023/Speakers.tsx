@@ -2,6 +2,7 @@ import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {SpeakerName} from './SpeakerName';
 import {Speaker} from '../../../types/conferences.types';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
+import {Text} from '../../../design/atoms/Text';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	const frame = useCurrentFrame();
@@ -43,21 +44,20 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								borderRadius: '50% 20% / 10% 40%',
 								top: pictureDrop,
 							}}
-							captionStyle={{
-								fontSize: 30,
-							}}
 							style={{
 								flexDirection: 'column-reverse',
+								gap: 40,
 							}}
 						>
-							<SpeakerName
-								title={speaker.name}
-								style={{
-									position: 'relative',
-									left: 'unset',
-									bottom: '-5%',
-								}}
-							/>
+							<Text style={{fontSize: 30, width: 'auto'}}>
+								<SpeakerName
+									title={speaker.name}
+									style={{
+										position: 'relative',
+										left: 'unset',
+									}}
+								/>
+							</Text>
 						</AvatarWithCaption>
 					</div>
 				);

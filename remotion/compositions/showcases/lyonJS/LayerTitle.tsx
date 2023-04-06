@@ -18,7 +18,7 @@ export const LayerTitle: React.FC<Props> = ({title, style}) => {
 				fontWeight: 900,
 				fontSize: '38px',
 				zIndex: '2',
-				padding: '30px',
+				padding: '0 30px',
 				lineHeight: '52px',
 				height: '100%',
 				...style,

@@ -60,11 +60,11 @@ export const TalkTitle: React.FC<{
 				style={{
 					position: 'absolute',
 					bottom: '100px',
-					width: '30%',
+					width: '28%',
 					margin: 'auto',
 					transform: `translateX(-50%)`,
 					left: '50%',
-					opacity: titleOpacity,
+					opacity: `calc(${titleOpacity} - 0.2)`,
 					filter: `blur(${titleUnblur}px)`,
 				}}
 			/>

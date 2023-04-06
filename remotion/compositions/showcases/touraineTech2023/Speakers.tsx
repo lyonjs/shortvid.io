@@ -79,7 +79,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 										transform: 'translate(0)',
 										width: 250,
 										height: 100,
-										fontSize: '30px',
+										fontSize: '1.9rem',
 										fontWeight: 700,
 										color: '#222333',
 										textShadow: `1px 1px 1px white`,

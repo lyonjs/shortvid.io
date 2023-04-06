@@ -77,7 +77,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									style={{
 										position: 'absolute',
 										bottom: dropTop,
-										fontSize: '38px',
+										fontSize: '2.3rem',
 										width: 350,
 										height: 200,
 										fontWeight: 700,

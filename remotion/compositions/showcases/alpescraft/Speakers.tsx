@@ -63,7 +63,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								style={{
 									position: 'relative',
 									marginTop: 0,
-									fontSize: 30,
+									fontSize: '1.9rem',
 									fontWeight: 'bold',
 									textShadow: `0 0 20px #00000099`,
 									top: nameAppear,

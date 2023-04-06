@@ -5,7 +5,6 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Title} from './Title';
 import {TalkTitle} from './TalkTitle';
 import {Speaker} from '../../../types/conferences.types';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';

@@ -27,44 +27,47 @@ export const TalkTitle: React.FC<{
 		durationInFrames: 60,
 	});
 
-	const titleDeblur = interpolate(frame - delay, [0, 20], [5, 0], {
+	const titleUnblur = interpolate(frame - delay, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 
 	return (
-		<Title
-			style={{
-				fontFamily,
-				color: '#fff',
-				fontSize: 40,
-				padding: '0 10px',
-				textAlign: 'center',
-				textShadow: `0 0 5px #000`,
-				opacity: titleOpacity,
-				filter: `blur(${titleDeblur}px)`,
-				lineHeight: 1.4,
-				zIndex: 1,
-				position: 'absolute',
-				bottom: 130,
-				maxWidth: '90%',
-				left: 0,
-				right: 0,
-				margin: '0 auto',
-			}}
-		>
-			{title}
+		<>
+			<Title
+				style={{
+					fontFamily,
+					color: '#fff',
+					fontSize: '2.5rem',
+					padding: '0 10px',
+					textAlign: 'center',
+					textShadow: `0 0 5px #000`,
+					opacity: titleOpacity,
+					filter: `blur(${titleUnblur}px)`,
+					lineHeight: 1.4,
+					zIndex: 1,
+					position: 'absolute',
+					bottom: 130,
+					maxWidth: '90%',
+					left: 0,
+					right: 0,
+					margin: '0 auto',
+				}}
+			>
+				{title}
+			</Title>
 			<Img
 				src={staticFile('underline.svg')}
 				style={{
 					position: 'absolute',
-					bottom: '-30px',
+					bottom: '100px',
 					width: '30%',
 					margin: 'auto',
 					transform: `translateX(-50%)`,
-					opacity: 0.8,
 					left: '50%',
+					opacity: titleOpacity,
+					filter: `blur(${titleUnblur}px)`,
 				}}
 			/>
-		</Title>
+		</>
 	);
 };

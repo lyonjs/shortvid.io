@@ -54,7 +54,6 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									title={speaker.name}
 									style={{
 										position: 'relative',
-										left: 'unset',
 									}}
 								/>
 							</Text>

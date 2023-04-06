@@ -1,4 +1,10 @@
-import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {
+	AbsoluteFill,
+	interpolate,
+	spring,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Speaker} from './Snowcamp';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
@@ -14,6 +20,17 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		from: -600,
 		to: 100,
 		durationInFrames: 30,
+	});
+	const nameOpacity = spring({
+		frame: frame - 40,
+		fps,
+		from: 0,
+		to: 1,
+		durationInFrames: 60,
+	});
+
+	const nameUnblur = interpolate(frame - 40, [0, 20], [5, 0], {
+		extrapolateRight: 'clamp',
 	});
 	return (
 		<AbsoluteFill
@@ -57,6 +74,8 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									height: 100,
 									fontSize: 30,
 									fontWeight: 700,
+									opacity: nameOpacity,
+									filter: `blur(${nameUnblur}px)`,
 								}}
 							>
 								{speaker.name}

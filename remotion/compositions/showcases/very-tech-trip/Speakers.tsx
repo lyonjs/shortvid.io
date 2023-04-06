@@ -3,6 +3,7 @@ import {Speaker as SpeakerType} from '../../../types/conferences.types';
 import React from 'react';
 import {FadeIn} from './FadeIn';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
+import {Text} from '../../../design/atoms/Text';
 
 const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 	speaker: {name, picture},
@@ -19,14 +20,6 @@ const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 					border: '4px solid white',
 					boxShadow: '4px 5px 0 #e95900',
 				}}
-				captionStyle={{
-					fontWeight: 600,
-					textShadow: '2px 2px 2px #e95900',
-					fontSize: '32px',
-					flexGrow: 1,
-					width: '50%',
-					marginTop: 0,
-				}}
 				style={{
 					gap: 64,
 					flexDirection: 'row',
@@ -38,15 +31,26 @@ const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 					width: 700,
 				}}
 			>
-				{name}
-				<span
+				<Text
 					style={{
-						color: '#e95900',
-						paddingLeft: 5,
+						fontWeight: 600,
+						textShadow: '2px 2px 2px #e95900',
+						fontSize: 32,
+						marginTop: 0,
+						textAlign: 'left',
+						paddingLeft: 0,
 					}}
 				>
-					.
-				</span>
+					{name}
+					<span
+						style={{
+							color: '#e95900',
+							paddingLeft: 5,
+						}}
+					>
+						.
+					</span>
+				</Text>
 			</AvatarWithCaption>
 		</>
 	);

@@ -1,13 +1,14 @@
 import {
 	AbsoluteFill,
+	interpolate,
 	Sequence,
 	spring,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {TalkTitle} from './TalkTitle';
 import {Speaker} from './Replay';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
+import {Text} from '../../../design/atoms/Text';
 
 export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 	speakers,
@@ -24,6 +25,22 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 		to: dropTop,
 		durationInFrames: 30,
 	});
+	const nameOpacity = spring({
+		frame: frame - (animationDelay + 50),
+		fps,
+		from: 0,
+		to: 1,
+		durationInFrames: 60,
+	});
+
+	const nameDeblur = interpolate(
+		frame - (animationDelay + 50),
+		[0, 20],
+		[5, 0],
+		{
+			extrapolateRight: 'clamp',
+		}
+	);
 
 	return (
 		<Sequence from={animationDelay} name="Picture">
@@ -59,17 +76,22 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 									top: pictureDrop,
 								}}
 							>
-								<TalkTitle
-									title={speaker.name}
+								<Text
 									style={{
 										bottom: dropTop,
 										width: 350,
 										height: 200,
 										fontWeight: 700,
 										padding: 0,
+										fontSize: '2.8rem',
+										position: 'absolute',
+										opacity: nameOpacity,
+										filter: `blur(${nameDeblur}px)`,
+										textShadow: `0px 0px 3px black`,
 									}}
-									delay={50}
-								/>
+								>
+									{speaker.name}
+								</Text>
 							</AvatarWithCaption>
 						</div>
 					);

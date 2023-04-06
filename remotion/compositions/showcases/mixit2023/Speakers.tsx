@@ -1,13 +1,14 @@
 import {
 	AbsoluteFill,
+	interpolate,
 	Sequence,
 	spring,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Title} from './Title';
 import {Speaker} from '../../../types/conferences.types';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
+import {Text} from '../../../design/atoms/Text';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	const frame = useCurrentFrame();
@@ -20,6 +21,17 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		from: -600,
 		to: 100,
 		durationInFrames: 30,
+	});
+	const nameOpacity = spring({
+		frame: frame - animationDelay * 2,
+		fps,
+		from: 0,
+		to: 1,
+		durationInFrames: 60,
+	});
+
+	const nameUnblur = interpolate(frame - animationDelay * 2, [0, 20], [5, 0], {
+		extrapolateRight: 'clamp',
 	});
 	return (
 		<Sequence from={animationDelay} name="Picture">
@@ -54,20 +66,23 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 									top: pictureDrop,
 								}}
 								style={{
-									gap: 40,
+									gap: 60,
 								}}
 							>
-								<Title
-									title={speaker.name}
+								<Text
 									style={{
 										position: 'relative',
 										bottom: '-20%',
-										fontSize: '30px',
+										height: 100,
+										fontSize: '1.9rem',
 										fontWeight: 700,
 										color: shadowColor,
+										opacity: nameOpacity,
+										filter: `blur(${nameUnblur}px)`,
 									}}
-									delay={40}
-								/>
+								>
+									{speaker.name}
+								</Text>
 							</AvatarWithCaption>
 						</div>
 					);

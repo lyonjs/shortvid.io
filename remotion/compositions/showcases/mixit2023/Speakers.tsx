@@ -6,7 +6,6 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {TalkTitle} from './TalkTitle';
 import {Speaker} from '../../../types/conferences.types';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Text} from '../../../design/atoms/Text';
@@ -23,7 +22,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		to: 100,
 		durationInFrames: 30,
 	});
-	const titleOpacity = spring({
+	const nameOpacity = spring({
 		frame: frame - animationDelay * 2,
 		fps,
 		from: 0,
@@ -31,7 +30,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		durationInFrames: 60,
 	});
 
-	const titleDeblur = interpolate(frame - animationDelay * 2, [0, 20], [5, 0], {
+	const nameUnblur = interpolate(frame - animationDelay * 2, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 	return (
@@ -75,11 +74,11 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 										position: 'relative',
 										bottom: '-20%',
 										height: 100,
-										fontSize: 30,
+										fontSize: '1.9rem',
 										fontWeight: 700,
 										color: shadowColor,
-										opacity: titleOpacity,
-										filter: `blur(${titleDeblur}px)`,
+										opacity: nameOpacity,
+										filter: `blur(${nameUnblur}px)`,
 									}}
 								>
 									{speaker.name}

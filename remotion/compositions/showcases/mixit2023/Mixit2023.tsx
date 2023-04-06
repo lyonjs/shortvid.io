@@ -23,14 +23,7 @@ export const Mixit2023: React.FC<Talk> = ({
 		>
 			<Logo />
 			<Speakers speakers={speakers} />
-			<TalkTitle
-				title={title}
-				style={{
-					left: 0,
-					right: 0,
-					margin: '0 auto',
-				}}
-			/>
+			<TalkTitle title={title} />
 			<LyonSkyline />
 			<Details date={date} time={time} location={location} />
 		</AbsoluteFill>

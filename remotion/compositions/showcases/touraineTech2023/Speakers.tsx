@@ -24,7 +24,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		durationInFrames: 30,
 	});
 
-	const titleOpacity = spring({
+	const nameOpacity = spring({
 		frame: frame - animationDelay * 2,
 		fps,
 		from: 0,
@@ -32,7 +32,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		durationInFrames: 60,
 	});
 
-	const titleDeblur = interpolate(frame - animationDelay * 2, [0, 20], [5, 0], {
+	const nameUnblur = interpolate(frame - animationDelay * 2, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 
@@ -83,8 +83,8 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 										fontWeight: 700,
 										color: '#222333',
 										textShadow: `1px 1px 1px white`,
-										opacity: titleOpacity,
-										filter: `blur(${titleDeblur}px)`,
+										opacity: nameOpacity,
+										filter: `blur(${nameUnblur}px)`,
 									}}
 								>
 									{speaker.name}

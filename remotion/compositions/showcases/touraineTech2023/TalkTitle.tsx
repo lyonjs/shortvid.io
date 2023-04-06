@@ -17,7 +17,7 @@ export const TalkTitle: React.FC<{
 		durationInFrames: 60,
 	});
 
-	const titleDeblur = interpolate(frame - delay, [0, 20], [5, 0], {
+	const titleUnblur = interpolate(frame - delay, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 
@@ -30,7 +30,7 @@ export const TalkTitle: React.FC<{
 				bottom: '170px',
 				textAlign: 'center',
 				opacity: titleOpacity,
-				filter: `blur(${titleDeblur}px)`,
+				filter: `blur(${titleUnblur}px)`,
 				textShadow: '`1px 1px 3px white`',
 				...style,
 			}}

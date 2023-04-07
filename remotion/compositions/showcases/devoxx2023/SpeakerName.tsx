@@ -7,6 +7,8 @@ import {
 } from 'remotion';
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
+import {Title} from '../../../design/atoms/Title';
+import {Text} from '../../../design/atoms/Text';
 
 const {fontFamily} = loadFont();
 
@@ -22,7 +24,7 @@ export const SpeakerName: React.FC<{
 		frame: frame - delay,
 		fps,
 		from: -600,
-		to: 30,
+		to: 40,
 		durationInFrames: 30,
 	});
 
@@ -34,6 +36,10 @@ export const SpeakerName: React.FC<{
 				color: 'white',
 				textAlign: 'center',
 				textShadow: `0 0 20px black`,
+				fontSize: '1.9rem',
+				width: 'auto',
+				display: 'block',
+				position: 'relative',
 				...style,
 			}}
 		>
@@ -44,7 +50,7 @@ export const SpeakerName: React.FC<{
 				}}
 				src={staticFile('underline-white.svg')}
 			/>
-			{title}
+			<Text style={{fontSize: '1.9rem'}}>{title}</Text>
 			<Img
 				style={{
 					filter: 'drop-shadow(0 0 5px #f88224)',

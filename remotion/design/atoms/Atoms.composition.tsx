@@ -1,11 +1,10 @@
 import React from 'react';
-import {Composition, Folder, staticFile} from 'remotion';
+import {Composition, Folder} from 'remotion';
 import {Avatar} from './Avatar';
 import {EventLogo} from './EventLogo';
 import {ImageBackground} from './ImageBackground';
 import {Title} from './Title';
 import {Text} from './Text';
-import {IconWithCaption} from './IconWithCaption';
 
 export const AtomsComposition: React.FC = () => {
 	return (
@@ -52,53 +51,6 @@ export const AtomsComposition: React.FC = () => {
 				fps={30}
 				durationInFrames={120}
 				defaultProps={{children: 'Hello World !'}}
-			/>
-			<Composition
-				component={IconWithCaption}
-				width={1200}
-				height={1200}
-				id="IconWithCaptionLottie"
-				fps={30}
-				durationInFrames={120}
-				defaultProps={{
-					caption: '19 Décembre 2023',
-					lottieAsset: 'lf20_ak90tqhe',
-					style: {
-						background: 'black',
-						color: 'white',
-					},
-				}}
-			/>
-			<Composition
-				component={IconWithCaption}
-				width={1200}
-				height={1200}
-				id="IconifyWithCaption"
-				fps={30}
-				durationInFrames={120}
-				defaultProps={{
-					caption: '19 Décembre 2023',
-					iconifyId: 'mdi:calendar',
-					style: {
-						color: 'black',
-						padding: 20,
-					},
-				}}
-			/>
-			<Composition
-				component={IconWithCaption}
-				width={1200}
-				height={1200}
-				id="IconWithCaption"
-				fps={30}
-				durationInFrames={120}
-				defaultProps={{
-					caption: '19 Décembre 2023',
-					imageIcon: staticFile('/lyonjs-squared.png'),
-					style: {
-						flexDirection: 'column',
-					},
-				}}
 			/>
 		</Folder>
 	);

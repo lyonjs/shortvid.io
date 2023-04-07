@@ -1,5 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
+import {Title} from '../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();
 
@@ -10,25 +11,20 @@ type Props = {
 
 export const LayerTitle: React.FC<Props> = ({title, style}) => {
 	return (
-		<div
+		<Title
 			style={{
 				fontFamily,
+				position: 'relative',
 				fontWeight: 900,
 				fontSize: '38px',
-				color: 'white',
-				textAlign: 'center',
 				zIndex: '2',
-				flex: '1',
-				padding: '30px',
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				justifyContent: 'center',
+				padding: '0 30px',
 				lineHeight: '52px',
+				height: '100%',
 				...style,
 			}}
 		>
 			{title}
-		</div>
+		</Title>
 	);
 };

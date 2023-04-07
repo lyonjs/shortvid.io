@@ -1,5 +1,5 @@
-import {Title} from '../../../design/atoms/Title';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Text} from '../../../design/atoms/Text';
 
 export const SponsorName: React.FC<{
 	companyName: string;
@@ -20,16 +20,18 @@ export const SponsorName: React.FC<{
 	});
 
 	return (
-		<Title
+		<Text
 			style={{
 				color: 'white',
 				position: 'absolute',
-				top: 500,
+				top: 600,
+				fontWeight: 'bold',
+				fontSize: '6.25rem',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
 			}}
 		>
 			{companyName}
-		</Title>
+		</Text>
 	);
 };

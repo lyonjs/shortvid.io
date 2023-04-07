@@ -41,9 +41,9 @@ export const SponsorMap: React.FC<{
 			/>
 			<Title
 				style={{
-					color: 'white',
 					position: 'absolute',
 					bottom: 300,
+					left: 0,
 					fontSize: '3rem',
 					opacity: opacityUp,
 				}}

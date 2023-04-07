@@ -2,7 +2,7 @@ import {Lottie} from '@remotion/lottie';
 import {useLottie} from '../../../hooks/useLottie';
 import {Sequence, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const TalkDetails: React.FC<{
+export const Details: React.FC<{
 	date: string;
 	time: string;
 	location: string;

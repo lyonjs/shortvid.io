@@ -2,6 +2,8 @@ import React from 'react';
 import {Lottie} from '@remotion/lottie';
 import {useLottie} from '../../hooks/useLottie';
 import {Img} from 'remotion';
+import {Icon} from '@iconify/react';
+import {Text} from './Text';
 
 const LottieIcon: React.FC<{
 	lottieAsset: string;
@@ -27,10 +29,11 @@ const LottieIcon: React.FC<{
 export const IconWithCaption: React.FC<{
 	lottieAsset?: string;
 	imageIcon?: string;
+	iconifyId?: string;
 	caption: string;
 	iconStyle?: React.CSSProperties;
 	style?: React.CSSProperties;
-}> = ({lottieAsset, imageIcon, caption, style, iconStyle}) => {
+}> = ({lottieAsset, imageIcon, iconifyId, caption, style, iconStyle}) => {
 	return (
 		<div
 			style={{
@@ -55,16 +58,24 @@ export const IconWithCaption: React.FC<{
 						}}
 					/>
 				)}
+				{iconifyId && (
+					<Icon
+						icon={iconifyId}
+						style={{
+							fontSize: '4rem',
+						}}
+					/>
+				)}
 			</div>
-			<span
+			<Text
 				style={{
 					position: 'relative',
-					color: 'white',
 					fontSize: '1.6rem',
+					color: 'inherit',
 				}}
 			>
 				{caption}
-			</span>
+			</Text>
 		</div>
 	);
 };

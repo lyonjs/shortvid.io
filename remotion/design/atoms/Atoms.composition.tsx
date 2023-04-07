@@ -65,6 +65,23 @@ export const AtomsComposition: React.FC = () => {
 					lottieAsset: 'lf20_ak90tqhe',
 					style: {
 						background: 'black',
+						color: 'white',
+					},
+				}}
+			/>
+			<Composition
+				component={IconWithCaption}
+				width={1200}
+				height={1200}
+				id="IconifyWithCaption"
+				fps={30}
+				durationInFrames={120}
+				defaultProps={{
+					caption: '19 Décembre 2023',
+					iconifyId: 'mdi:calendar',
+					style: {
+						color: 'black',
+						padding: 20,
 					},
 				}}
 			/>

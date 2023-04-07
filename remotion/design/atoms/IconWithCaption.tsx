@@ -26,14 +26,29 @@ const LottieIcon: React.FC<{
 	);
 };
 
-export const IconWithCaption: React.FC<{
-	lottieAsset?: string;
-	imageIcon?: string;
-	iconifyId?: string;
-	caption: string;
-	iconStyle?: React.CSSProperties;
-	style?: React.CSSProperties;
-}> = ({lottieAsset, imageIcon, iconifyId, caption, style, iconStyle}) => {
+export const IconWithCaption: React.FC<
+	(
+		| {
+				lottieAsset?: string;
+				imageIcon?: never;
+				iconifyId?: never;
+		  }
+		| {
+				lottieAsset?: never;
+				imageIcon?: string;
+				iconifyId?: never;
+		  }
+		| {
+				lottieAsset?: never;
+				imageIcon?: never;
+				iconifyId?: string;
+		  }
+	) & {
+		caption: string;
+		iconStyle?: React.CSSProperties;
+		style?: React.CSSProperties;
+	}
+> = ({lottieAsset, imageIcon, iconifyId, caption, style, iconStyle}) => {
 	return (
 		<div
 			style={{
@@ -63,6 +78,7 @@ export const IconWithCaption: React.FC<{
 						icon={iconifyId}
 						style={{
 							fontSize: '4rem',
+							...iconStyle,
 						}}
 					/>
 				)}

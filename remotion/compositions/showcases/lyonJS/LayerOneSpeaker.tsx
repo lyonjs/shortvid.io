@@ -8,7 +8,9 @@ import {LayerTitle} from './LayerTitle';
 type Props = {title: string; sponsorLogoUrl: string};
 export const LayerOneSpeaker: React.FC<Props> = ({title, sponsorLogoUrl}) => {
 	return (
-		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
+		<AbsoluteFill
+			style={{backgroundColor: 'white', overflow: 'hidden', gap: '30px'}}
+		>
 			<RightTriangle />
 			<LeftTriangle />
 			<Img
@@ -34,7 +36,6 @@ export const LayerOneSpeaker: React.FC<Props> = ({title, sponsorLogoUrl}) => {
 				title={title}
 				style={{
 					width: 'calc(70% - 30px)',
-					marginTop: '-30px',
 				}}
 			/>
 			<Img

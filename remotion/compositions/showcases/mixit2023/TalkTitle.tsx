@@ -1,10 +1,7 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {loadFont} from '@remotion/google-fonts/Aldrich';
-import React from 'react';
+import {Title} from '../../../design/atoms/Title';
 
-const {fontFamily} = loadFont();
-
-export const Title: React.FC<{
+export const TalkTitle: React.FC<{
 	title: string;
 	style?: React.CSSProperties;
 	delay?: number;
@@ -20,28 +17,27 @@ export const Title: React.FC<{
 		durationInFrames: 60,
 	});
 
-	const titleDeblur = interpolate(frame - delay, [0, 20], [5, 0], {
+	const titleUnblur = interpolate(frame - delay, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 
 	return (
-		<div
+		<Title
 			style={{
-				fontFamily,
-				fontWeight: 900,
-				fontSize: '38px',
+				fontFamily: 'Lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
+				fontWeight: 500,
+				fontSize: '2.5rem',
 				color: 'white',
 				position: 'absolute',
-				bottom: '180px',
-				width: '100%',
+				bottom: '200px',
 				textAlign: 'center',
 				opacity: titleOpacity,
-				filter: `blur(${titleDeblur}px)`,
-				textShadow: `0px 0px 3px black`,
+				filter: `blur(${titleUnblur}px)`,
+				textShadow: '`1px 1px 3px white`',
 				...style,
 			}}
 		>
 			{title}
-		</div>
+		</Title>
 	);
 };

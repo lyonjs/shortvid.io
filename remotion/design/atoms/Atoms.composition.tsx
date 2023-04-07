@@ -4,6 +4,7 @@ import {Avatar} from './Avatar';
 import {EventLogo} from './EventLogo';
 import {ImageBackground} from './ImageBackground';
 import {Title} from './Title';
+import {Text} from './Text';
 
 export const AtomsComposition: React.FC = () => {
 	return (
@@ -34,13 +35,22 @@ export const AtomsComposition: React.FC = () => {
 				defaultProps={{animated: true}}
 			/>
 			<Composition
+				component={Text}
+				width={1200}
+				height={1200}
+				id="Text"
+				fps={30}
+				durationInFrames={120}
+				defaultProps={{children: 'Hello World !'}}
+			/>
+			<Composition
 				component={Title}
 				width={1200}
 				height={1200}
 				id="Title"
 				fps={30}
 				durationInFrames={120}
-				defaultProps={{children: 'Hello'}}
+				defaultProps={{children: 'Hello World !'}}
 			/>
 		</Folder>
 	);

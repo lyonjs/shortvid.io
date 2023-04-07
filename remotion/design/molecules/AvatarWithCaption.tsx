@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 import {Avatar} from '../atoms/Avatar';
-import {Title} from '../atoms/Title';
+import {Text} from '../atoms/Text';
 
 export const AvatarWithCaption: React.FC<{
 	children?: ReactNode;
@@ -36,16 +36,19 @@ export const AvatarWithCaption: React.FC<{
 				}}
 				src={avatarPictureUrl}
 			/>
-			<Title
-				style={{
-					fontSize: '4.5rem',
-					color: 'white',
-					...captionStyle,
-				}}
-			>
-				{children}
-				{!children && caption}
-			</Title>
+			{!children && (
+				<Text
+					style={{
+						fontSize: '4.5rem',
+						color: 'white',
+						width: 'auto',
+						...captionStyle,
+					}}
+				>
+					{caption}
+				</Text>
+			)}
+			{children}
 		</div>
 	);
 };

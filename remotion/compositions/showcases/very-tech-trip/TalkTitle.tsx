@@ -1,9 +1,10 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Text} from '../../../design/atoms/Text';
+import {Title} from '../../../design/atoms/Title';
 
-export const SponsorName: React.FC<{
-	companyName: string;
-}> = ({companyName}) => {
+export const TalkTitle: React.FC<{
+	title: string;
+	delay?: number;
+}> = ({title}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -20,18 +21,22 @@ export const SponsorName: React.FC<{
 	});
 
 	return (
-		<Text
+		<Title
 			style={{
+				WebkitLineClamp: '3',
+				bottom: '130px',
 				color: 'white',
-				position: 'absolute',
-				top: 600,
-				fontWeight: 'bold',
-				fontSize: '6.25rem',
-				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
+				fontSize: '2rem',
+				opacity: titleOpacity,
+				padding: '0 25px',
+				position: 'absolute',
+				textAlign: 'center',
+				textShadow: 'px 2px 2px #e95900',
+				width: '100%',
 			}}
 		>
-			{companyName}
-		</Text>
+			{title}
+		</Title>
 	);
 };

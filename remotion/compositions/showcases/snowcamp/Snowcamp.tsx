@@ -1,5 +1,5 @@
 import {AbsoluteFill, Sequence} from 'remotion';
-import {Title} from './Title';
+import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
 import {Background} from './Background';
@@ -38,7 +38,7 @@ export const Snowcamp: React.FC<TouraineTechProps> = ({
 			<Sequence from={50}>
 				<Logo />
 				{speakers && <Speakers speakers={speakers} />}
-				<Title title={title} />
+				<TalkTitle title={title} />
 			</Sequence>
 			<Sequence from={70}>
 				<Details date={date} time={time} location={location} />

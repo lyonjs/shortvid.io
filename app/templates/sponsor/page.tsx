@@ -49,7 +49,7 @@ export default function SponsorPage() {
 					<Input
 						setValue={setBackgroundImg}
 						value={backgroundImg}
-						label="TalkBackground image url"
+						label="Background image url"
 					/>
 					<Input
 						setValue={setSponsorLogo}

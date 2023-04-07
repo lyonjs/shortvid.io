@@ -42,7 +42,7 @@ export default function MeetupPage() {
 					<Input
 						setValue={setBackgroundImg}
 						value={backgroundImg}
-						label="TalkBackground image url"
+						label="Background image url"
 					/>
 					<Input
 						setValue={setEventLogo}

@@ -70,7 +70,7 @@ export default function TalkPage() {
 					<Input
 						setValue={setBackgroundImg}
 						value={backgroundImg}
-						label="TalkBackground Image"
+						label="Background Image"
 					/>
 					<Input
 						setValue={setEventLogo}

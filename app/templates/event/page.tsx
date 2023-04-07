@@ -54,7 +54,7 @@ export default function EventPage() {
 					<Input
 						setValue={setBackgroundImg}
 						value={backgroundImg}
-						label="TalkBackground image url"
+						label="Background image url"
 					/>
 				</Form>
 			</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Img, staticFile} from 'remotion';
+import {Img} from 'remotion';
 import {Lottie} from '@remotion/lottie';
 import {useLottie} from '../../hooks/useLottie';
 

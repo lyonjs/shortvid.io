@@ -1,17 +1,8 @@
-import {
-	AbsoluteFill,
-	interpolate,
-	Sequence,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 import {EventLogo} from '../../../design/atoms/EventLogo';
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 import React from 'react';
-import {Title} from '../../../design/atoms/Title';
-import {TalkSpeaker} from './TalkSpeaker';
+import {SpeakerAndTitle} from './SpeakerAndTitle';
+import {TalkBackground} from './TalkBackground';
 
 export const Talk: React.FC<{
 	eventLogo?: string;
@@ -28,43 +19,6 @@ export const Talk: React.FC<{
 	titleSize = '80',
 	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
 }) => {
-	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const ANIMATION_DURATION = 30;
-	const ANIMATION_DELAY = ANIMATION_DURATION / 2;
-
-	const blur = spring({
-		frame: frame - ANIMATION_DELAY,
-		fps,
-		from: 0,
-		to: 5,
-		durationInFrames: ANIMATION_DURATION,
-	});
-	const greyscale = spring({
-		frame: frame - ANIMATION_DELAY,
-		fps,
-		from: 0,
-		to: 5,
-		durationInFrames: ANIMATION_DURATION,
-	});
-
-	const titlesAnimationDelay = 30;
-	const titleOpacity = spring({
-		frame: frame - titlesAnimationDelay,
-		fps,
-		from: 0,
-		to: 1,
-		durationInFrames: 60,
-	});
-	const titleDeblur = interpolate(
-		frame,
-		[0 + titlesAnimationDelay, 20 + titlesAnimationDelay],
-		[5, 0],
-		{
-			extrapolateRight: 'clamp',
-		}
-	);
-
 	return (
 		<AbsoluteFill
 			style={{
@@ -72,48 +26,15 @@ export const Talk: React.FC<{
 			}}
 		>
 			<Sequence name="Background">
-				<BackgroundFiller
-					imageUrl={backgroundImg}
-					style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
-				/>
+				<TalkBackground backgroundImg={backgroundImg} />
 			</Sequence>
 			<AbsoluteFill>
-				<Sequence from={20} name="Speaker">
-					<TalkSpeaker
-						speakerPicture={speakerPicture}
-						speakersNames={speakersNames}
-						SpeakerNameStyle={{
-							width: '100%',
-							color: '#efdb50',
-							position: 'absolute',
-							fontSize: 70,
-							top: '55%',
-							opacity: titleOpacity,
-							filter: `blur(${titleDeblur}px)`,
-							textAlign: 'center',
-							textShadow: '2px 2px 0px black',
-						}}
-					/>
-				</Sequence>
-
-				<Sequence from={titlesAnimationDelay} name="Title">
-					<Title
-						style={{
-							width: '100%',
-							color: 'white',
-							position: 'absolute',
-							fontSize: `${titleSize}px`,
-							top: '70%',
-							opacity: titleOpacity,
-							filter: `blur(${titleDeblur}px)`,
-							textAlign: 'center',
-							paddingLeft: '50px',
-							paddingRight: '50px',
-						}}
-					>
-						{talkTitle}
-					</Title>
-				</Sequence>
+				<SpeakerAndTitle
+					speakersNames={speakersNames}
+					talkTitle={talkTitle}
+					speakerPicture={speakerPicture}
+					titleSize={titleSize}
+				/>
 
 				<EventLogo
 					src={eventLogo}

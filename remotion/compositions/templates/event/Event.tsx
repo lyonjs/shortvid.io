@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-	AbsoluteFill,
-	Sequence,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
 import {LottieAsset} from '../../../design/atoms/LottieAsset';
 import {EventTitle} from './EventTitle';
 import {Paillettes} from '../../../design/atoms/Paillettes';
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
+import {EventBackground} from './EventBackground';
 
 export const Event: React.FC<{
 	backgroundImg?: string;
@@ -22,36 +16,15 @@ export const Event: React.FC<{
 	lottieAsset = 'lf20_UDstUT',
 	paillettesAsset = 'lf20_tiviyc3p',
 }) => {
-	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const ANIMATION_DURATION = 30;
-	const ANIMATION_DELAY = ANIMATION_DURATION / 2;
-
-	const blur = spring({
-		frame: frame - ANIMATION_DELAY,
-		fps,
-		from: 0,
-		to: 5,
-		durationInFrames: ANIMATION_DURATION,
-	});
-	const greyscale = spring({
-		frame: frame - ANIMATION_DELAY,
-		fps,
-		from: 0,
-		to: 5,
-		durationInFrames: ANIMATION_DURATION,
-	});
-
 	return (
 		<AbsoluteFill
 			style={{
 				overflow: 'hidden',
 			}}
 		>
-			<BackgroundFiller
-				imageUrl={backgroundImg}
-				style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
-			/>
+			<Sequence name="Background">
+				<EventBackground backgroundImg={backgroundImg} />
+			</Sequence>
 			<Sequence from={50} durationInFrames={130} name="Paillette">
 				<Paillettes assetLink={paillettesAsset} />
 			</Sequence>

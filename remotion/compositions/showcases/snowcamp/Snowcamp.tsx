@@ -1,17 +1,11 @@
-import {
-	AbsoluteFill,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
 import React from 'react';
 import {Snow} from './Snow';
 import {Logo} from './Logo';
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
+import {TalkBackground} from './TalkBackground';
 
 export interface Speaker {
 	picture: string;
@@ -33,22 +27,10 @@ export const Snowcamp: React.FC<TouraineTechProps> = ({
 	time,
 	location,
 }) => {
-	const frame = useCurrentFrame();
-	const blur = interpolate(frame, [0, 20], [0, 5]);
-
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Sequence>
-				<BackgroundFiller
-					imageUrl={staticFile('/images/conferences/grenoble.jpg')}
-					style={{
-						position: 'absolute',
-						width: '100%',
-						height: '100%',
-						filter: `blur(${blur}px)`,
-						transform: 'scale(1.2)',
-					}}
-				/>
+				<TalkBackground />
 			</Sequence>
 			<Sequence from={20}>
 				<Snow />

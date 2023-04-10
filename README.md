@@ -1,9 +1,9 @@
-# Social video generator
+# Shortvid.io 🎥
 
-[![🚧 Integration](https://github.com/lyonjs/social-video-generator/actions/workflows/integration.yml/badge.svg)](https://github.com/lyonjs/social-video-generator/actions/workflows/integration.yml)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/lyonjs/social-video-generator/main)
-![GitHub](https://img.shields.io/github/license/lyonjs/social-video-generator)
-![GitHub Repo stars](https://img.shields.io/github/stars/lyonjs/social-video-generator?style=social)
+[![🚧 Integration](https://github.com/lyonjs/shortvid.io/actions/workflows/integration.yml/badge.svg)](https://github.com/lyonjs/shortvid.io/actions/workflows/integration.yml)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/lyonjs/shortvid.io/main)
+![GitHub](https://img.shields.io/github/license/lyonjs/shortvid.io)
+![GitHub Repo stars](https://img.shields.io/github/stars/lyonjs/shortvid.io?style=social)
 
 ## 📚 Story behind this project
 
@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/6263857/214966765-a22cc958-95bb-49fc-9
 
 We could use Rest API or JSON configuration to generate all your content in few minutes.
 
-Ask maintainers for help by opening [a discussion in our discussion topic dedicate to this usage](https://github.com/lyonjs/social-video-generator/discussions/categories/conference-meetup-communication).
+Ask maintainers for help by opening [a discussion in our discussion topic dedicate to this usage](https://github.com/lyonjs/shortvid.io/discussions/categories/conference-meetup-communication).
 
 ### If you want to promote corporate events
 
@@ -54,14 +54,14 @@ This project won't handle corporate of private events related to company stuff.
 We want to provide generic templates that you can use in order to generate your content.
 Templates will use _customisation props_ to let you match your color / theme / logos.
 
-If you have an idea of a generic template that could be able for all communities, don't hesitate to [present it in our idea discussion](https://github.com/lyonjs/social-video-generator/discussions/categories/ideas)
+If you have an idea of a generic template that could be able for all communities, don't hesitate to [present it in our idea discussion](https://github.com/lyonjs/shortvid.io/discussions/categories/ideas)
 
-To preview templates, just [go to our website and play with props.](https://social-video-generator.vercel.app)
+To preview templates, just [go to our website and play with props.](https://shortvid.io)
 
 ### Any other need or specific stuff
 
 Don't hesitate to fork this repository to implement your specific need.
-[Discussion for help is here if you have questions or ideas](https://github.com/lyonjs/social-video-generator/discussions/categories/q-a) that could help you generate the content you want.
+[Discussion for help is here if you have questions or ideas](https://github.com/lyonjs/shortvid.io/discussions/categories/q-a) that could help you generate the content you want.
 
 ## ✍️Contributing
 

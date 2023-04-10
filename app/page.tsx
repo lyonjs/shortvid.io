@@ -94,7 +94,7 @@ export default function Home() {
 			<p className="mt-2 font-bold">
 				If you are a meetup or conference organizer and you are interested in
 				this tool and you would like to have some help,{' '}
-				<a href="https://github.com/lyonjs/social-video-generator/discussions/categories/conference-meetup-communication">
+				<a href="https://github.com/lyonjs/shortvid.io/discussions/categories/conference-meetup-communication">
 					don&lsquo;t hesitate to open a discussion on our Github and we will
 					see what can be done.
 				</a>

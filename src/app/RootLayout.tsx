@@ -13,7 +13,7 @@ export default function RootLayout({children}: {children: ReactNode}) {
 				<Header />
 				<p>
 					This application is developed and maintained by the{' '}
-					<a href="https://github.com/lyonjs/social-video-generator/graphs/contributors">
+					<a href="https://github.com/lyonjs/shortvid.io/graphs/contributors">
 						volunteer organizers
 					</a>{' '}
 					of the <a href="http://lyonjs.org/">Lyon JS Meetup</a>. It aims to

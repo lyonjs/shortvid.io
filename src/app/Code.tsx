@@ -36,7 +36,7 @@ export const Code: React.FC<{
 					className=" cursor-pointer rounded-lg block py-3 px-5 break-all text-lg bg-stone-900 hover:bg-stone-700"
 					onClick={onClickHandler}
 				>
-					pnpm remotion render src/index.tsx {composition} out/{composition}.mp4
+					pnpm remotion render remotion/index.tsx {composition} out/{composition}.mp4
 					--props=&apos;{JSON.stringify(params).replace(/'/g, "'\\''")}&apos;
 				</code>
 				<div className="notif absolute py-2 px-3 bg-amber-300 text-neutral-900 rounded-lg opacity-0 right-0 top-0 pointer-events-none">

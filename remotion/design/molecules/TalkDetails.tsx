@@ -6,7 +6,8 @@ export const TalkDetails: React.FC<{
 	time?: string;
 	location?: string;
 	style?: React.CSSProperties;
-}> = ({date, time, location, style}) => {
+	iconStyle?: React.CSSProperties;
+}> = ({date, time, location, style, iconStyle}) => {
 	return (
 		<div
 			style={{
@@ -23,20 +24,26 @@ export const TalkDetails: React.FC<{
 				...style,
 			}}
 		>
-			{date && <IconWithCaption iconifyId="mdi:calendar" caption={date} />}
+			{date && (
+				<IconWithCaption
+					iconifyId="mdi:calendar"
+					caption={date}
+					style={iconStyle}
+				/>
+			)}
 			{time && (
 				<IconWithCaption
 					iconifyId="mdi:clock"
 					caption={time}
 					iconStyle={{width: 80}}
-					style={{gap: '2rem'}}
+					style={{gap: '2rem', ...iconStyle}}
 				/>
 			)}
 			{location && (
 				<IconWithCaption
 					iconifyId="mdi:map-marker-radius-outline"
 					caption={location}
-					iconStyle={{width: 90}}
+					iconStyle={{width: 90, ...iconStyle}}
 				/>
 			)}
 		</div>

@@ -1,8 +1,8 @@
 {
-	"name": "social-video-generator",
+	"name": "shortvid.io",
 	"version": "1.0.0",
 	"private": true,
-	"description": "My Remotion video",
+	"description": "Repository to generate meetup trailers for social network like Twitter, Reddit, Slack to announce speakers and talks and sponsors 📣",
 	"repository": {},
 	"license": "MIT",
 	"scripts": {

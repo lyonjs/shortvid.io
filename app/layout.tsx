@@ -2,7 +2,7 @@ import {ReactNode} from 'react';
 import '../styles/globals.css';
 
 export const metadata = {
-	title: 'LyonJS - Social Video Generator',
+	title: 'Shortvid.io',
 	description:
 		'This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association.',
 	icons: {
@@ -10,20 +10,20 @@ export const metadata = {
 	},
 	openGraph: {
 		type: 'website',
-		title: 'LyonJS - Social Video Generator',
-		url: 'https://social-video-generator.vercel.app/',
-		siteName: 'LyonJS - Social Video Generator',
+		title: 'Shortvid.io',
+		url: 'https://shortvid.io/',
+		siteName: 'Shortvid.io',
 		description:
 			'This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association.',
-		images: ['https://social-video-generator.vercel.app/screenshot.png'],
+		images: ['https://shortvid.io/screenshot.png'],
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'LyonJS - Social Video Generator',
+		title: 'Shortvid.io',
 		creator: '@Lyonjs',
 		description:
 			'This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association.',
-		images: ['https://social-video-generator.vercel.app/screenshot.png'],
+		images: ['https://shortvid.io/screenshot.png'],
 	},
 	robots: {
 		index: true,

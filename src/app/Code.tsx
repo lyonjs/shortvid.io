@@ -24,7 +24,7 @@ export const Code: React.FC<{
 			<p className="my-4">
 				Please make sure to have <a href="https://pnpm.io/">pnpm</a> installed
 				then{' '}
-				<a href="https://github.com/lyonjs/social-video-generator">
+				<a href="https://github.com/lyonjs/shortvid.io">
 					clone this repository
 				</a>
 				, install <a href="https://ffmpeg.org/download.html">ffmpeg library</a>{' '}

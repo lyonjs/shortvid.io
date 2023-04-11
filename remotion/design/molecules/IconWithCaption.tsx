@@ -40,6 +40,7 @@ export const IconWithCaption: React.FC<{
 				alignItems: 'center',
 				gap: '1rem',
 				height: 'max-content',
+				fontSize: '1.6rem',
 				...style,
 			}}
 		>
@@ -53,7 +54,7 @@ export const IconWithCaption: React.FC<{
 			<Text
 				style={{
 					position: 'relative',
-					fontSize: '1.6rem',
+					fontSize: 'inherit',
 					color: 'inherit',
 				}}
 			>

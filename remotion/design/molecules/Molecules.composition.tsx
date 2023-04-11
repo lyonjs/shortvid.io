@@ -40,7 +40,7 @@ export const MoleculesComposition: React.FC = () => {
 				height={1200}
 				id="Details"
 				fps={30}
-				durationInFrames={150}
+				durationInFrames={120}
 				defaultProps={{
 					date: '19 Décembre 2023',
 					time: '17h30',

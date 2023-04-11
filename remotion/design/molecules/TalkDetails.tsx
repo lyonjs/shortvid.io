@@ -1,6 +1,5 @@
 import React from 'react';
-import {IconWithCaption} from '../atoms/IconWithCaption';
-import {AbsoluteFill} from 'remotion';
+import {IconWithCaption} from './IconWithCaption';
 
 export const TalkDetails: React.FC<{
 	date?: string;
@@ -24,10 +23,10 @@ export const TalkDetails: React.FC<{
 				...style,
 			}}
 		>
-			{date && <IconWithCaption lottieAsset="lf20_ak90tqhe" caption={date} />}
+			{date && <IconWithCaption iconifyId="mdi:calendar" caption={date} />}
 			{time && (
 				<IconWithCaption
-					lottieAsset="lf20_nv5aXa"
+					iconifyId="mdi:clock"
 					caption={time}
 					iconStyle={{width: 80}}
 					style={{gap: '2rem'}}
@@ -35,7 +34,7 @@ export const TalkDetails: React.FC<{
 			)}
 			{location && (
 				<IconWithCaption
-					lottieAsset="lf20_PgZU3O"
+					iconifyId="mdi:map-marker-radius-outline"
 					caption={location}
 					iconStyle={{width: 90}}
 				/>

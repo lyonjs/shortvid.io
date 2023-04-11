@@ -22,31 +22,47 @@ export const TalkDetails: React.FC<{
 			}}
 		>
 			{date && (
-				<div>
+				<div style={{position: 'relative'}}>
 					<IconWithCaption
 						iconifyId="mdi:calendar"
 						caption={date}
 						style={{
+							position: 'absolute',
+							left: '50%',
+							bottom: 0,
+							transform: 'translateX(-50%)',
 							...iconStyle,
 						}}
 					/>
 				</div>
 			)}
 			{time && (
-				<div>
+				<div style={{position: 'relative'}}>
 					<IconWithCaption
 						iconifyId="mdi:clock"
 						caption={time}
-						style={{...iconStyle}}
+						style={{
+							position: 'absolute',
+							left: '50%',
+							bottom: 0,
+							transform: 'translateX(-50%)',
+							...iconStyle,
+						}}
 					/>
 				</div>
 			)}
 			{location && (
-				<div>
+				<div style={{position: 'relative'}}>
 					<IconWithCaption
 						iconifyId="mdi:map-marker-radius-outline"
 						caption={location}
-						style={{...iconStyle}}
+						style={{
+							position: 'absolute',
+							left: '50%',
+							bottom: 0,
+							transform: 'translateX(-50%)',
+							...iconStyle,
+						}}
 					/>
 				</div>
 			)}

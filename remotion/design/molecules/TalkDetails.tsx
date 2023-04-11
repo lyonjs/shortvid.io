@@ -11,11 +11,8 @@ export const TalkDetails: React.FC<{
 	return (
 		<div
 			style={{
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-				flexWrap: 'wrap',
-				columnGap: '7rem',
+				display: 'grid',
+				gridTemplateColumns: 'repeat(3, 1fr)',
 				position: 'absolute',
 				bottom: '3rem',
 				width: '100%',
@@ -25,26 +22,33 @@ export const TalkDetails: React.FC<{
 			}}
 		>
 			{date && (
-				<IconWithCaption
-					iconifyId="mdi:calendar"
-					caption={date}
-					style={iconStyle}
-				/>
+				<div>
+					<IconWithCaption
+						iconifyId="mdi:calendar"
+						caption={date}
+						style={{
+							...iconStyle,
+						}}
+					/>
+				</div>
 			)}
 			{time && (
-				<IconWithCaption
-					iconifyId="mdi:clock"
-					caption={time}
-					iconStyle={{width: 80}}
-					style={{gap: '2rem', ...iconStyle}}
-				/>
+				<div>
+					<IconWithCaption
+						iconifyId="mdi:clock"
+						caption={time}
+						style={{...iconStyle}}
+					/>
+				</div>
 			)}
 			{location && (
-				<IconWithCaption
-					iconifyId="mdi:map-marker-radius-outline"
-					caption={location}
-					iconStyle={{width: 90, ...iconStyle}}
-				/>
+				<div>
+					<IconWithCaption
+						iconifyId="mdi:map-marker-radius-outline"
+						caption={location}
+						style={{...iconStyle}}
+					/>
+				</div>
 			)}
 		</div>
 	);

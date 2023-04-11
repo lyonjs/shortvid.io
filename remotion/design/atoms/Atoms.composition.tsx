@@ -35,15 +35,6 @@ export const AtomsComposition: React.FC = () => {
 				defaultProps={{imageUrl: staticFile('/defaultBackgroundImage.jpeg')}}
 			/>
 			<Composition
-				component={BackgroundFiller}
-				width={1200}
-				height={1200}
-				id="LottieBackground"
-				fps={30}
-				durationInFrames={120}
-				defaultProps={{lottieAssetLink: 'lf20_dwGMPRJ7zu'}}
-			/>
-			<Composition
 				component={Text}
 				width={1200}
 				height={1200}

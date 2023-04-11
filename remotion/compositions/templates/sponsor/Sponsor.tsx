@@ -12,6 +12,7 @@ import {SponsorThanks} from './SponsorThanks';
 import {SponsorMap} from './SponsorMap';
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 import React from 'react';
+import {SponsorBackground} from './SponsorBackground';
 
 export const Sponsor: React.FC<{
 	companyName?: string;
@@ -24,32 +25,10 @@ export const Sponsor: React.FC<{
 	sponsorLocalisation,
 	sponsorLogo,
 }) => {
-	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const ANIMATION_DURATION = 30;
-	const ANIMATION_DELAY = ANIMATION_DURATION / 2;
-
-	const blur = spring({
-		frame: frame - ANIMATION_DELAY,
-		fps,
-		from: 0,
-		to: 5,
-		durationInFrames: ANIMATION_DURATION,
-	});
-	const greyscale = spring({
-		frame: frame - ANIMATION_DELAY,
-		fps,
-		from: 0,
-		to: 5,
-		durationInFrames: ANIMATION_DURATION,
-	});
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Sequence name="Background">
-				<BackgroundFiller
-					imageUrl={backgroundImg}
-					style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
-				/>
+				<SponsorBackground backgroundImg={backgroundImg} />
 			</Sequence>
 			<Sequence name="Lottie Thanks">
 				<SponsorThanks />

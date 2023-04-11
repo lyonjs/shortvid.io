@@ -1,8 +1,10 @@
 import React from 'react';
-import {spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const TalkBackground = () => {
+export const SponsorBackground: React.FC<{backgroundImg: string}> = ({
+	backgroundImg,
+}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const ANIMATION_DURATION = 30;
@@ -22,12 +24,9 @@ export const TalkBackground = () => {
 		to: 5,
 		durationInFrames: ANIMATION_DURATION,
 	});
-
 	return (
 		<BackgroundFiller
-			imageUrl={staticFile(
-				'/images/conferences/alpescraft/alpescraft-background.webp'
-			)}
+			imageUrl={backgroundImg}
 			style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
 			bottomGradient={true}
 		/>

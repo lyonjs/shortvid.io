@@ -29,6 +29,7 @@ export const EventBackground: React.FC<{backgroundImg: string}> = ({
 		<BackgroundFiller
 			imageUrl={backgroundImg}
 			style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
+			bottomGradient={true}
 		/>
 	);
 };

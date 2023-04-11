@@ -19,6 +19,8 @@ export const SilhouetteComposition: React.FC = () => {
 					silhouetteUrl:
 						'https://user-images.githubusercontent.com/6263857/230662773-4d7a534a-e01c-4ba8-9c3b-fa95586adf52.png',
 					side: 'right',
+					logoUrl:
+						'https://www.meetup.com/mu_static/fr-FR/logo--script.004ada05.svg',
 				}}
 			/>
 		</Folder>

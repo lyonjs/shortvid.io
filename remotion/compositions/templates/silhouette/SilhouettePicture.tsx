@@ -8,7 +8,6 @@ export const SilhouettePicture: React.FC<{
 	silhouetteUrl: string;
 	dropShadow: boolean;
 }> = ({side, silhouetteUrl, dropShadow}) => {
-	let transform = side === 'left' ? '' : 'scaleX(-1)';
 	const frame = useCurrentFrame();
 
 	const slideIn = interpolate(frame, [0, DURATION], [100, 0], {
@@ -20,7 +19,9 @@ export const SilhouettePicture: React.FC<{
 		easing: Easing.out(Easing.ease),
 	});
 
-	transform += ` translateX(-${slideIn}%)`;
+	const transform = `${
+		side === 'left' ? '' : 'scaleX(-1)'
+	} translateX(-${slideIn}%)`;
 
 	return (
 		<div

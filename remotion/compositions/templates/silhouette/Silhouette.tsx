@@ -4,6 +4,7 @@ import React from 'react';
 import {Side} from './Silhouette.type';
 import {SilhouettePicture} from './SilhouettePicture';
 import {SilhouetteTitle} from './SilhouetteTitle';
+import {SilhouetteLogo} from './SilhouetteLogo';
 
 export const Silhouette: React.FC<{
 	backgroundImg: string;
@@ -11,12 +12,14 @@ export const Silhouette: React.FC<{
 	side?: Side;
 	silhouetteUrl: string;
 	dropShadow?: boolean;
+	logoUrl?: string;
 }> = ({
 	backgroundImg,
 	side = 'left',
 	silhouetteUrl,
 	title,
 	dropShadow = false,
+	logoUrl,
 }) => {
 	return (
 		<AbsoluteFill
@@ -49,6 +52,12 @@ export const Silhouette: React.FC<{
 						<SilhouetteTitle title={title} />
 					</Sequence>
 				</div>
+
+				{logoUrl && (
+					<Sequence from={60} name="Logo">
+						<SilhouetteLogo logoUrl={logoUrl} side={side} />
+					</Sequence>
+				)}
 			</AbsoluteFill>
 		</AbsoluteFill>
 	);

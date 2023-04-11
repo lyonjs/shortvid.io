@@ -1,5 +1,3 @@
-import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../../hooks/useLottie';
 import {Sequence, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {TalkDetails} from '../../../design/molecules/TalkDetails';
 
@@ -10,9 +8,6 @@ export const Details: React.FC<{
 }> = ({date, time, location}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const illustrationDate = useLottie('lf20_ak90tqhe');
-	const illustrationHour = useLottie('lf20_nv5aXa');
-	const illustrationLocation = useLottie('lf20_PgZU3O');
 
 	const drop = spring({
 		frame: frame - 40,
@@ -28,10 +23,6 @@ export const Details: React.FC<{
 		fps,
 		durationInFrames: 30,
 	});
-
-	if (!illustrationHour || !illustrationDate || !illustrationLocation) {
-		return null;
-	}
 
 	return (
 		<Sequence from={40} name="Details">

@@ -20,12 +20,14 @@ export default function SilhouettePage() {
 	const [silhouetteUrl, setSilhouetteUrl] = useInputChange<string>(
 		'https://user-images.githubusercontent.com/6263857/230662773-4d7a534a-e01c-4ba8-9c3b-fa95586adf52.png'
 	);
+	const [logoUrl, setLogoUrl] = useInputChange<string | undefined>(undefined);
 
 	const props = {
 		title,
 		backgroundImg,
 		side,
 		silhouetteUrl,
+		logoUrl,
 	};
 
 	return (
@@ -66,6 +68,7 @@ export default function SilhouettePage() {
 						value={silhouetteUrl}
 						label="Url of silhouette"
 					/>
+					<Input setValue={setLogoUrl} value={logoUrl} label="Logo url" />
 				</Form>
 			</div>
 

@@ -1,6 +1,7 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
 import {Icon} from '@iconify/react';
+import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 
 const {fontFamily} = loadFont();
 
@@ -60,8 +61,9 @@ export const Details: React.FC<{
 				});
 
 				return (
-					<div
-						key={`detail-${index}`}
+					<IconWithCaption
+						iconifyId={item.icon}
+						caption={item.data}
 						style={{
 							opacity,
 							position: 'relative',
@@ -71,15 +73,8 @@ export const Details: React.FC<{
 							gap: '1rem',
 							bottom: drop,
 						}}
-					>
-						<Icon
-							icon={item.icon}
-							style={{
-								fontSize: 40,
-							}}
-						/>
-						<span>{item.data}</span>
-					</div>
+						iconStyle={{fontSize: 40}}
+					/>
 				);
 			})}
 		</div>

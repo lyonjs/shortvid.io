@@ -8,6 +8,7 @@ import {
 import {loadFont} from '@remotion/google-fonts/Aldrich';
 import {Icon} from '@iconify/react';
 import React from 'react';
+import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 
 const {fontFamily} = loadFont();
 
@@ -76,8 +77,9 @@ export const Details: React.FC<{
 				});
 
 				return (
-					<div
-						key={item.icon}
+					<IconWithCaption
+						iconifyId={item.icon}
+						caption={item.data}
 						style={{
 							opacity,
 							position: 'relative',
@@ -85,23 +87,11 @@ export const Details: React.FC<{
 							justifyContent: 'center',
 							alignItems: 'center',
 							gap: '1rem',
+							fontSize: 35,
 							bottom: drop,
 						}}
-					>
-						<Icon
-							icon={item.icon}
-							style={{
-								fontSize: 40,
-							}}
-						/>
-						<span
-							style={{
-								fontSize: 35,
-							}}
-						>
-							{item.data}
-						</span>
-					</div>
+						iconStyle={{fontSize: 40}}
+					/>
 				);
 			})}
 		</div>

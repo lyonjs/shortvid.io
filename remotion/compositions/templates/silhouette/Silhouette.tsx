@@ -1,10 +1,10 @@
 import {AbsoluteFill, Sequence, Img, interpolate} from 'remotion';
-import {ImageBackground} from '../../../design/atoms/ImageBackground';
 import React from 'react';
 import {Side} from './Silhouette.type';
 import {SilhouettePicture} from './SilhouettePicture';
 import {SilhouetteTitle} from './SilhouetteTitle';
 import {SilhouetteLogo} from './SilhouetteLogo';
+import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
 export const Silhouette: React.FC<{
 	backgroundImg: string;
@@ -28,7 +28,7 @@ export const Silhouette: React.FC<{
 			}}
 		>
 			<Sequence>
-				<ImageBackground src={backgroundImg} />
+				<BackgroundFiller imageUrl={backgroundImg} />
 			</Sequence>
 
 			<AbsoluteFill

@@ -2,7 +2,6 @@ import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {SpeakerName} from './SpeakerName';
 import {Speaker} from '../../../types/conferences.types';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
-import {Text} from '../../../design/atoms/Text';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	const frame = useCurrentFrame();
@@ -12,7 +11,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		frame,
 		fps,
 		from: -600,
-		to: 30,
+		to: 40,
 		durationInFrames: 30,
 	});
 

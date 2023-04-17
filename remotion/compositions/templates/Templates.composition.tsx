@@ -5,6 +5,7 @@ import {SponsorsComposition} from './sponsor/Sponsors.composition';
 import {TalksComposition} from './talk/Talks.composition';
 import {MeetupComposition} from './meetup/Meetup.composition';
 import {EventsComposition} from './event/Events.composition';
+import {SilhouetteComposition} from './silhouette/Silhouette.composition';
 
 export const TemplatesComposition: React.FC = () => {
 	return (
@@ -13,6 +14,7 @@ export const TemplatesComposition: React.FC = () => {
 			<TalksComposition />
 			<MeetupComposition />
 			<EventsComposition />
+			<SilhouetteComposition />
 		</Folder>
 	);
 };

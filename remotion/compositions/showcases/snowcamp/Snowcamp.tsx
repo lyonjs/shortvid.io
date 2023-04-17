@@ -2,10 +2,10 @@ import {AbsoluteFill, Sequence} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
-import {Background} from './Background';
 import React from 'react';
 import {Snow} from './Snow';
 import {Logo} from './Logo';
+import {TalkBackground} from './TalkBackground';
 
 export interface Speaker {
 	picture: string;
@@ -30,7 +30,7 @@ export const Snowcamp: React.FC<TouraineTechProps> = ({
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Sequence>
-				<Background />
+				<TalkBackground />
 			</Sequence>
 			<Sequence from={20}>
 				<Snow />

@@ -1,11 +1,11 @@
 import React from 'react';
-import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
-import {ImageBackground} from '../../../design/atoms/ImageBackground';
 import {Mountains} from './Mountains';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
+import {TalkBackground} from './TalkBackground';
 
 export interface Speaker {
 	picture: string;
@@ -36,12 +36,7 @@ export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 			}}
 		>
 			<Sequence name="Background">
-				<ImageBackground
-					animated
-					src={staticFile(
-						'/images/conferences/alpescraft/alpescraft-background.webp'
-					)}
-				/>
+				<TalkBackground />
 			</Sequence>
 			<Sequence name="Mountains-decorations" from={20}>
 				<Mountains />

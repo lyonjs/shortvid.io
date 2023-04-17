@@ -1,9 +1,18 @@
-import {AbsoluteFill, Sequence} from 'remotion';
-import {ImageBackground} from '../../../design/atoms/ImageBackground';
+import {
+	AbsoluteFill,
+	Sequence,
+	spring,
+	staticFile,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 import {SponsorOrgaLogo} from './SponsorOrgaLogo';
 import {SponsorPresentation} from './SponsorPresentation';
 import {SponsorThanks} from './SponsorThanks';
 import {SponsorMap} from './SponsorMap';
+import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
+import React from 'react';
+import {SponsorBackground} from './SponsorBackground';
 
 export const Sponsor: React.FC<{
 	companyName?: string;
@@ -12,14 +21,14 @@ export const Sponsor: React.FC<{
 	sponsorLogo?: string;
 }> = ({
 	companyName = 'Evilcorp',
-	backgroundImg,
+	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
 	sponsorLocalisation,
 	sponsorLogo,
 }) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Sequence name="Background">
-				<ImageBackground animated src={backgroundImg} />
+				<SponsorBackground backgroundImg={backgroundImg} />
 			</Sequence>
 			<Sequence name="Lottie Thanks">
 				<SponsorThanks />

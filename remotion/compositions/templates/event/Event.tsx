@@ -1,8 +1,9 @@
+import React from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
-import {ImageBackground} from '../../../design/atoms/ImageBackground';
 import {LottieAsset} from '../../../design/atoms/LottieAsset';
 import {EventTitle} from './EventTitle';
 import {Paillettes} from '../../../design/atoms/Paillettes';
+import {EventBackground} from './EventBackground';
 
 export const Event: React.FC<{
 	backgroundImg?: string;
@@ -21,7 +22,9 @@ export const Event: React.FC<{
 				overflow: 'hidden',
 			}}
 		>
-			<ImageBackground animated src={backgroundImg} />
+			<Sequence name="Background">
+				<EventBackground backgroundImg={backgroundImg} />
+			</Sequence>
 			<Sequence from={50} durationInFrames={130} name="Paillette">
 				<Paillettes assetLink={paillettesAsset} />
 			</Sequence>

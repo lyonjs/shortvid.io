@@ -1,8 +1,9 @@
-import {AbsoluteFill, Sequence} from 'remotion';
-import {ImageBackground} from '../../../design/atoms/ImageBackground';
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 import {MeetupPresentation} from './MeetupPresentation';
 import {Register} from './Register';
 import {MeetupDate} from './MeetupDate';
+import React from 'react';
+import {MeetupBackground} from './MeetupBackground';
 
 export interface MeetupProps {
 	eventLogo?: string;
@@ -12,7 +13,7 @@ export interface MeetupProps {
 }
 
 export const Meetup = ({
-	backgroundImg,
+	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
 	title,
 	date,
 	eventLogo,
@@ -23,8 +24,7 @@ export const Meetup = ({
 				overflow: 'hidden',
 			}}
 		>
-			<ImageBackground animated src={backgroundImg} />
-
+			<MeetupBackground backgroundImg={backgroundImg} />
 			<Sequence from={40} durationInFrames={130}>
 				<MeetupPresentation title={title} eventLogo={eventLogo} />
 			</Sequence>

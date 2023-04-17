@@ -7,7 +7,7 @@ export const AlpesCraftComposition: React.FC = () => {
 	return (
 		<Folder name="AlpesCraft-2023">
 			<Composition
-				id="Alpescraft"
+				id="AlpesCraft"
 				component={AlpesCraft}
 				durationInFrames={200}
 				fps={30}

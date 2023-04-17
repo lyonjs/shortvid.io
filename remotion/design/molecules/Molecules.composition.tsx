@@ -1,6 +1,7 @@
 import React from 'react';
-import {Composition, Folder, staticFile} from 'remotion';
+import {Composition, Folder} from 'remotion';
 import {AvatarWithCaption} from './AvatarWithCaption';
+import {IconWithCaption} from './IconWithCaption';
 
 export const MoleculesComposition: React.FC = () => {
 	return (
@@ -14,6 +15,22 @@ export const MoleculesComposition: React.FC = () => {
 				durationInFrames={120}
 				defaultProps={{
 					caption: 'Association Lyon.Js',
+				}}
+			/>
+			<Composition
+				component={IconWithCaption}
+				width={1200}
+				height={1200}
+				id="IconifyWithCaption"
+				fps={30}
+				durationInFrames={120}
+				defaultProps={{
+					caption: '19 Décembre 2023',
+					iconifyId: 'mdi:calendar',
+					style: {
+						color: 'black',
+						padding: 20,
+					},
 				}}
 			/>
 		</Folder>

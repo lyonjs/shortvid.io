@@ -1,5 +1,5 @@
 import React from 'react';
-import {Composition, Folder, staticFile} from 'remotion';
+import {Composition, Folder} from 'remotion';
 import {Avatar} from './Avatar';
 import {EventLogo} from './EventLogo';
 import {Title} from './Title';

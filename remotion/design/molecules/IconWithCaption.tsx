@@ -1,30 +1,6 @@
 import React from 'react';
-import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../hooks/useLottie';
-import {Img} from 'remotion';
 import {Icon} from '@iconify/react';
 import {Text} from '../atoms/Text';
-
-const LottieIcon: React.FC<{
-	lottieAsset: string;
-	style?: React.CSSProperties;
-}> = ({lottieAsset, style}) => {
-	const illustration = useLottie(lottieAsset);
-
-	if (!illustration) {
-		return null;
-	}
-	return (
-		<Lottie
-			style={{
-				width: 150,
-				...style,
-			}}
-			playbackRate={1.5}
-			animationData={illustration}
-		/>
-	);
-};
 
 export const IconWithCaption: React.FC<{
 	iconifyId: string;

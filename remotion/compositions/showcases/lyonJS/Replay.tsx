@@ -1,13 +1,12 @@
 import {Audio, interpolate, Sequence, staticFile} from 'remotion';
 import {Logo} from './Logo';
-import {RightTriangle} from './RightTriangle';
-import {LeftTriangle} from './LeftTriangle';
 import {TalkTitle} from './TalkTitle';
 import {AbsoluteFill} from 'remotion';
 import {BigSpeakers} from './BigSpeakers';
 import React from 'react';
 import {Details} from './Details';
 import {LogoSponsor} from './LogoSponsor';
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 
 export interface Speaker {
 	picture: string;
@@ -37,8 +36,7 @@ export const ReplayLyonJS: React.FC<LyonJSReplayType> = ({
 			/>
 			<Logo />
 			<LogoSponsor sponsor={sponsor} />
-			<RightTriangle />
-			<LeftTriangle />
+			<BackgroundTriangle />
 			<BigSpeakers speakers={speakers} dropTop={220} />
 			<Sequence from={165}>
 				<TalkTitle

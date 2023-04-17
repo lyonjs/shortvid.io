@@ -1,12 +1,11 @@
 import {Sequence} from 'remotion';
 import {Logo} from './Logo';
-import {RightTriangle} from './RightTriangle';
-import {LeftTriangle} from './LeftTriangle';
 import {TalkTitle} from './TalkTitle';
 import {AbsoluteFill} from 'remotion';
 import {Speaker} from './TouraineTech2023';
 import {Type} from './Type';
 import {BigSpeakers} from './BigSpeakers';
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 
 interface ReplayType {
 	title: string;
@@ -18,8 +17,7 @@ export const Replay: React.FC<ReplayType> = ({title, speakers, type}) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Logo />
-			<RightTriangle />
-			<LeftTriangle />
+			<BackgroundTriangle primaryColor={'#6abfad'} secondaryColor={'#222333'} />
 			<BigSpeakers speakers={speakers} dropTop={250} />
 			<Sequence from={60}>
 				<TalkTitle

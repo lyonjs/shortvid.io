@@ -1,10 +1,10 @@
 import {AbsoluteFill} from 'remotion';
 import {Logo} from './Logo';
-import {LeftTriangle} from './LeftTriangle';
-import {RightTriangle} from './RightTriangle';
+
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 
 export interface Speaker {
 	picture: string;
@@ -29,8 +29,7 @@ export const TouraineTech2023: React.FC<TouraineTechProps> = ({
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Logo />
-			<RightTriangle />
-			<LeftTriangle />
+			<BackgroundTriangle primaryColor={'#6abfad'} secondaryColor={'#222333'} />
 			<Speakers speakers={speakers} />
 			<TalkTitle title={title} />
 			<Details date={date} time={time} location={location} />

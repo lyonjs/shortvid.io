@@ -1,9 +1,8 @@
 import {AbsoluteFill} from 'remotion';
 import {Logo} from './Logo';
-import {LeftTriangle} from './LeftTriangle';
-import {RightTriangle} from './RightTriangle';
 import {TalkTitle} from './TalkTitle';
 import {SponsorLogo} from '../../templates/sponsor/SponsorLogo';
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 
 export interface SponsorProps {
 	message: string;
@@ -17,8 +16,8 @@ export const SponsorTouraineTech2023: React.FC<SponsorProps> = ({
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Logo />
-			<RightTriangle />
-			<LeftTriangle />
+			<BackgroundTriangle primaryColor={'#6abfad'} secondaryColor={'#222333'} />
+
 			<TalkTitle title={message} />
 			<SponsorLogo
 				sponsorLogo={sponsorLogo}

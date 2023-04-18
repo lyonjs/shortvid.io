@@ -1,14 +1,12 @@
 import {AbsoluteFill, Img, staticFile} from 'remotion';
 import React from 'react';
-import {RightTriangle} from './RightTriangle';
-import {LeftTriangle} from './LeftTriangle';
 import {GreenScreen} from './GreenScreen';
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 
 export const LayerFullScreen: React.FC = () => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
-			<RightTriangle />
-			<LeftTriangle />
+			<BackgroundTriangle />
 			<div
 				style={{
 					height: '100%',

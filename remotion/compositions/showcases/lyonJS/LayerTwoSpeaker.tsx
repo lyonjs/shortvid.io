@@ -1,16 +1,14 @@
 import {AbsoluteFill, Img, staticFile} from 'remotion';
 import React from 'react';
-import {RightTriangle} from './RightTriangle';
-import {LeftTriangle} from './LeftTriangle';
 import {GreenScreen} from './GreenScreen';
 import {LayerTitle} from './LayerTitle';
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 
 type Props = {title: string; sponsorLogoUrl: string};
 export const LayerTwoSpeaker: React.FC<Props> = ({title, sponsorLogoUrl}) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
-			<RightTriangle />
-			<LeftTriangle />
+			<BackgroundTriangle />
 			<Img
 				style={{
 					zIndex: 1,

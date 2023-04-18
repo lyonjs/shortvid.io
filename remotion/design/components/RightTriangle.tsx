@@ -1,6 +1,12 @@
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const RightTriangle = () => {
+export const RightTriangle = ({
+	color = '#efdb4f',
+	isAnimated = true,
+}: {
+	color?: string;
+	isAnimated?: boolean;
+}) => {
 	const {height, width, durationInFrames} = useVideoConfig();
 	const frame = useCurrentFrame();
 
@@ -12,10 +18,10 @@ export const RightTriangle = () => {
 		<div
 			style={{
 				position: 'absolute',
-				top,
+				top: isAnimated ? top : 100,
 				height: 3 * height,
 				width: 2 * width,
-				backgroundColor: '#efdb4f',
+				backgroundColor: color,
 				transform: `translateX(${height / 2}px) rotate(150deg)`,
 			}}
 		/>

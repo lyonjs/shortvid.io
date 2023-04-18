@@ -10,22 +10,36 @@ import {
 } from '../../../src/app/hooks/onInputChange';
 import LayerByMode from '../../../src/app/LayerByMode';
 import {SelectInput} from '../../../src/app/forms/selectInput';
+import {ColorInput} from '../../../src/app/forms/colorInput';
 
 export default function LayersPage() {
 	const [copied, setCopied] = useState(false);
 	const [mode, setMode] = useSelectChange<LayerMode>('one');
-	const [title, setTitle] = useInputChange<string>('LyonJS');
+	const [title, setTitle] = useInputChange<string>('Shortvid.io 🎬');
 	const [sponsor, setSponsor] = useInputChange<string>(
 		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg'
 	);
+	const [primaryColor, setPrimaryColor] = useInputChange<string>('#323330');
+	const [secondaryColor, setSecondaryColor] = useInputChange<string>('#efdb4f');
+	const [decoration, setDecoration] = useInputChange<string>(
+		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png'
+	);
+
 	const props = {
 		mode,
 		title,
 		sponsor,
+		primaryColor,
+		secondaryColor,
+		decoration,
 	};
-	const layerUrl = `/screens/layers/${mode}/?title=${title}&sponsor=${encodeURIComponent(
-		sponsor
-	)}`;
+	const layerUrl = `/screens/layers/${mode}/?title=${title}&sponsor=${sponsor}&primaryColor=${encodeURIComponent(
+		primaryColor
+	)}&secondaryColor=${encodeURIComponent(
+		secondaryColor
+	)}&decoration=${decoration}`;
+
+	console.log(layerUrl);
 
 	const onClickHandler = useCallback(() => {
 		const {origin} = window.location;
@@ -57,8 +71,23 @@ export default function LayersPage() {
 					label="Mode"
 					options={['one', 'two', 'full']}
 				/>
+				<ColorInput
+					setValue={setPrimaryColor}
+					value={primaryColor}
+					label="Primary color"
+				/>
+				<ColorInput
+					setValue={setSecondaryColor}
+					value={secondaryColor}
+					label="Secondary color"
+				/>
 				<Input setValue={setTitle} value={title} label="Talk title" />
 				<Input setValue={setSponsor} value={sponsor} label="Sponsor image" />
+				<Input
+					setValue={setDecoration}
+					value={decoration}
+					label="Layer decoration"
+				/>
 				<button
 					type="button"
 					className="font-bold mt-4"

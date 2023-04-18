@@ -1,9 +1,6 @@
 import React from 'react';
-import {Composition, Folder, Still} from 'remotion';
+import {Composition, Folder} from 'remotion';
 import {ReplayLyonJS} from './Replay';
-import {LayerFullScreen} from './LayerFullScreen';
-import {LayerOneSpeaker} from './LayerOneSpeaker';
-import {LayerTwoSpeaker} from './LayerTwoSpeaker';
 
 export const LyonJSComposition: React.FC = () => {
 	return (
@@ -28,34 +25,6 @@ export const LyonJSComposition: React.FC = () => {
 					sponsor:
 						'https://s3.eu-west-3.amazonaws.com/moovijob.prod/1494438/Horizontal_Black_Logo-Zenika.png',
 				}}
-			/>
-			<Still
-				id="LyonJSLayerFullScreen"
-				component={LayerFullScreen}
-				width={1920}
-				height={1080}
-			/>
-			<Still
-				id="LyonJSLayerOneSpeaker"
-				component={LayerOneSpeaker}
-				defaultProps={{
-					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-					sponsorLogoUrl:
-						'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg',
-				}}
-				width={1920}
-				height={1080}
-			/>
-			<Still
-				id="LyonJSLayerTwoSpeaker"
-				component={LayerTwoSpeaker}
-				defaultProps={{
-					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-					sponsorLogoUrl:
-						'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg',
-				}}
-				width={1920}
-				height={1080}
 			/>
 		</Folder>
 	);

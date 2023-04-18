@@ -19,7 +19,6 @@ export const Details: React.FC<{
 			date={date}
 			time={time}
 			location={location}
-			flex={true}
 			style={{
 				fontSize: '25px',
 				flexWrap: 'wrap',

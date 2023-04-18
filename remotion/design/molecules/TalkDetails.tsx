@@ -7,12 +7,11 @@ export const TalkDetails: React.FC<{
 	location?: string;
 	style?: React.CSSProperties;
 	iconStyle?: React.CSSProperties;
-	flex?: boolean;
-}> = ({date, time, location, style, iconStyle, flex = false}) => {
+}> = ({date, time, location, style, iconStyle}) => {
 	return (
 		<div
 			style={{
-				display: flex ? 'flex' : 'grid',
+				display: 'grid',
 				gridTemplateColumns: 'repeat(3, 1fr)',
 				justifyContent: 'center',
 				alignItems: 'center',
@@ -21,7 +20,6 @@ export const TalkDetails: React.FC<{
 				width: '100%',
 				fontWeight: 700,
 				color: 'white',
-				height: flex ? '100px' : 'auto',
 				...style,
 			}}
 		>
@@ -29,7 +27,7 @@ export const TalkDetails: React.FC<{
 				<div
 					style={{
 						position: 'relative',
-						width: flex ? '40%' : 'auto',
+						width: 'auto',
 						flex: '1 0 20%',
 					}}
 				>
@@ -38,7 +36,7 @@ export const TalkDetails: React.FC<{
 						caption={date}
 						style={{
 							position: 'absolute',
-							left: flex ? '80%' : '50%',
+							left: '50%',
 							bottom: 0,
 							transform: 'translateX(-50%)',
 							...iconStyle,
@@ -50,7 +48,7 @@ export const TalkDetails: React.FC<{
 				<div
 					style={{
 						position: 'relative',
-						width: flex ? '40%' : 'auto',
+						width: 'auto',
 						flex: '1 0 20%',
 					}}
 				>
@@ -59,7 +57,7 @@ export const TalkDetails: React.FC<{
 						caption={time}
 						style={{
 							position: 'absolute',
-							left: flex ? '20%' : '50%',
+							left: '50%',
 							bottom: 0,
 							transform: 'translateX(-50%)',
 							...iconStyle,
@@ -71,7 +69,7 @@ export const TalkDetails: React.FC<{
 				<div
 					style={{
 						position: 'relative',
-						width: flex ? '40%' : 'auto',
+						width: 'auto',
 						flexBasis: '100%',
 					}}
 				>

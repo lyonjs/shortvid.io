@@ -62,6 +62,7 @@ export const Details: React.FC<{
 
 				return (
 					<IconWithCaption
+						key={index}
 						iconifyId={item.icon}
 						caption={item.data}
 						style={{

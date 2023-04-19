@@ -6,7 +6,7 @@ const OVERSCAN_MARGIN = 100;
 const ROWS = 10;
 const COLS = 15;
 
-export const BackgroundNoise: React.FC<{
+export const BackgroundCircleNoise: React.FC<{
 	speed: number;
 	circleRadius: number;
 	maxOffset: number;

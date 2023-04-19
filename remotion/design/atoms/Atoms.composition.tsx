@@ -6,7 +6,7 @@ import {Title} from './Title';
 import {BackgroundFiller} from './BackgroundFiller';
 import {Text} from './Text';
 import {BackgroundTriangle} from './BackgroundTriangle';
-import {BackgroundNoise} from './BackgroundNoise';
+import {BackgroundCircleNoise} from './BackgroundCircleNoise';
 
 export const AtomsComposition: React.FC = () => {
 	return (
@@ -63,10 +63,10 @@ export const AtomsComposition: React.FC = () => {
 				durationInFrames={120}
 			/>
 			<Composition
-				component={BackgroundNoise}
+				component={BackgroundCircleNoise}
 				width={1200}
 				height={700}
-				id="BackgroundNoise"
+				id="BackgroundCircleNoise"
 				fps={30}
 				durationInFrames={150}
 				defaultProps={{speed: 0.01, circleRadius: 5, maxOffset: 20}}

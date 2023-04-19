@@ -10,6 +10,9 @@ dependencies:
   '@remotion/lottie':
     specifier: 3.3.83
     version: 3.3.83(lottie-web@5.11.0)(react-dom@18.2.0)(react@18.2.0)
+  '@remotion/noise':
+    specifier: 3.3.83
+    version: 3.3.83(react-dom@18.2.0)(react@18.2.0)
   '@remotion/player':
     specifier: 3.3.83
     version: 3.3.83(react-dom@18.2.0)(react@18.2.0)
@@ -33,7 +36,7 @@ dependencies:
     version: 5.11.0
   next:
     specifier: ^13.2.4
-    version: 13.2.4(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0)
+    version: 13.2.4(react-dom@18.2.0)(react@18.2.0)
   node-fetch:
     specifier: ^3.3.0
     version: 3.3.0
@@ -1317,6 +1320,16 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       remotion: 3.3.83(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
+  /@remotion/noise@3.3.83(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-mT2eJHUHBa9TGHneqhiiBtX8kjY6OuPiLnKXtwUOAbMTRK54tZrZLn/0NDhABzO8Iw0xzafARA6mmXva/8Fb5w==}
+    dependencies:
+      remotion: 3.3.83(react-dom@18.2.0)(react@18.2.0)
+      simplex-noise: 4.0.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
     dev: false
 
   /@remotion/paths@3.3.83:
@@ -4547,7 +4560,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /next@13.2.4(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0):
+  /next@13.2.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -4574,7 +4587,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.21.3)(react@18.2.0)
+      styled-jsx: 5.1.1(react@18.2.0)
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.2.4
       '@next/swc-android-arm64': 13.2.4
@@ -5299,6 +5312,10 @@ packages:
   /signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
 
+  /simplex-noise@4.0.1:
+    resolution: {integrity: sha512-zl/+bdSqW7HJOQ0oDbxrNYaF4F5ik0i7M6YOYmEoIJNtg16NpvWaTTM1Y7oV/7T0jFljawLgYPS81Uu2rsfo1A==}
+    dev: false
+
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: false
@@ -5445,7 +5462,7 @@ packages:
       webpack: 5.76.1(esbuild@0.16.12)
     dev: false
 
-  /styled-jsx@5.1.1(@babel/core@7.21.3)(react@18.2.0):
+  /styled-jsx@5.1.1(react@18.2.0):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -5458,7 +5475,6 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      '@babel/core': 7.21.3
       client-only: 0.0.1
       react: 18.2.0
     dev: false

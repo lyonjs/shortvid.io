@@ -15,8 +15,6 @@ export default function LayerScreenMode({params}: {params: {mode: string}}) {
 	const secondaryColor = searchParams.get('secondaryColor') || '';
 	const decoration = searchParams.get('decoration') || '';
 
-	console.log(primaryColor, secondaryColor, decoration);
-
 	return (
 		<Player
 			style={{

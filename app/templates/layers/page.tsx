@@ -39,8 +39,6 @@ export default function LayersPage() {
 		secondaryColor
 	)}&decoration=${decoration}`;
 
-	console.log(layerUrl);
-
 	const onClickHandler = useCallback(() => {
 		const {origin} = window.location;
 		navigator.clipboard.writeText(`${origin}${layerUrl}`);

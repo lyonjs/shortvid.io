@@ -125,7 +125,6 @@ export default function ConferencePage({
 					height="300px"
 					width="800px"
 					onChange={(event: {jsObject: any}) => {
-						console.log(event.jsObject);
 						setData(event.jsObject);
 					}}
 				/>

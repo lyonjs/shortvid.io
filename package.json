@@ -20,7 +20,7 @@
 		"@remotion/lottie": "3.3.83",
 		"@remotion/player": "3.3.83",
 		"@remotion/shapes": "3.3.83",
-		"@types/jest": "29.5.0",
+		"@types/jest": "29.5.1",
 		"@vercel/analytics": "^0.1.11",
 		"date-fns": "^2.29.3",
 		"jest": "29.5.0",

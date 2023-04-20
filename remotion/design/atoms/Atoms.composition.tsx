@@ -6,6 +6,7 @@ import {Title} from './Title';
 import {BackgroundFiller} from './BackgroundFiller';
 import {Text} from './Text';
 import {BackgroundTriangle} from './BackgroundTriangle';
+import {BackgroundCircleNoise} from './BackgroundCircleNoise';
 
 export const AtomsComposition: React.FC = () => {
 	return (
@@ -60,6 +61,15 @@ export const AtomsComposition: React.FC = () => {
 				id="TriangleBackground"
 				fps={30}
 				durationInFrames={120}
+			/>
+			<Composition
+				component={BackgroundCircleNoise}
+				width={1200}
+				height={700}
+				id="BackgroundCircleNoise"
+				fps={30}
+				durationInFrames={150}
+				defaultProps={{speed: 0.01, circleRadius: 5, maxOffset: 20}}
 			/>
 		</Folder>
 	);

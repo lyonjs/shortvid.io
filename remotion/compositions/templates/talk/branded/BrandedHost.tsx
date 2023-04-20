@@ -60,6 +60,13 @@ export const BrandedHost: React.FC<{
 		blobRadius6,
 	] = blobAnimation;
 
+	const textStyles = {
+		opacity,
+		fontFamily: 'inherit',
+		textShadow: '1px 1px 15px #000000bb',
+		filter: `blur(${unblur}px)`,
+	};
+
 	return (
 		<AbsoluteFill style={{left: 500, top: 70}}>
 			<AvatarWithCaption
@@ -86,52 +93,42 @@ export const BrandedHost: React.FC<{
 				>
 					<Text
 						style={{
-							opacity,
+							...textStyles,
 							width: 'auto',
 							fontSize: '2.75rem',
 							fontWeight: 'bold',
-							fontFamily: 'inherit',
-							textShadow: '1px 1px 15px #000000bb',
-							filter: `blur(${unblur}px)`,
 						}}
 					>
 						{name}
 					</Text>
 					<hr
 						style={{
-							opacity,
+							...textStyles,
 							background: 'white',
 							width: 50,
 							height: 4,
 							marginLeft: 20,
 							marginTop: 20,
 							border: 'none',
-							filter: `blur(${unblur}px)`,
 						}}
 					/>
 					<Text
 						style={{
-							opacity,
+							...textStyles,
 							width: 'auto',
 							textAlign: 'left',
-							fontFamily: 'inherit',
 							fontSize: '1.5rem',
 							marginBottom: '10px',
-							textShadow: '1px 1px 15px #000000bb',
-							filter: `blur(${unblur}px)`,
 						}}
 					>
 						{company}
 					</Text>
 					<Text
 						style={{
-							opacity,
+							...textStyles,
 							width: 'auto',
 							textAlign: 'left',
-							fontFamily: 'inherit',
 							fontSize: '1.25rem',
-							textShadow: '1px 1px 15px #000000bb',
-							filter: `blur(${unblur}px)`,
 						}}
 					>
 						{job}

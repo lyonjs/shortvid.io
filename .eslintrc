@@ -3,5 +3,8 @@
 	"plugins": ["@remotion"],
 	"globals": {
 		"process": true
+	},
+	"rules": {
+		"no-console": ["error", {"allow": ["warn", "error"]}]
 	}
 }

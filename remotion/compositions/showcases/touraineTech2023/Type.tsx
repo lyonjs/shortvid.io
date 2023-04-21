@@ -11,7 +11,9 @@ export const Type: React.FC<{type: string}> = ({type}) => {
 
 	return (
 		<TalkDetails
-			time={type}
+			items={{
+				time: type,
+			}}
 			style={{
 				fontSize: '32px',
 				gridTemplateColumns: '1fr',

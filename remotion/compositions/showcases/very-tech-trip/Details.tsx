@@ -16,8 +16,10 @@ export const Details: React.FC<{style?: CSSProperties; time: string}> = ({
 
 	return (
 		<TalkDetails
-			time={time}
-			style={{fontSize: '1.3rem', gridTemplateColumns: '1fr', ...style}}
+			items={{
+				time,
+			}}
+			style={{fontSize: '1.3rem', ...style}}
 			iconStyle={{opacity, bottom: drop}}
 		/>
 	);

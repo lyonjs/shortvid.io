@@ -1,5 +1,3 @@
-import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../../hooks/useLottie';
 import {Sequence, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {TalkDetails} from '../../../design/molecules/TalkDetails';
 
@@ -29,9 +27,11 @@ export const Details: React.FC<{
 	return (
 		<Sequence from={40} name="Details">
 			<TalkDetails
-				date={date}
-				time={time}
-				location={location}
+				items={{
+					date,
+					time,
+					location,
+				}}
 				style={{
 					fontFamily: 'Noto Sans,sans-serif',
 					fontSize: '32px',

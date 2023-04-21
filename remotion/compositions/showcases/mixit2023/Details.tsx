@@ -27,9 +27,11 @@ export const Details: React.FC<{
 	return (
 		<Sequence from={40} name="Details">
 			<TalkDetails
-				date={date}
-				time={time}
-				location={location}
+				items={{
+					date,
+					time,
+					location,
+				}}
 				style={{
 					fontFamily: 'Lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
 					fontSize: '32px',

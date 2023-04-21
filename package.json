@@ -39,7 +39,7 @@
 		"@testing-library/dom": "9.2.0",
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "14.0.0",
-		"@types/node": "18.15.12",
+		"@types/node": "18.15.13",
 		"@types/react": "18.0.37",
 		"@types/react-dom": "18.0.11",
 		"@types/react-json-editor-ajrm": "^2.5.3",

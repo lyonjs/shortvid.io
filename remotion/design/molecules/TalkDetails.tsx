@@ -2,19 +2,16 @@ import React from 'react';
 import {IconWithCaption} from './IconWithCaption';
 
 export const TalkDetails: React.FC<{
-	date?: string;
-	time?: string;
-	location?: string;
+	items: {date?: string; time?: string; location?: string};
 	style?: React.CSSProperties;
 	iconStyle?: React.CSSProperties;
-}> = ({date, time, location, style, iconStyle}) => {
+}> = ({items, style, iconStyle}) => {
+	const itemsCount = Object.keys(items).length;
 	return (
 		<div
 			style={{
 				display: 'grid',
-				gridTemplateColumns: 'repeat(3, 1fr)',
-				justifyContent: 'center',
-				alignItems: 'center',
+				gridTemplateColumns: `repeat(${itemsCount}, 1fr)`,
 				position: 'absolute',
 				bottom: '3rem',
 				width: '100%',
@@ -23,17 +20,16 @@ export const TalkDetails: React.FC<{
 				...style,
 			}}
 		>
-			{date && (
+			{items['date'] && (
 				<div
 					style={{
 						position: 'relative',
 						width: 'auto',
-						flex: '1 0 20%',
 					}}
 				>
 					<IconWithCaption
 						iconifyId="mdi:calendar"
-						caption={date}
+						caption={items.date}
 						style={{
 							position: 'absolute',
 							left: '50%',
@@ -44,17 +40,16 @@ export const TalkDetails: React.FC<{
 					/>
 				</div>
 			)}
-			{time && (
+			{items.time && (
 				<div
 					style={{
 						position: 'relative',
 						width: 'auto',
-						flex: '1 0 20%',
 					}}
 				>
 					<IconWithCaption
 						iconifyId="mdi:clock"
-						caption={time}
+						caption={items.time}
 						style={{
 							position: 'absolute',
 							left: '50%',
@@ -65,17 +60,16 @@ export const TalkDetails: React.FC<{
 					/>
 				</div>
 			)}
-			{location && (
+			{items.location && (
 				<div
 					style={{
 						position: 'relative',
 						width: 'auto',
-						flexBasis: '100%',
 					}}
 				>
 					<IconWithCaption
 						iconifyId="mdi:map-marker-radius-outline"
-						caption={location}
+						caption={items.location}
 						style={{
 							position: 'absolute',
 							left: '50%',

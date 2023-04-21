@@ -42,9 +42,11 @@ export const MoleculesComposition: React.FC = () => {
 				fps={30}
 				durationInFrames={120}
 				defaultProps={{
-					date: '19 Décembre 2023',
-					time: '17h30',
-					location: 'Salle 1',
+					items: {
+						date: '19 Décembre 2023',
+						time: '17h30',
+						location: 'Salle 1',
+					},
 				}}
 			/>
 		</Folder>

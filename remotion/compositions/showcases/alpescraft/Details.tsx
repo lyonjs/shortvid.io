@@ -37,6 +37,7 @@ export const Details: React.FC<{
 				alignItems: 'center',
 				flexWrap: 'wrap',
 				columnGap: '7rem',
+				rowGap: '1.5rem',
 			}}
 		>
 			<IconWithCaption
@@ -49,6 +50,9 @@ export const Details: React.FC<{
 					bottom: drop,
 					opacity,
 				}}
+				iconStyle={{
+					fontSize: 50,
+				}}
 			/>
 			<IconWithCaption
 				iconifyId="mdi:map-marker-radius-outline"
@@ -60,6 +64,9 @@ export const Details: React.FC<{
 					bottom: drop,
 					opacity,
 				}}
+				iconStyle={{
+					fontSize: 50,
+				}}
 			/>
 			{time && (
 				<IconWithCaption
@@ -70,6 +77,9 @@ export const Details: React.FC<{
 						flexBasis: '100%',
 						bottom: drop,
 						opacity,
+					}}
+					iconStyle={{
+						fontSize: 45,
 					}}
 				/>
 			)}

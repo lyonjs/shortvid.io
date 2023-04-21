@@ -31,7 +31,10 @@ export const IconWithCaption: React.FC<{
 				style={{
 					position: 'relative',
 					fontSize: 'inherit',
+					fontFamily: 'inherit',
 					color: 'inherit',
+					width: 'max-content',
+					padding: 0,
 				}}
 			>
 				{caption}

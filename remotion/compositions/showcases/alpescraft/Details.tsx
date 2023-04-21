@@ -54,27 +54,14 @@ export const Details: React.FC<{
 					fontSize: 50,
 				}}
 			/>
-			<IconWithCaption
-				iconifyId="mdi:map-marker-radius-outline"
-				caption={location}
-				style={{
-					position: 'relative',
-					flex: '1 0 20%',
-					justifyContent: 'flex-start',
-					bottom: drop,
-					opacity,
-				}}
-				iconStyle={{
-					fontSize: 50,
-				}}
-			/>
 			{time && (
 				<IconWithCaption
 					iconifyId="mdi:clock"
 					caption={time}
 					style={{
 						position: 'relative',
-						flexBasis: '100%',
+						flex: '1 0 20%',
+						justifyContent: 'flex-start',
 						bottom: drop,
 						opacity,
 					}}
@@ -83,6 +70,19 @@ export const Details: React.FC<{
 					}}
 				/>
 			)}
+			<IconWithCaption
+				iconifyId="mdi:map-marker-radius-outline"
+				caption={location}
+				style={{
+					position: 'relative',
+					flexBasis: '100%',
+					bottom: drop,
+					opacity,
+				}}
+				iconStyle={{
+					fontSize: 50,
+				}}
+			/>
 		</div>
 	);
 };

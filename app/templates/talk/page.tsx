@@ -106,7 +106,7 @@ export default function TalkPage() {
 						className="relative text-black py-2 px-4 text-center text-xl font-bold bg-yellow-300 rounded-xl mt-4 hover:scale-105"
 						onClick={onClickHandler}
 					>
-						{copied ? 'Copied ✅' : 'Copy Layer URL 🔗'}
+						{copied ? 'Copied ✅' : 'Copy talk URL 🔗'}
 					</button>
 				</Form>
 			</div>

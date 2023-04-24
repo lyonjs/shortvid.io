@@ -10,24 +10,22 @@ import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 
 export default function TalkPage() {
-	const searchParams = useSearchParams();
 	const [talkTitle, setTalkTitle] = useInputChange<string>(
-		searchParams.get('talkTitle') || 'Example'
+		'Example',
+		'talkTitle'
 	);
 	const [speakerPicture, setSpeakerPicture] = useInputChange<
 		string | undefined
-	>(searchParams.get('speakerPicture') || undefined);
+	>(undefined, 'speakerPicture');
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(
-		searchParams.get('speakersNames') || 'John Doe'
+		'John Doe',
+		'speakersNames'
 	);
-	const [eventLogo, setEventLogo] = useInputChange<string>(
-		searchParams.get('eventLogo') || ''
-	);
-	const [titleSize, setTitleSize] = useInputChange<string>(
-		searchParams.get('titleSize') || '50'
-	);
+	const [eventLogo, setEventLogo] = useInputChange<string>('', 'eventLogo');
+	const [titleSize, setTitleSize] = useInputChange<string>('50', 'titleSize');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
-		searchParams.get('backgroundImg') || undefined
+		undefined,
+		'backgroundImg'
 	);
 	const props = {
 		talkTitle,

@@ -6,30 +6,28 @@ import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {Talk} from '../../../remotion/compositions/templates/talk/Talk';
 import {useSearchParams} from 'next/navigation';
-import {useCallback, useState} from 'react';
-import {useFormatUrlWithQuery} from '../../../src/app/hooks/useFormatUrlWithQuery';
-import {useCopyToClipboard} from '../../../src/app/hooks/useCopyToClipboard';
+import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
+import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 
 export default function TalkPage() {
 	const searchParams = useSearchParams();
-	const [copied, setCopied] = useState(false);
 	const [talkTitle, setTalkTitle] = useInputChange<string>(
-		searchParams.get('title') || 'Example'
+		searchParams.get('talkTitle') || 'Example'
 	);
 	const [speakerPicture, setSpeakerPicture] = useInputChange<
 		string | undefined
 	>(searchParams.get('speakerPicture') || undefined);
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(
-		searchParams.get('name') || 'John Doe'
+		searchParams.get('speakersNames') || 'John Doe'
 	);
 	const [eventLogo, setEventLogo] = useInputChange<string>(
-		searchParams.get('logo') || ''
+		searchParams.get('eventLogo') || ''
 	);
 	const [titleSize, setTitleSize] = useInputChange<string>(
 		searchParams.get('titleSize') || '50'
 	);
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
-		searchParams.get('background') || undefined
+		searchParams.get('backgroundImg') || undefined
 	);
 	const props = {
 		talkTitle,
@@ -40,22 +38,7 @@ export default function TalkPage() {
 		eventLogo,
 	};
 
-	const params = {
-		speakerPicture: speakerPicture && encodeURIComponent(speakerPicture),
-		name: encodeURIComponent(speakersNames),
-		title: encodeURIComponent(talkTitle),
-		titleSize: encodeURIComponent(titleSize),
-		background: backgroundImg && encodeURIComponent(backgroundImg),
-		logo: encodeURIComponent(eventLogo),
-	};
-
-	const urlWithParams = useFormatUrlWithQuery(params, '/templates/talk');
-	const copyToClipboard = useCopyToClipboard(setCopied);
-
-	const onClickHandler = useCallback(() => {
-		const {origin} = window.location;
-		copyToClipboard(`${origin}${urlWithParams}`);
-	}, [urlWithParams, copyToClipboard]);
+	const encodedParams = encodeObjectValues(props);
 
 	return (
 		<>
@@ -101,13 +84,7 @@ export default function TalkPage() {
 						label="Logo (optional)"
 						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
 					/>
-					<button
-						type="button"
-						className="relative text-black py-2 px-4 text-center text-xl font-bold bg-yellow-300 rounded-xl mt-4 hover:scale-105"
-						onClick={onClickHandler}
-					>
-						{copied ? 'Copied ✅' : 'Copy talk URL 🔗'}
-					</button>
+					<CopyUrlButton urlParameters={encodedParams} />
 				</Form>
 			</div>
 

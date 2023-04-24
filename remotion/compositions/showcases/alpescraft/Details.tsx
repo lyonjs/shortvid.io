@@ -2,6 +2,7 @@ import React from 'react';
 import {Lottie} from '@remotion/lottie';
 import {useLottie} from '../../../hooks/useLottie';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 
 export const Details: React.FC<{
 	date: string;
@@ -36,88 +37,52 @@ export const Details: React.FC<{
 				alignItems: 'center',
 				flexWrap: 'wrap',
 				columnGap: '7rem',
+				rowGap: '1.5rem',
 			}}
 		>
-			<div
+			<IconWithCaption
+				iconifyId="mdi:calendar"
+				caption={date}
 				style={{
-					display: 'flex',
+					position: 'relative',
+					flex: '1 0 20%',
 					justifyContent: 'flex-end',
-					alignItems: 'center',
-					gap: '1rem',
-					flex: '1 0 20%',
+					bottom: drop,
+					opacity,
 				}}
-			>
-				<Lottie
-					style={{
-						width: '110px',
-						filter: 'none',
-					}}
-					playbackRate={1.5}
-					animationData={illustrationDate}
-				/>
-				<span
-					style={{
-						position: 'relative',
-						bottom: drop,
-						opacity,
-					}}
-				>
-					{date}
-				</span>
-			</div>
-			<div
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					gap: '1rem',
-					flex: '1 0 20%',
+				iconStyle={{
+					fontSize: 50,
 				}}
-			>
-				<Lottie
-					style={{
-						width: '70px',
-						filter: 'none',
-					}}
-					animationData={illustrationLocation}
-				/>
-				<span
-					style={{
-						position: 'relative',
-						bottom: drop,
-						opacity,
-					}}
-				>
-					{location}
-				</span>
-			</div>
+			/>
 			{time && (
-				<div
+				<IconWithCaption
+					iconifyId="mdi:clock"
+					caption={time}
 					style={{
-						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-						gap: '2rem',
-						flexBasis: '100%',
+						position: 'relative',
+						flex: '1 0 20%',
+						justifyContent: 'flex-start',
+						bottom: drop,
+						opacity,
 					}}
-				>
-					<Lottie
-						style={{
-							width: '50px',
-							filter: 'none',
-						}}
-						animationData={illustrationHour}
-					/>
-					<span
-						style={{
-							position: 'relative',
-							bottom: drop,
-							opacity,
-						}}
-					>
-						{time}
-					</span>
-				</div>
+					iconStyle={{
+						fontSize: 45,
+					}}
+				/>
 			)}
+			<IconWithCaption
+				iconifyId="mdi:map-marker-radius-outline"
+				caption={location}
+				style={{
+					position: 'relative',
+					flexBasis: '100%',
+					bottom: drop,
+					opacity,
+				}}
+				iconStyle={{
+					fontSize: 50,
+				}}
+			/>
 		</div>
 	);
 };

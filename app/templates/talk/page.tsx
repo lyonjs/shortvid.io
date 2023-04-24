@@ -55,7 +55,7 @@ export default function TalkPage() {
 	const onClickHandler = useCallback(() => {
 		const {origin} = window.location;
 		copyToClipboard(`${origin}${urlWithParams}`);
-	}, [urlWithParams]);
+	}, [urlWithParams, copyToClipboard]);
 
 	return (
 		<>

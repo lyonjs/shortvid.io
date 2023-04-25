@@ -45,12 +45,6 @@ export const BrandedHost: React.FC<{
 		[50, 70, 60, 50, 70],
 	];
 
-	const blobAnimation = blobRadiuses.map((values) => {
-		return interpolate(frame, [10, 40, 70, 100, 140], values, {
-			extrapolateRight: 'clamp',
-		});
-	});
-
 	const [
 		blobRadius1,
 		blobRadius2,
@@ -58,7 +52,11 @@ export const BrandedHost: React.FC<{
 		blobRadius4,
 		blobRadius5,
 		blobRadius6,
-	] = blobAnimation;
+	] = blobRadiuses.map((values) => {
+		return interpolate(frame, [10, 40, 70, 100, 140], values, {
+			extrapolateRight: 'clamp',
+		});
+	});
 
 	const textStyles = {
 		opacity,

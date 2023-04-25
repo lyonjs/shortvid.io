@@ -5,15 +5,19 @@ import {Player} from '@remotion/player';
 import {Meetup as MeetupComponent} from '../../../remotion/compositions/templates/meetup/Meetup';
 import {Code} from '../../../src/app/Code';
 import {Form, Input} from '../../../src/app/forms/input';
+import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
+import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 
 export default function MeetupPage() {
-	const [title, setTitle] = useInputChange<string>('Example');
-	const [eventLogo, setEventLogo] = useInputChange<string>('');
-	const [date, setDate] = useInputChange<string>('28 septembre 2022');
+	const [title, setTitle] = useInputChange<string>('Example', 'title');
+	const [eventLogo, setEventLogo] = useInputChange<string>('', 'eventLogo');
+	const [date, setDate] = useInputChange<string>('28 septembre 2022', 'date');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
-		undefined
+		undefined,
+		'backgroundImg'
 	);
 	const props = {title, date, backgroundImg, eventLogo};
+	const encodedParams = encodeObjectValues(props);
 
 	return (
 		<>
@@ -50,6 +54,7 @@ export default function MeetupPage() {
 						label="Event Logo (optional)"
 						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
 					/>
+					<CopyUrlButton urlParameters={encodedParams} />
 				</Form>
 			</div>
 

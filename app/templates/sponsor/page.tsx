@@ -5,21 +5,28 @@ import {useInputChange} from '../../../src/app/hooks/onInputChange';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {Sponsor} from '../../../remotion/compositions/templates/sponsor/Sponsor';
+import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
+import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 
 export default function SponsorPage() {
-	const [companyName, setCompanyName] = useInputChange<string>('Evilcorp');
+	const [companyName, setCompanyName] = useInputChange<string>(
+		'Evilcorp',
+		'companyName'
+	);
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
-		undefined
+		undefined,
+		'backgroundImg'
 	);
 	const [sponsorLogo, setSponsorLogo] = useInputChange<string | undefined>(
-		undefined
+		undefined,
+		'sponsorLogo'
 	);
 	const [sponsorLocalisation, setSponsorLocalisation] = useInputChange<
 		string | undefined
-	>(undefined);
+	>(undefined, 'sponsorLocalisation');
 
 	const props = {companyName, backgroundImg, sponsorLogo, sponsorLocalisation};
-
+	const encodedParams = encodeObjectValues(props);
 	return (
 		<>
 			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
@@ -61,6 +68,7 @@ export default function SponsorPage() {
 						value={sponsorLocalisation}
 						label="Sponsor localisation"
 					/>
+					<CopyUrlButton urlParameters={encodedParams} />
 				</Form>
 			</div>
 

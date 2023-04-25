@@ -1,8 +1,8 @@
 import {ChangeEvent, FormEvent, useCallback, useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 
-export const useInputChange = <T extends string | undefined>(
-	defaultValue: T,
+export const useInputChange = <ValueType extends string | undefined>(
+	defaultValue: ValueType,
 	query?: string
 ) => {
 	const searchParams = useSearchParams();
@@ -10,10 +10,10 @@ export const useInputChange = <T extends string | undefined>(
 		? searchParams.get(query) ?? defaultValue
 		: defaultValue;
 
-	const [value, setValue] = useState<T>(initialValue as T);
+	const [value, setValue] = useState<ValueType>(initialValue as ValueType);
 	const onValueChange = useCallback(
 		(event: FormEvent<HTMLInputElement>) =>
-			setValue(event.currentTarget.value as unknown as T),
+			setValue(event.currentTarget.value as unknown as ValueType),
 		[]
 	);
 

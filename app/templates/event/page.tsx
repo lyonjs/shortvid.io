@@ -5,19 +5,24 @@ import {Player} from '@remotion/player';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {Event} from '../../../remotion/compositions/templates/event/Event';
+import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
+import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 
 export default function EventPage() {
-	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾');
+	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');
 	const [lottieAsset, setLottieAsset] = useInputChange<string | undefined>(
-		undefined
+		undefined,
+		'lottieAsset'
 	);
 	const [paillettesAsset, setPaillettesAsset] = useInputChange<
 		string | undefined
-	>(undefined);
+	>(undefined, 'paillettesAsset');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
-		undefined
+		undefined,
+		'backgroundImg'
 	);
 	const props = {title, lottieAsset, paillettesAsset, backgroundImg};
+	const encodedParams = encodeObjectValues(props);
 
 	return (
 		<>
@@ -56,6 +61,7 @@ export default function EventPage() {
 						value={backgroundImg}
 						label="Background image url"
 					/>
+					<CopyUrlButton urlParameters={encodedParams} />
 				</Form>
 			</div>
 

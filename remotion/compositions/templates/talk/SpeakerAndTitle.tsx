@@ -28,7 +28,7 @@ export const SpeakerAndTitle: React.FC<{
 	});
 	const titleUnblur = interpolate(
 		frame,
-		[0 + titlesAnimationDelay, 20 + titlesAnimationDelay],
+		[titlesAnimationDelay, 20 + titlesAnimationDelay],
 		[5, 0],
 		{
 			extrapolateRight: 'clamp',
@@ -49,6 +49,7 @@ export const SpeakerAndTitle: React.FC<{
 						opacity: titleOpacity,
 						filter: `blur(${titleUnblur}px)`,
 						textAlign: 'center',
+            fontWeight: 'bold',
 						textShadow: '2px 2px 0px black',
 					}}
 				/>

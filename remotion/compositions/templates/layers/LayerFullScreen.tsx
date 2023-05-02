@@ -28,7 +28,7 @@ export const LayerFullScreen: React.FC<LayerBaseProps> = ({
 				<Img
 					style={{
 						zIndex: 2,
-						width: 300,
+						width: 250,
 						position: 'absolute',
 						bottom: 0,
 						right: 0,

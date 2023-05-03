@@ -1,4 +1,5 @@
 import {MouseEvent, useCallback} from 'react';
+import va from '@vercel/analytics';
 import {TouraineTechProps} from '../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {ReplayProps} from '../../app/templates/replay/page';
 
@@ -13,6 +14,7 @@ export const Code: React.FC<{
 		if (element.textContent) {
 			navigator.clipboard.writeText(element.textContent);
 			notification?.classList.add('animate-popup');
+			va.track('GenerateLocally', {composition});
 			setTimeout(() => notification?.classList.remove('animate-popup'), 2000);
 		}
 	}, []);

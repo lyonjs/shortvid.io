@@ -40,10 +40,8 @@ export const TalksComposition: React.FC = () => {
 				durationInFrames={120}
 				defaultProps={{
 					title: 'Certification “Google Cloud Architect”',
-					startingDate: '18 Avril',
-					endingDate: '23 Mai',
-					startingTime: '13h',
-					endingTime: '13h45',
+					startingDate: new Date(2023, 3, 18, 13),
+					endingDate: new Date(2023, 4, 23, 13, 45),
 					day: 'mardi',
 					logoUrl:
 						'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg',

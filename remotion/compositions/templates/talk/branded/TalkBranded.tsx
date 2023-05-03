@@ -6,17 +6,17 @@ import {BrandedDetails} from './BrandedDetails';
 import {BackgroundCircleNoise} from '../../../../design/atoms/BackgroundCircleNoise';
 import {BrandedLogo} from './BrandedLogo';
 import {BrandedSpeaker} from './BrandedSpeaker';
+import {format} from 'date-fns';
+import {fr} from 'date-fns/locale';
 
 const {fontFamily} = loadFont();
 
 export const TalkBranded: React.FC<{
 	backgroundColor?: string;
 	title: string;
-	startingDate: string;
-	endingDate?: string;
+	startingDate: Date;
+	endingDate?: Date;
 	day?: string;
-	startingTime: string;
-	endingTime?: string;
 	logoUrl: string;
 	speaker: {pictureUrl: string; name: string; company?: string; job?: string};
 }> = ({
@@ -25,11 +25,13 @@ export const TalkBranded: React.FC<{
 	startingDate,
 	endingDate,
 	day,
-	startingTime,
-	endingTime,
 	logoUrl,
 	speaker,
 }) => {
+	const startingDay = format(startingDate, 'dd MMMM', {locale: fr});
+	const endingDay = endingDate && format(endingDate, 'dd MMMM', {locale: fr});
+	const startingTime = format(startingDate, 'HH:mm');
+	const endingTime = endingDate && format(endingDate, 'HH:mm');
 	return (
 		<AbsoluteFill
 			style={{
@@ -56,8 +58,8 @@ export const TalkBranded: React.FC<{
 			</Sequence>
 			<Sequence name="Details" from={50}>
 				<BrandedDetails
-					startingDate={startingDate}
-					endingDate={endingDate}
+					startingDate={startingDay}
+					endingDate={endingDay}
 					day={day}
 					startingTime={startingTime}
 					endingTime={endingTime}

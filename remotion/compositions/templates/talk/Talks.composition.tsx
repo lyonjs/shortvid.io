@@ -37,12 +37,13 @@ export const TalksComposition: React.FC = () => {
 				height={700}
 				id="TalkBranded"
 				fps={30}
-				durationInFrames={120}
+				durationInFrames={140}
 				defaultProps={{
 					title: 'Certification “Google Cloud Architect”',
 					startingDate: new Date(2023, 3, 18, 13),
 					endingDate: new Date(2023, 4, 23, 13, 45),
 					reccuringDay: 'mardi',
+					location: "8 Rue d'Algérie, 69001.",
 					logoUrl:
 						'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg',
 					speaker: {

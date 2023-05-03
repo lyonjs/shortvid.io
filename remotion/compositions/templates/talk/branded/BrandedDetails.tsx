@@ -31,7 +31,15 @@ export const BrandedDetails: React.FC<{
 	reccuringDay?: string;
 	startingTime: string;
 	endingTime?: string;
-}> = ({startingDate, endingDate, reccuringDay, startingTime, endingTime}) => {
+	location?: string;
+}> = ({
+	startingDate,
+	endingDate,
+	reccuringDay,
+	startingTime,
+	endingTime,
+	location,
+}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -51,7 +59,7 @@ export const BrandedDetails: React.FC<{
 				justifyContent: 'center',
 				alignItems: 'flex-start',
 				height: 'max-content',
-				width: '100%',
+				width: location ? '50%' : '100%',
 				bottom: slideIn,
 			}}
 		>

@@ -8,6 +8,7 @@ import {BrandedLogo} from './BrandedLogo';
 import {BrandedSpeaker} from './BrandedSpeaker';
 import {format} from 'date-fns';
 import {fr} from 'date-fns/locale';
+import {BrandedLocation} from './BrandedLocation';
 
 const {fontFamily} = loadFont();
 
@@ -17,6 +18,7 @@ export const TalkBranded: React.FC<{
 	startingDate: Date;
 	endingDate?: Date;
 	reccuringDay?: string;
+	location?: string;
 	logoUrl: string;
 	speaker: {pictureUrl: string; name: string; company?: string; job?: string};
 }> = ({
@@ -25,6 +27,7 @@ export const TalkBranded: React.FC<{
 	startingDate,
 	endingDate,
 	reccuringDay,
+	location,
 	logoUrl,
 	speaker,
 }) => {
@@ -64,8 +67,14 @@ export const TalkBranded: React.FC<{
 					reccuringDay={reccuringDay}
 					startingTime={startingTime}
 					endingTime={endingTime}
+					location={location}
 				/>
 			</Sequence>
+			{location && (
+				<Sequence name="Location" from={55}>
+					<BrandedLocation location={location} />
+				</Sequence>
+			)}
 		</AbsoluteFill>
 	);
 };

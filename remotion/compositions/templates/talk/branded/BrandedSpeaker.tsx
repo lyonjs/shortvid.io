@@ -27,12 +27,12 @@ export const BrandedSpeaker: React.FC<{
 	});
 
 	const blobRadiuses = [
-		[40, 70, 100, 40, 70],
-		[60, 30, 60, 60, 30],
-		[70, 50, 60, 70, 50],
-		[30, 50, 100, 30, 50],
-		[40, 30, 100, 40, 30],
-		[50, 70, 60, 50, 70],
+		[40, 70],
+		[60, 30],
+		[70, 50],
+		[30, 50],
+		[40, 30],
+		[50, 70],
 	];
 
 	const [
@@ -43,7 +43,7 @@ export const BrandedSpeaker: React.FC<{
 		blobRadius5,
 		blobRadius6,
 	] = blobRadiuses.map((values) => {
-		return interpolate(frame, [10, 130, 170, 200, 230], values, {
+		return interpolate(frame, [10, 130], values, {
 			extrapolateRight: 'clamp',
 		});
 	});

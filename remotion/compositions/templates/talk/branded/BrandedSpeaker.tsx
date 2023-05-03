@@ -8,6 +8,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
 
 export const BrandedSpeaker: React.FC<{
 	pictureUrl: string;
@@ -109,27 +110,34 @@ export const BrandedSpeaker: React.FC<{
 							border: 'none',
 						}}
 					/>
-					<Text
-						style={{
-							...textStyles,
-							width: 'auto',
-							textAlign: 'left',
-							fontSize: '1.5rem',
-							marginBottom: '10px',
-						}}
-					>
-						{company}
-					</Text>
-					<Text
-						style={{
-							...textStyles,
-							width: 'auto',
-							textAlign: 'left',
-							fontSize: '1.25rem',
-						}}
-					>
-						{job}
-					</Text>
+					{company && (
+						<IconWithCaption
+							style={{
+								...textStyles,
+								justifyContent: 'flex-start',
+								fontSize: '1.5rem',
+								color: 'white',
+								paddingLeft: 15,
+							}}
+							caption={company}
+							iconifyId="mdi:company"
+							iconStyle={{width: 40}}
+						/>
+					)}
+					{job && (
+						<IconWithCaption
+							style={{
+								...textStyles,
+								justifyContent: 'flex-start',
+								fontSize: '1.25rem',
+								color: 'white',
+								paddingLeft: 15,
+							}}
+							caption={job}
+							iconifyId="mdi:user"
+							iconStyle={{width: 40, height: 40}}
+						/>
+					)}
 				</div>
 			</AvatarWithCaption>
 		</AbsoluteFill>

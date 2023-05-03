@@ -28,7 +28,7 @@ export const SpeakerAndTitle: React.FC<{
 	});
 	const titleUnblur = interpolate(
 		frame,
-		[0 + titlesAnimationDelay, 20 + titlesAnimationDelay],
+		[titlesAnimationDelay, 20 + titlesAnimationDelay],
 		[5, 0],
 		{
 			extrapolateRight: 'clamp',
@@ -40,11 +40,12 @@ export const SpeakerAndTitle: React.FC<{
 				<TalkSpeaker
 					speakerPicture={speakerPicture}
 					speakersNames={speakersNames}
-					SpeakerNameStyle={{
+					speakerNameStyle={{
 						width: '100%',
 						color: '#efdb50',
 						position: 'absolute',
 						fontSize: 70,
+            fontWeight: 'bold',
 						top: '55%',
 						opacity: titleOpacity,
 						filter: `blur(${titleUnblur}px)`,

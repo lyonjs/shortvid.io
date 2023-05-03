@@ -16,7 +16,7 @@ export const TalkBranded: React.FC<{
 	title: string;
 	startingDate: Date;
 	endingDate?: Date;
-	day?: string;
+	reccuringDay?: string;
 	logoUrl: string;
 	speaker: {pictureUrl: string; name: string; company?: string; job?: string};
 }> = ({
@@ -24,7 +24,7 @@ export const TalkBranded: React.FC<{
 	title,
 	startingDate,
 	endingDate,
-	day,
+	reccuringDay,
 	logoUrl,
 	speaker,
 }) => {
@@ -32,6 +32,7 @@ export const TalkBranded: React.FC<{
 	const endingDay = endingDate && format(endingDate, 'dd MMMM', {locale: fr});
 	const startingTime = format(startingDate, 'HH:mm');
 	const endingTime = endingDate && format(endingDate, 'HH:mm');
+
 	return (
 		<AbsoluteFill
 			style={{
@@ -60,7 +61,7 @@ export const TalkBranded: React.FC<{
 				<BrandedDetails
 					startingDate={startingDay}
 					endingDate={endingDay}
-					day={day}
+					reccuringDay={reccuringDay}
 					startingTime={startingTime}
 					endingTime={endingTime}
 				/>

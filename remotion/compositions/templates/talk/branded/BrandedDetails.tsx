@@ -3,7 +3,7 @@ import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Icon} from '@iconify/react';
 import {Text} from '../../../../design/atoms/Text';
 
-const Day: React.FC<{day: string}> = ({day}) => {
+const ReccuringDay: React.FC<{day: string}> = ({day}) => {
 	return (
 		<span>
 			Tout les <b>{day}</b>.{' '}
@@ -19,7 +19,7 @@ const TimeRange: React.FC<{
 		<span>
 			De{' '}
 			<b>
-				{startingTime} à {endingTime}
+				{startingTime} à {endingTime}.
 			</b>
 		</span>
 	);
@@ -28,10 +28,10 @@ const TimeRange: React.FC<{
 export const BrandedDetails: React.FC<{
 	startingDate: string;
 	endingDate?: string;
-	day?: string;
+	reccuringDay?: string;
 	startingTime: string;
 	endingTime?: string;
-}> = ({startingDate, endingDate, day, startingTime, endingTime}) => {
+}> = ({startingDate, endingDate, reccuringDay, startingTime, endingTime}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -85,7 +85,7 @@ export const BrandedDetails: React.FC<{
 						fontSize: '1.18rem',
 					}}
 				>
-					{day && <Day day={day} />}
+					{reccuringDay && <ReccuringDay day={reccuringDay} />}
 					{endingTime ? (
 						<TimeRange startingTime={startingTime} endingTime={endingTime} />
 					) : (

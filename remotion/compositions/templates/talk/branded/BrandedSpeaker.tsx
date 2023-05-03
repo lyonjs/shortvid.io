@@ -1,6 +1,5 @@
 import React from 'react';
 import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
-import {Text} from '../../../../design/atoms/Text';
 import {
 	AbsoluteFill,
 	interpolate,
@@ -8,7 +7,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
+import {BrandedSpeakerInfos} from './BrandedSpeakerInfos';
 
 export const BrandedSpeaker: React.FC<{
 	pictureUrl: string;
@@ -25,16 +24,6 @@ export const BrandedSpeaker: React.FC<{
 		from: -300,
 		to: 0,
 		durationInFrames: 30,
-	});
-	const opacity = spring({
-		frame: frame - 10,
-		fps,
-		from: 0,
-		to: 1,
-		durationInFrames: 30,
-	});
-	const unblur = interpolate(frame, [10, 30], [5, 0], {
-		extrapolateRight: 'clamp',
 	});
 
 	const blobRadiuses = [
@@ -59,12 +48,6 @@ export const BrandedSpeaker: React.FC<{
 		});
 	});
 
-	const textStyles = {
-		opacity,
-		fontFamily: 'inherit',
-		filter: `blur(${unblur}px)`,
-	};
-
 	return (
 		<AbsoluteFill style={{left: 500, top: 70}}>
 			<AvatarWithCaption
@@ -83,62 +66,7 @@ export const BrandedSpeaker: React.FC<{
 					top: slideIn,
 				}}
 			>
-				<div
-					style={{
-						display: 'flex',
-						flexDirection: 'column',
-					}}
-				>
-					<Text
-						style={{
-							...textStyles,
-							width: 'auto',
-							fontSize: '2.75rem',
-							fontWeight: 'bold',
-						}}
-					>
-						{name}
-					</Text>
-					<hr
-						style={{
-							...textStyles,
-							background: 'white',
-							width: 50,
-							height: 4,
-							marginLeft: 20,
-							marginTop: 20,
-							border: 'none',
-						}}
-					/>
-					{company && (
-						<IconWithCaption
-							style={{
-								...textStyles,
-								justifyContent: 'flex-start',
-								fontSize: '1.5rem',
-								color: 'white',
-								paddingLeft: 15,
-							}}
-							caption={company}
-							iconifyId="mdi:company"
-							iconStyle={{width: 40}}
-						/>
-					)}
-					{job && (
-						<IconWithCaption
-							style={{
-								...textStyles,
-								justifyContent: 'flex-start',
-								fontSize: '1.25rem',
-								color: 'white',
-								paddingLeft: 15,
-							}}
-							caption={job}
-							iconifyId="mdi:user"
-							iconStyle={{width: 40, height: 40}}
-						/>
-					)}
-				</div>
+				<BrandedSpeakerInfos name={name} company={company} job={job} />
 			</AvatarWithCaption>
 		</AbsoluteFill>
 	);

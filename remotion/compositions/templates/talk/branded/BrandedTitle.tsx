@@ -23,7 +23,7 @@ export const BrandedTitle: React.FC<{title: string}> = ({title}) => {
 		extrapolateRight: 'clamp',
 	});
 	return (
-		<AbsoluteFill style={{top: 400}}>
+		<AbsoluteFill style={{top: 380}}>
 			<Title
 				style={{
 					fontFamily: 'inherit',

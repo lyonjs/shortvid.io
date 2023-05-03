@@ -40,7 +40,7 @@ export const SpeakerAndTitle: React.FC<{
 				<TalkSpeaker
 					speakerPicture={speakerPicture}
 					speakersNames={speakersNames}
-					SpeakerNameStyle={{
+					speakerNameStyle={{
 						width: '100%',
 						color: '#efdb50',
 						position: 'absolute',
@@ -49,7 +49,7 @@ export const SpeakerAndTitle: React.FC<{
 						opacity: titleOpacity,
 						filter: `blur(${titleUnblur}px)`,
 						textAlign: 'center',
-            fontWeight: 'bold',
+						fontWeight: 'bold',
 						textShadow: '2px 2px 0px black',
 					}}
 				/>

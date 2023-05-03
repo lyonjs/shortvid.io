@@ -9,7 +9,7 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-export const BrandedHost: React.FC<{
+export const BrandedSpeaker: React.FC<{
 	pictureUrl: string;
 	name: string;
 	company?: string;
@@ -53,7 +53,7 @@ export const BrandedHost: React.FC<{
 		blobRadius5,
 		blobRadius6,
 	] = blobRadiuses.map((values) => {
-		return interpolate(frame, [10, 40, 70, 100, 140], values, {
+		return interpolate(frame, [10, 130, 170, 200, 230], values, {
 			extrapolateRight: 'clamp',
 		});
 	});
@@ -61,7 +61,6 @@ export const BrandedHost: React.FC<{
 	const textStyles = {
 		opacity,
 		fontFamily: 'inherit',
-		textShadow: '1px 1px 15px #000000bb',
 		filter: `blur(${unblur}px)`,
 	};
 

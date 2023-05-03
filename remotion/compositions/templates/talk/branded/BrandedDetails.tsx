@@ -1,7 +1,29 @@
 import React from 'react';
-import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Icon} from '@iconify/react';
 import {Text} from '../../../../design/atoms/Text';
+
+const Day: React.FC<{day: string}> = ({day}) => {
+	return (
+		<span>
+			Tout les <b>{day}</b>.{' '}
+		</span>
+	);
+};
+
+const TimeRange: React.FC<{
+	startingTime: string;
+	endingTime: string;
+}> = ({startingTime, endingTime}) => {
+	return (
+		<span>
+			De{' '}
+			<b>
+				{startingTime} à {endingTime}
+			</b>
+		</span>
+	);
+};
 
 export const BrandedDetails: React.FC<{
 	startingDate: string;
@@ -27,9 +49,8 @@ export const BrandedDetails: React.FC<{
 				position: 'absolute',
 				display: 'flex',
 				justifyContent: 'center',
-				alignItems: 'center',
+				alignItems: 'flex-start',
 				height: 'max-content',
-				fontSize: '1.6rem',
 				width: '100%',
 				bottom: slideIn,
 			}}
@@ -37,7 +58,7 @@ export const BrandedDetails: React.FC<{
 			<Icon
 				icon="mdi:calendar"
 				style={{
-					fontSize: '6rem',
+					fontSize: '4.5rem',
 					color: 'white',
 				}}
 			/>
@@ -48,9 +69,9 @@ export const BrandedDetails: React.FC<{
 						fontFamily: 'inherit',
 						display: 'block',
 						textAlign: 'left',
-						fontSize: '2.125rem',
+						fontSize: '1.7rem',
 						fontWeight: 'bold',
-						paddingBottom: '10px',
+						paddingBottom: '5px',
 					}}
 				>
 					{endingDate ? `Du ${startingDate} au ${endingDate}` : startingDate}
@@ -61,7 +82,7 @@ export const BrandedDetails: React.FC<{
 						fontFamily: 'inherit',
 						display: 'block',
 						textAlign: 'left',
-						fontSize: '1.5rem',
+						fontSize: '1.18rem',
 					}}
 				>
 					{day && <Day day={day} />}
@@ -73,27 +94,5 @@ export const BrandedDetails: React.FC<{
 				</Text>
 			</div>
 		</div>
-	);
-};
-
-const Day: React.FC<{day: string}> = ({day}) => {
-	return (
-		<span>
-			Tout les <b>{day}</b>.{' '}
-		</span>
-	);
-};
-
-const TimeRange: React.FC<{
-	startingTime: string;
-	endingTime: string;
-}> = ({startingTime, endingTime}) => {
-	return (
-		<span>
-			De{' '}
-			<b>
-				{startingTime} à {endingTime}
-			</b>
-		</span>
 	);
 };

@@ -5,7 +5,7 @@ import {BrandedTitle} from './BrandedTitle';
 import {BrandedDetails} from './BrandedDetails';
 import {BackgroundCircleNoise} from '../../../../design/atoms/BackgroundCircleNoise';
 import {BrandedLogo} from './BrandedLogo';
-import {BrandedHost} from './BrandedHost';
+import {BrandedSpeaker} from './BrandedSpeaker';
 
 const {fontFamily} = loadFont();
 
@@ -18,7 +18,7 @@ export const TalkBranded: React.FC<{
 	startingTime: string;
 	endingTime?: string;
 	logoUrl: string;
-	host: {pictureUrl: string; name: string; company?: string; job?: string};
+	speaker: {pictureUrl: string; name: string; company?: string; job?: string};
 }> = ({
 	backgroundColor = '#EA4335',
 	title,
@@ -28,7 +28,7 @@ export const TalkBranded: React.FC<{
 	startingTime,
 	endingTime,
 	logoUrl,
-	host,
+	speaker,
 }) => {
 	return (
 		<AbsoluteFill
@@ -43,12 +43,12 @@ export const TalkBranded: React.FC<{
 			<Sequence name="Logo">
 				<BrandedLogo logoUrl={logoUrl} borderColor={backgroundColor} />
 			</Sequence>
-			<Sequence name="Host" from={10}>
-				<BrandedHost
-					pictureUrl={host.pictureUrl}
-					name={host.name}
-					company={host.company}
-					job={host.job}
+			<Sequence name="Speaker" from={10}>
+				<BrandedSpeaker
+					pictureUrl={speaker.pictureUrl}
+					name={speaker.name}
+					company={speaker.company}
+					job={speaker.job}
 				/>
 			</Sequence>
 			<Sequence name="Title" from={40}>

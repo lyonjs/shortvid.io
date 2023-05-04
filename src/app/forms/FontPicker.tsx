@@ -8,7 +8,7 @@ type RemotionFont = {
 
 export const FontPicker: React.FC<{
 	label: string;
-	selectedFont: string;
+	selectedFont?: string;
 	setSelectedFont: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }> = ({label, selectedFont, setSelectedFont}) => {
 	const fontList = getAvailableFonts();
@@ -47,6 +47,7 @@ export const FontPicker: React.FC<{
 					defaultValue={selectedFont}
 					onChange={setSelectedFont}
 				>
+					<option value="">-- Default --</option>
 					{fontList.map((f) => {
 						return (
 							<option key={f.importName} value={f.fontFamily}>

@@ -15,7 +15,7 @@ export const Event: React.FC<{
 	title,
 	lottieAsset = 'lf20_UDstUT',
 	paillettesAsset = 'lf20_tiviyc3p',
-	fontFamily = 'HelveticaNeue',
+	fontFamily,
 }) => {
 	return (
 		<AbsoluteFill

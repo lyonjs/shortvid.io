@@ -24,7 +24,10 @@ export default function EventPage() {
 		undefined,
 		'backgroundImg'
 	);
-	const [fontFamily, setFontFamily] = useInputChange<string>('', 'fontFamily');
+	const [fontFamily, setFontFamily] = useInputChange<string | undefined>(
+		undefined,
+		'fontFamily'
+	);
 
 	const props = {
 		title,

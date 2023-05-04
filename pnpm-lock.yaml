@@ -26,7 +26,7 @@ dependencies:
     specifier: ^1.0.0
     version: 1.0.0(react@18.2.0)
   date-fns:
-    specifier: ^2.29.3
+    specifier: 2.29.3
     version: 2.29.3
   jest:
     specifier: 29.5.0
@@ -36,7 +36,7 @@ dependencies:
     version: 5.11.0
   next:
     specifier: ^13.2.4
-    version: 13.2.4(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0)
+    version: 13.2.4(react-dom@18.2.0)(react@18.2.0)
   node-fetch:
     specifier: ^3.3.0
     version: 3.3.0
@@ -4560,7 +4560,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /next@13.2.4(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0):
+  /next@13.2.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -4587,7 +4587,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.21.3)(react@18.2.0)
+      styled-jsx: 5.1.1(react@18.2.0)
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.2.4
       '@next/swc-android-arm64': 13.2.4
@@ -5457,7 +5457,7 @@ packages:
       webpack: 5.76.1(esbuild@0.16.12)
     dev: false
 
-  /styled-jsx@5.1.1(@babel/core@7.21.3)(react@18.2.0):
+  /styled-jsx@5.1.1(react@18.2.0):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -5470,7 +5470,6 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      '@babel/core': 7.21.3
       client-only: 0.0.1
       react: 18.2.0
     dev: false

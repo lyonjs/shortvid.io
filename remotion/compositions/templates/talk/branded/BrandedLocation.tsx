@@ -2,6 +2,7 @@ import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Icon} from '@iconify/react';
 import {Text} from '../../../../design/atoms/Text';
+import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
 
 export const BrandedLocation: React.FC<{
 	location: string;
@@ -18,39 +19,22 @@ export const BrandedLocation: React.FC<{
 	});
 
 	return (
-		<div
+		<IconWithCaption
+			iconifyId="material-symbols:location-on-rounded"
+			caption={location}
 			style={{
 				position: 'absolute',
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
 				height: 'max-content',
 				width: '50%',
 				right: 0,
+				color: 'white',
+				fontWeight: 'bold',
 				bottom: slideIn,
 			}}
-		>
-			<Icon
-				icon="material-symbols:location-on-rounded"
-				style={{
-					fontSize: '4.5rem',
-					color: 'white',
-				}}
-			/>
-			<Text
-				style={{
-					position: 'relative',
-					fontFamily: 'inherit',
-					display: 'block',
-					textAlign: 'left',
-					fontSize: '1.7rem',
-					fontWeight: 'bold',
-					paddingBottom: '5px',
-					width: 'auto',
-				}}
-			>
-				{location}
-			</Text>
-		</div>
+			iconStyle={{
+				fontSize: '4.5rem',
+				color: 'white',
+			}}
+		/>
 	);
 };

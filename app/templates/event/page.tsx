@@ -8,8 +8,6 @@ import {Event} from '../../../remotion/compositions/templates/event/Event';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {FontPicker} from '../../../src/app/forms/FontPicker';
-import {getAvailableFonts} from '@remotion/google-fonts';
-import {useEffect} from 'react';
 
 export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');

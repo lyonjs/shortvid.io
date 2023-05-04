@@ -1,5 +1,5 @@
-import {getAvailableFonts} from '@remotion/google-fonts';
 import {useEffect} from 'react';
+import {top250} from '../../data/fonts';
 
 // Without this type, loadFont retrun a Type error.
 type RemotionFont = {
@@ -11,18 +11,18 @@ export const FontPicker: React.FC<{
 	selectedFont?: string;
 	setSelectedFont: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }> = ({label, selectedFont, setSelectedFont}) => {
-	const fontList = getAvailableFonts();
+	const fontList = top250;
 
 	useEffect(() => {
 		(async function maybeLoadGoogleFont() {
-			const gFont = fontList.find((font) => font.fontFamily === selectedFont);
+			const gFont = fontList.find((font) => font.family === selectedFont);
 
 			if (gFont) {
 				const googleFont = (await gFont.load()) as RemotionFont;
 				googleFont.loadFont();
 			}
 		})();
-	}, [selectedFont]);
+	}, [fontList, selectedFont]);
 
 	return (
 		<>
@@ -50,8 +50,8 @@ export const FontPicker: React.FC<{
 					<option value="">-- Default --</option>
 					{fontList.map((f) => {
 						return (
-							<option key={f.importName} value={f.fontFamily}>
-								{f.fontFamily}
+							<option key={f.family} value={f.family}>
+								{f.family}
 							</option>
 						);
 					})}

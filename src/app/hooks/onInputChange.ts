@@ -12,7 +12,7 @@ export const useInputChange = <ValueType extends string | undefined>(
 
 	const [value, setValue] = useState<ValueType>(initialValue as ValueType);
 	const onValueChange = useCallback(
-		(event: FormEvent<HTMLInputElement>) =>
+		(event: FormEvent<HTMLInputElement | HTMLSelectElement>) =>
 			setValue(event.currentTarget.value as unknown as ValueType),
 		[]
 	);

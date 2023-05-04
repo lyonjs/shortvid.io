@@ -1,10 +1,8 @@
-import React, {useEffect} from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
 import {LottieAsset} from '../../../design/atoms/LottieAsset';
 import {EventTitle} from './EventTitle';
 import {Paillettes} from '../../../design/atoms/Paillettes';
 import {EventBackground} from './EventBackground';
-import {getAvailableFonts} from '@remotion/google-fonts';
 
 export const Event: React.FC<{
 	backgroundImg?: string;
@@ -19,13 +17,6 @@ export const Event: React.FC<{
 	paillettesAsset = 'lf20_tiviyc3p',
 	fontFamily = 'HelveticaNeue',
 }) => {
-	const fontList = getAvailableFonts();
-	const customFont = fontList.find((font) => font.importName === fontFamily);
-
-	useEffect(() => {
-		customFont?.load();
-	}, [customFont]);
-
 	return (
 		<AbsoluteFill
 			style={{
@@ -44,10 +35,7 @@ export const Event: React.FC<{
 			</Sequence>
 
 			<Sequence from={50} durationInFrames={130} name="Event title">
-				<EventTitle
-					title={title}
-					style={{fontFamily: customFont?.fontFamily || fontFamily}}
-				/>
+				<EventTitle title={title} style={{fontFamily}} />
 			</Sequence>
 		</AbsoluteFill>
 	);

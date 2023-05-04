@@ -14,6 +14,7 @@ export const Avatar: React.FC<{
 				borderRadius: '50%',
 				border: '30px solid white',
 				backgroundColor: 'white',
+				objectFit: 'cover',
 				...style,
 			}}
 			src={src}

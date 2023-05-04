@@ -6,8 +6,8 @@ import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 export const TalkSpeaker: React.FC<{
 	speakerPicture?: string;
 	speakersNames: string;
-	SpeakerNameStyle?: React.CSSProperties;
-}> = ({speakerPicture, speakersNames, SpeakerNameStyle}) => {
+	speakerNameStyle?: React.CSSProperties;
+}> = ({speakerPicture, speakersNames, speakerNameStyle}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -31,10 +31,10 @@ export const TalkSpeaker: React.FC<{
 						transform: 'translate(-50%, 0)',
 						top: pictureDrop,
 					}}
-					captionStyle={{...SpeakerNameStyle}}
+					captionStyle={{...speakerNameStyle}}
 				/>
 			) : (
-				<Title style={{...SpeakerNameStyle}}>{speakersNames}</Title>
+				<Title style={{...speakerNameStyle}}>{speakersNames}</Title>
 			)}
 		</>
 	);

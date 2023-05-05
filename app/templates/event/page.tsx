@@ -29,7 +29,6 @@ export default function EventPage() {
 		selectedFont,
 		'fontFamily'
 	);
-	console.log(selectedFont);
 
 	const props = {
 		title,

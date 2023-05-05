@@ -20,8 +20,7 @@ export default function MeetupPage() {
 	);
 	const props = {title, date, backgroundImg, eventLogo};
 	const encodedParams = encodeObjectValues(props);
-	const {selectedFont} = useContext(FontContext);
-	console.log(selectedFont);
+
 	return (
 		<>
 			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">

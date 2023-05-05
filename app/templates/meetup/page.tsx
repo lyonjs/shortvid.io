@@ -7,6 +7,8 @@ import {Code} from '../../../src/app/Code';
 import {Form, Input} from '../../../src/app/forms/input';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
+import {useContext} from 'react';
+import {FontContext} from '../../../src/context/fonts/FontCountext';
 
 export default function MeetupPage() {
 	const [title, setTitle] = useInputChange<string>('Example', 'title');
@@ -18,7 +20,8 @@ export default function MeetupPage() {
 	);
 	const props = {title, date, backgroundImg, eventLogo};
 	const encodedParams = encodeObjectValues(props);
-
+	const {selectedFont} = useContext(FontContext);
+	console.log(selectedFont);
 	return (
 		<>
 			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">

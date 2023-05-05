@@ -1,5 +1,6 @@
-import {useEffect} from 'react';
+import {ChangeEventHandler, FormEvent, useContext, useEffect} from 'react';
 import {top250} from '../../data/fonts';
+import {FontContext} from '../../context/fonts/FontCountext';
 
 // Without this type, loadFont retrun a Type error.
 type RemotionFont = {
@@ -8,21 +9,27 @@ type RemotionFont = {
 
 export const FontPicker: React.FC<{
 	label: string;
-	selectedFont?: string;
-	setSelectedFont: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-}> = ({label, selectedFont, setSelectedFont}) => {
+	fontFamily: string | undefined;
+	setFontFamily: (event: FormEvent<HTMLSelectElement>) => void;
+}> = ({label, fontFamily, setFontFamily}) => {
+	const {setSelectedFont} = useContext(FontContext);
 	const fontList = top250;
 
 	useEffect(() => {
 		(async function maybeLoadGoogleFont() {
-			const gFont = fontList.find((font) => font.family === selectedFont);
+			const gFont = fontList.find((font) => font.family === fontFamily);
 
 			if (gFont) {
 				const googleFont = (await gFont.load()) as RemotionFont;
 				googleFont.loadFont();
 			}
 		})();
-	}, [fontList, selectedFont]);
+	}, [fontList, fontFamily]);
+
+	const handleChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
+		setSelectedFont(event.currentTarget.value);
+		setFontFamily(event);
+	};
 
 	return (
 		<>
@@ -44,8 +51,8 @@ export const FontPicker: React.FC<{
 						borderRadius: '5px',
 						border: 'none',
 					}}
-					defaultValue={selectedFont}
-					onChange={setSelectedFont}
+					defaultValue={fontFamily}
+					onChange={handleChange}
 				>
 					<option value="">-- Default --</option>
 					{fontList.map((f) => {

@@ -8,6 +8,8 @@ import {Event} from '../../../remotion/compositions/templates/event/Event';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {FontPicker} from '../../../src/app/forms/FontPicker';
+import {useContext} from 'react';
+import {FontContext} from '../../../src/context/fonts/FontCountext';
 
 export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');
@@ -22,10 +24,12 @@ export default function EventPage() {
 		undefined,
 		'backgroundImg'
 	);
+	const {selectedFont} = useContext(FontContext);
 	const [fontFamily, setFontFamily] = useInputChange<string | undefined>(
-		undefined,
+		selectedFont,
 		'fontFamily'
 	);
+	console.log(selectedFont);
 
 	const props = {
 		title,
@@ -59,8 +63,8 @@ export default function EventPage() {
 				<Form>
 					<FontPicker
 						label="Font family"
-						selectedFont={fontFamily}
-						setSelectedFont={setFontFamily}
+						fontFamily={fontFamily}
+						setFontFamily={setFontFamily}
 					/>
 					<Input setValue={setTitle} value={title} label="SpeakerName" />
 					<Input

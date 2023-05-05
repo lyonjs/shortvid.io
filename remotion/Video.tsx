@@ -5,16 +5,17 @@ import {ShowcasesComposition} from './compositions/showcases/Showcases.compositi
 import {TemplatesComposition} from './compositions/templates/Templates.composition';
 import {AtomsComposition} from './design/atoms/Atoms.composition';
 import {MoleculesComposition} from './design/molecules/Molecules.composition';
+import {FontProvider} from '../src/context/fonts/FontProvider';
 
 export const RemotionVideo: React.FC = () => {
 	return (
-		<>
+		<FontProvider>
 			<TemplatesComposition />
 			<ShowcasesComposition />
 			<Folder name="Design">
 				<AtomsComposition />
 				<MoleculesComposition />
 			</Folder>
-		</>
+		</FontProvider>
 	);
 };

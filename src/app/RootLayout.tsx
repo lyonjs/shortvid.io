@@ -5,6 +5,7 @@ import {Analytics} from '@vercel/analytics/react';
 import {ReactNode} from 'react';
 import {Header} from './Header';
 import {NavBar} from './NavBar';
+import {FontProvider} from '../context/fonts/FontProvider';
 
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (
@@ -34,7 +35,7 @@ export default function RootLayout({children}: {children: ReactNode}) {
 				</p>
 			</article>
 			<NavBar />
-			{children}
+			<FontProvider>{children}</FontProvider>
 			<footer className="flex justify-between items-center my-8">
 				<a
 					className="block"

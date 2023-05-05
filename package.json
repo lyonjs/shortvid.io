@@ -46,7 +46,7 @@
 		"@types/web": "0.0.99",
 		"autoprefixer": "10.4.14",
 		"debug": "4.3.4",
-		"eslint": "8.39.0",
+		"eslint": "8.40.0",
 		"eslint-config-next": "^13.2.4",
 		"husky": "8.0.3",
 		"jest-environment-jsdom": "29.5.0",

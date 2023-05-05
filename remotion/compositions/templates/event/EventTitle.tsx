@@ -3,7 +3,8 @@ import {Title} from '../../../design/atoms/Title';
 
 export const EventTitle: React.FC<{
 	title: string;
-}> = ({title}) => {
+	style?: React.CSSProperties;
+}> = ({title, style}) => {
 	const frame = useCurrentFrame();
 	const {fps, width} = useVideoConfig();
 
@@ -24,6 +25,7 @@ export const EventTitle: React.FC<{
 				fontSize: 100,
 				width,
 				textAlign: 'center',
+				...style,
 			}}
 		>
 			{title}

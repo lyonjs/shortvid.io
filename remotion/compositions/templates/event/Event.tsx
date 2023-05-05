@@ -1,4 +1,3 @@
-import React from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
 import {LottieAsset} from '../../../design/atoms/LottieAsset';
 import {EventTitle} from './EventTitle';
@@ -10,11 +9,13 @@ export const Event: React.FC<{
 	title: string;
 	lottieAsset?: string;
 	paillettesAsset?: string;
+	fontFamily?: string;
 }> = ({
 	backgroundImg = 'https://i.pinimg.com/originals/de/0d/19/de0d19d835dd1224c5208701d78bd6e7.jpg',
 	title,
 	lottieAsset = 'lf20_UDstUT',
 	paillettesAsset = 'lf20_tiviyc3p',
+	fontFamily,
 }) => {
 	return (
 		<AbsoluteFill
@@ -34,7 +35,7 @@ export const Event: React.FC<{
 			</Sequence>
 
 			<Sequence from={50} durationInFrames={130} name="Event title">
-				<EventTitle title={title} />
+				<EventTitle title={title} style={{fontFamily}} />
 			</Sequence>
 		</AbsoluteFill>
 	);

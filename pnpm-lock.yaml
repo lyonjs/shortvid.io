@@ -73,11 +73,11 @@ devDependencies:
     specifier: 18.16.3
     version: 18.16.3
   '@types/react':
+    specifier: 18.2.6
+    version: 18.2.6
+  '@types/react-dom':
     specifier: 18.2.4
     version: 18.2.4
-  '@types/react-dom':
-    specifier: 18.2.3
-    version: 18.2.3
   '@types/react-json-editor-ajrm':
     specifier: ^2.5.3
     version: 2.5.3
@@ -1452,7 +1452,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.13
       '@testing-library/dom': 9.2.0
-      '@types/react-dom': 18.2.3
+      '@types/react-dom': 18.2.4
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -1568,20 +1568,20 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react-dom@18.2.3:
-    resolution: {integrity: sha512-hxXEXWxFJXbY0LMj/T69mznqOZJXNtQMqVxIiirVAZnnpeYiD4zt+lPsgcr/cfWg2VLsxZ1y26vigG03prYB+Q==}
+  /@types/react-dom@18.2.4:
+    resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
     dependencies:
-      '@types/react': 18.2.4
+      '@types/react': 18.2.6
     dev: true
 
   /@types/react-json-editor-ajrm@2.5.3:
     resolution: {integrity: sha512-hHf3FU1HjL6Lm3rK2iWUJtoYpZ1qDCSffnLAQXCf++TP1Ms18rnB06gBK3psQ8NEW6CfrfRNlirIL3D/P80QVg==}
     dependencies:
-      '@types/react': 18.2.4
+      '@types/react': 18.2.6
     dev: true
 
-  /@types/react@18.2.4:
-    resolution: {integrity: sha512-IvAIhJTmKAAJmCIcaa6+5uagjyh+9GvcJ/thPZcw+i+vx+22eHlTy2Q1bJg/prES57jehjebq9DnIhOTtIhmLw==}
+  /@types/react@18.2.6:
+    resolution: {integrity: sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2

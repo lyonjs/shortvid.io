@@ -1,7 +1,5 @@
-import React, {useContext} from 'react';
 import {Composition, Folder} from 'remotion';
 import {Event} from './Event';
-import {FontContext} from '../../../../src/context/fonts/FontCountext';
 
 export const EventsComposition: React.FC = () => {
 	return (

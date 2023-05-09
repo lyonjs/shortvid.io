@@ -3,7 +3,6 @@ import {SponsorOrgaLogo} from './SponsorOrgaLogo';
 import {SponsorPresentation} from './SponsorPresentation';
 import {SponsorThanks} from './SponsorThanks';
 import {SponsorMap} from './SponsorMap';
-import React from 'react';
 import {SponsorBackground} from './SponsorBackground';
 
 export const Sponsor: React.FC<{

@@ -7,8 +7,6 @@ import {Code} from '../../../src/app/Code';
 import {Form, Input} from '../../../src/app/forms/input';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
-import {useContext} from 'react';
-import {FontContext} from '../../../src/context/fonts/FontCountext';
 
 export default function MeetupPage() {
 	const [title, setTitle] = useInputChange<string>('Example', 'title');

@@ -11,18 +11,14 @@ export const Sponsor: React.FC<{
 	backgroundImg?: string;
 	sponsorLocalisation?: string;
 	sponsorLogo?: string;
-	fontFamily?: string;
 }> = ({
 	companyName = 'Evilcorp',
 	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
 	sponsorLocalisation,
 	sponsorLogo,
-	fontFamily,
 }) => {
 	return (
-		<AbsoluteFill
-			style={{backgroundColor: 'white', overflow: 'hidden', fontFamily}}
-		>
+		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Sequence name="Background">
 				<SponsorBackground backgroundImg={backgroundImg} />
 			</Sequence>

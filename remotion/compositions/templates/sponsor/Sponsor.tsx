@@ -1,16 +1,8 @@
-import {
-	AbsoluteFill,
-	Sequence,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 import {SponsorOrgaLogo} from './SponsorOrgaLogo';
 import {SponsorPresentation} from './SponsorPresentation';
 import {SponsorThanks} from './SponsorThanks';
 import {SponsorMap} from './SponsorMap';
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 import React from 'react';
 import {SponsorBackground} from './SponsorBackground';
 
@@ -19,14 +11,18 @@ export const Sponsor: React.FC<{
 	backgroundImg?: string;
 	sponsorLocalisation?: string;
 	sponsorLogo?: string;
+	fontFamily?: string;
 }> = ({
 	companyName = 'Evilcorp',
 	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
 	sponsorLocalisation,
 	sponsorLogo,
+	fontFamily,
 }) => {
 	return (
-		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
+		<AbsoluteFill
+			style={{backgroundColor: 'white', overflow: 'hidden', fontFamily}}
+		>
 			<Sequence name="Background">
 				<SponsorBackground backgroundImg={backgroundImg} />
 			</Sequence>

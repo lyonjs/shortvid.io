@@ -25,8 +25,9 @@ export default function EventPage() {
 		'backgroundImg'
 	);
 	const {selectedFont} = useContext(FontContext);
+	const storedFont = sessionStorage.getItem('selectedFont');
 	const [fontFamily, setFontFamily] = useInputChange<string | undefined>(
-		selectedFont,
+		storedFont ?? selectedFont,
 		'fontFamily'
 	);
 

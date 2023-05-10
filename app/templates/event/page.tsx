@@ -10,6 +10,7 @@ import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {FontPicker} from '../../../src/app/forms/FontPicker';
 import {useContext} from 'react';
 import {FontContext} from '../../../src/context/FontContext';
+import {useSelectedFont} from '../../../src/app/hooks/useSelectedFont';
 
 export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');
@@ -24,18 +25,15 @@ export default function EventPage() {
 		undefined,
 		'backgroundImg'
 	);
-	const {selectedFont} = useContext(FontContext);
-	const [fontFamily, setFontFamily] = useInputChange<string>(
-		selectedFont,
-		'fontFamily'
-	);
+
+	const {selectedFont} = useSelectedFont();
 
 	const props = {
 		title,
 		lottieAsset,
 		paillettesAsset,
 		backgroundImg,
-		fontFamily,
+		fontFamily: selectedFont,
 	};
 	const encodedParams = encodeObjectValues(props);
 
@@ -60,11 +58,7 @@ export default function EventPage() {
 				/>
 
 				<Form>
-					<FontPicker
-						label="Font family"
-						fontFamily={fontFamily}
-						setFontFamily={setFontFamily}
-					/>
+					<FontPicker label="Font family" />
 					<Input setValue={setTitle} value={title} label="SpeakerName" />
 					<Input
 						setValue={setLottieAsset}

@@ -1,19 +1,14 @@
 import {ChangeEventHandler, useContext, useEffect} from 'react';
 import {top250} from '../../data/fonts';
-import {FontContext} from '../../context/FontContext';
-import {loadGoogleFont} from '../utils/loadFont';
+import {useSelectedFont} from '../hooks/useSelectedFont';
 
 export const FontPicker: React.FC<{
 	label: string;
 }> = ({label}) => {
-	const {selectedFont, setSelectedFont} = useContext(FontContext);
-
-	useEffect(() => {
-		loadGoogleFont(selectedFont);
-	}, [selectedFont]);
+	const {selectedFont, handleSetSelectedFont} = useSelectedFont();
 
 	const handleChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
-		setSelectedFont(event.currentTarget.value);
+		handleSetSelectedFont(event.currentTarget.value);
 	};
 
 	return (

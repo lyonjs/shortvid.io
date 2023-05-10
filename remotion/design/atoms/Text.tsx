@@ -1,11 +1,11 @@
-import React, {ReactNode, useContext} from 'react';
-import {FontContext} from '../../../src/context/FontContext';
+import React, {ReactNode} from 'react';
+import {useSelectedFont} from '../../../src/app/hooks/useSelectedFont';
 
 export const Text: React.FC<{
 	children: ReactNode;
 	style?: React.CSSProperties;
 }> = ({children, style}) => {
-	const {selectedFont} = useContext(FontContext);
+	const {selectedFont} = useSelectedFont();
 
 	return (
 		<span

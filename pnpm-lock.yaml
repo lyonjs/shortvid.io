@@ -16,6 +16,9 @@ dependencies:
   '@remotion/player':
     specifier: 3.3.91
     version: 3.3.91(react-dom@18.2.0)(react@18.2.0)
+  '@remotion/rive':
+    specifier: ^3.3.91
+    version: 3.3.91(react-dom@18.2.0)(react@18.2.0)
   '@remotion/shapes':
     specifier: 3.3.91
     version: 3.3.91(react-dom@18.2.0)(react@18.2.0)
@@ -36,7 +39,7 @@ dependencies:
     version: 5.11.0
   next:
     specifier: ^13.2.4
-    version: 13.2.4(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0)
+    version: 13.2.4(react-dom@18.2.0)(react@18.2.0)
   node-fetch:
     specifier: ^3.3.0
     version: 3.3.0
@@ -1380,6 +1383,18 @@ packages:
       - utf-8-validate
     dev: false
 
+  /@remotion/rive@3.3.91(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-jOv/jOXIX3ny+I1kU3sgizHxfV+undylF/QnebclW3/rXaclI5mj1faNWrDwpU9qXOMmpcaDeefliWI7Q5g75w==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      '@rive-app/canvas-advanced': 1.1.5
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      remotion: 3.3.91(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
   /@remotion/shapes@3.3.91(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-i073+LqLVEiyc/0XZz1Y6FHFC07VOwP7Z9qn7tFkioQAsu7n8+cO3fKaVg2hsIk1LhsIJ+tA+6ntT9mrNPIR2A==}
     peerDependencies:
@@ -1389,6 +1404,10 @@ packages:
       '@remotion/paths': 3.3.91
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@rive-app/canvas-advanced@1.1.5:
+    resolution: {integrity: sha512-Zrl8QNIBVAvkTG4IDPGz1L8Yp2HPMDgqQKP1qsF9kVlBEUWOfEVoIBd2er6CnMhRJ+jZU6soujbLcJbrtkhu8A==}
     dev: false
 
   /@rushstack/eslint-patch@1.2.0:
@@ -4573,7 +4592,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /next@13.2.4(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0):
+  /next@13.2.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -4600,7 +4619,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.21.3)(react@18.2.0)
+      styled-jsx: 5.1.1(react@18.2.0)
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.2.4
       '@next/swc-android-arm64': 13.2.4
@@ -5470,7 +5489,7 @@ packages:
       webpack: 5.76.1(esbuild@0.16.12)
     dev: false
 
-  /styled-jsx@5.1.1(@babel/core@7.21.3)(react@18.2.0):
+  /styled-jsx@5.1.1(react@18.2.0):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -5483,7 +5502,6 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      '@babel/core': 7.21.3
       client-only: 0.0.1
       react: 18.2.0
     dev: false

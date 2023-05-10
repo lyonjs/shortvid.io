@@ -5,7 +5,7 @@ import {ShowcasesComposition} from './compositions/showcases/Showcases.compositi
 import {TemplatesComposition} from './compositions/templates/Templates.composition';
 import {AtomsComposition} from './design/atoms/Atoms.composition';
 import {MoleculesComposition} from './design/molecules/Molecules.composition';
-import {FontProvider} from '../src/context/fonts/FontProvider';
+import {FontProvider} from '../src/context/FontContext';
 
 export const RemotionVideo: React.FC = () => {
 	return (

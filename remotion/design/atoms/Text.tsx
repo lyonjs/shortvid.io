@@ -1,5 +1,5 @@
 import React, {ReactNode, useContext} from 'react';
-import {FontContext} from '../../../src/context/fonts/FontCountext';
+import {FontContext} from '../../../src/context/FontContext';
 
 export const Text: React.FC<{
 	children: ReactNode;

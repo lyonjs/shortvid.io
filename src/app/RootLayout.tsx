@@ -5,7 +5,7 @@ import {Analytics} from '@vercel/analytics/react';
 import {ReactNode} from 'react';
 import {Header} from './Header';
 import {NavBar} from './NavBar';
-import {FontProvider} from '../context/fonts/FontProvider';
+import {FontProvider} from '../context/FontContext';
 
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (

@@ -9,7 +9,7 @@ import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {FontPicker} from '../../../src/app/forms/FontPicker';
 import {useContext} from 'react';
-import {FontContext} from '../../../src/context/fonts/FontCountext';
+import {FontContext} from '../../../src/context/FontContext';
 
 export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');
@@ -25,7 +25,6 @@ export default function EventPage() {
 		'backgroundImg'
 	);
 	const {selectedFont} = useContext(FontContext);
-	// const storedFont = sessionStorage.getItem('selectedFont');
 	const [fontFamily, setFontFamily] = useInputChange<string>(
 		selectedFont,
 		'fontFamily'
@@ -61,7 +60,11 @@ export default function EventPage() {
 				/>
 
 				<Form>
-					<FontPicker label="Font family" />
+					<FontPicker
+						label="Font family"
+						fontFamily={fontFamily}
+						setFontFamily={setFontFamily}
+					/>
 					<Input setValue={setTitle} value={title} label="SpeakerName" />
 					<Input
 						setValue={setLottieAsset}

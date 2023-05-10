@@ -1,8 +1,17 @@
 'use client';
-import {ReactNode, useEffect, useState} from 'react';
-import {FontContext} from './FontCountext';
+import {createContext, ReactNode, useEffect, useState} from 'react';
 import {loadFont} from '@remotion/google-fonts/NotoSans';
-import {loadGoogleFont} from '../../app/utils/loadFont';
+import {loadGoogleFont} from '../app/utils/loadFont';
+
+interface FontContextType {
+	selectedFont: string;
+	setSelectedFont: (font: string) => void;
+}
+
+export const FontContext = createContext<FontContextType>({
+	selectedFont: '',
+	setSelectedFont: () => {},
+});
 
 interface FontProviderProps {
 	children: ReactNode;

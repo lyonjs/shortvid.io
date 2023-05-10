@@ -1,13 +1,12 @@
-import {ChangeEventHandler, FormEvent, useContext, useEffect} from 'react';
+import {ChangeEventHandler, useContext, useEffect} from 'react';
 import {top250} from '../../data/fonts';
-import {FontContext} from '../../context/fonts/FontCountext';
+import {FontContext} from '../../context/FontContext';
 import {loadGoogleFont} from '../utils/loadFont';
 
 export const FontPicker: React.FC<{
 	label: string;
 }> = ({label}) => {
 	const {selectedFont, setSelectedFont} = useContext(FontContext);
-	const fontList = top250;
 
 	useEffect(() => {
 		loadGoogleFont(selectedFont);
@@ -41,7 +40,7 @@ export const FontPicker: React.FC<{
 					onChange={handleChange}
 				>
 					<option value="">-- Default --</option>
-					{fontList.map((f) => {
+					{top250.map((f) => {
 						return (
 							<option key={f.family} value={f.family}>
 								{f.family}

@@ -9,9 +9,7 @@ interface FontProviderProps {
 }
 
 export const FontProvider: React.FC<FontProviderProps> = ({children}) => {
-	const [selectedFont, setSelectedFont] = useState<string | undefined>(
-		'Noto Sans'
-	);
+	const [selectedFont, setSelectedFont] = useState<string>('');
 
 	useEffect(() => {
 		const storedFont = sessionStorage.getItem('selectedFont');
@@ -19,13 +17,16 @@ export const FontProvider: React.FC<FontProviderProps> = ({children}) => {
 			setSelectedFont(storedFont);
 			loadGoogleFont(storedFont);
 		} else {
+			setSelectedFont('Noto Sans');
 			loadFont();
 		}
-	}, []);
+	}, [selectedFont]);
 
-	const handleSetSelectedFont = (font: string | undefined) => {
+	const handleSetSelectedFont = (font: string) => {
 		setSelectedFont(font);
-		font && sessionStorage.setItem('selectedFont', font);
+		if (font) {
+			sessionStorage.setItem('selectedFont', font);
+		}
 	};
 
 	return (

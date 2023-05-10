@@ -5,19 +5,16 @@ import {loadGoogleFont} from '../utils/loadFont';
 
 export const FontPicker: React.FC<{
 	label: string;
-	fontFamily: string | undefined;
-	setFontFamily: (event: FormEvent<HTMLSelectElement>) => void;
-}> = ({label, fontFamily, setFontFamily}) => {
-	const {setSelectedFont} = useContext(FontContext);
+}> = ({label}) => {
+	const {selectedFont, setSelectedFont} = useContext(FontContext);
 	const fontList = top250;
 
 	useEffect(() => {
-		fontFamily && loadGoogleFont(fontFamily);
-	}, [fontFamily]);
+		loadGoogleFont(selectedFont);
+	}, [selectedFont]);
 
 	const handleChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
 		setSelectedFont(event.currentTarget.value);
-		setFontFamily(event);
 	};
 
 	return (
@@ -40,7 +37,7 @@ export const FontPicker: React.FC<{
 						borderRadius: '5px',
 						border: 'none',
 					}}
-					defaultValue={fontFamily}
+					value={selectedFont}
 					onChange={handleChange}
 				>
 					<option value="">-- Default --</option>

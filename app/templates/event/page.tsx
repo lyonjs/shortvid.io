@@ -25,9 +25,9 @@ export default function EventPage() {
 		'backgroundImg'
 	);
 	const {selectedFont} = useContext(FontContext);
-	const storedFont = sessionStorage.getItem('selectedFont');
-	const [fontFamily, setFontFamily] = useInputChange<string | undefined>(
-		storedFont ?? selectedFont,
+	// const storedFont = sessionStorage.getItem('selectedFont');
+	const [fontFamily, setFontFamily] = useInputChange<string>(
+		selectedFont,
 		'fontFamily'
 	);
 
@@ -61,11 +61,7 @@ export default function EventPage() {
 				/>
 
 				<Form>
-					<FontPicker
-						label="Font family"
-						fontFamily={fontFamily}
-						setFontFamily={setFontFamily}
-					/>
+					<FontPicker label="Font family" />
 					<Input setValue={setTitle} value={title} label="SpeakerName" />
 					<Input
 						setValue={setLottieAsset}

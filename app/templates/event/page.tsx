@@ -8,8 +8,6 @@ import {Event} from '../../../remotion/compositions/templates/event/Event';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {FontPicker} from '../../../src/app/forms/FontPicker';
-import {useContext} from 'react';
-import {FontContext} from '../../../src/context/FontContext';
 import {useSelectedFont} from '../../../src/app/hooks/useSelectedFont';
 
 export default function EventPage() {

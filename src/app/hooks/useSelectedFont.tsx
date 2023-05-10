@@ -8,19 +8,21 @@ export const useSelectedFont = () => {
 	const searchParams = useSearchParams();
 
 	useEffect(() => {
-		const queryFont = searchParams.get('fontFamily');
+		const queryFont = searchParams?.get('fontFamily');
 		const storedFont = sessionStorage.getItem('selectedFont');
+		const defaultFont = 'Noto Sans';
+		let fontToLoad: string;
 
 		if (queryFont) {
-			setSelectedFont(queryFont);
-			loadGoogleFont(queryFont);
+			fontToLoad = queryFont;
 		} else if (storedFont) {
-			setSelectedFont(storedFont);
-			loadGoogleFont(storedFont);
+			fontToLoad = storedFont;
 		} else {
-			setSelectedFont('Noto Sans');
-			loadGoogleFont('Noto Sans');
+			fontToLoad = defaultFont;
 		}
+
+		setSelectedFont(fontToLoad);
+		loadGoogleFont(fontToLoad);
 	}, [selectedFont]);
 
 	const handleSetSelectedFont = (font: string) => {

@@ -1,4 +1,4 @@
-import {ChangeEventHandler, useContext, useEffect} from 'react';
+import {ChangeEventHandler} from 'react';
 import {top250} from '../../data/fonts';
 import {useSelectedFont} from '../hooks/useSelectedFont';
 

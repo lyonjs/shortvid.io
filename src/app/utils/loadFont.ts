@@ -1,6 +1,5 @@
 import {top250} from '../../data/fonts';
 
-// Without this type, loadFont return a Type error.
 type RemotionFont = {
 	loadFont: () => void;
 };

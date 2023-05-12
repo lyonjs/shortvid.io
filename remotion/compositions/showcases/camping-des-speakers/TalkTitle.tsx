@@ -24,7 +24,6 @@ export const TalkTitle: React.FC<{
 	return (
 		<Title
 			style={{
-				fontFamily: 'Noto Sans,sans-serif',
 				fontSize: '38px',
 				color: 'white',
 				position: 'absolute',

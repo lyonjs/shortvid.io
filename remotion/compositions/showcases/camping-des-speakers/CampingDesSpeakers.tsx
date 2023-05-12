@@ -2,7 +2,7 @@ import {AbsoluteFill, Sequence} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
-import React from 'react';
+import {Intro} from './Intro';
 
 export interface Speaker {
 	picture: string;
@@ -26,7 +26,10 @@ export const CampingDesSpeakers: React.FC<Props> = ({
 	location,
 }) => {
 	return (
-		<AbsoluteFill style={{backgroundColor: 'black', overflow: 'hidden'}}>
+		<AbsoluteFill style={{backgroundColor: '#82B6FA'}}>
+			<Sequence name="Intro">
+				<Intro />
+			</Sequence>
 			<Sequence from={50}>
 				{speakers && <Speakers speakers={speakers} />}
 				<TalkTitle title={title} />

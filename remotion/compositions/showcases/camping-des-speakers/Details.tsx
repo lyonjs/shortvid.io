@@ -19,9 +19,6 @@ export const Details: React.FC<{
 				time,
 				location,
 			}}
-			style={{
-				fontFamily: 'Noto Sans,sans-serif',
-			}}
 			iconStyle={{
 				opacity,
 				bottom: drop,

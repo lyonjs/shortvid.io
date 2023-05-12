@@ -1,7 +1,7 @@
 import React from 'react';
 import {Composition, Folder} from 'remotion';
 import {CampingDesSpeakers} from './CampingDesSpeakers';
-import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import {Intro} from './Intro';
 
 export const CampingDesSpeakersComposition: React.FC = () => {
 	return (
@@ -10,7 +10,7 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 				id="CampingDesSpeakers"
 				component={CampingDesSpeakers}
 				durationInFrames={400}
-				fps={60}
+				fps={30}
 				width={1200}
 				height={700}
 				defaultProps={{
@@ -33,6 +33,14 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 					time: '14h00',
 					location: 'Salle 1',
 				}}
+			/>
+			<Composition
+				component={Intro}
+				width={1200}
+				height={700}
+				id="Intro"
+				fps={30}
+				durationInFrames={200}
 			/>
 		</Folder>
 	);

@@ -1,8 +1,7 @@
 import {AbsoluteFill, Sequence} from 'remotion';
-import {TalkTitle} from './TalkTitle';
-import {Details} from './Details';
-import {Speakers} from './Speakers';
-import {Intro} from './Intro';
+import {Introduction} from './Introduction';
+import {TalkBackground} from './components/TalkBackground';
+import {Talk} from './Talk';
 
 export interface Speaker {
 	picture: string;
@@ -10,7 +9,7 @@ export interface Speaker {
 	company: string;
 }
 
-export interface Props {
+export interface TalkProps {
 	title: string;
 	speakers: Speaker[];
 	date: string;
@@ -18,7 +17,7 @@ export interface Props {
 	location: string;
 }
 
-export const CampingDesSpeakers: React.FC<Props> = ({
+export const CampingDesSpeakers: React.FC<TalkProps> = ({
 	title,
 	speakers,
 	date,
@@ -27,16 +26,19 @@ export const CampingDesSpeakers: React.FC<Props> = ({
 }) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: '#82B6FA'}}>
-			<Sequence name="Intro">
-				<Intro />
+			<Sequence durationInFrames={300}>
+				<Introduction />
 			</Sequence>
-			<Sequence from={50}>
-				{speakers && <Speakers speakers={speakers} />}
-				<TalkTitle title={title} />
+			<Sequence from={270}>
+				<TalkBackground />
 			</Sequence>
-			<Sequence from={70}>
-				<Details date={date} time={time} location={location} />
-			</Sequence>
+			<Talk
+				speakers={speakers}
+				date={date}
+				time={time}
+				location={location}
+				title={title}
+			/>
 		</AbsoluteFill>
 	);
 };

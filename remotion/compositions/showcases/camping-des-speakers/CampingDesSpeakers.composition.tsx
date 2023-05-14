@@ -1,7 +1,7 @@
 import React from 'react';
 import {Composition, Folder} from 'remotion';
 import {CampingDesSpeakers} from './CampingDesSpeakers';
-import {Intro} from './Intro';
+import {Introduction} from './Introduction';
 
 export const CampingDesSpeakersComposition: React.FC = () => {
 	return (
@@ -9,8 +9,8 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 			<Composition
 				id="CampingDesSpeakers"
 				component={CampingDesSpeakers}
-				durationInFrames={400}
-				fps={30}
+				durationInFrames={450}
+				fps={60}
 				width={1200}
 				height={700}
 				defaultProps={{
@@ -35,10 +35,10 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 				}}
 			/>
 			<Composition
-				component={Intro}
+				component={Introduction}
 				width={1200}
 				height={700}
-				id="Intro"
+				id="CampingDesSpeakersIntroduction"
 				fps={30}
 				durationInFrames={200}
 			/>

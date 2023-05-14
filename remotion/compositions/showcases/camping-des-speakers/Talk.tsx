@@ -17,7 +17,9 @@ export const Talk: React.FC<TalkProps> = ({
 				<Speakers speakers={speakers} />
 				<TalkTitle title={title} style={{}} />
 				<Img
-					src={staticFile('images/conferences/campingDesSpeakers/cds_logo.png')}
+					src={staticFile(
+						'images/conferences/campingDesSpeakers/logo_text.png'
+					)}
 					alt="Conference logo"
 					style={{
 						position: 'absolute',

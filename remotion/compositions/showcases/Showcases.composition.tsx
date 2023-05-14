@@ -8,6 +8,7 @@ import {SnowcampComposition} from './snowcamp/Snowcamp.composition';
 import {VeryTechTripComposition} from './very-tech-trip/VeryTechTrip.composition';
 import {MixitComposition} from './mixit2023/Mixit.composition';
 import {DevoxxComposition} from './devoxx2023/Devoxx.composition';
+import {CampingDesSpeakersComposition} from './camping-des-speakers/CampingDesSpeakers.composition';
 
 export const ShowcasesComposition: React.FC = () => {
 	return (
@@ -19,6 +20,7 @@ export const ShowcasesComposition: React.FC = () => {
 			<VeryTechTripComposition />
 			<MixitComposition />
 			<DevoxxComposition />
+			<CampingDesSpeakersComposition />
 		</Folder>
 	);
 };

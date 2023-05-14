@@ -1,5 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title} from '../../../design/atoms/Title';
+import {Title} from '../../../../design/atoms/Title';
 import {loadFont} from '@remotion/google-fonts/YanoneKaffeesatz';
 
 const {fontFamily} = loadFont();
@@ -27,19 +27,19 @@ export const TalkTitle: React.FC<{
 	return (
 		<Title
 			style={{
-        fontFamily,
-        width: '75%',
-        left: '50%',
-        transform: 'translateX(-50%)',
+				fontFamily,
+				width: '75%',
+				left: '50%',
+				transform: 'translateX(-50%)',
 				fontSize: '50px',
 				position: 'absolute',
 				bottom: '130px',
 				textAlign: 'center',
-        lineHeight: '1.5',
+				lineHeight: '1.5',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
-        letterSpacing: '0.1rem',
-        textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+				letterSpacing: '0.1rem',
+				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
 				...style,
 			}}
 		>

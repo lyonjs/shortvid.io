@@ -7,17 +7,13 @@ export const TalkBackground = () => {
 	const backgroundOpacity = interpolate(frame, [0, 20], [0, 1]);
 
 	return (
-		<AbsoluteFill
+		<BackgroundFiller
+			imageUrl={staticFile(
+				'images/conferences/campingDesSpeakers/tentBackground.svg'
+			)}
 			style={{
 				opacity: backgroundOpacity,
-				backgroundColor: '#116299',
 			}}
-		>
-			<BackgroundFiller
-				imageUrl={staticFile(
-					'images/conferences/campingDesSpeakers/tentBackground.svg'
-				)}
-			/>
-		</AbsoluteFill>
+		/>
 	);
 };

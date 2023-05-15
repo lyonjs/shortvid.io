@@ -1,6 +1,12 @@
-import React from 'react';
 import {IntroBackground} from './components/IntroBackground';
-import {Audio, Easing, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
+import {
+	Audio,
+	Easing,
+	interpolate,
+	Sequence,
+	staticFile,
+	useCurrentFrame,
+} from 'remotion';
 import {FrontTrees} from './components/FrontTrees';
 import {Grass} from './components/Grass';
 import {BackTrees} from './components/BackTrees';
@@ -28,9 +34,15 @@ export const Introduction = () => {
 				transformOrigin: '819.5px 550px',
 			}}
 		>
-      <Audio src={staticFile('sounds/birds.mp3')} startFrom={140} volume={(f) =>
-        interpolate(f, [0, 200, 250], [0.5, 0.5, 0], {extrapolateRight: 'clamp'})
-      } />
+			<Audio
+				src={staticFile('sounds/birds.mp3')}
+				startFrom={140}
+				volume={(f) =>
+					interpolate(f, [0, 200, 250], [0.5, 0.5, 0], {
+						extrapolateRight: 'clamp',
+					})
+				}
+			/>
 			<Sequence durationInFrames={250}>
 				<IntroBackground />
 			</Sequence>

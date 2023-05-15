@@ -1,4 +1,10 @@
-import {Img, Sequence, staticFile} from 'remotion';
+import {
+	Img,
+	interpolate,
+	Sequence,
+	staticFile,
+	useCurrentFrame,
+} from 'remotion';
 import {TalkProps} from './CampingDesSpeakers';
 import {Details} from './components/Details';
 import {Speakers} from './components/Speakers';
@@ -11,6 +17,9 @@ export const Talk: React.FC<TalkProps> = ({
 	time,
 	location,
 }) => {
+	const frame = useCurrentFrame();
+	const logoOpacity = interpolate(frame, [300, 320], [0, 1]);
+
 	return (
 		<>
 			<Sequence from={300}>
@@ -26,6 +35,7 @@ export const Talk: React.FC<TalkProps> = ({
 						top: 0,
 						right: 30,
 						width: '150px',
+						opacity: logoOpacity,
 					}}
 				/>
 			</Sequence>

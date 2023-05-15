@@ -12,13 +12,16 @@ import {useState} from 'react';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
 import {AlpesCraft} from '../../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
 import {Code} from '../../../../src/app/Code';
-
+import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/camping-des-speakers/CampingDesSpeakers';
+import _ = require('lodash');
 interface TalkTemplate {
 	component: React.FC<any>;
 	width: number;
 	height: number;
 	compositionName: string;
 	durationInFrames: number;
+	fps?: number;
+	defaultProps?: {};
 }
 
 const Template: Record<string, TalkTemplate> = {
@@ -64,6 +67,20 @@ const Template: Record<string, TalkTemplate> = {
 		height: 720,
 		durationInFrames: 200,
 	},
+	CampingDesSpeakers: {
+		compositionName: 'CampingDesSpeakers',
+		component: CampingDesSpeakers,
+		width: 1200,
+		height: 700,
+		durationInFrames: 450,
+		fps: 60,
+		defaultProps: _.merge(
+			{
+				speakers: [{company: 'Zenika'}, {company: 'Bedrock'}],
+			},
+			defaultTalkValues
+		),
+	},
 };
 export default function ConferencePage({
 	params,
@@ -72,7 +89,9 @@ export default function ConferencePage({
 }) {
 	const conference = params.conferenceName;
 	const currentTemplate = Template[conference];
-	const [data, setData] = useState(defaultTalkValues);
+	const [data, setData] = useState(
+		currentTemplate.defaultProps || defaultTalkValues
+	);
 
 	return (
 		<div>
@@ -105,12 +124,12 @@ export default function ConferencePage({
 					durationInFrames={currentTemplate.durationInFrames}
 					compositionWidth={currentTemplate.width}
 					compositionHeight={currentTemplate.height}
-					fps={30}
+					fps={currentTemplate.fps || 30}
 					component={currentTemplate.component}
 					inputProps={data || defaultTalkValues}
 				/>
 				<JSONInput
-					placeholder={defaultTalkValues}
+					placeholder={currentTemplate.defaultProps || defaultTalkValues}
 					theme="light_mitsuketa_tribute"
 					locale={locale}
 					colors={{

@@ -36,7 +36,7 @@
 	"devDependencies": {
 		"@iconify/react": "^4.1.0",
 		"@remotion/eslint-plugin": "3.3.91",
-		"@testing-library/dom": "9.2.0",
+		"@testing-library/dom": "9.3.0",
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "14.0.0",
 		"@types/node": "18.16.7",

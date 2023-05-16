@@ -22,7 +22,7 @@ export const FrontTrees: React.FC = () => {
 	return (
 		<AbsoluteFill style={{transform: 'scale(1.1)'}}>
 			<svg
-				width="1200"
+				width="1280"
 				height="780"
 				viewBox="0 0 1200 780"
 				fill="none"

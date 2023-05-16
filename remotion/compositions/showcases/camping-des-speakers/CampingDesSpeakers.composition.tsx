@@ -36,8 +36,8 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 			/>
 			<Composition
 				component={Introduction}
-				width={1200}
-				height={700}
+				width={1280}
+				height={720}
 				id="CampingDesSpeakersIntroduction"
 				fps={30}
 				durationInFrames={200}

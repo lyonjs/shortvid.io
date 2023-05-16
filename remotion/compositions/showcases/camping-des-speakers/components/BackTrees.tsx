@@ -14,7 +14,7 @@ export const BackTrees = () => {
 	const BackTreeAppear = spring({
 		frame: frame,
 		from: -700,
-		to: -230,
+		to: -270,
 		fps,
 		durationInFrames: 50,
 		config: {
@@ -27,8 +27,9 @@ export const BackTrees = () => {
 			src={staticFile('images/conferences/campingDesSpeakers/backTrees.svg')}
 			style={{
 				position: 'absolute',
-				objectFit: 'none',
+				objectFit: 'cover',
 				top: BackTreeAppear,
+				width: '100%',
 			}}
 		/>
 	);

@@ -24,8 +24,9 @@ export const Grass = () => {
 			src={staticFile('images/conferences/campingDesSpeakers/grass.svg')}
 			style={{
 				position: 'absolute',
-				objectFit: 'none',
+				objectFit: 'cover',
 				bottom: GrassAppear,
+				width: '100%',
 			}}
 		/>
 	);

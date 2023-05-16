@@ -70,8 +70,8 @@ const Template: Record<string, TalkTemplate> = {
 	CampingDesSpeakers: {
 		compositionName: 'CampingDesSpeakers',
 		component: CampingDesSpeakers,
-		width: 1200,
-		height: 700,
+		width: 1280,
+		height: 720,
 		durationInFrames: 450,
 		fps: 60,
 		defaultProps: _.merge(

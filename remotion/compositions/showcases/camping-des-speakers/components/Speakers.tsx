@@ -78,7 +78,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 										letterSpacing: '0.1rem',
 										position: 'relative',
 										bottom: '-35%',
-										width: 250,
+										width: 320,
 										height: 100,
 										fontSize: 30,
 										fontWeight: 700,

@@ -28,18 +28,16 @@ export const TalkTitle: React.FC<{
 		<Title
 			style={{
 				fontFamily,
-				width: '75%',
-				left: '50%',
-				transform: 'translateX(-50%)',
 				fontSize: '50px',
-				position: 'absolute',
-				bottom: '130px',
-				textAlign: 'center',
 				lineHeight: '1.5',
+				letterSpacing: '0.1rem',
+				textAlign: 'center',
+				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+				position: 'absolute',
+				minHeight: 150,
+				bottom: '130px',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
-				letterSpacing: '0.1rem',
-				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
 				...style,
 			}}
 		>

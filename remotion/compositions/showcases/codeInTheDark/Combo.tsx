@@ -6,7 +6,7 @@ import {useState, useEffect, useRef} from 'react';
 export const Combo: React.FC = () => {
 	const frame = useCurrentFrame();
 	const outputRange = _.range(0, 51, 1);
-	const inputRange = _.range(0, 153, 3);
+	const inputRange = _.range(0, 252, 5);
 
 	const [count, setCount] = useState(0);
 	const prevCountRef = useRef<number>(0);

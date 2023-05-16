@@ -2,6 +2,7 @@ import {AbsoluteFill, Audio, Sequence, staticFile} from 'remotion';
 import {Combo} from './Combo';
 import React from 'react';
 import {Spotlight} from './Spotlight';
+import {Words} from './Words';
 
 export const CodeInTheDark = () => {
 	return (
@@ -18,6 +19,9 @@ export const CodeInTheDark = () => {
 			</Sequence>
 			<Sequence name="Combo">
 				<Combo />
+			</Sequence>
+			<Sequence name="PopingWords">
+				<Words />
 			</Sequence>
 		</AbsoluteFill>
 	);

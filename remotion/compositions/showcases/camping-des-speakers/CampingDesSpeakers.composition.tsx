@@ -11,8 +11,8 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 				component={CampingDesSpeakers}
 				durationInFrames={450}
 				fps={60}
-				width={1200}
-				height={700}
+				width={1280}
+				height={720}
 				defaultProps={{
 					title: "Remotion : le 7ème art à porté de composants web et d'API 🎬",
 					speakers: [
@@ -39,8 +39,8 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 				width={1280}
 				height={720}
 				id="CampingDesSpeakersIntroduction"
-				fps={30}
-				durationInFrames={200}
+				fps={60}
+				durationInFrames={280}
 			/>
 		</Folder>
 	);

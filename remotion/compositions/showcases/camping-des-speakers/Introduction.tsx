@@ -31,7 +31,7 @@ export const Introduction = () => {
 				width: '100%',
 				height: '100%',
 				transform: `scale(${Zoom})`,
-				transformOrigin: '819.5px 550px',
+				transformOrigin: '899.6px 550px',
 			}}
 		>
 			<Audio

@@ -88,26 +88,28 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								>
 									{speaker.name}
 								</Text>
-								<IconWithCaption
-									iconifyId="mdi:company"
-									caption={speaker.company}
-									style={{
-										fontFamily,
-										textShadow:
-											'-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
-										position: 'relative',
-										color: 'white',
-										fontSize: '1.1rem',
-										fontWeight: 700,
-										opacity: nameOpacity,
-										filter: `blur(${nameUnblur}px)`,
-										bottom: '-15%',
-									}}
-									iconStyle={{
-										fontSize: 20,
-										filter: 'drop-shadow(0 0 0.2rem black)',
-									}}
-								/>
+								{speaker.company && (
+									<IconWithCaption
+										iconifyId="mdi:company"
+										caption={speaker.company}
+										style={{
+											fontFamily,
+											textShadow:
+												'-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+											position: 'relative',
+											color: 'white',
+											fontSize: '1.1rem',
+											fontWeight: 700,
+											opacity: nameOpacity,
+											filter: `blur(${nameUnblur}px)`,
+											bottom: '-15%',
+										}}
+										iconStyle={{
+											fontSize: 20,
+											filter: 'drop-shadow(0 0 0.2rem black)',
+										}}
+									/>
+								)}
 							</>
 						</AvatarWithCaption>
 					</div>

@@ -28,6 +28,9 @@ export const TalkTitle: React.FC<{
 		<Title
 			style={{
 				fontFamily,
+				width: '75%',
+				left: '50%',
+				transform: 'translateX(-50%)',
 				fontSize: '50px',
 				lineHeight: '1.5',
 				letterSpacing: '0.1rem',

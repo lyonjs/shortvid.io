@@ -2,6 +2,7 @@ import {
 	AbsoluteFill,
 	interpolate,
 	spring,
+	staticFile,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
@@ -57,7 +58,10 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 						}}
 					>
 						<AvatarWithCaption
-							avatarPictureUrl={speaker.picture}
+							avatarPictureUrl={
+								speaker.picture ||
+								staticFile('images/conferences/campingDesSpeakers/logo.png')
+							}
 							avatarStyle={{
 								width: 180,
 								height: 180,
@@ -77,10 +81,10 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 											'-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
 										letterSpacing: '0.1rem',
 										position: 'relative',
-										bottom: '-35%',
+										bottom: '-40%',
 										width: 320,
 										height: 100,
-										fontSize: 30,
+										fontSize: 35,
 										fontWeight: 700,
 										opacity: nameOpacity,
 										filter: `blur(${nameUnblur}px)`,
@@ -98,11 +102,11 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 												'-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
 											position: 'relative',
 											color: 'white',
-											fontSize: '1.1rem',
+											fontSize: '1.2rem',
 											fontWeight: 700,
 											opacity: nameOpacity,
 											filter: `blur(${nameUnblur}px)`,
-											bottom: '-15%',
+											bottom: '-25%',
 										}}
 										iconStyle={{
 											fontSize: 20,

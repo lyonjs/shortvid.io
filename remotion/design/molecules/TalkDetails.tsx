@@ -35,8 +35,9 @@ export const TalkDetails: React.FC<{
 							left: '50%',
 							bottom: 0,
 							transform: 'translateX(-50%)',
-							...iconStyle,
+							...style,
 						}}
+						iconStyle={iconStyle}
 					/>
 				</div>
 			)}
@@ -55,8 +56,9 @@ export const TalkDetails: React.FC<{
 							left: '50%',
 							bottom: 0,
 							transform: 'translateX(-50%)',
-							...iconStyle,
+							...style,
 						}}
+						iconStyle={iconStyle}
 					/>
 				</div>
 			)}
@@ -75,8 +77,9 @@ export const TalkDetails: React.FC<{
 							left: '50%',
 							bottom: 0,
 							transform: 'translateX(-50%)',
-							...iconStyle,
+							...style,
 						}}
+						iconStyle={iconStyle}
 					/>
 				</div>
 			)}

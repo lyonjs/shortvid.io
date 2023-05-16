@@ -1,0 +1,738 @@
+[
+	{
+		"title": "Comment hacker vos applications mobiles ?",
+		"speakers": [
+			{
+				"name": "Julien Jimenez",
+				"picture": "https://camping-speakers.fr/img/speakers/julien_jimenez.jpg",
+				"company": "Worldline"
+			},
+			{
+				"name": "Amélie Avignon",
+				"picture": "",
+				"company": "Worldline"
+			}
+		],
+		"date": "15 juin",
+		"time": "10h15",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Construire soi-même son clavier mécanique, idée bizarre ou idée de génie ?",
+		"speakers": [
+			{
+				"name": "Benjamin Legrand",
+				"picture": "https://camping-speakers.fr/img/speakers/benjamin_legrand.jpg",
+				"company": "Groupe Onepoint"
+			}
+		],
+		"date": "15 juin",
+		"time": "10h15",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Möbkky, le mob appliqué au Mölkky 🎳",
+		"speakers": [
+			{
+				"name": "Benoît Masson",
+				"picture": "https://camping-speakers.fr/img/speakers/benoit_masson.jpg",
+				"company": "OVHcloud"
+			},
+			{
+				"name": "Gwendal Leclerc",
+				"picture": "https://camping-speakers.fr/img/speakers/gwendal_leclerc.jpg",
+				"company": "OVHcloud"
+			}
+		],
+		"date": "15 juin",
+		"time": "10h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Avant, je supprimai des bugs, maintenant j'élève des abeilles",
+		"speakers": [
+			{
+				"name": "Florian Roulet",
+				"picture": "https://camping-speakers.fr/img/speakers/florian_roulet.jpg",
+				"company": "Orthomatique"
+			}
+		],
+		"date": "15 juin",
+		"time": "10h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Corn Hole 2 Turbo : De l'arduino pour l'apéro !",
+		"speakers": [
+			{
+				"name": "Paul ROYE",
+				"picture": "https://camping-speakers.fr/img/speakers/paul_roye.jpg",
+				"company": "SII"
+			}
+		],
+		"date": "15 juin",
+		"time": "11h15",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "#DoNotTrackMe 📺📱",
+		"speakers": [
+			{
+				"name": "Cedric Gatay",
+				"picture": "https://camping-speakers.fr/img/speakers/cedric_gatay.jpg",
+				"company": "Code-Troopers"
+			}
+		],
+		"date": "15 juin",
+		"time": "11h15",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Revivez la cryptographie de nos ancêtres, de Lysandre de Sparte à Blaise de Vigenère",
+		"speakers": [
+			{
+				"name": "Willy Malvault",
+				"picture": "https://camping-speakers.fr/img/speakers/willy_malvault.jpg",
+				"company": "Sogilis"
+			},
+			{
+				"name": "Virginie CASAVECCHIA",
+				"picture": "https://camping-speakers.fr/img/speakers/virginie_casavecchia.jpg",
+				"company": "Actoll"
+			}
+		],
+		"date": "15 juin",
+		"time": "11h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Vous pouvez venir à ce talk les yeux fermés",
+		"speakers": [
+			{
+				"name": "François-Xavier Lair",
+				"picture": "https://camping-speakers.fr/img/speakers/francois_xavier_lair.jpg",
+				"company": "onepoint"
+			}
+		],
+		"date": "15 juin",
+		"time": "11h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "FrankenPHP, un serveur d'application moderne pour PHP écrit en Go",
+		"speakers": [
+			{
+				"name": "Kévin Dunglas",
+				"picture": "https://camping-speakers.fr/img/speakers/kevin_dunglas.jpg",
+				"company": "Les-Tilleuls.coop"
+			}
+		],
+		"date": "15 juin",
+		"time": "13h30",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "📻 Disaster Radio: Comment communiquer en cas de coupure 4G ? 📡",
+		"speakers": [
+			{
+				"name": "Glenn Feunteun",
+				"picture": "https://camping-speakers.fr/img/speakers/glenn_feunteun.jpg",
+				"company": "Zenika"
+			}
+		],
+		"date": "15 juin",
+		"time": "13h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Event Driven, qu'est-ce donc ?! Un nouveau buzzword ?",
+		"speakers": [
+			{
+				"name": "Céline Louvet",
+				"picture": "https://camping-speakers.fr/img/speakers/celine_louvet.jpg",
+				"company": "Shine"
+			}
+		],
+		"date": "15 juin",
+		"time": "13h30",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Le guide du voyageur LGBTQIA+",
+		"speakers": [
+			{
+				"name": "Elaine Dias Batista",
+				"picture": "https://camping-speakers.fr/img/speakers/elaine_dias_batista.jpg",
+				"company": "SFEIR"
+			}
+		],
+		"date": "15 juin",
+		"time": "13h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "De la tablette d'argile à ChatGPT : la passionnante histoire de la diffusion du savoir",
+		"speakers": [
+			{
+				"name": "Patrice De Saint Steban",
+				"picture": "https://camping-speakers.fr/img/speakers/patrice_de_saint_steban.jpg",
+				"company": "Zenika"
+			}
+		],
+		"date": "15 juin",
+		"time": "13h50",
+		"location": "Extérieur"
+	},
+	{
+		"title": "D'un orchestre figé à un joli ballet aka comment on a propulsé notre monolith dans un pas de danse endiablé 😈",
+		"speakers": [
+			{
+				"name": "Marie-Laure Momplot",
+				"picture": "https://camping-speakers.fr/img/speakers/marie_laure_momplot.jpg",
+				"company": "Michelin"
+			},
+			{
+				"name": "Sébastien Viale",
+				"picture": "https://camping-speakers.fr/img/speakers/sebastien_viale.png",
+				"company": "undefined"
+			}
+		],
+		"date": "15 juin",
+		"time": "14h30",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Imager, matérialiser sa pensée",
+		"speakers": [
+			{
+				"name": "Virginie Ferey",
+				"picture": "",
+				"company": "ENSA Normandie"
+			}
+		],
+		"date": "15 juin",
+		"time": "14h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Mini golf pour une accessibilité numérique maximale",
+		"speakers": [
+			{
+				"name": "Hervé Boisgontier",
+				"picture": "https://camping-speakers.fr/img/speakers/herve_boisgontier.jpg",
+				"company": "ENI École Informatique"
+			}
+		],
+		"date": "15 juin",
+		"time": "14h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Pour éviter le dirty recruiting, on ne laisse pas ses valeurs dans un coin",
+		"speakers": [
+			{
+				"name": "Shirley Almosni Chiche",
+				"picture": "",
+				"company": "BUILD RH"
+			}
+		],
+		"date": "15 juin",
+		"time": "14h30",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Bienvenue dans ma zone d'inconfort",
+		"speakers": [
+			{
+				"name": "Noémie Delrue",
+				"picture": "https://camping-speakers.fr/img/speakers/noemie_delrue.jpg",
+				"company": ""
+			}
+		],
+		"date": "15 juin",
+		"time": "16h00",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Il était une fois un arbre qui parle",
+		"speakers": [
+			{
+				"name": "Paul Pinault",
+				"picture": "https://camping-speakers.fr/img/speakers/paul_pinault.jpg",
+				"company": "Braincube"
+			}
+		],
+		"date": "15 juin",
+		"time": "16h00",
+		"location": "Extérieur"
+	},
+	{
+		"title": "On vit déjà dans un monde fédéré !",
+		"speakers": [
+			{
+				"name": "Anthony Pena",
+				"picture": "https://camping-speakers.fr/img/speakers/anthony_pena.jpg",
+				"company": "SFEIR"
+			}
+		],
+		"date": "15 juin",
+		"time": "16h00",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Sous le capot des navigateurs web",
+		"speakers": [
+			{
+				"name": "Anthony Le Goas",
+				"picture": "https://camping-speakers.fr/img/speakers/anthony_le_goas.jpg",
+				"company": "Zenika"
+			}
+		],
+		"date": "15 juin",
+		"time": "16h00",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "L'intelligence artificielle expliquée en 20 minutes !",
+		"speakers": [
+			{
+				"name": "Stéphane Philippart",
+				"picture": "https://camping-speakers.fr/img/speakers/stephane_philippart.jpg",
+				"company": "OVHcloud"
+			}
+		],
+		"date": "15 juin",
+		"time": "16h30",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Maman, mon partenaire financier m’a lâché!",
+		"speakers": [
+			{
+				"name": "Sahbi KTIFA",
+				"picture": "https://camping-speakers.fr/img/speakers/sahbi_ktifa.jpg",
+				"company": "Malt"
+			}
+		],
+		"date": "15 juin",
+		"time": "16h30",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Naviguer et coder, comment on fait ?",
+		"speakers": [
+			{
+				"name": "Aleth Gueguen",
+				"picture": "https://camping-speakers.fr/img/speakers/aleth_gueguen.jpg",
+				"company": "Aleth Gueguen Conseil"
+			}
+		],
+		"date": "15 juin",
+		"time": "16h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Apprenons ensemble grâce aux bookclubs",
+		"speakers": [
+			{
+				"name": "Marion Valentin",
+				"picture": "https://camping-speakers.fr/img/speakers/marion_valentin.jpg",
+				"company": "BAM"
+			},
+			{
+				"name": "Yvonnick FRIN",
+				"picture": "https://camping-speakers.fr/img/speakers/yvonnick_frin.jpg",
+				"company": "Pix"
+			}
+		],
+		"date": "15 juin",
+		"time": "17h10",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "JavaScript : une histoire d'amour 💔",
+		"speakers": [
+			{
+				"name": "Jordane Grenat",
+				"picture": "https://camping-speakers.fr/img/speakers/jordane_grenat.jpg",
+				"company": "Comet Meetings"
+			}
+		],
+		"date": "15 juin",
+		"time": "17h10",
+		"location": "Extérieur"
+	},
+	{
+		"title": "The Developer Portal: Open the Gate to Productivity 🚀",
+		"speakers": [
+			{
+				"name": "Maha ALSAYASNEH",
+				"picture": "https://camping-speakers.fr/img/speakers/maha_alsayasneh.jpg",
+				"company": "Elastic"
+			}
+		],
+		"date": "15 juin",
+		"time": "17h10",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Un scrum master en or",
+		"speakers": [
+			{
+				"name": "Laurie Coquillat",
+				"picture": "https://camping-speakers.fr/img/speakers/laurie_coquillat.jpg",
+				"company": "Lunatech"
+			}
+		],
+		"date": "15 juin",
+		"time": "17h10",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Créer des objets 3D avec du code, grâce à OpenSCAD",
+		"speakers": [
+			{
+				"name": "Yohan Lasorsa",
+				"picture": "https://camping-speakers.fr/img/speakers/yohan_lasorsa.jpg",
+				"company": "Microsoft"
+			}
+		],
+		"date": "15 juin",
+		"time": "17h40",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Ivre et au chômage, elle décide d'écrire un livre sur le Scala en plein Covid",
+		"speakers": [
+			{
+				"name": "Agnès Cardin",
+				"picture": "https://camping-speakers.fr/img/speakers/agnes_cardin.jpg",
+				"company": "iAdvize"
+			}
+		],
+		"date": "15 juin",
+		"time": "17h40",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "L'art du DeeJaying par la pratique",
+		"speakers": [
+			{
+				"name": "David Pilato",
+				"picture": "https://camping-speakers.fr/img/speakers/david_pilato.jpg",
+				"company": "elastic"
+			}
+		],
+		"date": "15 juin",
+		"time": "17h40",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Dessines-moi Rust ✏🦀",
+		"speakers": [
+			{
+				"name": "Yannick Guern",
+				"picture": "https://camping-speakers.fr/img/speakers/yannick_guern.jpg",
+				"company": "Clever-Cloud"
+			}
+		],
+		"date": "15 juin",
+		"time": "21h00",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Les 7 vies d'une QA Analyst en reconversion",
+		"speakers": [
+			{
+				"name": "Audrey Moulins",
+				"picture": "https://camping-speakers.fr/img/speakers/audrey_moulins.jpg",
+				"company": "Leboncoin"
+			}
+		],
+		"date": "15 juin",
+		"time": "21h00",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Programmons ensemble... une boite de vitesses",
+		"speakers": [
+			{
+				"name": "Mathieu Passenaud",
+				"picture": "https://camping-speakers.fr/img/speakers/mathieu_passenaud.jpg",
+				"company": "please-open.it"
+			}
+		],
+		"date": "15 juin",
+		"time": "21h00",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Récits d'épouvante MLOps : Oseras-tu y faire face ?",
+		"speakers": [
+			{
+				"name": "Yulianna KHOROLICH",
+				"picture": "https://camping-speakers.fr/img/speakers/yuliana_khorolich.jpg",
+				"company": "SFEIR"
+			}
+		],
+		"date": "15 juin",
+		"time": "21h00",
+		"location": "Extérieur"
+	},
+	{
+		"title": "La Pull Request de l’horreur",
+		"speakers": [
+			{
+				"name": "Jean-François Greffier",
+				"picture": "https://camping-speakers.fr/img/speakers/jean_francois_greffier.jpg",
+				"company": "Conserto"
+			}
+		],
+		"date": "15 juin",
+		"time": "21h20",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Cette année, retombez amoureux de CSS ❤️",
+		"speakers": [
+			{
+				"name": "Olivier Leplus",
+				"picture": "https://camping-speakers.fr/img/speakers/olivier_leplus.jpg",
+				"company": "AWS"
+			}
+		],
+		"date": "15 juin",
+		"time": "21h25",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Créer sa propre VM avec compilation JIT pour les nuls",
+		"speakers": [
+			{
+				"name": "Olivier PONCET",
+				"picture": "https://camping-speakers.fr/img/speakers/olivier_poncet.jpg",
+				"company": "HAWKSWELL"
+			}
+		],
+		"date": "16 juin",
+		"time": "10h15",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Dis papa, c'est quoi l'impression 3D ?",
+		"speakers": [
+			{
+				"name": "Yohan Lasorsa",
+				"picture": "https://camping-speakers.fr/img/speakers/yohan_lasorsa.jpg",
+				"company": "Microsoft"
+			},
+			{
+				"name": "Wassim Chegham",
+				"picture": "https://camping-speakers.fr/img/speakers/wassim_chegham.jpg",
+				"company": "Microsoft"
+			}
+		],
+		"date": "16 juin",
+		"time": "10h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Maitrise ton apprentissage aussi bien que la cuisson de tes saucisses 🔥",
+		"speakers": [
+			{
+				"name": "Maxime Deroullers",
+				"picture": "https://camping-speakers.fr/img/speakers/maxime_deroullers.jpg",
+				"company": "HoppR"
+			}
+		],
+		"date": "16 juin",
+		"time": "10h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Wolfy - de 2000 à 20 000 joueurs connectés",
+		"speakers": [
+			{
+				"name": "Kevin Jean",
+				"picture": "",
+				"company": ""
+			}
+		],
+		"date": "16 juin",
+		"time": "10h15",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "🗣️ Zut ! J'aurais du dire ça ! 🙊 Astuces pour parler avec aisance en public 🎙️",
+		"speakers": [
+			{
+				"name": "Willy Malvault",
+				"picture": "https://camping-speakers.fr/img/speakers/willy_malvault.jpg",
+				"company": "Sogilis"
+			},
+			{
+				"name": "Sylvain Coudert",
+				"picture": "https://camping-speakers.fr/img/speakers/sylvain_coudert.jpg",
+				"company": "Freelance"
+			}
+		],
+		"date": "16 juin",
+		"time": "11h15",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Et si on arrêtait de basher les ESN ?",
+		"speakers": [
+			{
+				"name": "Olivier THIERRY",
+				"picture": "https://camping-speakers.fr/img/speakers/olivier_thierry.jpg",
+				"company": "ASI"
+			}
+		],
+		"date": "16 juin",
+		"time": "11h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Passez moins de temps à attendre la CI et plus de temps au bord de la piscine",
+		"speakers": [
+			{
+				"name": "Jean-Phi Baconnais",
+				"picture": "https://camping-speakers.fr/img/speakers/jean_phi_baconnais.jpg",
+				"company": "Zenika"
+			},
+			{
+				"name": "Guillaume Membré",
+				"picture": "https://camping-speakers.fr/img/speakers/guillaume_membre.jpg",
+				"company": "Zenika"
+			}
+		],
+		"date": "16 juin",
+		"time": "11h15",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Speech To Text: une opportunité pour améliorer votre productivité ?",
+		"speakers": [
+			{
+				"name": "Mathieu Busquet",
+				"picture": "https://camping-speakers.fr/img/speakers/mathieu_busquet.jpg",
+				"company": "OVHcloud"
+			}
+		],
+		"date": "16 juin",
+		"time": "11h15",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Escape Camp 🏃🏕️",
+		"speakers": [
+			{
+				"name": "Grégory Bévan",
+				"picture": "https://camping-speakers.fr/img/speakers/gregory_bevan.jpg",
+				"company": "Zenika"
+			},
+			{
+				"name": "William Bartlett",
+				"picture": "https://camping-speakers.fr/img/speakers/william_bartlett.jpg",
+				"company": "Zenika"
+			}
+		],
+		"date": "16 juin",
+		"time": "13h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Vite, une nouvelle ère de tooling front ?",
+		"speakers": [
+			{
+				"name": "Yann-Thomas Le Moigne",
+				"picture": "https://camping-speakers.fr/img/speakers/yann_thomas_le_moigne.jpeg",
+				"company": "Apside TOP"
+			},
+			{
+				"name": "Christophe Jollivet",
+				"picture": "https://camping-speakers.fr/img/speakers/christophe_jolivet.jpg",
+				"company": "Apside"
+			}
+		],
+		"date": "16 juin",
+		"time": "13h30",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "YAGNI, KISS, and DRY: The Secret Recipe For Better Software Design",
+		"speakers": [
+			{
+				"name": "Maha ALSAYASNEH",
+				"picture": "https://camping-speakers.fr/img/speakers/maha_alsayasneh.jpg",
+				"company": "Elastic"
+			}
+		],
+		"date": "16 juin",
+		"time": "13h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Esprit de famille, méthodes, rapport à l'argent, ambitions - l'héritage d'une famille d'entrepreneurs depuis 100 ans",
+		"speakers": [
+			{
+				"name": "Mathieu Passenaud",
+				"picture": "https://camping-speakers.fr/img/speakers/mathieu_passenaud.jpg",
+				"company": "please-open.it"
+			}
+		],
+		"date": "16 juin",
+		"time": "13h50",
+		"location": "Extérieur"
+	},
+	{
+		"title": "À la découverte du développement mobile, sans les maux de tête",
+		"speakers": [
+			{
+				"name": "Robin Caroff",
+				"picture": "https://camping-speakers.fr/img/speakers/robin_caroff.jpg",
+				"company": "Resonantes"
+			},
+			{
+				"name": "Cyril Hue",
+				"picture": "https://camping-speakers.fr/img/speakers/cyril_hue.jpg",
+				"company": "Kanoma"
+			}
+		],
+		"date": "16 juin",
+		"time": "14h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Escape Camp 🏃🏕️",
+		"speakers": [
+			{
+				"name": "Grégory Bévan",
+				"picture": "https://camping-speakers.fr/img/speakers/gregory_bevan.jpg",
+				"company": "Zenika"
+			},
+			{
+				"name": "William Bartlett",
+				"picture": "https://camping-speakers.fr/img/speakers/william_bartlett.jpg",
+				"company": "Zenika"
+			}
+		],
+		"date": "16 juin",
+		"time": "14h30",
+		"location": "Petite Salle"
+	},
+	{
+		"title": "Comment gérer des journées de 35h ?",
+		"speakers": [
+			{
+				"name": "Sylvain Gougouzian",
+				"picture": "https://camping-speakers.fr/img/speakers/sylvain_gougouzian.jpg",
+				"company": "Zenika"
+			}
+		],
+		"date": "16 juin",
+		"time": "14h55",
+		"location": "Petite Salle"
+	}
+]

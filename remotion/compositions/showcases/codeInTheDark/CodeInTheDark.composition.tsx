@@ -10,7 +10,7 @@ export const CodeInTheDarkComposition: React.FC = () => {
 				height={700}
 				id="CodeInTheDark"
 				fps={30}
-				durationInFrames={200}
+				durationInFrames={300}
 			/>
 		</Folder>
 	);

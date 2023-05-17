@@ -3,7 +3,13 @@ import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 
 export const Words = () => {
 	const frame = useCurrentFrame();
-	const wordsLits = ['IMPRESSIVE !', 'OMG !', 'Are you god ?', 'Fire ! 🔥'];
+	const wordsLits = [
+		'IMPRESSIVE !',
+		'OMG !',
+		'Are you god ?',
+		'Fire ! 🔥',
+		'WoooooW !',
+	];
 
 	return (
 		<AbsoluteFill
@@ -15,10 +21,10 @@ export const Words = () => {
 				style={{
 					position: 'relative',
 					margin: '20px 55px',
-					width: 200,
-					fontFamily: 'sans-serif',
+					width: 220,
+					fontFamily: 'PressStart2P,sans-serif',
 					fontWeight: 'bold',
-					fontSize: '1.5rem',
+					fontSize: '1rem',
 				}}
 			>
 				{wordsLits.map((word, index) => {
@@ -37,25 +43,6 @@ export const Words = () => {
 						}
 					);
 
-					// if (index === 0) {
-					// 	return (
-					// 		<span
-					// 			key={index}
-					// 			style={{
-					// 				position: 'absolute',
-					// 				width: '100%',
-					// 				left: '50%',
-					// 				transform: 'translateX(-50%)',
-					// 				color: '#4EFFA1',
-					// 				textAlign: 'center',
-					// 				top: drop,
-					// 				opacity: 1,
-					// 			}}
-					// 		>
-					// 			{word}
-					// 		</span>
-					// 	);
-					// }
 					return (
 						<span
 							key={index}

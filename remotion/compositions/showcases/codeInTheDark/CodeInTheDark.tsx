@@ -1,8 +1,18 @@
-import {AbsoluteFill, Audio, Sequence, staticFile} from 'remotion';
+import {
+	AbsoluteFill,
+	Audio,
+	interpolate,
+	Loop,
+	Sequence,
+	staticFile,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 import {Combo} from './Combo';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Spotlight} from './Spotlight';
 import {Words} from './Words';
+import _ from 'lodash';
 
 export const CodeInTheDark = () => {
 	return (

@@ -1,15 +1,23 @@
-import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, interpolate, Loop, useCurrentFrame} from 'remotion';
+import {loadFont} from '@remotion/google-fonts/VT323';
+import {AnimatedCounter} from './AnimatedCounter';
+import {useEffect, useState} from 'react';
 import _ from 'lodash';
-import './combo.css';
-import {useState, useEffect, useRef} from 'react';
+
+const {fontFamily} = loadFont();
 
 export const Combo: React.FC = () => {
 	const frame = useCurrentFrame();
-	const outputRange = _.range(0, 51, 1);
-	const inputRange = _.range(0, 252, 5);
-
 	const [count, setCount] = useState(0);
-	const prevCountRef = useRef<number>(0);
+	const MaxCountValue = 30 + 1;
+	const loopTimeDuration = 5;
+
+	const inputRange = _.range(
+		0,
+		MaxCountValue * loopTimeDuration,
+		loopTimeDuration
+	);
+	const outputRange = _.range(0, MaxCountValue, 1);
 
 	useEffect(() => {
 		setCount(
@@ -22,53 +30,37 @@ export const Combo: React.FC = () => {
 		);
 	}, [frame, inputRange, outputRange]);
 
-	useEffect(() => {
-		if (count !== prevCountRef.current) {
-			const spanElement = document.getElementById('count-span');
-			spanElement?.classList.remove('animate-grow');
-			spanElement?.offsetWidth; // Trigger reflow to restart the animation
-			spanElement?.classList.add('animate-grow');
-
-			prevCountRef.current = count;
-		}
-	}, [count]);
-
 	return (
-		<AbsoluteFill
-			style={{
-				alignItems: 'flex-end',
-			}}
-		>
-			<div
+		<Loop durationInFrames={loopTimeDuration}>
+			<AbsoluteFill
 				style={{
-					color: 'red',
-					display: 'flex',
-					flexDirection: 'column',
-					alignItems: 'center',
-					margin: '20px 80px',
-					width: 150,
-					fontFamily: 'sans-serif',
+					alignItems: 'flex-end',
 				}}
 			>
-				<p
+				<div
 					style={{
-						color: 'white',
-						fontSize: '2rem',
-						margin: 0,
+						color: 'red',
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems: 'center',
+						margin: '20px 80px',
+						width: 150,
+						fontFamily: `${fontFamily}, sans-serif`,
 					}}
 				>
-					Combo
-				</p>
-				<span
-					id="count-span"
-					style={{
-						color: '#4EFFA1',
-						fontSize: '10rem',
-					}}
-				>
-					{count}
-				</span>
-			</div>
-		</AbsoluteFill>
+					<p
+						style={{
+							color: 'white',
+							fontSize: '2rem',
+							margin: 0,
+						}}
+					>
+						Combo
+					</p>
+
+					<AnimatedCounter count={count} />
+				</div>
+			</AbsoluteFill>
+		</Loop>
 	);
 };

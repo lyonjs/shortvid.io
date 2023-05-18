@@ -31,5 +31,5 @@ export function loadLocalFont(
 			document.fonts.add(font);
 			continueRender(waitForFont);
 		})
-		.catch((err) => console.log('Error loading font', err));
+		.catch((err) => console.error('Error loading font', err));
 }

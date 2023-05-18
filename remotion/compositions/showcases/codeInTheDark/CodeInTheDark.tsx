@@ -8,7 +8,7 @@ import {Organisateurs} from './Organisateurs';
 
 export const CodeInTheDark = () => {
 	return (
-		<AbsoluteFill style={{background: '#0c0c0d'}}>
+		<AbsoluteFill>
 			<Sequence name="KeyboardAudio" durationInFrames={255}>
 				<Audio
 					src={staticFile('sounds/keyboard.mp3')}

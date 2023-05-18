@@ -7,8 +7,8 @@ export const AnimatedCounter: React.FC<{
 }> = ({count, maxCountValue}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-
 	const grow = spring({frame, fps, from: 1, to: 1.5});
+
 	return (
 		<span
 			style={{

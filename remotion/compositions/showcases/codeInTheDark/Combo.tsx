@@ -1,7 +1,7 @@
+import _ from 'lodash';
+import React, {useEffect, useState} from 'react';
 import {interpolate, Loop, useCurrentFrame} from 'remotion';
 import {AnimatedCounter} from './AnimatedCounter';
-import React, {useEffect, useState} from 'react';
-import _ from 'lodash';
 import {loadLocalFont} from '../../../../src/app/utils/loadFont';
 
 export const Combo: React.FC = () => {

@@ -6,8 +6,8 @@ export const CodeInTheDarkComposition: React.FC = () => {
 		<Folder name="CodeInTheDark">
 			<Composition
 				component={CodeInTheDark}
-				width={1200}
-				height={700}
+				width={1280}
+				height={720}
 				id="CodeInTheDark"
 				fps={30}
 				durationInFrames={300}

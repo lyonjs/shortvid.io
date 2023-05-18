@@ -1,10 +1,4 @@
-import {
-	AbsoluteFill,
-	interpolate,
-	Loop,
-	Sequence,
-	useCurrentFrame,
-} from 'remotion';
+import {interpolate, Loop, useCurrentFrame} from 'remotion';
 import {AnimatedCounter} from './AnimatedCounter';
 import React, {useEffect, useState} from 'react';
 import _ from 'lodash';
@@ -13,7 +7,7 @@ import {loadLocalFont} from '../../../../src/app/utils/loadFont';
 export const Combo: React.FC = () => {
 	const frame = useCurrentFrame();
 	const [count, setCount] = useState(0);
-	const MaxCountValue = 50 + 1;
+	const MaxCountValue = 51;
 	const loopTimeDuration = 5;
 
 	const inputRange = _.range(
@@ -35,49 +29,40 @@ export const Combo: React.FC = () => {
 	}, [frame, inputRange, outputRange]);
 
 	useEffect(() => {
-		loadLocalFont('PressStart2P', '/font/PressStart2P-Regular.ttf', 'truetype');
+		loadLocalFont('PressStart2P', '/font/PressStart2P.ttf', 'truetype');
 	}, []);
 
 	return (
-		<AbsoluteFill
+		<div
 			style={{
-				alignItems: 'flex-end',
+				position: 'absolute',
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: 'center',
+				top: 50,
+				right: 80,
 			}}
 		>
-			<div
+			<span
 				style={{
-					position: 'relative',
-					display: 'flex',
-					flexDirection: 'column',
-					alignItems: 'center',
-					margin: '20px 80px',
-					width: 150,
+					color: 'white',
+					fontSize: '2rem',
+					margin: 0,
+					fontFamily: 'PressStart2P',
 				}}
 			>
-				<p
-					style={{
-						color: 'white',
-						fontSize: '2.5rem',
-						margin: 0,
-						fontFamily: 'PressStart2P',
-					}}
-				>
-					Combo
-				</p>
-				<Loop
-					durationInFrames={loopTimeDuration}
-					layout="absolute-fill"
-					style={{
-						paddingTop: 80,
-						left: -70,
-						width: 300,
-						display: 'flex',
-						justifyContent: 'center',
-					}}
-				>
-					<AnimatedCounter count={count} maxCountValue={MaxCountValue} />
-				</Loop>
-			</div>
-		</AbsoluteFill>
+				Combo
+			</span>
+			<Loop
+				durationInFrames={loopTimeDuration}
+				style={{
+					marginTop: 80,
+					display: 'flex',
+					justifyContent: 'center',
+				}}
+			>
+				<AnimatedCounter count={count} maxCountValue={MaxCountValue} />
+			</Loop>
+		</div>
 	);
 };

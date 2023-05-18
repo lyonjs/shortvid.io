@@ -1,24 +1,29 @@
 import React from 'react';
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
-import {Img, staticFile} from 'remotion';
+import {AbsoluteFill, Img, staticFile} from 'remotion';
 
 export const Background = () => {
 	return (
-		<div>
-			<BackgroundFiller
-				imageUrl={staticFile('/images/event/CITD-Background.png')}
-			/>
+		<div
+			style={{
+				width: '100%',
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				objectFit: 'cover',
+				backgroundPosition: 'center',
+				backgroundImage: `url(${staticFile(
+					'/images/event/CITD-Background.png'
+				)})`,
+			}}
+		>
 			<Img
 				src={staticFile('/images/event/CITD-Logo.png')}
 				style={{
-					position: 'absolute',
-					width: '40%',
-					left: '50%',
-					bottom: 80,
-					transform: 'translateX(-50%)',
+					width: 500,
 					opacity: 0.6,
 				}}
 			/>
+			<AbsoluteFill style={{backgroundColor: 'rgba(0,0,0,0.7)'}} />
 		</div>
 	);
 };

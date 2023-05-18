@@ -21,10 +21,10 @@ export const Words = () => {
 				style={{
 					position: 'relative',
 					margin: '20px 55px',
-					width: 220,
+					width: 250,
 					fontFamily: 'PressStart2P,sans-serif',
 					fontWeight: 'bold',
-					fontSize: '1rem',
+					fontSize: '1.2rem',
 				}}
 			>
 				{wordsLits.map((word, index) => {

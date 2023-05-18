@@ -1,16 +1,20 @@
-import {ReactNode, useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
+import {loadFont} from '@remotion/google-fonts/AnonymousPro';
+
+const {fontFamily} = loadFont();
 
 const Details: React.FC<{date: string}> = ({date}) => {
 	const frame = useCurrentFrame();
 	const [text, setText] = useState<string[]>([]);
 	const tagStyle = {margin: 2, color: '#08fe79'};
-	const detailsText = `Si vous aussi vous voulez tester vos talents en CSS, Rejoignez-nous le ${date} pour le premier Code In The Dark version Lyonnaise`;
+	const detailsText = `Mettez vos talents en CSS à l'épreuve lors de la première édition Lyonnaise de Code In The Dark ! Rejoignez-nous le ${date} pour une soirée de compétition et de fun !`;
 	const detailsStyleText = [
 		'infos {',
+		'organisateurs: LyonJS;',
 		'lieu: Zenika;',
-		'heure: 19h00;',
 		'date: 20 juin 2023;',
+		'heure: 19h00;',
 	];
 	const styleTag = ['<', 's', 't', 'y', 'l', 'e', '>'];
 	const styleClosingTag = ['<', '/', 's', 't', 'y', 'l', 'e', '>'];
@@ -33,12 +37,12 @@ const Details: React.FC<{date: string}> = ({date}) => {
 	useEffect(() => {
 		const splitedText = detailsText.split('');
 		setText(splitedText);
-	}, []);
+	}, [detailsText]);
 
 	return (
 		<div
 			style={{
-				fontFamily: 'sans-serif',
+				fontFamily,
 				fontSize: '2rem',
 				position: 'relative',
 				padding: 20,
@@ -53,20 +57,20 @@ const Details: React.FC<{date: string}> = ({date}) => {
 			<br />
 
 			<p style={tagStyle}>{animateLetters(styleTag, 135)}</p>
-			<div style={{margin: 0, paddingLeft: 40}}>
-				{detailsStyleText.map((line, lid) => {
+			<div style={{margin: 0, paddingLeft: 40, lineHeight: 1.2}}>
+				{detailsStyleText.map((line, index) => {
 					const splitedLine = line.split('');
 
 					return (
 						<p
-							key={lid}
+							key={index}
 							style={{
 								color: 'white',
-								paddingLeft: lid !== 0 ? 30 : 0,
+								paddingLeft: index !== 0 ? 30 : 0,
 								margin: 10,
 							}}
 						>
-							{animateLetters(splitedLine, 140 + lid * 12)}
+							{animateLetters(splitedLine, 140 + index * 12)}
 						</p>
 					);
 				})}

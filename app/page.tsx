@@ -7,6 +7,7 @@ import {Talk} from '../remotion/compositions/templates/talk/Talk';
 import {Sponsor} from '../remotion/compositions/templates/sponsor/Sponsor';
 import {Event} from '../remotion/compositions/templates/event/Event';
 import RootLayout from '../src/app/RootLayout';
+import styles from './styles.module.css';
 
 interface Video {
 	id: string;
@@ -81,7 +82,7 @@ export default function Home() {
 				What is the goal of this projet ?
 			</h2>
 
-			<p className="mt-2">
+			<p className={styles.paragraphe}>
 				For the moment, templates are not very generic and are branded LyonJS
 				but{' '}
 				<strong>

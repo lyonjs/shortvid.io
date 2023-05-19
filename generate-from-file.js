@@ -47,7 +47,7 @@ const run = async () => {
 		for (let index = 0; index < videos.length; index++) {
 			console.group(`Rendering video ${index + 1}/${videos.length}`);
 			const video = videos[index];
-			const fileName = `${snakeCase(video[title])}`;
+			const fileName = `${snakeCase(video.title)}`;
 			let remotionArgs = [
 				'remotion',
 				'render',

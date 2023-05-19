@@ -9,7 +9,6 @@
 			},
 			{
 				"name": "Amélie Avignon",
-				"picture": "",
 				"company": "Worldline"
 			}
 		],
@@ -132,19 +131,6 @@
 		"location": "Petite Salle"
 	},
 	{
-		"title": "📻 Disaster Radio: Comment communiquer en cas de coupure 4G ? 📡",
-		"speakers": [
-			{
-				"name": "Glenn Feunteun",
-				"picture": "https://camping-speakers.fr/img/speakers/glenn_feunteun.jpg",
-				"company": "Zenika"
-			}
-		],
-		"date": "15 juin",
-		"time": "13h30",
-		"location": "Extérieur"
-	},
-	{
 		"title": "Event Driven, qu'est-ce donc ?! Un nouveau buzzword ?",
 		"speakers": [
 			{
@@ -164,6 +150,19 @@
 				"name": "Elaine Dias Batista",
 				"picture": "https://camping-speakers.fr/img/speakers/elaine_dias_batista.jpg",
 				"company": "SFEIR"
+			}
+		],
+		"date": "15 juin",
+		"time": "13h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "Il était une fois un arbre qui parle",
+		"speakers": [
+			{
+				"name": "Paul Pinault",
+				"picture": "https://camping-speakers.fr/img/speakers/paul_pinault.jpg",
+				"company": "Braincube"
 			}
 		],
 		"date": "15 juin",
@@ -194,7 +193,7 @@
 			{
 				"name": "Sébastien Viale",
 				"picture": "https://camping-speakers.fr/img/speakers/sebastien_viale.png",
-				"company": "undefined"
+				"company": ""
 			}
 		],
 		"date": "15 juin",
@@ -206,7 +205,6 @@
 		"speakers": [
 			{
 				"name": "Virginie Ferey",
-				"picture": "",
 				"company": "ENSA Normandie"
 			}
 		],
@@ -232,7 +230,6 @@
 		"speakers": [
 			{
 				"name": "Shirley Almosni Chiche",
-				"picture": "",
 				"company": "BUILD RH"
 			}
 		],
@@ -252,19 +249,6 @@
 		"date": "15 juin",
 		"time": "16h00",
 		"location": "Grande Salle"
-	},
-	{
-		"title": "Il était une fois un arbre qui parle",
-		"speakers": [
-			{
-				"name": "Paul Pinault",
-				"picture": "https://camping-speakers.fr/img/speakers/paul_pinault.jpg",
-				"company": "Braincube"
-			}
-		],
-		"date": "15 juin",
-		"time": "16h00",
-		"location": "Extérieur"
 	},
 	{
 		"title": "On vit déjà dans un monde fédéré !",
@@ -291,6 +275,19 @@
 		"date": "15 juin",
 		"time": "16h00",
 		"location": "Petite Salle"
+	},
+	{
+		"title": "Un scrum master en or",
+		"speakers": [
+			{
+				"name": "Laurie Coquillat",
+				"picture": "https://camping-speakers.fr/img/speakers/laurie_coquillat.jpg",
+				"company": "Lunatech"
+			}
+		],
+		"date": "15 juin",
+		"time": "16h00",
+		"location": "Extérieur"
 	},
 	{
 		"title": "L'intelligence artificielle expliquée en 20 minutes !",
@@ -376,12 +373,17 @@
 		"location": "Grande Salle"
 	},
 	{
-		"title": "Un scrum master en or",
+		"title": "À la découverte du développement mobile, sans les maux de tête",
 		"speakers": [
 			{
-				"name": "Laurie Coquillat",
-				"picture": "https://camping-speakers.fr/img/speakers/laurie_coquillat.jpg",
-				"company": "Lunatech"
+				"name": "Robin Caroff",
+				"picture": "https://camping-speakers.fr/img/speakers/robin_caroff.jpg",
+				"company": "Resonantes"
+			},
+			{
+				"name": "Cyril Hue",
+				"picture": "https://camping-speakers.fr/img/speakers/cyril_hue.jpg",
+				"company": "Kanoma"
 			}
 		],
 		"date": "15 juin",
@@ -415,12 +417,12 @@
 		"location": "Petite Salle"
 	},
 	{
-		"title": "L'art du DeeJaying par la pratique",
+		"title": "Esprit de famille, méthodes, rapport à l'argent, ambitions - l'héritage d'une famille d'entrepreneurs depuis 100 ans",
 		"speakers": [
 			{
-				"name": "David Pilato",
-				"picture": "https://camping-speakers.fr/img/speakers/david_pilato.jpg",
-				"company": "elastic"
+				"name": "Mathieu Passenaud",
+				"picture": "https://camping-speakers.fr/img/speakers/mathieu_passenaud.jpg",
+				"company": "please-open.it"
 			}
 		],
 		"date": "15 juin",
@@ -454,19 +456,6 @@
 		"location": "Petite Salle"
 	},
 	{
-		"title": "Programmons ensemble... une boite de vitesses",
-		"speakers": [
-			{
-				"name": "Mathieu Passenaud",
-				"picture": "https://camping-speakers.fr/img/speakers/mathieu_passenaud.jpg",
-				"company": "please-open.it"
-			}
-		],
-		"date": "15 juin",
-		"time": "21h00",
-		"location": "Extérieur"
-	},
-	{
 		"title": "Récits d'épouvante MLOps : Oseras-tu y faire face ?",
 		"speakers": [
 			{
@@ -489,21 +478,8 @@
 			}
 		],
 		"date": "15 juin",
-		"time": "21h20",
+		"time": "21h00",
 		"location": "Extérieur"
-	},
-	{
-		"title": "Cette année, retombez amoureux de CSS ❤️",
-		"speakers": [
-			{
-				"name": "Olivier Leplus",
-				"picture": "https://camping-speakers.fr/img/speakers/olivier_leplus.jpg",
-				"company": "AWS"
-			}
-		],
-		"date": "15 juin",
-		"time": "21h25",
-		"location": "Petite Salle"
 	},
 	{
 		"title": "Créer sa propre VM avec compilation JIT pour les nuls",
@@ -554,30 +530,11 @@
 		"speakers": [
 			{
 				"name": "Kevin Jean",
-				"picture": "",
 				"company": ""
 			}
 		],
 		"date": "16 juin",
 		"time": "10h15",
-		"location": "Grande Salle"
-	},
-	{
-		"title": "🗣️ Zut ! J'aurais du dire ça ! 🙊 Astuces pour parler avec aisance en public 🎙️",
-		"speakers": [
-			{
-				"name": "Willy Malvault",
-				"picture": "https://camping-speakers.fr/img/speakers/willy_malvault.jpg",
-				"company": "Sogilis"
-			},
-			{
-				"name": "Sylvain Coudert",
-				"picture": "https://camping-speakers.fr/img/speakers/sylvain_coudert.jpg",
-				"company": "Freelance"
-			}
-		],
-		"date": "16 juin",
-		"time": "11h15",
 		"location": "Grande Salle"
 	},
 	{
@@ -625,6 +582,32 @@
 		"location": "Petite Salle"
 	},
 	{
+		"title": "YAGNI, KISS, and DRY: The Secret Recipe For Better Software Design",
+		"speakers": [
+			{
+				"name": "Maha ALSAYASNEH",
+				"picture": "https://camping-speakers.fr/img/speakers/maha_alsayasneh.jpg",
+				"company": "Elastic"
+			}
+		],
+		"date": "16 juin",
+		"time": "11h15",
+		"location": "Grande Salle"
+	},
+	{
+		"title": "Cette année, retombez amoureux de CSS ❤️",
+		"speakers": [
+			{
+				"name": "Olivier Leplus",
+				"picture": "https://camping-speakers.fr/img/speakers/olivier_leplus.jpg",
+				"company": "AWS"
+			}
+		],
+		"date": "16 juin",
+		"time": "11h40",
+		"location": "Grande Salle"
+	},
+	{
 		"title": "Escape Camp 🏃🏕️",
 		"speakers": [
 			{
@@ -661,20 +644,7 @@
 		"location": "Petite Salle"
 	},
 	{
-		"title": "YAGNI, KISS, and DRY: The Secret Recipe For Better Software Design",
-		"speakers": [
-			{
-				"name": "Maha ALSAYASNEH",
-				"picture": "https://camping-speakers.fr/img/speakers/maha_alsayasneh.jpg",
-				"company": "Elastic"
-			}
-		],
-		"date": "16 juin",
-		"time": "13h30",
-		"location": "Extérieur"
-	},
-	{
-		"title": "Esprit de famille, méthodes, rapport à l'argent, ambitions - l'héritage d'une famille d'entrepreneurs depuis 100 ans",
+		"title": "Programmons ensemble... une boite de vitesses",
 		"speakers": [
 			{
 				"name": "Mathieu Passenaud",
@@ -683,25 +653,7 @@
 			}
 		],
 		"date": "16 juin",
-		"time": "13h50",
-		"location": "Extérieur"
-	},
-	{
-		"title": "À la découverte du développement mobile, sans les maux de tête",
-		"speakers": [
-			{
-				"name": "Robin Caroff",
-				"picture": "https://camping-speakers.fr/img/speakers/robin_caroff.jpg",
-				"company": "Resonantes"
-			},
-			{
-				"name": "Cyril Hue",
-				"picture": "https://camping-speakers.fr/img/speakers/cyril_hue.jpg",
-				"company": "Kanoma"
-			}
-		],
-		"date": "16 juin",
-		"time": "14h30",
+		"time": "13h30",
 		"location": "Extérieur"
 	},
 	{
@@ -721,6 +673,37 @@
 		"date": "16 juin",
 		"time": "14h30",
 		"location": "Petite Salle"
+	},
+	{
+		"title": "🗣️ Zut ! J'aurais du dire ça ! 🙊 Astuces pour parler avec aisance en public 🎙️",
+		"speakers": [
+			{
+				"name": "Willy Malvault",
+				"picture": "https://camping-speakers.fr/img/speakers/willy_malvault.jpg",
+				"company": "Sogilis"
+			},
+			{
+				"name": "Sylvain Coudert",
+				"picture": "https://camping-speakers.fr/img/speakers/sylvain_coudert.jpg",
+				"company": "Freelance"
+			}
+		],
+		"date": "16 juin",
+		"time": "14h30",
+		"location": "Extérieur"
+	},
+	{
+		"title": "L'art du DeeJaying par la pratique",
+		"speakers": [
+			{
+				"name": "David Pilato",
+				"picture": "https://camping-speakers.fr/img/speakers/david_pilato.jpg",
+				"company": "elastic"
+			}
+		],
+		"date": "16 juin",
+		"time": "14h30",
+		"location": "Extérieur"
 	},
 	{
 		"title": "Comment gérer des journées de 35h ?",

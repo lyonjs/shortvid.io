@@ -5,6 +5,9 @@ import {Words} from './Words';
 import Details from './Details';
 import {Background} from './Background';
 import {Organisateurs} from './Organisateurs';
+import {loadLocalFont} from '../../../../src/app/utils/loadFont';
+
+loadLocalFont('PressStart2P', 'font/PressStart2P.ttf', 'truetype');
 
 export const CodeInTheDark = () => {
 	return (

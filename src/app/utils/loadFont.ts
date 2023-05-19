@@ -1,5 +1,5 @@
 import {top250} from '../../data/fonts';
-import {continueRender, delayRender, staticFile} from 'remotion';
+import {cancelRender, continueRender, delayRender, staticFile} from 'remotion';
 
 type RemotionFont = {
 	loadFont: () => void;
@@ -19,10 +19,10 @@ export function loadLocalFont(
 	fontLocalPath: string,
 	format: 'woff2' | 'woff' | 'opentype' | 'truetype'
 ) {
-	const waitForFont = delayRender();
+	const waitForFont = delayRender('Loading local font...');
 	const font = new FontFace(
 		fontName,
-		`url('${staticFile(fontLocalPath)}') format(${format})`
+		`url('${staticFile(fontLocalPath)}') format('${format}')`
 	);
 
 	font

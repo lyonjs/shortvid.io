@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React, {useEffect, useState} from 'react';
 import {interpolate, Loop, useCurrentFrame} from 'remotion';
 import {AnimatedCounter} from './AnimatedCounter';
-import {loadLocalFont} from '../../../../src/app/utils/loadFont';
 
 export const Combo: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -27,10 +26,6 @@ export const Combo: React.FC = () => {
 			)
 		);
 	}, [frame, inputRange, outputRange]);
-
-	useEffect(() => {
-		loadLocalFont('PressStart2P', '/font/PressStart2P.ttf', 'truetype');
-	}, []);
 
 	return (
 		<div

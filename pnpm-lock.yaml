@@ -111,6 +111,9 @@ devDependencies:
   postcss:
     specifier: 8.4.23
     version: 8.4.23
+  postcss-nested:
+    specifier: 6.0.1
+    version: 6.0.1(postcss@8.4.23)
   prettier:
     specifier: 2.8.8
     version: 2.8.8

@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	/* Purple variants */
+	--purple-50: #f3e8ff;
+	--purple-100: #e0aaff;
+	--purple-200: #c77dff;
+	--purple-300: #9d4edd;
+	--purple-400: #7b2cbf;
+	--purple-500: #5a189a;
+	--purple-600: #3c096c;
+	--purple-700: #240046;
+	--purple-800: #10002b;
+	--purple-900: #0e001c;
+}
+
 body {
 	background-color: #282c34;
 	color: white;

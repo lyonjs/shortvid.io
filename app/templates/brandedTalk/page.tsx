@@ -7,7 +7,6 @@ import {Code} from '../../../src/app/Code';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 import {TalkBranded} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
-import {InputDate} from '../../../src/app/forms/inputDate';
 import {format} from 'date-fns';
 import {SelectInput} from '../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../src/app/forms/colorInput';
@@ -140,15 +139,17 @@ export default function BrandedTalkPage() {
 						value={speakersJob}
 						label="Job (optional)"
 					/>
-					<InputDate
+					<Input
 						setValue={setStartingDate}
 						value={startingDate}
 						label="Starting Date"
+						type="datetime-local"
 					/>
-					<InputDate
+					<Input
 						setValue={setEndingDate}
 						value={endingDate}
 						label="Ending Date (optional)"
+						type="datetime-local"
 					/>
 					<SelectInput
 						setValue={setRecurringDay}

@@ -20,7 +20,7 @@ export default function BrandedTalkPage() {
 	);
 	const [title, setTitle] = useInputChange<string>('Example', 'title');
 	const [speakerPicture, setSpeakerPicture] = useInputChange<string>(
-		staticFile('/defaultAvatar.png'),
+		staticFile('/defaultAvatar.svg'),
 		'speakerPicture'
 	);
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(

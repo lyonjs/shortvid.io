@@ -5,7 +5,7 @@ export const Avatar: React.FC<{
 	style?: CSSProperties;
 	src?: string;
 	size?: number;
-}> = ({style, src = staticFile('defaultAvatar.png'), size = 500}) => {
+}> = ({style, src = staticFile('defaultAvatar.svg'), size = 500}) => {
 	return (
 		<Img
 			style={{

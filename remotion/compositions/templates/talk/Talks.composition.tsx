@@ -4,6 +4,9 @@ import {Talk} from './Talk';
 import {TalkBranded} from './branded/TalkBranded';
 
 export const TalksComposition: React.FC = () => {
+	const startingDate = new Date(2023, 3, 18, 13).toString();
+	const endingDate = new Date(2023, 4, 23, 13, 45).toString();
+
 	return (
 		<Folder name="Talks">
 			<Composition
@@ -33,16 +36,16 @@ export const TalksComposition: React.FC = () => {
 			/>
 			<Composition
 				component={TalkBranded}
-				width={1200}
-				height={700}
+				width={1280}
+				height={720}
 				id="TalkBranded"
 				fps={30}
 				durationInFrames={140}
 				defaultProps={{
 					title: 'Certification “Google Cloud Architect”',
-					startingDate: new Date(2023, 3, 18, 13),
-					endingDate: new Date(2023, 4, 23, 13, 45),
-					reccuringDay: 'mardi',
+					startingDate: startingDate,
+					endingDate: endingDate,
+					recurringDay: 'mardi',
 					location: '5 Place Jules Ferry, 69006.',
 					logoUrl:
 						'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg',

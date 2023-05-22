@@ -12,29 +12,34 @@ import {BrandedLocation} from './BrandedLocation';
 
 const {fontFamily} = loadFont();
 
-export const TalkBranded: React.FC<{
+export interface TalkBrandedProps {
 	backgroundColor?: string;
 	title: string;
-	startingDate: Date;
-	endingDate?: Date;
-	reccuringDay?: string;
+	startingDate: string;
+	endingDate?: string;
+	recurringDay?: string;
 	location?: string;
 	logoUrl: string;
 	speaker: {pictureUrl: string; name: string; company?: string; job?: string};
-}> = ({
+}
+
+export const TalkBranded: React.FC<TalkBrandedProps> = ({
 	backgroundColor = '#EA4335',
 	title,
 	startingDate,
 	endingDate,
-	reccuringDay,
+	recurringDay,
 	location,
 	logoUrl,
 	speaker,
 }) => {
-	const startingDay = format(startingDate, 'dd MMMM', {locale: fr});
-	const endingDay = endingDate && format(endingDate, 'dd MMMM', {locale: fr});
-	const startingTime = format(startingDate, 'HH:mm');
-	const endingTime = endingDate && format(endingDate, 'HH:mm');
+	const startingDateP = new Date(startingDate);
+	const startingDay = format(startingDateP, 'dd MMMM', {locale: fr});
+	const startingTime = format(startingDateP, 'HH:mm');
+
+	const endingDateP = endingDate && new Date(endingDate);
+	const endingDay = endingDateP && format(endingDateP, 'dd MMMM', {locale: fr});
+	const endingTime = endingDateP && format(endingDateP, 'HH:mm');
 
 	return (
 		<AbsoluteFill
@@ -64,7 +69,7 @@ export const TalkBranded: React.FC<{
 				<BrandedDetails
 					startingDate={startingDay}
 					endingDate={endingDay}
-					reccuringDay={reccuringDay}
+					reccuringDay={recurringDay}
 					startingTime={startingTime}
 					endingTime={endingTime}
 					location={location}

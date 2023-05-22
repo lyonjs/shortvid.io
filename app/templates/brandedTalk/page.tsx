@@ -11,6 +11,7 @@ import {InputDate} from '../../../src/app/forms/inputDate';
 import {format} from 'date-fns';
 import {SelectInput} from '../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../src/app/forms/colorInput';
+import {staticFile} from 'remotion';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
@@ -26,12 +27,11 @@ export default function BrandedTalkPage() {
 		'John Doe',
 		'speakersNames'
 	);
-	const [speakersCompany, setSpeakersCompany] = useInputChange<string>(
-		'',
-		'speakersCompany'
-	);
-	const [speakersJob, setSpeakersJob] = useInputChange<string>(
-		'',
+	const [speakersCompany, setSpeakersCompany] = useInputChange<
+		string | undefined
+	>(undefined, 'speakersCompany');
+	const [speakersJob, setSpeakersJob] = useInputChange<string | undefined>(
+		undefined,
 		'speakersJob'
 	);
 	const [logoUrl, setLogoUrl] = useInputChange<string>(
@@ -42,13 +42,20 @@ export default function BrandedTalkPage() {
 		'mardi',
 		'recurringDay'
 	);
-	const [location, setLocation] = useInputChange<string>('', 'location');
+	const [location, setLocation] = useInputChange<string | undefined>(
+		undefined,
+		'location'
+	);
+
 	const today = format(new Date(), 'yyyy-MM-dd HH:mm');
 	const [startingDate, setStartingDate] = useInputChange<string>(
 		today,
 		'startingDate'
 	);
-	const [endingDate, setEndingDate] = useInputChange<string>('', 'endingDate');
+	const [endingDate, setEndingDate] = useInputChange<string | undefined>(
+		undefined,
+		'endingDate'
+	);
 
 	const props = {
 		backgroundColor,

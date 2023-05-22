@@ -11,7 +11,6 @@ import {InputDate} from '../../../src/app/forms/inputDate';
 import {format} from 'date-fns';
 import {SelectInput} from '../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../src/app/forms/colorInput';
-import {staticFile} from 'remotion';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(

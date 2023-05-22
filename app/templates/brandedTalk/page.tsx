@@ -133,11 +133,13 @@ export default function BrandedTalkPage() {
 						setValue={setSpeakersCompany}
 						value={speakersCompany}
 						label="Company (optional)"
+						placeholder="e.g: Zenika"
 					/>
 					<Input
 						setValue={setSpeakersJob}
 						value={speakersJob}
 						label="Job (optional)"
+						placeholder="e.g: CTO"
 					/>
 					<Input
 						setValue={setStartingDate}
@@ -161,6 +163,7 @@ export default function BrandedTalkPage() {
 						setValue={setLocation}
 						value={location}
 						label="Location (optional)"
+						placeholder="e.g: 5 Place Jules Ferry, 69006."
 					/>
 					<CopyUrlButton urlParameters={encodedParams} />
 				</Form>

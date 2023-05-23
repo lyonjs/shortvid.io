@@ -13,7 +13,6 @@ import {TalkBranded} from '../../../remotion/compositions/templates/talk/branded
 import {SelectInput} from '../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../src/app/forms/colorInput';
 import {InputDate} from '../../../src/app/forms/inputDate';
-import {format} from 'date-fns';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
@@ -81,8 +80,8 @@ export default function BrandedTalkPage() {
 	const encodedParams = encodeObjectValues({
 		backgroundColor,
 		title,
-		startingDate: format(startingDate, 'yyyy-MM-dd HH:mm'),
-		endingDate: endingDate && format(endingDate, 'yyyy-MM-dd HH:mm'),
+		startingDate,
+		endingDate,
 		recurringDay,
 		location,
 		logoUrl,

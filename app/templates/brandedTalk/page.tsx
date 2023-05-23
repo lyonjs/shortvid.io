@@ -1,16 +1,18 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {useInputChange} from '../../../src/app/hooks/onInputChange';
+import {
+	useInputChange,
+	useInputDateChange,
+} from '../../../src/app/hooks/onInputChange';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 import {TalkBranded} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
-import {format} from 'date-fns';
 import {SelectInput} from '../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../src/app/forms/colorInput';
-import {staticFile} from 'remotion';
+import {InputDate} from '../../../src/app/forms/inputDate';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
@@ -19,7 +21,7 @@ export default function BrandedTalkPage() {
 	);
 	const [title, setTitle] = useInputChange<string>('Example', 'title');
 	const [speakerPicture, setSpeakerPicture] = useInputChange<string>(
-		staticFile('/defaultAvatar.svg'),
+		'',
 		'speakerPicture'
 	);
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(
@@ -46,12 +48,15 @@ export default function BrandedTalkPage() {
 		'location'
 	);
 
-	const today = format(new Date(), 'yyyy-MM-dd HH:mm');
-	const [startingDate, setStartingDate] = useInputChange<string>(
+	const today = new Date();
+	// We set the seconds to 0 to handle a server/client diff
+	today.setSeconds(0, 0);
+
+	const [startingDate, setStartingDate] = useInputDateChange<Date>(
 		today,
 		'startingDate'
 	);
-	const [endingDate, setEndingDate] = useInputChange<string | undefined>(
+	const [endingDate, setEndingDate] = useInputDateChange<Date | undefined>(
 		undefined,
 		'endingDate'
 	);
@@ -141,17 +146,15 @@ export default function BrandedTalkPage() {
 						label="Job (optional)"
 						placeholder="e.g: CTO"
 					/>
-					<Input
+					<InputDate
 						setValue={setStartingDate}
 						value={startingDate}
 						label="Starting Date"
-						type="datetime-local"
 					/>
-					<Input
+					<InputDate
 						setValue={setEndingDate}
 						value={endingDate}
 						label="Ending Date (optional)"
-						type="datetime-local"
 					/>
 					<SelectInput
 						setValue={setRecurringDay}

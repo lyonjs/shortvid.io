@@ -4,8 +4,8 @@ import {Talk} from './Talk';
 import {TalkBranded} from './branded/TalkBranded';
 
 export const TalksComposition: React.FC = () => {
-	const startingDate = new Date(2023, 3, 18, 13).toString();
-	const endingDate = new Date(2023, 4, 23, 13, 45).toString();
+	const startingDate = new Date(2023, 3, 18, 13);
+	const endingDate = new Date(2023, 4, 23, 13, 45);
 
 	return (
 		<Folder name="Talks">

@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Sequence} from 'remotion';
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/OpenSans';
 import {BrandedTitle} from './BrandedTitle';
 import {BrandedDetails} from './BrandedDetails';
@@ -15,8 +15,8 @@ const {fontFamily} = loadFont();
 export interface TalkBrandedProps {
 	backgroundColor?: string;
 	title: string;
-	startingDate: string;
-	endingDate?: string;
+	startingDate: Date;
+	endingDate?: Date;
 	recurringDay?: string;
 	location?: string;
 	logoUrl: string;
@@ -57,7 +57,7 @@ export const TalkBranded: React.FC<TalkBrandedProps> = ({
 			</Sequence>
 			<Sequence name="Speaker" from={10}>
 				<BrandedSpeaker
-					pictureUrl={speaker.pictureUrl}
+					pictureUrl={speaker.pictureUrl || staticFile('/defaultAvatar.svg')}
 					name={speaker.name}
 					company={speaker.company}
 					job={speaker.job}

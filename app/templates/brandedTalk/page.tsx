@@ -128,6 +128,7 @@ export default function BrandedTalkPage() {
 						setValue={setSpeakerPicture}
 						value={speakerPicture}
 						label="Speaker picture"
+						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
 					/>
 					<Input
 						setValue={setSpeakersNames}

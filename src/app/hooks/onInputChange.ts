@@ -29,7 +29,11 @@ export const useInputDateChange = <ValueType extends Date | undefined>(
 		? searchParams.get(query) ?? defaultValue
 		: defaultValue;
 
-	const [value, setValue] = useState<ValueType>(initialValue as ValueType);
+	const formatedInitialValue = initialValue && new Date(initialValue);
+
+	const [value, setValue] = useState<ValueType>(
+		formatedInitialValue as ValueType
+	);
 	const onValueChange = useCallback(
 		(event: FormEvent<HTMLInputElement | HTMLSelectElement>) => {
 			const newValue = new Date(event.currentTarget.value);

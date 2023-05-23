@@ -1,10 +1,7 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {
-	useInputChange,
-	useInputDateChange,
-} from '../../../src/app/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/onInputChange';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
@@ -13,6 +10,7 @@ import {TalkBranded} from '../../../remotion/compositions/templates/talk/branded
 import {SelectInput} from '../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../src/app/forms/colorInput';
 import {InputDate} from '../../../src/app/forms/inputDate';
+import {format} from 'date-fns';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
@@ -52,11 +50,11 @@ export default function BrandedTalkPage() {
 	// We set the seconds to 0 to handle a server/client diff
 	today.setSeconds(0, 0);
 
-	const [startingDate, setStartingDate] = useInputDateChange<Date>(
+	const [startingDate, setStartingDate] = useInputChange<Date>(
 		today,
 		'startingDate'
 	);
-	const [endingDate, setEndingDate] = useInputDateChange<Date | undefined>(
+	const [endingDate, setEndingDate] = useInputChange<Date | undefined>(
 		undefined,
 		'endingDate'
 	);
@@ -80,8 +78,8 @@ export default function BrandedTalkPage() {
 	const encodedParams = encodeObjectValues({
 		backgroundColor,
 		title,
-		startingDate,
-		endingDate,
+		startingDate: format(startingDate, 'yyyy-MM-dd HH:mm'),
+		endingDate: endingDate && format(endingDate, 'yyyy-MM-dd HH:mm'),
 		recurringDay,
 		location,
 		logoUrl,

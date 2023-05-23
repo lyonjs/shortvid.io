@@ -1,7 +1,7 @@
 ---
 name: "Template request \U0001F39E️"
 about: "Describe the video template you need \U0001F37F"
-title: "\U0001F39E️ [TEMPLATE] : "
+title: "\U0001F39E️"
 labels: ''
 assignees: ''
 ---

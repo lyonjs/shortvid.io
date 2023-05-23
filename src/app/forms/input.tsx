@@ -13,9 +13,16 @@ export interface InputProps {
 	setValue: (event: FormEvent<HTMLInputElement>) => void;
 	label: string;
 	placeholder?: string;
+	type?: string;
 }
 
-export const Input = ({value, setValue, label, placeholder}: InputProps) => {
+export const Input = ({
+	value,
+	setValue,
+	label,
+	placeholder,
+	type = 'text',
+}: InputProps) => {
 	return (
 		<label
 			style={{
@@ -29,7 +36,7 @@ export const Input = ({value, setValue, label, placeholder}: InputProps) => {
 			{label}
 			<input
 				className="text-black"
-				type="text"
+				type={type}
 				name={label}
 				value={value}
 				style={{

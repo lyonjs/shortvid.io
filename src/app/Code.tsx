@@ -2,10 +2,15 @@ import {MouseEvent, useCallback} from 'react';
 import va from '@vercel/analytics';
 import {TouraineTechProps} from '../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {ReplayProps} from '../../app/templates/replay/page';
+import {TalkBrandedProps} from '../../remotion/compositions/templates/talk/branded/TalkBranded';
 
 export const Code: React.FC<{
 	composition: string;
-	params: {[key: string]: string | undefined} | TouraineTechProps | ReplayProps;
+	params:
+		| {[key: string]: string | undefined}
+		| TouraineTechProps
+		| ReplayProps
+		| TalkBrandedProps;
 }> = ({params, composition}) => {
 	const onClickHandler = useCallback((event: MouseEvent) => {
 		const element = event.target as HTMLElement;

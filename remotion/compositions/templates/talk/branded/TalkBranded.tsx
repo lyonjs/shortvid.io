@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Sequence} from 'remotion';
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/OpenSans';
 import {BrandedTitle} from './BrandedTitle';
 import {BrandedDetails} from './BrandedDetails';
@@ -12,29 +12,35 @@ import {BrandedLocation} from './BrandedLocation';
 
 const {fontFamily} = loadFont();
 
-export const TalkBranded: React.FC<{
+export interface TalkBrandedProps {
 	backgroundColor?: string;
 	title: string;
 	startingDate: Date;
 	endingDate?: Date;
-	reccuringDay?: string;
+	recurringDay?: string;
 	location?: string;
 	logoUrl: string;
 	speaker: {pictureUrl: string; name: string; company?: string; job?: string};
-}> = ({
+}
+
+export const TalkBranded: React.FC<TalkBrandedProps> = ({
 	backgroundColor = '#EA4335',
 	title,
 	startingDate,
 	endingDate,
-	reccuringDay,
+	recurringDay,
 	location,
 	logoUrl,
 	speaker,
 }) => {
-	const startingDay = format(startingDate, 'dd MMMM', {locale: fr});
-	const endingDay = endingDate && format(endingDate, 'dd MMMM', {locale: fr});
-	const startingTime = format(startingDate, 'HH:mm');
-	const endingTime = endingDate && format(endingDate, 'HH:mm');
+	const formatedStartingDate = new Date(startingDate);
+	const startingDay = format(formatedStartingDate, 'dd MMMM', {locale: fr});
+	const startingTime = format(formatedStartingDate, 'HH:mm');
+
+	const formatedEndingDate = endingDate && new Date(endingDate);
+	const endingDay =
+		formatedEndingDate && format(formatedEndingDate, 'dd MMMM', {locale: fr});
+	const endingTime = formatedEndingDate && format(formatedEndingDate, 'HH:mm');
 
 	return (
 		<AbsoluteFill
@@ -51,7 +57,7 @@ export const TalkBranded: React.FC<{
 			</Sequence>
 			<Sequence name="Speaker" from={10}>
 				<BrandedSpeaker
-					pictureUrl={speaker.pictureUrl}
+					pictureUrl={speaker.pictureUrl || staticFile('/defaultAvatar.svg')}
 					name={speaker.name}
 					company={speaker.company}
 					job={speaker.job}
@@ -64,7 +70,7 @@ export const TalkBranded: React.FC<{
 				<BrandedDetails
 					startingDate={startingDay}
 					endingDate={endingDay}
-					reccuringDay={reccuringDay}
+					reccuringDay={recurringDay}
 					startingTime={startingTime}
 					endingTime={endingTime}
 					location={location}

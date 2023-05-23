@@ -1,7 +1,5 @@
 import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Icon} from '@iconify/react';
-import {Text} from '../../../../design/atoms/Text';
 import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
 
 export const BrandedLocation: React.FC<{

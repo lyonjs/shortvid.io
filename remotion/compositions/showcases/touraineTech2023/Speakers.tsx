@@ -7,7 +7,6 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {Speaker} from './TouraineTech2023';
-import {TalkTitle} from './TalkTitle';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Text} from '../../../design/atoms/Text';
 

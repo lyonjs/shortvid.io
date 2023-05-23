@@ -1,4 +1,4 @@
-import {AbsoluteFill, Sequence, Img, interpolate} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
 import React from 'react';
 import {Side} from './Silhouette.type';
 import {SilhouettePicture} from './SilhouettePicture';

@@ -1,4 +1,4 @@
-import {AbsoluteFill, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
 
 export const TalkBackground = () => {

@@ -4,7 +4,7 @@ export type QueryParams = {
 
 export const formatUrlWithQuery = (queryParams: QueryParams, path: string) => {
 	const queryString = Object.entries(queryParams)
-		.filter(([key, value]) => value)
+		.filter(([value]) => value)
 		.map(([key, value]) => `${key}=${value}`)
 		.join('&');
 

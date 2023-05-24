@@ -1,6 +1,9 @@
 'use client';
 
-import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
+import {
+	Snowcamp,
+	TouraineTechProps,
+} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx2023/Devoxx2023';
 import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit2023/MixitIntroTalk';
 import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech2023/TouraineTech2023';
@@ -14,6 +17,8 @@ import {AlpesCraft} from '../../../../remotion/compositions/showcases/alpescraft
 import {Code} from '../../../../src/app/Code';
 import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/camping-des-speakers/CampingDesSpeakers';
 import _ = require('lodash');
+import {ReplayProps} from '../../../templates/replay/page';
+import {TalkBrandedProps} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
 interface TalkTemplate {
 	component: React.FC<any>;
 	width: number;
@@ -21,7 +26,11 @@ interface TalkTemplate {
 	compositionName: string;
 	durationInFrames: number;
 	fps?: number;
-	defaultProps?: {};
+	defaultProps?:
+		| {[key: string]: string | undefined}
+		| TouraineTechProps
+		| ReplayProps
+		| TalkBrandedProps;
 }
 
 const Template: Record<string, TalkTemplate> = {

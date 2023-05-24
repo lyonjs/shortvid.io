@@ -72,6 +72,11 @@ const PARTNERS = [
 		logo: '/images/conferences/mixit.svg',
 		site: 'https://mixitconf.org/',
 	},
+	{
+		name: 'Camping des Speakers',
+		logo: '/images/conferences/campingDesSpeakers.png',
+		site: 'https://camping-speakers.fr/',
+	},
 ];
 
 export default function Home() {

@@ -20,7 +20,7 @@ export const CopyUrlButton: React.FC<{urlParameters: QueryParams}> = ({
 	return (
 		<button
 			type="button"
-			className="relative text-black py-2 px-4 text-center text-xl font-bold bg-purple-300 rounded-xl mt-4 hover:scale-105"
+			className="relative text-black py-2 px-4 text-center text-xl font-bold bg-purple-200 rounded-xl mt-4 hover:scale-105"
 			onClick={onClickHandler}
 		>
 			{copied ? 'Copied ✅' : 'Copy URL 🔗'}

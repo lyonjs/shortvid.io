@@ -17,7 +17,7 @@
 }
 
 body {
-	background-color: #282c34;
+	background-color: var(--purple-900);
 	color: white;
 }
 
@@ -26,5 +26,5 @@ main {
 }
 
 a {
-	color: #efdb50;
+	color: var(--purple-100);
 }

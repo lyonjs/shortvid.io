@@ -1,13 +1,15 @@
 'use client';
 
-import {Img, staticFile} from 'remotion';
+import Image from 'next/image';
 
 export const Header: React.FC = () => {
 	return (
 		<header className="flex items-center my-9">
-			<Img
-				src={staticFile('/Monogram-white.svg')}
-				style={{height: '40px', display: 'block'}}
+			<Image
+				src="/Monogram-white.svg"
+				alt="Shortvid.io Logo"
+				width={30}
+				height={30}
 			/>
 			<h1 className="text-2xl md:text-3xl ml-5">Shortvid.io</h1>
 			<a

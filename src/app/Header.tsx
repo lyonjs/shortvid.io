@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
 	return (
 		<header className="flex items-center my-9">
 			<Image
-				src="/Monogram-white.svg"
+				src="/monogram-white.svg"
 				alt="Shortvid.io Logo"
 				width={30}
 				height={30}

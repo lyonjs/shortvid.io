@@ -1,10 +1,7 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {
-	useInputChange,
-	useSelectChange,
-} from '../../../src/app/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/useInputChange';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {Silhouette} from '../../../remotion/compositions/templates/silhouette/Silhouette';
@@ -16,7 +13,7 @@ export default function SilhouettePage() {
 	const [backgroundImg, setBackgroundImg] = useInputChange<string>(
 		'https://images.unsplash.com/photo-1550537687-c91072c4792d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80'
 	);
-	const [side, setSide] = useSelectChange<Side | undefined>('left');
+	const [side, setSide] = useInputChange<Side | undefined>('left');
 	const [silhouetteUrl, setSilhouetteUrl] = useInputChange<string>(
 		'https://user-images.githubusercontent.com/6263857/230662773-4d7a534a-e01c-4ba8-9c3b-fa95586adf52.png'
 	);

@@ -1,10 +1,7 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {
-	useInputChange,
-	useInputDateChange,
-} from '../../../src/app/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/useInputChange';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
@@ -13,6 +10,7 @@ import {TalkBranded} from '../../../remotion/compositions/templates/talk/branded
 import {SelectInput} from '../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../src/app/forms/colorInput';
 import {InputDate} from '../../../src/app/forms/inputDate';
+import {useInputDateChange} from '../../../src/app/hooks/useInputDateChange';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(

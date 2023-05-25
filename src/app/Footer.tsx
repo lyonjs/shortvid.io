@@ -1,13 +1,18 @@
 import Image from 'next/image';
 import styles from '../../styles/app/Footer.module.css';
-import {Img, staticFile} from 'remotion';
+import {staticFile} from 'remotion';
 
 export const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.separator}>
 				<hr />
-				<Img src={staticFile('/Monogram-white.svg')} />
+				<Image
+					src={staticFile('/Monogram-white.svg')}
+					alt="Shorvid.io logo"
+					width={20}
+					height={20}
+				/>
 				<hr />
 			</div>
 			<a href="https://vercel.com?utm_source=lyonjs&utm_campaign=oss">

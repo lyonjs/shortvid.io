@@ -1,0 +1,29 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	padding: 60px 40px;
+
+	.separator {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		width: 100%;
+
+		img {
+			width: 20px;
+		}
+
+		hr {
+			height: 1px;
+			background: white;
+			width: 100%;
+		}
+	}
+
+	a {
+		display: block;
+		width: max-content;
+	}
+}

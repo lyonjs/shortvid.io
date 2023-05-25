@@ -74,7 +74,7 @@ const PARTNERS = [
 	},
 	{
 		name: 'Camping des Speakers',
-		logo: '/images/conferences/campingDesSpeakers.png',
+		logo: '/images/conferences/campingDesSpeakers/campingDesSpeakers.png',
 		site: 'https://camping-speakers.fr/',
 	},
 ];
@@ -137,11 +137,15 @@ export default function Home() {
 					<a
 						key={partner.name}
 						href={partner.site}
-						className="bg-slate-200 p-4 rounded-md w-1/2 md:w-1/3 flex"
+						className="bg-slate-200 p-4 rounded-md w-1/2 md:w-1/3 flex justify-center"
 						target="_blank"
 					>
 						{/* eslint-disable-next-line @remotion/warn-native-media-tag */}
-						<img src={partner.logo} alt={partner.name} className="block" />
+						<img
+							src={partner.logo}
+							alt={partner.name}
+							className="block max-h-32"
+						/>
 					</a>
 				))}
 			</section>

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from '../../styles/app/Footer.module.css';
-import {staticFile} from 'remotion';
 
 export const Footer = () => {
 	return (
@@ -8,7 +7,7 @@ export const Footer = () => {
 			<div className={styles.separator}>
 				<hr />
 				<Image
-					src={staticFile('/Monogram-white.svg')}
+					src="/Monogram-white.svg"
 					alt="Shorvid.io logo"
 					width={20}
 					height={20}

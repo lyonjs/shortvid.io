@@ -1,11 +1,16 @@
 'use client';
 
-import {EventLogo} from '../../remotion/design/atoms/EventLogo';
+import Image from 'next/image';
 
 export const Header: React.FC = () => {
 	return (
 		<header className="flex items-center my-9">
-			<EventLogo style={{height: '60px', display: 'block'}} />
+			<Image
+				src="/monogram-white.svg"
+				alt="Shortvid.io Logo"
+				width={30}
+				height={30}
+			/>
 			<h1 className="text-2xl md:text-3xl ml-5">Shortvid.io</h1>
 			<a
 				className="ml-auto border-2 px-4 py-2 rounded-md hover:bg-white hover:text-black transition-all duration-200 font-bold"

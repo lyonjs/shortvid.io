@@ -28,6 +28,11 @@ module.exports = {
 					'100%': {top: '-4rem', opacity: 0},
 				},
 			},
+			colors: {
+				primary: 'var(--primary)',
+				link: 'var(--link)',
+				background: 'var(--background)',
+			},
 		},
 	},
 	plugins: [],

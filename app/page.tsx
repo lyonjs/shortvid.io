@@ -159,7 +159,7 @@ export default function Home() {
 					return (
 						<article key={video.id}>
 							<header>
-								<h3 className="text-xl pb-3 text-yellow-300 font-bold">
+								<h3 className="text-xl pb-3 text-primary font-bold">
 									{video.id}
 								</h3>
 							</header>

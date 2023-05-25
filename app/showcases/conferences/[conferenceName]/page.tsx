@@ -133,11 +133,11 @@ export default function ConferencePage({
 					theme="light_mitsuketa_tribute"
 					locale={locale}
 					colors={{
-						string: '#DAA520',
+						string: '#7B2CBF',
 					}}
 					style={{
 						body: {
-							border: 'solid 3px #DAA520',
+							border: 'solid 3px #c77dff',
 							borderRadius: '5px',
 						},
 					}}

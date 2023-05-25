@@ -6,27 +6,21 @@ import {usePathname} from 'next/navigation';
 
 type ActiveLinkProps = LinkProps & {
 	children: ReactNode;
-	activeClassName?: string;
 };
 
-export const ActiveLink: FC<ActiveLinkProps> = ({
-	children,
-	activeClassName = 'bg-yellow-300',
-	href,
-}) => {
+export const ActiveLink: FC<ActiveLinkProps> = ({children, href}) => {
 	const pathname = usePathname();
 	const child = Children.only(children) as ReactElement;
 	const childClassName = child?.props?.className || '';
 
-	const className =
-		pathname === href
-			? `${childClassName} ${activeClassName}`.trim()
-			: childClassName;
+	const isActive = pathname === href;
+
+	const backgroundClassName = isActive ? 'bg-primary' : 'bg-white';
 
 	return (
 		<a href={href as string}>
 			{cloneElement(child, {
-				className: className || null,
+				className: `${childClassName} ${backgroundClassName}` || null,
 			})}
 		</a>
 	);

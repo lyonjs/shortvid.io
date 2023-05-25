@@ -1,6 +1,6 @@
 'use client';
 
-import {useInputChange} from '../../../src/app/hooks/onInputChange';
+import {useInputChange} from '../../../src/app/hooks/useInputChange';
 import {Player} from '@remotion/player';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';

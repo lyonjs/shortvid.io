@@ -1,5 +1,5 @@
 import {top250} from '../../data/fonts';
-import {cancelRender, continueRender, delayRender, staticFile} from 'remotion';
+import {continueRender, delayRender, staticFile} from 'remotion';
 
 type RemotionFont = {
 	loadFont: () => void;

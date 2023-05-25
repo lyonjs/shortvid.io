@@ -6,7 +6,6 @@ import {
 	useVideoConfig,
 } from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
-import {Icon} from '@iconify/react';
 import React from 'react';
 import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 

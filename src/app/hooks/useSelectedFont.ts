@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import {useContext, useEffect} from 'react';
 import {loadGoogleFont} from '../utils/loadFont';
 import {FontContext} from '../../context/FontContext';
 import {useSearchParams} from 'next/navigation';
@@ -23,7 +23,7 @@ export const useSelectedFont = () => {
 
 		setSelectedFont(fontToLoad);
 		loadGoogleFont(fontToLoad);
-	}, [selectedFont]);
+	}, [selectedFont, setSelectedFont, searchParams]);
 
 	const handleSetSelectedFont = (font: string) => {
 		setSelectedFont(font);

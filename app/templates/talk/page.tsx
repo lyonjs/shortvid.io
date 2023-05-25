@@ -5,7 +5,6 @@ import {useInputChange} from '../../../src/app/hooks/useInputChange';
 import {Form, Input} from '../../../src/app/forms/input';
 import {Code} from '../../../src/app/Code';
 import {Talk} from '../../../remotion/compositions/templates/talk/Talk';
-import {useSearchParams} from 'next/navigation';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 

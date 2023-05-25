@@ -11,7 +11,7 @@ type ActiveLinkProps = LinkProps & {
 
 export const ActiveLink: FC<ActiveLinkProps> = ({
 	children,
-	activeClassName = 'bg-purple-200',
+	activeClassName = 'bg-primary',
 	href,
 }) => {
 	const pathname = usePathname();

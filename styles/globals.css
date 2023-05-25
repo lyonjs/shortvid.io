@@ -14,10 +14,14 @@
 	--purple-700: #240046;
 	--purple-800: #10002b;
 	--purple-900: #0e001c;
+
+	--primary: var(--purple-200);
+	--link: var(--purple-100);
+	--background: var(--purple-900);
 }
 
 body {
-	background-color: var(--purple-900);
+	background-color: var(--background);
 	color: white;
 }
 
@@ -26,5 +30,5 @@ main {
 }
 
 a {
-	color: var(--purple-100);
+	color: var(--link);
 }

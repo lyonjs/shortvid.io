@@ -14,7 +14,10 @@ export const Footer = () => {
 				/>
 				<hr />
 			</div>
-			<a href="https://vercel.com?utm_source=lyonjs&utm_campaign=oss">
+			<a
+				href="https://vercel.com?utm_source=lyonjs&utm_campaign=oss"
+				className={styles.vercelLight}
+			>
 				<Image
 					alt="Vercel"
 					width="200"

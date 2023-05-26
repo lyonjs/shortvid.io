@@ -28,4 +28,8 @@
 		display: block;
 		width: max-content;
 	}
+
+	.vercelLight {
+		filter: invert(1);
+	}
 }

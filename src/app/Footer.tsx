@@ -7,7 +7,7 @@ export const Footer = () => {
 			<div className={styles.separator}>
 				<hr />
 				<Image
-					src="/Monogram-white.svg"
+					src="/shortvidio_logo_white.svg"
 					alt="Shorvid.io logo"
 					width={20}
 					height={20}

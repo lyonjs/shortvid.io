@@ -2,8 +2,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 50px;
-	padding: 60px 40px;
+	gap: 20px;
+	padding-inline: 40px;
+	padding-top: 40px;
 
 	.separator {
 		display: flex;
@@ -13,8 +14,13 @@
 
 		hr {
 			height: 1px;
-			background: white;
+			border-top: 2px solid transparent;
+			border-image: linear-gradient(90deg,transparent,white) 1;
 			width: 100%;
+
+			&:last-child {
+				transform: rotate(180deg);
+			}
 		}
 	}
 

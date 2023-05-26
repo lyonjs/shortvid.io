@@ -15,7 +15,7 @@
 		hr {
 			height: 1px;
 			border-top: 2px solid transparent;
-			border-image: linear-gradient(90deg,transparent,white) 1;
+			border-image: linear-gradient(90deg, transparent, white) 1;
 			width: 100%;
 
 			&:last-child {

@@ -12,7 +12,9 @@ export const Sponsor: React.FC<{
 	sponsorLogo?: string;
 }> = ({
 	companyName = 'Evilcorp',
-	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
+	backgroundImg = staticFile(
+		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg'
+	),
 	sponsorLocalisation,
 	sponsorLogo,
 }) => {

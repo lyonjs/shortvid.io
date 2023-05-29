@@ -13,7 +13,7 @@ export const Mountains = () => {
 		<>
 			<Sequence name="Left-moutain">
 				<SingleMountain
-					ImgUrl="images/conferences/alpescraft/Mountain-left.svg"
+					ImgUrl="images/showcases/alpescraft/mountainLeft.svg"
 					style={{
 						left: appear,
 					}}
@@ -21,7 +21,7 @@ export const Mountains = () => {
 			</Sequence>
 			<Sequence name="Right-moutain" from={5}>
 				<SingleMountain
-					ImgUrl="images/conferences/alpescraft/Mountain-right.svg"
+					ImgUrl="images/showcases/alpescraft/mountainRight.svg"
 					style={{
 						right: appear,
 					}}

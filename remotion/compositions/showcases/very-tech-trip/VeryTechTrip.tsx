@@ -48,7 +48,7 @@ export const VeryTechTrip: React.FC<Talk> = ({title, speakers, time}) => {
 			</Sequence>
 			<Sequence from={70}>
 				<Img
-					src={staticFile('underline.svg')}
+					src={staticFile('/images/common/underline.svg')}
 					style={{
 						position: 'absolute',
 						bottom: '90px',

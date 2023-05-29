@@ -54,9 +54,7 @@ export const Devoxx2023: React.FC<Talk> = ({
 				}}
 			>
 				<Sequence name="Background">
-					<Img
-						src={staticFile('images/conferences/devoxx/devoxx-background.jpg')}
-					/>
+					<Img src={staticFile('images/showcases/devoxx/background.jpg')} />
 				</Sequence>
 				<Sequence name="Balloons">
 					<Balloons />

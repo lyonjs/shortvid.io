@@ -25,9 +25,7 @@ export const TalkBackground = () => {
 
 	return (
 		<BackgroundFiller
-			imageUrl={staticFile(
-				'/images/conferences/alpescraft/alpescraft-background.webp'
-			)}
+			imageUrl={staticFile('/images/showcases/alpescraft/background.webp')}
 			style={{filter: `grayscale(${greyscale}) blur(${blur}px) `}}
 			bottomGradient={true}
 		/>

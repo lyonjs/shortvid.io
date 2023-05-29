@@ -30,9 +30,7 @@ export const Ground = () => {
 
 	return (
 		<Img
-			src={staticFile(
-				'images/conferences/campingDesSpeakers/groundDetails.svg'
-			)}
+			src={staticFile('images/showcases/campingDesSpeakers/groundDetails.svg')}
 			style={{
 				position: 'absolute',
 				objectFit: 'none',

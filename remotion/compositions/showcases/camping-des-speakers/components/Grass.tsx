@@ -21,7 +21,7 @@ export const Grass = () => {
 
 	return (
 		<Img
-			src={staticFile('images/conferences/campingDesSpeakers/grass.svg')}
+			src={staticFile('images/showcases/campingDesSpeakers/grass.svg')}
 			style={{
 				position: 'absolute',
 				objectFit: 'cover',

@@ -9,7 +9,7 @@ export const Balloon3: React.FC = () => {
 
 	return (
 		<Img
-			src={staticFile('images/conferences/devoxx/baloon3.png')}
+			src={staticFile('images/showcases/devoxx/baloon3.png')}
 			style={{
 				position: 'absolute',
 				left: 600,

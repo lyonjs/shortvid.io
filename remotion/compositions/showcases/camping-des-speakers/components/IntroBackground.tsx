@@ -20,7 +20,7 @@ export const IntroBackground = () => {
 				>
 					<Img
 						src={staticFile(
-							'images/conferences/campingDesSpeakers/logo_text.png'
+							'images/showcases/campingDesSpeakers/campingDesSpeakersLogoWithText.png'
 						)}
 					/>
 				</AbsoluteFill>

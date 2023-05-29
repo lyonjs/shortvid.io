@@ -14,7 +14,7 @@ export const Balloon5: React.FC = () => {
 	return (
 		<>
 			<Img
-				src={staticFile('images/conferences/devoxx/baloon5.png')}
+				src={staticFile('images/showcases/devoxx/baloon5.png')}
 				style={{
 					position: 'absolute',
 					right: moveRightFirst,
@@ -24,7 +24,7 @@ export const Balloon5: React.FC = () => {
 				}}
 			/>
 			<Img
-				src={staticFile('images/conferences/devoxx/baloon5.png')}
+				src={staticFile('images/showcases/devoxx/baloon5.png')}
 				style={{
 					position: 'absolute',
 					right: moveRightSecond,

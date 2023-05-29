@@ -4,7 +4,7 @@ import React from 'react';
 export const Tent = () => {
 	return (
 		<Video
-			src={staticFile('images/conferences/campingDesSpeakers/tent.webm')}
+			src={staticFile('images/showcases/campingDesSpeakers/tent.webm')}
 			style={{
 				width: 700,
 				position: 'absolute',

@@ -24,7 +24,7 @@ export const BackTrees = () => {
 
 	return (
 		<Img
-			src={staticFile('images/conferences/campingDesSpeakers/backTrees.svg')}
+			src={staticFile('images/showcases/campingDesSpeakers/backTrees.svg')}
 			style={{
 				position: 'absolute',
 				top: BackTreeAppear,

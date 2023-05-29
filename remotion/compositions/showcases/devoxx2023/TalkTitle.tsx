@@ -56,7 +56,7 @@ export const TalkTitle: React.FC<{
 				{title}
 			</Title>
 			<Img
-				src={staticFile('underline.svg')}
+				src={staticFile('/images/common/underline.svg')}
 				style={{
 					position: 'absolute',
 					bottom: '100px',

@@ -57,7 +57,9 @@ export const TalkBranded: React.FC<TalkBrandedProps> = ({
 			</Sequence>
 			<Sequence name="Speaker" from={10}>
 				<BrandedSpeaker
-					pictureUrl={speaker.pictureUrl || staticFile('/defaultAvatar.svg')}
+					pictureUrl={
+						speaker.pictureUrl || staticFile('/images/common/defaultAvatar.svg')
+					}
 					name={speaker.name}
 					company={speaker.company}
 					job={speaker.job}

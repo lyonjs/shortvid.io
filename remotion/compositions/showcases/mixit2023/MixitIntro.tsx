@@ -10,7 +10,7 @@ import {CSSProperties} from 'react';
 const MixitLogo: React.FC = () => {
 	return (
 		<Img
-			src={staticFile('/images/conferences/mxt-2023.svg')}
+			src={staticFile('/images/showcases/mixit/mixitLogo2023.svg')}
 			width={1000}
 			height="auto"
 			style={{

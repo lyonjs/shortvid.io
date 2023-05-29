@@ -13,7 +13,9 @@ export interface MeetupProps {
 }
 
 export const Meetup = ({
-	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
+	backgroundImg = staticFile(
+		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg'
+	),
 	title,
 	date,
 	eventLogo,

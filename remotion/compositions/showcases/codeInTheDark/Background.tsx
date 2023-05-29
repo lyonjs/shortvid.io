@@ -12,12 +12,14 @@ export const Background = () => {
 				objectFit: 'cover',
 				backgroundPosition: 'center',
 				backgroundImage: `url(${staticFile(
-					'/images/event/CITD-Background.png'
+					'/images/showcases/codeInTheDark/background.png'
 				)})`,
 			}}
 		>
 			<Img
-				src={staticFile('/images/event/CITD-Logo.png')}
+				src={staticFile(
+					'/images/showcases/codeInTheDark/codeInTheDarkLogo.png'
+				)}
 				style={{
 					width: 500,
 					opacity: 0.6,

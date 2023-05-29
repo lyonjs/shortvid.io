@@ -20,7 +20,7 @@ export const Logo = () => {
 
 	return (
 		<Img
-			src={staticFile('images/conferences/alpescraft/alpescraft-logo.png')}
+			src={staticFile('images/showcases/alpescraft/alpescraftLogo.png')}
 			width={300}
 			height="auto"
 			style={{

@@ -3,12 +3,12 @@ import {Folder} from 'remotion';
 
 import {LyonJSComposition} from './lyonJS/LyonJS.composition';
 import {AlpesCraftComposition} from './alpescraft/AlpesCraft.composition';
-import {TouraineTechComposition} from './touraineTech2023/TouraineTech.composition';
+import {TouraineTechComposition} from './touraineTech/TouraineTech.composition';
 import {SnowcampComposition} from './snowcamp/Snowcamp.composition';
-import {VeryTechTripComposition} from './very-tech-trip/VeryTechTrip.composition';
-import {MixitComposition} from './mixit2023/Mixit.composition';
-import {DevoxxComposition} from './devoxx2023/Devoxx.composition';
-import {CampingDesSpeakersComposition} from './camping-des-speakers/CampingDesSpeakers.composition';
+import {VeryTechTripComposition} from './veryTechTrip/VeryTechTrip.composition';
+import {MixitComposition} from './mixit/Mixit.composition';
+import {DevoxxComposition} from './devoxx/Devoxx.composition';
+import {CampingDesSpeakersComposition} from './campingDesSpeakers/CampingDesSpeakers.composition';
 import {CodeInTheDarkComposition} from './codeInTheDark/CodeInTheDark.composition';
 
 export const ShowcasesComposition: React.FC = () => {

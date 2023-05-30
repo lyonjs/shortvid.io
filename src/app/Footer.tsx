@@ -4,16 +4,13 @@ import styles from '../../styles/app/Footer.module.css';
 export const Footer = () => {
 	return (
 		<footer className={styles.footer}>
-			<div className={styles.separator}>
-				<hr />
-				<Image
-					src="/shortvidio_logo_white.svg"
-					alt="Shorvid.io logo"
-					width={20}
-					height={20}
-				/>
-				<hr />
-			</div>
+			<Image
+				className={styles.logo}
+				src="/shortvidio_logo_white.svg"
+				alt="Shorvid.io logo"
+				width={20}
+				height={20}
+			/>
 			<a
 				href="https://vercel.com?utm_source=lyonjs&utm_campaign=oss"
 				className={styles.vercelLight}

@@ -1,27 +1,27 @@
 .footer {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 50px;
+	margin-top: 40px;
 	padding-inline: 40px;
-	padding-top: 40px;
+	padding-top: 50px;
+	border-top: 1px solid transparent;
+	border-image: linear-gradient(
+			90deg,
+			transparent,
+			rgba(255, 255, 255, 0.5),
+			transparent
+		)
+		1;
 
-	.separator {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-		width: 100%;
-
-		hr {
-			height: 1px;
-			border-top: 1px solid transparent;
-			border-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5)) 1;
-			width: 100%;
-
-			&:last-child {
-				transform: rotate(180deg);
-			}
-		}
+	.logo {
+		position: absolute;
+		top: -15px;
+		background: var(--background);
+		padding-inline: 20px;
+		width: 60px;
 	}
 
 	a {

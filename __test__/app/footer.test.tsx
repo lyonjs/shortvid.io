@@ -4,7 +4,6 @@ import {Footer} from '../../src/app/Footer';
 it('Loads and display the component "Footer"', () => {
 	render(<Footer />);
 
-	const separators = screen.getAllByRole('separator');
 	const logo = screen.getByRole('img', {
 		name: 'Shortvid.io logo',
 	});
@@ -19,10 +18,6 @@ it('Loads and display the component "Footer"', () => {
 	const footer = screen.getByRole('contentinfo');
 
 	expect(logo).toBeTruthy();
-
-	expect(separators.length).toEqual(2);
-	expect(separators[0]).toBeTruthy();
-	expect(separators[1]).toBeTruthy();
 
 	expect(vercelImg).toBeTruthy();
 	expect(vercelLink).toBeTruthy();

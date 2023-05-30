@@ -64,7 +64,7 @@ export const Details: React.FC<{
 					width: '300px',
 					filter: 'drop-shadow(0 0 2px #efdb4f)',
 				}}
-				src={staticFile('underline-white.svg')}
+				src={staticFile('/images/common/underline-white.svg')}
 			/>
 			{detailsConfig.map((item, index) => {
 				const drop = spring({

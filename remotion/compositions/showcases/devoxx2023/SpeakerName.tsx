@@ -47,14 +47,14 @@ export const SpeakerName: React.FC<{
 					paddingBottom: 10,
 					filter: 'drop-shadow(0 0 3px #f88224)',
 				}}
-				src={staticFile('underline-white.svg')}
+				src={staticFile('/images/common/underline-white.svg')}
 			/>
 			<Text style={{fontSize: '1.9rem'}}>{title}</Text>
 			<Img
 				style={{
 					filter: 'drop-shadow(0 0 5px #f88224)',
 				}}
-				src={staticFile('underline-white.svg')}
+				src={staticFile('/images/common/underline-white.svg')}
 			/>
 		</span>
 	);

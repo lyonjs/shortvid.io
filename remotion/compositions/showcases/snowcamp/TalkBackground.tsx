@@ -8,7 +8,7 @@ export const TalkBackground = () => {
 
 	return (
 		<BackgroundFiller
-			imageUrl={staticFile('/images/conferences/grenoble.jpg')}
+			imageUrl={staticFile('/images/showcases/snowcamp/background.jpg')}
 			style={{
 				position: 'absolute',
 				width: '100%',

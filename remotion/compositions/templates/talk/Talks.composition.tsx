@@ -19,7 +19,9 @@ export const TalksComposition: React.FC = () => {
 				defaultProps={{
 					speakersNames: 'John Doe',
 					talkTitle: 'Is JS an awesome programing language ?',
-					speakerPicture: staticFile('/lyonjs-squared.png'),
+					speakerPicture: staticFile(
+						'/images/showcases/lyonjs/lyonjs-squared.png'
+					),
 				}}
 			/>
 			<Composition

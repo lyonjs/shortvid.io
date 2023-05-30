@@ -6,7 +6,7 @@ export const metadata = {
 	description:
 		'This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association.',
 	icons: {
-		icon: '/monogram-white.svg',
+		icon: '/branding/monogram-white.svg',
 	},
 	openGraph: {
 		type: 'website',

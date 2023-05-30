@@ -11,7 +11,7 @@ export const BigLogo: React.FC = () => {
 	});
 	return (
 		<Img
-			src={staticFile('/images/conferences/mxt-icon--logo.svg')}
+			src={staticFile('/images/showcases/mixit/mixitLogo.svg')}
 			width="80%"
 			height="auto"
 			style={{

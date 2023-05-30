@@ -17,7 +17,9 @@ export const Talk: React.FC<{
 	talkTitle,
 	speakerPicture,
 	titleSize = '80',
-	backgroundImg = staticFile('/defaultBackgroundImage.jpeg'),
+	backgroundImg = staticFile(
+		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg'
+	),
 }) => {
 	return (
 		<AbsoluteFill

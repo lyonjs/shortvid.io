@@ -19,7 +19,7 @@ export const Logo = () => {
 
 	return (
 		<Img
-			src={staticFile('/images/conferences/touraineTech.svg')}
+			src={staticFile('/images/showcases/touraineTech/touraineTechLogo.svg')}
 			width={200}
 			height="auto"
 			style={{

@@ -64,17 +64,17 @@ const VIDEO_LIST: Video[] = [
 const PARTNERS = [
 	{
 		name: 'Touraine Tech',
-		logo: '/images/conferences/touraineTech.svg',
+		logo: '/images/showcases/touraineTech/touraineTechLogo.svg',
 		site: 'https://touraine.tech/',
 	},
 	{
 		name: 'Mixit',
-		logo: '/images/conferences/mixit.svg',
+		logo: '/images/showcases/mixit/mixitLogo2023.svg',
 		site: 'https://mixitconf.org/',
 	},
 	{
 		name: 'Camping des Speakers',
-		logo: '/images/conferences/campingDesSpeakers/campingDesSpeakers.png',
+		logo: '/images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
 		site: 'https://camping-speakers.fr/',
 	},
 ];

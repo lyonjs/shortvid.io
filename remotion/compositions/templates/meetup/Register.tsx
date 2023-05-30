@@ -33,7 +33,7 @@ export const Register: React.FC<{size?: number}> = ({size = 200}) => {
 			>
 				<Title style={{fontSize: 40}}>Inscriptions sur</Title>
 				<Img
-					src={staticFile('/meetup-logo.png')}
+					src={staticFile('/images/showcases/lyonjs/meetup-logo.png')}
 					style={{
 						height: size,
 						width: 'auto',

@@ -21,7 +21,7 @@ export const Logo: React.FC = () => {
 
 	return (
 		<Img
-			src={staticFile('/images/conferences/devoxx/devoxx.png')}
+			src={staticFile('/images/showcases/devoxx/devoxxLogo.png')}
 			width={100}
 			height="auto"
 			style={{

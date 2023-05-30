@@ -14,7 +14,7 @@ export const LyonSkyline = () => {
 	});
 	return (
 		<Img
-			src={staticFile('/images/conferences/mxt-skyline.svg')}
+			src={staticFile('/images/showcases/mixit/skyline.svg')}
 			width="150%"
 			height="auto"
 			style={{

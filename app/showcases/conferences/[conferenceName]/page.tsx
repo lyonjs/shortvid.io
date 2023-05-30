@@ -4,10 +4,10 @@ import {
 	Snowcamp,
 	TouraineTechProps,
 } from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
-import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx2023/Devoxx2023';
-import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit2023/MixitIntroTalk';
-import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech2023/TouraineTech2023';
-import {VeryTechTrip} from '../../../../remotion/compositions/showcases/very-tech-trip/VeryTechTrip';
+import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
+import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit/MixitIntroTalk';
+import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech/TouraineTech2023';
+import {VeryTechTrip} from '../../../../remotion/compositions/showcases/veryTechTrip/VeryTechTrip';
 import {Player} from '@remotion/player';
 import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
@@ -15,7 +15,7 @@ import {useState} from 'react';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
 import {AlpesCraft} from '../../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
 import {Code} from '../../../../src/app/Code';
-import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/camping-des-speakers/CampingDesSpeakers';
+import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
 import _ = require('lodash');
 import {ReplayProps} from '../../../templates/replay/page';
 import {TalkBrandedProps} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';

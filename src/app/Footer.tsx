@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../../styles/app/footer.module.css';
+import styles from '../../styles/app/layout/footer.module.css';
 
 export const Footer = () => {
 	return (
@@ -7,7 +7,7 @@ export const Footer = () => {
 			<Image
 				className={styles.logo}
 				src="/branding/monogram-white.svg"
-				alt="Shorvid.io logo"
+				alt="Shortvid.io logo"
 				width={20}
 				height={20}
 			/>

@@ -6,7 +6,7 @@ export const Footer = () => {
 		<footer className={styles.footer}>
 			<Image
 				className={styles.logo}
-				src="/shortvidio_logo_white.svg"
+				src="/branding/monogram-white.svg"
 				alt="Shorvid.io logo"
 				width={20}
 				height={20}

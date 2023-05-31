@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import {Footer} from '../../src/app/Footer';
 
@@ -17,12 +18,12 @@ it('Loads and display the component "Footer"', () => {
 
 	const footer = screen.getByRole('contentinfo');
 
-	expect(logo).toBeTruthy();
+	expect(logo).toBeVisible();
 
-	expect(vercelImg).toBeTruthy();
-	expect(vercelLink).toBeTruthy();
+	expect(vercelImg).toBeVisible();
+	expect(vercelLink).toBeVisible();
 
-	expect(footer).toBeTruthy();
+	expect(footer).toBeVisible();
 	expect(footer.textContent).toEqual(
 		'© Copyright 2023 LyonJs - Made with 💛 and JS'
 	);

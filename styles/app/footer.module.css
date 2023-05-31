@@ -5,7 +5,6 @@
 	align-items: center;
 	gap: 50px;
 	margin-top: 40px;
-	padding-inline: 40px;
 	padding-top: 50px;
 	border-top: 1px solid transparent;
 	border-image: linear-gradient(
@@ -24,12 +23,9 @@
 		width: 60px;
 	}
 
-	a {
-		display: block;
-		width: max-content;
-	}
-
 	.vercelLight {
 		filter: invert(1);
+		display: block;
+		width: max-content;
 	}
 }

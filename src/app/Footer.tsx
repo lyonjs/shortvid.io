@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../../styles/app/Footer.module.css';
+import styles from '../../styles/app/footer.module.css';
 
 export const Footer = () => {
 	return (
@@ -22,9 +22,7 @@ export const Footer = () => {
 					src="https://images.ctfassets.net/e5382hct74si/78Olo8EZRdUlcDUFQvnzG7/fa4cdb6dc04c40fceac194134788a0e2/1618983297-powered-by-vercel.svg"
 				/>
 			</a>
-			<span className="block">
-				© Copyright 2023 LyonJs - Made with 💛 and JS
-			</span>
+			<span>© Copyright 2023 LyonJs - Made with 💛 and JS</span>
 		</footer>
 	);
 };

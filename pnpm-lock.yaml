@@ -85,7 +85,7 @@ devDependencies:
     specifier: ^2.5.3
     version: 2.5.3
   '@types/testing-library__jest-dom':
-    specifier: ^5.14.6
+    specifier: 5.14.6
     version: 5.14.6
   '@types/web':
     specifier: 0.0.99

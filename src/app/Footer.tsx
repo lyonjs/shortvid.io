@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import styles from '../../styles/app/layout/footer.module.css';
 import {staticFile} from 'remotion';

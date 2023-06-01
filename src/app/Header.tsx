@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import {SwitchThemeButton} from './SwitchThemeButton';
 
 export const Header: React.FC = () => {
 	return (
@@ -18,6 +19,7 @@ export const Header: React.FC = () => {
 			>
 				👨🏼‍💻 Repository
 			</a>
+			<SwitchThemeButton />
 		</header>
 	);
 };

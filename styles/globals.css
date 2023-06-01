@@ -15,14 +15,30 @@
 	--purple-800: #10002b;
 	--purple-900: #0e001c;
 
-	--primary: var(--purple-200);
-	--link: var(--purple-100);
-	--background: var(--purple-900);
+	--white: white;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary: var(--purple-200);
+		--link: var(--purple-100);
+		--background: var(--purple-900);
+		--text: var(--white);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--primary: var(--purple-300);
+		--link: var(--purple-400);
+		--background: var(--white);
+		--text: var(--purple-900);
+	}
 }
 
 body {
 	background-color: var(--background);
-	color: white;
+	color: var(--text);
 }
 
 main {

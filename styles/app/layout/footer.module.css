@@ -25,7 +25,6 @@
 	}
 
 	.vercelLight {
-		filter: invert(1);
 		display: block;
 		width: max-content;
 	}

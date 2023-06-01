@@ -24,7 +24,7 @@ export const Footer = () => {
 					src={staticFile('/branding/powered-by-vercel-white.svg')}
 				/>
 			</a>
-			<span>© Copyright 2023 LyonJs - Made with 💛 and JS</span>
+			<span>© Copyright 2023 LyonJs - Made with 💜 and JS</span>
 		</footer>
 	);
 };

@@ -26,7 +26,7 @@ describe('Loads and display the component "Footer"', () => {
 
 		expect(footer).toBeVisible();
 		expect(footer.textContent).toEqual(
-			'© Copyright 2023 LyonJs - Made with 💛 and JS'
+			'© Copyright 2023 LyonJs - Made with 💜 and JS'
 		);
 	});
 });

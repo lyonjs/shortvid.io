@@ -2,8 +2,8 @@ import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import {Footer} from '../../src/app/Footer';
 
-describe('Loads and display the component "Footer"', () => {
-	it('render the component', () => {
+describe('<Footer />', () => {
+	it('should render the component', () => {
 		render(<Footer />);
 
 		const logo = screen.getByRole('img', {

@@ -14,18 +14,18 @@ type ThemeProviderProps = {
 	children: React.ReactNode;
 };
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({children}) => {
-	const [themeName, setThemeName] = useState<string>('dark');
+	const defaultTheme = () => {
+		const storedTheme = sessionStorage.getItem('selectedTheme');
+		const lightOS = window.matchMedia('(prefers-color-scheme: light)').matches;
+		const systemTheme = lightOS ? 'light' : 'dark';
+		return storedTheme || systemTheme;
+	};
+
+	const [themeName, setThemeName] = useState<string>(defaultTheme);
 
 	useEffect(() => {
-		const lightOS = window.matchMedia('(prefers-color-scheme: light)').matches;
-		const storedTheme = sessionStorage.getItem('selectedTheme');
-		const systemTheme = lightOS ? 'light' : 'dark';
-
-		const actualTheme = storedTheme ? storedTheme : systemTheme;
-
-		setTheme(actualTheme);
-		actualTheme === 'dark' ? applyTheme(darkTheme) : applyTheme(lightTheme);
-	}, []);
+		themeName === 'dark' ? applyTheme(darkTheme) : applyTheme(lightTheme);
+	}, [themeName]);
 
 	const setTheme = (name: string) => {
 		setThemeName(name);

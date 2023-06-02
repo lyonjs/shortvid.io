@@ -28,6 +28,7 @@ export const InputDate: React.FC<{
 					padding: '10px',
 					borderRadius: '5px',
 					border: 'none',
+					background: '#eaeaea',
 				}}
 				onChange={setValue}
 			/>

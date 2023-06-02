@@ -22,16 +22,20 @@
 	--text: white;
 
 	--button-border: white;
+	--button-text: var(--purple-900);
+	--button-background: white;
 }
 
 [data-theme='light'] {
 	--primary: var(--purple-300);
 	--link: var(--purple-400);
 	--background: white;
-	--separator: rgba(157, 78, 221, 0.5);
+	--separator: rgba(90, 24, 154, 0.5);
 	--text: var(--purple-900);
 
 	--button-border: #e0e0e0;
+	--button-text: white;
+	--button-background: var(--purple-700);
 }
 
 body {

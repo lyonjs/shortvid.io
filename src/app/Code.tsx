@@ -40,7 +40,7 @@ export const Code: React.FC<{
 
 			<div className="relative">
 				<code
-					className=" cursor-pointer rounded-lg block py-3 px-5 break-all text-lg bg-stone-900 hover:bg-stone-700"
+					className="text-white cursor-pointer rounded-lg block py-3 px-5 break-all text-lg bg-stone-900 hover:bg-stone-700"
 					onClick={onClickHandler}
 				>
 					pnpm remotion render remotion/index.tsx {composition} out/

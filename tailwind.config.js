@@ -30,8 +30,8 @@ module.exports = {
 			},
 			colors: {
 				primary: 'var(--primary)',
-				link: 'var(--link)',
-				background: 'var(--background)',
+				'btn-text': 'var(--button-text)',
+				'btn-background': 'var(--button-background)',
 			},
 		},
 	},

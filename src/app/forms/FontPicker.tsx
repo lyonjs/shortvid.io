@@ -30,6 +30,7 @@ export const FontPicker: React.FC<{
 						padding: '10px',
 						borderRadius: '5px',
 						border: 'none',
+						background: '#eaeaea',
 					}}
 					value={selectedFont}
 					onChange={handleChange}

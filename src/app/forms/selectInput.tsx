@@ -32,6 +32,7 @@ export const SelectInput = ({
 					padding: '10px',
 					borderRadius: '5px',
 					border: 'none',
+					background: '#eaeaea',
 				}}
 				onChange={setValue}
 			>

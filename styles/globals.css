@@ -15,25 +15,23 @@
 	--purple-800: #10002b;
 	--purple-900: #0e001c;
 
-	--white: white;
+	--primary: var(--purple-200);
+	--link: var(--purple-100);
+	--background: var(--purple-900);
+	--separator: rgba(255, 255, 255, 0.5);
+	--text: white;
+
+	--button-border: white;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--primary: var(--purple-200);
-		--link: var(--purple-100);
-		--background: var(--purple-900);
-		--text: var(--white);
-	}
-}
+[data-theme='light'] {
+	--primary: var(--purple-300);
+	--link: var(--purple-400);
+	--background: white;
+	--separator: rgba(157, 78, 221, 0.5);
+	--text: var(--purple-900);
 
-@media (prefers-color-scheme: light) {
-	:root {
-		--primary: var(--purple-300);
-		--link: var(--purple-400);
-		--background: var(--white);
-		--text: var(--purple-900);
-	}
+	--button-border: #e0e0e0;
 }
 
 body {

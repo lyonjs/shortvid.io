@@ -2,17 +2,12 @@
 import Image from 'next/image';
 import styles from '../../styles/app/layout/footer.module.css';
 import {staticFile} from 'remotion';
+import {Logo} from './logo';
 
 export const Footer = () => {
 	return (
 		<footer className={styles.footer}>
-			<Image
-				className={styles.logo}
-				src="/branding/monogram-white.svg"
-				alt="Shortvid.io logo"
-				width={20}
-				height={20}
-			/>
+			<Logo size={20} className={styles.logo} />
 			<a
 				href="https://vercel.com?utm_source=lyonjs&utm_campaign=oss"
 				className={styles.vercelLight}

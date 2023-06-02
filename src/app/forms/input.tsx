@@ -43,6 +43,7 @@ export const Input = ({
 					padding: '10px',
 					borderRadius: '5px',
 					border: 'none',
+					background: '#eaeaea',
 				}}
 				placeholder={placeholder}
 				onChange={setValue}

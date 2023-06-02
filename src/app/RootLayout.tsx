@@ -7,7 +7,7 @@ import {Header} from './Header';
 import {NavBar} from './NavBar';
 import {FontProvider} from '../context/FontContext';
 import {Footer} from './Footer';
-import {ThemeProvider} from '../context/ThemeContext';
+import {ThemeProvider} from 'next-themes';
 
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (

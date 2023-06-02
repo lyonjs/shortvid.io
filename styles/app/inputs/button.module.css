@@ -1,7 +1,7 @@
 .switchThemeButton {
-    margin-left: 20px;
-    padding: 0.5rem 1rem;
-    background: var(--background);
-    border: 2px solid var(--button-border);
-    border-radius: 0.375rem;
+	margin-left: 20px;
+	padding: 0.5rem 1rem;
+	background: var(--background);
+	border: 2px solid var(--button-border);
+	border-radius: 0.375rem;
 }

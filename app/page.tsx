@@ -132,7 +132,7 @@ export default function Home() {
 				Conference and partner events
 			</h2>
 
-			<section className="flex gap-3 items-stretch items-center">
+			<section className="flex gap-3 items-stretch">
 				{PARTNERS.map((partner) => (
 					<a
 						key={partner.name}
@@ -165,12 +165,11 @@ export default function Home() {
 							</header>
 							<Player
 								autoPlay
-								controls
 								loop
 								className="shrink-0 shadow-lg"
 								style={{
 									width: '100%',
-									height: '350px',
+									height: '450px',
 								}}
 								durationInFrames={270}
 								compositionWidth={1200}

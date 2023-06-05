@@ -10,9 +10,7 @@ describe('<Footer />', () => {
 		(useThemeName as jest.MockedFunction<any>).mockReturnValue('dark');
 		render(<Footer />);
 
-		const logo = screen.getByRole('img', {
-			name: 'Shortvid.io Logo',
-		});
+		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
 
 		const vercelImg = screen.getByRole('img', {
 			name: 'Vercel',
@@ -22,6 +20,7 @@ describe('<Footer />', () => {
 		});
 
 		const footer = screen.getByRole('contentinfo');
+		const copyright = screen.getByRole('copyright');
 
 		expect(logo).toBeVisible();
 
@@ -29,7 +28,9 @@ describe('<Footer />', () => {
 		expect(vercelLink).toBeVisible();
 
 		expect(footer).toBeVisible();
-		expect(footer.textContent).toEqual(
+
+		expect(copyright).toBeVisible();
+		expect(copyright.textContent).toEqual(
 			'© Copyright 2023 LyonJs - Made with 💜 and JS'
 		);
 	});

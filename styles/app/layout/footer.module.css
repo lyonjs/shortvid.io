@@ -16,9 +16,9 @@
 		)
 		1;
 
-	.logo {
+	.footerLogo {
 		position: absolute;
-		top: -15px;
+		top: -20px;
 		background: var(--background);
 		padding-inline: 20px;
 		width: 60px;

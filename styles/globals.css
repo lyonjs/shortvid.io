@@ -24,6 +24,7 @@
 	--button-border: white;
 	--button-text: var(--purple-900);
 	--button-background: white;
+	--logo: white;
 }
 
 [data-theme='light'] {
@@ -36,6 +37,7 @@
 	--button-border: #e0e0e0;
 	--button-text: white;
 	--button-background: var(--purple-700);
+	--logo: var(--purple-500);
 }
 
 body {

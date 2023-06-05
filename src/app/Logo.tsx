@@ -1,6 +1,6 @@
 import styles from '../../styles/app/layout/logo.module.css';
 
-export const Logo: React.FC<{className: string}> = ({className}) => {
+export const Logo: React.FC<{className?: string}> = ({className}) => {
 	return (
 		<svg
 			width="131"

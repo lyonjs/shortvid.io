@@ -2,16 +2,20 @@
 
 import {useTheme} from 'next-themes';
 import {Icon} from '@iconify/react';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import styles from '../../styles/app/inputs/button.module.css';
 
 type selectedThemeTypes = 'dark' | 'light' | 'system';
 
 export const SwitchThemeButton = () => {
 	const {setTheme, systemTheme} = useTheme();
-	const [selectedTheme, setSelectedTheme] = useState<string>(
-		localStorage.getItem('theme') || 'system'
-	);
+	const [selectedTheme, setSelectedTheme] = useState<string>('system');
+
+	useEffect(() => {
+		const localTheme = localStorage.getItem('theme');
+		localTheme && setSelectedTheme(localTheme);
+	}, []);
+
 	const handleSelectTheme = (
 		newTheme: string,
 		clickedButton: selectedThemeTypes

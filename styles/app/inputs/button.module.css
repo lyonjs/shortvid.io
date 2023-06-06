@@ -4,13 +4,13 @@
 	padding: 0.25rem;
 	margin-left: 20px;
 	background: var(--background);
-	border: 2px solid var(--button-border);
-	border-radius: 0.375rem;
+	border: 1px solid var(--switch-border);
+	border-radius: 50px;
 
 	button {
 		padding: 0.4rem;
 		color: var(--switch-unselected);
-		border-radius: 0.375rem;
+		border-radius: 50px;
 
 		&[aria-checked='true'] {
 			background: var(--switch-background);

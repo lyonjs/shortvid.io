@@ -5,6 +5,7 @@ import {staticFile} from 'remotion';
 import React from 'react';
 import {useThemeName} from './hooks/useThemeName';
 import {Logo} from './Logo';
+import {SwitchThemeButton} from './SwitchThemeButton';
 
 export const Footer = () => {
 	const theme = useThemeName();
@@ -23,7 +24,12 @@ export const Footer = () => {
 					src={staticFile(`/images/app/powered-by-vercel-${theme}.svg`)}
 				/>
 			</a>
-			<span>© Copyright 2023 LyonJs - Made with 💜 and JS</span>
+			<div className={styles.bottomFooter}>
+				<span role="copyright">
+					© Copyright 2023 LyonJs - Made with 💜 and JS
+				</span>
+				<SwitchThemeButton />
+			</div>
 		</footer>
 	);
 };

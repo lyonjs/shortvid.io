@@ -65,5 +65,5 @@ export const SwitchThemeButton = () => {
 };
 
 const SwitchIcon: React.FC<{iconifyId: string}> = ({iconifyId}) => {
-	return <Icon icon={iconifyId} width={20} height={20} />;
+	return <Icon icon={iconifyId} width={15} height={15} />;
 };

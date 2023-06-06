@@ -24,6 +24,8 @@ describe('<Footer />', () => {
 			'© Copyright 2023 LyonJs - Made with 💜 and JS'
 		);
 
+		const themeButtonsGroup = screen.getByRole('radiogroup');
+
 		expect(logo).toBeVisible();
 
 		expect(vercelImg).toBeVisible();
@@ -32,5 +34,7 @@ describe('<Footer />', () => {
 		expect(footer).toBeVisible();
 
 		expect(copyright).toBeVisible();
+
+		expect(themeButtonsGroup).toBeVisible();
 	});
 });

@@ -27,6 +27,12 @@
 	--color-logo: white;
 
 	--color-input-background: #eaeaea;
+
+	--switch-background: rgba(157, 78, 221, 0.5);
+	--switch-unselected: rgba(255, 255, 255, 0.5);
+	--switch-border: rgba(255, 255, 255, 0.4);
+
+	--logo: white;
 }
 
 [data-theme='light'] {
@@ -40,6 +46,12 @@
 	--color-btn-text: white;
 	--color-btn-background: var(--purple-700);
 	--color-logo: var(--purple-500);
+
+	--switch-background: #eaeaea;
+	--switch-unselected: #888;
+	--switch-border: #e0e0e0;
+
+	--logo: var(--purple-500);
 }
 
 body {

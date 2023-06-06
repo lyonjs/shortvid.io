@@ -22,6 +22,9 @@ export const SwitchThemeButton = () => {
 	) => {
 		setTheme(newTheme);
 		setSelectedTheme(clickedButton);
+		if (clickedButton === 'system') {
+			localStorage.setItem('theme', 'system');
+		}
 	};
 
 	return (

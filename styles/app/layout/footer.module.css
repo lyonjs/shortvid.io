@@ -35,5 +35,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 1rem;
+	}
+}
+
+
+@media screen and (max-width: 530px) {
+	.bottomFooter {
+		flex-direction: column;
 	}
 }

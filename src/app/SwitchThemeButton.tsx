@@ -7,6 +7,30 @@ import styles from '../../styles/app/inputs/button.module.css';
 
 type selectedThemeTypes = 'dark' | 'light' | 'system';
 
+const ThemeRadioButton: React.FC<{
+	themeLabel: selectedThemeTypes;
+	themeValue: 'dark' | 'light' | undefined;
+	handleSelectTheme: (
+		newTheme: string,
+		clickedButton: selectedThemeTypes
+	) => void;
+	isChecked: boolean;
+	iconifyId: string;
+}> = ({themeLabel, themeValue, handleSelectTheme, isChecked, iconifyId}) => {
+	return (
+		<button
+			aria-checked={isChecked}
+			aria-label={themeLabel}
+			role="radio"
+			type="button"
+			value={themeValue}
+			onClick={(e) => handleSelectTheme(e.currentTarget.value, themeLabel)}
+		>
+			<Icon icon={iconifyId} width={15} height={15} />
+		</button>
+	);
+};
+
 export const SwitchThemeButton = () => {
 	const {setTheme, systemTheme} = useTheme();
 	const [selectedTheme, setSelectedTheme] = useState<string>('system');
@@ -29,41 +53,27 @@ export const SwitchThemeButton = () => {
 
 	return (
 		<div className={styles.switchThemeGroup} role="radiogroup">
-			<button
-				aria-checked={selectedTheme === 'dark'}
-				aria-label="Dark"
-				className=""
-				role="radio"
-				type="button"
-				value="dark"
-				onClick={(e) => handleSelectTheme(e.currentTarget.value, 'dark')}
-			>
-				<SwitchIcon iconifyId="ph:moon" />
-			</button>
-			<button
-				aria-checked={selectedTheme === 'light'}
-				aria-label="Light"
-				role="radio"
-				type="button"
-				value="light"
-				onClick={(e) => handleSelectTheme(e.currentTarget.value, 'light')}
-			>
-				<SwitchIcon iconifyId="ph:sun" />
-			</button>
-			<button
-				aria-checked={selectedTheme === 'system'}
-				aria-label="System"
-				role="radio"
-				type="button"
-				value={systemTheme}
-				onClick={(e) => handleSelectTheme(e.currentTarget.value, 'system')}
-			>
-				<SwitchIcon iconifyId="gg:screen" />
-			</button>
+			<ThemeRadioButton
+				isChecked={selectedTheme === 'dark'}
+				handleSelectTheme={handleSelectTheme}
+				themeLabel="dark"
+				themeValue="dark"
+				iconifyId="ph:moon"
+			/>
+			<ThemeRadioButton
+				isChecked={selectedTheme === 'light'}
+				handleSelectTheme={handleSelectTheme}
+				themeLabel="light"
+				themeValue="light"
+				iconifyId="ph:sun"
+			/>
+			<ThemeRadioButton
+				isChecked={selectedTheme === 'system'}
+				handleSelectTheme={handleSelectTheme}
+				themeLabel="system"
+				themeValue={systemTheme}
+				iconifyId="gg:screen"
+			/>
 		</div>
 	);
-};
-
-const SwitchIcon: React.FC<{iconifyId: string}> = ({iconifyId}) => {
-	return <Icon icon={iconifyId} width={15} height={15} />;
 };

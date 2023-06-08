@@ -1,4 +1,3 @@
-'use client';
 import '../../styles/globals.css';
 import {Analytics} from '@vercel/analytics/react';
 
@@ -7,11 +6,11 @@ import {Header} from './Header';
 import {NavBar} from './NavBar';
 import {FontProvider} from '../context/FontContext';
 import {Footer} from './Footer';
-import {ThemeProvider} from 'next-themes';
+import {CustomThemeProvider} from '../context/CustomThemeProvider';
 
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (
-		<ThemeProvider>
+		<CustomThemeProvider>
 			<main className="mx-auto p-4">
 				<article className="mb-3">
 					<Header />
@@ -42,6 +41,6 @@ export default function RootLayout({children}: {children: ReactNode}) {
 				<Footer />
 				<Analytics />
 			</main>
-		</ThemeProvider>
+		</CustomThemeProvider>
 	);
 }

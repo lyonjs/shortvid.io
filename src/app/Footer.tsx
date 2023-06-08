@@ -6,6 +6,10 @@ import React from 'react';
 import {useThemeName} from './hooks/useThemeName';
 import {Logo} from './Logo';
 
+const PoweredByVercelImg = ({src}: {src: string}) => {
+	return <Image alt="Vercel" width="200" height="100" src={staticFile(src)} />;
+};
+
 export const Footer = () => {
 	const theme = useThemeName();
 	return (
@@ -16,20 +20,10 @@ export const Footer = () => {
 				className={styles.vercelLight}
 			>
 				{theme === 'light' && (
-					<Image
-						alt="Vercel"
-						width="200"
-						height="100"
-						src={staticFile('/branding/powered-by-vercel-black.svg')}
-					/>
+					<PoweredByVercelImg src="/images/app/powered-by-vercel-black.svg" />
 				)}
 				{theme === 'dark' && (
-					<Image
-						alt="Vercel"
-						width="200"
-						height="100"
-						src={staticFile('/branding/powered-by-vercel-white.svg')}
-					/>
+					<PoweredByVercelImg src="/images/app/powered-by-vercel-white.svg" />
 				)}
 			</a>
 			<span role="copyright">

@@ -6,11 +6,7 @@ export const useThemeName = () => {
 	const [actualTheme, setActualTheme] = useState<string>();
 
 	useEffect(() => {
-		if (theme === 'system') {
-			setActualTheme(systemTheme);
-		} else {
-			setActualTheme(theme);
-		}
+		theme === 'system' ? setActualTheme(systemTheme) : setActualTheme(theme);
 	}, [theme, systemTheme]);
 
 	return actualTheme;

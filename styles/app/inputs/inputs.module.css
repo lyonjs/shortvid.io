@@ -1,16 +1,15 @@
-
 .label {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    font-weight: bold;
-    gap: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-weight: bold;
+	gap: 10px;
 }
 
 .input {
-    background: var(--color-input-background);
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
+	background: var(--color-input-background);
+	color: black;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
 }

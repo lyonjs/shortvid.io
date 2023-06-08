@@ -6,12 +6,14 @@ export const SwitchThemeButton = () => {
 	const {setTheme} = useTheme();
 	const theme = useThemeName();
 
+	const checkTheme = theme === 'dark' ? 'light' : 'dark';
+
 	return (
 		<button
 			className={styles.switchThemeButton}
-			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+			onClick={() => setTheme(checkTheme)}
 		>
-			Switch to {theme === 'dark' ? 'light' : 'dark'} mode
+			Switch to {checkTheme} mode
 		</button>
 	);
 };

@@ -1,4 +1,5 @@
 import React, {ChangeEventHandler} from 'react';
+import styles from '../../../styles/app/inputs/inputs.module.css';
 
 export interface SelectInputProps {
 	value?: string;
@@ -14,26 +15,12 @@ export const SelectInput = ({
 	options,
 }: SelectInputProps) => {
 	return (
-		<label
-			style={{
-				display: 'flex',
-				flexDirection: 'column',
-				width: '100%',
-				fontWeight: 'bold',
-				gap: '10px',
-			}}
-		>
+		<label className={styles.label}>
 			{label}
 			<select
-				className="text-black"
+				className={styles.input}
 				name={label}
 				value={value}
-				style={{
-					padding: '10px',
-					borderRadius: '5px',
-					border: 'none',
-					background: '#eaeaea',
-				}}
 				onChange={setValue}
 			>
 				{options?.map((option) => (

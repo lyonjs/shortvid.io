@@ -25,7 +25,6 @@ export const ColorInput = ({
 		>
 			{label}
 			<input
-				className="text-black"
 				type="color"
 				name={label}
 				value={value}

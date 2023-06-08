@@ -15,7 +15,9 @@ export const ActiveLink: FC<ActiveLinkProps> = ({children, href}) => {
 
 	const isActive = pathname === href;
 
-	const backgroundClassName = isActive ? 'bg-primary' : 'bg-btn-background';
+	const backgroundClassName = isActive
+		? 'bg-primary'
+		: 'bg-color-btn-background';
 
 	return (
 		<a href={href as string}>

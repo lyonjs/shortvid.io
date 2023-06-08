@@ -11,7 +11,7 @@
 	border-image: linear-gradient(
 			90deg,
 			transparent,
-			var(--separator),
+			var(--color-separator),
 			transparent
 		)
 		1;
@@ -19,7 +19,7 @@
 	.footerLogo {
 		position: absolute;
 		top: -20px;
-		background: var(--background);
+		background: var(--color-background);
 		padding-inline: 20px;
 		width: 60px;
 	}

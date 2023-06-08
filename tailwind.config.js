@@ -29,9 +29,9 @@ module.exports = {
 				},
 			},
 			colors: {
-				primary: 'var(--primary)',
-				'btn-text': 'var(--button-text)',
-				'btn-background': 'var(--button-background)',
+				primary: 'var(--color-primary)',
+				'color-btn-text': 'var(--color-btn-text)',
+				'color-btn-background': 'var(--color-btn-background)',
 			},
 		},
 	},

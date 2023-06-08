@@ -1,4 +1,5 @@
 import React, {FormEvent, ReactNode} from 'react';
+import styles from '../../../styles/app/inputs/inputs.module.css';
 
 export const Form: React.FC<{children: ReactNode}> = ({children}) => {
 	return (
@@ -24,27 +25,13 @@ export const Input = ({
 	type = 'text',
 }: InputProps) => {
 	return (
-		<label
-			style={{
-				display: 'flex',
-				flexDirection: 'column',
-				width: '100%',
-				fontWeight: 'bold',
-				gap: '10px',
-			}}
-		>
+		<label className={styles.label}>
 			{label}
 			<input
-				className="text-black"
+				className={styles.input}
 				type={type}
 				name={label}
 				value={value}
-				style={{
-					padding: '10px',
-					borderRadius: '5px',
-					border: 'none',
-					background: '#eaeaea',
-				}}
 				placeholder={placeholder}
 				onChange={setValue}
 			/>

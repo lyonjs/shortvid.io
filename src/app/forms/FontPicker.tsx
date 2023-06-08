@@ -1,6 +1,7 @@
 import {ChangeEventHandler} from 'react';
 import {top250} from '../../data/fonts';
 import {useSelectedFont} from '../hooks/useSelectedFont';
+import styles from '../../../styles/app/inputs/inputs.module.css';
 
 export const FontPicker: React.FC<{
 	label: string;
@@ -13,25 +14,11 @@ export const FontPicker: React.FC<{
 
 	return (
 		<>
-			<label
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					width: '100%',
-					fontWeight: 'bold',
-					gap: '10px',
-				}}
-			>
+			<label className={styles.label}>
 				{label}
 				<select
-					className="text-black"
+					className={styles.input}
 					name="fontFamilly"
-					style={{
-						padding: '10px',
-						borderRadius: '5px',
-						border: 'none',
-						background: '#eaeaea',
-					}}
 					value={selectedFont}
 					onChange={handleChange}
 				>

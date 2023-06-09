@@ -9,28 +9,32 @@
 	--purple-200: #c77dff;
 	--purple-300: #9d4edd;
 	--purple-400: #7b2cbf;
+	--purple-450: rgba(157, 78, 221, 0.5);
 	--purple-500: #5a189a;
 	--purple-600: #3c096c;
 	--purple-700: #240046;
 	--purple-800: #10002b;
 	--purple-900: #0e001c;
+	/* Grey variables */
+	--grey-50: #eaeaea;
+	--grey-100: #BAB6BE;
+	--grey-500: #565656;
+
 
 	--color-primary: var(--purple-200);
 	--color-link: var(--purple-100);
 	--color-background: var(--purple-900);
-	--color-separator: rgba(255, 255, 255, 0.5);
+	--color-separator: var(--grey-100);
 	--color-text: white;
 
-	--color-btn-border: white;
-	--color-btn-text: var(--purple-900);
-	--color-btn-background: white;
-	--color-logo: white;
+	--color-button-text: var(--purple-900);
+	--color-button-background: white;
 
 	--color-input-background: #eaeaea;
 
-	--switch-background: rgba(157, 78, 221, 0.5);
-	--switch-unselected: rgba(255, 255, 255, 0.5);
-	--switch-border: rgba(255, 255, 255, 0.4);
+	--switch-background: var(--purple-450);
+	--switch-unselected: var(--grey-100);
+	--switch-border: var(--grey-100);
 
 	--logo: white;
 }
@@ -39,17 +43,15 @@
 	--color-primary: var(--purple-300);
 	--color-link: var(--purple-400);
 	--color-background: white;
-	--color-separator: rgba(90, 24, 154, 0.5);
+	--color-separator: var(--purple-450);
 	--color-text: var(--purple-900);
 
-	--color-btn-border: #e0e0e0;
-	--color-btn-text: white;
-	--color-btn-background: var(--purple-700);
-	--color-logo: var(--purple-500);
+	--color-button-text: white;
+	--color-button-background: var(--purple-700);
 
-	--switch-background: #eaeaea;
-	--switch-unselected: #888;
-	--switch-border: #e0e0e0;
+	--switch-background: var(--grey-50);
+	--switch-unselected: var(--grey-500);
+	--switch-border: var(--grey-100);
 
 	--logo: var(--purple-500);
 }

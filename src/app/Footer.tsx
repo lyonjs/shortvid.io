@@ -24,7 +24,7 @@ export const Footer = () => {
 					src={staticFile(`/images/app/powered-by-vercel-${theme}.svg`)}
 				/>
 			</a>
-			<div className={styles.bottomFooter}>
+			<div className={styles.bottomBar}>
 				<span role="copyright">
 					© Copyright 2023 LyonJs - Made with 💜 and JS
 				</span>

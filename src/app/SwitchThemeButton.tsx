@@ -7,19 +7,27 @@ import styles from '../../styles/app/inputs/button.module.css';
 
 type selectedThemeTypes = 'dark' | 'light' | 'system';
 
-const ThemeRadioButton: React.FC<{
+type themeRadioButtonTypes = {
 	themeLabel: selectedThemeTypes;
 	themeValue: 'dark' | 'light' | undefined;
 	handleSelectTheme: (
 		newTheme: string,
 		clickedButton: selectedThemeTypes
 	) => void;
-	isChecked: boolean;
+	selectedTheme: string;
 	iconifyId: string;
-}> = ({themeLabel, themeValue, handleSelectTheme, isChecked, iconifyId}) => {
+};
+
+const ThemeRadioButton: React.FC<themeRadioButtonTypes> = ({
+	themeLabel,
+	themeValue,
+	handleSelectTheme,
+	selectedTheme,
+	iconifyId,
+}) => {
 	return (
 		<button
-			aria-checked={isChecked}
+			aria-checked={selectedTheme === themeLabel}
 			aria-label={themeLabel}
 			role="radio"
 			type="button"
@@ -54,25 +62,25 @@ export const SwitchThemeButton = () => {
 	return (
 		<div className={styles.switchThemeGroup} role="radiogroup">
 			<ThemeRadioButton
-				isChecked={selectedTheme === 'dark'}
+				selectedTheme={selectedTheme}
 				handleSelectTheme={handleSelectTheme}
 				themeLabel="dark"
 				themeValue="dark"
 				iconifyId="ph:moon"
 			/>
 			<ThemeRadioButton
-				isChecked={selectedTheme === 'light'}
-				handleSelectTheme={handleSelectTheme}
-				themeLabel="light"
-				themeValue="light"
-				iconifyId="ph:sun"
-			/>
-			<ThemeRadioButton
-				isChecked={selectedTheme === 'system'}
+				selectedTheme={selectedTheme}
 				handleSelectTheme={handleSelectTheme}
 				themeLabel="system"
 				themeValue={systemTheme}
 				iconifyId="gg:screen"
+			/>
+			<ThemeRadioButton
+				selectedTheme={selectedTheme}
+				handleSelectTheme={handleSelectTheme}
+				themeLabel="light"
+				themeValue="light"
+				iconifyId="ph:sun"
 			/>
 		</div>
 	);

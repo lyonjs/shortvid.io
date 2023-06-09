@@ -1,45 +1,13 @@
 'use client';
 
 import {useTheme} from 'next-themes';
-import {Icon} from '@iconify/react';
 import {useEffect, useState} from 'react';
-import styles from '../../styles/app/inputs/button.module.css';
+import {ThemeRadioButton} from './ThemeRadioButton';
+import styles from '../../styles/app/inputs/themeRadioGroup.module.css';
 
-type selectedThemeTypes = 'dark' | 'light' | 'system';
+export type selectedThemeTypes = 'dark' | 'light' | 'system';
 
-type themeRadioButtonTypes = {
-	themeLabel: selectedThemeTypes;
-	themeValue: 'dark' | 'light' | undefined;
-	handleSelectTheme: (
-		newTheme: string,
-		clickedButton: selectedThemeTypes
-	) => void;
-	selectedTheme: string;
-	iconifyId: string;
-};
-
-const ThemeRadioButton: React.FC<themeRadioButtonTypes> = ({
-	themeLabel,
-	themeValue,
-	handleSelectTheme,
-	selectedTheme,
-	iconifyId,
-}) => {
-	return (
-		<button
-			aria-checked={selectedTheme === themeLabel}
-			aria-label={themeLabel}
-			role="radio"
-			type="button"
-			value={themeValue}
-			onClick={(e) => handleSelectTheme(e.currentTarget.value, themeLabel)}
-		>
-			<Icon icon={iconifyId} width={15} height={15} />
-		</button>
-	);
-};
-
-export const SwitchThemeButton = () => {
+export const SwitchThemeButtons = () => {
 	const {setTheme, systemTheme} = useTheme();
 	const [selectedTheme, setSelectedTheme] = useState<string>('system');
 

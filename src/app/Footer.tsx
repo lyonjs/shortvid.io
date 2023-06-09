@@ -5,7 +5,7 @@ import {staticFile} from 'remotion';
 import React from 'react';
 import {useThemeName} from './hooks/useThemeName';
 import {Logo} from './Logo';
-import {SwitchThemeButton} from './SwitchThemeButton';
+import {SwitchThemeButtons} from './SwitchThemeButtons';
 
 export const Footer = () => {
 	const theme = useThemeName();
@@ -28,7 +28,7 @@ export const Footer = () => {
 				<span role="copyright">
 					© Copyright 2023 LyonJs - Made with 💜 and JS
 				</span>
-				<SwitchThemeButton />
+				<SwitchThemeButtons />
 			</div>
 		</footer>
 	);

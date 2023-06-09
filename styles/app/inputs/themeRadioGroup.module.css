@@ -7,18 +7,22 @@
 	border: 1px solid var(--switch-border);
 	border-radius: 50px;
 
-	button {
+	label {
 		padding: 0.4rem;
 		color: var(--switch-unselected);
 		border-radius: 50px;
 
-		&[aria-checked='true'] {
-			background: var(--switch-background);
-			color: var(--text);
+		input {
+			display: none;
 		}
 
 		&:hover {
 			color: var(--text);
 		}
+	}
+
+	.checked {
+		background: var(--switch-background);
+		color: var(--text);
 	}
 }

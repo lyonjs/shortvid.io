@@ -1,5 +1,5 @@
 import React, {ChangeEventHandler} from 'react';
-import styles from '../../../styles/app/inputs/inputs.module.css';
+import styles from '../../../styles/app/common/inputs.module.css';
 
 export interface SelectInputProps {
 	value?: string;

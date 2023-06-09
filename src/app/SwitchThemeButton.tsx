@@ -1,6 +1,8 @@
+'use client';
+
 import {useTheme} from 'next-themes';
 import {useThemeName} from './hooks/useThemeName';
-import styles from '../../styles/app/inputs/button.module.css';
+import styles from '../../styles/app/common/button.module.css';
 
 export const SwitchThemeButton = () => {
 	const {setTheme} = useTheme();

@@ -1,6 +1,6 @@
 import {FormEvent} from 'react';
 import {format} from 'date-fns';
-import styles from '../../../styles/app/inputs/inputs.module.css';
+import styles from '../../../styles/app/common/inputs.module.css';
 
 export const InputDate: React.FC<{
 	value?: Date;

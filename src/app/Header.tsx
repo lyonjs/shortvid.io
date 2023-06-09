@@ -1,5 +1,3 @@
-'use client';
-
 import {SwitchThemeButton} from './SwitchThemeButton';
 import {Logo} from './Logo';
 

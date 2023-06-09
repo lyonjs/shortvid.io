@@ -5,7 +5,7 @@ import {useEffect, useState} from 'react';
 import {ThemeRadioButton} from './ThemeRadioButton';
 import styles from '../../styles/app/inputs/themeRadioGroup.module.css';
 
-export type selectedThemeTypes = 'dark' | 'light' | 'system';
+export type SelectedThemeTypes = 'dark' | 'light' | 'system';
 
 export const SwitchThemeButtons = () => {
 	const {setTheme, systemTheme} = useTheme();
@@ -18,7 +18,7 @@ export const SwitchThemeButtons = () => {
 
 	const handleSelectTheme = (
 		newTheme: string,
-		clickedButton: selectedThemeTypes
+		clickedButton: SelectedThemeTypes
 	) => {
 		setTheme(newTheme);
 		setSelectedTheme(clickedButton);

@@ -1,19 +1,19 @@
 import {Icon} from '@iconify/react';
-import {selectedThemeTypes} from './SwitchThemeButtons';
+import {SelectedThemeTypes} from './SwitchThemeButtons';
 import styles from '../../styles/app/inputs/themeRadioGroup.module.css';
 
-type themeRadioButtonTypes = {
-	themeLabel: selectedThemeTypes;
+type ThemeRadioButtonTypes = {
+	themeLabel: SelectedThemeTypes;
 	themeValue: 'dark' | 'light' | undefined;
 	handleSelectTheme: (
 		newTheme: string,
-		clickedButton: selectedThemeTypes
+		clickedButton: SelectedThemeTypes
 	) => void;
 	selectedTheme: string;
 	iconifyId: string;
 };
 
-export const ThemeRadioButton: React.FC<themeRadioButtonTypes> = ({
+export const ThemeRadioButton: React.FC<ThemeRadioButtonTypes> = ({
 	themeLabel,
 	themeValue,
 	handleSelectTheme,

@@ -28,8 +28,22 @@ pnpm remotion render Devoxx2023 out/Devoxx2023.mp4 --props=filejson/test.json
 
 ## How to generate local video with Docker
 
-This project can be run using Docker.
-First, you need to build the image:
+This project can be run using Docker. 🐳
+You can either reuse an image or build your own image:
+
+### Use a existing image
+
+To generate your video, please use this command:
+
+```
+docker run -v $(pwd)/out:/usr/src/app/out -it zenika/shortvid pnpm remotion render remotion/index.tsx TalkBranded out/TalkBranded.mp4 [YOUR PARAMETERS]
+```
+
+Tips: You can copy paste your parameters directly from (shortvid.io)[https://shortvid.io/]
+
+### Build the image
+
+To build a image, you need to build the image:
 
 ```
 docker image build -t shortvid/run .
@@ -41,7 +55,7 @@ Then, you can run it and you will get your video in the `out` folder:
 docker container run -v $(pwd)/out:/usr/src/app/out  -it shortvid/run
 ```
 
-The command used to create the shortvid is declared in the Dockerfile at line #13. 
+The command used to create the shortvid is declared in the Dockerfile at line #13.
 
 Please change it in order to your template with [shortvid.io](https://shortvid.io/) and create your video:
 

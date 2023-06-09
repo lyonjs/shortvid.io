@@ -11,15 +11,15 @@
 	border-image: linear-gradient(
 			90deg,
 			transparent,
-			rgba(255, 255, 255, 0.5),
+			var(--color-separator),
 			transparent
 		)
 		1;
 
-	.logo {
+	.footerLogo {
 		position: absolute;
-		top: -15px;
-		background: var(--background);
+		top: -20px;
+		background: var(--color-background);
 		padding-inline: 20px;
 		width: 60px;
 	}

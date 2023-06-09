@@ -1,16 +1,10 @@
-'use client';
-
-import Image from 'next/image';
+import {SwitchThemeButton} from './SwitchThemeButton';
+import {Logo} from './Logo';
 
 export const Header: React.FC = () => {
 	return (
 		<header className="flex items-center my-9">
-			<Image
-				src="/branding/monogram-white.svg"
-				alt="Shortvid.io Logo"
-				width={30}
-				height={30}
-			/>
+			<Logo />
 			<h1 className="text-2xl md:text-3xl ml-5">Shortvid.io</h1>
 			<a
 				className="ml-auto border-2 px-4 py-2 rounded-md hover:bg-white hover:text-black transition-all duration-200 font-bold"
@@ -18,6 +12,7 @@ export const Header: React.FC = () => {
 			>
 				👨🏼‍💻 Repository
 			</a>
+			<SwitchThemeButton />
 		</header>
 	);
 };

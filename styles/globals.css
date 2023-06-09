@@ -15,14 +15,36 @@
 	--purple-800: #10002b;
 	--purple-900: #0e001c;
 
-	--primary: var(--purple-200);
-	--link: var(--purple-100);
-	--background: var(--purple-900);
+	--color-primary: var(--purple-200);
+	--color-link: var(--purple-100);
+	--color-background: var(--purple-900);
+	--color-separator: rgba(255, 255, 255, 0.5);
+	--color-text: white;
+
+	--color-btn-border: white;
+	--color-btn-text: var(--purple-900);
+	--color-btn-background: white;
+	--color-logo: white;
+
+	--color-input-background: #eaeaea;
+}
+
+[data-theme='light'] {
+	--color-primary: var(--purple-300);
+	--color-link: var(--purple-400);
+	--color-background: white;
+	--color-separator: rgba(90, 24, 154, 0.5);
+	--color-text: var(--purple-900);
+
+	--color-btn-border: #e0e0e0;
+	--color-btn-text: white;
+	--color-btn-background: var(--purple-700);
+	--color-logo: var(--purple-500);
 }
 
 body {
-	background-color: var(--background);
-	color: white;
+	background-color: var(--color-background);
+	color: var(--color-text);
 }
 
 main {
@@ -30,5 +52,5 @@ main {
 }
 
 a {
-	color: var(--link);
+	color: var(--color-link);
 }

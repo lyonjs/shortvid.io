@@ -1,14 +1,16 @@
 import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import {Footer} from '../../src/app/Footer';
+import {useThemeName} from '../../src/app/hooks/useThemeName';
+
+jest.mock('../../src/app/hooks/useThemeName.ts');
 
 describe('<Footer />', () => {
 	it('should render the component', () => {
+		(useThemeName as jest.MockedFunction<any>).mockReturnValue('dark');
 		render(<Footer />);
 
-		const logo = screen.getByRole('img', {
-			name: 'Shortvid.io logo',
-		});
+		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
 
 		const vercelImg = screen.getByRole('img', {
 			name: 'Vercel',
@@ -18,6 +20,9 @@ describe('<Footer />', () => {
 		});
 
 		const footer = screen.getByRole('contentinfo');
+		const copyright = screen.getByText(
+			'© Copyright 2023 LyonJs - Made with 💜 and JS'
+		);
 
 		expect(logo).toBeVisible();
 
@@ -25,8 +30,7 @@ describe('<Footer />', () => {
 		expect(vercelLink).toBeVisible();
 
 		expect(footer).toBeVisible();
-		expect(footer.textContent).toEqual(
-			'© Copyright 2023 LyonJs - Made with 💜 and JS'
-		);
+
+		expect(copyright).toBeVisible();
 	});
 });

@@ -36,7 +36,10 @@ dependencies:
     version: 5.11.0
   next:
     specifier: ^13.4.2
-    version: 13.4.3(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0)
+    version: 13.4.3(react-dom@18.2.0)(react@18.2.0)
+  next-themes:
+    specifier: 0.2.1
+    version: 0.2.1(next@13.4.3)(react-dom@18.2.0)(react@18.2.0)
   node-fetch:
     specifier: ^3.3.0
     version: 3.3.0
@@ -4629,7 +4632,19 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /next@13.4.3(@babel/core@7.21.3)(react-dom@18.2.0)(react@18.2.0):
+  /next-themes@0.2.1(next@13.4.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.4.3(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /next@13.4.3(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-FV3pBrAAnAIfOclTvncw9dDohyeuEEXPe5KNcva91anT/rdycWbgtu3IjUj4n5yHnWK8YEPo0vrUecHmnmUNbA==}
     engines: {node: '>=16.8.0'}
     hasBin: true
@@ -4657,7 +4672,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.21.3)(react@18.2.0)
+      styled-jsx: 5.1.1(react@18.2.0)
       zod: 3.21.4
     optionalDependencies:
       '@next/swc-darwin-arm64': 13.4.3
@@ -5529,7 +5544,7 @@ packages:
       webpack: 5.76.1(esbuild@0.16.12)
     dev: false
 
-  /styled-jsx@5.1.1(@babel/core@7.21.3)(react@18.2.0):
+  /styled-jsx@5.1.1(react@18.2.0):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -5542,7 +5557,6 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      '@babel/core': 7.21.3
       client-only: 0.0.1
       react: 18.2.0
     dev: false

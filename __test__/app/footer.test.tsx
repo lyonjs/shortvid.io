@@ -1,13 +1,15 @@
 import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import {Footer} from '../../src/app/Footer';
-import {useThemeName} from '../../src/app/hooks/useThemeName';
+import {useSelectedTheme} from '../../src/app/hooks/useSelectedTheme';
 
-jest.mock('../../src/app/hooks/useThemeName.ts');
+jest.mock('../../src/app/hooks/useSelectedTheme.ts');
 
 describe('<Footer />', () => {
 	it('should render the component', () => {
-		(useThemeName as jest.MockedFunction<any>).mockReturnValue('dark');
+		(useSelectedTheme as jest.MockedFunction<any>).mockReturnValue({
+			themeName: 'dark',
+		});
 		render(<Footer />);
 
 		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;

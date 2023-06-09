@@ -1,6 +1,6 @@
 import {Icon} from '@iconify/react';
 import {SelectedThemeTypes} from './SwitchThemeButtons';
-import styles from '../../styles/app/inputs/themeRadioGroup.module.css';
+import styles from '../../styles/app/common/themeRadioGroup.module.css';
 
 type ThemeRadioButtonTypes = {
 	themeLabel: SelectedThemeTypes;

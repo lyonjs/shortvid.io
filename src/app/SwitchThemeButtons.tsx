@@ -3,7 +3,7 @@
 import {useTheme} from 'next-themes';
 import {useEffect, useState} from 'react';
 import {ThemeRadioButton} from './ThemeRadioButton';
-import styles from '../../styles/app/inputs/themeRadioGroup.module.css';
+import styles from '../../styles/app/common/themeRadioGroup.module.css';
 
 export type SelectedThemeTypes = 'dark' | 'light' | 'system';
 

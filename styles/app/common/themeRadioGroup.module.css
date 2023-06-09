@@ -3,7 +3,7 @@
 	gap: 0.5rem;
 	padding: 0.25rem;
 	margin-left: 20px;
-	background: var(--background);
+	background: var(--color-background);
 	border: 1px solid var(--switch-border);
 	border-radius: 50px;
 
@@ -17,12 +17,12 @@
 		}
 
 		&:hover {
-			color: var(--text);
+			color: var(--color-text);
 		}
 	}
 
 	.checked {
 		background: var(--switch-background);
-		color: var(--text);
+		color: var(--color-text);
 	}
 }

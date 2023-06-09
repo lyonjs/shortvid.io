@@ -27,8 +27,8 @@
 	--color-separator: var(--grey-100);
 	--color-text: white;
 
-	--color-button-text: var(--purple-900);
-	--color-button-background: white;
+	--color-btn-text: var(--purple-900);
+	--color-btn-background: white;
 
 	--color-input-background: #eaeaea;
 
@@ -46,8 +46,8 @@
 	--color-separator: var(--purple-450);
 	--color-text: var(--purple-900);
 
-	--color-button-text: white;
-	--color-button-background: var(--purple-700);
+	--color-btn-text: white;
+	--color-btn-background: var(--purple-700);
 
 	--switch-background: var(--grey-50);
 	--switch-unselected: var(--grey-500);

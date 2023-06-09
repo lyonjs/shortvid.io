@@ -20,7 +20,9 @@ describe('<Footer />', () => {
 		});
 
 		const footer = screen.getByRole('contentinfo');
-		const copyright = screen.getByRole('copyright');
+		const copyright = screen.getByText(
+			'© Copyright 2023 LyonJs - Made with 💜 and JS'
+		);
 
 		expect(logo).toBeVisible();
 
@@ -30,8 +32,5 @@ describe('<Footer />', () => {
 		expect(footer).toBeVisible();
 
 		expect(copyright).toBeVisible();
-		expect(copyright.textContent).toEqual(
-			'© Copyright 2023 LyonJs - Made with 💜 and JS'
-		);
 	});
 });

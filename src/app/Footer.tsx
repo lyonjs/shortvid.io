@@ -26,9 +26,7 @@ export const Footer = () => {
 					<PoweredByVercelImg src="/images/app/powered-by-vercel-white.svg" />
 				)}
 			</a>
-			<span role="copyright">
-				© Copyright 2023 LyonJs - Made with 💜 and JS
-			</span>
+			<span>© Copyright 2023 LyonJs - Made with 💜 and JS</span>
 		</footer>
 	);
 };

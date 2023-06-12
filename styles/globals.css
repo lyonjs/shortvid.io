@@ -17,9 +17,8 @@
 	--purple-900: #0e001c;
 	/* Grey variables */
 	--grey-50: #eaeaea;
-	--grey-100: #BAB6BE;
+	--grey-100: #bab6be;
 	--grey-500: #565656;
-
 
 	--color-primary: var(--purple-200);
 	--color-link: var(--purple-100);

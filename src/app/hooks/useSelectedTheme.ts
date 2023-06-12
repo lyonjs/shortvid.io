@@ -1,17 +1,18 @@
 import {useEffect, useState} from 'react';
-import {SelectedThemeTypes} from '../SwitchThemeButtons';
 import {useTheme} from 'next-themes';
+
+export type SelectedThemeTypes = 'dark' | 'light' | 'system';
 
 export const useSelectedTheme = () => {
 	const {theme, setTheme, systemTheme} = useTheme();
 	const [selectedTheme, setSelectedTheme] = useState<string>('system');
-	const [themeName, setThemeName] = useState<string>('default');
+	const [themeName, setThemeName] = useState<string | undefined>(undefined);
 
 	useEffect(() => {
 		if (theme === 'system') {
-			systemTheme && setThemeName(systemTheme);
+			setThemeName(systemTheme);
 		} else {
-			theme && setThemeName(theme);
+			setThemeName(theme);
 		}
 	}, [theme, systemTheme]);
 
@@ -31,5 +32,10 @@ export const useSelectedTheme = () => {
 		}
 	};
 
-	return {themeName, selectedTheme, setSelectedTheme: handleSelectTheme};
+	return {
+		themeName,
+		systemTheme,
+		selectedTheme,
+		setSelectedTheme: handleSelectTheme,
+	};
 };

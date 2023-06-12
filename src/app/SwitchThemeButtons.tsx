@@ -1,38 +1,34 @@
 'use client';
 
-import {useTheme} from 'next-themes';
 import {ThemeRadioButton} from './ThemeRadioButton';
 import styles from '../../styles/app/common/themeRadioGroup.module.css';
 import {useSelectedTheme} from './hooks/useSelectedTheme';
 
-export type SelectedThemeTypes = 'dark' | 'light' | 'system';
-
 export const SwitchThemeButtons = () => {
-	const {systemTheme} = useTheme();
-	const {selectedTheme, setSelectedTheme} = useSelectedTheme();
+	const {systemTheme, selectedTheme, setSelectedTheme} = useSelectedTheme();
 
 	return (
 		<div className={styles.switchThemeGroup} role="radiogroup">
 			<ThemeRadioButton
-				selectedTheme={selectedTheme}
-				handleSelectTheme={setSelectedTheme}
 				themeLabel="dark"
 				themeValue="dark"
 				iconifyId="ph:moon"
-			/>
-			<ThemeRadioButton
 				selectedTheme={selectedTheme}
 				handleSelectTheme={setSelectedTheme}
+			/>
+			<ThemeRadioButton
 				themeLabel="system"
 				themeValue={systemTheme}
 				iconifyId="gg:screen"
-			/>
-			<ThemeRadioButton
 				selectedTheme={selectedTheme}
 				handleSelectTheme={setSelectedTheme}
+			/>
+			<ThemeRadioButton
 				themeLabel="light"
 				themeValue="light"
 				iconifyId="ph:sun"
+				selectedTheme={selectedTheme}
+				handleSelectTheme={setSelectedTheme}
 			/>
 		</div>
 	);

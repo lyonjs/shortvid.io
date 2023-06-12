@@ -15,9 +15,7 @@ export const Footer = () => {
 				<PoweredByVercel />
 			</a>
 			<div className={styles.bottomBar}>
-				<span role="copyright">
-					© Copyright 2023 LyonJs - Made with 💜 and JS
-				</span>
+				<span>© Copyright 2023 LyonJs - Made with 💜 and JS</span>
 				<SwitchThemeButtons />
 			</div>
 		</footer>

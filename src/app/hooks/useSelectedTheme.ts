@@ -5,13 +5,13 @@ import {useTheme} from 'next-themes';
 export const useSelectedTheme = () => {
 	const {theme, setTheme, systemTheme} = useTheme();
 	const [selectedTheme, setSelectedTheme] = useState<string>('system');
-	const [themeName, setThemeName] = useState<string>();
+	const [themeName, setThemeName] = useState<string>('default');
 
 	useEffect(() => {
 		if (theme === 'system') {
-			setThemeName(systemTheme);
+			systemTheme && setThemeName(systemTheme);
 		} else {
-			setThemeName(theme);
+			theme && setThemeName(theme);
 		}
 	}, [theme, systemTheme]);
 

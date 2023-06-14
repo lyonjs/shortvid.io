@@ -1,13 +1,9 @@
 import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import {Footer} from '../../src/app/Footer';
-import {useThemeName} from '../../src/app/hooks/useThemeName';
-
-jest.mock('../../src/app/hooks/useThemeName.ts');
 
 describe('<Footer />', () => {
 	it('should render the component', () => {
-		(useThemeName as jest.MockedFunction<any>).mockReturnValue('dark');
 		render(<Footer />);
 
 		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
@@ -24,6 +20,8 @@ describe('<Footer />', () => {
 			'© Copyright 2023 LyonJs - Made with 💜 and JS'
 		);
 
+		const themeButtonsGroup = screen.getByRole('radiogroup');
+
 		expect(logo).toBeVisible();
 
 		expect(vercelImg).toBeVisible();
@@ -32,5 +30,7 @@ describe('<Footer />', () => {
 		expect(footer).toBeVisible();
 
 		expect(copyright).toBeVisible();
+
+		expect(themeButtonsGroup).toBeVisible();
 	});
 });

@@ -1,4 +1,3 @@
-import {SwitchThemeButton} from './SwitchThemeButton';
 import {Logo} from './Logo';
 
 export const Header: React.FC = () => {
@@ -12,7 +11,6 @@ export const Header: React.FC = () => {
 			>
 				👨🏼‍💻 Repository
 			</a>
-			<SwitchThemeButton />
 		</header>
 	);
 };

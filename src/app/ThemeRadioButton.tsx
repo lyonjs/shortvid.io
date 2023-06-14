@@ -20,15 +20,13 @@ export const ThemeRadioButton: React.FC<ThemeRadioButtonTypes> = ({
 	selectedTheme,
 	iconifyId,
 }) => {
-	const checkTheme = (theme: string) => {
-		return selectedTheme === theme;
-	};
+	const checkTheme = selectedTheme === themeLabel;
 
 	return (
-		<label className={checkTheme(themeLabel) ? styles.checked : ''}>
+		<label className={checkTheme ? styles.checked : ''}>
 			<Icon icon={iconifyId} width={15} height={15} />
 			<input
-				checked={checkTheme(themeLabel)}
+				checked={checkTheme}
 				aria-label={themeLabel}
 				name="themeInput"
 				type="radio"

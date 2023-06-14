@@ -18,6 +18,8 @@
 
 		&:hover {
 			color: var(--color-text);
+			background: var(--switch-background);
+			cursor: pointer;
 		}
 	}
 

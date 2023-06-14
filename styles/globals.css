@@ -35,7 +35,7 @@
 	--switch-unselected: var(--grey-100);
 	--switch-border: var(--grey-100);
 
-	--logo: white;
+	--color-logo: white;
 }
 
 [data-theme='light'] {
@@ -52,7 +52,7 @@
 	--switch-unselected: var(--grey-500);
 	--switch-border: var(--grey-100);
 
-	--logo: var(--purple-500);
+	--color-logo: var(--purple-500);
 }
 
 body {

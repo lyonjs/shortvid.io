@@ -9,11 +9,7 @@ export const useSelectedTheme = () => {
 	const [themeName, setThemeName] = useState<string | undefined>(undefined);
 
 	useEffect(() => {
-		if (theme === 'system') {
-			setThemeName(systemTheme);
-		} else {
-			setThemeName(theme);
-		}
+		setThemeName(theme === 'system' ? systemTheme : theme);
 	}, [theme, systemTheme]);
 
 	useEffect(() => {

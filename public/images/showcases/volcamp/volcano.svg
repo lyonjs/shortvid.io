@@ -1,0 +1,27 @@
+<svg width="1163" height="655" viewBox="0 0 1163 655" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Volcano">
+<path id="Montain" d="M0 654.92L335.296 383.263L830.484 482.301L1162.2 654.92C1162.2 654.92 1162.2 654.92 575.394 654.92C575.394 654.92 53.8936 654.92 0 654.92Z" fill="url(#paint0_linear_510_14640)"/>
+<g id="Down-lava">
+<rect id="Rect-1" x="379" y="390" width="40" height="19" fill="#FF6700"/>
+<rect id="Rect-2" x="419" y="398" width="56" height="49" fill="#FF4800"/>
+<rect id="Rect-3" x="475" y="409" width="87" height="115" fill="#E92700"/>
+<rect id="Rect-4" x="562" y="426" width="91" height="223" fill="#FF4800"/>
+<rect id="Rect-5" x="653" y="440" width="54" height="132" fill="#FF6700"/>
+<rect id="Rect-6" x="707" y="454" width="42" height="79" fill="#E92700"/>
+</g>
+<g id="Up-lava">
+<rect id="up-rect-1" x="379" y="34" width="40" height="356" fill="#FF6700"/>
+<rect id="up-rect-2" x="419" y="53" width="56" height="370" fill="#FF4800"/>
+<rect id="up-rect-3" x="475" width="87" height="433" fill="#E92700"/>
+<rect id="up-rect-4" x="562" y="120" width="91" height="508" fill="#FF4800"/>
+<rect id="up-rect-5" x="653" y="93" width="54" height="380" fill="#FF6700"/>
+<rect id="up-rect-6" x="707" y="79" width="42" height="401" fill="#E92700"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_510_14640" x1="-0.0898895" y1="728.033" x2="1162.11" y2="728.033" gradientUnits="userSpaceOnUse">
+<stop stop-color="#942900"/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>

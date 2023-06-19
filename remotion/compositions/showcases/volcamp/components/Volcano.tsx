@@ -1,4 +1,4 @@
-import {Easing, interpolate, useCurrentFrame} from 'remotion';
+import {interpolate, useCurrentFrame} from 'remotion';
 
 export const Volcano = () => {
 	const frame = useCurrentFrame();
@@ -98,6 +98,7 @@ export const Volcano = () => {
 					id="Montain"
 					d="M0 654.92L335.296 383.263L830.484 482.301L1162.2 654.92C1162.2 654.92 1162.2 654.92 575.394 654.92C575.394 654.92 53.8936 654.92 0 654.92Z"
 					fill="url(#paint0_linear_510_14640)"
+					filter="url(#shadow)"
 				/>
 				<g id="Down-lava">
 					<rect
@@ -151,6 +152,41 @@ export const Volcano = () => {
 				</g>
 			</g>
 			<defs>
+				<filter
+					id="shadow"
+					x="-36"
+					y="300"
+					width="1272.2"
+					height="366.263"
+					filterUnits="userSpaceOnUse"
+					color-interpolation-filters="sRGB"
+				>
+					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+					<feColorMatrix
+						in="SourceAlpha"
+						type="matrix"
+						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+						result="hardAlpha"
+					/>
+					<feOffset dy="-7" />
+					<feGaussianBlur stdDeviation="27.5" />
+					<feComposite in2="hardAlpha" operator="out" />
+					<feColorMatrix
+						type="matrix"
+						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.45 0"
+					/>
+					<feBlend
+						mode="normal"
+						in2="BackgroundImageFix"
+						result="effect1_dropShadow_510_14640"
+					/>
+					<feBlend
+						mode="normal"
+						in="SourceGraphic"
+						in2="effect1_dropShadow_510_14640"
+						result="shape"
+					/>
+				</filter>
 				<linearGradient
 					id="paint0_linear_510_14640"
 					x1="-0.0898895"

@@ -6,8 +6,9 @@ export const IconWithCaption: React.FC<{
 	iconifyId: string;
 	caption: string;
 	iconStyle?: React.CSSProperties;
+	textStyle?: React.CSSProperties;
 	style?: React.CSSProperties;
-}> = ({iconifyId, caption, style, iconStyle}) => {
+}> = ({iconifyId, caption, style, iconStyle, textStyle}) => {
 	return (
 		<div
 			style={{
@@ -34,6 +35,7 @@ export const IconWithCaption: React.FC<{
 					color: 'inherit',
 					width: 'max-content',
 					padding: 0,
+					...textStyle,
 				}}
 			>
 				{caption}

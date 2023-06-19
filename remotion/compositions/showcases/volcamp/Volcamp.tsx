@@ -1,32 +1,22 @@
-import {AbsoluteFill, Sequence, useCurrentFrame} from 'remotion';
-import {Volcano} from './Volcano';
+import {AbsoluteFill, Sequence} from 'remotion';
+import {Transition} from './components/Transition';
+import {Eruption} from './components/Eruption';
+import {Talk} from './components/Talk';
+import {loadFont} from '@remotion/google-fonts/Poppins';
+
+const {fontFamily} = loadFont();
 
 export const Volcamp = () => {
-	const frame = useCurrentFrame();
-
-	const shuffle = Math.sin(frame * 1) * 6;
-
 	return (
-		<AbsoluteFill>
-			<Sequence name="eruption" style={{background: '#4F993F'}}>
-				<div
-					style={{
-						width: '100%',
-						height: '100%',
-						transform: `translateX(${shuffle}px)`,
-					}}
-				>
-					<Volcano />
-				</div>
+		<AbsoluteFill style={{background: '#4F993F', fontFamily}}>
+			<Sequence name="Eruption" durationInFrames={165}>
+				<Eruption />
 			</Sequence>
-			<Sequence name="Transition">
-				<div
-					style={{
-						width: '100%',
-						height: '100%',
-						transform: `translateX(${shuffle}px)`,
-					}}
-				></div>
+			<Sequence name="Talk" from={185}>
+				<Talk />
+			</Sequence>
+			<Sequence name="Transition" from={155} durationInFrames={40}>
+				<Transition />
 			</Sequence>
 		</AbsoluteFill>
 	);

@@ -1,6 +1,12 @@
-import {AbsoluteFill, Img, staticFile} from 'remotion';
+import {
+	AbsoluteFill,
+	Img,
+	interpolate,
+	staticFile,
+	useCurrentFrame,
+} from 'remotion';
 
-type ThemeProps = {
+export type ThemeProps = {
 	themeName:
 		| 'Plénière'
 		| 'Lang. & Frameworks'
@@ -45,6 +51,11 @@ export const Theme: React.FC<ThemeProps> = ({themeName}) => {
 			break;
 	}
 
+	const frame = useCurrentFrame();
+	const opacity = interpolate(frame, [20, 30], [0, 1], {
+		extrapolateLeft: 'clamp',
+	});
+
 	return (
 		<AbsoluteFill style={{width: 'max-content', left: 'auto', right: '50px'}}>
 			<div
@@ -52,6 +63,7 @@ export const Theme: React.FC<ThemeProps> = ({themeName}) => {
 					position: 'relative',
 					width: 160,
 					height: 120,
+					opacity,
 				}}
 			>
 				<Img

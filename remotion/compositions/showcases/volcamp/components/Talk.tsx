@@ -1,58 +1,43 @@
-import {Img, Sequence, staticFile} from 'remotion';
+import {Sequence} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
-import {Theme} from './Theme';
-import {Speakers} from './Speakers';
+import {Theme, ThemeProps} from './Theme';
+import {speakerProps, Speakers} from './Speakers';
+import {Logo} from './Logo';
 
-export const Talk = () => {
+export type TalkProps = {
+	themeName: ThemeProps['themeName'];
+	speakers: speakerProps['speakers'];
+	title: string;
+	date?: string;
+	time?: string;
+	location?: string;
+};
+
+export const Talk: React.FC<TalkProps> = ({
+	themeName,
+	speakers,
+	title,
+	date,
+	time,
+	location,
+}) => {
 	return (
 		<>
 			<Sequence name="Logo">
-				<Img
-					src={staticFile('images/showcases/volcamp/volcampLogo.svg')}
-					alt="Logo Volcamp 2023"
-					width={116}
-					height={107}
-					style={{
-						position: 'absolute',
-						top: 20,
-						left: 50,
-					}}
-				/>
+				<Logo />
 			</Sequence>
 			<Sequence name="Theme">
-				<Theme themeName="BigData & AI" />
-			</Sequence>
-			<Sequence name="Details">
-				<Details
-					date="12 et 13 Octobre 2023"
-					time="10h15"
-					location="Hall 32 - Clermont-fd"
-				/>
+				<Theme themeName={themeName} />
 			</Sequence>
 			<Sequence name="Speakers">
-				<Speakers
-					speakers={[
-						{
-							name: 'Emeric Boyadjian',
-							pictureUrl:
-								'https://ca.slack-edge.com/T02ARLB3P-U04QCCY3KH8-991e0b5e8a16-512',
-						},
-						{
-							name: 'Emeric Boyadjian',
-							pictureUrl:
-								'https://ca.slack-edge.com/T02ARLB3P-U04QCCY3KH8-991e0b5e8a16-512',
-						},
-						{
-							name: 'Emeric Boyadjian',
-							pictureUrl:
-								'https://ca.slack-edge.com/T02ARLB3P-U04QCCY3KH8-991e0b5e8a16-512',
-						},
-					]}
-				/>
+				<Speakers speakers={speakers} />
 			</Sequence>
 			<Sequence name="Title">
-				<TalkTitle title="Revivez la cryptographie de nos ancêtres, de Lysandre de Sparte à Blaise de Vigenère " />
+				<TalkTitle title={title} />
+			</Sequence>
+			<Sequence name="Details">
+				<Details date={date} time={time} location={location} />
 			</Sequence>
 		</>
 	);

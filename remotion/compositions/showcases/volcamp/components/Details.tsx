@@ -1,11 +1,40 @@
 import {TalkDetails} from '../../../../design/molecules/TalkDetails';
-import {Img, staticFile} from 'remotion';
+import {
+	Img,
+	interpolate,
+	spring,
+	staticFile,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 
 export const Details: React.FC<{
-	date: string;
-	time: string;
-	location: string;
+	date?: string;
+	time?: string;
+	location?: string;
 }> = ({date, time, location}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+
+	const drop = spring({
+		frame: frame - 30,
+		from: -20,
+		to: 15,
+		fps,
+		durationInFrames: 30,
+	});
+	const opacity = interpolate(frame, [30, 60], [0, 1], {
+		extrapolateLeft: 'clamp',
+	});
+
+	const mountainPop = spring({
+		frame: frame - 28,
+		fps,
+		from: 0,
+		to: 1,
+		durationInFrames: 20,
+	});
+
 	const commonMountainStyle = {
 		position: 'absolute',
 		bottom: 0,
@@ -27,7 +56,8 @@ export const Details: React.FC<{
 				style={{
 					...commonMountainStyle,
 					left: '50%',
-					transform: 'translateX(-42%)',
+					transform: `translateX(-42%) scaleY(${mountainPop})`,
+					transformOrigin: 'bottom center',
 				}}
 			/>
 			<Img
@@ -38,6 +68,8 @@ export const Details: React.FC<{
 				style={{
 					...commonMountainStyle,
 					left: 0,
+					transform: `scaleY(${mountainPop})`,
+					transformOrigin: 'bottom center',
 				}}
 			/>
 			<Img
@@ -48,6 +80,8 @@ export const Details: React.FC<{
 				style={{
 					...commonMountainStyle,
 					right: 0,
+					transform: `scaleY(${mountainPop})`,
+					transformOrigin: 'bottom center',
 				}}
 			/>
 			<TalkDetails
@@ -59,7 +93,7 @@ export const Details: React.FC<{
 						locationIcon: 'fluent:location-28-filled',
 					},
 				}}
-				style={{bottom: 15}}
+				style={{opacity, bottom: drop}}
 				textStyle={{
 					fontSize: '24px',
 					fontFamily: 'inherit',

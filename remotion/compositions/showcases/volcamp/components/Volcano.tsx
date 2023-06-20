@@ -7,8 +7,8 @@ export const Volcano = () => {
 
 	const [grow1, grow2, grow3, grow4, grow5, grow6] = downLavaHeights.map(
 		(height, id) => {
-			const delay = 50 + id * 2;
-			const speed = 50 + Math.round(height / 1.8);
+			const delay = 30 + id * 2;
+			const speed = 30 + Math.round(height / 1.8);
 			return interpolate(frame, [delay, speed], [0, height], {
 				extrapolateRight: 'clamp',
 				extrapolateLeft: 'clamp',
@@ -16,7 +16,7 @@ export const Volcano = () => {
 		}
 	);
 
-	const grow = interpolate(frame, [115, 135], [0, 2], {
+	const grow = interpolate(frame, [80, 110], [0, 2], {
 		extrapolateRight: 'clamp',
 		extrapolateLeft: 'clamp',
 	});

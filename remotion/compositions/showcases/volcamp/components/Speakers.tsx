@@ -1,20 +1,31 @@
 import {Text} from '../../../../design/atoms/Text';
-import {Img} from 'remotion';
+import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const Speakers: React.FC<{
-	speakers: {name: string; pictureUrl: string}[];
-}> = ({speakers}) => {
+export type speakerProps = {
+	speakers: {name: string; picture: string}[];
+};
+
+export const Speakers: React.FC<speakerProps> = ({speakers}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+
+	const first = spring({frame: frame - 15, fps, from: 0, to: 325});
+
+	const second = spring({frame: frame - 20, fps, from: 0, to: 270});
+
+	const third = spring({frame: frame - 10, fps, from: 0, to: 345});
+
 	const SpeakerLavaSyle = [
 		{
-			height: 320,
+			height: first,
 			backgroundColor: '#FF6700',
 		},
 		{
-			height: 270,
+			height: second,
 			backgroundColor: '#E92700',
 		},
 		{
-			height: 345,
+			height: third,
 			backgroundColor: '#EB3D1A',
 		},
 	];
@@ -25,7 +36,6 @@ export const Speakers: React.FC<{
 				width: '100%',
 				display: 'grid',
 				gridTemplateColumns: `repeat(${speakers.length}, 1fr)`,
-				gap: 70,
 				padding: '0 230px',
 			}}
 		>
@@ -41,23 +51,25 @@ export const Speakers: React.FC<{
 							alignItems: 'center',
 							gap: 10,
 							margin: '0 auto',
-							paddingBottom: 20,
 							borderRadius: '0 0 15px 15px',
 							...SpeakerLavaSyle[index],
 						}}
 					>
 						<Img
-							src={speaker.pictureUrl}
+							src={speaker.picture}
 							alt={`Picture of ${speaker.name}`}
 							width={130}
 							height={130}
-							style={{borderRadius: 10}}
+							style={{
+								borderRadius: 10,
+							}}
 						/>
 						<Text
 							style={{
 								display: 'block',
 								width: '100%',
 								padding: 10,
+								paddingBottom: 20,
 								fontFamily: 'inherit',
 								fontSize: 20,
 								fontWeight: 'bold',

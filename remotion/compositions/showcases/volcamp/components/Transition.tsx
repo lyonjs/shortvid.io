@@ -14,6 +14,7 @@ export const Transition = () => {
 				alignItems: 'center',
 				transform: `translateY(${transition}px)`,
 				transition: 'transform 0.3 easeIn',
+				zIndex: 20,
 			}}
 		>
 			<span

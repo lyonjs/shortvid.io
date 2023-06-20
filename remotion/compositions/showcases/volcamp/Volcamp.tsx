@@ -1,4 +1,4 @@
-import {AbsoluteFill, Sequence} from 'remotion';
+import {AbsoluteFill, Img, Sequence, staticFile} from 'remotion';
 import {Transition} from './components/Transition';
 import {Eruption} from './components/Eruption';
 import {Talk, TalkProps} from './components/Talk';
@@ -16,6 +16,17 @@ export const Volcamp: React.FC<TalkProps> = ({
 }) => {
 	return (
 		<AbsoluteFill style={{background: '#4F993F', fontFamily}}>
+			<Sequence name="ConferenceName" durationInFrames={130}>
+				<Img
+					src={staticFile('images/showcases/volcamp/volcampText.svg')}
+					width={600}
+					height={200}
+					style={{
+						margin: '100px auto',
+						zIndex: 10,
+					}}
+				/>
+			</Sequence>
 			<Sequence name="Eruption" durationInFrames={130}>
 				<Eruption />
 			</Sequence>

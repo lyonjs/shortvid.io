@@ -5,10 +5,20 @@ export const Volcano = () => {
 
 	const downLavaHeights: number[] = [79, 132, 223, 115, 49, 19];
 
+	const lavaDownUp = interpolate(frame, [0, 35], [0.8, 1], {
+		extrapolateRight: 'clamp',
+		extrapolateLeft: 'clamp',
+	});
+
+	const lavaDownUpStyle = {
+		transformOrigin: 'bottom',
+		transform: `scaleY(${lavaDownUp})`,
+	};
+
 	const [grow1, grow2, grow3, grow4, grow5, grow6] = downLavaHeights.map(
 		(height, id) => {
 			const delay = 30 + id * 2;
-			const speed = 30 + Math.round(height / 1.8);
+			const speed = 40 + Math.round(height / 1.8);
 			return interpolate(frame, [delay, speed], [0, height], {
 				extrapolateRight: 'clamp',
 				extrapolateLeft: 'clamp',
@@ -92,6 +102,62 @@ export const Volcano = () => {
 						height="572"
 						fill="#E92700"
 						style={lavaUpStyle}
+					/>
+				</g>
+				<g id="Down-lava-up">
+					<rect
+						id="Rect-1"
+						x="379"
+						y="390"
+						width="40"
+						height="265"
+						fill="#FF6700"
+						style={lavaDownUpStyle}
+					/>
+					<rect
+						id="Rect-2"
+						x="419"
+						y="398"
+						width="56"
+						height="257"
+						fill="#FF4800"
+						style={lavaDownUpStyle}
+					/>
+					<rect
+						id="Rect-3"
+						x="475"
+						y="409"
+						width="87"
+						height="246"
+						fill="#E92700"
+						style={lavaDownUpStyle}
+					/>
+					<rect
+						id="Rect-4"
+						x="562"
+						y="426"
+						width="91"
+						height="229"
+						fill="#FF4800"
+						style={lavaDownUpStyle}
+					/>
+					<rect
+						id="Rect-5"
+						x="653"
+						y="440"
+						width="54"
+						height="215"
+						fill="#FF6700"
+						style={lavaDownUpStyle}
+					/>
+					<rect
+						id="Rect-6"
+						x="707"
+						y="454"
+						width="42"
+						height="201"
+						fill="#E92700"
+						style={lavaDownUpStyle}
 					/>
 				</g>
 				<path

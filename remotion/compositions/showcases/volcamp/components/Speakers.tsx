@@ -34,8 +34,10 @@ export const Speakers: React.FC<speakerProps> = ({speakers}) => {
 		<div
 			style={{
 				width: '100%',
-				display: 'grid',
-				gridTemplateColumns: `repeat(${speakers.length}, 1fr)`,
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'flex-start',
+				gap: 50,
 				padding: '0 230px',
 			}}
 		>
@@ -50,7 +52,6 @@ export const Speakers: React.FC<speakerProps> = ({speakers}) => {
 							justifyContent: 'flex-end',
 							alignItems: 'center',
 							gap: 10,
-							margin: '0 auto',
 							borderRadius: '0 0 15px 15px',
 							...SpeakerLavaSyle[index],
 						}}

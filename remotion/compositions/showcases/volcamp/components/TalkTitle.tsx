@@ -24,6 +24,7 @@ export const TalkTitle: React.FC<{
 				minHeight: 150,
 				bottom: '180px',
 				fontFamily: 'inherit',
+				padding: '0 50px',
 				...style,
 			}}
 		>

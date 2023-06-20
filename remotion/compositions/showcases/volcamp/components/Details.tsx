@@ -37,7 +37,7 @@ export const Details: React.FC<{
 
 	const commonMountainStyle = {
 		position: 'absolute',
-		bottom: 0,
+		bottom: -1,
 	} as React.CSSProperties;
 
 	return (

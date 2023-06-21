@@ -1,21 +1,7 @@
-import {
-	AbsoluteFill,
-	Img,
-	interpolate,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 
 export type ThemeProps = {
-	themeName:
-		| 'Plénière'
-		| 'Lang. & Frameworks'
-		| 'BigData & AI'
-		| 'Web & Mobile'
-		| 'Archi, Perf et Sécu'
-		| 'DevOps & Cloud'
-		| 'UX/UI'
-		| 'Découverte';
+	themeName: string;
 };
 
 export const Theme: React.FC<ThemeProps> = ({themeName}) => {
@@ -57,11 +43,11 @@ export const Theme: React.FC<ThemeProps> = ({themeName}) => {
 	});
 
 	return (
-		<AbsoluteFill style={{width: 'max-content', left: 'auto', right: '50px'}}>
+		<AbsoluteFill style={{width: 'max-content', left: 'auto', right: '40px'}}>
 			<div
 				style={{
 					position: 'relative',
-					width: 160,
+					width: 180,
 					height: 120,
 					background: 'white',
 					clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)',
@@ -80,6 +66,9 @@ export const Theme: React.FC<ThemeProps> = ({themeName}) => {
 				>
 					<span
 						style={{
+							display: 'block',
+							width: '80%',
+							textAlign: 'center',
 							background: themeColor,
 							padding: '10px 15px',
 							fontWeight: 'bold',

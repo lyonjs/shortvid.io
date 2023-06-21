@@ -34,7 +34,7 @@ export const NavBar: React.FC = () => {
 						<span>🎉 Event</span>
 					</li>
 				</ActiveLink>
-				<ActiveLink href="/showcases/conferences/CampingDesSpeakers">
+				<ActiveLink href="/showcases/conferences/Volcamp2023">
 					<li className="text-color-btn-text text-center mt-2 md:mt-0 md:ml-5 py-2 px-4 rounded-lg cursor-pointer font-bold hover:scale-105">
 						<span>🫱🏼‍🫲🏽 Conference</span>
 					</li>

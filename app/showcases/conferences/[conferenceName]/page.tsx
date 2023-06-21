@@ -19,6 +19,7 @@ import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/ca
 import _ = require('lodash');
 import {ReplayProps} from '../../../templates/replay/page';
 import {TalkBrandedProps} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
+import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volcamp';
 interface TalkTemplate {
 	component: React.FC<any>;
 	width: number;
@@ -86,6 +87,26 @@ const Template: Record<string, TalkTemplate> = {
 		defaultProps: _.merge(
 			{
 				speakers: [{company: 'Zenika'}, {company: 'Bedrock'}],
+			},
+			defaultTalkValues
+		),
+	},
+	Volcamp2023: {
+		compositionName: 'Volcamp2023',
+		component: Volcamp,
+		width: 1280,
+		height: 720,
+		durationInFrames: 300,
+		defaultProps: _.merge(
+			{
+				themeName: 'Web & Mobile',
+				speakers: [
+					{company: 'https://zenika.com/static/images/favicon-32x32.png'},
+					{
+						company:
+							'https://bedrockstreaming.com/assets/favicon/apple-icon-57x57.png',
+					},
+				],
 			},
 			defaultTalkValues
 		),

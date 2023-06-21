@@ -35,11 +35,6 @@ export const Details: React.FC<{
 		durationInFrames: 20,
 	});
 
-	const commonMountainStyle = {
-		position: 'absolute',
-		bottom: -1,
-	} as React.CSSProperties;
-
 	return (
 		<div
 			style={{
@@ -49,37 +44,13 @@ export const Details: React.FC<{
 			}}
 		>
 			<Img
-				src={staticFile('images/showcases/volcamp/mountainCenter.svg')}
-				alt="Center Mountain"
-				width={475}
-				height={153}
+				src={staticFile('images/showcases/volcamp/mountains.svg')}
+				alt="Mountains"
 				style={{
-					...commonMountainStyle,
-					left: '50%',
-					transform: `translateX(-42%) scaleY(${mountainPop})`,
-					transformOrigin: 'bottom center',
-				}}
-			/>
-			<Img
-				src={staticFile('images/showcases/volcamp/mountainLeft.svg')}
-				alt="Left Mountain"
-				width={524}
-				height={172}
-				style={{
-					...commonMountainStyle,
+					width: '100%',
+					position: 'absolute',
+					bottom: -1,
 					left: 0,
-					transform: `scaleY(${mountainPop})`,
-					transformOrigin: 'bottom center',
-				}}
-			/>
-			<Img
-				src={staticFile('images/showcases/volcamp/mountainRight.svg')}
-				alt="Right Mountain"
-				width={462}
-				height={170}
-				style={{
-					...commonMountainStyle,
-					right: 0,
 					transform: `scaleY(${mountainPop})`,
 					transformOrigin: 'bottom center',
 				}}

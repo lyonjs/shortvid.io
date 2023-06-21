@@ -63,16 +63,11 @@ export const Theme: React.FC<ThemeProps> = ({themeName}) => {
 					position: 'relative',
 					width: 160,
 					height: 120,
+					background: 'white',
+					clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)',
 					opacity,
 				}}
 			>
-				<Img
-					src={staticFile('images/showcases/volcamp/themesFlag.svg')}
-					alt="Logo Volcamp 2023"
-					style={{
-						position: 'absolute',
-					}}
-				/>
 				<div
 					style={{
 						position: 'absolute',
@@ -88,7 +83,6 @@ export const Theme: React.FC<ThemeProps> = ({themeName}) => {
 							background: themeColor,
 							padding: '10px 15px',
 							fontWeight: 'bold',
-							borderRadius: 10,
 						}}
 					>
 						{themeName}

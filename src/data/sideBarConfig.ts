@@ -4,7 +4,7 @@ type videoProps = {
 };
 
 type sideBarProps = {
-	templates: videoProps[];
+	templates: {[category: string]: videoProps[] | string}[];
 	showcases: videoProps[];
 	settings: {
 		fontFamily: string;
@@ -14,12 +14,34 @@ type sideBarProps = {
 export const sideBarConfig: sideBarProps = {
 	templates: [
 		{
-			compositionName: 'Talk',
-			compositionId: 'Talk',
+			categoryName: 'Talks',
+			items: [
+				{
+					compositionName: 'Talk',
+					compositionId: 'Talk',
+				},
+				{
+					compositionName: 'Talk Branded',
+					compositionId: 'TalkBranded',
+				},
+			],
 		},
 		{
-			compositionName: 'Talk Branded',
-			compositionId: 'TalkBranded',
+			categoryName: 'Layers',
+			items: [
+				{
+					compositionName: 'Layer Full Screen',
+					compositionId: 'LayerFullScreen',
+				},
+				{
+					compositionName: 'Layer One Speaker',
+					compositionId: 'LayerOneSpeaker',
+				},
+				{
+					compositionName: 'Layer Two Speaker',
+					compositionId: 'LayerTwoSpeaker',
+				},
+			],
 		},
 		{
 			compositionName: 'Sponsor',
@@ -36,18 +58,6 @@ export const sideBarConfig: sideBarProps = {
 		{
 			compositionName: 'Silhouette',
 			compositionId: 'Silhouette',
-		},
-		{
-			compositionName: 'Layer Full Screen',
-			compositionId: 'LayerFullScreen',
-		},
-		{
-			compositionName: 'Layer One Speaker',
-			compositionId: 'LayerOneSpeaker',
-		},
-		{
-			compositionName: 'Layer Two Speaker',
-			compositionId: 'LayerTwoSpeaker',
 		},
 	],
 	showcases: [

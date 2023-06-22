@@ -15,25 +15,24 @@ export const Volcano = () => {
 		transform: `scaleY(${lavaDownUp})`,
 	};
 
-	const [grow1, grow2, grow3, grow4, grow5, grow6] = downLavaHeights.map(
-		(height, id) => {
+	const [lavaFall1, lavaFall2, lavaFall3, lavaFall4, lavaFall5, lavaFall6] =
+		downLavaHeights.map((height, id) => {
 			const delay = 30 + id * 2;
 			const speed = 40 + Math.round(height / 1.8);
 			return interpolate(frame, [delay, speed], [0, height], {
 				extrapolateRight: 'clamp',
 				extrapolateLeft: 'clamp',
 			});
-		}
-	);
+		});
 
-	const grow = interpolate(frame, [80, 110], [0, 2], {
+	const exploadUp = interpolate(frame, [80, 110], [0, 2], {
 		extrapolateRight: 'clamp',
 		extrapolateLeft: 'clamp',
 	});
 
 	const lavaUpStyle = {
 		transformOrigin: 'bottom',
-		transform: `scaleY(${grow})`,
+		transform: `scaleY(${exploadUp})`,
 	};
 
 	return (
@@ -172,7 +171,7 @@ export const Volcano = () => {
 						x="379"
 						y="390"
 						width="40"
-						height={grow6}
+						height={lavaFall6}
 						fill="#FF6700"
 					/>
 					<rect
@@ -180,7 +179,7 @@ export const Volcano = () => {
 						x="419"
 						y="398"
 						width="56"
-						height={grow5}
+						height={lavaFall5}
 						fill="#FF4800"
 					/>
 					<rect
@@ -188,7 +187,7 @@ export const Volcano = () => {
 						x="475"
 						y="409"
 						width="87"
-						height={grow4}
+						height={lavaFall4}
 						fill="#E92700"
 					/>
 					<rect
@@ -196,7 +195,7 @@ export const Volcano = () => {
 						x="562"
 						y="426"
 						width="91"
-						height={grow3}
+						height={lavaFall3}
 						fill="#FF4800"
 					/>
 					<rect
@@ -204,7 +203,7 @@ export const Volcano = () => {
 						x="653"
 						y="440"
 						width="54"
-						height={grow2}
+						height={lavaFall2}
 						fill="#FF6700"
 					/>
 					<rect
@@ -212,7 +211,7 @@ export const Volcano = () => {
 						x="707"
 						y="454"
 						width="42"
-						height={grow1}
+						height={lavaFall1}
 						fill="#E92700"
 					/>
 				</g>

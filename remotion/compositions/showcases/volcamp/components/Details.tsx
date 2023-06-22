@@ -17,14 +17,16 @@ export const Details: React.FC<{
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const drop = spring({
-		frame: frame - 30,
+	const delay = 30;
+
+	const detailsDrop = spring({
+		frame: frame - delay,
 		from: -20,
 		to: 15,
 		fps,
 		durationInFrames: 30,
 	});
-	const opacity = interpolate(frame, [30, 60], [0, 1], {
+	const detailsOpacity = interpolate(frame, [delay, delay + 30], [0, 1], {
 		extrapolateLeft: 'clamp',
 	});
 
@@ -66,7 +68,7 @@ export const Details: React.FC<{
 							locationIcon: 'fluent:location-28-filled',
 						},
 					}}
-					style={{opacity, bottom: drop}}
+					style={{opacity: detailsOpacity, bottom: detailsDrop}}
 					textStyle={{
 						fontSize: '24px',
 						fontFamily: 'inherit',

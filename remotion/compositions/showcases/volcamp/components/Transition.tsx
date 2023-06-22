@@ -4,6 +4,11 @@ export const Transition = () => {
 	const frame = useCurrentFrame();
 	const transition = interpolate(frame, [0, 10, 30, 40], [-1100, 0, 0, 1100]);
 
+	const commonBarStyle = {
+		display: 'block',
+		width: '100%',
+	};
+
 	return (
 		<div
 			style={{
@@ -19,43 +24,38 @@ export const Transition = () => {
 		>
 			<span
 				style={{
-					display: 'block',
-					width: '100%',
 					height: 1000,
 					background: '#FF6700',
 					borderTop: '10px solid transparent',
+					...commonBarStyle,
 				}}
 			/>
 			<span
 				style={{
-					display: 'block',
-					width: '100%',
 					height: 790,
 					background: '#FF4800',
+					...commonBarStyle,
 				}}
 			/>
 			<span
 				style={{
-					display: 'block',
-					width: '100%',
 					height: 980,
 					background: '#E92700',
+					...commonBarStyle,
 				}}
 			/>
 			<span
 				style={{
-					display: 'block',
-					width: '100%',
 					height: 1300,
 					background: '#FF6700',
+					...commonBarStyle,
 				}}
 			/>
 			<span
 				style={{
-					display: 'block',
-					width: '100%',
 					height: 720,
 					background: '#FF4800',
+					...commonBarStyle,
 				}}
 			/>
 		</div>

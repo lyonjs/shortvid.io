@@ -9,34 +9,34 @@ export const Speakers: React.FC<speakerProps> = ({speakers}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const first = spring({
+	const leftLavaFall = spring({
 		frame: frame - 15,
 		fps,
 		from: -465,
 		to: -100,
 	});
 
-	const second = spring({frame: frame - 20, fps, from: -390, to: -100});
+	const centerLavaFall = spring({frame: frame - 20, fps, from: -390, to: -100});
 
-	const third = spring({frame: frame - 10, fps, from: -480, to: -100});
+	const rightLavaFall = spring({frame: frame - 10, fps, from: -480, to: -100});
 
 	const SpeakerLavaStyle = [
 		{
-			transform: `translateY(${first}px)`,
+			transform: `translateY(${leftLavaFall}px)`,
 			height: 455,
 			backgroundColor: '#FF6700',
 			clipPath:
 				'polygon(0 0, 100% 0, 100% 95%, 80% 95%, 80% 93%, 60% 93%, 60% 100%, 40% 100%, 40% 96%, 20% 96%, 20% 90%, 0 90%)',
 		},
 		{
-			transform: `translateY(${second}px)`,
+			transform: `translateY(${centerLavaFall}px)`,
 			height: 390,
 			backgroundColor: '#E92700',
 			clipPath:
 				'polygon(0 0, 100% 0, 100% 85%, 80% 85%, 80% 88%, 60% 88%, 60% 93%, 40% 93%, 40% 100%, 20% 100%, 20% 90%, 0 90%)',
 		},
 		{
-			transform: `translateY(${third}px)`,
+			transform: `translateY(${rightLavaFall}px)`,
 			height: 440,
 			backgroundColor: '#EB3D1A',
 			clipPath:

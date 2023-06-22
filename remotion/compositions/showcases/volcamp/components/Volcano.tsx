@@ -3,7 +3,7 @@ import {interpolate, useCurrentFrame} from 'remotion';
 export const Volcano = () => {
 	const frame = useCurrentFrame();
 
-	const downLavaHeights: number[] = [79, 132, 223, 115, 49, 19];
+	const downLavaHeights = [79, 132, 223, 115, 49, 19];
 
 	const lavaDownUp = interpolate(frame, [0, 35], [0.8, 1], {
 		extrapolateRight: 'clamp',

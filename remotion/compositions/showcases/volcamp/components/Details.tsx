@@ -1,5 +1,6 @@
 import {TalkDetails} from '../../../../design/molecules/TalkDetails';
 import {
+	AbsoluteFill,
 	Img,
 	interpolate,
 	spring,
@@ -36,44 +37,46 @@ export const Details: React.FC<{
 	});
 
 	return (
-		<div
-			style={{
-				position: 'relative',
-				width: '100%',
-				height: '100%',
-			}}
-		>
-			<Img
-				src={staticFile('images/showcases/volcamp/mountains.svg')}
-				alt="Mountains"
+		<AbsoluteFill>
+			<div
 				style={{
+					position: 'relative',
 					width: '100%',
-					position: 'absolute',
-					bottom: -1,
-					left: 0,
-					transform: `scaleY(${mountainPop})`,
-					transformOrigin: 'bottom center',
+					height: '100%',
 				}}
-			/>
-			<TalkDetails
-				items={{
-					date,
-					time,
-					location,
-					icons: {
-						locationIcon: 'fluent:location-28-filled',
-					},
-				}}
-				style={{opacity, bottom: drop}}
-				textStyle={{
-					fontSize: '24px',
-					fontFamily: 'inherit',
-					fontWeight: '500',
-				}}
-				iconStyle={{
-					fontSize: '50px',
-				}}
-			/>
-		</div>
+			>
+				<Img
+					src={staticFile('images/showcases/volcamp/mountains.svg')}
+					alt="Mountains"
+					style={{
+						width: '100%',
+						position: 'absolute',
+						bottom: -1,
+						left: 0,
+						transform: `scaleY(${mountainPop})`,
+						transformOrigin: 'bottom center',
+					}}
+				/>
+				<TalkDetails
+					items={{
+						date,
+						time,
+						location,
+						icons: {
+							locationIcon: 'fluent:location-28-filled',
+						},
+					}}
+					style={{opacity, bottom: drop}}
+					textStyle={{
+						fontSize: '24px',
+						fontFamily: 'inherit',
+						fontWeight: '500',
+					}}
+					iconStyle={{
+						fontSize: '50px',
+					}}
+				/>
+			</div>
+		</AbsoluteFill>
 	);
 };

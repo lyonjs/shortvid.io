@@ -24,21 +24,11 @@ export const Talk: React.FC<TalkProps> = ({
 }) => {
 	return (
 		<>
-			<Sequence name="Logo">
-				<Logo />
-			</Sequence>
-			<Sequence name="Theme">
-				<Theme themeName={themeName} />
-			</Sequence>
-			<Sequence name="Speakers">
-				<Speakers speakers={speakers} />
-			</Sequence>
-			<Sequence name="Title">
-				<TalkTitle title={title} />
-			</Sequence>
-			<Sequence name="Details">
-				<Details date={date} time={time} location={location} />
-			</Sequence>
+			<Logo />
+			<Theme themeName={themeName} />
+			<Speakers speakers={speakers} />
+			<TalkTitle title={title} />
+			<Details date={date} time={time} location={location} />
 		</>
 	);
 };

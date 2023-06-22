@@ -20,7 +20,7 @@ export const Speakers: React.FC<speakerProps> = ({speakers}) => {
 
 	const third = spring({frame: frame - 10, fps, from: -480, to: -100});
 
-	const SpeakerLavaSyle = [
+	const SpeakerLavaStyle = [
 		{
 			transform: `translateY(${first}px)`,
 			height: 455,
@@ -67,7 +67,7 @@ export const Speakers: React.FC<speakerProps> = ({speakers}) => {
 							justifyContent: 'flex-end',
 							alignItems: 'center',
 							gap: 10,
-							...SpeakerLavaSyle[index],
+							...SpeakerLavaStyle[index],
 						}}
 					>
 						<div

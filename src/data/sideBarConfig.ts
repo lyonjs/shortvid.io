@@ -3,8 +3,13 @@ type videoProps = {
 	compositionId: string;
 };
 
+type categoryProps = {
+	categoryName: string;
+	items: videoProps[];
+};
+
 type sideBarProps = {
-	templates: {[category: string]: videoProps[] | string}[];
+	templates: (categoryProps | videoProps)[];
 	showcases: videoProps[];
 	settings: {
 		fontFamily: string;

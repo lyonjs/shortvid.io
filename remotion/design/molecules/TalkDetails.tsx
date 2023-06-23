@@ -1,17 +1,28 @@
-import React from 'react';
 import {IconWithCaption} from './IconWithCaption';
 
 export const TalkDetails: React.FC<{
-	items: {date?: string; time?: string; location?: string};
+	items: {
+		date?: string;
+		time?: string;
+		location?: string;
+		icons?: {
+			dateIcon?: string;
+			timeIcon?: string;
+			locationIcon?: string;
+		};
+	};
 	style?: React.CSSProperties;
 	iconStyle?: React.CSSProperties;
-}> = ({items, style, iconStyle}) => {
-	const itemsCount = Object.keys(items).length;
+	textStyle?: React.CSSProperties;
+}> = ({items, style, iconStyle, textStyle}) => {
+	const countColumn =
+		(items.date ? 1 : 0) + (items.time ? 1 : 0) + (items.location ? 1 : 0);
+
 	return (
 		<div
 			style={{
 				display: 'grid',
-				gridTemplateColumns: `repeat(${itemsCount}, 1fr)`,
+				gridTemplateColumns: `repeat(${countColumn}, 1fr)`,
 				position: 'absolute',
 				bottom: '3rem',
 				width: '100%',
@@ -28,7 +39,7 @@ export const TalkDetails: React.FC<{
 					}}
 				>
 					<IconWithCaption
-						iconifyId="mdi:calendar"
+						iconifyId={items.icons?.dateIcon || 'mdi:calendar'}
 						caption={items.date}
 						style={{
 							position: 'absolute',
@@ -38,6 +49,7 @@ export const TalkDetails: React.FC<{
 							...style,
 						}}
 						iconStyle={iconStyle}
+						textStyle={textStyle}
 					/>
 				</div>
 			)}
@@ -49,7 +61,7 @@ export const TalkDetails: React.FC<{
 					}}
 				>
 					<IconWithCaption
-						iconifyId="mdi:clock"
+						iconifyId={items.icons?.timeIcon || 'mdi:clock'}
 						caption={items.time}
 						style={{
 							position: 'absolute',
@@ -59,6 +71,7 @@ export const TalkDetails: React.FC<{
 							...style,
 						}}
 						iconStyle={iconStyle}
+						textStyle={textStyle}
 					/>
 				</div>
 			)}
@@ -70,7 +83,9 @@ export const TalkDetails: React.FC<{
 					}}
 				>
 					<IconWithCaption
-						iconifyId="mdi:map-marker-radius-outline"
+						iconifyId={
+							items.icons?.locationIcon || 'mdi:map-marker-radius-outline'
+						}
 						caption={items.location}
 						style={{
 							position: 'absolute',
@@ -80,6 +95,7 @@ export const TalkDetails: React.FC<{
 							...style,
 						}}
 						iconStyle={iconStyle}
+						textStyle={textStyle}
 					/>
 				</div>
 			)}

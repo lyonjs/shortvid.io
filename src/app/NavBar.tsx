@@ -19,7 +19,7 @@ export const NavBar: React.FC = () => {
 						<span>🎤 Talk</span>
 					</li>
 				</ActiveLink>
-				<ActiveLink href="/templates/brandedTalk">
+				<ActiveLink href="/templates/talkBranded">
 					<li className="text-color-btn-text text-center mt-2 md:mt-0 md:ml-5 py-2 px-4 rounded-lg cursor-pointer font-bold hover:scale-105">
 						<span>🏷️ Branded Talk</span>
 					</li>

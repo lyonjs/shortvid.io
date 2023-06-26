@@ -68,6 +68,7 @@
 			svg {
 				width: 25px;
 				height: auto;
+				fill: var(--color-text);
 			}
 
 			&:hover {

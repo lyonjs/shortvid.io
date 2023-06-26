@@ -36,6 +36,7 @@
 	--switch-border: var(--grey-100);
 
 	--color-logo: white;
+	--color-wordmark: white;
 }
 
 [data-theme='light'] {
@@ -52,7 +53,8 @@
 	--switch-unselected: var(--grey-500);
 	--switch-border: var(--grey-100);
 
-	--color-logo: var(--purple-500);
+	--color-logo: var(--purple-600);
+	--color-wordmark: var(--purple-300);
 }
 
 body {
@@ -61,7 +63,16 @@ body {
 }
 
 main {
-	max-width: 60rem;
+	.sidebarLayout {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+
+		article {
+			max-width: 90rem;
+			width: 100%;
+		}
+	}
 }
 
 a {

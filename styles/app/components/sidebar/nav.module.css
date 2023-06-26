@@ -1,0 +1,68 @@
+.sideBarNav {
+	height: auto;
+
+	.topLevelLink {
+		display: block;
+		padding-top: 15px;
+
+		span {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 1rem;
+			font-weight: 500;
+			color: var(--color-text);
+
+			svg {
+				width: 25px;
+				height: auto;
+			}
+		}
+
+		&.active, &:hover:not(li) {
+			span {
+				color: var(--color-link);
+			}
+		}
+	}
+
+	.list {
+		padding: 5px 0 0 40px;
+
+		.category {
+			> li {
+				font-weight: 500;
+				font-size: 0.9rem;
+			}
+
+			ul {
+				padding-left: 15px;
+			}
+		}
+
+		.videoLink {
+			display: block;
+			padding: 5px 10px;
+			border-radius: 5px;
+
+			span {
+				color: var(--color-text);
+				font-weight: 300;
+				font-size: 0.9rem;
+			}
+
+			&:hover {
+				span {
+					color: var(--color-link);
+				}
+			}
+
+			&.active {
+				border: 2px solid var(--color-primary);
+				span {
+					color: var(--color-link);
+				}
+			}
+		}
+	}
+}

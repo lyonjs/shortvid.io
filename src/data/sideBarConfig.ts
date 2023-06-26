@@ -3,7 +3,7 @@ type videoProps = {
 	compositionId: string;
 };
 
-type categoryProps = {
+export type categoryProps = {
 	categoryName: string;
 	items: videoProps[];
 };
@@ -32,21 +32,8 @@ export const sideBarConfig: sideBarProps = {
 			],
 		},
 		{
-			categoryName: 'Layers',
-			items: [
-				{
-					compositionName: 'Layer Full Screen',
-					compositionId: 'LayerFullScreen',
-				},
-				{
-					compositionName: 'Layer One Speaker',
-					compositionId: 'LayerOneSpeaker',
-				},
-				{
-					compositionName: 'Layer Two Speaker',
-					compositionId: 'LayerTwoSpeaker',
-				},
-			],
+			compositionName: 'Layers',
+			compositionId: 'Layers',
 		},
 		{
 			compositionName: 'Sponsor',
@@ -68,11 +55,11 @@ export const sideBarConfig: sideBarProps = {
 	showcases: [
 		{
 			compositionName: 'Devoxx 2023',
-			compositionId: 'Devoxx2023',
+			compositionId: 'Devoxx',
 		},
 		{
 			compositionName: 'Mixit 2023',
-			compositionId: 'Mixit2023',
+			compositionId: 'Mixit',
 		},
 		{
 			compositionName: 'Snowcamp',
@@ -80,7 +67,7 @@ export const sideBarConfig: sideBarProps = {
 		},
 		{
 			compositionName: 'TouraineTech 2023',
-			compositionId: 'TouraineTech2023',
+			compositionId: 'TouraineTech',
 		},
 		{
 			compositionName: 'Very Tech Trip',
@@ -93,6 +80,10 @@ export const sideBarConfig: sideBarProps = {
 		{
 			compositionName: 'Camping Des Speakers',
 			compositionId: 'CampingDesSpeakers',
+		},
+		{
+			compositionName: 'Volcamp 2023',
+			compositionId: 'Volcamp2023',
 		},
 	],
 	settings: {

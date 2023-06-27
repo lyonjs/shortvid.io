@@ -13,7 +13,6 @@ export const Sidebar = () => {
 						<Logo />
 						<h1>Shortvid.io</h1>
 					</a>
-					<SwitchThemeButtons />
 				</header>
 				<Nav />
 			</div>
@@ -27,6 +26,7 @@ export const Sidebar = () => {
 					</svg>
 					Contributing
 				</a>
+				<SwitchThemeButtons />
 			</footer>
 		</section>
 	);

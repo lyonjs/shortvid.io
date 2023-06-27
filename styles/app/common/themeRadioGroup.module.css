@@ -3,7 +3,6 @@
 	display: flex;
 	gap: 0.5rem;
 	padding: 0.25rem;
-	margin-left: 20px;
 	background: var(--color-background);
 	border: 1px solid var(--switch-border);
 	border-radius: 50px;

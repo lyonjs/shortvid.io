@@ -1,17 +1,58 @@
 .sideBarNav {
-	height: auto;
+	overflow: scroll;
+	max-height: 715px;
 
-	.topLevelLink {
-		display: block;
-		padding-top: 15px;
+	details {
+		user-select: none;
 
-		span {
+		> summary {
+			position: relative;
+			padding: 5px 10px;
+			border-radius: 5px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 15px;
+				height: 15px;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				background: var(--arrow) center
+					no-repeat;
+				background-size: contain;
+			}
+
+			&:hover {
+				cursor: pointer;
+				background: var(--switch-background);
+			}
+		}
+
+		&[open] {
+			> summary {
+				&::after {
+					transform: translateY(-50%) rotate(180deg);
+				}
+			}
+		}
+	}
+
+	.lopLevel {
+		margin-top: 15px;
+
+		&:first-child {
+			margin-top: 0;
+			padding: 5px 10px;
+		}
+
+		span,
+		summary {
 			display: flex;
 			align-items: center;
 			gap: 10px;
 			font-size: 1rem;
 			font-weight: 500;
-			color: var(--color-text);
 
 			svg {
 				width: 25px;
@@ -19,50 +60,53 @@
 			}
 		}
 
-		&.active, &:hover:not(li) {
-			span {
-				color: var(--color-link);
+		> details {
+			> ul {
+				padding-left: 45px;
+			}
+
+			.category {
+				> summary {
+					margin-top: 10px;
+					font-weight: 300;
+					font-size: 0.9rem;
+
+					&::after {
+						width: 10px;
+						height: 10px;
+					}
+				}
+
+				ul {
+					padding-left: 15px;
+				}
+			}
+
+			.activeLink {
+				span {
+					font-weight: 300;
+					font-size: 0.9rem;
+				}
 			}
 		}
 	}
+}
 
-	.list {
-		padding: 5px 0 0 40px;
+.activeLink {
+	display: block;
+	margin: 10px 0;
+	padding: 5px 10px;
+	border-radius: 5px;
 
-		.category {
-			> li {
-				font-weight: 500;
-				font-size: 0.9rem;
-			}
+	span {
+		color: var(--color-text);
+	}
 
-			ul {
-				padding-left: 15px;
-			}
-		}
+	&:hover {
+		background: var(--switch-background);
+	}
 
-		.videoLink {
-			display: block;
-			padding: 5px 10px;
-			border-radius: 5px;
-
-			span {
-				color: var(--color-text);
-				font-weight: 300;
-				font-size: 0.9rem;
-			}
-
-			&:hover {
-				span {
-					color: var(--color-link);
-				}
-			}
-
-			&.active {
-				border: 2px solid var(--color-primary);
-				span {
-					color: var(--color-link);
-				}
-			}
-		}
+	&.active {
+		background: var(--switch-background);
 	}
 }

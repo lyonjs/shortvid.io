@@ -4,6 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	gap: 15px;
 	max-width: 315px;
 	width: 100%;
 	height: calc(100vh - 2rem);
@@ -15,11 +16,9 @@
 	.sidebarTop {
 		position: relative;
 		box-sizing: content-box;
-		max-height: 100%;
-		height: 100%;
 
 		header {
-			padding-bottom: 15px;
+			margin-bottom: 15px;
 			border-bottom: 1px solid transparent;
 			border-image: linear-gradient(
 					90deg,
@@ -39,10 +38,6 @@
 				color: var(--color-wordmark);
 				padding-bottom: 15px;
 			}
-
-			> div {
-				margin: 0 auto;
-			}
 		}
 	}
 
@@ -61,6 +56,7 @@
 			display: flex;
 			align-items: center;
 			gap: 10px;
+			margin-bottom: 15px;
 			font-size: 1rem;
 			font-weight: 500;
 			color: var(--color-text);

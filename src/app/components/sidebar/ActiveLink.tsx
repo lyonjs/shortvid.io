@@ -3,6 +3,7 @@
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
 import {usePathname} from 'next/navigation';
 import {ReactNode} from 'react';
+import {convertFirstLetterToLowercase} from '../../utils/convertFirstLetterToLowercase';
 
 export const ActiveLink: React.FC<{
 	linkRoute: string;
@@ -18,10 +19,6 @@ export const ActiveLink: React.FC<{
 	children,
 }) => {
 	const pathname = usePathname();
-
-	const convertFirstLetterToLowercase = (str: string): string => {
-		return str.charAt(0).toLowerCase() + str.slice(1);
-	};
 
 	const link = formatId
 		? compositionId && linkRoute + convertFirstLetterToLowercase(compositionId)

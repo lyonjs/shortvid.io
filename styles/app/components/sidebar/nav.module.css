@@ -39,6 +39,7 @@
 
 	.lopLevel {
 		margin-top: 15px;
+		text-transform: capitalize;
 
 		&:first-child {
 			margin-top: 0;

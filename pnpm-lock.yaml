@@ -13,7 +13,7 @@ dependencies:
     version: 3.3.96(react-dom@18.2.0)(react@18.2.0)
   '@remotion/lottie':
     specifier: 3.3.96
-    version: 3.3.96(lottie-web@5.11.0)(react-dom@18.2.0)(react@18.2.0)
+    version: 3.3.96(lottie-web@5.12.2)(react-dom@18.2.0)(react@18.2.0)
   '@remotion/noise':
     specifier: 3.3.96
     version: 3.3.96(react-dom@18.2.0)(react@18.2.0)
@@ -36,8 +36,8 @@ dependencies:
     specifier: 29.5.0
     version: 29.5.0(@types/node@18.16.14)
   lottie-web:
-    specifier: 5.11.0
-    version: 5.11.0
+    specifier: 5.12.2
+    version: 5.12.2
   next:
     specifier: ^13.4.2
     version: 13.4.2(react-dom@18.2.0)(react@18.2.0)
@@ -1282,14 +1282,14 @@ packages:
       - react-dom
     dev: false
 
-  /@remotion/lottie@3.3.96(lottie-web@5.11.0)(react-dom@18.2.0)(react@18.2.0):
+  /@remotion/lottie@3.3.96(lottie-web@5.12.2)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-x1kN4TLjc2Ne2domcF6xAxPnwUIGpOm81M/hx5d86k3vKgYpCi54Ory1qkoZ85Mh7juh6WZnjk7naSi6UMLf1Q==}
     peerDependencies:
       lottie-web: ^5
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      lottie-web: 5.11.0
+      lottie-web: 5.12.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       remotion: 3.3.96(react-dom@18.2.0)(react@18.2.0)
@@ -4604,8 +4604,8 @@ packages:
     dependencies:
       js-tokens: 4.0.0
 
-  /lottie-web@5.11.0:
-    resolution: {integrity: sha512-9vSt0AtdOH98GKDXwD5LPfFg9Pcmxt5+1BllAbudKM5iqPxpJnJUfuGaP45OyudDrESCOBgsjnntVUTygBNlzw==}
+  /lottie-web@5.12.2:
+    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
     dev: false
 
   /lru-cache@5.1.1:

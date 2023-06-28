@@ -25,7 +25,7 @@
 		"@vercel/analytics": "^1.0.0",
 		"date-fns": "2.30.0",
 		"jest": "29.5.0",
-		"lottie-web": "5.11.0",
+		"lottie-web": "5.12.2",
 		"next": "^13.4.2",
 		"next-themes": "0.2.1",
 		"node-fetch": "^3.3.0",

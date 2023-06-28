@@ -10,12 +10,12 @@ export type categoryProps = {
 
 type sideBarNavProps = {
 	templates: {
-		icon: string;
+		iconifyId: string;
 		route: string;
 		items: (categoryProps | videoProps)[];
 	};
 	showcases: {
-		icon: string;
+		iconifyId: string;
 		route: string;
 		items: videoProps[];
 	};
@@ -23,7 +23,7 @@ type sideBarNavProps = {
 
 export const sideBarNavConfig: sideBarNavProps = {
 	templates: {
-		icon: 'ic:round-slow-motion-video',
+		iconifyId: 'ic:round-slow-motion-video',
 		route: '/templates/',
 		items: [
 			{
@@ -62,7 +62,7 @@ export const sideBarNavConfig: sideBarNavProps = {
 		],
 	},
 	showcases: {
-		icon: 'ph:video',
+		iconifyId: 'ph:video',
 		route: '/showcases/conferences/',
 		items: [
 			{

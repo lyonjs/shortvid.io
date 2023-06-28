@@ -25,7 +25,7 @@ export const Nav = () => {
 							<li key={index} className={styles.lopLevel}>
 								<details open={pathname.includes(typeOfVideo)}>
 									<summary>
-										<Icon icon={videoList.icon} /> {typeOfVideo}
+										<Icon icon={videoList.iconifyId} /> {typeOfVideo}
 									</summary>
 									<ul>
 										{videoList.items.map((videoParams, index) => {

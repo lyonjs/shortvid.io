@@ -1,9 +1,22 @@
 .sideBarNav {
 	overflow: scroll;
-	max-height: 715px;
+	height: 100%;
 
 	details {
 		user-select: none;
+		position: relative;
+
+		ul {
+			padding-left: 10px;
+			margin-left: 10px;
+			border-left: 1px solid transparent;
+			border-image: linear-gradient(
+					transparent,
+					var(--color-separator),
+					transparent
+				)
+				1;
+		}
 
 		> summary {
 			position: relative;
@@ -29,6 +42,8 @@
 		}
 
 		&[open] {
+			overflow: hidden;
+
 			> summary {
 				&::after {
 					transform: translateY(-50%) rotate(180deg);
@@ -62,7 +77,8 @@
 
 		> details {
 			> ul {
-				padding-left: 45px;
+				margin-left: 20px;
+				padding-left: 20px;
 			}
 
 			.category {
@@ -76,16 +92,16 @@
 						height: 10px;
 					}
 				}
-
-				ul {
-					padding-left: 15px;
-				}
 			}
 
 			.activeLink {
 				span {
 					font-weight: 300;
 					font-size: 0.9rem;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
 				}
 			}
 		}

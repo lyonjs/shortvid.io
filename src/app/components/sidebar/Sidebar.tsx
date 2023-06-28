@@ -7,15 +7,13 @@ import React from 'react';
 export const Sidebar = () => {
 	return (
 		<section className={styles.sidebar}>
-			<div className={styles.sidebarTop}>
-				<header>
-					<a href="/" className={styles.logoLink}>
-						<Logo />
-						<h1>Shortvid.io</h1>
-					</a>
-				</header>
-				<Nav />
-			</div>
+			<header>
+				<a href="/" className={styles.logoLink}>
+					<Logo />
+					<h1>Shortvid.io</h1>
+				</a>
+			</header>
+			<Nav />
 			<footer>
 				<a
 					href="https://github.com/lyonjs/shortvid.io"

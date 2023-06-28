@@ -13,35 +13,32 @@
 	border: 2px solid var(--switch-border);
 	border-radius: 10px;
 
-	.sidebarTop {
-		position: relative;
-		box-sizing: content-box;
+	header {
+		padding-bottom: 15px;
+		border-bottom: 1px solid transparent;
+		border-image: linear-gradient(
+				90deg,
+				transparent,
+				var(--color-separator),
+				transparent
+		)
+		1;
 
-		header {
-			margin-bottom: 15px;
-			border-bottom: 1px solid transparent;
-			border-image: linear-gradient(
-					90deg,
-					transparent,
-					var(--color-separator),
-					transparent
-				)
-				1;
-
-			.logoLink {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				gap: 10px;
-				font-size: 1.6rem;
-				font-family: MuseoModerno;
-				color: var(--color-wordmark);
-				padding-bottom: 15px;
-			}
+		.logoLink {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			font-size: 1.6rem;
+			font-family: MuseoModerno;
+			color: var(--color-wordmark);
 		}
 	}
 
 	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		padding-top: 15px;
 		border-top: 1px solid transparent;
 		border-image: linear-gradient(
@@ -56,7 +53,6 @@
 			display: flex;
 			align-items: center;
 			gap: 10px;
-			margin-bottom: 15px;
 			font-size: 1rem;
 			font-weight: 500;
 			color: var(--color-text);

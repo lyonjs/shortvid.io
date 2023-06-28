@@ -36,7 +36,9 @@
 	--switch-border: var(--grey-100);
 
 	--color-logo: white;
-	--color-wordmark: white;
+	--color-wordmark: var(--purple-100);
+
+	--color-fold-indicator: var(--purple-100);
 
 	--arrow: url('../public/images/common/arrow-white.svg');
 }
@@ -51,7 +53,7 @@
 	--color-btn-text: white;
 	--color-btn-background: var(--purple-700);
 
-	--switch-background: var(--grey-50);
+	--switch-background: var(--purple-50);
 	--switch-unselected: var(--grey-500);
 	--switch-border: var(--grey-100);
 

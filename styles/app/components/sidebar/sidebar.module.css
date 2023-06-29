@@ -21,8 +21,8 @@
 				transparent,
 				var(--color-separator),
 				transparent
-		)
-		1;
+			)
+			1;
 
 		.logoLink {
 			display: flex;

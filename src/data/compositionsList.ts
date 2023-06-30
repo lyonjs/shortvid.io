@@ -31,6 +31,7 @@ type CompositionProps = {
 	height: number;
 	compositionName: string;
 	durationInFrames: number;
+	frameForThumbnail?: number;
 	fps?: number;
 	defaultProps?:
 		| {[key: string]: string | undefined}
@@ -71,19 +72,19 @@ export const CompositionsList: CompositionsListProps = {
 			durationInFrames: 140,
 			defaultProps: {
 				backgroundColor: '#EA4335',
-				title: 'mardi',
+				title: 'Certification “Google Cloud Architect”',
 				startingDate: new Date(2023, 3, 18, 13),
 				endingDate: new Date(2023, 4, 23, 13, 45),
-				recurringDay: '5 Place Jules Ferry, 69006.',
-				location:
-					'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg',
+				recurringDay: 'mardi',
+				location: '5 Place Jules Ferry, 69006.',
 				logoUrl:
-					'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-goog/events/20200911_094649_MbC4W4N.jpg',
+					'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg',
 				speaker: {
-					pictureUrl: 'Julien Landuré',
-					name: 'Zenika Nantes',
-					company: 'CTO / GDE',
-					job: '',
+					pictureUrl:
+						'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-goog/events/20200911_094649_MbC4W4N.jpg',
+					name: 'Julien Landuré',
+					company: 'Zenika Nantes',
+					job: 'CTO / GDE',
 				},
 			},
 		},
@@ -93,6 +94,7 @@ export const CompositionsList: CompositionsListProps = {
 			width: 1920,
 			height: 1080,
 			durationInFrames: 1,
+			fps: 0,
 			defaultProps: {
 				mode: 'one',
 				title: 'Shortvid.io 🎬',
@@ -125,6 +127,7 @@ export const CompositionsList: CompositionsListProps = {
 			width: 1200,
 			height: 1200,
 			durationInFrames: 270,
+			frameForThumbnail: 90,
 			defaultProps: {
 				backgroundImg:
 					'https://i.pinimg.com/originals/de/0d/19/de0d19d835dd1224c5208701d78bd6e7.jpg',
@@ -218,7 +221,7 @@ export const CompositionsList: CompositionsListProps = {
 			component: CampingDesSpeakers,
 			width: 1280,
 			height: 720,
-			durationInFrames: 450,
+			durationInFrames: 540,
 			fps: 60,
 			defaultProps: _.merge(
 				{

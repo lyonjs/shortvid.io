@@ -6,13 +6,12 @@
 	max-width: 315px;
 	width: 100%;
 	height: calc(100vh - 2rem);
-	padding: 20px;
 	background: var(--color-background);
 	border: 2px solid var(--switch-border);
 	border-radius: 10px;
 
 	header {
-		padding-bottom: 15px;
+		padding: 20px 20px 15px 20px;
 		border-bottom: 1px solid transparent;
 		border-image: linear-gradient(
 				90deg,
@@ -36,7 +35,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-top: 15px;
+		padding: 15px 20px 20px 20px;
 		border-top: 1px solid transparent;
 		border-image: linear-gradient(
 				90deg,

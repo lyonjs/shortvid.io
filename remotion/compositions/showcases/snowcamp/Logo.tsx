@@ -19,7 +19,7 @@ export const Logo = () => {
 
 	return (
 		<Img
-			src={staticFile('/images/showcases/snowcamp/snowcampLogo.png')}
+			src={staticFile('/images/showcases/snowcamp/snowcamp.png')}
 			width={150}
 			height="auto"
 			style={{

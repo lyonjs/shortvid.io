@@ -19,7 +19,7 @@ export const Logo = () => {
 
 	return (
 		<Img
-			src={staticFile('/images/showcases/veryTechTripLogo.webp')}
+			src={staticFile('/images/showcases/veryTechTrip/veryTechTripLogo.webp')}
 			width={400}
 			height="auto"
 			style={{

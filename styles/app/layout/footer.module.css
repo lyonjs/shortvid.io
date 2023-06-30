@@ -6,8 +6,8 @@
 	text-align: center;
 	gap: 50px;
 	margin-top: 40px;
-	margin-bottom: 20px;
-	padding-top: 50px;
+	margin-bottom: 10px;
+	padding-top: 15px;
 	border-top: 1px solid transparent;
 	border-image: linear-gradient(
 			90deg,
@@ -39,7 +39,7 @@
 	}
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 600px) {
 	.bottomBar {
 		flex-direction: column;
 	}

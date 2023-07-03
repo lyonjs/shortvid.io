@@ -7,7 +7,7 @@ import {Header} from './Header';
 import {Footer} from './Footer';
 
 export const Sidebar = () => {
-	const [folded, setFolded] = useState<boolean>(true);
+	const [folded, setFolded] = useState<boolean>(false);
 
 	return (
 		<section className={styles.sidebar} data-folded={folded}>

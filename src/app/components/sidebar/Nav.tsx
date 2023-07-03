@@ -11,7 +11,7 @@ import {Icon} from '@iconify/react';
 import {usePathname} from 'next/navigation';
 import {CompositionThumbnail} from './CompositionThumbnail';
 
-export const Nav = () => {
+export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 	const pathname = usePathname();
 
 	return (
@@ -20,7 +20,7 @@ export const Nav = () => {
 				<li className={styles.topLevel}>
 					<ActiveLink src="/">
 						<span>
-							<Icon icon="majesticons:home-line" /> Home
+							<Icon icon="majesticons:home-line" />{!folded && 'Home'}
 						</span>
 					</ActiveLink>
 				</li>
@@ -30,12 +30,12 @@ export const Nav = () => {
 
 					return (
 						<li key={videoType} className={styles.topLevel}>
-							<details open={isOpen}>
+							<details open={isOpen && !folded} >
 								<summary>
 									<div>
-										<Icon icon={videoList.iconifyId} /> {videoType}
+										<Icon icon={videoList.iconifyId} /> {!folded && videoType}
 									</div>
-									<Icon icon="iconamoon:arrow-down-2" />
+									{!folded && <Icon icon="iconamoon:arrow-down-2" />}
 								</summary>
 								<ul>
 									{videoList.items.map((videoParams) => {

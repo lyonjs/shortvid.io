@@ -28,3 +28,9 @@
 		color: var(--color-text);
 	}
 }
+
+[data-folded="true"] {
+	.switchThemeGroup {
+		transform: scale(0.8);
+	}
+}

@@ -16,9 +16,9 @@ export default function RootLayout({children}: {children: ReactNode}) {
 					<Sidebar />
 					<section>
 						<FontProvider>{children}</FontProvider>
+						<Footer />
 					</section>
 				</div>
-				<Footer />
 				<Analytics />
 			</main>
 		</CustomThemeProvider>

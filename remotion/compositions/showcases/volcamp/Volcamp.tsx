@@ -22,6 +22,10 @@ export const Volcamp: React.FC<TalkProps> = ({
 					width={600}
 					height={200}
 					style={{
+						position: 'absolute',
+						top: 40,
+						left: '50%',
+						transform: 'translateX(-50%)',
 						margin: '100px auto',
 						zIndex: 10,
 					}}

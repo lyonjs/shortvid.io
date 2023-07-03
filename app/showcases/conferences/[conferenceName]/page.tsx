@@ -92,7 +92,7 @@ const Template: Record<string, TalkTemplate> = {
 		),
 	},
 	Volcamp2023: {
-		compositionName: 'Volcamp2023',
+		compositionName: 'Volcamp-2023',
 		component: Volcamp,
 		width: 1280,
 		height: 720,

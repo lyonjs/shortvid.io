@@ -99,7 +99,7 @@
 	}
 }
 
-[data-folded="true"] {
+[data-folded='true'] {
 	.sideBarNav {
 		overflow: visible;
 
@@ -129,14 +129,12 @@
 					left: 110%;
 					background: var(--color-background);
 					border: 1px solid var(--switch-border);
-					box-shadow: 0 0 15px rgba(0,0,0,0.2);
+					box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 					border-radius: 10px;
 					padding: 20px;
 					z-index: 10;
-
 				}
 			}
 		}
-
 	}
 }

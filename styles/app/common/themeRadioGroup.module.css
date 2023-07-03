@@ -29,7 +29,7 @@
 	}
 }
 
-[data-folded="true"] {
+[data-folded='true'] {
 	.switchThemeGroup {
 		transform: scale(0.8);
 	}

@@ -20,7 +20,8 @@ export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 				<li className={styles.topLevel}>
 					<ActiveLink src="/">
 						<span>
-							<Icon icon="majesticons:home-line" />{!folded && 'Home'}
+							<Icon icon="majesticons:home-line" />
+							{!folded && 'Home'}
 						</span>
 					</ActiveLink>
 				</li>
@@ -33,7 +34,8 @@ export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 							<details open={isOpen && !folded} >
 								<summary>
 									<div>
-										<Icon icon={videoList.iconifyId} /> {!folded && videoType}
+										<Icon icon={videoList.iconifyId} />
+										{!folded && videoType}
 									</div>
 									{!folded && <Icon icon="iconamoon:arrow-down-2" />}
 								</summary>

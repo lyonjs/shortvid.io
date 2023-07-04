@@ -6,20 +6,21 @@ import {ActiveLink} from './ActiveLink';
 import {CategoryLink} from './CategoryLink';
 import {Icon} from '@iconify/react';
 import {usePathname} from 'next/navigation';
+import {CompositionLink} from './compositionLink';
 export const Nav = () => {
 	const pathname = usePathname();
 
 	return (
 		<nav className={styles.sideBarNav}>
 			<ul>
-				<ActiveLink linkRoute="/" className={styles.lopLevel}>
-					<Icon icon="majesticons:home-line" /> Home
+				<ActiveLink src="/" className={styles.topLevel}>
+					<span>
+						<Icon icon="majesticons:home-line" /> Home
+					</span>
 				</ActiveLink>
 				{Object.entries(sideBarNavConfig).map(([videoType, videoList]) => {
-					const formatId = videoType === 'templates';
-
 					return (
-						<li key={videoType} className={styles.lopLevel}>
+						<li key={videoType} className={styles.topLevel}>
 							<details open={pathname.includes(videoType)}>
 								<summary>
 									<Icon icon={videoList.iconifyId} /> {videoType}
@@ -30,10 +31,9 @@ export const Nav = () => {
 											return (
 												<CategoryLink
 													key={videoParams.categoryName}
-													categoryRoute={videoList.route}
+													categoryRoute={`${videoList.route}${videoParams.categoryName}/`}
 													categoryName={videoParams.categoryName}
 													items={videoParams.items}
-													formatId={formatId}
 												/>
 											);
 										}
@@ -41,11 +41,11 @@ export const Nav = () => {
 										return (
 											<ActiveLink
 												key={videoParams.compositionId}
-												linkRoute={videoList.route}
-												compositionId={videoParams.compositionId}
-												formatId={formatId}
+												src={videoList.route + videoParams.compositionLink}
 											>
-												{videoParams.compositionName}
+												<CompositionLink
+													compositionName={videoParams.compositionName}
+												/>
 											</ActiveLink>
 										);
 									})}

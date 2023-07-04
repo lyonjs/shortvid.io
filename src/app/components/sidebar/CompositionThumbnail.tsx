@@ -1,14 +1,19 @@
-import {ReactNode} from 'react';
 import {useCompositionConfig} from '../../hooks/useCompositionConfig';
 import {Thumbnail} from '@remotion/player';
 import {CompositionType} from '../../../data/sideBarConfig';
 import styles from '../../../../styles/app/components/sidebar/activeLink.module.css';
 
-export const CompositionThumbnail: React.FC<{
+export type CompositionThumbnailProps = {
 	compositionType: CompositionType;
 	compositionId: string;
-	children: ReactNode;
-}> = ({compositionType, compositionId, children}) => {
+	compositionName: string;
+};
+
+export const CompositionThumbnail: React.FC<CompositionThumbnailProps> = ({
+	compositionType,
+	compositionId,
+	compositionName,
+}) => {
 	const videoConfig = useCompositionConfig(compositionType, compositionId);
 
 	return (
@@ -29,7 +34,7 @@ export const CompositionThumbnail: React.FC<{
 						/>
 					</span>
 					<div>
-						{children}
+						<h3>{compositionName}</h3>
 						<p>{videoConfig.durationInSeconds}</p>
 					</div>
 				</>

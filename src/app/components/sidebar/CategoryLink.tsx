@@ -1,17 +1,18 @@
 'use client';
 
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
-import {categoryProps} from '../../../data/sideBarConfig';
+import {categoryProps, CompositionType} from '../../../data/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
 import {usePathname} from 'next/navigation';
-import {CompositionLink} from './compositionLink';
+import {CompositionThumbnail} from './CompositionThumbnail';
 import {Icon} from '@iconify/react';
 
 export const CategoryLink: React.FC<
 	categoryProps & {
 		categoryRoute: string;
+		compositionType: CompositionType;
 	}
-> = ({categoryName, items, categoryRoute}) => {
+> = ({categoryName, items, categoryRoute, compositionType}) => {
 	const pathname = usePathname();
 	const isOpen = pathname.includes(categoryName);
 
@@ -28,7 +29,11 @@ export const CategoryLink: React.FC<
 							key={video.compositionId}
 							src={categoryRoute + video.compositionLink}
 						>
-							<CompositionLink compositionName={video.compositionName} />
+							<CompositionThumbnail
+								compositionType={compositionType}
+								compositionId={video.compositionId}
+								compositionName={video.compositionName}
+							/>
 						</ActiveLink>
 					);
 				})}

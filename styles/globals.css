@@ -78,8 +78,7 @@ main {
 		justify-content: space-between;
 		gap: 30px;
 
-		article {
-			max-width: 90rem;
+		section {
 			width: 100%;
 		}
 	}

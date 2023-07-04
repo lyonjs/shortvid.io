@@ -21,10 +21,10 @@ export const CategoryLink: React.FC<
 		<details className={styles.category} open={unfold}>
 			<summary>{categoryName}</summary>
 			<ul>
-				{items.map((category, index) => {
+				{items.map((category) => {
 					return (
 						<ActiveLink
-							key={index}
+							key={category.compositionId}
 							linkRoute={categoryRoute + categoryPath + '/'}
 							compositionId={category.compositionId}
 							formatId={formatId}

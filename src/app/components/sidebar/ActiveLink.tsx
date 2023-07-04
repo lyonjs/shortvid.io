@@ -3,39 +3,24 @@
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
 import {usePathname} from 'next/navigation';
 import {ReactNode} from 'react';
-import {convertFirstLetterToLowercase} from '../../utils/convertFirstLetterToLowercase';
 
 export const ActiveLink: React.FC<{
-	linkRoute: string;
-	compositionId?: string;
-	formatId?: boolean;
+	src: string;
 	className?: string;
 	children: ReactNode;
-}> = ({
-	linkRoute,
-	compositionId,
-	formatId = false,
-	className = '',
-	children,
-}) => {
+}> = ({src, className = '', children}) => {
 	const pathname = usePathname();
 
-	const link = formatId
-		? compositionId && linkRoute + convertFirstLetterToLowercase(compositionId)
-		: linkRoute + compositionId;
-
-	const isActive = compositionId ? pathname === link : pathname === linkRoute;
+	const isActive = pathname === src;
 
 	return (
 		<a
 			className={`${className} ${styles.activeLink} ${
 				isActive ? styles.active : ''
 			}`}
-			href={compositionId ? link : linkRoute}
+			href={src}
 		>
-			<li>
-				<span>{children}</span>
-			</li>
+			{children}
 		</a>
 	);
 };

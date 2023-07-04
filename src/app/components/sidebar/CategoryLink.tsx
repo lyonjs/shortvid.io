@@ -3,33 +3,28 @@
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
 import {categoryProps} from '../../../data/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
-import {convertFirstLetterToLowercase} from '../../utils/convertFirstLetterToLowercase';
 import {usePathname} from 'next/navigation';
+import {CompositionLink} from './compositionLink';
 
 export const CategoryLink: React.FC<
 	categoryProps & {
 		categoryRoute: string;
-		formatId?: boolean;
 	}
-> = ({categoryName, items, categoryRoute, formatId = false}) => {
+> = ({categoryName, items, categoryRoute}) => {
 	const pathname = usePathname();
-	const categoryPath = convertFirstLetterToLowercase(categoryName);
-
-	const unfold = pathname.includes(categoryPath);
+	const unfold = pathname.includes(categoryName);
 
 	return (
 		<details className={styles.category} open={unfold}>
 			<summary>{categoryName}</summary>
 			<ul>
-				{items.map((category) => {
+				{items.map((video) => {
 					return (
 						<ActiveLink
-							key={category.compositionId}
-							linkRoute={categoryRoute + categoryPath + '/'}
-							compositionId={category.compositionId}
-							formatId={formatId}
+							key={video.compositionId}
+							src={categoryRoute + video.compositionLink}
 						>
-							{category.compositionName}
+							<CompositionLink compositionName={video.compositionName} />
 						</ActiveLink>
 					);
 				})}

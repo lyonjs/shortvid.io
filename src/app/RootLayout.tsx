@@ -13,9 +13,9 @@ export default function RootLayout({children}: {children: ReactNode}) {
 			<main className="mx-auto p-4">
 				<div className="sidebarLayout">
 					<Sidebar />
-					<article>
+					<section>
 						<FontProvider>{children}</FontProvider>
-					</article>
+					</section>
 				</div>
 				<Footer />
 				<Analytics />

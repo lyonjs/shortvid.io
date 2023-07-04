@@ -13,51 +13,47 @@ export const Nav = () => {
 		<nav className={styles.sideBarNav}>
 			<ul>
 				<ActiveLink linkRoute="/" className={styles.lopLevel}>
-					<>
-						<Icon icon="majesticons:home-line" /> Home
-					</>
+					<Icon icon="majesticons:home-line" /> Home
 				</ActiveLink>
-				{Object.entries(sideBarNavConfig).map(
-					([typeOfVideo, videoList], index) => {
-						const formatId = typeOfVideo === 'templates';
+				{Object.entries(sideBarNavConfig).map(([videoType, videoList]) => {
+					const formatId = videoType === 'templates';
 
-						return (
-							<li key={index} className={styles.lopLevel}>
-								<details open={pathname.includes(typeOfVideo)}>
-									<summary>
-										<Icon icon={videoList.iconifyId} /> {typeOfVideo}
-									</summary>
-									<ul>
-										{videoList.items.map((videoParams, index) => {
-											if ('items' in videoParams) {
-												return (
-													<CategoryLink
-														key={index}
-														categoryRoute={videoList.route}
-														categoryName={videoParams.categoryName}
-														items={videoParams.items}
-														formatId={formatId}
-													/>
-												);
-											}
-
+					return (
+						<li key={videoType} className={styles.lopLevel}>
+							<details open={pathname.includes(videoType)}>
+								<summary>
+									<Icon icon={videoList.iconifyId} /> {videoType}
+								</summary>
+								<ul>
+									{videoList.items.map((videoParams) => {
+										if ('items' in videoParams) {
 											return (
-												<ActiveLink
-													key={index}
-													linkRoute={videoList.route}
-													compositionId={videoParams.compositionId}
+												<CategoryLink
+													key={videoParams.categoryName}
+													categoryRoute={videoList.route}
+													categoryName={videoParams.categoryName}
+													items={videoParams.items}
 													formatId={formatId}
-												>
-													{videoParams.compositionName}
-												</ActiveLink>
+												/>
 											);
-										})}
-									</ul>
-								</details>
-							</li>
-						);
-					}
-				)}
+										}
+
+										return (
+											<ActiveLink
+												key={videoParams.compositionId}
+												linkRoute={videoList.route}
+												compositionId={videoParams.compositionId}
+												formatId={formatId}
+											>
+												{videoParams.compositionName}
+											</ActiveLink>
+										);
+									})}
+								</ul>
+							</details>
+						</li>
+					);
+				})}
 			</ul>
 		</nav>
 	);

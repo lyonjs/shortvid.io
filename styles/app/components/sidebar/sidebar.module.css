@@ -11,7 +11,7 @@
 	border-radius: 10px;
 
 	header {
-		padding: 20px 20px 15px 20px;
+		padding: 20px 20px 15px;
 		border-bottom: 1px solid transparent;
 		border-image: var(--separator);
 
@@ -29,7 +29,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 15px 20px 20px 20px;
+		padding: 15px 20px 20px;
 		border-top: 1px solid transparent;
 		border-image: var(--separator);
 

@@ -13,13 +13,7 @@
 	header {
 		padding: 20px 20px 15px 20px;
 		border-bottom: 1px solid transparent;
-		border-image: linear-gradient(
-				90deg,
-				transparent,
-				var(--color-separator),
-				transparent
-			)
-			1;
+		border-image: var(--separator);
 
 		.logoLink {
 			display: flex;
@@ -37,13 +31,7 @@
 		align-items: center;
 		padding: 15px 20px 20px 20px;
 		border-top: 1px solid transparent;
-		border-image: linear-gradient(
-				90deg,
-				transparent,
-				var(--color-separator),
-				transparent
-			)
-			1;
+		border-image: var(--separator);
 
 		.contributeLink {
 			display: flex;

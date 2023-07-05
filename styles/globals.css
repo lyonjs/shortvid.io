@@ -36,6 +36,14 @@
 	--switch-border: var(--grey-100);
 
 	--color-logo: white;
+
+	--separator: linear-gradient(
+			90deg,
+			transparent,
+			var(--color-separator),
+			transparent
+	)
+	1;
 }
 
 [data-theme='light'] {

@@ -92,13 +92,7 @@
 				> ul {
 					padding-bottom: 10px;
 					border-bottom: 1px solid transparent;
-					border-image: linear-gradient(
-							90deg,
-							transparent,
-							var(--color-separator),
-							transparent
-						)
-						1;
+					border-image: var(--separator);
 				}
 			}
 		}

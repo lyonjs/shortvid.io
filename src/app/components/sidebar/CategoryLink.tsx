@@ -5,6 +5,7 @@ import {categoryProps} from '../../../data/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
 import {usePathname} from 'next/navigation';
 import {CompositionLink} from './compositionLink';
+import {Icon} from '@iconify/react';
 
 export const CategoryLink: React.FC<
 	categoryProps & {
@@ -16,7 +17,10 @@ export const CategoryLink: React.FC<
 
 	return (
 		<details className={styles.category} open={isOpen}>
-			<summary>{categoryName}</summary>
+			<summary>
+				{categoryName}
+				<Icon icon="iconamoon:arrow-down-2" />
+			</summary>
 			<ul>
 				{items.map((video) => {
 					return (

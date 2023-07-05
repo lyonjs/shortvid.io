@@ -37,8 +37,6 @@
 
 	--color-logo: white;
 	--color-logo-wordmark: var(--purple-100);
-
-	--arrow: url('../public/images/common/arrow-white.svg');
 }
 
 [data-theme='light'] {
@@ -57,8 +55,6 @@
 
 	--color-logo: var(--purple-600);
 	--color-logo-wordmark: var(--purple-300);
-
-	--arrow: url('../public/images/common/arrow.svg');
 }
 
 * {

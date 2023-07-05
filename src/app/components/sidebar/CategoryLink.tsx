@@ -1,7 +1,10 @@
 'use client';
 
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
-import {categoryProps, CompositionType} from '../../../data/sideBarConfig';
+import {
+	categoryProps,
+	CompositionType,
+} from '../../../data/config/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
 import {usePathname} from 'next/navigation';
 import {CompositionThumbnail} from './CompositionThumbnail';

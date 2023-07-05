@@ -1,6 +1,6 @@
 import {useCompositionConfig} from '../../hooks/useCompositionConfig';
 import {Thumbnail} from '@remotion/player';
-import {CompositionType} from '../../../data/sideBarConfig';
+import {CompositionType} from '../../../data/config/sideBarConfig';
 import styles from '../../../../styles/app/components/sidebar/activeLink.module.css';
 
 export type CompositionThumbnailProps = {

@@ -1,7 +1,10 @@
 'use client';
 
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
-import {CompositionType, sideBarNavConfig} from '../../../data/sideBarConfig';
+import {
+	CompositionType,
+	sideBarNavConfig,
+} from '../../../data/config/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
 import {CategoryLink} from './CategoryLink';
 import {Icon} from '@iconify/react';

@@ -1,5 +1,5 @@
-import {CompositionsList} from '../../data/compositionsList';
-import {CompositionType} from '../../data/sideBarConfig';
+import {CompositionsConfig} from '../../data/config/compositionsConfig';
+import {CompositionType} from '../../data/config/sideBarConfig';
 
 const formatTime = (numberToFormat: number) => {
 	return ('0' + numberToFormat).slice(-2);
@@ -9,7 +9,7 @@ export const useCompositionConfig = (
 	compositionType: CompositionType,
 	compositionId: string
 ) => {
-	const compositionDetails = CompositionsList[compositionType][compositionId];
+	const compositionDetails = CompositionsConfig[compositionType][compositionId];
 
 	if (compositionDetails) {
 		const fps = compositionDetails.fps || 30;

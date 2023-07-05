@@ -26,7 +26,10 @@ export const Nav = () => {
 						<li key={videoType} className={styles.topLevel}>
 							<details open={isOpen}>
 								<summary>
-									<Icon icon={videoList.iconifyId} /> {videoType}
+									<div>
+										<Icon icon={videoList.iconifyId} /> {videoType}
+									</div>
+									<Icon icon="iconamoon:arrow-down-2" />
 								</summary>
 								<ul>
 									{videoList.items.map((videoParams) => {

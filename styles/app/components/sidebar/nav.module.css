@@ -19,20 +19,15 @@
 		}
 
 		> summary {
-			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			padding: 5px 10px;
 			border-radius: 5px;
 
-			&::after {
-				content: '';
-				position: absolute;
-				width: 15px;
-				height: 15px;
-				right: 10px;
-				top: 50%;
-				transform: translateY(-50%);
-				background: var(--arrow) center no-repeat;
-				background-size: contain;
+			> svg {
+				width: 25px;
+				height: 25px;
 			}
 
 			&:hover {
@@ -45,8 +40,8 @@
 			overflow: hidden;
 
 			> summary {
-				&::after {
-					transform: translateY(-50%) rotate(180deg);
+				> svg {
+					transform: rotate(-180deg);
 				}
 			}
 		}
@@ -62,7 +57,7 @@
 		}
 
 		span,
-		summary {
+		summary > div {
 			display: flex;
 			align-items: center;
 			gap: 10px;
@@ -87,9 +82,9 @@
 					font-weight: 300;
 					font-size: 0.9rem;
 
-					&::after {
-						width: 10px;
-						height: 10px;
+					> svg {
+						width: 20px;
+						height: 20px;
 					}
 				}
 			}

@@ -95,7 +95,7 @@
 			}
 
 			.activeLink {
-				span {
+				li {
 					font-weight: 300;
 					font-size: 0.9rem;
 				}
@@ -114,7 +114,7 @@
 	padding: 5px 10px;
 	border-radius: 5px;
 
-	span {
+	li, span {
 		color: var(--color-text);
 	}
 

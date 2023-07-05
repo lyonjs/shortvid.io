@@ -16,7 +16,7 @@ type sideBarNavProps = Record<
 	{
 		iconifyId: string;
 		route: string;
-		items: (categoryProps | videoProps)[] | videoProps[];
+		items: (categoryProps | videoProps)[];
 	}
 >;
 

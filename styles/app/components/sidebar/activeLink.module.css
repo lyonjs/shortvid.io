@@ -36,10 +36,7 @@
 		}
 	}
 
-	&:hover {
-		background: var(--switch-background);
-	}
-
+	&:hover,
 	&.active {
 		background: var(--switch-background);
 	}

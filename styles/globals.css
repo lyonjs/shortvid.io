@@ -36,9 +36,7 @@
 	--switch-border: var(--grey-100);
 
 	--color-logo: white;
-	--color-wordmark: var(--purple-100);
-
-	--color-fold-indicator: var(--purple-100);
+	--color-logo-wordmark: var(--purple-100);
 
 	--arrow: url('../public/images/common/arrow-white.svg');
 }
@@ -58,7 +56,7 @@
 	--switch-border: var(--grey-100);
 
 	--color-logo: var(--purple-600);
-	--color-wordmark: var(--purple-300);
+	--color-logo-wordmark: var(--purple-300);
 
 	--arrow: url('../public/images/common/arrow.svg');
 }

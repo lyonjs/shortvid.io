@@ -12,10 +12,10 @@ export const CategoryLink: React.FC<
 	}
 > = ({categoryName, items, categoryRoute}) => {
 	const pathname = usePathname();
-	const unfold = pathname.includes(categoryName);
+	const isOpen = pathname.includes(categoryName);
 
 	return (
-		<details className={styles.category} open={unfold}>
+		<details className={styles.category} open={isOpen}>
 			<summary>{categoryName}</summary>
 			<ul>
 				{items.map((video) => {

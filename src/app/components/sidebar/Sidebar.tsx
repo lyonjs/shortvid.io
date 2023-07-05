@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 import {Logo} from '../../Logo';
 import {Nav} from './Nav';

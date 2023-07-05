@@ -109,7 +109,8 @@
 	padding: 5px 10px;
 	border-radius: 5px;
 
-	li, span {
+	li,
+	span {
 		color: var(--color-text);
 	}
 

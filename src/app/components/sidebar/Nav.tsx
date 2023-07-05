@@ -7,6 +7,7 @@ import {CategoryLink} from './CategoryLink';
 import {Icon} from '@iconify/react';
 import {usePathname} from 'next/navigation';
 import {CompositionLink} from './compositionLink';
+
 export const Nav = () => {
 	const pathname = usePathname();
 
@@ -19,9 +20,11 @@ export const Nav = () => {
 					</span>
 				</ActiveLink>
 				{Object.entries(sideBarNavConfig).map(([videoType, videoList]) => {
+					const isOpen = pathname.includes(videoType);
+
 					return (
 						<li key={videoType} className={styles.topLevel}>
-							<details open={pathname.includes(videoType)}>
+							<details open={isOpen}>
 								<summary>
 									<Icon icon={videoList.iconifyId} /> {videoType}
 								</summary>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Speaker} from '../../../types/conferences.types';
+import {Speaker} from '../../../types/defaultProps.types';
 import {SpeakersName} from './SpeakersName';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {

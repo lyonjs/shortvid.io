@@ -3,6 +3,7 @@ import React from 'react';
 import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
 import {LayerTitle} from './LayerTitle';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+import {DefaultLayerProps} from './layers.types';
 
 export const LayerOneSpeaker: React.FC<DefaultLayerProps> = ({
 	title,

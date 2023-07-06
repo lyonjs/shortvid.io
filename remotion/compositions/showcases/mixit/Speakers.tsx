@@ -6,7 +6,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Speaker} from '../../../types/conferences.types';
+import {Speaker} from '../../../types/defaultProps.types';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Text} from '../../../design/atoms/Text';
 

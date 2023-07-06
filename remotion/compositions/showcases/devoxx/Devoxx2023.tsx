@@ -7,7 +7,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Talk} from '../../../types/conferences.types';
+import {DefaultProps} from '../../../types/defaultProps.types';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
@@ -15,7 +15,7 @@ import React from 'react';
 import {Details} from './Details';
 import Balloons from './Balloons';
 
-export const Devoxx2023: React.FC<Talk> = ({
+export const Devoxx2023: React.FC<DefaultProps> = ({
 	title,
 	speakers,
 	date,

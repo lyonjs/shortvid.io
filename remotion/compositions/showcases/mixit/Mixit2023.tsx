@@ -3,10 +3,10 @@ import {LyonSkyline} from './LyonSkyline';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {Details} from './Details';
-import {Talk} from '../../../types/conferences.types';
+import {DefaultProps} from '../../../types/defaultProps.types';
 import {TalkTitle} from './TalkTitle';
 
-export const Mixit2023: React.FC<Talk> = ({
+export const Mixit2023: React.FC<DefaultProps> = ({
 	title,
 	speakers,
 	date,

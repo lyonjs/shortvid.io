@@ -4,7 +4,7 @@ type LayerBaseProps = {
 	decorationUrl?: string;
 };
 
-type DefaultLayerProps = LayerBaseProps & {
+export type DefaultLayerProps = LayerBaseProps & {
 	title?: string;
 	sponsorLogoUrl?: string;
 };

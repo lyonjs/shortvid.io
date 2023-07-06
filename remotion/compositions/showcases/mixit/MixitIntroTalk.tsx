@@ -1,9 +1,9 @@
 import {AbsoluteFill} from 'remotion';
 import {MixitIntro} from './MixitIntro';
-import {Talk} from '../../../types/conferences.types';
+import {DefaultProps} from '../../../types/defaultProps.types';
 import {Mixit2023} from './Mixit2023';
 
-export const MixitIntroTalk: React.FC<Talk> = ({
+export const MixitIntroTalk: React.FC<DefaultProps> = ({
 	title,
 	speakers,
 	date,

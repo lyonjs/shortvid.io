@@ -6,11 +6,7 @@ import {Mountains} from './Mountains';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkBackground} from './TalkBackground';
-
-export interface Speaker {
-	picture: string;
-	name: string;
-}
+import {Speaker} from '../../../types/defaultProps.types';
 
 export interface AlpesCraftProps {
 	title: string;

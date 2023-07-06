@@ -6,21 +6,9 @@ import React from 'react';
 import {Snow} from './Snow';
 import {Logo} from './Logo';
 import {TalkBackground} from './TalkBackground';
+import {DefaultProps} from '../../../types/defaultProps.types';
 
-export interface Speaker {
-	picture: string;
-	name: string;
-}
-
-export interface TouraineTechProps {
-	title: string;
-	speakers: Speaker[];
-	date: string;
-	time: string;
-	location: string;
-}
-
-export const Snowcamp: React.FC<TouraineTechProps> = ({
+export const Snowcamp: React.FC<DefaultProps> = ({
 	title,
 	speakers,
 	date,

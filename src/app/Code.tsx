@@ -1,14 +1,14 @@
 import {MouseEvent, useCallback} from 'react';
 import va from '@vercel/analytics';
-import {TouraineTechProps} from '../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {ReplayProps} from '../../app/templates/replay/page';
 import {TalkBrandedProps} from '../../remotion/compositions/templates/talk/branded/TalkBranded';
+import {DefaultProps} from '../../remotion/types/defaultProps.types';
 
 export const Code: React.FC<{
 	composition: string;
 	params:
 		| {[key: string]: string | undefined}
-		| TouraineTechProps
+		| DefaultProps
 		| ReplayProps
 		| TalkBrandedProps;
 }> = ({params, composition}) => {

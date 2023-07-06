@@ -1,9 +1,6 @@
 'use client';
 
-import {
-	Snowcamp,
-	TouraineTechProps,
-} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
+import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
 import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit/MixitIntroTalk';
 import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech/TouraineTech2023';
@@ -20,6 +17,7 @@ import _ = require('lodash');
 import {ReplayProps} from '../../../templates/replay/page';
 import {TalkBrandedProps} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volcamp';
+import {DefaultProps} from '../../../../remotion/types/defaultProps.types';
 interface TalkTemplate {
 	component: React.FC<any>;
 	width: number;
@@ -29,7 +27,7 @@ interface TalkTemplate {
 	fps?: number;
 	defaultProps?:
 		| {[key: string]: string | undefined}
-		| TouraineTechProps
+		| DefaultProps
 		| ReplayProps
 		| TalkBrandedProps;
 }

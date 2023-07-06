@@ -2,6 +2,7 @@ import {AbsoluteFill, Img} from 'remotion';
 import React from 'react';
 import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+import {LayerBaseProps} from './layers.types';
 
 export const LayerFullScreen: React.FC<LayerBaseProps> = ({
 	primaryColor,

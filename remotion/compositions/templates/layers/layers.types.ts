@@ -1,4 +1,4 @@
-type LayerBaseProps = {
+export type LayerBaseProps = {
 	primaryColor?: string;
 	secondaryColor?: string;
 	decorationUrl?: string;

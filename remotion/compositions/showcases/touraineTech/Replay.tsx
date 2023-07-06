@@ -2,10 +2,10 @@ import {Sequence} from 'remotion';
 import {Logo} from './Logo';
 import {TalkTitle} from './TalkTitle';
 import {AbsoluteFill} from 'remotion';
-import {Speaker} from './TouraineTech2023';
 import {Type} from './Type';
 import {BigSpeakers} from './BigSpeakers';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+import {Speaker} from '../../../types/defaultProps.types';
 
 interface ReplayType {
 	title: string;

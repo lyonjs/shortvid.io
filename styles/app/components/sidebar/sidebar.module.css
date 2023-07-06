@@ -62,16 +62,20 @@
 
 	.foldButton {
 		position: absolute;
-		width: 30px;
-		height: 30px;
-		padding: 6px;
-		border-radius: 8px;
-		border: 2px solid var(--switch-border);
-		background: red center no-repeat, var(--color-background);
-		background-size: 15px;
 		top: 80px;
 		right: -15px;
-		transform: rotate(90deg);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2px;
+		border-radius: 8px;
+		border: 2px solid var(--switch-border);
+		background: var(--color-background);
+
+		> svg {
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&[data-folded='true'] {
@@ -79,7 +83,7 @@
 		width: 110px;
 
 		.foldButton {
-			transform: rotate(-90deg);
+			transform: rotate(180deg);
 		}
 
 		footer {

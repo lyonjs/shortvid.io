@@ -95,8 +95,8 @@ devDependencies:
     specifier: ^2.5.3
     version: 2.5.3
   '@types/testing-library__jest-dom':
-    specifier: 5.14.6
-    version: 5.14.6
+    specifier: 5.14.7
+    version: 5.14.7
   '@types/web':
     specifier: 0.0.103
     version: 0.0.103
@@ -1417,7 +1417,7 @@ packages:
     dependencies:
       '@adobe/css-tools': 4.2.0
       '@babel/runtime': 7.22.5
-      '@types/testing-library__jest-dom': 5.14.6
+      '@types/testing-library__jest-dom': 5.14.7
       aria-query: 5.2.1
       chalk: 3.0.0
       css.escape: 1.5.1
@@ -1595,8 +1595,8 @@ packages:
   /@types/stack-utils@2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
 
-  /@types/testing-library__jest-dom@5.14.6:
-    resolution: {integrity: sha512-FkHXCb+ikSoUP4Y4rOslzTdX5sqYwMxfefKh1GmZ8ce1GOkEHntSp6b5cGadmNfp5e4BMEWOMx+WSKd5/MqlDA==}
+  /@types/testing-library__jest-dom@5.14.7:
+    resolution: {integrity: sha512-PFDoAbR9y8pD9+41oM1Yy0nVCkaRPlklmDZoPCXhNpR0ZO13HAYWqdNEjLtvIiveBmfB/+jdvmuOVeOXehKOaA==}
     dependencies:
       '@types/jest': 29.5.1
     dev: true

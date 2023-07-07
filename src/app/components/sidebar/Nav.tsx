@@ -32,7 +32,7 @@ export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 					return (
 						<li key={videoType} className={styles.topLevel}>
 							<details open={isOpen && !folded}>
-								<summary>
+								<summary className={isOpen ? styles.selected : ''}>
 									<div>
 										<Icon icon={videoList.iconifyId} />
 										{!folded && videoType}

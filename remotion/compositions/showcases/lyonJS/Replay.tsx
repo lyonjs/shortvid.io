@@ -7,11 +7,7 @@ import React from 'react';
 import {Details} from './Details';
 import {LogoSponsor} from './LogoSponsor';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-
-export interface Speaker {
-	picture: string;
-	name: string;
-}
+import {Speaker} from '../../../types/defaultProps.types';
 
 interface LyonJSReplayType {
 	title: string;

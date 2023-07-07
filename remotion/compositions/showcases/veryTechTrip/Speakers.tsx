@@ -1,5 +1,5 @@
 import {Sequence} from 'remotion';
-import {Speaker as SpeakerType} from '../../../types/conferences.types';
+import {Speaker as SpeakerType} from '../../../types/defaultProps.types';
 import React from 'react';
 import {FadeIn} from './FadeIn';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';

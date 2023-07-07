@@ -3,7 +3,7 @@ export interface Speaker {
 	name: string;
 }
 
-export interface Talk {
+export interface DefaultProps {
 	title: string;
 	speakers: Speaker[];
 	date: string;

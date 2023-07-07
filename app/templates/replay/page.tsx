@@ -6,8 +6,8 @@ import {Code} from '../../../src/app/Code';
 
 import locale from 'react-json-editor-ajrm/locale/en';
 import JSONInput from 'react-json-editor-ajrm/index';
-import {Speaker} from '../../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {ReplayLyonJS} from '../../../remotion/compositions/showcases/lyonJS/Replay';
+import {Speaker} from '../../../remotion/types/defaultProps.types';
 
 export interface ReplayProps {
 	title: string;

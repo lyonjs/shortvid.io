@@ -1,6 +1,6 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {SpeakerName} from './SpeakerName';
-import {Speaker} from '../../../types/conferences.types';
+import {Speaker} from '../../../types/defaultProps.types';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {

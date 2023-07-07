@@ -5,21 +5,9 @@ import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Speakers} from './Speakers';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+import {DefaultProps} from '../../../types/defaultProps.types';
 
-export interface Speaker {
-	picture: string;
-	name: string;
-}
-
-export interface TouraineTechProps {
-	title: string;
-	speakers: Speaker[];
-	date: string;
-	time: string;
-	location: string;
-}
-
-export const TouraineTech2023: React.FC<TouraineTechProps> = ({
+export const TouraineTech2023: React.FC<DefaultProps> = ({
 	title,
 	speakers,
 	date,

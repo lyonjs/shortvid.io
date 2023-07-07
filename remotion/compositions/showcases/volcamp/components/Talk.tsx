@@ -1,4 +1,3 @@
-import {Sequence} from 'remotion';
 import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
 import {Theme, ThemeProps} from './Theme';

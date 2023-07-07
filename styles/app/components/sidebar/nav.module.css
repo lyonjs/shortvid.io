@@ -26,7 +26,8 @@
 				height: 25px;
 			}
 
-			&:hover, &.selected {
+			&:hover,
+			&.selected {
 				cursor: pointer;
 				background: var(--switch-background);
 			}

@@ -1,7 +1,9 @@
 import {useContext, useEffect} from 'react';
-import {loadGoogleFont} from '../utils/loadFont';
-import {FontContext} from '../../context/FontContext';
+
 import {useSearchParams} from 'next/navigation';
+
+import {FontContext} from '../../context/FontContext';
+import {loadGoogleFont} from '../utils/loadFont';
 
 export const useSelectedFont = () => {
 	const {selectedFont, setSelectedFont} = useContext(FontContext);

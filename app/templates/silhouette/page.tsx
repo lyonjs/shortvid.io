@@ -1,14 +1,15 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {useInputChange} from '../../../src/app/hooks/useInputChange';
-import {Form, Input} from '../../../src/app/forms/input';
-import {Code} from '../../../src/app/Code';
+
 import {Silhouette} from '../../../remotion/compositions/templates/silhouette/Silhouette';
 import {Side} from '../../../remotion/compositions/templates/silhouette/Silhouette.type';
-import {SelectInput} from '../../../src/app/forms/selectInput';
-import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
+import {Code} from '../../../src/app/Code';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
+import {Form, Input} from '../../../src/app/forms/input';
+import {SelectInput} from '../../../src/app/forms/selectInput';
+import {useInputChange} from '../../../src/app/hooks/useInputChange';
+import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 
 export default function SilhouettePage() {
 	const [title, setTitle] = useInputChange<string>(

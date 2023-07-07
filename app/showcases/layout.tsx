@@ -1,4 +1,5 @@
 import {ReactNode} from 'react';
+
 import '../../styles/globals.css';
 import RootLayout from '../../src/app/RootLayout';
 

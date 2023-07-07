@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+
 import {useTheme} from 'next-themes';
 
 export type SelectedThemeTypes = 'dark' | 'light' | 'system';

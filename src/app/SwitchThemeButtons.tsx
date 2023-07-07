@@ -1,8 +1,8 @@
 'use client';
 
+import {useSelectedTheme} from './hooks/useSelectedTheme';
 import {ThemeRadioButton} from './ThemeRadioButton';
 import styles from '../../styles/app/common/themeRadioGroup.module.css';
-import {useSelectedTheme} from './hooks/useSelectedTheme';
 
 export const SwitchThemeButtons = () => {
 	const {systemTheme, selectedTheme, setSelectedTheme} = useSelectedTheme();

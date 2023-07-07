@@ -1,4 +1,5 @@
 import {FormEvent, useCallback, useState} from 'react';
+
 import {useSearchParams} from 'next/navigation';
 
 export const useInputChange = <ValueType extends string | undefined>(

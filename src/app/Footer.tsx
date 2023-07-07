@@ -1,7 +1,9 @@
-import styles from '../../styles/app/layout/footer.module.css';
 import React from 'react';
+
 import {Logo} from './Logo';
 import {PoweredByVercel} from './PoweredByVercel';
+import {SwitchThemeButtons} from './SwitchThemeButtons';
+import styles from '../../styles/app/layout/footer.module.css';
 
 export const Footer = () => {
 	return (

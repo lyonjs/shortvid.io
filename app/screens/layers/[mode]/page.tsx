@@ -2,6 +2,7 @@
 
 import {Player} from '@remotion/player';
 import {useSearchParams} from 'next/navigation';
+
 import LayerByMode from '../../../../src/app/LayerByMode';
 import {LayerMode} from '../../../../src/app/types/layerMode.types';
 

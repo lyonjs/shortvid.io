@@ -1,0 +1,9 @@
+.sidebarLayout {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+
+	section {
+		width: 100%;
+	}
+}

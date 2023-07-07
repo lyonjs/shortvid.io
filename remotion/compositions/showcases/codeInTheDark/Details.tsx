@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
-import {interpolate, useCurrentFrame} from 'remotion';
+
 import {loadFont} from '@remotion/google-fonts/AnonymousPro';
+import {interpolate, useCurrentFrame} from 'remotion';
 
 const {fontFamily} = loadFont();
 

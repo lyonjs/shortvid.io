@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
+
 import {Title} from '../../../design/atoms/Title';
 
 export const TalkTitle: React.FC<{

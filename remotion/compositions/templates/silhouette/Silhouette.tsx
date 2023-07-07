@@ -1,9 +1,11 @@
-import {AbsoluteFill, Sequence} from 'remotion';
 import React from 'react';
+
+import {AbsoluteFill, Sequence} from 'remotion';
+
 import {Side} from './Silhouette.type';
+import {SilhouetteLogo} from './SilhouetteLogo';
 import {SilhouettePicture} from './SilhouettePicture';
 import {SilhouetteTitle} from './SilhouetteTitle';
-import {SilhouetteLogo} from './SilhouetteLogo';
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
 export const Silhouette: React.FC<{

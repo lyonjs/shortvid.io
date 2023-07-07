@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 
 export const Words = () => {

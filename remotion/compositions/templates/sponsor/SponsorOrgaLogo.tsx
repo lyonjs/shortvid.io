@@ -1,6 +1,8 @@
 import React from 'react';
-import {EventLogo} from '../../../design/atoms/EventLogo';
+
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {EventLogo} from '../../../design/atoms/EventLogo';
 
 export const SponsorOrgaLogo: React.FC = () => {
 	const frame = useCurrentFrame();

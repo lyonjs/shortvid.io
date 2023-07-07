@@ -1,8 +1,8 @@
-import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
-import {Theme, ThemeProps} from './Theme';
-import {speakerProps, Speakers} from './Speakers';
 import {Logo} from './Logo';
+import {speakerProps, Speakers} from './Speakers';
+import {TalkTitle} from './TalkTitle';
+import {Theme, ThemeProps} from './Theme';
 
 export type TalkProps = {
 	themeName: ThemeProps['themeName'];

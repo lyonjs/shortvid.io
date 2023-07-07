@@ -1,6 +1,7 @@
 import {AbsoluteFill} from 'remotion';
-import {MeetupTitle} from './MeetupTitle';
+
 import {MeetupLogo} from './MeetupLogo';
+import {MeetupTitle} from './MeetupTitle';
 
 export type MeetupPresentationProps = {
 	eventLogo?: string;

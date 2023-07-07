@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {
 	AbsoluteFill,
 	Img,
@@ -7,13 +9,13 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {DefaultProps} from '../../../types/defaultProps.types';
+
+import Balloons from './Balloons';
+import {Details} from './Details';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
-import React from 'react';
-import {Details} from './Details';
-import Balloons from './Balloons';
+import {DefaultProps} from '../../../types/defaultProps.types';
 
 export const Devoxx2023: React.FC<DefaultProps> = ({
 	title,

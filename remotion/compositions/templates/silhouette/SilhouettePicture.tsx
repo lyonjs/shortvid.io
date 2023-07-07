@@ -1,5 +1,7 @@
-import {Easing, Img, interpolate, useCurrentFrame} from 'remotion';
 import React from 'react';
+
+import {Easing, Img, interpolate, useCurrentFrame} from 'remotion';
+
 import {Side} from './Silhouette.type';
 
 const DURATION = 20;

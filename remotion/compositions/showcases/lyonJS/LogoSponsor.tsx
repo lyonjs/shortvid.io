@@ -1,5 +1,5 @@
-import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
+import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 const {fontFamily} = loadFont();
 

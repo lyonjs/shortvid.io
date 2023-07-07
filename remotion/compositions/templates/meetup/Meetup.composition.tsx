@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Composition, Folder} from 'remotion';
+
 import {Meetup} from './Meetup';
 import {Register} from './Register';
 

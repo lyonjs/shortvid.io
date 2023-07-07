@@ -1,6 +1,8 @@
-import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {TalkDetails} from '../../../design/molecules/TalkDetails';
 import React from 'react';
+
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {TalkDetails} from '../../../design/molecules/TalkDetails';
 
 export const Type: React.FC<{type: string}> = ({type}) => {
 	const frame = useCurrentFrame();

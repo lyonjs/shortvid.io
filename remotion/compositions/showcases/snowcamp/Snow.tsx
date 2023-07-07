@@ -1,6 +1,7 @@
 import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../../hooks/useLottie';
 import {interpolate, useCurrentFrame} from 'remotion';
+
+import {useLottie} from '../../../hooks/useLottie';
 
 export const Snow = () => {
 	const frame = useCurrentFrame();

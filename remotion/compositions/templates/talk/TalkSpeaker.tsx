@@ -1,7 +1,9 @@
 import React from 'react';
-import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
-import {Title} from '../../../design/atoms/Title';
+
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {Title} from '../../../design/atoms/Title';
+import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 
 export const TalkSpeaker: React.FC<{
 	speakerPicture?: string;

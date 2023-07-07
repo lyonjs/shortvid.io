@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Composition, Folder} from 'remotion';
+
 import {VeryTechTrip} from './VeryTechTrip';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
 

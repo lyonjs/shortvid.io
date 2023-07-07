@@ -1,5 +1,6 @@
-import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 
 const {fontFamily} = loadFont();

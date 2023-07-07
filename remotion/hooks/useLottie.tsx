@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
-import {continueRender, delayRender} from 'remotion';
+
 import {LottieAnimationData} from '@remotion/lottie';
+import {continueRender, delayRender} from 'remotion';
 
 export const useLottie = (
 	icon: undefined | string

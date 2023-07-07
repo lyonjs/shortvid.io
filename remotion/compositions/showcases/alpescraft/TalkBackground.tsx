@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
 export const TalkBackground = () => {

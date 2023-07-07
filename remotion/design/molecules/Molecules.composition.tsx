@@ -1,8 +1,10 @@
 import React from 'react';
+
 import {Composition, Folder} from 'remotion';
+
 import {AvatarWithCaption} from './AvatarWithCaption';
-import {TalkDetails} from './TalkDetails';
 import {IconWithCaption} from './IconWithCaption';
+import {TalkDetails} from './TalkDetails';
 
 export const MoleculesComposition: React.FC = () => {
 	return (

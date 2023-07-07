@@ -1,4 +1,5 @@
 import {Composition, Folder} from 'remotion';
+
 import {Volcamp} from './Volcamp';
 
 export const VolcampComposition = () => {

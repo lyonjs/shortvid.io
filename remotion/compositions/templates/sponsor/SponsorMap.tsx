@@ -1,7 +1,8 @@
-import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {useLottie} from '../../../hooks/useLottie';
 import {Lottie} from '@remotion/lottie';
+import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Title} from '../../../design/atoms/Title';
+import {useLottie} from '../../../hooks/useLottie';
 
 export const SponsorMap: React.FC<{
 	localisation?: string;

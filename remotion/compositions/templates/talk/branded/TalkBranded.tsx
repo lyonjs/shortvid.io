@@ -1,14 +1,16 @@
 import React from 'react';
-import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+
 import {loadFont} from '@remotion/google-fonts/OpenSans';
-import {BrandedTitle} from './BrandedTitle';
-import {BrandedDetails} from './BrandedDetails';
-import {BackgroundCircleNoise} from '../../../../design/atoms/BackgroundCircleNoise';
-import {BrandedLogo} from './BrandedLogo';
-import {BrandedSpeaker} from './BrandedSpeaker';
 import {format} from 'date-fns';
 import {fr} from 'date-fns/locale';
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+
+import {BrandedDetails} from './BrandedDetails';
 import {BrandedLocation} from './BrandedLocation';
+import {BrandedLogo} from './BrandedLogo';
+import {BrandedSpeaker} from './BrandedSpeaker';
+import {BrandedTitle} from './BrandedTitle';
+import {BackgroundCircleNoise} from '../../../../design/atoms/BackgroundCircleNoise';
 
 const {fontFamily} = loadFont();
 

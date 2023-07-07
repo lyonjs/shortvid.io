@@ -1,4 +1,5 @@
 import {Composition, Folder} from 'remotion';
+
 import {CodeInTheDark} from './CodeInTheDark';
 
 export const CodeInTheDarkComposition: React.FC = () => {

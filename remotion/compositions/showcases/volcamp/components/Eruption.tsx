@@ -1,5 +1,6 @@
-import {Volcano} from './Volcano';
 import {useCurrentFrame} from 'remotion';
+
+import {Volcano} from './Volcano';
 
 export const Eruption = () => {
 	const frame = useCurrentFrame();

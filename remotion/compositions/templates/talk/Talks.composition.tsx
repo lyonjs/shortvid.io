@@ -1,7 +1,9 @@
 import React from 'react';
+
 import {Composition, Folder, staticFile} from 'remotion';
-import {Talk} from './Talk';
+
 import {TalkBranded} from './branded/TalkBranded';
+import {Talk} from './Talk';
 
 export const TalksComposition: React.FC = () => {
 	const startingDate = new Date(2023, 3, 18, 13);

@@ -1,9 +1,10 @@
 import {Sequence} from 'remotion';
+import {AbsoluteFill} from 'remotion';
+
+import {BigSpeakers} from './BigSpeakers';
 import {Logo} from './Logo';
 import {TalkTitle} from './TalkTitle';
-import {AbsoluteFill} from 'remotion';
 import {Type} from './Type';
-import {BigSpeakers} from './BigSpeakers';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {Speaker} from '../../../types/defaultProps.types';
 

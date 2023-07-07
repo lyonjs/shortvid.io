@@ -1,4 +1,3 @@
-import {IntroBackground} from './components/IntroBackground';
 import {
 	Audio,
 	Easing,
@@ -7,11 +6,13 @@ import {
 	staticFile,
 	useCurrentFrame,
 } from 'remotion';
+
+import {BackTrees} from './components/BackTrees';
+import {FireCamp} from './components/FireCamp';
 import {FrontTrees} from './components/FrontTrees';
 import {Grass} from './components/Grass';
-import {BackTrees} from './components/BackTrees';
 import {Ground} from './components/Ground';
-import {FireCamp} from './components/FireCamp';
+import {IntroBackground} from './components/IntroBackground';
 import {Tent} from './components/Tent';
 
 export const Introduction = () => {

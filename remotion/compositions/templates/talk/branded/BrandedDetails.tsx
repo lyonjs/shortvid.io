@@ -1,6 +1,8 @@
 import React from 'react';
-import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Icon} from '@iconify/react';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Text} from '../../../../design/atoms/Text';
 
 const ReccuringDay: React.FC<{day: string}> = ({day}) => {

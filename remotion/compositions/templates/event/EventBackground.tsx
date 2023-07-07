@@ -1,6 +1,8 @@
 import React from 'react';
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
+
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
 export const EventBackground: React.FC<{backgroundImg: string}> = ({
 	backgroundImg,

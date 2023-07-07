@@ -1,5 +1,6 @@
-import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import React from 'react';
+
+import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const FrontTrees: React.FC = () => {
 	const frame = useCurrentFrame();

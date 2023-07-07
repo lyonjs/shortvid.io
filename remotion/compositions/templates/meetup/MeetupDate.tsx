@@ -1,6 +1,7 @@
-import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title} from '../../../design/atoms/Title';
 import {Lottie} from '@remotion/lottie';
+import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {Title} from '../../../design/atoms/Title';
 import {useLottie} from '../../../hooks/useLottie';
 
 export const MeetupDate: React.FC<{date: string}> = ({date}) => {

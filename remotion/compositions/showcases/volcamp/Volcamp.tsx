@@ -1,8 +1,9 @@
+import {loadFont} from '@remotion/google-fonts/Poppins';
 import {AbsoluteFill, Img, Sequence, staticFile} from 'remotion';
-import {Transition} from './components/Transition';
+
 import {Eruption} from './components/Eruption';
 import {Talk, TalkProps} from './components/Talk';
-import {loadFont} from '@remotion/google-fonts/Poppins';
+import {Transition} from './components/Transition';
 
 const {fontFamily} = loadFont();
 

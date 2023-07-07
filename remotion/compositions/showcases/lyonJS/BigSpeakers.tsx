@@ -6,8 +6,9 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
+
 import {Text} from '../../../design/atoms/Text';
+import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Speaker} from '../../../types/defaultProps.types';
 
 export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({

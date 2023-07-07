@@ -1,5 +1,5 @@
 import React from 'react';
-import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
+
 import {
 	AbsoluteFill,
 	interpolate,
@@ -7,7 +7,9 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
 import {BrandedSpeakerInfos} from './BrandedSpeakerInfos';
+import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
 
 export const BrandedSpeaker: React.FC<{
 	pictureUrl: string;

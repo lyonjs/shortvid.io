@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {noise3D} from '@remotion/noise';
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 

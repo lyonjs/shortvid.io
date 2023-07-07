@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '../../../../styles/app/components/sidebar/nav.module.css';
+import styles from '../../../../styles/app/components/sidebar/activeLink.module.css';
 import {usePathname} from 'next/navigation';
 import {ReactNode} from 'react';
 

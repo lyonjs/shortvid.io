@@ -9,18 +9,16 @@ export type categoryProps = {
 	items: videoProps[];
 };
 
-type sideBarNavProps = {
-	templates: {
+export type CompositionType = 'templates' | 'showcases';
+
+type sideBarNavProps = Record<
+	CompositionType,
+	{
 		iconifyId: string;
 		route: string;
 		items: (categoryProps | videoProps)[];
-	};
-	showcases: {
-		iconifyId: string;
-		route: string;
-		items: videoProps[];
-	};
-};
+	}
+>;
 
 export const sideBarNavConfig: sideBarNavProps = {
 	templates: {

@@ -118,6 +118,9 @@ devDependencies:
   eslint-config-next:
     specifier: ^13.4.2
     version: 13.4.2(eslint@8.44.0)(typescript@5.1.6)
+  eslint-plugin-import:
+    specifier: 2.27.5
+    version: 2.27.5(@typescript-eslint/parser@5.61.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.44.0)
   husky:
     specifier: 8.0.3
     version: 8.0.3

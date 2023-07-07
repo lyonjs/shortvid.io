@@ -7,15 +7,11 @@
 		position: relative;
 
 		ul {
-			padding-left: 10px;
-			margin-left: 10px;
-			border-left: 1px solid transparent;
-			border-image: linear-gradient(
-					transparent,
-					var(--color-separator),
-					transparent
-				)
-				1;
+			margin-top: 10px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 15px;
 		}
 
 		> summary {
@@ -48,15 +44,20 @@
 	}
 
 	.topLevel {
+		padding: 0 20px;
 		margin-top: 15px;
 		text-transform: capitalize;
 
 		&:first-child {
 			margin-top: 0;
-			padding: 5px 10px;
+
+			> a {
+				width: 100%;
+				padding: 5px 10px;
+			}
 		}
 
-		span,
+		&:first-child span,
 		summary > div {
 			display: flex;
 			align-items: center;
@@ -64,7 +65,7 @@
 			font-size: 1rem;
 			font-weight: 500;
 
-			svg {
+			> svg {
 				width: 25px;
 				height: auto;
 			}
@@ -72,13 +73,13 @@
 
 		> details {
 			> ul {
-				margin-left: 20px;
-				padding-left: 20px;
+				padding-inline: 10px;
 			}
 
 			.category {
+				width: 100%;
+
 				> summary {
-					margin-top: 10px;
 					font-weight: 300;
 					font-size: 0.9rem;
 
@@ -87,38 +88,13 @@
 						height: 20px;
 					}
 				}
-			}
 
-			.activeLink {
-				li {
-					font-weight: 300;
-					font-size: 0.9rem;
-				}
-
-				&:last-child {
-					margin-bottom: 0;
+				> ul {
+					padding-bottom: 10px;
+					border-bottom: 1px solid transparent;
+					border-image: var(--separator);
 				}
 			}
 		}
-	}
-}
-
-.activeLink {
-	display: block;
-	margin: 10px 0;
-	padding: 5px 10px;
-	border-radius: 5px;
-
-	li,
-	span {
-		color: var(--color-text);
-	}
-
-	&:hover {
-		background: var(--switch-background);
-	}
-
-	&.active {
-		background: var(--switch-background);
 	}
 }

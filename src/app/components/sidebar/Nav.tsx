@@ -1,12 +1,15 @@
 'use client';
 
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
-import {sideBarNavConfig} from '../../../data/sideBarConfig';
+import {
+	CompositionType,
+	sideBarNavConfig,
+} from '../../../data/config/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
 import {CategoryLink} from './CategoryLink';
 import {Icon} from '@iconify/react';
 import {usePathname} from 'next/navigation';
-import {CompositionLink} from './compositionLink';
+import {CompositionThumbnail} from './CompositionThumbnail';
 
 export const Nav = () => {
 	const pathname = usePathname();
@@ -14,12 +17,15 @@ export const Nav = () => {
 	return (
 		<nav className={styles.sideBarNav}>
 			<ul>
-				<ActiveLink src="/" className={styles.topLevel}>
-					<span>
-						<Icon icon="majesticons:home-line" /> Home
-					</span>
-				</ActiveLink>
+				<li className={styles.topLevel}>
+					<ActiveLink src="/">
+						<span>
+							<Icon icon="majesticons:home-line" /> Home
+						</span>
+					</ActiveLink>
+				</li>
 				{Object.entries(sideBarNavConfig).map(([videoType, videoList]) => {
+					const compositionType = videoType as CompositionType;
 					const isOpen = pathname.includes(videoType);
 
 					return (
@@ -40,6 +46,7 @@ export const Nav = () => {
 													categoryRoute={`${videoList.route}${videoParams.categoryName}/`}
 													categoryName={videoParams.categoryName}
 													items={videoParams.items}
+													compositionType={compositionType}
 												/>
 											);
 										}
@@ -49,7 +56,9 @@ export const Nav = () => {
 												key={videoParams.compositionId}
 												src={videoList.route + videoParams.compositionLink}
 											>
-												<CompositionLink
+												<CompositionThumbnail
+													compositionType={compositionType}
+													compositionId={videoParams.compositionId}
 													compositionName={videoParams.compositionName}
 												/>
 											</ActiveLink>

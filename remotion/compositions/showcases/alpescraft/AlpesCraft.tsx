@@ -8,13 +8,13 @@ import {Speakers} from './Speakers';
 import {TalkBackground} from './TalkBackground';
 import {Speaker} from '../../../types/defaultProps.types';
 
-export interface AlpesCraftProps {
+export type AlpesCraftProps = {
 	title: string;
 	date: string;
 	time?: string;
 	location: string;
 	speakers?: Speaker[];
-}
+};
 
 export const AlpesCraft: React.FC<AlpesCraftProps> = ({
 	title,

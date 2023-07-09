@@ -1,10 +1,10 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {EventLogo} from '../../../design/atoms/EventLogo';
 
-export interface MeetupLogoProps {
+export type MeetupLogoProps = {
 	eventLogo?: string;
 	endAnimationShift: number;
-}
+};
 
 export const MeetupLogo = ({eventLogo, endAnimationShift}: MeetupLogoProps) => {
 	const frame = useCurrentFrame();

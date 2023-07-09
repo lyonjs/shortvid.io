@@ -12,17 +12,20 @@ export const Code: React.FC<{
 		| ReplayProps
 		| TalkBrandedProps;
 }> = ({params, composition}) => {
-	const onClickHandler = useCallback((event: MouseEvent) => {
-		const element = event.target as HTMLElement;
-		const notification = document.querySelector('.notif');
+	const onClickHandler = useCallback(
+		(event: MouseEvent) => {
+			const element = event.target as HTMLElement;
+			const notification = document.querySelector('.notif');
 
-		if (element.textContent) {
-			navigator.clipboard.writeText(element.textContent);
-			notification?.classList.add('animate-popup');
-			va.track('GenerateLocally', {composition});
-			setTimeout(() => notification?.classList.remove('animate-popup'), 2000);
-		}
-	}, []);
+			if (element.textContent) {
+				navigator.clipboard.writeText(element.textContent);
+				notification?.classList.add('animate-popup');
+				va.track('GenerateLocally', {composition});
+				setTimeout(() => notification?.classList.remove('animate-popup'), 2000);
+			}
+		},
+		[composition]
+	);
 
 	return (
 		<>

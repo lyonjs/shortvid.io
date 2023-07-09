@@ -2,10 +2,10 @@ import {AbsoluteFill} from 'remotion';
 import {MeetupTitle} from './MeetupTitle';
 import {MeetupLogo} from './MeetupLogo';
 
-export interface MeetupPresentationProps {
+export type MeetupPresentationProps = {
 	eventLogo?: string;
 	title: string;
-}
+};
 
 export const MeetupPresentation = ({
 	title,

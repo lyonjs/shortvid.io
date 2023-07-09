@@ -7,6 +7,7 @@ import {Talk} from '../remotion/compositions/templates/talk/Talk';
 import {Sponsor} from '../remotion/compositions/templates/sponsor/Sponsor';
 import {Event} from '../remotion/compositions/templates/event/Event';
 import RootLayout from '../src/app/RootLayout';
+import Image from 'next/image';
 
 interface Video {
 	id: string;
@@ -140,8 +141,9 @@ export default function Home() {
 						className="bg-slate-200 p-4 rounded-md w-1/2 md:w-1/3 flex justify-center"
 						target="_blank"
 					>
-						{/* eslint-disable-next-line @remotion/warn-native-media-tag */}
-						<img
+						<Image
+							width={300}
+							height={300}
 							src={partner.logo}
 							alt={partner.name}
 							className="block max-h-32"

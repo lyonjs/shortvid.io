@@ -15,12 +15,12 @@
 		"test:format": "pnpm lint && tsc"
 	},
 	"dependencies": {
-		"@remotion/cli": "3.3.103",
-		"@remotion/google-fonts": "3.3.103",
-		"@remotion/lottie": "3.3.103",
-		"@remotion/noise": "3.3.103",
-		"@remotion/player": "3.3.103",
-		"@remotion/shapes": "3.3.103",
+		"@remotion/cli": "4.0.4",
+		"@remotion/google-fonts": "4.0.4",
+		"@remotion/lottie": "4.0.4",
+		"@remotion/noise": "4.0.4",
+		"@remotion/player": "4.0.4",
+		"@remotion/shapes": "4.0.4",
 		"@types/jest": "29.5.2",
 		"@vercel/analytics": "^1.0.0",
 		"date-fns": "2.30.0",
@@ -32,11 +32,11 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-json-editor-ajrm": "^2.5.14",
-		"remotion": "3.3.103"
+		"remotion": "4.0.4"
 	},
 	"devDependencies": {
 		"@iconify/react": "^4.1.0",
-		"@remotion/eslint-plugin": "3.3.103",
+		"@remotion/eslint-plugin": "4.0.4",
 		"@testing-library/dom": "9.3.1",
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "14.0.0",

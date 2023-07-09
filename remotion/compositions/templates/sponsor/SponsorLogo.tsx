@@ -17,6 +17,8 @@ export const SponsorLogo: React.FC<{
 
 	const opacityUp = spring({frame, from: 0, to: 1, fps, durationInFrames: 50});
 
+	if (!sponsorLogo) return null;
+
 	return (
 		<Img
 			style={{

@@ -9,12 +9,12 @@ import {LogoSponsor} from './LogoSponsor';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {Speaker} from '../../../types/defaultProps.types';
 
-interface LyonJSReplayType {
+type LyonJSReplayType = {
 	title: string;
 	date: string;
 	sponsor: string;
 	speakers: Speaker[];
-}
+};
 
 export const ReplayLyonJS: React.FC<LyonJSReplayType> = ({
 	title,

@@ -7,11 +7,11 @@ import {BigSpeakers} from './BigSpeakers';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {Speaker} from '../../../types/defaultProps.types';
 
-interface ReplayType {
+type ReplayType = {
 	title: string;
 	type: string;
 	speakers: Speaker[];
-}
+};
 
 export const Replay: React.FC<ReplayType> = ({title, speakers, type}) => {
 	return (

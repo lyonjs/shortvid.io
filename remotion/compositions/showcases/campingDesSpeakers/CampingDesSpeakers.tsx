@@ -3,19 +3,19 @@ import {Introduction} from './Introduction';
 import {TalkBackground} from './components/TalkBackground';
 import {Talk} from './Talk';
 
-export interface Speaker {
+export type Speaker = {
 	picture: string;
 	name: string;
 	company: string;
-}
+};
 
-export interface TalkProps {
+export type TalkProps = {
 	title: string;
 	speakers: Speaker[];
 	date: string;
 	time: string;
 	location: string;
-}
+};
 
 export const CampingDesSpeakers: React.FC<TalkProps> = ({
 	title,

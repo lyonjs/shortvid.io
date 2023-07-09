@@ -12,7 +12,7 @@ import {BrandedLocation} from './BrandedLocation';
 
 const {fontFamily} = loadFont();
 
-export interface TalkBrandedProps {
+export type TalkBrandedProps = {
 	backgroundColor?: string;
 	title: string;
 	startingDate: Date;
@@ -21,7 +21,7 @@ export interface TalkBrandedProps {
 	location?: string;
 	logoUrl: string;
 	speaker: {pictureUrl: string; name: string; company?: string; job?: string};
-}
+};
 
 export const TalkBranded: React.FC<TalkBrandedProps> = ({
 	backgroundColor = '#EA4335',

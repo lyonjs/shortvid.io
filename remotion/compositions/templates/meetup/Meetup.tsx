@@ -5,12 +5,12 @@ import {MeetupDate} from './MeetupDate';
 import React from 'react';
 import {MeetupBackground} from './MeetupBackground';
 
-export interface MeetupProps {
+export type MeetupProps = {
 	eventLogo?: string;
 	backgroundImg?: string;
 	title: string;
 	date?: string;
-}
+};
 
 export const Meetup = ({
 	backgroundImg = staticFile(

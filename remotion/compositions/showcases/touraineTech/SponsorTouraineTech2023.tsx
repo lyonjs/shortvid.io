@@ -4,10 +4,10 @@ import {TalkTitle} from './TalkTitle';
 import {SponsorLogo} from '../../templates/sponsor/SponsorLogo';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 
-export interface SponsorProps {
+export type SponsorProps = {
 	message: string;
 	sponsorLogo: string;
-}
+};
 
 export const SponsorTouraineTech2023: React.FC<SponsorProps> = ({
 	message,

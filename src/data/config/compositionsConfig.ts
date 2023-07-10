@@ -1,4 +1,3 @@
-import {TouraineTechProps} from '../../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {ReplayProps} from '../../../app/templates/replay/page';
 import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
 
@@ -17,6 +16,7 @@ import {VeryTechTripConfig} from './showcases/veryTechTripConfig';
 import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
 import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
 import {VolcampConfig} from './showcases/volcampConfig';
+import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 
 export type CompositionProps = {
 	component: React.FC<any>;
@@ -28,7 +28,7 @@ export type CompositionProps = {
 	fps?: number;
 	defaultProps?:
 		| {[key: string]: string | undefined}
-		| TouraineTechProps
+		| DefaultProps
 		| ReplayProps
 		| TalkBrandedProps;
 };

@@ -6,13 +6,12 @@ import {
 	sideBarNavConfig,
 } from '../../../data/config/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
-import {CategoryLink} from './CategoryLink';
 import {Icon} from '@iconify/react';
-import {usePathname} from 'next/navigation';
-import {CompositionThumbnail} from './CompositionThumbnail';
+import {NavDetails} from './NavDetails';
+import {useState} from 'react';
 
 export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
-	const pathname = usePathname();
+	const [openedNavDetails, setOpenedNavDetails] = useState<string | null>(null);
 
 	return (
 		<nav className={styles.sideBarNav}>
@@ -27,47 +26,16 @@ export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 				</li>
 				{Object.entries(sideBarNavConfig).map(([videoType, videoList]) => {
 					const compositionType = videoType as CompositionType;
-					const isOpen = pathname.includes(videoType);
 
 					return (
 						<li key={videoType} className={styles.topLevel}>
-							<details open={isOpen && !folded}>
-								<summary className={isOpen ? styles.selected : ''}>
-									<div>
-										<Icon icon={videoList.iconifyId} />
-										{!folded && videoType}
-									</div>
-									{!folded && <Icon icon="iconamoon:arrow-down-2" />}
-								</summary>
-								<ul>
-									{videoList.items.map((videoParams) => {
-										if ('items' in videoParams) {
-											return (
-												<CategoryLink
-													key={videoParams.categoryName}
-													categoryRoute={`${videoList.route}${videoParams.categoryName}/`}
-													categoryName={videoParams.categoryName}
-													items={videoParams.items}
-													compositionType={compositionType}
-												/>
-											);
-										}
-
-										return (
-											<ActiveLink
-												key={videoParams.compositionId}
-												src={videoList.route + videoParams.compositionLink}
-											>
-												<CompositionThumbnail
-													compositionType={compositionType}
-													compositionId={videoParams.compositionId}
-													compositionName={videoParams.compositionName}
-												/>
-											</ActiveLink>
-										);
-									})}
-								</ul>
-							</details>
+							<NavDetails
+								videoType={compositionType}
+								videoList={videoList}
+								folded={folded}
+								openedNavDetails={openedNavDetails}
+								setOpenedNavDetails={setOpenedNavDetails}
+							/>
 						</li>
 					);
 				})}

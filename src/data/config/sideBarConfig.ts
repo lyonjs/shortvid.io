@@ -1,4 +1,4 @@
-type videoProps = {
+export type videoProps = {
 	compositionName: string;
 	compositionId: string;
 	compositionLink: string;

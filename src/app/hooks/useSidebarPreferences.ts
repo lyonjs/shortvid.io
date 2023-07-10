@@ -4,10 +4,9 @@ export const useSidebarPreferences = () => {
 	const [folded, setFolded] = useState<boolean>(false);
 
 	useEffect(() => {
-		const foldedPreferenciesString = localStorage.getItem('folded');
-		const foldedPreferencies =
-			foldedPreferenciesString === 'true' ? true : false;
-		foldedPreferencies && setFolded(foldedPreferencies);
+		const foldedPreferencesString = localStorage.getItem('folded');
+		const foldedPreferences = foldedPreferencesString === 'true' ? true : false;
+		foldedPreferences && setFolded(foldedPreferences);
 	}, []);
 
 	const handleFold = (value: boolean) => {

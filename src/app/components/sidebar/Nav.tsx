@@ -6,7 +6,6 @@ import {
 	sideBarNavConfig,
 } from '../../../data/config/sideBarConfig';
 import {ActiveLink} from './ActiveLink';
-import {Icon} from '@iconify/react';
 import {NavDetails} from './NavDetails';
 import {useState} from 'react';
 import {TopLevelContent} from './TopLevelContent';

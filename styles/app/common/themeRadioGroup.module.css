@@ -29,7 +29,7 @@
 	}
 }
 
-[aria-expanded='true'] {
+[aria-expanded='false'] {
 	.switchThemeGroup {
 		flex-direction: column;
 	}

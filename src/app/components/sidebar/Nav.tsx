@@ -10,7 +10,7 @@ import {NavDetails} from './NavDetails';
 import {useState} from 'react';
 import {TopLevelContent} from './TopLevelContent';
 
-export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
+export const Nav: React.FC<{expanded: boolean}> = ({expanded}) => {
 	const [openedNavDetails, setOpenedNavDetails] = useState<string | null>(null);
 
 	return (
@@ -20,7 +20,7 @@ export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 					<ActiveLink src="/">
 						<span>
 							<TopLevelContent
-								folded={folded}
+								expanded={expanded}
 								iconifyId="majesticons:home-line"
 								textContent="Home"
 							/>
@@ -35,7 +35,7 @@ export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 							<NavDetails
 								videoType={compositionType}
 								videoList={videoList}
-								folded={folded}
+								expanded={expanded}
 								openedNavDetails={openedNavDetails}
 								setOpenedNavDetails={setOpenedNavDetails}
 							/>

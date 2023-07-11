@@ -8,17 +8,17 @@ import {Footer} from './Footer';
 import {Icon} from '@iconify/react';
 
 export const Sidebar = () => {
-	const [folded, setFolded] = useState<boolean>(false);
+	const [expanded, setExpanded] = useState<boolean>(true);
 
 	return (
-		<section className={styles.sidebar} aria-expanded={folded}>
-			<Header folded={folded} />
-			<Nav folded={folded} />
-			<Footer folded={folded} />
+		<section className={styles.sidebar} aria-expanded={expanded}>
+			<Header expanded={expanded} />
+			<Nav expanded={expanded} />
+			<Footer expanded={expanded} />
 			<button
 				type="button"
 				className={styles.foldButton}
-				onClick={() => setFolded(!folded)}
+				onClick={() => setExpanded(!expanded)}
 			>
 				<Icon icon="iconamoon:arrow-left-2" />
 			</button>

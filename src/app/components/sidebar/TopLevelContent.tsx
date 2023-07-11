@@ -1,20 +1,20 @@
 import {Icon} from '@iconify/react';
 
 type TopLevelContentProps = {
-	folded: boolean;
+	expanded: boolean;
 	iconifyId: string;
 	textContent: string;
 };
 
 export const TopLevelContent: React.FC<TopLevelContentProps> = ({
-	folded,
+	expanded,
 	iconifyId,
 	textContent,
 }) => {
 	return (
 		<>
 			<Icon icon={iconifyId} />
-			{!folded && textContent}
+			{expanded && textContent}
 		</>
 	);
 };

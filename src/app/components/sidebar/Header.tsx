@@ -7,12 +7,12 @@ const wormarkFont = MuseoModerno({
 	subsets: ['latin'],
 });
 
-export const Header: React.FC<{folded: boolean}> = ({folded}) => {
+export const Header: React.FC<{expanded: boolean}> = ({expanded}) => {
 	return (
 		<header>
 			<a href="/" className={styles.logoLink}>
 				<Logo />
-				{!folded && <h1 className={wormarkFont.className}>Shortvid.io</h1>}
+				{expanded && <h1 className={wormarkFont.className}>Shortvid.io</h1>}
 			</a>
 		</header>
 	);

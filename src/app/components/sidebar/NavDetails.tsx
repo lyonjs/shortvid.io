@@ -21,14 +21,14 @@ type NavDetailsProps = {
 		route: string;
 		items: (categoryProps | videoProps)[];
 	};
-	folded: boolean;
+	expanded: boolean;
 	openedNavDetails: string | null;
 	setOpenedNavDetails: (value: string | null) => void;
 };
 
 export const NavDetails: React.FC<NavDetailsProps> = ({
 	videoType,
-	folded,
+	expanded,
 	videoList,
 	openedNavDetails,
 	setOpenedNavDetails,
@@ -38,28 +38,28 @@ export const NavDetails: React.FC<NavDetailsProps> = ({
 	const [open, setOpen] = useState<boolean>(isSelected);
 
 	useEffect(() => {
-		if (folded) {
+		if (!expanded) {
 			if (openedNavDetails === videoType) {
 				setOpen(true);
 			} else {
 				setOpen(false);
 			}
 		}
-	}, [folded, openedNavDetails]);
+	}, [expanded, openedNavDetails]);
 
 	useEffect(() => {
-		if (folded) {
+		if (!expanded) {
 			setOpen(false);
 			setOpenedNavDetails(null);
 		}
-	}, [folded, setOpen]);
+	}, [expanded, setOpen]);
 
 	const handleClick = () => {
 		setOpenedNavDetails(videoType);
 	};
 
 	const handleToggle = () => {
-		if (!folded) {
+		if (expanded) {
 			setOpen(true);
 			setOpenedNavDetails(videoType);
 		}
@@ -70,12 +70,12 @@ export const NavDetails: React.FC<NavDetailsProps> = ({
 			<summary className={isSelected ? styles.selected : ''}>
 				<div>
 					<TopLevelContent
-						folded={folded}
+						expanded={expanded}
 						iconifyId={videoList.iconifyId}
 						textContent={videoType}
 					/>
 				</div>
-				{!folded && <Icon icon="iconamoon:arrow-down-2" />}
+				{expanded && <Icon icon="iconamoon:arrow-down-2" />}
 			</summary>
 			<ul>
 				{videoList.items.map((videoParams) => {

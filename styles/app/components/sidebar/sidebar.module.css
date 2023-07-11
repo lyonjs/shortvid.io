@@ -78,7 +78,7 @@
 		}
 	}
 
-	&[aria-expanded='true'] {
+	&[aria-expanded='false'] {
 		align-items: center;
 		width: 110px;
 

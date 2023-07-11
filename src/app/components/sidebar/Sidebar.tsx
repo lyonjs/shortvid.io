@@ -14,7 +14,7 @@ export const Sidebar = () => {
 		<section
 			className={styles.sidebar}
 			aria-expanded={expanded}
-		  data-testid="sidebar"
+			data-testid="sidebar"
 		>
 			<Header expanded={expanded} />
 			<Nav expanded={expanded} />

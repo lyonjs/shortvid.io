@@ -9,6 +9,7 @@ import {ActiveLink} from './ActiveLink';
 import {Icon} from '@iconify/react';
 import {NavDetails} from './NavDetails';
 import {useState} from 'react';
+import {TopLevelContent} from './TopLevelContent';
 
 export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 	const [openedNavDetails, setOpenedNavDetails] = useState<string | null>(null);
@@ -19,8 +20,11 @@ export const Nav: React.FC<{folded: boolean}> = ({folded}) => {
 				<li className={styles.topLevel}>
 					<ActiveLink src="/">
 						<span>
-							<Icon icon="majesticons:home-line" />
-							{!folded && 'Home'}
+							<TopLevelContent
+								folded={folded}
+								iconifyId="majesticons:home-line"
+								textContent="Home"
+							/>
 						</span>
 					</ActiveLink>
 				</li>

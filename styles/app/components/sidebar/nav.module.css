@@ -100,7 +100,7 @@
 	}
 }
 
-[data-folded='true'] {
+[aria-expanded='true'] {
 	.sideBarNav {
 		overflow: visible;
 

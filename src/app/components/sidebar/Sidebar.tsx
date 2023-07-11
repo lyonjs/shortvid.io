@@ -11,7 +11,7 @@ export const Sidebar = () => {
 	const [folded, setFolded] = useState<boolean>(false);
 
 	return (
-		<section className={styles.sidebar} data-folded={folded}>
+		<section className={styles.sidebar} aria-expanded={folded}>
 			<Header folded={folded} />
 			<Nav folded={folded} />
 			<Footer folded={folded} />

@@ -12,8 +12,9 @@ import {
 	videoProps,
 } from '../../../data/config/sideBarConfig';
 import {useEffect, useState} from 'react';
+import {TopLevelContent} from './TopLevelContent';
 
-export const NavDetails: React.FC<{
+type NavDetailsProps = {
 	videoType: CompositionType;
 	videoList: {
 		iconifyId: string;
@@ -23,7 +24,9 @@ export const NavDetails: React.FC<{
 	folded: boolean;
 	openedNavDetails: string | null;
 	setOpenedNavDetails: (value: string | null) => void;
-}> = ({
+};
+
+export const NavDetails: React.FC<NavDetailsProps> = ({
 	videoType,
 	folded,
 	videoList,
@@ -66,8 +69,11 @@ export const NavDetails: React.FC<{
 		<details open={open} onClick={handleClick} onToggle={handleToggle}>
 			<summary className={isSelected ? styles.selected : ''}>
 				<div>
-					<Icon icon={videoList.iconifyId} />
-					{!folded && videoType}
+					<TopLevelContent
+						folded={folded}
+						iconifyId={videoList.iconifyId}
+						textContent={videoType}
+					/>
 				</div>
 				{!folded && <Icon icon="iconamoon:arrow-down-2" />}
 			</summary>

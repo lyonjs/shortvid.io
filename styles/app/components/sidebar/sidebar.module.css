@@ -78,7 +78,7 @@
 		}
 	}
 
-	&[data-folded='true'] {
+	&[aria-expanded='true'] {
 		align-items: center;
 		width: 110px;
 
@@ -88,7 +88,7 @@
 
 		footer {
 			flex-direction: column;
-			gap: 10px;
+			gap: 15px;
 		}
 	}
 }

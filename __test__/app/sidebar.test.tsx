@@ -95,4 +95,36 @@ describe('<Sidebar />', () => {
 		expect(topLevelText).not.toBeVisible();
 		expect(contributingText).not.toBeVisible();
 	});
+
+	it('should alternate display ditails when folded', async () => {
+		const user = userEvent.setup();
+		const foldButton = screen.getByRole('button', {
+			name: 'foldButton',
+		});
+		const details = screen.getAllByRole('group');
+		const fisrtLink = details[0];
+		const secondLink = details[2];
+
+		const video = screen.getByRole('heading', {
+			name: 'Video',
+		});
+		const secondVideo = screen.getByRole('heading', {
+			name: 'Video2',
+		});
+
+		await user.click(foldButton);
+
+		expect(video).not.toBeVisible();
+		expect(secondVideo).not.toBeVisible();
+
+		await user.click(fisrtLink);
+
+		expect(video).toBeVisible();
+		expect(secondVideo).not.toBeVisible();
+
+		await user.click(secondLink);
+
+		expect(video).not.toBeVisible();
+		expect(secondVideo).toBeVisible();
+	});
 });

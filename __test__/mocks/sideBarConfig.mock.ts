@@ -20,4 +20,15 @@ export const sideBarNavConfigMock = {
 			},
 		],
 	},
+	otherTopLevel: {
+		iconifyId: 'ic:round-slow-motion-video',
+		route: '/othertoplevel/',
+		items: [
+			{
+				compositionName: 'Video2',
+				compositionId: 'Video2',
+				compositionLink: 'video2',
+			},
+		],
+	},
 };

@@ -11,13 +11,14 @@
 	border: 2px solid var(--switch-border);
 	border-radius: 10px;
 
-	&.sidebarMobile {
-		display: none;
-	}
-
 	.openBurgerBtn,
 	.closeBurgerBtn {
 		display: none;
+
+		> svg {
+			width: 40px;
+			height: 40px;
+		}
 	}
 
 	header {
@@ -100,33 +101,13 @@
 			gap: 15px;
 		}
 	}
-}
-/* bp: 220px - 270px (sidebar width) */
-@media screen and (max-width: 570px) {
-	.sidebar {
+
+	&.sidebarMobile {
 		justify-content: flex-start;
 		max-width: 100%;
 		height: max-content;
 		border: none;
-
-		&.sidebarDesktop,
-		.foldButton {
-			display: none;
-		}
-
-		&.sidebarMobile {
-			display: flex;
-		}
-
-		.openBurgerBtn,
-		.closeBurgerBtn {
-			display: block;
-
-			> svg {
-				width: 40px;
-				height: 40px;
-			}
-		}
+		display: none;
 
 		header {
 			display: flex;
@@ -148,7 +129,8 @@
 			gap: 10px;
 			z-index: 10;
 			transform: translateX(100%);
-			transition: transform 0.3s ease;
+			visibility: hidden;
+			transition: all 0.3s ease;
 
 			.closeBurgerBtn {
 				margin-left: auto;
@@ -156,8 +138,27 @@
 			}
 
 			&.openedBurger {
+				visibility: visible;
 				transform: translateX(0);
 			}
+		}
+	}
+}
+/* bp: 220px - 270px (sidebar width) */
+@media screen and (max-width: 570px) {
+	.sidebar {
+		&.sidebarDesktop,
+		.foldButton {
+			display: none;
+		}
+
+		&.sidebarMobile {
+			display: flex;
+		}
+
+		.openBurgerBtn,
+		.closeBurgerBtn {
+			display: block;
 		}
 	}
 }

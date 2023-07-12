@@ -19,7 +19,7 @@ export const SidebarMobile = () => {
 		<section
 			className={`${styles.sidebar} ${styles.sidebarMobile}`}
 			aria-expanded={expanded}
-			data-testid="sidebar"
+			data-testid="sidebarMobile"
 		>
 			<Header expanded={expanded}>
 				<button
@@ -36,16 +36,20 @@ export const SidebarMobile = () => {
 					openBurger ? styles.openedBurger : ''
 				}`}
 			>
-				<button
-					type="button"
-					aria-label="closeBurgerBtn"
-					className={styles.closeBurgerBtn}
-					onClick={() => setOpenBurger(false)}
-				>
-					<Icon icon="entypo:cross" />
-				</button>
-				<Nav expanded={expanded} />
-				<Footer expanded={expanded} />
+				{openBurger && (
+					<>
+						<button
+							type="button"
+							aria-label="closeBurgerBtn"
+							className={styles.closeBurgerBtn}
+							onClick={() => setOpenBurger(false)}
+						>
+							<Icon icon="entypo:cross" />
+						</button>
+						<Nav expanded={expanded} />
+						<Footer expanded={expanded} />
+					</>
+				)}
 			</div>
 		</section>
 	);

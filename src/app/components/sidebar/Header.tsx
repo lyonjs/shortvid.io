@@ -1,4 +1,5 @@
-import {Icon} from '@iconify/react';
+import {ReactNode} from 'react';
+
 import {MuseoModerno} from 'next/font/google';
 
 import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
@@ -9,21 +10,17 @@ const wordmarkFont = MuseoModerno({
 	subsets: ['latin'],
 });
 
-export const Header: React.FC<{expanded: boolean,setOpenBurger: (value: boolean) => void;}> = ({expanded,setOpenBurger}) => {
+export const Header: React.FC<{expanded: boolean; children?: ReactNode}> = ({
+	expanded,
+	children,
+}) => {
 	return (
 		<header>
 			<a href="/" className={styles.logoLink}>
 				<Logo />
 				{expanded && <h1 className={wordmarkFont.className}>Shortvid.io</h1>}
 			</a>
-			<button
-				type="button"
-				aria-label="openBurgerBtn"
-				className={styles.openBurgerBtn}
-				onClick={() => setOpenBurger(true)}
-			>
-				<Icon icon="entypo:menu" />
-			</button>
+			{children}
 		</header>
 	);
 };

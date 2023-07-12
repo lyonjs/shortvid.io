@@ -70,6 +70,10 @@
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
+
+	&[data-lock-scroll] {
+		overflow: hidden;
+	}
 }
 
 a {

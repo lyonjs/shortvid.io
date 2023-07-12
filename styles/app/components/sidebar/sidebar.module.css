@@ -2,7 +2,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	gap: 15px;
 	max-width: 315px;
 	width: 100%;
@@ -10,6 +10,10 @@
 	background: var(--color-background);
 	border: 2px solid var(--switch-border);
 	border-radius: 10px;
+
+	&.sidebarMobile {
+		display: none;
+	}
 
 	.openBurgerBtn,
 	.closeBurgerBtn {
@@ -32,44 +36,34 @@
 		}
 	}
 
-	.burgerContent {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 90%;
+	footer {
 		width: 100%;
-		gap: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 20px 20px;
+		border-top: 1px solid transparent;
+		border-image: var(--separator);
 
-		footer {
-			width: 100%;
+		.contributeLink {
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
-			margin-top: auto;
-			padding: 15px 20px 20px;
-			border-top: 1px solid transparent;
-			border-image: var(--separator);
+			gap: 10px;
+			font-size: 1rem;
+			font-weight: 500;
+			color: var(--color-text);
 
-			.contributeLink {
-				display: flex;
-				align-items: center;
-				gap: 10px;
-				font-size: 1rem;
-				font-weight: 500;
-				color: var(--color-text);
+			svg {
+				width: 25px;
+				height: auto;
+				fill: var(--color-text);
+			}
+
+			&:hover {
+				color: var(--color-link);
 
 				svg {
-					width: 25px;
-					height: auto;
-					fill: var(--color-text);
-				}
-
-				&:hover {
-					color: var(--color-link);
-
-					svg {
-						fill: var(--color-link);
-					}
+					fill: var(--color-link);
 				}
 			}
 		}
@@ -94,8 +88,8 @@
 	}
 
 	&[aria-expanded='false'] {
-		align-items: center;
 		width: 110px;
+		align-items: center;
 
 		.foldButton {
 			transform: rotate(180deg);
@@ -110,9 +104,19 @@
 /* bp: 220px - 270px (sidebar width) */
 @media screen and (max-width: 570px) {
 	.sidebar {
+		justify-content: flex-start;
 		max-width: 100%;
 		height: max-content;
 		border: none;
+
+		&.sidebarDesktop,
+		.foldButton {
+			display: none;
+		}
+
+		&.sidebarMobile {
+			display: flex;
+		}
 
 		.openBurgerBtn,
 		.closeBurgerBtn {
@@ -132,6 +136,9 @@
 
 		.burgerContent {
 			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			width: 100%;
 			height: 100vh;
 			top: 0;
@@ -151,10 +158,6 @@
 			&.openedBurger {
 				transform: translateX(0);
 			}
-		}
-
-		.foldButton {
-			display: none;
 		}
 	}
 }

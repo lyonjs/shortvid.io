@@ -2,8 +2,15 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 30px;
+	overflow-x: hidden;
 
 	section {
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.sidebarLayout {
+		flex-direction: column;
 	}
 }

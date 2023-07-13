@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
 	interpolate,
 	Sequence,
@@ -6,6 +7,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
 import {TalkSpeaker} from './TalkSpeaker';
 import {Title} from '../../../design/atoms/Title';
 

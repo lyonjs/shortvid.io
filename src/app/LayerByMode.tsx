@@ -1,8 +1,9 @@
 import React from 'react';
+
 import {LayerMode} from './types/layerMode.types';
-import {LayerTwoSpeaker} from '../../remotion/compositions/templates/layers/LayerTwoSpeaker';
 import {LayerFullScreen} from '../../remotion/compositions/templates/layers/LayerFullScreen';
 import {LayerOneSpeaker} from '../../remotion/compositions/templates/layers/LayerOneSpeaker';
+import {LayerTwoSpeaker} from '../../remotion/compositions/templates/layers/LayerTwoSpeaker';
 
 type LayerByModeProps = {
 	mode: LayerMode;

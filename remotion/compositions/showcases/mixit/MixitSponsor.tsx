@@ -1,8 +1,9 @@
 import {AbsoluteFill, Sequence} from 'remotion';
+
 import {BackgroundPicture} from './BackgroundPicture';
 import {BigLogo} from './BigLogo';
-import {Thanks} from './Thanks';
 import {LyonSkyline} from './LyonSkyline';
+import {Thanks} from './Thanks';
 
 export const MixitSponsor: React.FC<{
 	name: string;

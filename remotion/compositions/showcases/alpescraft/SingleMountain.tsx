@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {Img, staticFile} from 'remotion';
 
 export const SingleMountain: React.FC<{

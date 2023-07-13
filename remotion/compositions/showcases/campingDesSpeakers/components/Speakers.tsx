@@ -1,3 +1,4 @@
+import {loadFont} from '@remotion/google-fonts/YanoneKaffeesatz';
 import {
 	AbsoluteFill,
 	interpolate,
@@ -6,11 +7,11 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {Speaker} from '../CampingDesSpeakers';
-import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
+
 import {Text} from '../../../../design/atoms/Text';
+import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
 import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
-import {loadFont} from '@remotion/google-fonts/YanoneKaffeesatz';
+import {Speaker} from '../CampingDesSpeakers';
 
 const {fontFamily} = loadFont();
 

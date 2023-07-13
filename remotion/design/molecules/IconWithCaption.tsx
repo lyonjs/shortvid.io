@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Icon} from '@iconify/react';
+
 import {Text} from '../atoms/Text';
 
 export const IconWithCaption: React.FC<{

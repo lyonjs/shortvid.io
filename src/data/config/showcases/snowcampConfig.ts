@@ -1,6 +1,6 @@
-import {CompositionProps} from '../compositionsConfig';
-import {defaultTalkValues} from '../../defaultValues';
 import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
+import {defaultTalkValues} from '../../defaultValues';
+import {CompositionProps} from '../compositionsConfig';
 
 export const SnowcampConfig: CompositionProps = {
 	compositionName: 'Snowcamp',

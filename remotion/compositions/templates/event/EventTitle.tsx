@@ -1,4 +1,5 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Title} from '../../../design/atoms/Title';
 
 export const EventTitle: React.FC<{

@@ -1,4 +1,3 @@
-import {TalkDetails} from '../../../../design/molecules/TalkDetails';
 import {
 	AbsoluteFill,
 	Img,
@@ -8,6 +7,8 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
+import {TalkDetails} from '../../../../design/molecules/TalkDetails';
 
 export const Details: React.FC<{
 	date?: string;

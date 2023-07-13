@@ -1,7 +1,9 @@
+import React, {CSSProperties} from 'react';
+
 import {spring} from 'remotion';
 import {useVideoConfig} from 'remotion';
 import {useCurrentFrame} from 'remotion';
-import React, {CSSProperties} from 'react';
+
 import {TalkDetails} from '../../../design/molecules/TalkDetails';
 
 export const Details: React.FC<{style?: CSSProperties; time: string}> = ({

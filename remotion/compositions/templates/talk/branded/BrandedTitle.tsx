@@ -1,5 +1,5 @@
 import React from 'react';
-import {Title} from '../../../../design/atoms/Title';
+
 import {
 	AbsoluteFill,
 	interpolate,
@@ -7,6 +7,8 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
+import {Title} from '../../../../design/atoms/Title';
 
 export const BrandedTitle: React.FC<{title: string}> = ({title}) => {
 	const frame = useCurrentFrame();

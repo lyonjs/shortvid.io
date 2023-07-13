@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Composition, Folder} from 'remotion';
+
 import {Silhouette} from './Silhouette';
 
 export const SilhouetteComposition: React.FC = () => {

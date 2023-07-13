@@ -1,6 +1,7 @@
 import {AbsoluteFill, Sequence} from 'remotion';
-import {Introduction} from './Introduction';
+
 import {TalkBackground} from './components/TalkBackground';
+import {Introduction} from './Introduction';
 import {Talk} from './Talk';
 
 export type Speaker = {

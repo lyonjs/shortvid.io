@@ -1,11 +1,12 @@
 'use client';
 
-import {useInputChange} from '../../../src/app/hooks/useInputChange';
 import {Player} from '@remotion/player';
+
 import {Meetup as MeetupComponent} from '../../../remotion/compositions/templates/meetup/Meetup';
 import {Code} from '../../../src/app/Code';
-import {Form, Input} from '../../../src/app/forms/input';
 import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
+import {Form, Input} from '../../../src/app/forms/input';
+import {useInputChange} from '../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 
 export default function MeetupPage() {

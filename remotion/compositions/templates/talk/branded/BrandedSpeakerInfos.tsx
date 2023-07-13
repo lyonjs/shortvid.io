@@ -1,7 +1,9 @@
 import React from 'react';
+
+import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Text} from '../../../../design/atoms/Text';
 import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
-import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const BrandedSpeakerInfos: React.FC<{
 	name: string;

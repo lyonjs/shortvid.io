@@ -8,7 +8,7 @@
 	"scripts": {
 		"start": "remotion preview remotion/index.tsx",
 		"upgrade": "remotion upgrade",
-		"lint": "eslint remotion --ext ts,tsx,js,jsx",
+		"lint": "eslint remotion app src --ext ts,tsx,js,jsx",
 		"test": "jest",
 		"build": "next build",
 		"dev": "next dev",
@@ -54,6 +54,7 @@
 		"debug": "4.3.4",
 		"eslint": "8.44.0",
 		"eslint-config-next": "^13.4.2",
+		"eslint-plugin-import": "2.27.5",
 		"husky": "8.0.3",
 		"jest-environment-jsdom": "29.6.1",
 		"lodash": "4.17.21",

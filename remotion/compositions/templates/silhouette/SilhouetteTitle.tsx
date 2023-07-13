@@ -1,5 +1,5 @@
-import {Title} from '../../../design/atoms/Title';
 import React from 'react';
+
 import {
 	Easing,
 	interpolate,
@@ -7,6 +7,8 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
+import {Title} from '../../../design/atoms/Title';
 
 export const SilhouetteTitle: React.FC<{title: string}> = ({title}) => {
 	const frame = useCurrentFrame();

@@ -1,4 +1,5 @@
 import {Composition, Folder} from 'remotion';
+
 import {Event} from './Event';
 
 export const EventsComposition: React.FC = () => {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {
 	Img,
 	interpolate,
@@ -6,7 +8,6 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import React from 'react';
 
 export const FireCamp = () => {
 	const frame = useCurrentFrame();

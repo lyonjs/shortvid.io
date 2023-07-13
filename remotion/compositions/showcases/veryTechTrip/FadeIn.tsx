@@ -1,4 +1,5 @@
 import {ReactNode} from 'react';
+
 import {interpolate, useCurrentFrame} from 'remotion';
 
 export const FadeIn: React.FC<{children: ReactNode}> = ({children}) => {

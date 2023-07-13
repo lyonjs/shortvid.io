@@ -1,9 +1,10 @@
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+
+import {SponsorBackground} from './SponsorBackground';
+import {SponsorMap} from './SponsorMap';
 import {SponsorOrgaLogo} from './SponsorOrgaLogo';
 import {SponsorPresentation} from './SponsorPresentation';
 import {SponsorThanks} from './SponsorThanks';
-import {SponsorMap} from './SponsorMap';
-import {SponsorBackground} from './SponsorBackground';
 
 export const Sponsor: React.FC<{
 	companyName?: string;

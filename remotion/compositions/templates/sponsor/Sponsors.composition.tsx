@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Composition, Folder} from 'remotion';
+
 import {Sponsor} from './Sponsor';
 
 export const SponsorsComposition: React.FC = () => {

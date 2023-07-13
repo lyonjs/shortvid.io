@@ -1,23 +1,25 @@
 'use client';
 
-import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
-import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
-import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit/MixitIntroTalk';
-import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech/TouraineTech2023';
-import {VeryTechTrip} from '../../../../remotion/compositions/showcases/veryTechTrip/VeryTechTrip';
+import {useState} from 'react';
+
 import {Player} from '@remotion/player';
+import _ = require('lodash');
 import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
-import {useState} from 'react';
-import {defaultTalkValues} from '../../../../src/data/defaultValues';
+
 import {AlpesCraft} from '../../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
-import {Code} from '../../../../src/app/Code';
 import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
-import _ = require('lodash');
-import {ReplayProps} from '../../../templates/replay/page';
-import {TalkBrandedProps} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
+import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
+import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit/MixitIntroTalk';
+import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
+import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech/TouraineTech2023';
+import {VeryTechTrip} from '../../../../remotion/compositions/showcases/veryTechTrip/VeryTechTrip';
 import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volcamp';
+import {TalkBrandedProps} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {DefaultProps} from '../../../../remotion/types/defaultProps.types';
+import {Code} from '../../../../src/app/Code';
+import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import {ReplayProps} from '../../../templates/replay/page';
 interface TalkTemplate {
 	component: React.FC<any>;
 	width: number;

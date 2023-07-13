@@ -1,10 +1,11 @@
+import {CSSProperties} from 'react';
+
 import {
 	AbsoluteFill,
 	interpolate,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {CSSProperties} from 'react';
 
 const Rect: React.FC<{style?: CSSProperties}> = ({style}) => {
 	return (

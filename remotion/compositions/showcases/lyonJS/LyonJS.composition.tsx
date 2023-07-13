@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Composition, Folder} from 'remotion';
+
 import {ReplayLyonJS} from './Replay';
 
 export const LyonJSComposition: React.FC = () => {

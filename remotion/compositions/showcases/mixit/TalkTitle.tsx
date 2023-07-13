@@ -1,4 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Title} from '../../../design/atoms/Title';
 
 export const TalkTitle: React.FC<{

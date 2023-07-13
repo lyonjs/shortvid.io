@@ -1,6 +1,7 @@
 import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../../hooks/useLottie';
 import {AbsoluteFill} from 'remotion';
+
+import {useLottie} from '../../../hooks/useLottie';
 
 export const SponsorThanks: React.FC = () => {
 	const illustration = useLottie('lf20_sqpjokxl');

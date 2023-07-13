@@ -1,9 +1,11 @@
 import React from 'react';
+
 import {Composition, Folder} from 'remotion';
+
+import {Replay} from './Replay';
+import {SponsorTouraineTech2023} from './SponsorTouraineTech2023';
 import {TouraineTech2023} from './TouraineTech2023';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
-import {SponsorTouraineTech2023} from './SponsorTouraineTech2023';
-import {Replay} from './Replay';
 
 export const TouraineTechComposition: React.FC = () => {
 	return (

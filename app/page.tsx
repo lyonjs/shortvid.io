@@ -1,13 +1,15 @@
 'use client';
 
 import React from 'react';
+
 import {Player} from '@remotion/player';
-import {Meetup} from '../remotion/compositions/templates/meetup/Meetup';
-import {Talk} from '../remotion/compositions/templates/talk/Talk';
-import {Sponsor} from '../remotion/compositions/templates/sponsor/Sponsor';
-import {Event} from '../remotion/compositions/templates/event/Event';
-import RootLayout from '../src/app/RootLayout';
 import Image from 'next/image';
+
+import {Event} from '../remotion/compositions/templates/event/Event';
+import {Meetup} from '../remotion/compositions/templates/meetup/Meetup';
+import {Sponsor} from '../remotion/compositions/templates/sponsor/Sponsor';
+import {Talk} from '../remotion/compositions/templates/talk/Talk';
+import RootLayout from '../src/app/RootLayout';
 
 interface Video {
 	id: string;

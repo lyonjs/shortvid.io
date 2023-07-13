@@ -1,5 +1,6 @@
-import {staticFile, Video} from 'remotion';
 import React from 'react';
+
+import {staticFile, Video} from 'remotion';
 
 export const Tent = () => {
 	return (

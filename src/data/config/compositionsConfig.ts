@@ -1,21 +1,20 @@
-import {ReplayProps} from '../../../app/templates/replay/page';
-import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
-
-import {TalkConfig} from './templates/talkConfig';
-import {TalkBrandedConfig} from './templates/talkBrandedConfig';
-import {LayersConfig} from './templates/layersConfig';
-import {SponsorConfig} from './templates/sponsorConfig';
-import {EventConfig} from './templates/eventConfig';
-import {MeetupConfig} from './templates/meetupConfig';
-import {SilhouetteConfig} from './templates/silhouetteConfig';
+import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
+import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
 import {DevoxxConfig} from './showcases/devoxxConfig';
 import {MixitConfig} from './showcases/mixitConfig';
 import {SnowcampConfig} from './showcases/snowcampConfig';
 import {TouraineTechConfig} from './showcases/touraineTechConfig';
 import {VeryTechTripConfig} from './showcases/veryTechTripConfig';
-import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
-import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
 import {VolcampConfig} from './showcases/volcampConfig';
+import {EventConfig} from './templates/eventConfig';
+import {LayersConfig} from './templates/layersConfig';
+import {MeetupConfig} from './templates/meetupConfig';
+import {SilhouetteConfig} from './templates/silhouetteConfig';
+import {SponsorConfig} from './templates/sponsorConfig';
+import {TalkBrandedConfig} from './templates/talkBrandedConfig';
+import {TalkConfig} from './templates/talkConfig';
+import {ReplayProps} from '../../../app/templates/replay/page';
+import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 
 export type CompositionProps = {

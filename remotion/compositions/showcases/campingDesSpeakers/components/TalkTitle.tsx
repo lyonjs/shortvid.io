@@ -1,6 +1,7 @@
-import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Title} from '../../../../design/atoms/Title';
 import {loadFont} from '@remotion/google-fonts/YanoneKaffeesatz';
+import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {Title} from '../../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();
 

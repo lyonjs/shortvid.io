@@ -1,6 +1,6 @@
-import {CompositionProps} from '../compositionsConfig';
-import {defaultTalkValues} from '../../defaultValues';
 import {VeryTechTrip} from '../../../../remotion/compositions/showcases/veryTechTrip/VeryTechTrip';
+import {defaultTalkValues} from '../../defaultValues';
+import {CompositionProps} from '../compositionsConfig';
 
 export const VeryTechTripConfig: CompositionProps = {
 	compositionName: 'VeryTechTrip',

@@ -1,5 +1,6 @@
-import {Title} from '../../../../design/atoms/Title';
 import {interpolate, useCurrentFrame} from 'remotion';
+
+import {Title} from '../../../../design/atoms/Title';
 
 export const TalkTitle: React.FC<{
 	title: string;

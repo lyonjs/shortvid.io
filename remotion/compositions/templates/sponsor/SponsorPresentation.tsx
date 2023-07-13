@@ -1,6 +1,7 @@
-import {SponsorName} from './SponsorName';
-import {SponsorLogo} from './SponsorLogo';
 import {AbsoluteFill} from 'remotion';
+
+import {SponsorLogo} from './SponsorLogo';
+import {SponsorName} from './SponsorName';
 
 export const SponsorPresentation: React.FC<{
 	companyName?: string;

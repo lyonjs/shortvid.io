@@ -1,9 +1,9 @@
 import {AbsoluteFill} from 'remotion';
-import {Logo} from './Logo';
 
-import {TalkTitle} from './TalkTitle';
 import {Details} from './Details';
+import {Logo} from './Logo';
 import {Speakers} from './Speakers';
+import {TalkTitle} from './TalkTitle';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {DefaultProps} from '../../../types/defaultProps.types';
 

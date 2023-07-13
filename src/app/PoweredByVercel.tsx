@@ -1,7 +1,8 @@
 'use client';
 
-import {staticFile} from 'remotion';
 import Image from 'next/image';
+import {staticFile} from 'remotion';
+
 import {useSelectedTheme} from './hooks/useSelectedTheme';
 
 export const PoweredByVercel = () => {

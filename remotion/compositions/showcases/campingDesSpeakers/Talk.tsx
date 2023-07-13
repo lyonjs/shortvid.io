@@ -5,6 +5,7 @@ import {
 	staticFile,
 	useCurrentFrame,
 } from 'remotion';
+
 import {TalkProps} from './CampingDesSpeakers';
 import {Details} from './components/Details';
 import {Speakers} from './components/Speakers';

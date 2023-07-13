@@ -1,9 +1,11 @@
+import React from 'react';
+
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+
+import {MeetupBackground} from './MeetupBackground';
+import {MeetupDate} from './MeetupDate';
 import {MeetupPresentation} from './MeetupPresentation';
 import {Register} from './Register';
-import {MeetupDate} from './MeetupDate';
-import React from 'react';
-import {MeetupBackground} from './MeetupBackground';
 
 export type MeetupProps = {
 	eventLogo?: string;

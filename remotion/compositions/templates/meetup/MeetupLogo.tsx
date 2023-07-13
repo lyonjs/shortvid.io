@@ -1,4 +1,5 @@
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {EventLogo} from '../../../design/atoms/EventLogo';
 
 export type MeetupLogoProps = {

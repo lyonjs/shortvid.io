@@ -1,18 +1,20 @@
 'use client';
 
-import styles from '../../../../styles/app/components/sidebar/nav.module.css';
+import {useEffect, useState} from 'react';
+
 import {Icon} from '@iconify/react';
-import {CategoryLink} from './CategoryLink';
-import {ActiveLink} from './ActiveLink';
-import {CompositionThumbnail} from './CompositionThumbnail';
 import {usePathname} from 'next/navigation';
+
+import {ActiveLink} from './ActiveLink';
+import {CategoryLink} from './CategoryLink';
+import {CompositionThumbnail} from './CompositionThumbnail';
+import {TopLevelContent} from './TopLevelContent';
+import styles from '../../../../styles/app/components/sidebar/nav.module.css';
 import {
 	categoryProps,
 	CompositionType,
 	videoProps,
 } from '../../../data/config/sideBarConfig';
-import {useEffect, useState} from 'react';
-import {TopLevelContent} from './TopLevelContent';
 
 type NavDetailsProps = {
 	videoType: CompositionType;

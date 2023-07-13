@@ -1,4 +1,5 @@
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {TalkDetails} from '../../../design/molecules/TalkDetails';
 
 export const Details: React.FC<{

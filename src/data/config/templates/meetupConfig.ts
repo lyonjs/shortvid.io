@@ -1,6 +1,7 @@
-import {CompositionProps} from '../compositionsConfig';
-import {Meetup} from '../../../../remotion/compositions/templates/meetup/Meetup';
 import {staticFile} from 'remotion';
+
+import {Meetup} from '../../../../remotion/compositions/templates/meetup/Meetup';
+import {CompositionProps} from '../compositionsConfig';
 
 export const MeetupConfig: CompositionProps = {
 	compositionName: 'Meetup',

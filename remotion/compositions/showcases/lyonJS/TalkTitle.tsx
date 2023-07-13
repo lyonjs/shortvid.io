@@ -1,6 +1,8 @@
 import React from 'react';
-import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {loadFont} from '@remotion/google-fonts/Aldrich';
+import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Title} from '../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();

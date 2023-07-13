@@ -1,5 +1,6 @@
-import {Talk} from '../../../../remotion/compositions/templates/talk/Talk';
 import {staticFile} from 'remotion';
+
+import {Talk} from '../../../../remotion/compositions/templates/talk/Talk';
 import {CompositionProps} from '../compositionsConfig';
 
 export const TalkConfig: CompositionProps = {

@@ -1,4 +1,5 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {Text} from '../../../design/atoms/Text';
 
 export const SponsorName: React.FC<{

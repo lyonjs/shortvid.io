@@ -1,8 +1,10 @@
-import {AbsoluteFill, Img} from 'remotion';
 import React from 'react';
-import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
-import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+
+import {AbsoluteFill, Img} from 'remotion';
+
 import {LayerBaseProps} from './layers.types';
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
 
 export const LayerFullScreen: React.FC<LayerBaseProps> = ({
 	primaryColor,

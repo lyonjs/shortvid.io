@@ -1,7 +1,9 @@
 import React from 'react';
-import {useLottie} from '../../../hooks/useLottie';
+
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
 import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
+import {useLottie} from '../../../hooks/useLottie';
 
 export const Details: React.FC<{
 	date: string;

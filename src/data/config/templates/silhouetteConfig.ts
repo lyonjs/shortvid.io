@@ -1,6 +1,7 @@
-import {CompositionProps} from '../compositionsConfig';
-import {Silhouette} from '../../../../remotion/compositions/templates/silhouette/Silhouette';
 import {staticFile} from 'remotion';
+
+import {Silhouette} from '../../../../remotion/compositions/templates/silhouette/Silhouette';
+import {CompositionProps} from '../compositionsConfig';
 
 export const SilhouetteConfig: CompositionProps = {
 	compositionName: 'Silhouette',

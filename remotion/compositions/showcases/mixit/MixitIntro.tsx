@@ -1,3 +1,5 @@
+import {CSSProperties} from 'react';
+
 import {
 	AbsoluteFill,
 	Img,
@@ -5,7 +7,6 @@ import {
 	staticFile,
 	useCurrentFrame,
 } from 'remotion';
-import {CSSProperties} from 'react';
 
 const MixitLogo: React.FC = () => {
 	return (

@@ -1,9 +1,11 @@
-import {AbsoluteFill, Img} from 'remotion';
 import React from 'react';
-import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
+
+import {AbsoluteFill, Img} from 'remotion';
+
+import {DefaultLayerProps} from './layers.types';
 import {LayerTitle} from './LayerTitle';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {DefaultLayerProps} from './layers.types';
+import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
 
 export const LayerTwoSpeaker: React.FC<DefaultLayerProps> = ({
 	title,

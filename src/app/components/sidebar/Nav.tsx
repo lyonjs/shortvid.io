@@ -1,14 +1,15 @@
 'use client';
 
+import {useState} from 'react';
+
+import {ActiveLink} from './ActiveLink';
+import {NavDetails} from './NavDetails';
+import {TopLevelContent} from './TopLevelContent';
 import styles from '../../../../styles/app/components/sidebar/nav.module.css';
 import {
 	CompositionType,
 	sideBarNavConfig,
 } from '../../../data/config/sideBarConfig';
-import {ActiveLink} from './ActiveLink';
-import {NavDetails} from './NavDetails';
-import {useState} from 'react';
-import {TopLevelContent} from './TopLevelContent';
 
 export const Nav: React.FC<{expanded: boolean}> = ({expanded}) => {
 	const [openedNavDetails, setOpenedNavDetails] = useState<string | null>(null);

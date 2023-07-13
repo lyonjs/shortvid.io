@@ -1,5 +1,6 @@
-import {Text} from '../../../../design/atoms/Text';
 import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {Text} from '../../../../design/atoms/Text';
 
 export type speakerProps = {
 	speakers: {name: string; picture: string; company?: string; role?: string}[];

@@ -1,6 +1,7 @@
 import {Lottie} from '@remotion/lottie';
-import {useLottie} from '../../../hooks/useLottie';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {useLottie} from '../../../hooks/useLottie';
 
 export const Type: React.FC<{type: string}> = ({type}) => {
 	const frame = useCurrentFrame();

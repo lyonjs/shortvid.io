@@ -1,16 +1,17 @@
 'use client';
 
 import {Player} from '@remotion/player';
-import {useInputChange} from '../../../../src/app/hooks/useInputChange';
-import {Form, Input} from '../../../../src/app/forms/input';
+
+import {TalkBranded} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {Code} from '../../../../src/app/Code';
 import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
-import {TalkBranded} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
-import {SelectInput} from '../../../../src/app/forms/selectInput';
 import {ColorInput} from '../../../../src/app/forms/colorInput';
+import {Form, Input} from '../../../../src/app/forms/input';
 import {InputDate} from '../../../../src/app/forms/inputDate';
+import {SelectInput} from '../../../../src/app/forms/selectInput';
+import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {useInputDateChange} from '../../../../src/app/hooks/useInputDateChange';
+import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(

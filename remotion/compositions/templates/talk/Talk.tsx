@@ -1,8 +1,10 @@
-import {AbsoluteFill, Sequence, staticFile} from 'remotion';
-import {EventLogo} from '../../../design/atoms/EventLogo';
 import React from 'react';
+
+import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+
 import {SpeakerAndTitle} from './SpeakerAndTitle';
 import {TalkBackground} from './TalkBackground';
+import {EventLogo} from '../../../design/atoms/EventLogo';
 
 export const Talk: React.FC<{
 	eventLogo?: string;

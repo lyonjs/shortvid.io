@@ -1,10 +1,11 @@
 import {AbsoluteFill} from 'remotion';
-import {LyonSkyline} from './LyonSkyline';
-import {Logo} from './Logo';
-import {Speakers} from './Speakers';
+
 import {Details} from './Details';
-import {DefaultProps} from '../../../types/defaultProps.types';
+import {Logo} from './Logo';
+import {LyonSkyline} from './LyonSkyline';
+import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
+import {DefaultProps} from '../../../types/defaultProps.types';
 
 export const Mixit2023: React.FC<DefaultProps> = ({
 	title,

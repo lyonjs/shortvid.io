@@ -1,12 +1,14 @@
 import React from 'react';
+
 import {Composition, Folder, staticFile} from 'remotion';
+
 import {Avatar} from './Avatar';
-import {EventLogo} from './EventLogo';
-import {Title} from './Title';
-import {BackgroundFiller} from './BackgroundFiller';
-import {Text} from './Text';
-import {BackgroundTriangle} from './BackgroundTriangle';
 import {BackgroundCircleNoise} from './BackgroundCircleNoise';
+import {BackgroundFiller} from './BackgroundFiller';
+import {BackgroundTriangle} from './BackgroundTriangle';
+import {EventLogo} from './EventLogo';
+import {Text} from './Text';
+import {Title} from './Title';
 
 export const AtomsComposition: React.FC = () => {
 	return (

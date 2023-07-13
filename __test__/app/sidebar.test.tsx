@@ -28,17 +28,21 @@ describe('<Sidebar />', () => {
 	});
 
 	it('should render the component', () => {
-		const sidebar = screen.getByTestId('sidebar');
+		const sidebar = screen.getByRole('region', {
+			name: 'sidebar',
+		});
 		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
-		const contributingLink = screen.getByText('Contributing').parentNode;
+		const contributingLink = screen.getByRole('link', {
+			name: 'Contributing',
+		});
 		const themeButtonsGroup = screen.getByRole('radiogroup');
 		const nav = screen.getByRole('navigation');
 
-		const topLevelLink = screen.getByText('topLevel');
-		const video = screen.getByRole('heading', {
+		const topLevelElement = screen.getAllByRole('listitem')[0];
+		const video = screen.getByRole('link', {
 			name: 'Video',
 		});
-		const categorisedVideo = screen.getByRole('heading', {
+		const categorisedVideo = screen.getByRole('link', {
 			name: 'CategorisedVideo',
 		});
 
@@ -49,24 +53,28 @@ describe('<Sidebar />', () => {
 
 		expect(nav).toBeVisible();
 
-		expect(topLevelLink).toBeVisible();
+		expect(topLevelElement).toBeVisible();
 		expect(video).not.toBeVisible();
 		expect(categorisedVideo).not.toBeVisible();
+		expect(categorisedVideo).toHaveAttribute(
+			'href',
+			'/toplevel/category/categorisedVideo'
+		);
 	});
 
 	it('should display videos list', async () => {
 		const user = userEvent.setup();
-		const topLevelLink = screen.getByText('topLevel').parentNode as Element;
+		const topLevelSummary = screen.getByText('topLevel').parentNode as Element;
 		const firstLevelVideo = screen.getByRole('heading', {
 			name: 'Video',
 		});
 		const categoryButton = screen.getByText('category');
 
-		expect(topLevelLink).toBeVisible();
+		expect(topLevelSummary).toBeVisible();
 		expect(firstLevelVideo).not.toBeVisible();
 		expect(categoryButton).not.toBeVisible();
 
-		await user.click(topLevelLink);
+		await user.click(topLevelSummary);
 
 		expect(firstLevelVideo).toBeVisible();
 		expect(categoryButton).toBeVisible();
@@ -105,10 +113,10 @@ describe('<Sidebar />', () => {
 		const fisrtLink = details[0];
 		const secondLink = details[2];
 
-		const video = screen.getByRole('heading', {
+		const video = screen.getByRole('link', {
 			name: 'Video',
 		});
-		const secondVideo = screen.getByRole('heading', {
+		const secondVideo = screen.getByRole('link', {
 			name: 'Video2',
 		});
 

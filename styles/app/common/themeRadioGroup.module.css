@@ -28,3 +28,9 @@
 		color: var(--color-text);
 	}
 }
+
+[aria-expanded='false'] {
+	.switchThemeGroup {
+		flex-direction: column;
+	}
+}

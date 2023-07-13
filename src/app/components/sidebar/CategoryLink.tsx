@@ -21,7 +21,7 @@ export const CategoryLink: React.FC<
 
 	return (
 		<details className={styles.category} open={isOpen}>
-			<summary>
+			<summary className={isOpen ? styles.selected : ''}>
 				{categoryName}
 				<Icon icon="iconamoon:arrow-down-2" />
 			</summary>

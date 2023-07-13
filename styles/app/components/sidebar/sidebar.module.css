@@ -1,4 +1,5 @@
 .sidebar {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -11,6 +12,7 @@
 	border-radius: 10px;
 
 	header {
+		width: 100%;
 		padding: 20px 20px 15px;
 		border-bottom: 1px solid transparent;
 		border-image: var(--separator);
@@ -26,6 +28,7 @@
 	}
 
 	footer {
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -54,6 +57,38 @@
 					fill: var(--color-link);
 				}
 			}
+		}
+	}
+
+	.foldButton {
+		position: absolute;
+		top: 80px;
+		right: -15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2px;
+		border-radius: 8px;
+		border: 2px solid var(--switch-border);
+		background: var(--color-background);
+
+		> svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&[aria-expanded='false'] {
+		align-items: center;
+		width: 110px;
+
+		.foldButton {
+			transform: rotate(180deg);
+		}
+
+		footer {
+			flex-direction: column;
+			gap: 15px;
 		}
 	}
 }

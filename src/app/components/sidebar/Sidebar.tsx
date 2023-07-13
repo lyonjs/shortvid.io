@@ -11,12 +11,17 @@ export const Sidebar = () => {
 	const [expanded, setExpanded] = useState<boolean>(true);
 
 	return (
-		<section className={styles.sidebar} aria-expanded={expanded}>
+		<section
+			className={styles.sidebar}
+			aria-expanded={expanded}
+			aria-label="sidebar"
+		>
 			<Header expanded={expanded} />
 			<Nav expanded={expanded} />
 			<Footer expanded={expanded} />
 			<button
 				type="button"
+				aria-label="foldButton"
 				className={styles.foldButton}
 				onClick={() => setExpanded(!expanded)}
 			>

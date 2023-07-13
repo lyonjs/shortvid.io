@@ -3,7 +3,7 @@ import {Thumbnail} from '@remotion/player';
 import {CompositionType} from '../../../data/config/sideBarConfig';
 import styles from '../../../../styles/app/components/sidebar/activeLink.module.css';
 
-export type CompositionThumbnailProps = {
+type CompositionThumbnailProps = {
 	compositionType: CompositionType;
 	compositionId: string;
 	compositionName: string;

@@ -14,7 +14,7 @@ export const TopLevelContent: React.FC<TopLevelContentProps> = ({
 	return (
 		<>
 			<Icon icon={iconifyId} />
-			{expanded && textContent}
+			{expanded && <h4>{textContent}</h4>}
 		</>
 	);
 };

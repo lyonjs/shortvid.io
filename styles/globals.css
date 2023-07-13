@@ -36,11 +36,19 @@
 	--switch-border: var(--grey-100);
 
 	--color-logo: white;
+
+	--separator: linear-gradient(
+			90deg,
+			transparent,
+			var(--color-separator),
+			transparent
+		)
+		1;
 }
 
 [data-theme='light'] {
 	--color-primary: var(--purple-300);
-	--color-link: var(--purple-400);
+	--color-link: var(--purple-300);
 	--color-background: white;
 	--color-separator: var(--purple-450);
 	--color-text: var(--purple-900);
@@ -48,20 +56,20 @@
 	--color-btn-text: white;
 	--color-btn-background: var(--purple-700);
 
-	--switch-background: var(--grey-50);
+	--switch-background: var(--purple-50);
 	--switch-unselected: var(--grey-500);
 	--switch-border: var(--grey-100);
 
-	--color-logo: var(--purple-500);
+	--color-logo: var(--purple-600);
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
-}
-
-main {
-	max-width: 60rem;
 }
 
 a {

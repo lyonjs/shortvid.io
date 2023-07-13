@@ -1,0 +1,94 @@
+.sidebar {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 15px;
+	max-width: 315px;
+	width: 100%;
+	height: calc(100vh - 2rem);
+	background: var(--color-background);
+	border: 2px solid var(--switch-border);
+	border-radius: 10px;
+
+	header {
+		width: 100%;
+		padding: 20px 20px 15px;
+		border-bottom: 1px solid transparent;
+		border-image: var(--separator);
+
+		.logoLink {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			font-size: 1.6rem;
+			color: var(--color-link);
+		}
+	}
+
+	footer {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 20px 20px;
+		border-top: 1px solid transparent;
+		border-image: var(--separator);
+
+		.contributeLink {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 1rem;
+			font-weight: 500;
+			color: var(--color-text);
+
+			svg {
+				width: 25px;
+				height: auto;
+				fill: var(--color-text);
+			}
+
+			&:hover {
+				color: var(--color-link);
+
+				svg {
+					fill: var(--color-link);
+				}
+			}
+		}
+	}
+
+	.foldButton {
+		position: absolute;
+		top: 80px;
+		right: -15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2px;
+		border-radius: 8px;
+		border: 2px solid var(--switch-border);
+		background: var(--color-background);
+
+		> svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&[aria-expanded='false'] {
+		align-items: center;
+		width: 110px;
+
+		.foldButton {
+			transform: rotate(180deg);
+		}
+
+		footer {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+}

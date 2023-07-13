@@ -1,8 +1,8 @@
 .switchThemeGroup {
+	width: max-content;
 	display: flex;
 	gap: 0.5rem;
 	padding: 0.25rem;
-	margin-left: 20px;
 	background: var(--color-background);
 	border: 1px solid var(--switch-border);
 	border-radius: 50px;
@@ -26,5 +26,11 @@
 	.checked {
 		background: var(--switch-background);
 		color: var(--color-text);
+	}
+}
+
+[aria-expanded='false'] {
+	.switchThemeGroup {
+		flex-direction: column;
 	}
 }

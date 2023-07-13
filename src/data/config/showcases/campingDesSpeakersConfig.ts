@@ -4,7 +4,6 @@ import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/ca
 import {defaultTalkValues} from '../../defaultValues';
 import {CompositionProps} from '../compositionsConfig';
 
-
 export const CampingDesSpeakersConfig: CompositionProps = {
 	compositionName: 'CampingDesSpeakers',
 	component: CampingDesSpeakers,

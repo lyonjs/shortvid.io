@@ -11,8 +11,6 @@ import {
 	sideBarNavConfig,
 } from '../../../data/config/sideBarConfig';
 
-
-
 export const Nav: React.FC<{expanded: boolean}> = ({expanded}) => {
 	const [openedNavDetails, setOpenedNavDetails] = useState<string | null>(null);
 

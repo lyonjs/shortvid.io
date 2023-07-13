@@ -11,8 +11,6 @@ import {
 	CompositionType,
 } from '../../../data/config/sideBarConfig';
 
-
-
 export const CategoryLink: React.FC<
 	categoryProps & {
 		categoryRoute: string;

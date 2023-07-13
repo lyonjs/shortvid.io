@@ -4,7 +4,6 @@ import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volca
 import {defaultTalkValues} from '../../defaultValues';
 import {CompositionProps} from '../compositionsConfig';
 
-
 export const VolcampConfig: CompositionProps = {
 	compositionName: 'Volcamp2023',
 	component: Volcamp,

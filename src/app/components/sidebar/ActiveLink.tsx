@@ -1,8 +1,10 @@
 'use client';
 
-import styles from '../../../../styles/app/components/sidebar/activeLink.module.css';
-import {usePathname} from 'next/navigation';
 import {ReactNode} from 'react';
+
+import {usePathname} from 'next/navigation';
+
+import styles from '../../../../styles/app/components/sidebar/activeLink.module.css';
 
 export const ActiveLink: React.FC<{
 	src: string;

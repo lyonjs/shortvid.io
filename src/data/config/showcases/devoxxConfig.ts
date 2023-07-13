@@ -1,6 +1,6 @@
-import {CompositionProps} from '../compositionsConfig';
 import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
 import {defaultTalkValues} from '../../defaultValues';
+import {CompositionProps} from '../compositionsConfig';
 
 export const DevoxxConfig: CompositionProps = {
 	compositionName: 'Devoxx2023',

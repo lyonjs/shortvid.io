@@ -1,7 +1,9 @@
-import {CompositionProps} from '../compositionsConfig';
-import {defaultTalkValues} from '../../defaultValues';
-import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volcamp';
 import _ = require('lodash');
+
+import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volcamp';
+import {defaultTalkValues} from '../../defaultValues';
+import {CompositionProps} from '../compositionsConfig';
+
 
 export const VolcampConfig: CompositionProps = {
 	compositionName: 'Volcamp2023',

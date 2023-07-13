@@ -1,5 +1,5 @@
-import {CompositionProps} from '../compositionsConfig';
 import {TalkBranded} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
+import {CompositionProps} from '../compositionsConfig';
 
 export const TalkBrandedConfig: CompositionProps = {
 	compositionName: 'TalkBranded',

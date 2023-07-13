@@ -1,7 +1,9 @@
-import {CompositionProps} from '../compositionsConfig';
-import {defaultTalkValues} from '../../defaultValues';
-import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
 import _ = require('lodash');
+
+import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
+import {defaultTalkValues} from '../../defaultValues';
+import {CompositionProps} from '../compositionsConfig';
+
 
 export const CampingDesSpeakersConfig: CompositionProps = {
 	compositionName: 'CampingDesSpeakers',

@@ -1,5 +1,5 @@
-import {CompositionProps} from '../compositionsConfig';
 import {Event} from '../../../../remotion/compositions/templates/event/Event';
+import {CompositionProps} from '../compositionsConfig';
 
 export const EventConfig: CompositionProps = {
 	compositionName: 'Event',

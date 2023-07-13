@@ -1,11 +1,13 @@
 'use client';
 
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
-import {Nav} from './Nav';
 import React, {useState} from 'react';
-import {Header} from './Header';
-import {Footer} from './Footer';
+
 import {Icon} from '@iconify/react';
+
+import {Footer} from './Footer';
+import {Header} from './Header';
+import {Nav} from './Nav';
+import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 
 export const Sidebar = () => {
 	const [expanded, setExpanded] = useState<boolean>(true);

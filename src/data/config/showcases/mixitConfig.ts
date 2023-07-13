@@ -1,6 +1,6 @@
-import {CompositionProps} from '../compositionsConfig';
-import {defaultTalkValues} from '../../defaultValues';
 import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit/MixitIntroTalk';
+import {defaultTalkValues} from '../../defaultValues';
+import {CompositionProps} from '../compositionsConfig';
 
 export const MixitConfig: CompositionProps = {
 	compositionName: 'Mixit2023',

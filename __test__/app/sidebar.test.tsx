@@ -143,4 +143,17 @@ describe('<Sidebar />', () => {
 		expect(video).not.toBeVisible();
 		expect(secondVideo).toBeVisible();
 	});
+
+	it('should save fold preferences', async () => {
+		const user = userEvent.setup();
+		const foldButton = screen.getByRole('button', {
+			name: 'foldButton',
+		});
+
+		await user.click(foldButton);
+		expect(window.localStorage.getItem('expanded')).toEqual('false');
+
+		await user.click(foldButton);
+		expect(window.localStorage.getItem('expanded')).toEqual('true');
+	});
 });

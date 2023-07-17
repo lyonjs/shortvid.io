@@ -31,6 +31,10 @@ describe('<Sidebar />', () => {
 		);
 	});
 
+	afterEach(() => {
+		window.localStorage.clear();
+	});
+
 	it('should render the component', () => {
 		const sidebar = screen.getByRole('region', {
 			name: 'sidebar',
@@ -108,13 +112,13 @@ describe('<Sidebar />', () => {
 		expect(contributingText).not.toBeVisible();
 	});
 
-	it('should alternate display ditails when folded', async () => {
+	it('should alternate display details when folded', async () => {
 		const user = userEvent.setup();
 		const foldButton = screen.getByRole('button', {
 			name: 'foldButton',
 		});
 		const details = screen.getAllByRole('group');
-		const fisrtLink = details[0];
+		const firstLink = details[0];
 		const secondLink = details[2];
 
 		const video = screen.getByRole('link', {
@@ -129,7 +133,7 @@ describe('<Sidebar />', () => {
 		expect(video).not.toBeVisible();
 		expect(secondVideo).not.toBeVisible();
 
-		await user.click(fisrtLink);
+		await user.click(firstLink);
 
 		expect(video).toBeVisible();
 		expect(secondVideo).not.toBeVisible();

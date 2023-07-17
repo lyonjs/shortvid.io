@@ -35,10 +35,12 @@
 			}
 		]
 	},
-	"overrides": [{
-		"files": ["__test__/**/*.tsx"],
-		"rules": {
-			"import/order": "off"
+	"overrides": [
+		{
+			"files": ["__test__/**/*.tsx"],
+			"rules": {
+				"import/order": "off"
+			}
 		}
-	}]
+	]
 }

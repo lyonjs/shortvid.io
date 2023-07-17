@@ -1,18 +1,19 @@
 import {useEffect, useState} from 'react';
 
 export const useSidebarPreferences = () => {
-	const [folded, setFolded] = useState<boolean>(false);
+	const [expanded, setExpanded] = useState<boolean>(true);
 
 	useEffect(() => {
-		const foldedPreferencesString = localStorage.getItem('folded');
-		const foldedPreferences = foldedPreferencesString === 'true' ? true : false;
-		foldedPreferences && setFolded(foldedPreferences);
+		const expandedPreferencesString = localStorage.getItem('expanded');
+		const expandedPreferences =
+			expandedPreferencesString === 'false' ? false : true;
+		setExpanded(expandedPreferences);
 	}, []);
 
-	const handleFold = (value: boolean) => {
-		setFolded(value);
-		localStorage.setItem('folded', `${value}`);
+	const handleExpand = (value: boolean) => {
+		setExpanded(value);
+		localStorage.setItem('expanded', `${value}`);
 	};
 
-	return {folded, setFolded: handleFold};
+	return {expanded, setExpanded: handleExpand};
 };

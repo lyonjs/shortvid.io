@@ -1,0 +1,53 @@
+.resizeWrapper {
+	position: relative;
+	display: block;
+	height: auto;
+
+	> span {
+		position: absolute;
+		height: 100%;
+		width: 20px;
+		top: 0;
+		left: auto;
+		right: -10px;
+		z-index: 2;
+
+		&.handleLeft {
+			right: auto;
+			left: -10px;
+		}
+
+		&:hover {
+			cursor: ew-resize;
+		}
+	}
+
+	.foldButton {
+		position: absolute;
+		top: 80px;
+		right: -15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2px;
+		border-radius: 8px;
+		border: 2px solid var(--switch-border);
+		background: var(--color-background);
+		z-index: 10;
+
+		> svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&[aria-expanded='false'] {
+		> span {
+			display: none;
+		}
+
+		.foldButton {
+			transform: rotate(180deg);
+		}
+	}
+}

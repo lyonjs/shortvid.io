@@ -1,15 +1,19 @@
 .sidebar {
+	container: sidebar / size;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 15px;
-	max-width: 315px;
+	max-width: 500px;
+	min-width: 215px;
 	width: 100%;
 	height: calc(100vh - 2rem);
 	background: var(--color-background);
 	border: 2px solid var(--switch-border);
 	border-radius: 10px;
+	z-index: 1;
+	overflow: hidden;
 
 	.burgerBtn {
 		position: relative;
@@ -105,38 +109,6 @@
 		}
 	}
 
-	.foldButton {
-		position: absolute;
-		top: 80px;
-		right: -15px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 2px;
-		border-radius: 8px;
-		border: 2px solid var(--switch-border);
-		background: var(--color-background);
-
-		> svg {
-			width: 20px;
-			height: 20px;
-		}
-	}
-
-	&[aria-expanded='false'] {
-		width: 110px;
-		align-items: center;
-
-		.foldButton {
-			transform: rotate(180deg);
-		}
-
-		footer {
-			flex-direction: column;
-			gap: 15px;
-		}
-	}
-
 	&.sidebarMobile {
 		justify-content: flex-start;
 		max-width: 100%;
@@ -172,6 +144,29 @@
 				visibility: visible;
 				transform: translateX(0);
 			}
+		}
+	}
+}
+
+[aria-expanded='false'] {
+	.sidebar {
+		width: 110px;
+		max-width: 110px;
+		min-width: 110px;
+		align-items: center;
+
+		footer {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+}
+
+@container sidebar (max-width: 270px) {
+	.sidebar {
+		footer {
+			flex-direction: column;
+			gap: 15px;
 		}
 	}
 }

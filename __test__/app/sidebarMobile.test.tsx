@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import {sideBarNavConfigMock} from '../mocks/sideBarConfig.mock';
 import {render, screen} from '@testing-library/react';
-import {SidebarMobile} from '../../src/app/components/sidebar/SidebarMobile';
+import {SidebarMobile} from '../../src/app/components/sidebar/navigation/SidebarMobile';
 import userEvent from '@testing-library/user-event';
 
 jest.mock('next/navigation', () => ({

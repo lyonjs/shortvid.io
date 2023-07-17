@@ -1,11 +1,13 @@
 'use client';
 
-import {Header} from './Header';
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
-import {Icon} from '@iconify/react';
-import {Nav} from './Nav';
-import {Footer} from './Footer';
 import {useEffect, useState} from 'react';
+
+import {Icon} from '@iconify/react';
+
+import {Footer} from './Footer';
+import {Header} from './Header';
+import {Nav} from './Nav';
+import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 
 export const SidebarMobile = () => {
 	const [openBurger, setOpenBurger] = useState<boolean>(false);

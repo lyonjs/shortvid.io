@@ -1,7 +1,6 @@
 .activeLink {
 	display: block;
 	border-radius: 5px;
-	width: 45%;
 	color: var(--color-text);
 
 	.thumbnailCard {
@@ -40,4 +39,7 @@
 	&.active {
 		background: var(--switch-background);
 	}
+}
+
+@container sidebar (max-width: 270px) {
 }

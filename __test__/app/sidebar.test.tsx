@@ -12,15 +12,18 @@ jest.mock('../../src/data/config/sideBarConfig', () => ({
 	sideBarNavConfig: sideBarNavConfigMock,
 }));
 
-jest.mock('../../src/app/components/sidebar/CompositionThumbnail', () => ({
-	CompositionThumbnail: ({compositionName}: {compositionName: string}) => {
-		return (
-			<div>
-				<h3>{compositionName}</h3>
-			</div>
-		);
-	},
-}));
+jest.mock(
+	'../../src/app/components/sidebar/navigation/CompositionThumbnail',
+	() => ({
+		CompositionThumbnail: ({compositionName}: {compositionName: string}) => {
+			return (
+				<div>
+					<h3>{compositionName}</h3>
+				</div>
+			);
+		},
+	})
+);
 
 describe('<Sidebar />', () => {
 	beforeEach(() => {

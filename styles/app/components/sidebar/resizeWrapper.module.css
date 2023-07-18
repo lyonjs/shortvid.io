@@ -1,7 +1,6 @@
 .resizeWrapper {
 	position: relative;
-	display: block;
-	height: auto;
+	max-width: 500px;
 
 	> span {
 		position: absolute;
@@ -11,43 +10,35 @@
 		left: auto;
 		right: -10px;
 		z-index: 2;
+		cursor: col-resize;
+		transform-origin: center;
 
 		&.handleLeft {
 			right: auto;
 			left: -10px;
 		}
-
-		&:hover {
-			cursor: ew-resize;
-		}
-	}
-
-	.foldButton {
-		position: absolute;
-		top: 80px;
-		right: -15px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 2px;
-		border-radius: 8px;
-		border: 2px solid var(--switch-border);
-		background: var(--color-background);
-		z-index: 10;
-
-		> svg {
-			width: 20px;
-			height: 20px;
-		}
 	}
 
 	&[aria-expanded='false'] {
+		max-width: 110px;
+		min-width: 110px;
+
 		> span {
 			display: none;
 		}
+	}
+}
 
-		.foldButton {
-			transform: rotate(180deg);
+@container sidebar (max-width: 200px) {
+	.resizeWrapper {
+		> span {
+			display: none;
 		}
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.resizeWrapper {
+		display: none;
 	}
 }

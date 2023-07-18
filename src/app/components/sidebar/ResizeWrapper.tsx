@@ -1,81 +1,31 @@
 'use client';
 
-import {
-	cloneElement,
-	DetailedReactHTMLElement,
-	useEffect,
-	useRef,
-	useState,
-} from 'react';
-
-import {Icon} from '@iconify/react';
+import {ReactNode, useCallback, useRef, useState} from 'react';
 
 import styles from '../../../../styles/app/components/sidebar/resizeWrapper.module.css';
 
 export const ResizeWrapper: React.FC<{
 	handleSide?: 'left' | 'right';
-	children: DetailedReactHTMLElement<any, HTMLElement>;
+	children: ReactNode;
 }> = ({handleSide = 'right', children}) => {
-	const [expanded, setExpanded] = useState<boolean>(true);
-
-	const [initialPos, setInitialPos] = useState<number | null>(null);
-	const [initialSize, setInitialSize] = useState<number>(315);
-
 	const resizableRef = useRef<HTMLDivElement | null>(null);
+	const [sidebarWidth, setSidebarWidth] = useState<number>(315);
 
-	useEffect(() => {
-		if (resizableRef.current) {
-			resizableRef.current.style.width = '315px';
+	const resize = useCallback((event: React.DragEvent<HTMLSpanElement>) => {
+		if (event.clientX !== 0 && event.clientX >= 240) {
+			setSidebarWidth(event.clientX - 20);
 		}
 	}, []);
 
-	const initial = (e: React.DragEvent<HTMLSpanElement>) => {
-		if (resizableRef.current) {
-			setInitialPos(e.clientX);
-			setInitialSize(resizableRef.current.offsetWidth);
-		}
-	};
-
-	const resize = (e: React.DragEvent<HTMLSpanElement>) => {
-		if (resizableRef.current && initialPos && initialSize) {
-			const newWidth = initialSize + (e.clientX - initialPos);
-
-			if (newWidth >= 215 && newWidth <= 500) {
-				resizableRef.current.style.width = `${newWidth}px`;
-			}
-		}
-	};
-
-	const handleExpanded = () => {
-		const newValue = !expanded;
-		setExpanded(newValue);
-		if (resizableRef.current) {
-			if (!newValue) {
-				resizableRef.current.style.width = '110px';
-			} else {
-				resizableRef.current.style.width = '215px';
-			}
-		}
-	};
-
 	return (
-		<div className={styles.resizeWrapper} aria-expanded={expanded}>
+		<div className={styles.resizeWrapper} style={{width: `${sidebarWidth}px`}}>
 			<span
 				className={`${handleSide === 'left' ? styles.handleLeft : ''}`}
 				draggable={true}
-				onDragStart={initial}
 				onDrag={resize}
 			/>
-			<div ref={resizableRef}>
-				{cloneElement(children, {expanded})}
-				<button
-					type="button"
-					aria-label="foldButton"
-					className={styles.foldButton}
-					onClick={handleExpanded}
-				>
-					<Icon icon="iconamoon:arrow-left-2" />
-				</button>
+			<div ref={resizableRef} style={{width: sidebarWidth}}>
+				{children}
 			</div>
 		</div>
 	);

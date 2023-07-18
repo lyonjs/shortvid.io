@@ -1,17 +1,18 @@
 .resizeWrapper {
 	position: relative;
 	max-width: 500px;
+	height: max-content;
 
 	> span {
 		position: absolute;
-		height: 100%;
+		height: calc(100% - 110px);
 		width: 20px;
-		top: 0;
+		top: 110px;
 		left: auto;
 		right: -10px;
-		z-index: 2;
 		cursor: col-resize;
 		transform-origin: center;
+		z-index: 2;
 
 		&.handleLeft {
 			right: auto;
@@ -19,18 +20,10 @@
 		}
 	}
 
-	&[aria-expanded='false'] {
+	&.folded {
 		max-width: 110px;
 		min-width: 110px;
 
-		> span {
-			display: none;
-		}
-	}
-}
-
-@container sidebar (max-width: 200px) {
-	.resizeWrapper {
 		> span {
 			display: none;
 		}

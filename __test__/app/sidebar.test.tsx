@@ -3,6 +3,7 @@ import {sideBarNavConfigMock} from '../mocks/sideBarConfig.mock';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {Sidebar} from '../../src/app/components/sidebar/navigation/Sidebar';
+import {SidebarProvider} from '../../src/context/SidebarContext';
 
 jest.mock('next/navigation', () => ({
 	usePathname: jest.fn().mockReturnValue('/'),
@@ -27,7 +28,11 @@ jest.mock(
 
 describe('<Sidebar />', () => {
 	beforeEach(() => {
-		render(<Sidebar />);
+		render(
+			<SidebarProvider>
+				<Sidebar />
+			</SidebarProvider>
+		);
 	});
 
 	it('should render the component', () => {

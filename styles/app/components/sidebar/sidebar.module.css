@@ -118,7 +118,6 @@
 		border-radius: 8px;
 		border: 2px solid var(--switch-border);
 		background: var(--color-background);
-		z-index: 10;
 
 		> svg {
 			width: 20px;

@@ -11,16 +11,19 @@ import {Footer} from './Footer';
 import styles from '../../styles/app/layout/main.module.css';
 import {CustomThemeProvider} from '../context/CustomThemeProvider';
 import {FontProvider} from '../context/FontContext';
+import {SidebarProvider} from '../context/SidebarContext';
 
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (
 		<CustomThemeProvider>
 			<main className="mx-auto p-4">
 				<div className={styles.sidebarLayout}>
-					<ResizeWrapper>
-						<Sidebar />
-					</ResizeWrapper>
-					<SidebarMobile />
+					<SidebarProvider>
+						<ResizeWrapper>
+							<Sidebar />
+						</ResizeWrapper>
+						<SidebarMobile />
+					</SidebarProvider>
 					<section>
 						<FontProvider>{children}</FontProvider>
 						<Footer />

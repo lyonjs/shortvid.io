@@ -1,13 +1,16 @@
 'use client';
 
-import {ReactNode, useCallback, useRef, useState} from 'react';
+import {ReactNode, useCallback, useContext, useRef, useState} from 'react';
 
 import styles from '../../../../styles/app/components/sidebar/resizeWrapper.module.css';
+import {SidebarContext} from '../../../context/SidebarContext';
 
 export const ResizeWrapper: React.FC<{
 	handleSide?: 'left' | 'right';
 	children: ReactNode;
 }> = ({handleSide = 'right', children}) => {
+	const {expanded} = useContext(SidebarContext);
+
 	const resizableRef = useRef<HTMLDivElement | null>(null);
 	const [sidebarWidth, setSidebarWidth] = useState<number>(315);
 
@@ -18,7 +21,10 @@ export const ResizeWrapper: React.FC<{
 	}, []);
 
 	return (
-		<div className={styles.resizeWrapper} style={{width: `${sidebarWidth}px`}}>
+		<div
+			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
+			style={{width: `${sidebarWidth}px`}}
+		>
 			<span
 				className={`${handleSide === 'left' ? styles.handleLeft : ''}`}
 				draggable={true}

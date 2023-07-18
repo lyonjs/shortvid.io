@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {useContext} from 'react';
 
 import {Icon} from '@iconify/react';
 
@@ -8,9 +8,10 @@ import {Footer} from './Footer';
 import {Header} from './Header';
 import {Nav} from './Nav';
 import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
+import {SidebarContext} from '../../../../context/SidebarContext';
 
 export const Sidebar = () => {
-	const [expanded, setExpanded] = useState<boolean>(true);
+	const {expanded, setExpanded} = useContext(SidebarContext);
 
 	return (
 		<section

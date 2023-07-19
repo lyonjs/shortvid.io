@@ -30,38 +30,34 @@ describe('<SidebarMobile />', () => {
 	it('should render the component', () => {
 		const sidebar = screen.getByTestId('sidebarMobile');
 		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
-		const openBurgerButton = screen.getByRole('button', {
+		const burgerButton = screen.getByRole('button', {
 			name: 'Open or close navigation',
 		});
 
 		expect(sidebar).toBeVisible();
 		expect(logo).toBeVisible();
-		expect(openBurgerButton).toBeVisible();
+		expect(burgerButton).toBeVisible();
 	});
 
 	it('should open and close the burger menu', async () => {
 		const user = userEvent.setup();
 		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
-		const openBurgerButton = screen.getByRole('button', {
+		const burgerButton = screen.getByRole('button', {
 			name: 'Open or close navigation',
 		});
 
 		expect(logo).toBeVisible();
-		expect(openBurgerButton).toBeVisible();
+		expect(burgerButton).toBeVisible();
 
-		await user.click(openBurgerButton);
+		await user.click(burgerButton);
 
-		const closeBurgerButton = screen.getByRole('button', {
-			name: 'closeBurgerBtn',
-		});
 		const topLevelLink = screen.getByText('topLevel');
 
-		expect(closeBurgerButton).toBeVisible();
+		expect(burgerButton).toBeVisible();
 		expect(topLevelLink).toBeVisible();
 
-		await user.click(closeBurgerButton);
+		await user.click(burgerButton);
 
-		expect(closeBurgerButton).not.toBeVisible();
 		expect(topLevelLink).not.toBeVisible();
 	});
 });

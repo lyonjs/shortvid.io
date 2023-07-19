@@ -33,8 +33,10 @@ export const ResizeWrapper: React.FC<{
 	const resize = useCallback(
 		(event: MouseEvent) => {
 			if (isResizing) {
-				if (event.clientX !== 0 && event.clientX >= 240) {
+				if (event.clientX !== 0 && event.clientX >= 230) {
 					setSidebarWidth(event.clientX - 20);
+				} else {
+					setSidebarWidth(220);
 				}
 			}
 		},
@@ -55,10 +57,12 @@ export const ResizeWrapper: React.FC<{
 			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
 			style={{width: `${sidebarWidth}px`}}
 			onMouseDown={(e) => e.preventDefault()}
+			data-testid="resizableWrapper"
 		>
 			<span
 				className={`${handleSide === 'left' ? styles.handleLeft : ''}`}
 				onMouseDown={startResize}
+				data-testid="resizeGrabber"
 			/>
 			<div ref={resizableRef} style={{width: sidebarWidth}}>
 				{children}

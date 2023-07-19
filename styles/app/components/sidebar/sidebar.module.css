@@ -175,7 +175,7 @@
 		}
 	}
 }
-/* bp: 220px - 270px (sidebar width) */
+
 @media screen and (max-width: 570px) {
 	.sidebar {
 		&.sidebarDesktop,

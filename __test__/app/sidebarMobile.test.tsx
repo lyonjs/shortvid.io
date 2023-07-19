@@ -31,7 +31,7 @@ describe('<SidebarMobile />', () => {
 		const sidebar = screen.getByTestId('sidebarMobile');
 		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
 		const openBurgerButton = screen.getByRole('button', {
-			name: 'openBurgerBtn',
+			name: 'Open or close navigation',
 		});
 
 		expect(sidebar).toBeVisible();
@@ -43,7 +43,7 @@ describe('<SidebarMobile />', () => {
 		const user = userEvent.setup();
 		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
 		const openBurgerButton = screen.getByRole('button', {
-			name: 'openBurgerBtn',
+			name: 'Open or close navigation',
 		});
 
 		expect(logo).toBeVisible();

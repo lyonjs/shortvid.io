@@ -11,13 +11,48 @@
 	border: 2px solid var(--switch-border);
 	border-radius: 10px;
 
-	.openBurgerBtn,
-	.closeBurgerBtn {
+	.burgerBtn {
+		position: relative;
 		display: none;
+
+		> svg,
+		> svg path {
+			transition: transform 0.3s;
+		}
 
 		> svg {
 			width: 40px;
 			height: 40px;
+
+			path {
+				&:first-child {
+					transform-origin: 20% 10%;
+				}
+				&:nth-child(2) {
+					opacity: 1;
+					transition-property: opacity;
+				}
+				&:last-child {
+					transform-origin: 20% 90%;
+				}
+			}
+		}
+
+		&.openedBurger {
+			> svg {
+				transform: rotate(-180deg);
+				path {
+					&:first-child {
+						transform: rotate(45deg) scaleX(1.35);
+					}
+					&:nth-child(2) {
+						opacity: 0;
+					}
+					&:last-child {
+						transform: rotate(-45deg) scaleX(1.35);
+					}
+				}
+			}
 		}
 	}
 
@@ -113,6 +148,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			z-index: 20;
 		}
 
 		.burgerContent {
@@ -125,17 +161,12 @@
 			top: 0;
 			left: 0;
 			background: var(--color-background);
-			padding: 10px 0;
+			padding: 90px 0 10px 0;
 			gap: 10px;
 			z-index: 10;
 			transform: translateX(100%);
 			visibility: hidden;
 			transition: all 0.3s ease;
-
-			.closeBurgerBtn {
-				margin-left: auto;
-				padding: 10px 20px 0 0;
-			}
 
 			&.openedBurger {
 				visibility: visible;
@@ -156,8 +187,7 @@
 			display: flex;
 		}
 
-		.openBurgerBtn,
-		.closeBurgerBtn {
+		.burgerBtn {
 			display: block;
 		}
 	}

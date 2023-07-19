@@ -2,8 +2,6 @@
 
 import {useEffect, useState} from 'react';
 
-import {Icon} from '@iconify/react';
-
 import {Footer} from './Footer';
 import {Header} from './Header';
 import {Nav} from './Nav';
@@ -12,6 +10,7 @@ import styles from '../../../../styles/app/components/sidebar/sidebar.module.css
 export const SidebarMobile = () => {
 	const [openBurger, setOpenBurger] = useState<boolean>(false);
 	const expanded = true;
+	const isOpenClassName = openBurger ? styles.openedBurger : '';
 
 	useEffect(() => {
 		document.body.toggleAttribute('data-lock-scroll', openBurger);
@@ -26,28 +25,39 @@ export const SidebarMobile = () => {
 			<Header expanded={expanded}>
 				<button
 					type="button"
-					aria-label="openBurgerBtn"
-					className={styles.openBurgerBtn}
-					onClick={() => setOpenBurger(true)}
+					aria-label="Open or close navigation"
+					className={`${styles.burgerBtn} ${isOpenClassName}`}
+					onClick={() => setOpenBurger(!openBurger)}
 				>
-					<Icon icon="entypo:menu" />
+					<svg
+						viewBox="0 0 48 32"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M3 3H45"
+							stroke="currentColor"
+							stroke-width="5"
+							stroke-linecap="round"
+						></path>
+						<path
+							d="M3 16H45"
+							stroke="currentColor"
+							stroke-width="5"
+							stroke-linecap="round"
+						></path>
+						<path
+							d="M3 30H45"
+							stroke="currentColor"
+							stroke-width="5"
+							stroke-linecap="round"
+						></path>
+					</svg>
 				</button>
 			</Header>
-			<div
-				className={`${styles.burgerContent} ${
-					openBurger ? styles.openedBurger : ''
-				}`}
-			>
+			<div className={`${styles.burgerContent} ${isOpenClassName}`}>
 				{openBurger && (
 					<>
-						<button
-							type="button"
-							aria-label="closeBurgerBtn"
-							className={styles.closeBurgerBtn}
-							onClick={() => setOpenBurger(false)}
-						>
-							<Icon icon="entypo:cross" />
-						</button>
 						<Nav expanded={expanded} />
 						<Footer expanded={expanded} />
 					</>

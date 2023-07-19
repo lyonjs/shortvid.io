@@ -48,7 +48,7 @@ export const NavDetails: React.FC<NavDetailsProps> = ({
 				setOpen(false);
 			}
 		}
-	}, [expanded, openedNavDetails, videoType]);
+	}, [expanded, openedNavDetails, videoType, setOpen]);
 
 	useEffect(() => {
 		if (!expanded) {

@@ -5,9 +5,10 @@ export const useSidebarPreferences = () => {
 
 	useEffect(() => {
 		const expandedPreferencesString = localStorage.getItem('expanded');
-		const expandedPreferences =
-			expandedPreferencesString === 'false' ? false : true;
-		setExpanded(expandedPreferences);
+		if (expandedPreferencesString) {
+			const expandedPreferences = JSON.parse(expandedPreferencesString);
+			setExpanded(expandedPreferences);
+		}
 	}, []);
 
 	const handleExpand = (value: boolean) => {

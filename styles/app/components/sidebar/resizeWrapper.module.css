@@ -13,8 +13,10 @@
 		cursor: col-resize;
 		transform-origin: center;
 		z-index: 2;
+	}
 
-		&.handleLeft {
+	&.positionRight {
+		> span {
 			right: auto;
 			left: -10px;
 		}

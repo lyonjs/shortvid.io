@@ -13,9 +13,11 @@ import styles from '../../../../styles/app/components/sidebar/resizeWrapper.modu
 import {SidebarContext} from '../../../context/SidebarContext';
 
 export const ResizeWrapper: React.FC<{
-	handleSide?: 'left' | 'right';
+	position?: 'left' | 'right';
 	children: ReactNode;
-}> = ({handleSide = 'right', children}) => {
+}> = ({position = 'left', children}) => {
+	const sideClassName = position === 'right' ? styles.positionRight : '';
+
 	const {expanded} = useContext(SidebarContext);
 
 	const resizableRef = useRef<HTMLDivElement | null>(null);
@@ -33,8 +35,14 @@ export const ResizeWrapper: React.FC<{
 	const resize = useCallback(
 		(event: MouseEvent) => {
 			if (isResizing) {
-				if (event.clientX !== 0 && event.clientX >= 230) {
-					setSidebarWidth(event.clientX - 20);
+				const positionedRightCalc = window.innerWidth - (event.clientX + 20);
+				const positionLeftCalc = event.clientX - 20;
+
+				const newValue =
+					position === 'right' ? positionedRightCalc : positionLeftCalc;
+
+				if (event.clientX !== 0 && newValue >= 220) {
+					setSidebarWidth(newValue);
 				} else {
 					setSidebarWidth(220);
 				}
@@ -54,16 +62,14 @@ export const ResizeWrapper: React.FC<{
 
 	return (
 		<div
-			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
+			className={`${styles.resizeWrapper} ${sideClassName} ${
+				!expanded ? styles.folded : ''
+			}`}
 			style={{width: `${sidebarWidth}px`}}
 			onMouseDown={(e) => e.preventDefault()}
 			data-testid="resizableWrapper"
 		>
-			<span
-				className={`${handleSide === 'left' ? styles.handleLeft : ''}`}
-				onMouseDown={startResize}
-				data-testid="resizeGrabber"
-			/>
+			<span onMouseDown={startResize} data-testid="resizeGrabber" />
 			<div ref={resizableRef} style={{width: sidebarWidth}}>
 				{children}
 			</div>

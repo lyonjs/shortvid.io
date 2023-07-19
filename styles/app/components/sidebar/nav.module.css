@@ -35,6 +35,10 @@
 				cursor: pointer;
 				background: var(--switch-background);
 			}
+
+			&::-webkit-details-marker {
+				display: none;
+			}
 		}
 
 		&[open] {

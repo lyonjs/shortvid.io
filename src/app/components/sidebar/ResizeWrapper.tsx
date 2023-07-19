@@ -1,6 +1,13 @@
 'use client';
 
-import {ReactNode, useCallback, useContext, useRef, useState} from 'react';
+import {
+	ReactNode,
+	useCallback,
+	useContext,
+	useEffect,
+	useRef,
+	useState,
+} from 'react';
 
 import styles from '../../../../styles/app/components/sidebar/resizeWrapper.module.css';
 import {SidebarContext} from '../../../context/SidebarContext';
@@ -12,23 +19,46 @@ export const ResizeWrapper: React.FC<{
 	const {expanded} = useContext(SidebarContext);
 
 	const resizableRef = useRef<HTMLDivElement | null>(null);
+	const [isResizing, setIsResizing] = useState<boolean>(false);
 	const [sidebarWidth, setSidebarWidth] = useState<number>(315);
 
-	const resize = useCallback((event: React.DragEvent<HTMLSpanElement>) => {
-		if (event.clientX !== 0 && event.clientX >= 240) {
-			setSidebarWidth(event.clientX - 20);
-		}
+	const startResize = useCallback(() => {
+		setIsResizing(true);
 	}, []);
+
+	const stopResize = useCallback(() => {
+		setIsResizing(false);
+	}, []);
+
+	const resize = useCallback(
+		(event: MouseEvent) => {
+			if (isResizing) {
+				if (event.clientX !== 0 && event.clientX >= 240) {
+					setSidebarWidth(event.clientX - 20);
+				}
+			}
+		},
+		[isResizing]
+	);
+
+	useEffect(() => {
+		window.addEventListener('mousemove', resize);
+		window.addEventListener('mouseup', stopResize);
+		return () => {
+			window.removeEventListener('mousemove', resize);
+			window.removeEventListener('mouseup', stopResize);
+		};
+	}, [resize, stopResize]);
 
 	return (
 		<div
 			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
 			style={{width: `${sidebarWidth}px`}}
+			onMouseDown={(e) => e.preventDefault()}
 		>
 			<span
 				className={`${handleSide === 'left' ? styles.handleLeft : ''}`}
-				draggable={true}
-				onDrag={resize}
+				onMouseDown={startResize}
 			/>
 			<div ref={resizableRef} style={{width: sidebarWidth}}>
 				{children}

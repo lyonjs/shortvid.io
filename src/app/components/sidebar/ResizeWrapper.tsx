@@ -14,6 +14,7 @@ import {SidebarContext} from '../../../context/SidebarContext';
 
 export const DEFAULT_SIDEBAR_WIDTH = 315;
 export const MIN_SIDEBAR_WIDTH = 220;
+export const MAX_SIDEBAR_WIDTH = 500;
 export const DEFAULT_GRABBER_WIDTH = 20;
 
 export const ResizeWrapper: React.FC<{
@@ -38,11 +39,12 @@ export const ResizeWrapper: React.FC<{
 			if (isResizing) {
 				const newSidebarWidth = event.clientX - DEFAULT_GRABBER_WIDTH;
 
-				if (event.clientX !== 0 && newSidebarWidth >= MIN_SIDEBAR_WIDTH) {
-					setSidebarWidth(newSidebarWidth);
-				} else {
-					setSidebarWidth(MIN_SIDEBAR_WIDTH);
-				}
+				setSidebarWidth(
+					Math.min(
+						Math.max(newSidebarWidth, MIN_SIDEBAR_WIDTH),
+						MAX_SIDEBAR_WIDTH
+					)
+				);
 			}
 		},
 		[isResizing]

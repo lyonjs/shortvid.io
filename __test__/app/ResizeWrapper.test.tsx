@@ -1,11 +1,12 @@
 import '@testing-library/jest-dom';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {SidebarProvider} from '../../src/context/SidebarContext';
+
 import {
 	DEFAULT_GRABBER_WIDTH,
 	DEFAULT_SIDEBAR_WIDTH,
 	ResizeWrapper,
 } from '../../src/app/components/sidebar/ResizeWrapper';
+import {SidebarProvider} from '../../src/context/SidebarContext';
 
 describe('<ResizeWrapper>', () => {
 	let resizeGrabber: HTMLElement, resizableWrapper: HTMLElement;
@@ -54,5 +55,12 @@ describe('<ResizeWrapper>', () => {
 
 		expect(resizableWrapper).not.toHaveStyle('width: 115px');
 		expect(resizableWrapper).toHaveStyle('width: 220px');
+	});
+
+	it('should not resize the sidebar over the maximum width', () => {
+		resizeSidebar(400);
+
+		expect(resizableWrapper).not.toHaveStyle('width: 415px');
+		expect(resizableWrapper).toHaveStyle('width: 500px');
 	});
 });

@@ -24,6 +24,11 @@
 						"pattern": "react",
 						"group": "external",
 						"position": "before"
+					},
+					{
+						"pattern": "{.,..,../..}/mocks/**",
+						"group": "internal",
+						"position": "before"
 					}
 				],
 				"pathGroupsExcludedImportTypes": ["react"],

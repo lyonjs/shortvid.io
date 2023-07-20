@@ -11,7 +11,7 @@
 	"scripts": {
 		"start": "remotion preview remotion/index.tsx",
 		"upgrade": "remotion upgrade",
-		"lint": "eslint remotion app src --ext ts,tsx,js,jsx",
+		"lint": "eslint remotion app src __test__ --ext ts,tsx,js,jsx",
 		"test": "jest",
 		"build": "next build",
 		"dev": "next dev",

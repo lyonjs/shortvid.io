@@ -6,8 +6,9 @@ import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom';
 
-import {Sidebar} from '../../src/app/components/sidebar/navigation/Sidebar';
+import {Sidebar} from '../../src/app/components/sidebar/Sidebar';
 import {SidebarProvider} from '../../src/context/SidebarContext';
+import {SidebarNav} from '../../src/app/components/sidebar/navigation/SidebarNav';
 
 jest.mock('next/navigation', () => ({
 	usePathname: jest.fn().mockReturnValue('/'),
@@ -24,12 +25,14 @@ jest.mock(
 	}),
 );
 
-describe('<Sidebar />', () => {
+describe('<SidebarNav />', () => {
 	beforeEach(() => {
 		render(
 			<SidebarProvider>
-				<Sidebar />
-			</SidebarProvider>,
+				<Sidebar>
+					<SidebarNav />
+				</Sidebar>
+			</SidebarProvider>
 		);
 	});
 

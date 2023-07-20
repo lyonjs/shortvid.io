@@ -9,7 +9,7 @@ import {Nav} from './Nav';
 
 import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
 
-export const SidebarMobile = () => {
+export const SidebarNavMobile = () => {
 	const [openBurger, setOpenBurger] = useState<boolean>(false);
 	const isOpenClassName = openBurger ? styles.openedBurger : '';
 

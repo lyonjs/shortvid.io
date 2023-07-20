@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom';
 
-import {SidebarMobile} from '../../src/app/components/sidebar/navigation/SidebarMobile';
+import {SidebarNavMobile} from '../../src/app/components/sidebar/navigation/SidebarNavMobile';
 
 jest.mock('next/navigation', () => ({
 	usePathname: jest.fn().mockReturnValue('/'),
@@ -23,9 +23,9 @@ jest.mock(
 	}),
 );
 
-describe('<SidebarMobile />', () => {
+describe('<SidebarNavMobile />', () => {
 	beforeEach(() => {
-		render(<SidebarMobile />);
+		render(<SidebarNavMobile />);
 	});
 
 	it('should render the component', () => {

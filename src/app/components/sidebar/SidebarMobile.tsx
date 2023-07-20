@@ -9,7 +9,6 @@ import styles from '../../../../styles/app/components/sidebar/sidebar.module.css
 
 export const SidebarMobile = () => {
 	const [openBurger, setOpenBurger] = useState<boolean>(false);
-	const expanded = true;
 	const isOpenClassName = openBurger ? styles.openedBurger : '';
 
 	useEffect(() => {
@@ -19,10 +18,9 @@ export const SidebarMobile = () => {
 	return (
 		<section
 			className={`${styles.sidebar} ${styles.sidebarMobile}`}
-			aria-expanded={expanded}
 			data-testid="sidebarMobile"
 		>
-			<Header expanded={expanded}>
+			<Header expanded>
 				<button
 					type="button"
 					aria-label="Open or close navigation"
@@ -54,8 +52,8 @@ export const SidebarMobile = () => {
 			<div className={`${styles.burgerContent} ${isOpenClassName}`}>
 				{openBurger && (
 					<>
-						<Nav expanded={expanded} />
-						<Footer expanded={expanded} />
+						<Nav expanded />
+						<Footer expanded />
 					</>
 				)}
 			</div>

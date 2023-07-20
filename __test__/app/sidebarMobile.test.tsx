@@ -1,5 +1,7 @@
 import '@testing-library/jest-dom';
 import {sideBarNavConfigMock} from '../mocks/sideBarConfig.mock';
+import {CompositionThumbnailMock} from '../mocks/sideBarCompositionThumbnailMock';
+
 import {render, screen} from '@testing-library/react';
 import {SidebarMobile} from '../../src/app/components/sidebar/navigation/SidebarMobile';
 import userEvent from '@testing-library/user-event';
@@ -15,13 +17,7 @@ jest.mock('../../src/data/config/sideBarConfig', () => ({
 jest.mock(
 	'../../src/app/components/sidebar/navigation/CompositionThumbnail',
 	() => ({
-		CompositionThumbnail: ({compositionName}: {compositionName: string}) => {
-			return (
-				<div>
-					<h3>{compositionName}</h3>
-				</div>
-			);
-		},
+		CompositionThumbnail: CompositionThumbnailMock,
 	})
 );
 

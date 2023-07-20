@@ -1,3 +1,12 @@
+@container sidebar (max-width: 274px) {
+	.sidebar {
+		footer {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+}
+
 .sidebar {
 	container: sidebar / size;
 	position: relative;
@@ -174,15 +183,6 @@
 				visibility: visible;
 				transform: translateX(0);
 			}
-		}
-	}
-}
-
-@container sidebar (max-width: 274px) {
-	.sidebar {
-		footer {
-			flex-direction: column;
-			gap: 15px;
 		}
 	}
 }

@@ -12,11 +12,11 @@ export const SidebarContext = createContext<SidebarContextProps>({
 	setExpanded: () => {},
 });
 
-interface FontProviderProps {
+interface SidebarProviderProps {
 	children: ReactNode;
 }
 
-export const SidebarProvider: React.FC<FontProviderProps> = ({children}) => {
+export const SidebarProvider: React.FC<SidebarProviderProps> = ({children}) => {
 	const [expanded, setExpanded] = useState<boolean>(true);
 
 	return (

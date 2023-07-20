@@ -12,6 +12,10 @@ import {
 import styles from '../../../../styles/app/components/sidebar/resizeWrapper.module.css';
 import {SidebarContext} from '../../../context/SidebarContext';
 
+export const DEFAULT_SIDEBAR_WIDTH = 315;
+export const MIN_SIDEBAR_WIDTH = 220;
+export const DEFAULT_GRABBER_WIDTH = 20;
+
 export const ResizeWrapper: React.FC<{
 	position?: 'left' | 'right';
 	children: ReactNode;
@@ -21,30 +25,31 @@ export const ResizeWrapper: React.FC<{
 	const {expanded} = useContext(SidebarContext);
 
 	const resizableRef = useRef<HTMLDivElement | null>(null);
-	const [isResizing, setIsResizing] = useState<boolean>(false);
-	const [sidebarWidth, setSidebarWidth] = useState<number>(315);
+	const [isResizing, setIsResizing] = useState(false);
+	const [sidebarWidth, setSidebarWidth] = useState(DEFAULT_SIDEBAR_WIDTH);
 
-	const startResize = useCallback(() => {
+	const startResize = () => {
 		setIsResizing(true);
-	}, []);
+	};
 
-	const stopResize = useCallback(() => {
+	const stopResize = () => {
 		setIsResizing(false);
-	}, []);
+	};
 
 	const resize = useCallback(
 		(event: MouseEvent) => {
 			if (isResizing) {
-				const positionedRightCalc = window.innerWidth - (event.clientX + 20);
-				const positionLeftCalc = event.clientX - 20;
+				const positionedRightCalc =
+					window.innerWidth - (event.clientX + DEFAULT_GRABBER_WIDTH);
+				const positionLeftCalc = event.clientX - DEFAULT_GRABBER_WIDTH;
 
-				const newValue =
+				const newSidebarWidth =
 					position === 'right' ? positionedRightCalc : positionLeftCalc;
 
-				if (event.clientX !== 0 && newValue >= 220) {
-					setSidebarWidth(newValue);
+				if (event.clientX !== 0 && newSidebarWidth >= MIN_SIDEBAR_WIDTH) {
+					setSidebarWidth(newSidebarWidth);
 				} else {
-					setSidebarWidth(220);
+					setSidebarWidth(MIN_SIDEBAR_WIDTH);
 				}
 			}
 		},
@@ -54,6 +59,7 @@ export const ResizeWrapper: React.FC<{
 	useEffect(() => {
 		window.addEventListener('mousemove', resize);
 		window.addEventListener('mouseup', stopResize);
+
 		return () => {
 			window.removeEventListener('mousemove', resize);
 			window.removeEventListener('mouseup', stopResize);

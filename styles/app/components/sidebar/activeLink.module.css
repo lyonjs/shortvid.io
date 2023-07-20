@@ -40,6 +40,3 @@
 		background: var(--switch-background);
 	}
 }
-
-@container sidebar (max-width: 270px) {
-}

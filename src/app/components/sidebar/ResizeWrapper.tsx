@@ -17,11 +17,8 @@ export const MIN_SIDEBAR_WIDTH = 220;
 export const DEFAULT_GRABBER_WIDTH = 20;
 
 export const ResizeWrapper: React.FC<{
-	position?: 'left' | 'right';
 	children: ReactNode;
-}> = ({position = 'left', children}) => {
-	const sideClassName = position === 'right' ? styles.positionRight : '';
-
+}> = ({children}) => {
 	const {expanded} = useContext(SidebarContext);
 
 	const resizableRef = useRef<HTMLDivElement | null>(null);
@@ -39,12 +36,7 @@ export const ResizeWrapper: React.FC<{
 	const resize = useCallback(
 		(event: MouseEvent) => {
 			if (isResizing) {
-				const positionedRightCalc =
-					window.innerWidth - (event.clientX + DEFAULT_GRABBER_WIDTH);
-				const positionLeftCalc = event.clientX - DEFAULT_GRABBER_WIDTH;
-
-				const newSidebarWidth =
-					position === 'right' ? positionedRightCalc : positionLeftCalc;
+				const newSidebarWidth = event.clientX - DEFAULT_GRABBER_WIDTH;
 
 				if (event.clientX !== 0 && newSidebarWidth >= MIN_SIDEBAR_WIDTH) {
 					setSidebarWidth(newSidebarWidth);
@@ -68,9 +60,7 @@ export const ResizeWrapper: React.FC<{
 
 	return (
 		<div
-			className={`${styles.resizeWrapper} ${sideClassName} ${
-				!expanded ? styles.folded : ''
-			}`}
+			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
 			style={{width: `${sidebarWidth}px`}}
 			onMouseDown={(e) => e.preventDefault()}
 			data-testid="resizableWrapper"

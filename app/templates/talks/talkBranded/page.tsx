@@ -4,14 +4,18 @@ import {Player} from '@remotion/player';
 
 import {TalkBranded} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {Code} from '../../../../src/app/Code';
+import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
+import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
 import {ColorInput} from '../../../../src/app/forms/colorInput';
-import {Form, Input} from '../../../../src/app/forms/input';
+import {Form} from '../../../../src/app/forms/Form';
+import {Input} from '../../../../src/app/forms/input';
 import {InputDate} from '../../../../src/app/forms/inputDate';
 import {SelectInput} from '../../../../src/app/forms/selectInput';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {useInputDateChange} from '../../../../src/app/hooks/useInputDateChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
+import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
@@ -91,15 +95,15 @@ export default function BrandedTalkPage() {
 	});
 
 	return (
-		<>
-			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
+		<div className={styles.mainContent}>
+			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
 					controls
 					loop
-					className="shrink-0 shadow-lg"
+					className={styles.video}
 					style={{
-						width: '500px',
+						width: '100%',
 						aspectRatio: '16 / 9',
 					}}
 					durationInFrames={120}
@@ -110,69 +114,73 @@ export default function BrandedTalkPage() {
 					inputProps={props}
 				/>
 
-				<Form>
-					<ColorInput
-						setValue={setBackgroundColor}
-						value={backgroundColor}
-						label="Background Color (optional)"
-					/>
-					<Input setValue={setTitle} value={title} label="Title" />
-					<Input
-						setValue={setLogoUrl}
-						value={logoUrl}
-						label="Logo"
-						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
-					/>
-					<Input
-						setValue={setSpeakerPicture}
-						value={speakerPicture}
-						label="Speaker picture"
-						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
-					/>
-					<Input
-						setValue={setSpeakersNames}
-						value={speakersNames}
-						label="Name"
-					/>
-					<Input
-						setValue={setSpeakersCompany}
-						value={speakersCompany}
-						label="Company (optional)"
-						placeholder="e.g: Zenika"
-					/>
-					<Input
-						setValue={setSpeakersJob}
-						value={speakersJob}
-						label="Job (optional)"
-						placeholder="e.g: CTO"
-					/>
-					<InputDate
-						setValue={setStartingDate}
-						value={startingDate}
-						label="Starting Date"
-					/>
-					<InputDate
-						setValue={setEndingDate}
-						value={endingDate}
-						label="Ending Date (optional)"
-					/>
-					<SelectInput
-						setValue={setRecurringDay}
-						value={recurringDay}
-						label="Recurring day"
-						options={['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi']}
-					/>
-					<Input
-						setValue={setLocation}
-						value={location}
-						label="Location (optional)"
-						placeholder="e.g: 5 Place Jules Ferry, 69006."
-					/>
-					<CopyUrlButton urlParameters={encodedParams} />
-				</Form>
-			</div>
+				<Code composition="TalkBranded" params={props} />
+			</section>
 
-			<Code composition="TalkBranded" params={props} />
-		</>
+			<ResizeWrapper position="right">
+				<Sidebar>
+					<Form>
+						<ColorInput
+							setValue={setBackgroundColor}
+							value={backgroundColor}
+							label="Background Color (optional)"
+						/>
+						<Input setValue={setTitle} value={title} label="Title" />
+						<Input
+							setValue={setLogoUrl}
+							value={logoUrl}
+							label="Logo"
+							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
+						/>
+						<Input
+							setValue={setSpeakerPicture}
+							value={speakerPicture}
+							label="Speaker picture"
+							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
+						/>
+						<Input
+							setValue={setSpeakersNames}
+							value={speakersNames}
+							label="Name"
+						/>
+						<Input
+							setValue={setSpeakersCompany}
+							value={speakersCompany}
+							label="Company (optional)"
+							placeholder="e.g: Zenika"
+						/>
+						<Input
+							setValue={setSpeakersJob}
+							value={speakersJob}
+							label="Job (optional)"
+							placeholder="e.g: CTO"
+						/>
+						<InputDate
+							setValue={setStartingDate}
+							value={startingDate}
+							label="Starting Date"
+						/>
+						<InputDate
+							setValue={setEndingDate}
+							value={endingDate}
+							label="Ending Date (optional)"
+						/>
+						<SelectInput
+							setValue={setRecurringDay}
+							value={recurringDay}
+							label="Recurring day"
+							options={['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi']}
+						/>
+						<Input
+							setValue={setLocation}
+							value={location}
+							label="Location (optional)"
+							placeholder="e.g: 5 Place Jules Ferry, 69006."
+						/>
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</Sidebar>
+			</ResizeWrapper>
+		</div>
 	);
 }

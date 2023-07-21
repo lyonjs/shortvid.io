@@ -20,6 +20,8 @@ import {
 	TemplateTypes,
 } from '../../../../src/app/types/template.types';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import styles from '../../../../styles/app/layout/main.module.css';
+
 
 interface TalkTemplate {
 	component: TemplateTypes;
@@ -121,32 +123,17 @@ export default function ConferencePage({
 	);
 
 	return (
-		<div>
-			<nav className="my-4">
-				<h1 className="text-2xl pb-4 font-bold">
-					List of available templates for partner conferences:
-				</h1>
-
-				<ul className="list-disc pl-8">
-					{Object.keys(Template).map((name) => (
-						<li key={name}>
-							<a href={`/showcases/conferences/${name}`}>{name}</a>
-						</li>
-					))}
-				</ul>
-			</nav>
-
-			<h2 className="text-2xl pb-4 font-bold">{conference}</h2>
-
-			<div className="flex flex-col gap-10 pb-4 justify-center items-center">
+		<div className={styles.mainContent}>
+			<section className={styles.videoContainer}>
+				<h2>{conference}</h2>
 				<Player
 					autoPlay
 					controls
 					loop
-					className="shrink-0 shadow-lg"
+					className={styles.video}
 					style={{
-						width: '800px',
-						height: '450px',
+						width: '100%',
+						aspectRatio: '16/9',
 					}}
 					durationInFrames={currentTemplate.durationInFrames}
 					compositionWidth={currentTemplate.width}
@@ -169,17 +156,16 @@ export default function ConferencePage({
 						},
 					}}
 					height="300px"
-					width="800px"
+					width="100%"
 					onChange={(event: {jsObject: SetStateAction<DefaultPropsTypes>}) => {
 						setData(event.jsObject);
 					}}
 				/>
-			</div>
-
-			<Code
-				composition={currentTemplate.compositionName}
-				params={data || defaultTalkValues}
-			/>
+				<Code
+					composition={currentTemplate.compositionName}
+					params={data || defaultTalkValues}
+				/>
+			</section>
 		</div>
 	);
 }

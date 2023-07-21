@@ -1,4 +1,4 @@
-@container sidebar (max-width: 274px) {
+@container sidebar (max-width: 250px) {
 	.sidebar {
 		footer {
 			flex-direction: column;
@@ -14,6 +14,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 15px;
+	padding: 20px;
 	max-width: 500px;
 	width: 100%;
 	height: calc(100vh - 2rem);
@@ -69,7 +70,7 @@
 
 	header {
 		width: 100%;
-		padding: 20px 20px 15px;
+		padding-bottom: 15px;
 		border-bottom: 1px solid transparent;
 		border-image: var(--separator);
 
@@ -88,7 +89,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 15px 20px 20px;
+		padding-top: 15px;
 		border-top: 1px solid transparent;
 		border-image: var(--separator);
 
@@ -183,6 +184,14 @@
 				visibility: visible;
 				transform: translateX(0);
 			}
+		}
+	}
+}
+
+[data-position='right'] {
+	.sidebar {
+		.foldButton {
+			display: none;
 		}
 	}
 }

@@ -1,15 +1,26 @@
+@container sidebar (max-width: 274px) {
+	.sidebar {
+		footer {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+}
+
 .sidebar {
+	container: sidebar / size;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 15px;
-	max-width: 315px;
+	max-width: 500px;
 	width: 100%;
 	height: calc(100vh - 2rem);
 	background: var(--color-background);
 	border: 2px solid var(--switch-border);
 	border-radius: 10px;
+	z-index: 1;
 
 	.burgerBtn {
 		position: relative;
@@ -124,23 +135,23 @@
 	}
 
 	&[aria-expanded='false'] {
-		width: 110px;
+		max-width: 110px;
 		align-items: center;
-
-		.foldButton {
-			transform: rotate(180deg);
-		}
 
 		footer {
 			flex-direction: column;
 			gap: 15px;
+		}
+
+		.foldButton {
+			transform: rotate(180deg);
 		}
 	}
 
 	&.sidebarMobile {
 		justify-content: flex-start;
 		max-width: 100%;
-		height: max-content;
+		height: 70px;
 		border: none;
 		display: none;
 

@@ -1,10 +1,9 @@
 import {ReactNode} from 'react';
-
 import {MuseoModerno} from 'next/font/google';
 
-import {Logo} from '../../Logo';
+import {Logo} from '../../../Logo';
 
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
+import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
 
 const wordmarkFont = MuseoModerno({
 	weight: '900',

@@ -8,10 +8,14 @@
 
 		ul {
 			margin-top: 10px;
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 			gap: 15px;
+
+			&::after {
+				content: '';
+				flex: 0 1 100px;
+			}
 		}
 
 		> summary {
@@ -30,6 +34,10 @@
 			&.selected {
 				cursor: pointer;
 				background: var(--switch-background);
+			}
+
+			&::-webkit-details-marker {
+				display: none;
 			}
 		}
 
@@ -73,12 +81,9 @@
 		}
 
 		> details {
-			> ul {
-				padding-inline: 10px;
-			}
-
 			.category {
-				width: 100%;
+				grid-column: 1/-1;
+				height: max-content;
 
 				> summary {
 					font-weight: 300;

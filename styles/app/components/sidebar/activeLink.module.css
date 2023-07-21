@@ -1,7 +1,6 @@
 .activeLink {
 	display: block;
 	border-radius: 5px;
-	width: 45%;
 	color: var(--color-text);
 
 	.thumbnailCard {

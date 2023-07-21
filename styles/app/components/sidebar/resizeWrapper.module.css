@@ -1,0 +1,32 @@
+.resizeWrapper {
+	position: relative;
+	max-width: 500px;
+	height: max-content;
+
+	> span {
+		position: absolute;
+		height: calc(100% - 110px);
+		width: 20px;
+		top: 110px;
+		left: auto;
+		right: -10px;
+		cursor: col-resize;
+		transform-origin: center;
+		z-index: 2;
+	}
+
+	&.folded {
+		max-width: 110px;
+		min-width: 110px;
+
+		> span {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.resizeWrapper {
+		display: none;
+	}
+}

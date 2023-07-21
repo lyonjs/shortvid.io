@@ -6,7 +6,8 @@ import {BurgerIcon} from './BurgerIcon';
 import {Footer} from './Footer';
 import {Header} from './Header';
 import {Nav} from './Nav';
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
+
+import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
 
 export const SidebarMobile = () => {
 	const [openBurger, setOpenBurger] = useState<boolean>(false);

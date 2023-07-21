@@ -1,8 +1,12 @@
-import '@testing-library/jest-dom';
+import {CompositionThumbnailMock} from '../mocks/sideBarCompositionThumbnailMock';
 import {sideBarNavConfigMock} from '../mocks/sideBarConfig.mock';
+
 import {render, screen} from '@testing-library/react';
-import {SidebarMobile} from '../../src/app/components/sidebar/SidebarMobile';
 import userEvent from '@testing-library/user-event';
+
+import '@testing-library/jest-dom';
+
+import {SidebarMobile} from '../../src/app/components/sidebar/navigation/SidebarMobile';
 
 jest.mock('next/navigation', () => ({
 	usePathname: jest.fn().mockReturnValue('/'),
@@ -12,15 +16,12 @@ jest.mock('../../src/data/config/sideBarConfig', () => ({
 	sideBarNavConfig: sideBarNavConfigMock,
 }));
 
-jest.mock('../../src/app/components/sidebar/CompositionThumbnail', () => ({
-	CompositionThumbnail: ({compositionName}: {compositionName: string}) => {
-		return (
-			<div>
-				<h3>{compositionName}</h3>
-			</div>
-		);
-	},
-}));
+jest.mock(
+	'../../src/app/components/sidebar/navigation/CompositionThumbnail',
+	() => ({
+		CompositionThumbnail: CompositionThumbnailMock,
+	})
+);
 
 describe('<SidebarMobile />', () => {
 	beforeEach(() => {

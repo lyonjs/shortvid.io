@@ -13,6 +13,7 @@ import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import LayerByMode from '../../../../src/app/LayerByMode';
 import {LayerMode} from '../../../../src/app/types/layerMode.types';
 
+import stylesBtn from '../../../../styles/app/common/buttons.module.css';
 import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function LayersPage() {
@@ -99,7 +100,7 @@ export default function LayersPage() {
 						/>
 						<button
 							type="button"
-							className="font-bold mt-4"
+							className={stylesBtn.secondaryButton}
 							onClick={() => {
 								window.open(layerUrl, '_blank');
 							}}
@@ -108,7 +109,7 @@ export default function LayersPage() {
 						</button>
 						<button
 							type="button"
-							className="relative text-color-btn-text py-2 px-4 text-center text-xl font-bold bg-primary rounded-xl mt-4 hover:scale-105"
+							className={stylesBtn.primaryButton}
 							onClick={onClickHandler}
 						>
 							{copied ? 'Copied ✅' : 'Copy Layer URL 🔗'}

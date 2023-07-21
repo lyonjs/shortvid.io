@@ -1,0 +1,35 @@
+.primaryButton,
+.secondaryButton {
+	position: relative;
+	width: 100%;
+	margin-top: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	transition: all 0.3s ease;
+}
+
+.primaryButton {
+	color: var(--color-btn-text);
+	background: var(--color-primary);
+	border: 3px solid transparent;
+	font-size: 1.25rem;
+	font-weight: 700;
+
+	&:hover {
+		background: var(--color-logo);
+		border: 3px solid var(--color-logo);
+	}
+}
+
+.secondaryButton {
+	color: var(--color-link);
+	background: var(--color-background);
+	border: 3px solid var(--color-link);
+	font-size: 1rem;
+	font-weight: 700;
+
+	&:hover {
+		background: var(--switch-background);
+		color: var(--color-text);
+	}
+}

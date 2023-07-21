@@ -1,7 +1,6 @@
 'use client';
 
 import {useState} from 'react';
-
 import {Player} from '@remotion/player';
 import _ = require('lodash');
 import JSONInput from 'react-json-editor-ajrm';

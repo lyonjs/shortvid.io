@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';

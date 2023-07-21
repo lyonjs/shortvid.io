@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-
 import {LottieAnimationData} from '@remotion/lottie';
 import {continueRender, delayRender} from 'remotion';
 

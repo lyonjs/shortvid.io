@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';

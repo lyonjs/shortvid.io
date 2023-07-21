@@ -1,5 +1,4 @@
 import React, {CSSProperties} from 'react';
-
 import {spring} from 'remotion';
 import {useVideoConfig} from 'remotion';
 import {useCurrentFrame} from 'remotion';

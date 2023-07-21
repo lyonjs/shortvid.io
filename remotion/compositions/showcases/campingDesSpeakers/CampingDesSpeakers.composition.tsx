@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Composition, Folder} from 'remotion';
 
 import {CampingDesSpeakers} from './CampingDesSpeakers';

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
 	Easing,
 	interpolate,
@@ -8,10 +7,11 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-import {SpeakersName} from './SpeakersName';
 import {Text} from '../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Speaker} from '../../../types/defaultProps.types';
+
+import {SpeakersName} from './SpeakersName';
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	const frame = useCurrentFrame();

@@ -3,13 +3,15 @@
 import {Icon} from '@iconify/react';
 import {usePathname} from 'next/navigation';
 
-import {ActiveLink} from './ActiveLink';
-import {CompositionThumbnail} from './CompositionThumbnail';
-import styles from '../../../../styles/app/components/sidebar/nav.module.css';
 import {
 	categoryProps,
 	CompositionType,
 } from '../../../data/config/sideBarConfig';
+
+import {ActiveLink} from './ActiveLink';
+import {CompositionThumbnail} from './CompositionThumbnail';
+
+import styles from '../../../../styles/app/components/sidebar/nav.module.css';
 
 export const CategoryLink: React.FC<
 	categoryProps & {

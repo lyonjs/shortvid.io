@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 
 import {MeetupBackground} from './MeetupBackground';

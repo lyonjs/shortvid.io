@@ -1,6 +1,7 @@
 import React from 'react';
-
 import {AbsoluteFill, Sequence} from 'remotion';
+
+import {Speaker} from '../../../types/defaultProps.types';
 
 import {Details} from './Details';
 import {Logo} from './Logo';
@@ -8,7 +9,6 @@ import {Mountains} from './Mountains';
 import {Speakers} from './Speakers';
 import {TalkBackground} from './TalkBackground';
 import {TalkTitle} from './TalkTitle';
-import {Speaker} from '../../../types/defaultProps.types';
 
 export type AlpesCraftProps = {
 	title: string;

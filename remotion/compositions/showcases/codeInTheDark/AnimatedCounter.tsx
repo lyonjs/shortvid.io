@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const AnimatedCounter: React.FC<{

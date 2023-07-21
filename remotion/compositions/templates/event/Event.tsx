@@ -1,9 +1,10 @@
 import {AbsoluteFill, Sequence} from 'remotion';
 
-import {EventBackground} from './EventBackground';
-import {EventTitle} from './EventTitle';
 import {LottieAsset} from '../../../design/atoms/LottieAsset';
 import {Paillettes} from '../../../design/atoms/Paillettes';
+
+import {EventBackground} from './EventBackground';
+import {EventTitle} from './EventTitle';
 
 export const Event: React.FC<{
 	backgroundImg?: string;

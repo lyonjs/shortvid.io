@@ -1,11 +1,11 @@
 import React from 'react';
-
 import {Sequence} from 'remotion';
 
-import {FadeIn} from './FadeIn';
 import {Text} from '../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Speaker as SpeakerType} from '../../../types/defaultProps.types';
+
+import {FadeIn} from './FadeIn';
 
 const Speaker: React.FC<{speaker: SpeakerType; index: number}> = ({
 	speaker: {name, picture},

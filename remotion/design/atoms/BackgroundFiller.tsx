@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Img} from 'remotion';
 
 export const BackgroundFiller: React.FC<{

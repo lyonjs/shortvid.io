@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Composition, Folder, staticFile} from 'remotion';
 
 import {Avatar} from './Avatar';

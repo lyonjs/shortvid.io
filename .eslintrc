@@ -1,7 +1,7 @@
 {
 	"extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
 	"parser": "@typescript-eslint/parser",
-	"plugins": ["@remotion"],
+	"plugins": ["@remotion", "simple-import-sort"],
 	"globals": {
 		"process": true
 	},
@@ -15,28 +15,25 @@
 		"@typescript-eslint/no-unused-vars": "error",
 		"@typescript-eslint/no-empty-function": "off",
 		"no-unused-vars": "off",
-		"import/order": [
+		"simple-import-sort/imports": [
 			"error",
 			{
-				"groups": ["builtin", "external", "internal"],
-				"pathGroups": [
-					{
-						"pattern": "react",
-						"group": "external",
-						"position": "before"
-					},
-					{
-						"pattern": "{.,..,../..}/mocks/**",
-						"group": "internal",
-						"position": "before"
-					}
-				],
-				"pathGroupsExcludedImportTypes": ["react"],
-				"newlines-between": "always",
-				"alphabetize": {
-					"order": "asc",
-					"caseInsensitive": true
-				}
+				"groups": [
+					// Mocks files
+					["^.*/mocks.*$"],
+					// Packages `react` related packages come first.
+					["^react", "^@?\\w"],
+					// Internal packages.
+					["^(@|components)(/.*|$)"],
+					// Side effect imports.
+					["^\\u0000"],
+					// Parent imports. Put `..` last.
+					["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+					// Other relative imports. Put same-folder imports and `.` last.
+					["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+					// Style imports.
+					["^.+\\.?(css)$"]
+				]
 			}
 		]
 	}

@@ -1,10 +1,9 @@
 'use client';
 
 import {ChangeEvent, useCallback, useState} from 'react';
-
-import {Player} from '@remotion/player';
 import JSONInput from 'react-json-editor-ajrm/index';
 import locale from 'react-json-editor-ajrm/locale/en';
+import {Player} from '@remotion/player';
 
 import {ReplayLyonJS} from '../../../remotion/compositions/showcases/lyonJS/Replay';
 import {Speaker} from '../../../remotion/types/defaultProps.types';

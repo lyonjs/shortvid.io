@@ -1,7 +1,8 @@
 import {ReactNode} from 'react';
 
-import '../../styles/globals.css';
 import RootLayout from '../../src/app/RootLayout';
+
+import '../../styles/globals.css';
 
 export default function TemplatesLayout({children}: {children: ReactNode}) {
 	return <RootLayout>{children}</RootLayout>;

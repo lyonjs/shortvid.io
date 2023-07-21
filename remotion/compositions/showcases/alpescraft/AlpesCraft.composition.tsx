@@ -1,9 +1,9 @@
 import React from 'react';
-
 import {Composition, Folder} from 'remotion';
 
-import {AlpesCraft} from './AlpesCraft';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+
+import {AlpesCraft} from './AlpesCraft';
 
 export const AlpesCraftComposition: React.FC = () => {
 	return (

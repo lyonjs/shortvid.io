@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Easing, Img, interpolate, useCurrentFrame} from 'remotion';
 
 import {Side} from './Silhouette.type';

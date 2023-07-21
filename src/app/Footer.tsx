@@ -2,6 +2,7 @@ import React from 'react';
 
 import {Logo} from './Logo';
 import {PoweredByVercel} from './PoweredByVercel';
+
 import styles from '../../styles/app/layout/footer.module.css';
 
 export const Footer = () => {

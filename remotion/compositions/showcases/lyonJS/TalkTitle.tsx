@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {loadFont} from '@remotion/google-fonts/Aldrich';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 

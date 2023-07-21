@@ -1,5 +1,4 @@
 import {MouseEvent, useCallback} from 'react';
-
 import va from '@vercel/analytics';
 
 import {ReplayProps} from '../../app/templates/replay/page';

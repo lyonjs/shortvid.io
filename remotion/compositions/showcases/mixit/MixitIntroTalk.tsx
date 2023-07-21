@@ -1,8 +1,9 @@
 import {AbsoluteFill} from 'remotion';
 
+import {DefaultProps} from '../../../types/defaultProps.types';
+
 import {Mixit2023} from './Mixit2023';
 import {MixitIntro} from './MixitIntro';
-import {DefaultProps} from '../../../types/defaultProps.types';
 
 export const MixitIntroTalk: React.FC<DefaultProps> = ({
 	title,

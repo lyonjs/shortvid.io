@@ -1,5 +1,4 @@
 import {CSSProperties} from 'react';
-
 import {Img, staticFile} from 'remotion';
 
 export const Avatar: React.FC<{

@@ -1,12 +1,13 @@
 import {AbsoluteFill, Audio, Sequence, staticFile} from 'remotion';
 
+import {loadLocalFont} from '../../../../src/app/utils/loadFont';
+
 import {Background} from './Background';
 import {Combo} from './Combo';
 import Details from './Details';
 import {Organisateurs} from './Organisateurs';
 import {Spotlight} from './Spotlight';
 import {Words} from './Words';
-import {loadLocalFont} from '../../../../src/app/utils/loadFont';
 
 loadLocalFont('PressStart2P', 'font/PressStart2P.ttf', 'truetype');
 

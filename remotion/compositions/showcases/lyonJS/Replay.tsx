@@ -1,15 +1,15 @@
 import React from 'react';
-
 import {Audio, interpolate, Sequence, staticFile} from 'remotion';
 import {AbsoluteFill} from 'remotion';
+
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+import {Speaker} from '../../../types/defaultProps.types';
 
 import {BigSpeakers} from './BigSpeakers';
 import {Details} from './Details';
 import {Logo} from './Logo';
 import {LogoSponsor} from './LogoSponsor';
 import {TalkTitle} from './TalkTitle';
-import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {Speaker} from '../../../types/defaultProps.types';
 
 type LyonJSReplayType = {
 	title: string;

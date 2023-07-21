@@ -57,7 +57,7 @@
 		"debug": "4.3.4",
 		"eslint": "8.45.0",
 		"eslint-config-next": "^13.4.10",
-		"eslint-plugin-import": "2.27.5",
+		"eslint-plugin-simple-import-sort": "10.0.0",
 		"husky": "8.0.3",
 		"jest-environment-jsdom": "29.6.1",
 		"lodash": "4.17.21",

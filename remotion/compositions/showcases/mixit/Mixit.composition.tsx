@@ -1,12 +1,12 @@
 import React from 'react';
-
 import {Composition, Folder} from 'remotion';
+
+import {defaultTalkValues} from '../../../../src/data/defaultValues';
 
 import {Mixit2023} from './Mixit2023';
 import {MixitIntro} from './MixitIntro';
 import {MixitIntroTalk} from './MixitIntroTalk';
 import {MixitSponsor} from './MixitSponsor';
-import {defaultTalkValues} from '../../../../src/data/defaultValues';
 
 export const MixitComposition: React.FC = () => {
 	return (

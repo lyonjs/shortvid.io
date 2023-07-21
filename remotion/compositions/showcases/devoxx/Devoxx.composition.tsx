@@ -1,9 +1,9 @@
 import React from 'react';
-
 import {Composition, Folder} from 'remotion';
 
-import {Devoxx2023} from './Devoxx2023';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+
+import {Devoxx2023} from './Devoxx2023';
 
 export const DevoxxComposition: React.FC = () => {
 	return (

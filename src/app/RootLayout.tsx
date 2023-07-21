@@ -26,9 +26,11 @@ export default function RootLayout({children}: {children: ReactNode}) {
 						</div>
 						<SidebarNavMobile />
 					</SidebarProvider>
-					<section>
-						<FontProvider>{children}</FontProvider>
-					</section>
+					<div>
+						<SidebarProvider>
+							<FontProvider>{children}</FontProvider>
+						</SidebarProvider>
+					</div>
 				</div>
 				<Analytics />
 			</main>

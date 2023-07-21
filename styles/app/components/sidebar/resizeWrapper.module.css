@@ -15,6 +15,15 @@
 		z-index: 2;
 	}
 
+	&[data-position='right'] {
+		> span {
+			right: auto;
+			left: -10px;
+			top: 0;
+			height: 100%;
+		}
+	}
+
 	&.folded {
 		max-width: 110px;
 		min-width: 110px;

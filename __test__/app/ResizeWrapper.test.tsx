@@ -10,32 +10,52 @@ import {
 import {SidebarProvider} from '../../src/context/SidebarContext';
 
 describe('<ResizeWrapper>', () => {
-	let resizeGrabber: HTMLElement, resizableWrapper: HTMLElement;
-
-	beforeEach(() => {
+	const customRenderWrapper: (side?: 'left' | 'right') => {
+		resizeGrabber: HTMLElement;
+		resizableWrapper: HTMLElement;
+	} = (side = 'left') => {
 		render(
 			<SidebarProvider>
-				<ResizeWrapper>
-					<h1>Content</h1>
-				</ResizeWrapper>
-			</SidebarProvider>,
+				<div
+					style={{
+						width: 1000,
+						display: 'flex',
+						justifyContent: side === 'left' ? 'flex-start' : 'flex-end',
+					}}
+				>
+					<ResizeWrapper position={side}>
+						<h1>Content</h1>
+					</ResizeWrapper>
+				</div>
+			</SidebarProvider>
 		);
 
-		resizeGrabber = screen.getByTestId('resizeGrabber');
-		resizableWrapper = screen.getByTestId('resizableWrapper');
+		const resizeGrabber = screen.getByTestId('resizeGrabber');
+		const resizableWrapper = screen.getByTestId('resizableWrapper');
 
-		expect(resizableWrapper).toHaveStyle('width: 315px');
-	});
+		return {resizeGrabber, resizableWrapper};
+	};
 
-	const resizeSidebar = (deltaX: number) => {
-		fireEvent.mouseDown(resizeGrabber, {clientX: DEFAULT_SIDEBAR_WIDTH});
+	const resizeSidebar: (
+		resizeGrabber: HTMLElement,
+		deltaX: number,
+		dragStartingPoint?: number
+	) => void = (
+		resizeGrabber,
+		deltaX,
+		dragStartingPoint = DEFAULT_SIDEBAR_WIDTH
+	) => {
+		fireEvent.mouseDown(resizeGrabber, {clientX: dragStartingPoint});
 		fireEvent.mouseMove(document, {
-			clientX: DEFAULT_SIDEBAR_WIDTH + DEFAULT_GRABBER_WIDTH + deltaX,
+			clientX: dragStartingPoint + DEFAULT_GRABBER_WIDTH + deltaX,
 		});
 		fireEvent.mouseUp(document);
 	};
 
 	it('should render the component', () => {
+		const {resizeGrabber, resizableWrapper} = customRenderWrapper();
+		expect(resizableWrapper).toHaveStyle('width: 315px');
+
 		const content = screen.getByRole('heading', {
 			name: 'Content',
 		});
@@ -46,22 +66,44 @@ describe('<ResizeWrapper>', () => {
 	});
 
 	it('should resize the sidebar', () => {
-		resizeSidebar(50);
+		const {resizeGrabber, resizableWrapper} = customRenderWrapper();
+		expect(resizableWrapper).toHaveStyle('width: 315px');
+
+		resizeSidebar(resizeGrabber, 50);
 
 		expect(resizableWrapper).toHaveStyle('width: 365px');
 	});
 
 	it('should not resize the sidebar below the minimum width', () => {
-		resizeSidebar(-200);
+		const {resizeGrabber, resizableWrapper} = customRenderWrapper();
+		expect(resizableWrapper).toHaveStyle('width: 315px');
+
+		resizeSidebar(resizeGrabber, -200);
 
 		expect(resizableWrapper).not.toHaveStyle('width: 115px');
 		expect(resizableWrapper).toHaveStyle('width: 220px');
 	});
 
 	it('should not resize the sidebar over the maximum width', () => {
-		resizeSidebar(400);
+		const {resizeGrabber, resizableWrapper} = customRenderWrapper();
+		expect(resizableWrapper).toHaveStyle('width: 315px');
+
+		resizeSidebar(resizeGrabber, 400);
 
 		expect(resizableWrapper).not.toHaveStyle('width: 415px');
 		expect(resizableWrapper).toHaveStyle('width: 500px');
+	});
+
+	it('should resize on the right side', () => {
+		const {resizeGrabber, resizableWrapper} = customRenderWrapper('right');
+		expect(resizableWrapper).toHaveStyle('width: 315px');
+
+		expect(resizableWrapper).toHaveStyle('width: 315px');
+		expect(resizableWrapper).toHaveAttribute('data-position', 'right');
+
+		resizeSidebar(resizeGrabber, 100, 1000 - DEFAULT_SIDEBAR_WIDTH);
+
+		expect(resizableWrapper).not.toHaveStyle('width: 365px');
+		expect(resizableWrapper).toHaveStyle('width: 220px');
 	});
 });

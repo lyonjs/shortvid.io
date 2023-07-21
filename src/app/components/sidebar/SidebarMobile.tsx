@@ -2,6 +2,7 @@
 
 import {useEffect, useState} from 'react';
 
+import {BurgerIcon} from './BurgerIcon';
 import {Footer} from './Footer';
 import {Header} from './Header';
 import {Nav} from './Nav';
@@ -27,26 +28,7 @@ export const SidebarMobile = () => {
 					className={`${styles.burgerBtn} ${isOpenClassName}`}
 					onClick={() => setOpenBurger(!openBurger)}
 				>
-					<svg viewBox="0 0 48 32" fill="none">
-						<path
-							d="M3 3H45"
-							stroke="currentColor"
-							strokeWidth="5"
-							strokeLinecap="round"
-						></path>
-						<path
-							d="M3 16H45"
-							stroke="currentColor"
-							strokeWidth="5"
-							strokeLinecap="round"
-						></path>
-						<path
-							d="M3 30H45"
-							stroke="currentColor"
-							strokeWidth="5"
-							strokeLinecap="round"
-						></path>
-					</svg>
+					<BurgerIcon />
 				</button>
 			</Header>
 			<div className={`${styles.burgerContent} ${isOpenClassName}`}>

@@ -1,8 +1,14 @@
 import React from 'react';
-import {useVideoConfig} from 'remotion';
-import {useCurrentFrame} from 'remotion';
-import {spring} from 'remotion';
-import {AbsoluteFill, Audio, Img, Sequence, staticFile} from 'remotion';
+import {
+	AbsoluteFill,
+	Audio,
+	Img,
+	Sequence,
+	spring,
+	staticFile,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 
 import {DefaultProps} from '../../../types/defaultProps.types';
 

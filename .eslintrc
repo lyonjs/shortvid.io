@@ -1,7 +1,7 @@
 {
 	"extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
 	"parser": "@typescript-eslint/parser",
-	"plugins": ["@remotion", "simple-import-sort"],
+	"plugins": ["@remotion", "simple-import-sort", "import"],
 	"globals": {
 		"process": true
 	},
@@ -15,11 +15,12 @@
 		"@typescript-eslint/no-unused-vars": "error",
 		"@typescript-eslint/no-empty-function": "off",
 		"no-unused-vars": "off",
+		"import/order": "off",
 		"simple-import-sort/imports": [
 			"error",
 			{
 				"groups": [
-					// Mocks files
+					// Mocks imports. eg: `import React from '../../mocks/react';`
 					["^.*/mocks.*$"],
 					// Packages `react` related packages come first.
 					["^react", "^@?\\w"],
@@ -27,14 +28,19 @@
 					["^(@|components)(/.*|$)"],
 					// Side effect imports.
 					["^\\u0000"],
-					// Parent imports. Put `..` last.
+					// Parent imports. Sort by most deep first.
+					// eg: `import { foo } from '../../foo';` before `import { bar } from '../bar';`
 					["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-					// Other relative imports. Put same-folder imports and `.` last.
+					// Relative imports. Sort by most deep first.
+					// eg: `import { foo } from './foo/foo';` before `import { bar } from './bar';`
 					["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-					// Style imports.
+					// Style imports. eg: import './home.module.css';'
 					["^.+\\.?(css)$"]
 				]
 			}
-		]
+		],
+		"import/first": "error",
+		"import/newline-after-import": "error",
+		"import/no-duplicates": "error"
 	}
 }

@@ -1,7 +1,5 @@
 import React, {CSSProperties} from 'react';
-import {spring} from 'remotion';
-import {useVideoConfig} from 'remotion';
-import {useCurrentFrame} from 'remotion';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {TalkDetails} from '../../../design/molecules/TalkDetails';
 

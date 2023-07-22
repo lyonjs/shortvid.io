@@ -5,6 +5,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+
 export const Logo = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();

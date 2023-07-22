@@ -1,8 +1,8 @@
 import {Icon} from '@iconify/react';
 
-import {SwitchThemeButtons} from '../../SwitchThemeButtons';
+import {SwitchThemeButtons} from '../../../SwitchThemeButtons';
 
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
+import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
 
 export const Footer: React.FC<{expanded: boolean}> = ({expanded}) => {
 	return (

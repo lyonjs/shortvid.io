@@ -3,8 +3,11 @@ import {Analytics} from '@vercel/analytics/react';
 
 import {CustomThemeProvider} from '../context/CustomThemeProvider';
 import {FontProvider} from '../context/FontContext';
+import {SidebarProvider} from '../context/SidebarContext';
 
-import {Sidebar} from './components/sidebar/Sidebar';
+import {Sidebar} from './components/sidebar/navigation/Sidebar';
+import {SidebarMobile} from './components/sidebar/navigation/SidebarMobile';
+import {ResizeWrapper} from './components/sidebar/ResizeWrapper';
 import {Footer} from './Footer';
 
 import '../../styles/globals.css';
@@ -15,7 +18,12 @@ export default function RootLayout({children}: {children: ReactNode}) {
 		<CustomThemeProvider>
 			<main className="mx-auto p-4">
 				<div className={styles.sidebarLayout}>
-					<Sidebar />
+					<SidebarProvider>
+						<ResizeWrapper>
+							<Sidebar />
+						</ResizeWrapper>
+						<SidebarMobile />
+					</SidebarProvider>
 					<section>
 						<FontProvider>{children}</FontProvider>
 						<Footer />

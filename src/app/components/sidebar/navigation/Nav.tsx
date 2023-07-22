@@ -5,13 +5,13 @@ import {useState} from 'react';
 import {
 	CompositionType,
 	sideBarNavConfig,
-} from '../../../data/config/sideBarConfig';
+} from '../../../../data/config/sideBarConfig';
+import {ActiveLink} from '../ActiveLink';
+import {TopLevelContent} from '../TopLevelContent';
 
-import {ActiveLink} from './ActiveLink';
 import {NavDetails} from './NavDetails';
-import {TopLevelContent} from './TopLevelContent';
 
-import styles from '../../../../styles/app/components/sidebar/nav.module.css';
+import styles from '../../../../../styles/app/components/sidebar/nav.module.css';
 
 export const Nav: React.FC<{expanded: boolean}> = ({expanded}) => {
 	const [openedNavDetails, setOpenedNavDetails] = useState<string | null>(null);

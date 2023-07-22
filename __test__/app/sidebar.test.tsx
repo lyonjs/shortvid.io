@@ -1,3 +1,4 @@
+import {CompositionThumbnailMock} from '../mocks/sideBarCompositionThumbnailMock';
 import {sideBarNavConfigMock} from '../mocks/sideBarConfig.mock';
 
 import {render, screen} from '@testing-library/react';
@@ -5,7 +6,8 @@ import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom';
 
-import {Sidebar} from '../../src/app/components/sidebar/Sidebar';
+import {Sidebar} from '../../src/app/components/sidebar/navigation/Sidebar';
+import {SidebarProvider} from '../../src/context/SidebarContext';
 
 jest.mock('next/navigation', () => ({
 	usePathname: jest.fn().mockReturnValue('/'),
@@ -15,19 +17,24 @@ jest.mock('../../src/data/config/sideBarConfig', () => ({
 	sideBarNavConfig: sideBarNavConfigMock,
 }));
 
-jest.mock('../../src/app/components/sidebar/CompositionThumbnail', () => ({
-	CompositionThumbnail: ({compositionName}: {compositionName: string}) => {
-		return (
-			<div>
-				<h3>{compositionName}</h3>
-			</div>
-		);
-	},
-}));
+jest.mock(
+	'../../src/app/components/sidebar/navigation/CompositionThumbnail',
+	() => ({
+		CompositionThumbnail: CompositionThumbnailMock,
+	})
+);
 
 describe('<Sidebar />', () => {
 	beforeEach(() => {
-		render(<Sidebar />);
+		render(
+			<SidebarProvider>
+				<Sidebar />
+			</SidebarProvider>
+		);
+	});
+
+	afterEach(() => {
+		window.localStorage.clear();
 	});
 
 	it('should render the component', () => {
@@ -107,13 +114,13 @@ describe('<Sidebar />', () => {
 		expect(contributingText).not.toBeVisible();
 	});
 
-	it('should alternate display ditails when folded', async () => {
+	it('should alternate display details when folded', async () => {
 		const user = userEvent.setup();
 		const foldButton = screen.getByRole('button', {
 			name: 'foldButton',
 		});
 		const details = screen.getAllByRole('group');
-		const fisrtLink = details[0];
+		const firstLink = details[0];
 		const secondLink = details[2];
 
 		const video = screen.getByRole('link', {
@@ -128,7 +135,7 @@ describe('<Sidebar />', () => {
 		expect(video).not.toBeVisible();
 		expect(secondVideo).not.toBeVisible();
 
-		await user.click(fisrtLink);
+		await user.click(firstLink);
 
 		expect(video).toBeVisible();
 		expect(secondVideo).not.toBeVisible();
@@ -137,5 +144,18 @@ describe('<Sidebar />', () => {
 
 		expect(video).not.toBeVisible();
 		expect(secondVideo).toBeVisible();
+	});
+
+	it('should save fold preferences', async () => {
+		const user = userEvent.setup();
+		const foldButton = screen.getByRole('button', {
+			name: 'foldButton',
+		});
+
+		await user.click(foldButton);
+		expect(window.localStorage.getItem('expanded')).toEqual('false');
+
+		await user.click(foldButton);
+		expect(window.localStorage.getItem('expanded')).toEqual('true');
 	});
 });

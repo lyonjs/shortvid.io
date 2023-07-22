@@ -8,14 +8,14 @@ import {
 	categoryProps,
 	CompositionType,
 	videoProps,
-} from '../../../data/config/sideBarConfig';
+} from '../../../../data/config/sideBarConfig';
+import {ActiveLink} from '../ActiveLink';
+import {TopLevelContent} from '../TopLevelContent';
 
-import {ActiveLink} from './ActiveLink';
 import {CategoryLink} from './CategoryLink';
 import {CompositionThumbnail} from './CompositionThumbnail';
-import {TopLevelContent} from './TopLevelContent';
 
-import styles from '../../../../styles/app/components/sidebar/nav.module.css';
+import styles from '../../../../../styles/app/components/sidebar/nav.module.css';
 
 type NavDetailsProps = {
 	videoType: CompositionType;
@@ -48,14 +48,14 @@ export const NavDetails: React.FC<NavDetailsProps> = ({
 				setOpen(false);
 			}
 		}
-	}, [expanded, openedNavDetails]);
+	}, [expanded, openedNavDetails, videoType, setOpen]);
 
 	useEffect(() => {
 		if (!expanded) {
 			setOpen(false);
 			setOpenedNavDetails(null);
 		}
-	}, [expanded, setOpen]);
+	}, [expanded, setOpen, setOpenedNavDetails]);
 
 	const handleClick = () => {
 		setOpenedNavDetails(videoType);

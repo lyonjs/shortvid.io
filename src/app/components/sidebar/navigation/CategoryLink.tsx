@@ -6,12 +6,12 @@ import {usePathname} from 'next/navigation';
 import {
 	categoryProps,
 	CompositionType,
-} from '../../../data/config/sideBarConfig';
+} from '../../../../data/config/sideBarConfig';
+import {ActiveLink} from '../ActiveLink';
 
-import {ActiveLink} from './ActiveLink';
 import {CompositionThumbnail} from './CompositionThumbnail';
 
-import styles from '../../../../styles/app/components/sidebar/nav.module.css';
+import styles from '../../../../../styles/app/components/sidebar/nav.module.css';
 
 export const CategoryLink: React.FC<
 	categoryProps & {

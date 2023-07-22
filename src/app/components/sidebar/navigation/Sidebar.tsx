@@ -1,20 +1,22 @@
 'use client';
 
-import React, {useState} from 'react';
+import {useContext} from 'react';
 import {Icon} from '@iconify/react';
+
+import {SidebarContext} from '../../../../context/SidebarContext';
 
 import {Footer} from './Footer';
 import {Header} from './Header';
 import {Nav} from './Nav';
 
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
+import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
 
 export const Sidebar = () => {
-	const [expanded, setExpanded] = useState<boolean>(true);
+	const {expanded, setExpanded} = useContext(SidebarContext);
 
 	return (
 		<section
-			className={styles.sidebar}
+			className={`${styles.sidebar} ${styles.sidebarDesktop}`}
 			aria-expanded={expanded}
 			aria-label="sidebar"
 		>

@@ -85,4 +85,4 @@ Remotion will start on port `3000`
 pnpm serve
 ```
 
-An ExpressJS server will start locally on port 
+An ExpressJS server will start locally on port

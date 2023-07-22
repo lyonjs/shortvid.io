@@ -78,3 +78,11 @@ pnpm start
 ```
 
 Remotion will start on port `3000`
+
+## Start the server side rendering server locally
+
+```console
+pnpm serve
+```
+
+An ExpressJS server will start locally on port 

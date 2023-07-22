@@ -9,7 +9,7 @@ type ThemeRadioButtonTypes = {
 	themeValue: 'dark' | 'light' | undefined;
 	handleSelectTheme: (
 		newTheme: string,
-		clickedButton: SelectedThemeTypes
+		clickedButton: SelectedThemeTypes,
 	) => void;
 	selectedTheme: string;
 	iconifyId: string;

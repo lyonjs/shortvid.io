@@ -15,7 +15,7 @@ export default function MeetupPage() {
 	const [date, setDate] = useInputChange<string>('28 septembre 2022', 'date');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg'
+		'backgroundImg',
 	);
 	const props = {title, date, backgroundImg, eventLogo};
 	const encodedParams = encodeObjectValues(props);

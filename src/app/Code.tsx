@@ -25,7 +25,7 @@ export const Code: React.FC<{
 				setTimeout(() => notification?.classList.remove('animate-popup'), 2000);
 			}
 		},
-		[composition]
+		[composition],
 	);
 
 	return (

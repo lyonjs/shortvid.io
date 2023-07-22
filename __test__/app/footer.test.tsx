@@ -19,7 +19,7 @@ describe('<Footer />', () => {
 
 		const footer = screen.getByRole('contentinfo');
 		const copyright = screen.getByText(
-			'© Copyright 2023 LyonJs - Made with 💜 and JS'
+			'© Copyright 2023 LyonJs - Made with 💜 and JS',
 		);
 
 		expect(logo).toBeVisible();

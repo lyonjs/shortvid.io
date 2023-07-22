@@ -21,6 +21,6 @@ export const VolcampConfig: CompositionProps = {
 				},
 			],
 		},
-		defaultTalkValues
+		defaultTalkValues,
 	),
 };

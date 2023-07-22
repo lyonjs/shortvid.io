@@ -39,12 +39,12 @@ export const Background = () => {
 	const rectangleToLeft = interpolate(
 		frame,
 		[0, durationInFrames],
-		[-200, -20]
+		[-200, -20],
 	);
 	const rectangleToRight = interpolate(
 		frame,
 		[0, durationInFrames],
-		[-100, -60]
+		[-100, -60],
 	);
 	const enlargingPill = interpolate(frame, [0, durationInFrames], [120, 320]);
 

@@ -7,7 +7,7 @@ const formatTime = (numberToFormat: number) => {
 
 export const useCompositionConfig = (
 	compositionType: CompositionType,
-	compositionId: string
+	compositionId: string,
 ) => {
 	const compositionDetails = CompositionsConfig[compositionType][compositionId];
 
@@ -18,7 +18,7 @@ export const useCompositionConfig = (
 		const miliseconds = Math.floor((durationInSeconds - seconds) * fps);
 
 		const formatedDurationInSeconds = `${formatTime(seconds)}:${formatTime(
-			miliseconds
+			miliseconds,
 		)}`;
 
 		return {

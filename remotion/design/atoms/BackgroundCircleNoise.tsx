@@ -27,7 +27,7 @@ export const BackgroundCircleNoise: React.FC<{
 					const opacity = interpolate(
 						noise3D('opacity', i, j, frame * speed),
 						[-1, 1],
-						[0, 1]
+						[0, 1],
 					);
 
 					const key = `${i}-${j}`;
@@ -42,7 +42,7 @@ export const BackgroundCircleNoise: React.FC<{
 							opacity={opacity}
 						/>
 					);
-				})
+				}),
 			)}
 		</svg>
 	);

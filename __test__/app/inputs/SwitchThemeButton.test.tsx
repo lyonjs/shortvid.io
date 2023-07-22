@@ -19,13 +19,13 @@ describe('<SwitchThemeButton />', () => {
 		await user.click(targetButton);
 
 		expect(lightButton.getAttribute('checked')).toEqual(
-			targetButton === lightButton ? 'true' : 'false'
+			targetButton === lightButton ? 'true' : 'false',
 		);
 		expect(systemButton.getAttribute('checked')).toEqual(
-			targetButton === systemButton ? 'true' : 'false'
+			targetButton === systemButton ? 'true' : 'false',
 		);
 		expect(darkButton.getAttribute('checked')).toEqual(
-			targetButton === darkButton ? 'true' : 'false'
+			targetButton === darkButton ? 'true' : 'false',
 		);
 	};
 

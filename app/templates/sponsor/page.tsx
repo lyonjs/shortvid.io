@@ -12,15 +12,15 @@ import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
 export default function SponsorPage() {
 	const [companyName, setCompanyName] = useInputChange<string>(
 		'Evilcorp',
-		'companyName'
+		'companyName',
 	);
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg'
+		'backgroundImg',
 	);
 	const [sponsorLogo, setSponsorLogo] = useInputChange<string | undefined>(
 		undefined,
-		'sponsorLogo'
+		'sponsorLogo',
 	);
 	const [sponsorLocalisation, setSponsorLocalisation] = useInputChange<
 		string | undefined

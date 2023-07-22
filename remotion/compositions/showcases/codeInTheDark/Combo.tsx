@@ -13,7 +13,7 @@ export const Combo: React.FC = () => {
 	const inputRange = _.range(
 		0,
 		MaxCountValue * loopTimeDuration,
-		loopTimeDuration
+		loopTimeDuration,
 	);
 	const outputRange = _.range(0, MaxCountValue, 1);
 
@@ -23,8 +23,8 @@ export const Combo: React.FC = () => {
 				interpolate(frame, inputRange, outputRange, {
 					extrapolateRight: 'clamp',
 					extrapolateLeft: 'clamp',
-				})
-			)
+				}),
+			),
 		);
 	}, [frame, inputRange, outputRange]);
 

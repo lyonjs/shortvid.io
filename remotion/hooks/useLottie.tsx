@@ -3,7 +3,7 @@ import {LottieAnimationData} from '@remotion/lottie';
 import {continueRender, delayRender} from 'remotion';
 
 export const useLottie = (
-	icon: undefined | string
+	icon: undefined | string,
 ): LottieAnimationData | null => {
 	const [handle] = useState(() => delayRender('Loading Lottie animation'));
 	const [animationData, setAnimationData] =

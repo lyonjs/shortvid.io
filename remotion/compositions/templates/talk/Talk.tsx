@@ -20,7 +20,7 @@ export const Talk: React.FC<{
 	speakerPicture,
 	titleSize = '80',
 	backgroundImg = staticFile(
-		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg'
+		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
 	),
 }) => {
 	return (

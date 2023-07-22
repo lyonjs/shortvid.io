@@ -34,7 +34,7 @@ export const SpeakerAndTitle: React.FC<{
 		[5, 0],
 		{
 			extrapolateRight: 'clamp',
-		}
+		},
 	);
 	return (
 		<>

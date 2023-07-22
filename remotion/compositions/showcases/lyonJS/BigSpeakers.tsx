@@ -40,7 +40,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 		[5, 0],
 		{
 			extrapolateRight: 'clamp',
-		}
+		},
 	);
 
 	return (

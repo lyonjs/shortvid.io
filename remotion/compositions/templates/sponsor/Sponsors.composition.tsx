@@ -1,6 +1,7 @@
 import React from 'react';
-import {Composition, Folder} from 'remotion';
+import {Composition, Folder, staticFile} from 'remotion';
 
+import {SpotlightNewSponsor} from './spotlightNewSponsor/SpotlightNewSponsor';
 import {Sponsor} from './Sponsor';
 
 export const SponsorsComposition: React.FC = () => {
@@ -26,6 +27,18 @@ export const SponsorsComposition: React.FC = () => {
 				durationInFrames={200}
 				defaultProps={{
 					companyName: 'EvilCorp',
+				}}
+			/>
+			<Composition
+				component={SpotlightNewSponsor}
+				width={1920}
+				height={1080}
+				id="SpotlightNewSponsor"
+				fps={60}
+				durationInFrames={750}
+				defaultProps={{
+					logo: staticFile('images/showcases/lyonjs/lyonjsLogo.svg'),
+					sponsorLogo: staticFile('images/sponsors/vercel-logotype-light.svg'),
 				}}
 			/>
 		</Folder>

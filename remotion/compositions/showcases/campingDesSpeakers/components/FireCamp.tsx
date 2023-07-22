@@ -28,7 +28,7 @@ export const FireCamp = () => {
 	return (
 		<Img
 			src={staticFile(
-				'images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png'
+				'images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
 			)}
 			style={{
 				width: 200,

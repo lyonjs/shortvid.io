@@ -18,12 +18,12 @@ export async function loadGoogleFont(fontFamily: string) {
 export function loadLocalFont(
 	fontName: string,
 	fontLocalPath: string,
-	format: 'woff2' | 'woff' | 'opentype' | 'truetype'
+	format: 'woff2' | 'woff' | 'opentype' | 'truetype',
 ) {
 	const waitForFont = delayRender('Loading local font...');
 	const font = new FontFace(
 		fontName,
-		`url('${staticFile(fontLocalPath)}') format('${format}')`
+		`url('${staticFile(fontLocalPath)}') format('${format}')`,
 	);
 
 	font

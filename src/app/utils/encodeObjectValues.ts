@@ -1,7 +1,7 @@
 type EncodedObject = Record<string, string>;
 
 export const encodeObjectValues = (
-	obj: Record<string, unknown>
+	obj: Record<string, unknown>,
 ): EncodedObject => {
 	const encodedObj: EncodedObject = {};
 	for (const key in obj) {

@@ -36,7 +36,7 @@ const run = async () => {
 	}
 	if (!composition) {
 		console.error(
-			'Please provide remotion composition to render with `--composition`'
+			'Please provide remotion composition to render with `--composition`',
 		);
 		process.exit(1);
 	}

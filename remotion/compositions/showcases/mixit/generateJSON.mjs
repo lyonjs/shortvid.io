@@ -48,7 +48,7 @@ const run = async () => {
 	const __filename = fileURLToPath(import.meta.url);
 	fs.writeFileSync(
 		path.join(dirname(__filename), 'talks.json'),
-		JSON.stringify(enhanceTalks, null, 2)
+		JSON.stringify(enhanceTalks, null, 2),
 	);
 };
 

@@ -40,7 +40,7 @@ export const Words = () => {
 						{
 							extrapolateRight: 'clamp',
 							extrapolateLeft: 'clamp',
-						}
+						},
 					);
 
 					return (

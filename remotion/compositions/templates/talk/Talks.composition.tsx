@@ -21,7 +21,7 @@ export const TalksComposition: React.FC = () => {
 					speakersNames: 'John Doe',
 					talkTitle: 'Is JS an awesome programing language ?',
 					speakerPicture: staticFile(
-						'/images/showcases/lyonjs/lyonjs-squared.png'
+						'/images/showcases/lyonjs/lyonjs-squared.png',
 					),
 				}}
 			/>

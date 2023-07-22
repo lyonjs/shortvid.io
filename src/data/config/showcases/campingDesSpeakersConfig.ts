@@ -15,6 +15,6 @@ export const CampingDesSpeakersConfig: CompositionProps = {
 		{
 			speakers: [{company: 'Zenika'}, {company: 'Bedrock'}],
 		},
-		defaultTalkValues
+		defaultTalkValues,
 	),
 };

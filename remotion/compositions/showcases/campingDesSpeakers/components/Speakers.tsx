@@ -62,7 +62,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							avatarPictureUrl={
 								speaker.picture ||
 								staticFile(
-									'images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png'
+									'images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
 								)
 							}
 							avatarStyle={{

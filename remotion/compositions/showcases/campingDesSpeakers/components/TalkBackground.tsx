@@ -10,7 +10,7 @@ export const TalkBackground = () => {
 	return (
 		<BackgroundFiller
 			imageUrl={staticFile(
-				'images/showcases/campingDesSpeakers/tentBackground.svg'
+				'images/showcases/campingDesSpeakers/tentBackground.svg',
 			)}
 			style={{
 				opacity: backgroundOpacity,

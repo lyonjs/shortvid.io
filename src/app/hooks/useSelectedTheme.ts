@@ -19,7 +19,7 @@ export const useSelectedTheme = () => {
 
 	const handleSelectTheme = (
 		newTheme: string,
-		clickedButton: SelectedThemeTypes
+		clickedButton: SelectedThemeTypes,
 	) => {
 		setTheme(newTheme);
 		setSelectedTheme(clickedButton);

@@ -18,7 +18,7 @@ describe('<ResizeWrapper>', () => {
 				<ResizeWrapper>
 					<h1>Content</h1>
 				</ResizeWrapper>
-			</SidebarProvider>
+			</SidebarProvider>,
 		);
 
 		resizeGrabber = screen.getByTestId('resizeGrabber');

@@ -21,7 +21,7 @@ jest.mock(
 	'../../src/app/components/sidebar/navigation/CompositionThumbnail',
 	() => ({
 		CompositionThumbnail: CompositionThumbnailMock,
-	})
+	}),
 );
 
 describe('<Sidebar />', () => {
@@ -29,7 +29,7 @@ describe('<Sidebar />', () => {
 		render(
 			<SidebarProvider>
 				<Sidebar />
-			</SidebarProvider>
+			</SidebarProvider>,
 		);
 	});
 
@@ -68,7 +68,7 @@ describe('<Sidebar />', () => {
 		expect(categorisedVideo).not.toBeVisible();
 		expect(categorisedVideo).toHaveAttribute(
 			'href',
-			'/toplevel/category/categorisedVideo'
+			'/toplevel/category/categorisedVideo',
 		);
 	});
 

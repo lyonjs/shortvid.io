@@ -3,7 +3,7 @@ import {useSearchParams} from 'next/navigation';
 
 export const useInputChange = <ValueType extends string | undefined>(
 	defaultValue: ValueType,
-	query?: string
+	query?: string,
 ) => {
 	const searchParams = useSearchParams();
 	const initialValue = query
@@ -14,7 +14,7 @@ export const useInputChange = <ValueType extends string | undefined>(
 	const onValueChange = useCallback(
 		(event: FormEvent<HTMLInputElement | HTMLSelectElement>) =>
 			setValue(event.currentTarget.value as unknown as ValueType),
-		[]
+		[],
 	);
 
 	return [value, onValueChange] as const;

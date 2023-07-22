@@ -3,7 +3,7 @@ import {useSearchParams} from 'next/navigation';
 
 export const useInputDateChange = <ValueType extends Date | undefined>(
 	defaultValue: ValueType,
-	query?: string
+	query?: string,
 ) => {
 	const searchParams = useSearchParams();
 	const initialValue = query
@@ -13,7 +13,7 @@ export const useInputDateChange = <ValueType extends Date | undefined>(
 	const formatedInitialValue = initialValue && new Date(initialValue);
 
 	const [value, setValue] = useState<ValueType>(
-		formatedInitialValue as ValueType
+		formatedInitialValue as ValueType,
 	);
 	const onValueChange = useCallback((event: FormEvent<HTMLInputElement>) => {
 		const newValue = new Date(event.currentTarget.value);

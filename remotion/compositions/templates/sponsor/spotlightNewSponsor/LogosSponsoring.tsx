@@ -5,11 +5,11 @@ import {FadeIn} from '../../../../design/animations/FadeIn';
 
 const {fontFamily} = loadFont();
 
-export function LogosSponsoring(props: {
-	src: string;
-	src1: string;
+export const LogosSponsoring: React.FC<{
+	logo: string;
+	sponsorLogo: string;
 	scaleUp: number;
-}) {
+}> = ({logo, sponsorLogo, scaleUp}) => {
 	return (
 		<FadeIn
 			duration={50}
@@ -29,7 +29,7 @@ export function LogosSponsoring(props: {
 				}}
 			>
 				<Img
-					src={props.src}
+					src={logo}
 					width={150}
 					height="auto"
 					style={{
@@ -48,15 +48,15 @@ export function LogosSponsoring(props: {
 					x
 				</span>
 				<Img
-					src={props.src1}
-					alt="Vercel logo"
+					src={sponsorLogo}
+					alt="Sponsor logo"
 					style={{
 						width: 800,
 						paddingBottom: 100,
-						transform: `scale(${props.scaleUp})`,
+						transform: `scale(${scaleUp})`,
 					}}
 				/>
 			</div>
 		</FadeIn>
 	);
-}
+};

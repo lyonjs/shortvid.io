@@ -18,12 +18,12 @@ import {LogosSponsoring} from './LogosSponsoring';
 import {NewSponsorTitle} from './NewSponsorTitle';
 import {Spotlight} from './Spotlight';
 
-type CompositionProps = {
+export type SpotlightNewSponsornProps = {
 	logo: string;
 	sponsorLogo: string;
 };
 
-export const SpotlightNewSponsor: React.FC<CompositionProps> = ({
+export const SpotlightNewSponsor: React.FC<SpotlightNewSponsornProps> = ({
 	logo,
 	sponsorLogo,
 }) => {
@@ -99,7 +99,11 @@ export const SpotlightNewSponsor: React.FC<CompositionProps> = ({
 					</FadeIn>
 				</Sequence>
 				<Sequence from={420} durationInFrames={300} name="Logos">
-					<LogosSponsoring src={logo} src1={sponsorLogo} scaleUp={scaleUp} />
+					<LogosSponsoring
+						logo={logo}
+						sponsorLogo={sponsorLogo}
+						scaleUp={scaleUp}
+					/>
 				</Sequence>
 			</div>
 		</AbsoluteFill>

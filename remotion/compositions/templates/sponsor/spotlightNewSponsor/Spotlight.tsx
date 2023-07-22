@@ -24,7 +24,7 @@ export const Spotlight: React.FC<{sponsorLogo: string}> = ({sponsorLogo}) => {
 		>
 			<Img
 				src={sponsorLogo}
-				alt="Vercel logo"
+				alt="Sponsor logo"
 				style={{
 					transform: `translateY(250px)`,
 					width: 1000,

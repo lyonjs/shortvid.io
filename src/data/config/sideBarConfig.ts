@@ -46,9 +46,19 @@ export const sideBarNavConfig: sideBarNavProps = {
 				compositionLink: 'layers',
 			},
 			{
-				compositionName: 'Sponsor',
-				compositionId: 'Sponsor',
-				compositionLink: 'sponsor',
+				categoryName: 'sponsors',
+				items: [
+					{
+						compositionName: 'Sponsor',
+						compositionId: 'Sponsor',
+						compositionLink: 'sponsor',
+					},
+					{
+						compositionName: 'Spotlight New Sponsor',
+						compositionId: 'SpotlightNewSponsor',
+						compositionLink: 'spotlightNewSponsor',
+					},
+				],
 			},
 			{
 				compositionName: 'Event',

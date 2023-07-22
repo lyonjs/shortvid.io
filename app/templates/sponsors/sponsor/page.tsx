@@ -2,12 +2,12 @@
 
 import {Player} from '@remotion/player';
 
-import {Sponsor} from '../../../remotion/compositions/templates/sponsor/Sponsor';
-import {Code} from '../../../src/app/Code';
-import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
-import {Form, Input} from '../../../src/app/forms/input';
-import {useInputChange} from '../../../src/app/hooks/useInputChange';
-import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
+import {Sponsor} from '../../../../remotion/compositions/templates/sponsor/Sponsor';
+import {Code} from '../../../../src/app/Code';
+import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
+import {Form, Input} from '../../../../src/app/forms/input';
+import {useInputChange} from '../../../../src/app/hooks/useInputChange';
+import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
 
 export default function SponsorPage() {
 	const [companyName, setCompanyName] = useInputChange<string>(

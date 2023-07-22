@@ -38,7 +38,8 @@ export const SponsorsComposition: React.FC = () => {
 				durationInFrames={750}
 				defaultProps={{
 					logo: staticFile('images/showcases/lyonjs/lyonjsLogo.svg'),
-					sponsorLogo: staticFile('images/sponsors/vercel-logotype-light.svg'),
+					sponsorLogo:
+						'https://github.com/lyonjs/shortvid.io/assets/60877626/a4155bda-d6b1-4e2b-8631-6450ef3bf768',
 				}}
 			/>
 		</Folder>

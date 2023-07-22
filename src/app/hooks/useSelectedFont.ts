@@ -1,5 +1,4 @@
 import {useContext, useEffect} from 'react';
-
 import {useSearchParams} from 'next/navigation';
 
 import {FontContext} from '../../context/FontContext';

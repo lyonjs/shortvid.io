@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {AbsoluteFill, Img, Sequence, staticFile} from 'remotion';
 
 export const IntroBackground = () => {

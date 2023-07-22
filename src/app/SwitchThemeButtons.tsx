@@ -2,6 +2,7 @@
 
 import {useSelectedTheme} from './hooks/useSelectedTheme';
 import {ThemeRadioButton} from './ThemeRadioButton';
+
 import styles from '../../styles/app/common/themeRadioGroup.module.css';
 
 export const SwitchThemeButtons = () => {

@@ -1,7 +1,6 @@
 'use client';
 
 import {ReactNode} from 'react';
-
 import {usePathname} from 'next/navigation';
 
 import styles from '../../../../styles/app/components/sidebar/activeLink.module.css';

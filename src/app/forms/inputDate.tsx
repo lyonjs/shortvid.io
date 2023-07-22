@@ -1,5 +1,4 @@
 import {FormEvent} from 'react';
-
 import {format} from 'date-fns';
 
 import styles from '../../../styles/app/common/inputs.module.css';

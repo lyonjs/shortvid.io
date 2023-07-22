@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
 	interpolate,
 	Sequence,
@@ -8,8 +7,9 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-import {TalkSpeaker} from './TalkSpeaker';
 import {Title} from '../../../design/atoms/Title';
+
+import {TalkSpeaker} from './TalkSpeaker';
 
 export const SpeakerAndTitle: React.FC<{
 	speakerPicture?: string;

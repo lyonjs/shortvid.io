@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Folder} from 'remotion';
 
 import {EventsComposition} from './event/Events.composition';

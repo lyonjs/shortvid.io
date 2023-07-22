@@ -1,5 +1,4 @@
 import {CSSProperties} from 'react';
-
 import {Lottie} from '@remotion/lottie';
 import {AbsoluteFill} from 'remotion';
 

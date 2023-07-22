@@ -1,12 +1,12 @@
 'use client';
 
 import React, {useState} from 'react';
-
 import {Icon} from '@iconify/react';
 
 import {Footer} from './Footer';
 import {Header} from './Header';
 import {Nav} from './Nav';
+
 import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 
 export const Sidebar = () => {

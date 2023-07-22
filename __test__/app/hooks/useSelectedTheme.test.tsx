@@ -1,4 +1,5 @@
-import {renderHook, act} from '@testing-library/react';
+import {act, renderHook} from '@testing-library/react';
+
 import {useSelectedTheme} from '../../../src/app/hooks/useSelectedTheme';
 import {CustomThemeProvider} from '../../../src/context/CustomThemeProvider';
 

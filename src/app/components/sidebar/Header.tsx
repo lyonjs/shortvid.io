@@ -1,7 +1,8 @@
 import {MuseoModerno} from 'next/font/google';
 
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 import {Logo} from '../../Logo';
+
+import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 
 const wormarkFont = MuseoModerno({
 	weight: '900',

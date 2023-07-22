@@ -1,6 +1,7 @@
 import React from 'react';
-
 import {AbsoluteFill, Sequence} from 'remotion';
+
+import {DefaultProps} from '../../../types/defaultProps.types';
 
 import {Details} from './Details';
 import {Logo} from './Logo';
@@ -8,7 +9,6 @@ import {Snow} from './Snow';
 import {Speakers} from './Speakers';
 import {TalkBackground} from './TalkBackground';
 import {TalkTitle} from './TalkTitle';
-import {DefaultProps} from '../../../types/defaultProps.types';
 
 export const Snowcamp: React.FC<DefaultProps> = ({
 	title,

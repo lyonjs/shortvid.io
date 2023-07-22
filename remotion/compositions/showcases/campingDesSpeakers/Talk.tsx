@@ -6,10 +6,10 @@ import {
 	useCurrentFrame,
 } from 'remotion';
 
-import {TalkProps} from './CampingDesSpeakers';
 import {Details} from './components/Details';
 import {Speakers} from './components/Speakers';
 import {TalkTitle} from './components/TalkTitle';
+import {TalkProps} from './CampingDesSpeakers';
 
 export const Talk: React.FC<TalkProps> = ({
 	title,

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
 
 export const SpeakersName: React.FC<{

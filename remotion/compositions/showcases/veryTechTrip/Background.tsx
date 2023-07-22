@@ -1,5 +1,4 @@
 import {CSSProperties} from 'react';
-
 import {
 	AbsoluteFill,
 	interpolate,

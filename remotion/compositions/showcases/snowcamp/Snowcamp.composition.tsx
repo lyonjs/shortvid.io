@@ -1,9 +1,9 @@
 import React from 'react';
-
 import {Composition, Folder} from 'remotion';
 
-import {Snowcamp} from './Snowcamp';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+
+import {Snowcamp} from './Snowcamp';
 
 export const SnowcampComposition: React.FC = () => {
 	return (

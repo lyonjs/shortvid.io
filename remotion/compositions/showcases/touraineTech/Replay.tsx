@@ -1,12 +1,12 @@
-import {Sequence} from 'remotion';
-import {AbsoluteFill} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
+
+import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
+import {Speaker} from '../../../types/defaultProps.types';
 
 import {BigSpeakers} from './BigSpeakers';
 import {Logo} from './Logo';
 import {TalkTitle} from './TalkTitle';
 import {Type} from './Type';
-import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {Speaker} from '../../../types/defaultProps.types';
 
 type ReplayType = {
 	title: string;

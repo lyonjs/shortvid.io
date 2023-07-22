@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Folder} from 'remotion';
 
 import {AlpesCraftComposition} from './alpescraft/AlpesCraft.composition';

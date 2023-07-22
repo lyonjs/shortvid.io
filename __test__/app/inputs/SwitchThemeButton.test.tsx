@@ -1,6 +1,8 @@
-import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
+import '@testing-library/jest-dom';
+
 import {SwitchThemeButtons} from '../../../src/app/SwitchThemeButtons';
 
 describe('<SwitchThemeButton />', () => {

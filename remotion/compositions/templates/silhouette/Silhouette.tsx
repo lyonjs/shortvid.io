@@ -1,12 +1,12 @@
 import React from 'react';
-
 import {AbsoluteFill, Sequence} from 'remotion';
+
+import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
 import {Side} from './Silhouette.type';
 import {SilhouetteLogo} from './SilhouetteLogo';
 import {SilhouettePicture} from './SilhouettePicture';
 import {SilhouetteTitle} from './SilhouetteTitle';
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
 export const Silhouette: React.FC<{
 	backgroundImg: string;

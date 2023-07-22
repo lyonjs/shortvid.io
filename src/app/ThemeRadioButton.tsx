@@ -1,6 +1,7 @@
 import {Icon} from '@iconify/react';
 
 import {SelectedThemeTypes} from './hooks/useSelectedTheme';
+
 import styles from '../../styles/app/common/themeRadioGroup.module.css';
 
 type ThemeRadioButtonTypes = {

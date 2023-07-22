@@ -1,7 +1,6 @@
 'use client';
 
 import {useCallback, useState} from 'react';
-
 import {Player} from '@remotion/player';
 
 import {ColorInput} from '../../../src/app/forms/colorInput';

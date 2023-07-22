@@ -1,7 +1,6 @@
 'use client';
 
 import {useState} from 'react';
-
 import {Player} from '@remotion/player';
 import _ = require('lodash');
 import JSONInput from 'react-json-editor-ajrm';
@@ -20,6 +19,7 @@ import {DefaultProps} from '../../../../remotion/types/defaultProps.types';
 import {Code} from '../../../../src/app/Code';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
 import {ReplayProps} from '../../../templates/replay/page';
+
 interface TalkTemplate {
 	component: React.FC<any>;
 	width: number;

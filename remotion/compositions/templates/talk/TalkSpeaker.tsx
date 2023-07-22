@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Title} from '../../../design/atoms/Title';

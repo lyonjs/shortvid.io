@@ -1,16 +1,22 @@
 import React from 'react';
+import {
+	AbsoluteFill,
+	Audio,
+	Img,
+	Sequence,
+	spring,
+	staticFile,
+	useCurrentFrame,
+	useVideoConfig,
+} from 'remotion';
 
-import {useVideoConfig} from 'remotion';
-import {useCurrentFrame} from 'remotion';
-import {spring} from 'remotion';
-import {AbsoluteFill, Img, Sequence, Audio, staticFile} from 'remotion';
+import {DefaultProps} from '../../../types/defaultProps.types';
 
 import {Background} from './Background';
 import {Details} from './Details';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
-import {DefaultProps} from '../../../types/defaultProps.types';
 
 export const VeryTechTrip: React.FC<DefaultProps> = ({
 	title,

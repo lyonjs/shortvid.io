@@ -1,3 +1,7 @@
+import {ReplayProps} from '../../../app/templates/replay/page';
+import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
+import {DefaultProps} from '../../../remotion/types/defaultProps.types';
+
 import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
 import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
 import {DevoxxConfig} from './showcases/devoxxConfig';
@@ -13,9 +17,6 @@ import {SilhouetteConfig} from './templates/silhouetteConfig';
 import {SponsorConfig} from './templates/sponsorConfig';
 import {TalkBrandedConfig} from './templates/talkBrandedConfig';
 import {TalkConfig} from './templates/talkConfig';
-import {ReplayProps} from '../../../app/templates/replay/page';
-import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
-import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 
 export type CompositionProps = {
 	component: React.FC<any>;

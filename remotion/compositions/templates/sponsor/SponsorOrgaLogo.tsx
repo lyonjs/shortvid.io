@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {EventLogo} from '../../../design/atoms/EventLogo';

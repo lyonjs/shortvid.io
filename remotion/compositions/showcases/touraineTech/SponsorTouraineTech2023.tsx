@@ -1,9 +1,10 @@
 import {AbsoluteFill} from 'remotion';
 
-import {Logo} from './Logo';
-import {TalkTitle} from './TalkTitle';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {SponsorLogo} from '../../templates/sponsor/SponsorLogo';
+
+import {Logo} from './Logo';
+import {TalkTitle} from './TalkTitle';
 
 export type SponsorProps = {
 	message: string;

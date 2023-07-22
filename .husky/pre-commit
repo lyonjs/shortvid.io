@@ -3,3 +3,4 @@
 
 pnpm pretty-quick --staged
 pnpm lint --fix
+pnpm prettier -w .

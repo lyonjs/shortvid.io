@@ -1,5 +1,5 @@
 import React from 'react';
-import {Folder, Still} from 'remotion';
+import {Composition, Folder, Still} from 'remotion';
 
 import {LayerFullScreen} from './LayerFullScreen';
 import {LayerOneSpeaker} from './LayerOneSpeaker';
@@ -22,14 +22,18 @@ export const LayersComposition: React.FC = () => {
 					decorationUrl: defaultDecorationUrl,
 				}}
 			/>
-			<Still
+			<Composition
 				id="LayerOneSpeaker"
 				component={LayerOneSpeaker}
 				width={1920}
 				height={1080}
+				fps={30}
+				durationInFrames={140}
 				defaultProps={{
 					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-					sponsorLogoUrl: defaultSponsorLogoUrl,
+					secondaryColor: '#E9764F',
+					sponsorLogoUrl:
+						'https://devfest2023.gdgnantes.com/images/logo_transparent.svg',
 					decorationUrl: defaultDecorationUrl,
 				}}
 			/>

@@ -18,11 +18,13 @@ export default function LayerScreenMode({params}: {params: {mode: string}}) {
 
 	return (
 		<Player
+			autoPlay
+			loop
 			style={{
 				width: '100%',
 				aspectRatio: '16 / 9',
 			}}
-			durationInFrames={1}
+			durationInFrames={140}
 			compositionWidth={1920}
 			compositionHeight={1080}
 			fps={30}

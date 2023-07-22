@@ -15,10 +15,10 @@ export default function LayersPage() {
 	const [mode, setMode] = useInputChange<LayerMode>('one');
 	const [title, setTitle] = useInputChange<string>('Shortvid.io 🎬');
 	const [sponsor, setSponsor] = useInputChange<string>(
-		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg',
+		'https://devfest2023.gdgnantes.com/images/logo_transparent.svg',
 	);
 	const [primaryColor, setPrimaryColor] = useInputChange<string>('#323330');
-	const [secondaryColor, setSecondaryColor] = useInputChange<string>('#efdb4f');
+	const [secondaryColor, setSecondaryColor] = useInputChange<string>('#E9764F');
 	const [decoration, setDecoration] = useInputChange<string>(
 		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png',
 	);
@@ -47,13 +47,15 @@ export default function LayersPage() {
 	return (
 		<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
 			<Player
+				autoPlay
+				controls
 				loop
 				className="shrink-0 shadow-lg"
 				style={{
-					width: '350px',
+					width: '800px',
 					aspectRatio: '16 / 9',
 				}}
-				durationInFrames={1}
+				durationInFrames={140}
 				compositionWidth={1920}
 				compositionHeight={1080}
 				fps={30}

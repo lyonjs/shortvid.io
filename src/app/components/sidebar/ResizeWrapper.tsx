@@ -31,10 +31,6 @@ export const ResizeWrapper: React.FC<{
 		setIsResizing(true);
 	};
 
-	const stopResize = () => {
-		setIsResizing(false);
-	};
-
 	const resize = useCallback(
 		(event: MouseEvent) => {
 			if (isResizing) {
@@ -52,6 +48,10 @@ export const ResizeWrapper: React.FC<{
 	);
 
 	useEffect(() => {
+		const stopResize = () => {
+			setIsResizing(false);
+		};
+
 		window.addEventListener('mousemove', resize);
 		window.addEventListener('mouseup', stopResize);
 
@@ -59,7 +59,7 @@ export const ResizeWrapper: React.FC<{
 			window.removeEventListener('mousemove', resize);
 			window.removeEventListener('mouseup', stopResize);
 		};
-	}, [resize, stopResize]);
+	}, [resize]);
 
 	return (
 		<div

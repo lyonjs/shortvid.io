@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_bee77386-d807-4120-8f88-437e31ec7730",
+      "org_id": "orga_7e0320de-a304-4c44-b526-71f2556c88f8",
+      "deploy_url": "https://github.com/lyonjs/shortvid.io.git",
+      "name": "shortvid.io",
+      "alias": "shortvid.io"
+    }
+  ]
+}

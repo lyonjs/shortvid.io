@@ -24,7 +24,7 @@ export const CompositionThumbnail: React.FC<CompositionThumbnailProps> = ({
 				<>
 					<span>
 						<Thumbnail
-							component={videoConfig.component}
+							component={videoConfig.component as never}
 							compositionWidth={videoConfig.width}
 							compositionHeight={videoConfig.height}
 							frameToDisplay={
@@ -32,7 +32,7 @@ export const CompositionThumbnail: React.FC<CompositionThumbnailProps> = ({
 							}
 							durationInFrames={videoConfig.durationInFrames}
 							fps={videoConfig.fps || 30}
-							inputProps={videoConfig.defaultProps}
+							inputProps={videoConfig.defaultProps as never}
 						/>
 					</span>
 					<div>

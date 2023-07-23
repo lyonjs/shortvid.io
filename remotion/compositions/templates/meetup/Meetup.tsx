@@ -13,14 +13,14 @@ export type MeetupProps = {
 	date?: string;
 };
 
-export const Meetup = ({
+export const Meetup: React.FC<MeetupProps> = ({
 	backgroundImg = staticFile(
 		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
 	),
 	title,
 	date,
 	eventLogo,
-}: MeetupProps) => {
+}) => {
 	return (
 		<AbsoluteFill
 			style={{

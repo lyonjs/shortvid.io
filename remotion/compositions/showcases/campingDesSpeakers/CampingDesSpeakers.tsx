@@ -10,7 +10,7 @@ export type Speaker = {
 	company: string;
 };
 
-export type TalkProps = {
+export type CampingDesSpeakersProps = {
 	title: string;
 	speakers: Speaker[];
 	date: string;
@@ -18,7 +18,7 @@ export type TalkProps = {
 	location: string;
 };
 
-export const CampingDesSpeakers: React.FC<TalkProps> = ({
+export const CampingDesSpeakers: React.FC<CampingDesSpeakersProps> = ({
 	title,
 	speakers,
 	date,

@@ -8,14 +8,16 @@ import {SilhouetteLogo} from './SilhouetteLogo';
 import {SilhouettePicture} from './SilhouettePicture';
 import {SilhouetteTitle} from './SilhouetteTitle';
 
-export const Silhouette: React.FC<{
+export type SilhouetteProps = {
 	backgroundImg: string;
 	title: string;
 	side?: Side;
 	silhouetteUrl: string;
 	dropShadow?: boolean;
 	logoUrl?: string;
-}> = ({
+};
+
+export const Silhouette: React.FC<SilhouetteProps> = ({
 	backgroundImg,
 	side = 'left',
 	silhouetteUrl,

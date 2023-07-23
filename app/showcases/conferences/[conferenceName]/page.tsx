@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {SetStateAction, useState} from 'react';
 import {Player} from '@remotion/player';
 import _ = require('lodash');
 import JSONInput from 'react-json-editor-ajrm';
@@ -14,24 +14,21 @@ import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Sno
 import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech/TouraineTech2023';
 import {VeryTechTrip} from '../../../../remotion/compositions/showcases/veryTechTrip/VeryTechTrip';
 import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volcamp';
-import {TalkBrandedProps} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
-import {DefaultProps} from '../../../../remotion/types/defaultProps.types';
 import {Code} from '../../../../src/app/Code';
+import {
+	DefaultPropsTypes,
+	TemplateTypes,
+} from '../../../../src/app/types/template.types';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
-import {ReplayProps} from '../../../templates/replay/page';
 
 interface TalkTemplate {
-	component: React.FC<any>;
+	component: TemplateTypes;
 	width: number;
 	height: number;
 	compositionName: string;
 	durationInFrames: number;
 	fps?: number;
-	defaultProps?:
-		| {[key: string]: string | undefined}
-		| DefaultProps
-		| ReplayProps
-		| TalkBrandedProps;
+	defaultProps?: DefaultPropsTypes;
 }
 
 const Template: Record<string, TalkTemplate> = {
@@ -155,7 +152,7 @@ export default function ConferencePage({
 					compositionWidth={currentTemplate.width}
 					compositionHeight={currentTemplate.height}
 					fps={currentTemplate.fps || 30}
-					component={currentTemplate.component}
+					component={currentTemplate.component as never}
 					inputProps={data || defaultTalkValues}
 				/>
 				<JSONInput
@@ -173,7 +170,7 @@ export default function ConferencePage({
 					}}
 					height="300px"
 					width="800px"
-					onChange={(event: {jsObject: any}) => {
+					onChange={(event: {jsObject: SetStateAction<DefaultPropsTypes>}) => {
 						setData(event.jsObject);
 					}}
 				/>

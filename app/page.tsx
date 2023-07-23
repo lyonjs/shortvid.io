@@ -4,15 +4,30 @@ import React from 'react';
 import {Player} from '@remotion/player';
 import Image from 'next/image';
 
-import {Event} from '../remotion/compositions/templates/event/Event';
-import {Meetup} from '../remotion/compositions/templates/meetup/Meetup';
-import {Sponsor} from '../remotion/compositions/templates/sponsor/Sponsor';
-import {Talk} from '../remotion/compositions/templates/talk/Talk';
+import {
+	Event,
+	EventProps,
+} from '../remotion/compositions/templates/event/Event';
+import {
+	Meetup,
+	MeetupProps,
+} from '../remotion/compositions/templates/meetup/Meetup';
+import {
+	Sponsor,
+	SponsorProps,
+} from '../remotion/compositions/templates/sponsor/Sponsor';
+import {Talk, TalkProps} from '../remotion/compositions/templates/talk/Talk';
 import RootLayout from '../src/app/RootLayout';
+
+type TemplateTypes =
+	| React.FC<MeetupProps>
+	| React.FC<TalkProps>
+	| React.FC<SponsorProps>
+	| React.FC<EventProps>;
 
 interface Video {
 	id: string;
-	template: React.FC<any>;
+	template: TemplateTypes;
 	params: {
 		[key: string]: string;
 	};
@@ -178,7 +193,7 @@ export default function Home() {
 								compositionWidth={1200}
 								compositionHeight={1200}
 								fps={30}
-								component={video.template}
+								component={video.template as never}
 								inputProps={video.params}
 							/>
 						</article>

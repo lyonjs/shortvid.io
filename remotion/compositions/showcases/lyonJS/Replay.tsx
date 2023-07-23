@@ -10,7 +10,7 @@ import {Logo} from './Logo';
 import {LogoSponsor} from './LogoSponsor';
 import {TalkTitle} from './TalkTitle';
 
-type LyonJSReplayType = {
+export type LyonJSReplayType = {
 	title: string;
 	date: string;
 	sponsor: string;

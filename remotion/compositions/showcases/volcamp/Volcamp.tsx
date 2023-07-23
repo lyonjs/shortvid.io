@@ -2,12 +2,12 @@ import {loadFont} from '@remotion/google-fonts/Poppins';
 import {AbsoluteFill, Img, Sequence, staticFile} from 'remotion';
 
 import {Eruption} from './components/Eruption';
-import {Talk, TalkProps} from './components/Talk';
 import {Transition} from './components/Transition';
+import {VolcampProps, VolcampTalk} from './components/VolcampTalk';
 
 const {fontFamily} = loadFont();
 
-export const Volcamp: React.FC<TalkProps> = ({
+export const Volcamp: React.FC<VolcampProps> = ({
 	themeName,
 	speakers,
 	title,
@@ -36,7 +36,7 @@ export const Volcamp: React.FC<TalkProps> = ({
 				<Eruption />
 			</Sequence>
 			<Sequence name="Talk" from={150}>
-				<Talk
+				<VolcampTalk
 					themeName={themeName}
 					speakers={speakers}
 					title={title}

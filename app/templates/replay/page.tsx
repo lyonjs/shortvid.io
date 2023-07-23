@@ -1,11 +1,14 @@
 'use client';
 
-import {ChangeEvent, useCallback, useState} from 'react';
+import {ChangeEvent, SetStateAction, useCallback, useState} from 'react';
 import JSONInput from 'react-json-editor-ajrm/index';
 import locale from 'react-json-editor-ajrm/locale/en';
 import {Player} from '@remotion/player';
 
-import {ReplayLyonJS} from '../../../remotion/compositions/showcases/lyonJS/Replay';
+import {
+	LyonJSReplayType,
+	ReplayLyonJS,
+} from '../../../remotion/compositions/showcases/lyonJS/Replay';
 import {Speaker} from '../../../remotion/types/defaultProps.types';
 import {Code} from '../../../src/app/Code';
 
@@ -30,7 +33,7 @@ const sampleData: ReplayProps = {
 };
 
 interface ReplayTemplate {
-	component: React.FC<any>;
+	component: React.FC<LyonJSReplayType>;
 	width: number;
 	height: number;
 	compositionName: string;
@@ -96,7 +99,7 @@ export default function ReplayPage() {
 					}}
 					height="300px"
 					width="800px"
-					onChange={(event: {jsObject: any}) => {
+					onChange={(event: {jsObject: SetStateAction<ReplayProps>}) => {
 						setData(event.jsObject);
 					}}
 				/>

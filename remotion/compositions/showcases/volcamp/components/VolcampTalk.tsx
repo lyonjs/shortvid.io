@@ -4,7 +4,7 @@ import {speakerProps, Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 import {Theme, ThemeProps} from './Theme';
 
-export type TalkProps = {
+export type VolcampProps = {
 	themeName: ThemeProps['themeName'];
 	speakers: speakerProps['speakers'];
 	title: string;
@@ -13,7 +13,7 @@ export type TalkProps = {
 	location?: string;
 };
 
-export const Talk: React.FC<TalkProps> = ({
+export const VolcampTalk: React.FC<VolcampProps> = ({
 	themeName,
 	speakers,
 	title,

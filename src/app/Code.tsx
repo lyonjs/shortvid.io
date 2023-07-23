@@ -1,17 +1,11 @@
 import {MouseEvent, useCallback} from 'react';
 import va from '@vercel/analytics';
 
-import {ReplayProps} from '../../app/templates/replay/page';
-import {TalkBrandedProps} from '../../remotion/compositions/templates/talk/branded/TalkBranded';
-import {DefaultProps} from '../../remotion/types/defaultProps.types';
+import {DefaultPropsTypes} from './types/template.types';
 
 export const Code: React.FC<{
 	composition: string;
-	params:
-		| {[key: string]: string | undefined}
-		| DefaultProps
-		| ReplayProps
-		| TalkBrandedProps;
+	params: DefaultPropsTypes;
 }> = ({params, composition}) => {
 	const onClickHandler = useCallback(
 		(event: MouseEvent) => {

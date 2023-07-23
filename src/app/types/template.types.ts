@@ -4,6 +4,7 @@ import {CampingDesSpeakersProps} from '../../../remotion/compositions/showcases/
 import {VolcampProps} from '../../../remotion/compositions/showcases/volcamp/components/VolcampTalk';
 import {SilhouetteProps} from '../../../remotion/compositions/templates/silhouette/Silhouette';
 import {SponsorProps} from '../../../remotion/compositions/templates/sponsor/Sponsor';
+import {SpotlightNewSponsornProps} from '../../../remotion/compositions/templates/sponsor/spotlightNewSponsor/SpotlightNewSponsor';
 import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {TalkProps} from '../../../remotion/compositions/templates/talk/Talk';
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
@@ -20,7 +21,8 @@ export type DefaultPropsTypes =
 	| CampingDesSpeakersProps
 	| LayerByModeProps
 	| SponsorProps
-	| SilhouetteProps;
+	| SilhouetteProps
+	| SpotlightNewSponsornProps;
 
 export type TemplateTypes =
 	| React.FC<DefaultProps>
@@ -32,4 +34,5 @@ export type TemplateTypes =
 	| React.FC<CampingDesSpeakersProps>
 	| React.FC<LayerByModeProps>
 	| React.FC<SponsorProps>
+	| React.FC<SpotlightNewSponsornProps>
 	| React.FC<SilhouetteProps>;

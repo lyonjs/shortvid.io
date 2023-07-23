@@ -10,7 +10,7 @@ export const TalkConfig: CompositionProps = {
 	height: 1200,
 	durationInFrames: 120,
 	defaultProps: {
-		eventLogo: staticFile('/images/showcases/lyonjs/lyonjs-squared.png'),
+		eventLogo: staticFile('/images/showcases/lyonjs/lyonjsSquaredLogo.png'),
 		speakersNames: 'Julien Sulpis',
 		talkTitle:
 			'REX : Mise en place d’un Design System en web components chez Groupama',

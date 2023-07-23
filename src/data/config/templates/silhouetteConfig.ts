@@ -16,6 +16,6 @@ export const SilhouetteConfig: CompositionProps = {
 		side: 'left',
 		silhouetteUrl:
 			'https://user-images.githubusercontent.com/6263857/230662773-4d7a534a-e01c-4ba8-9c3b-fa95586adf52.png',
-		logoUrl: staticFile('/images/showcases/lyonjs/lyonjs-squared.png'),
+		logoUrl: staticFile('/images/showcases/lyonjs/lyonjsSquaredLogo.png'),
 	},
 };

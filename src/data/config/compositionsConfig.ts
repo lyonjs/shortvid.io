@@ -15,7 +15,10 @@ import {EventConfig} from './templates/eventConfig';
 import {LayersConfig} from './templates/layersConfig';
 import {MeetupConfig} from './templates/meetupConfig';
 import {SilhouetteConfig} from './templates/silhouetteConfig';
-import {SponsorConfig} from './templates/sponsorConfig';
+import {
+	SponsorConfig,
+	SpotlightNewSponsorConfig,
+} from './templates/sponsorConfig';
 import {TalkBrandedConfig} from './templates/talkBrandedConfig';
 import {TalkConfig} from './templates/talkConfig';
 
@@ -45,6 +48,7 @@ export const CompositionsConfig: CompositionsConfigProps = {
 		TalkBranded: TalkBrandedConfig,
 		Layers: LayersConfig,
 		Sponsor: SponsorConfig,
+		SpotlightNewSponsor: SpotlightNewSponsorConfig,
 		Event: EventConfig,
 		Meetup: MeetupConfig,
 		Silhouette: SilhouetteConfig,

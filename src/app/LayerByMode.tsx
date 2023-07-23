@@ -6,7 +6,7 @@ import {LayerTwoSpeaker} from '../../remotion/compositions/templates/layers/Laye
 
 import {LayerMode} from './types/layerMode.types';
 
-type LayerByModeProps = {
+export type LayerByModeProps = {
 	mode: LayerMode;
 	title?: string;
 	sponsor?: string;

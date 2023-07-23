@@ -1,4 +1,4 @@
 declare module 'react-json-editor-ajrm/locale/en' {
-	const locale: any;
+	const locale: never;
 	export default locale;
 }

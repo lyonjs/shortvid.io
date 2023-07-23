@@ -6,14 +6,16 @@ import {EventLogo} from '../../../design/atoms/EventLogo';
 import {SpeakerAndTitle} from './SpeakerAndTitle';
 import {TalkBackground} from './TalkBackground';
 
-export const Talk: React.FC<{
+export type TalkProps = {
 	eventLogo?: string;
 	speakersNames: string;
 	talkTitle: string;
 	backgroundImg?: string;
 	speakerPicture?: string;
 	titleSize?: string;
-}> = ({
+};
+
+export const Talk: React.FC<TalkProps> = ({
 	eventLogo,
 	speakersNames,
 	talkTitle,

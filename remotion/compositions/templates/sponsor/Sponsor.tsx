@@ -6,12 +6,14 @@ import {SponsorOrgaLogo} from './SponsorOrgaLogo';
 import {SponsorPresentation} from './SponsorPresentation';
 import {SponsorThanks} from './SponsorThanks';
 
-export const Sponsor: React.FC<{
+export type SponsorProps = {
 	companyName?: string;
 	backgroundImg?: string;
 	sponsorLocalisation?: string;
 	sponsorLogo?: string;
-}> = ({
+};
+
+export const Sponsor: React.FC<SponsorProps> = ({
 	companyName = 'Evilcorp',
 	backgroundImg = staticFile(
 		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',

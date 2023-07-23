@@ -1,6 +1,7 @@
 import {ReplayProps} from '../../../app/templates/replay/page';
 import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
+import {TemplateTypes} from '../../app/types/template.types';
 
 import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
 import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
@@ -19,7 +20,7 @@ import {TalkBrandedConfig} from './templates/talkBrandedConfig';
 import {TalkConfig} from './templates/talkConfig';
 
 export type CompositionProps = {
-	component: React.FC<any>;
+	component: TemplateTypes;
 	width: number;
 	height: number;
 	compositionName: string;

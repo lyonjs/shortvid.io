@@ -9,7 +9,15 @@ import {
 import {Details} from './components/Details';
 import {Speakers} from './components/Speakers';
 import {TalkTitle} from './components/TalkTitle';
-import {TalkProps} from './CampingDesSpeakers';
+import {Speaker} from './CampingDesSpeakers';
+
+export type TalkProps = {
+	title: string;
+	speakers: Speaker[];
+	date: string;
+	time: string;
+	location: string;
+};
 
 export const Talk: React.FC<TalkProps> = ({
 	title,

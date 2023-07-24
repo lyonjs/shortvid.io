@@ -21,23 +21,23 @@ import styles from '../../../../styles/app/layout/main.module.css';
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
 		'#EA4335',
-		'backgroundColor'
+		'backgroundColor',
 	);
 	const [title, setTitle] = useInputChange<string>('Example', 'title');
 	const [speakerPicture, setSpeakerPicture] = useInputChange<string>(
 		'',
-		'speakerPicture'
+		'speakerPicture',
 	);
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(
 		'John Doe',
-		'speakersNames'
+		'speakersNames',
 	);
 	const [speakersCompany, setSpeakersCompany] = useInputChange<
 		string | undefined
 	>(undefined, 'speakersCompany');
 	const [speakersJob, setSpeakersJob] = useInputChange<string | undefined>(
 		undefined,
-		'speakersJob'
+		'speakersJob',
 	);
 
 	const logoGDG =
@@ -45,11 +45,11 @@ export default function BrandedTalkPage() {
 	const [logoUrl, setLogoUrl] = useInputChange<string>(logoGDG, 'logoUrl');
 	const [recurringDay, setRecurringDay] = useInputChange<string | undefined>(
 		'mardi',
-		'recurringDay'
+		'recurringDay',
 	);
 	const [location, setLocation] = useInputChange<string | undefined>(
 		undefined,
-		'location'
+		'location',
 	);
 
 	const today = new Date();
@@ -58,11 +58,11 @@ export default function BrandedTalkPage() {
 
 	const [startingDate, setStartingDate] = useInputDateChange<Date>(
 		today,
-		'startingDate'
+		'startingDate',
 	);
 	const [endingDate, setEndingDate] = useInputDateChange<Date | undefined>(
 		undefined,
-		'endingDate'
+		'endingDate',
 	);
 
 	const props = {

@@ -17,20 +17,20 @@ import styles from '../../../../styles/app/layout/main.module.css';
 export default function TalkPage() {
 	const [talkTitle, setTalkTitle] = useInputChange<string>(
 		'Example',
-		'talkTitle'
+		'talkTitle',
 	);
 	const [speakerPicture, setSpeakerPicture] = useInputChange<
 		string | undefined
 	>(undefined, 'speakerPicture');
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(
 		'John Doe',
-		'speakersNames'
+		'speakersNames',
 	);
 	const [eventLogo, setEventLogo] = useInputChange<string>('', 'eventLogo');
 	const [titleSize, setTitleSize] = useInputChange<string>('50', 'titleSize');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg'
+		'backgroundImg',
 	);
 
 	const props = {

@@ -21,12 +21,12 @@ export default function LayersPage() {
 	const [mode, setMode] = useInputChange<LayerMode>('one');
 	const [title, setTitle] = useInputChange<string>('Shortvid.io 🎬');
 	const [sponsor, setSponsor] = useInputChange<string>(
-		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg'
+		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg',
 	);
 	const [primaryColor, setPrimaryColor] = useInputChange<string>('#323330');
 	const [secondaryColor, setSecondaryColor] = useInputChange<string>('#efdb4f');
 	const [decoration, setDecoration] = useInputChange<string>(
-		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png'
+		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png',
 	);
 
 	const props = {
@@ -38,9 +38,9 @@ export default function LayersPage() {
 		decoration,
 	};
 	const layerUrl = `/screens/layers/${mode}/?title=${title}&sponsor=${sponsor}&primaryColor=${encodeURIComponent(
-		primaryColor
+		primaryColor,
 	)}&secondaryColor=${encodeURIComponent(
-		secondaryColor
+		secondaryColor,
 	)}&decoration=${decoration}`;
 
 	const onClickHandler = useCallback(() => {

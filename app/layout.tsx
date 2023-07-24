@@ -1,5 +1,7 @@
 import {ReactNode} from 'react';
 
+import {CustomThemeProvider} from '../src/context/CustomThemeProvider';
+
 import '../styles/globals.css';
 
 export const metadata = {
@@ -34,7 +36,9 @@ export const metadata = {
 export default function Layout({children}: {children: ReactNode}) {
 	return (
 		<html>
-			<body>{children}</body>
+			<body>
+				<CustomThemeProvider>{children}</CustomThemeProvider>
+			</body>
 		</html>
 	);
 }

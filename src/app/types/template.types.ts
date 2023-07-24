@@ -1,4 +1,4 @@
-import {ReplayProps} from '../../../app/templates/replay/page';
+import {ReplayProps} from '../../../app/templates/replays/replay/page';
 import {AlpesCraftProps} from '../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
 import {CampingDesSpeakersProps} from '../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
 import {VolcampProps} from '../../../remotion/compositions/showcases/volcamp/components/VolcampTalk';

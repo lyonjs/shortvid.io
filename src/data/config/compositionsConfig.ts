@@ -1,4 +1,4 @@
-import {ReplayProps} from '../../../app/templates/replay/page';
+import {ReplayProps} from '../../../app/templates/replays/replay/page';
 import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 import {TemplateTypes} from '../../app/types/template.types';

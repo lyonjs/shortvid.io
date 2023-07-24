@@ -27,7 +27,7 @@ describe('<ResizeWrapper>', () => {
 						<h1>Content</h1>
 					</ResizeWrapper>
 				</div>
-			</SidebarProvider>
+			</SidebarProvider>,
 		);
 
 		const resizeGrabber = screen.getByTestId('resizeGrabber');
@@ -39,11 +39,11 @@ describe('<ResizeWrapper>', () => {
 	const resizeSidebar: (
 		resizeGrabber: HTMLElement,
 		deltaX: number,
-		dragStartingPoint?: number
+		dragStartingPoint?: number,
 	) => void = (
 		resizeGrabber,
 		deltaX,
-		dragStartingPoint = DEFAULT_SIDEBAR_WIDTH
+		dragStartingPoint = DEFAULT_SIDEBAR_WIDTH,
 	) => {
 		fireEvent.mouseDown(resizeGrabber, {clientX: dragStartingPoint});
 		fireEvent.mouseMove(document, {

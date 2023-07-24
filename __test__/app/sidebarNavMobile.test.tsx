@@ -20,7 +20,7 @@ jest.mock(
 	'../../src/app/components/sidebar/navigation/CompositionThumbnail',
 	() => ({
 		CompositionThumbnail: CompositionThumbnailMock,
-	})
+	}),
 );
 
 describe('<SidebarNavMobile />', () => {

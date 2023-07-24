@@ -28,7 +28,7 @@ export default function SpotlightNewSponsorPage() {
 	const encodedParams = encodeObjectValues(props);
 
 	return (
-		<div className={styles.mainContent}>
+		<>
 			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
@@ -46,6 +46,18 @@ export default function SpotlightNewSponsorPage() {
 					component={SpotlightNewSponsor}
 					inputProps={props}
 				/>
+				<div className={styles.formMobile}>
+					<Form>
+						<Input setValue={setLogo} value={logo} label="Logo url" />
+						<Input
+							setValue={setSponsorLogo}
+							value={sponsorLogo}
+							label="Sponsor logo url"
+						/>
+
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</div>
 
 				<Code composition="SpotlightNewSponsor" params={props} />
 			</section>
@@ -64,6 +76,6 @@ export default function SpotlightNewSponsorPage() {
 					</Form>
 				</Sidebar>
 			</ResizeWrapper>
-		</div>
+		</>
 	);
 }

@@ -17,21 +17,22 @@ import styles from '../../../../styles/app/layout/main.module.css';
 export default function TalkPage() {
 	const [talkTitle, setTalkTitle] = useInputChange<string>(
 		'Example',
-		'talkTitle',
+		'talkTitle'
 	);
 	const [speakerPicture, setSpeakerPicture] = useInputChange<
 		string | undefined
 	>(undefined, 'speakerPicture');
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(
 		'John Doe',
-		'speakersNames',
+		'speakersNames'
 	);
 	const [eventLogo, setEventLogo] = useInputChange<string>('', 'eventLogo');
 	const [titleSize, setTitleSize] = useInputChange<string>('50', 'titleSize');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg',
+		'backgroundImg'
 	);
+
 	const props = {
 		talkTitle,
 		speakersNames,
@@ -44,7 +45,7 @@ export default function TalkPage() {
 	const encodedParams = encodeObjectValues(props);
 
 	return (
-		<div className={styles.mainContent}>
+		<>
 			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
@@ -62,9 +63,41 @@ export default function TalkPage() {
 					component={Talk}
 					inputProps={props}
 				/>
-
+				<div className={styles.formMobile}>
+					<Form>
+						<Input
+							setValue={setSpeakerPicture}
+							value={speakerPicture}
+							label="Speaker picture"
+						/>
+						<Input
+							setValue={setSpeakersNames}
+							value={speakersNames}
+							label="Name"
+						/>
+						<Input setValue={setTalkTitle} value={talkTitle} label="Title" />
+						<Input
+							setValue={setTitleSize}
+							value={titleSize}
+							label="Title size"
+						/>
+						<Input
+							setValue={setBackgroundImg}
+							value={backgroundImg}
+							label="Background Image url"
+						/>
+						<Input
+							setValue={setEventLogo}
+							value={eventLogo}
+							label="Logo (optional)"
+							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
+						/>
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</div>
 				<Code composition="Talk" params={props} />
 			</section>
+
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
@@ -99,6 +132,6 @@ export default function TalkPage() {
 					</Form>
 				</Sidebar>
 			</ResizeWrapper>
-		</div>
+		</>
 	);
 }

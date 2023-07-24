@@ -35,7 +35,7 @@ export default function SponsorPage() {
 	const encodedParams = encodeObjectValues(props);
 
 	return (
-		<div className={styles.mainContent}>
+		<>
 			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
@@ -53,7 +53,31 @@ export default function SponsorPage() {
 					component={Sponsor}
 					inputProps={props}
 				/>
-
+				<div className={styles.formMobile}>
+					<Form>
+						<Input
+							setValue={setCompanyName}
+							value={companyName}
+							label="Company"
+						/>
+						<Input
+							setValue={setBackgroundImg}
+							value={backgroundImg}
+							label="Background image url"
+						/>
+						<Input
+							setValue={setSponsorLogo}
+							value={sponsorLogo}
+							label="Sponsor logo url"
+						/>
+						<Input
+							setValue={setSponsorLocalisation}
+							value={sponsorLocalisation}
+							label="Sponsor localisation"
+						/>
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</div>
 				<Code composition="Sponsor" params={props} />
 			</section>
 
@@ -84,6 +108,6 @@ export default function SponsorPage() {
 					</Form>
 				</Sidebar>
 			</ResizeWrapper>
-		</div>
+		</>
 	);
 }

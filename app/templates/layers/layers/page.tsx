@@ -21,12 +21,12 @@ export default function LayersPage() {
 	const [mode, setMode] = useInputChange<LayerMode>('one');
 	const [title, setTitle] = useInputChange<string>('Shortvid.io 🎬');
 	const [sponsor, setSponsor] = useInputChange<string>(
-		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg',
+		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg'
 	);
 	const [primaryColor, setPrimaryColor] = useInputChange<string>('#323330');
 	const [secondaryColor, setSecondaryColor] = useInputChange<string>('#efdb4f');
 	const [decoration, setDecoration] = useInputChange<string>(
-		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png',
+		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png'
 	);
 
 	const props = {
@@ -38,9 +38,9 @@ export default function LayersPage() {
 		decoration,
 	};
 	const layerUrl = `/screens/layers/${mode}/?title=${title}&sponsor=${sponsor}&primaryColor=${encodeURIComponent(
-		primaryColor,
+		primaryColor
 	)}&secondaryColor=${encodeURIComponent(
-		secondaryColor,
+		secondaryColor
 	)}&decoration=${decoration}`;
 
 	const onClickHandler = useCallback(() => {
@@ -51,7 +51,7 @@ export default function LayersPage() {
 	}, [layerUrl]);
 
 	return (
-		<div className={styles.mainContent}>
+		<>
 			<section className={styles.videoContainer}>
 				<Player
 					loop
@@ -67,7 +67,56 @@ export default function LayersPage() {
 					component={LayerByMode}
 					inputProps={props}
 				/>
+
+				<div className={styles.formMobile}>
+					<Form>
+						<SelectInput
+							value={mode}
+							setValue={setMode}
+							label="Mode"
+							options={['one', 'two', 'full']}
+						/>
+						<ColorInput
+							setValue={setPrimaryColor}
+							value={primaryColor}
+							label="Primary color"
+						/>
+						<ColorInput
+							setValue={setSecondaryColor}
+							value={secondaryColor}
+							label="Secondary color"
+						/>
+						<Input setValue={setTitle} value={title} label="Talk title" />
+						<Input
+							setValue={setSponsor}
+							value={sponsor}
+							label="Sponsor image"
+						/>
+						<Input
+							setValue={setDecoration}
+							value={decoration}
+							label="Layer decoration"
+						/>
+						<button
+							type="button"
+							className={stylesBtn.secondaryButton}
+							onClick={() => {
+								window.open(layerUrl, '_blank');
+							}}
+						>
+							Display Layer 👀
+						</button>
+						<button
+							type="button"
+							className={stylesBtn.primaryButton}
+							onClick={onClickHandler}
+						>
+							{copied ? 'Copied ✅' : 'Copy Layer URL 🔗'}
+						</button>
+					</Form>
+				</div>
 			</section>
+
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
@@ -117,6 +166,6 @@ export default function LayersPage() {
 					</Form>
 				</Sidebar>
 			</ResizeWrapper>
-		</div>
+		</>
 	);
 }

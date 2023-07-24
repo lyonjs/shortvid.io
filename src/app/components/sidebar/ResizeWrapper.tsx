@@ -45,12 +45,12 @@ export const ResizeWrapper: React.FC<{
 				setSidebarWidth(
 					Math.min(
 						Math.max(newSidebarWidth, MIN_SIDEBAR_WIDTH),
-						MAX_SIDEBAR_WIDTH
-					)
+						MAX_SIDEBAR_WIDTH,
+					),
 				);
 			}
 		},
-		[isResizing, position]
+		[isResizing, position],
 	);
 
 	const disableSelect = (event: MouseEvent) => {

@@ -87,7 +87,7 @@ const Template: Record<string, TalkTemplate> = {
 			{
 				speakers: [{company: 'Zenika'}, {company: 'Bedrock'}],
 			},
-			defaultTalkValues
+			defaultTalkValues,
 		),
 	},
 	Volcamp2023: {
@@ -107,7 +107,7 @@ const Template: Record<string, TalkTemplate> = {
 					},
 				],
 			},
-			defaultTalkValues
+			defaultTalkValues,
 		),
 	},
 };
@@ -119,7 +119,7 @@ export default function ConferencePage({
 	const conference = params.conferenceName;
 	const currentTemplate = Template[conference];
 	const [data, setData] = useState(
-		currentTemplate.defaultProps || defaultTalkValues
+		currentTemplate.defaultProps || defaultTalkValues,
 	);
 
 	return (

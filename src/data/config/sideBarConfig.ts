@@ -26,17 +26,32 @@ export const sideBarNavConfig: sideBarNavProps = {
 		route: '/templates/',
 		items: [
 			{
-				categoryName: 'talks',
+				categoryName: 'events',
 				items: [
 					{
-						compositionName: 'Talk',
-						compositionId: 'Talk',
-						compositionLink: 'talk',
+						compositionName: 'Event',
+						compositionId: 'Event',
+						compositionLink: 'event',
 					},
+				],
+			},
+			{
+				categoryName: 'layers',
+				items: [
 					{
-						compositionName: 'Talk Branded',
-						compositionId: 'TalkBranded',
-						compositionLink: 'talkBranded',
+						compositionName: 'Layers',
+						compositionId: 'Layers',
+						compositionLink: 'layers',
+					},
+				],
+			},
+			{
+				categoryName: 'meetups',
+				items: [
+					{
+						compositionName: 'Meetup',
+						compositionId: 'Meetup',
+						compositionLink: 'meetup',
 					},
 				],
 			},
@@ -56,24 +71,24 @@ export const sideBarNavConfig: sideBarNavProps = {
 				],
 			},
 			{
-				compositionName: 'Layers',
-				compositionId: 'Layers',
-				compositionLink: 'layers',
-			},
-			{
-				compositionName: 'Event',
-				compositionId: 'Event',
-				compositionLink: 'event',
-			},
-			{
-				compositionName: 'Meetup',
-				compositionId: 'Meetup',
-				compositionLink: 'meetup',
-			},
-			{
-				compositionName: 'Silhouette',
-				compositionId: 'Silhouette',
-				compositionLink: 'silhouette',
+				categoryName: 'talks',
+				items: [
+					{
+						compositionName: 'Talk',
+						compositionId: 'Talk',
+						compositionLink: 'talk',
+					},
+					{
+						compositionName: 'Talk Branded',
+						compositionId: 'TalkBranded',
+						compositionLink: 'talkBranded',
+					},
+					{
+						compositionName: 'Silhouette',
+						compositionId: 'Silhouette',
+						compositionLink: 'silhouette',
+					},
+				],
 			},
 		],
 	},

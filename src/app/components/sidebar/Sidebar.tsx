@@ -1,11 +1,11 @@
 'use client';
 
 import {cloneElement, ReactElement, useContext} from 'react';
-
 import {Icon} from '@iconify/react';
 
-import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 import {SidebarContext} from '../../../context/SidebarContext';
+
+import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 
 export const Sidebar: React.FC<{children: ReactElement}> = ({children}) => {
 	const {expanded, setExpanded} = useContext(SidebarContext);

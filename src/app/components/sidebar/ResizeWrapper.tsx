@@ -45,12 +45,12 @@ export const ResizeWrapper: React.FC<{
 				setSidebarWidth(
 					Math.min(
 						Math.max(newSidebarWidth, MIN_SIDEBAR_WIDTH),
-						MAX_SIDEBAR_WIDTH,
-					),
+						MAX_SIDEBAR_WIDTH
+					)
 				);
 			}
 		},
-		[isResizing],
+		[isResizing, position]
 	);
 
 	const disableSelect = (event: MouseEvent) => {
@@ -76,7 +76,7 @@ export const ResizeWrapper: React.FC<{
 			window.removeEventListener('mouseup', stopResize);
 			window.removeEventListener('mousedown', disableSelect);
 		};
-	}, [resize]);
+	}, [resize, isResizing]);
 
 	return (
 		<div

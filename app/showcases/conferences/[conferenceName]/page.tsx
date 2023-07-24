@@ -20,6 +20,7 @@ import {
 	TemplateTypes,
 } from '../../../../src/app/types/template.types';
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+
 import styles from '../../../../styles/app/layout/main.module.css';
 
 

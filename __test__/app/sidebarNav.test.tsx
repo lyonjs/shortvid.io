@@ -6,9 +6,9 @@ import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom';
 
+import {SidebarNav} from '../../src/app/components/sidebar/navigation/SidebarNav';
 import {Sidebar} from '../../src/app/components/sidebar/Sidebar';
 import {SidebarProvider} from '../../src/context/SidebarContext';
-import {SidebarNav} from '../../src/app/components/sidebar/navigation/SidebarNav';
 
 jest.mock('next/navigation', () => ({
 	usePathname: jest.fn().mockReturnValue('/'),

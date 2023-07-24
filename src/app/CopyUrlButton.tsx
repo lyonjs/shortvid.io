@@ -1,7 +1,8 @@
 import React, {useCallback, useState} from 'react';
 import {usePathname} from 'next/navigation';
 
-import {QueryParams, formatUrlWithQuery} from './utils/formatUrlWithQuery';
+import {formatUrlWithQuery,QueryParams} from './utils/formatUrlWithQuery';
+
 import styles from '../../styles/app/common/buttons.module.css';
 
 export const CopyUrlButton: React.FC<{urlParameters: QueryParams}> = ({

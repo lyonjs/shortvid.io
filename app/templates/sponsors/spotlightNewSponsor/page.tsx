@@ -34,7 +34,7 @@ export default function SpotlightNewSponsorPage() {
 					autoPlay
 					controls
 					loop
-					className="shrink-0 shadow-lg"
+					className={styles.video}
 					style={{
 						width: '100%',
 						aspectRatio: '16/9',

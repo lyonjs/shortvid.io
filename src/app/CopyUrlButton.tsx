@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import {usePathname} from 'next/navigation';
 
-import {formatUrlWithQuery,QueryParams} from './utils/formatUrlWithQuery';
+import {formatUrlWithQuery, QueryParams} from './utils/formatUrlWithQuery';
 
 import styles from '../../styles/app/common/buttons.module.css';
 

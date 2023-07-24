@@ -25,10 +25,31 @@
 				max-height: 70vh;
 			}
 
+			.formMobile {
+				display: none;
+				width: 100%;
+			}
+
 			h2 {
 				font-size: 1.5rem;
 				font-weight: 700;
 				line-height: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.sidebarLayout {
+		.mainContent {
+			.videoContainer {
+				.formMobile {
+					display: block;
+				}
+			}
+
+			> div:not(.videoContainer) {
+				display: none;
 			}
 		}
 	}

@@ -21,23 +21,23 @@ import styles from '../../../../styles/app/layout/main.module.css';
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
 		'#EA4335',
-		'backgroundColor',
+		'backgroundColor'
 	);
 	const [title, setTitle] = useInputChange<string>('Example', 'title');
 	const [speakerPicture, setSpeakerPicture] = useInputChange<string>(
 		'',
-		'speakerPicture',
+		'speakerPicture'
 	);
 	const [speakersNames, setSpeakersNames] = useInputChange<string>(
 		'John Doe',
-		'speakersNames',
+		'speakersNames'
 	);
 	const [speakersCompany, setSpeakersCompany] = useInputChange<
 		string | undefined
 	>(undefined, 'speakersCompany');
 	const [speakersJob, setSpeakersJob] = useInputChange<string | undefined>(
 		undefined,
-		'speakersJob',
+		'speakersJob'
 	);
 
 	const logoGDG =
@@ -45,11 +45,11 @@ export default function BrandedTalkPage() {
 	const [logoUrl, setLogoUrl] = useInputChange<string>(logoGDG, 'logoUrl');
 	const [recurringDay, setRecurringDay] = useInputChange<string | undefined>(
 		'mardi',
-		'recurringDay',
+		'recurringDay'
 	);
 	const [location, setLocation] = useInputChange<string | undefined>(
 		undefined,
-		'location',
+		'location'
 	);
 
 	const today = new Date();
@@ -58,11 +58,11 @@ export default function BrandedTalkPage() {
 
 	const [startingDate, setStartingDate] = useInputDateChange<Date>(
 		today,
-		'startingDate',
+		'startingDate'
 	);
 	const [endingDate, setEndingDate] = useInputDateChange<Date | undefined>(
 		undefined,
-		'endingDate',
+		'endingDate'
 	);
 
 	const props = {
@@ -96,7 +96,7 @@ export default function BrandedTalkPage() {
 	});
 
 	return (
-		<div className={styles.mainContent}>
+		<>
 			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
@@ -114,7 +114,68 @@ export default function BrandedTalkPage() {
 					component={TalkBranded}
 					inputProps={props}
 				/>
-
+				<div className={styles.formMobile}>
+					<Form>
+						<ColorInput
+							setValue={setBackgroundColor}
+							value={backgroundColor}
+							label="Background Color (optional)"
+						/>
+						<Input setValue={setTitle} value={title} label="Title" />
+						<Input
+							setValue={setLogoUrl}
+							value={logoUrl}
+							label="Logo"
+							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
+						/>
+						<Input
+							setValue={setSpeakerPicture}
+							value={speakerPicture}
+							label="Speaker picture"
+							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
+						/>
+						<Input
+							setValue={setSpeakersNames}
+							value={speakersNames}
+							label="Name"
+						/>
+						<Input
+							setValue={setSpeakersCompany}
+							value={speakersCompany}
+							label="Company (optional)"
+							placeholder="e.g: Zenika"
+						/>
+						<Input
+							setValue={setSpeakersJob}
+							value={speakersJob}
+							label="Job (optional)"
+							placeholder="e.g: CTO"
+						/>
+						<InputDate
+							setValue={setStartingDate}
+							value={startingDate}
+							label="Starting Date"
+						/>
+						<InputDate
+							setValue={setEndingDate}
+							value={endingDate}
+							label="Ending Date (optional)"
+						/>
+						<SelectInput
+							setValue={setRecurringDay}
+							value={recurringDay}
+							label="Recurring day"
+							options={['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi']}
+						/>
+						<Input
+							setValue={setLocation}
+							value={location}
+							label="Location (optional)"
+							placeholder="e.g: 5 Place Jules Ferry, 69006."
+						/>
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</div>
 				<Code composition="TalkBranded" params={props} />
 			</section>
 
@@ -182,6 +243,6 @@ export default function BrandedTalkPage() {
 					</Form>
 				</Sidebar>
 			</ResizeWrapper>
-		</div>
+		</>
 	);
 }

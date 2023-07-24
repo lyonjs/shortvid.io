@@ -19,20 +19,20 @@ import styles from '../../../../styles/app/layout/main.module.css';
 export default function SilhouettePage() {
 	const [title, setTitle] = useInputChange<string>(
 		'Example of big title ',
-		'title',
+		'title'
 	);
 	const [backgroundImg, setBackgroundImg] = useInputChange<string>(
 		'https://images.unsplash.com/photo-1550537687-c91072c4792d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
-		'backgroundImg',
+		'backgroundImg'
 	);
 	const [side, setSide] = useInputChange<Side | undefined>('left', 'side');
 	const [silhouetteUrl, setSilhouetteUrl] = useInputChange<string>(
 		'https://user-images.githubusercontent.com/6263857/230662773-4d7a534a-e01c-4ba8-9c3b-fa95586adf52.png',
-		'silhouetteUrl',
+		'silhouetteUrl'
 	);
 	const [logoUrl, setLogoUrl] = useInputChange<string | undefined>(
 		undefined,
-		'logoUrl',
+		'logoUrl'
 	);
 
 	const props = {
@@ -45,7 +45,7 @@ export default function SilhouettePage() {
 	const encodedParams = encodeObjectValues(props);
 
 	return (
-		<div className={styles.mainContent}>
+		<>
 			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
@@ -63,7 +63,29 @@ export default function SilhouettePage() {
 					component={Silhouette}
 					inputProps={props}
 				/>
-
+				<div className={styles.formMobile}>
+					<Form>
+						<Input setValue={setTitle} value={title} label="Title" />
+						<Input
+							setValue={setBackgroundImg}
+							value={backgroundImg}
+							label="Background Image"
+						/>
+						<SelectInput
+							value={side}
+							setValue={setSide}
+							label="Side"
+							options={['right', 'left']}
+						/>
+						<Input
+							setValue={setSilhouetteUrl}
+							value={silhouetteUrl}
+							label="Url of silhouette"
+						/>
+						<Input setValue={setLogoUrl} value={logoUrl} label="Logo url" />
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</div>
 				<Code composition="Silhouette" params={props} />
 			</section>
 
@@ -92,6 +114,6 @@ export default function SilhouettePage() {
 					</Form>
 				</Sidebar>
 			</ResizeWrapper>
-		</div>
+		</>
 	);
 }

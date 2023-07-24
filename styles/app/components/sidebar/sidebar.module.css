@@ -190,6 +190,14 @@
 
 [data-position='right'] {
 	.sidebar {
+		&[aria-expanded='false'] {
+			max-width: 500px;
+		}
+
+		form {
+			width: 100%;
+		}
+
 		.foldButton {
 			display: none;
 		}

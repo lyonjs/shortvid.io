@@ -20,7 +20,7 @@ export default function MeetupPage() {
 	const [date, setDate] = useInputChange<string>('28 septembre 2022', 'date');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg',
+		'backgroundImg'
 	);
 	const props = {title, date, backgroundImg, eventLogo};
 	const encodedParams = encodeObjectValues(props);
@@ -44,7 +44,25 @@ export default function MeetupPage() {
 					component={MeetupComponent}
 					inputProps={props}
 				/>
+				<div className={styles.formMobile}>
+					<Form>
+						<Input setValue={setTitle} value={title} label="SpeakerName" />
+						<Input setValue={setDate} value={date} label="Date" />
 
+						<Input
+							setValue={setBackgroundImg}
+							value={backgroundImg}
+							label="Background image url"
+						/>
+						<Input
+							setValue={setEventLogo}
+							value={eventLogo}
+							label="Event Logo (optional)"
+							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
+						/>
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</div>
 				<Code composition="Meetup" params={props} />
 			</section>
 			<ResizeWrapper position="right">

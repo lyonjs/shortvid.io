@@ -20,14 +20,14 @@ export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');
 	const [lottieAsset, setLottieAsset] = useInputChange<string | undefined>(
 		undefined,
-		'lottieAsset',
+		'lottieAsset'
 	);
 	const [paillettesAsset, setPaillettesAsset] = useInputChange<
 		string | undefined
 	>(undefined, 'paillettesAsset');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg',
+		'backgroundImg'
 	);
 
 	const {selectedFont} = useSelectedFont();
@@ -60,7 +60,28 @@ export default function EventPage() {
 					component={Event}
 					inputProps={props}
 				/>
-
+				<div className={styles.formMobile}>
+					<Form>
+						<FontPicker label="Font family" />
+						<Input setValue={setTitle} value={title} label="SpeakerName" />
+						<Input
+							setValue={setLottieAsset}
+							value={lottieAsset}
+							label="LottieAsset (lf20_UDstUT)"
+						/>
+						<Input
+							setValue={setPaillettesAsset}
+							value={paillettesAsset}
+							label="PaillettesAsset (lf20_tiviyc3p)"
+						/>
+						<Input
+							setValue={setBackgroundImg}
+							value={backgroundImg}
+							label="Background image url"
+						/>
+						<CopyUrlButton urlParameters={encodedParams} />
+					</Form>
+				</div>
 				<Code composition="Event" params={props} />
 			</section>
 

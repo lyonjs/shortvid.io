@@ -20,14 +20,14 @@ export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');
 	const [lottieAsset, setLottieAsset] = useInputChange<string | undefined>(
 		undefined,
-		'lottieAsset'
+		'lottieAsset',
 	);
 	const [paillettesAsset, setPaillettesAsset] = useInputChange<
 		string | undefined
 	>(undefined, 'paillettesAsset');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg'
+		'backgroundImg',
 	);
 
 	const {selectedFont} = useSelectedFont();

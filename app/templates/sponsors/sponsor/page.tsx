@@ -4,28 +4,28 @@ import {Player} from '@remotion/player';
 
 import {Sponsor} from '../../../../remotion/compositions/templates/sponsor/Sponsor';
 import {Code} from '../../../../src/app/Code';
-import {ResizeWrapper} from '../../../src/app/components/sidebar/ResizeWrapper';
-import {Sidebar} from '../../../src/app/components/sidebar/Sidebar';
+import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
+import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {Form} from '../../../src/app/forms/Form';
+import {Form} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
-import styles from '../../../styles/app/layout/main.module.css';
 
+import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function SponsorPage() {
 	const [companyName, setCompanyName] = useInputChange<string>(
 		'Evilcorp',
-		'companyName',
+		'companyName'
 	);
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
 		undefined,
-		'backgroundImg',
+		'backgroundImg'
 	);
 	const [sponsorLogo, setSponsorLogo] = useInputChange<string | undefined>(
 		undefined,
-		'sponsorLogo',
+		'sponsorLogo'
 	);
 	const [sponsorLocalisation, setSponsorLocalisation] = useInputChange<
 		string | undefined

@@ -11,6 +11,7 @@ import {Form} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
+
 import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function TalkPage() {

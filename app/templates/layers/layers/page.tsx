@@ -3,12 +3,12 @@
 import {useCallback, useState} from 'react';
 import {Player} from '@remotion/player';
 
-import {ColorInput} from '../../../src/app/forms/colorInput';
-import {Form, Input} from '../../../src/app/forms/input';
-import {SelectInput} from '../../../src/app/forms/selectInput';
-import {useInputChange} from '../../../src/app/hooks/useInputChange';
-import LayerByMode from '../../../src/app/LayerByMode';
-import {LayerMode} from '../../../src/app/types/layerMode.types';
+import {ColorInput} from '../../../../src/app/forms/colorInput';
+import {Form, Input} from '../../../../src/app/forms/input';
+import {SelectInput} from '../../../../src/app/forms/selectInput';
+import {useInputChange} from '../../../../src/app/hooks/useInputChange';
+import LayerByMode from '../../../../src/app/LayerByMode';
+import {LayerMode} from '../../../../src/app/types/layerMode.types';
 
 export default function LayersPage() {
 	const [copied, setCopied] = useState(false);

@@ -8,9 +8,9 @@ import {Player} from '@remotion/player';
 import {
 	LyonJSReplayType,
 	ReplayLyonJS,
-} from '../../../remotion/compositions/showcases/lyonJS/Replay';
-import {Speaker} from '../../../remotion/types/defaultProps.types';
-import {Code} from '../../../src/app/Code';
+} from '../../../../remotion/compositions/showcases/lyonJS/Replay';
+import {Speaker} from '../../../../remotion/types/defaultProps.types';
+import {Code} from '../../../../src/app/Code';
 
 export interface ReplayProps {
 	title: string;

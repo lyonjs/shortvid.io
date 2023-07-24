@@ -2,14 +2,14 @@
 
 import {Player} from '@remotion/player';
 
-import {Event} from '../../../remotion/compositions/templates/event/Event';
-import {Code} from '../../../src/app/Code';
-import {CopyUrlButton} from '../../../src/app/CopyUrlButton';
-import {FontPicker} from '../../../src/app/forms/FontPicker';
-import {Form, Input} from '../../../src/app/forms/input';
-import {useInputChange} from '../../../src/app/hooks/useInputChange';
-import {useSelectedFont} from '../../../src/app/hooks/useSelectedFont';
-import {encodeObjectValues} from '../../../src/app/utils/encodeObjectValues';
+import {Event} from '../../../../remotion/compositions/templates/event/Event';
+import {Code} from '../../../../src/app/Code';
+import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
+import {FontPicker} from '../../../../src/app/forms/FontPicker';
+import {Form, Input} from '../../../../src/app/forms/input';
+import {useInputChange} from '../../../../src/app/hooks/useInputChange';
+import {useSelectedFont} from '../../../../src/app/hooks/useSelectedFont';
+import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
 
 export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');

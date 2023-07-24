@@ -33,6 +33,7 @@ export default function SponsorPage() {
 
 	const props = {companyName, backgroundImg, sponsorLogo, sponsorLocalisation};
 	const encodedParams = encodeObjectValues(props);
+
 	return (
 		<div className={styles.mainContent}>
 			<section className={styles.videoContainer}>

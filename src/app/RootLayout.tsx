@@ -16,9 +16,11 @@ export default function RootLayout({children}: {children: ReactNode}) {
 		<main className="mx-auto p-4">
 			<div className={styles.sidebarLayout}>
 				<SidebarProvider>
-					<ResizeWrapper>
-						<Sidebar />
-					</ResizeWrapper>
+					<div className={styles.navigationSidebar}>
+						<ResizeWrapper>
+							<Sidebar />
+						</ResizeWrapper>
+					</div>
 					<SidebarMobile />
 				</SidebarProvider>
 				<section>

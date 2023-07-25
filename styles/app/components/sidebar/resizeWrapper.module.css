@@ -1,6 +1,5 @@
 .resizeWrapper {
-	position: sticky;
-	top: 1rem;
+	position: relative;
 	max-width: 500px;
 	height: max-content;
 

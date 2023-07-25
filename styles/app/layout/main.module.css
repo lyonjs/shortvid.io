@@ -6,6 +6,12 @@
 	section {
 		width: 100%;
 	}
+
+	.navigationSidebar {
+		position: sticky;
+		top: 1rem;
+		height: max-content;
+	}
 }
 
 @media screen and (max-width: 570px) {

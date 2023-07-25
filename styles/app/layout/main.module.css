@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 30px;
-	overflow-x: hidden;
 
 	section {
 		width: 100%;

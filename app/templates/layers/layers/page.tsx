@@ -112,7 +112,7 @@ export default function LayersPage() {
 				/>
 
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
+					<Form data={props} compositionId={mode} formConfig={formConfig} encodedParams={encodedParams}>
 						<FullScreenButtons
 							compositionName="Layer"
 							fullScreenUrl={layerUrl}
@@ -123,7 +123,7 @@ export default function LayersPage() {
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
+					<Form data={props} compositionId={mode} formConfig={formConfig} encodedParams={encodedParams}>
 						<FullScreenButtons
 							compositionName="Layer"
 							fullScreenUrl={layerUrl}

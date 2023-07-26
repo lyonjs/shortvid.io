@@ -1,35 +1,106 @@
-.primaryButton,
-.secondaryButton {
+.btn {
 	position: relative;
 	width: 100%;
 	margin-top: 1rem;
 	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
 	transition: all 0.3s ease;
-}
-
-.primaryButton {
-	color: var(--color-btn-text);
-	background: var(--color-primary);
+	text-align: center;
 	border: 3px solid transparent;
-	font-size: 1.25rem;
-	font-weight: 700;
 
 	&:hover {
-		background: var(--color-btn-background);
-		border: 3px solid var(--color-btn-background);
+		cursor: pointer;
 	}
-}
 
-.secondaryButton {
-	color: var(--color-link);
-	background: var(--color-background);
-	border: 3px solid var(--color-link);
-	font-size: 1rem;
-	font-weight: 700;
+	&.disabled {
+		background: var(--grey-500);
+		color: var(--grey-100);
 
-	&:hover {
-		background: var(--switch-background);
-		color: var(--color-text);
+		&:hover {
+			cursor: not-allowed;
+			background: var(--grey-500);
+			color: var(--grey-100);
+			border: 3px solid transparent;
+		}
+	}
+
+	&Primary {
+		color: var(--color-btn-text);
+		background: var(--color-primary);
+		font-size: 1.25rem;
+		font-weight: 700;
+
+		&:hover {
+			background: var(--color-btn-background);
+			border: 3px solid var(--color-btn-background);
+		}
+	}
+
+	&Secondary {
+		color: var(--color-link);
+		background: var(--color-background);
+		border: 3px solid var(--color-link);
+		font-size: 1rem;
+		font-weight: 700;
+
+		&:hover {
+			background: var(--switch-background);
+			color: var(--color-text);
+		}
+	}
+
+	&Text {
+		display: block;
+		font-weight: 600;
+		padding: 0 1rem;
+		width: max-content;
+		margin: 0 auto;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 80%;
+			height: 2px;
+			left: 50%;
+			bottom: -5px;
+			transform: translateX(-50%);
+			border-radius: 50px;
+			background: var(--color-text);
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			color: var(--color-link);
+
+			&::after {
+				background: var(--color-link);
+			}
+		}
+	}
+
+	&Loading {
+		background: var(--color-error);
+		color: var(--color-btn-text);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		pointer-events: none;
+
+		svg {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&Validated {
+		background: var(--color-success);
+		color: var(--color-btn-text);
+		font-size: 1rem;
+		font-weight: 700;
+
+		&:hover {
+			background: var(--color-success-drak);
+		}
 	}
 }

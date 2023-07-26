@@ -5,4 +5,18 @@
 	label {
 		margin-bottom: 10px;
 	}
+
+	.generateBtnContainer {
+		margin: 15px 0;
+
+		a {
+			display: block;
+		}
+	}
+
+	.error {
+		text-align: center;
+		font-size: 0.8rem;
+		color: #df2147;
+	}
 }

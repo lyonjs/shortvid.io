@@ -23,12 +23,11 @@ app.use(
 		origin: /.*.shortvid\.io$/,
 		optionsSuccessStatus: 200,
 		methods: 'POST',
-	})
+	}),
 );
 app.use(morgan('tiny'));
 
 let bundled;
-let compositions;
 
 app.post('/:compositionId/', async (req, res) => {
 	const sendFile = (file) => {
@@ -48,14 +47,14 @@ app.post('/:compositionId/', async (req, res) => {
 			inputProps,
 		});
 		if (!video) {
-			throw new Error(`No video called ${compositionId}`);
+			throw new Error(`❌ No video called ${compositionId}`);
 		}
-		console.log(`Generating video for compositon: ${video.id}`);
+		console.log(`⏳ Generating video for compositon: ${video.id}`);
 		res.set('content-type', 'video/mp4');
 		res.set('cache-control', 'public, max-age=3600, immutable');
 
 		const tmpDir = await fs.promises.mkdtemp(
-			path.join(os.tmpdir(), 'remotion-')
+			path.join(os.tmpdir(), 'remotion-'),
 		);
 		const finalOutput = path.join(tmpDir, 'out.mp4');
 
@@ -68,9 +67,11 @@ app.post('/:compositionId/', async (req, res) => {
 		});
 
 		sendFile(finalOutput);
-		console.log('Video rendered and sent!');
+		console.log('🎞️ Video rendered and sent ! 🎊');
 	} catch (err) {
-		console.error(`Error while generating video with url ${req.originalUrl}`);
+		console.error(
+			`❌ Error while generating video with url ${req.originalUrl}`,
+		);
 		console.error(err);
 		res.json({
 			error: err,
@@ -82,19 +83,19 @@ app.listen(port, async () => {
 	bundled = await bundle('remotion/index.tsx');
 	const compositions = await getCompositions(bundled);
 	console.log(
-		`Avalaible compositions: ${compositions
+		`🍿 Avalaible compositions : ${compositions
 			.map((composition) => composition.id)
-			.join(', ')} \n\n`
+			.join(', ')} \n\n`,
 	);
 	console.log(
 		[
-			`The server has started on http://localhost:${port}!`,
-			'You can render a video by passing props as URL parameters.',
+			`🚀 The server has started on http://localhost:${port}!`,
+			'🔗 You can render a video by passing props as URL parameters.',
 			'',
-			'To generate a video, try this:',
+			'🧪 To generate a video, try this :',
 			'',
 			`curl -X POST http://localhost:8000/Talk --output example.mp4`,
 			'',
-		].join('\n')
+		].join('\n'),
 	);
 });

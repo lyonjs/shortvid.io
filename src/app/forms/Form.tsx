@@ -9,15 +9,17 @@ import {SelectInputProps} from './selectInput';
 
 import styles from '../../../styles/app/common/form.module.css';
 
+type FormInputTypes =
+	| React.FC<InputProps>
+	| React.FC<InputDateProps>
+	| React.FC<SelectInputProps>;
+
 export type formConfigProps = {
 	[key: string]: {
 		state: string | Date | undefined;
 		setState: (event: FormEvent<HTMLInputElement | HTMLSelectElement>) => void;
 		label: string;
-		component:
-			| React.FC<InputProps>
-			| React.FC<InputDateProps>
-			| React.FC<SelectInputProps>;
+		component: FormInputTypes;
 		placeholder?: string;
 		options?: string[];
 	};
@@ -34,11 +36,11 @@ export const Form: React.FC<{
 				<>
 					{Object.keys(formConfig).map((value) => {
 						const inputParams = formConfig[value];
-						const Component = inputParams.component;
+						const InputComponent = inputParams.component;
 						const stateValue = inputParams.state as (string & Date) | undefined;
 
 						return (
-							<Component
+							<InputComponent
 								key={inputParams.label}
 								value={stateValue}
 								setValue={inputParams.setState}

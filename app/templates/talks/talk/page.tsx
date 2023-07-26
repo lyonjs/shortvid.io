@@ -6,8 +6,7 @@ import {Talk} from '../../../../remotion/compositions/templates/talk/Talk';
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {Form} from '../../../../src/app/forms/Form';
+import {Form, formConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
@@ -44,6 +43,47 @@ export default function TalkPage() {
 
 	const encodedParams = encodeObjectValues(props);
 
+	const formConfig: formConfigProps = {
+		speakersNames: {
+			state: speakersNames,
+			setState: setSpeakersNames,
+			label: 'Name',
+			component: Input,
+		},
+		speakerPicture: {
+			state: speakerPicture,
+			setState: setSpeakerPicture,
+			label: 'Speaker picture',
+			component: Input,
+		},
+		talkTitle: {
+			state: talkTitle,
+			setState: setTalkTitle,
+			label: 'Title',
+			component: Input,
+		},
+		titleSize: {
+			state: titleSize,
+			setState: setTitleSize,
+			label: 'Title size',
+			component: Input,
+		},
+		backgroundImg: {
+			state: backgroundImg,
+			setState: setBackgroundImg,
+			label: 'Background Image url',
+			component: Input,
+		},
+		eventLogo: {
+			state: eventLogo,
+			setState: setEventLogo,
+			label: 'Logo (optional)',
+			component: Input,
+			placeholder:
+				'e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4',
+		},
+	};
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -64,72 +104,14 @@ export default function TalkPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form>
-						<Input
-							setValue={setSpeakerPicture}
-							value={speakerPicture}
-							label="Speaker picture"
-						/>
-						<Input
-							setValue={setSpeakersNames}
-							value={speakersNames}
-							label="Name"
-						/>
-						<Input setValue={setTalkTitle} value={talkTitle} label="Title" />
-						<Input
-							setValue={setTitleSize}
-							value={titleSize}
-							label="Title size"
-						/>
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background Image url"
-						/>
-						<Input
-							setValue={setEventLogo}
-							value={eventLogo}
-							label="Logo (optional)"
-							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
-						/>
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</div>
 				<Code composition="Talk" params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form>
-						<Input
-							setValue={setSpeakerPicture}
-							value={speakerPicture}
-							label="Speaker picture"
-						/>
-						<Input
-							setValue={setSpeakersNames}
-							value={speakersNames}
-							label="Name"
-						/>
-						<Input setValue={setTalkTitle} value={talkTitle} label="Title" />
-						<Input
-							setValue={setTitleSize}
-							value={titleSize}
-							label="Title size"
-						/>
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background Image url"
-						/>
-						<Input
-							setValue={setEventLogo}
-							value={eventLogo}
-							label="Logo (optional)"
-							placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
-						/>
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</Sidebar>
 			</ResizeWrapper>
 		</>

@@ -6,7 +6,7 @@ import {Player} from '@remotion/player';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {ColorInput} from '../../../../src/app/forms/colorInput';
-import {Form} from '../../../../src/app/forms/Form';
+import {Form, formConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {SelectInput} from '../../../../src/app/forms/selectInput';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
@@ -50,6 +50,46 @@ export default function LayersPage() {
 		setTimeout(() => setCopied(false), 2000);
 	}, [layerUrl]);
 
+	const formConfig: formConfigProps = {
+		mode: {
+			state: mode,
+			setState: setMode,
+			label: 'Mode',
+			component: SelectInput,
+			options: ['one', 'two', 'full'],
+		},
+		primaryColor: {
+			state: primaryColor,
+			setState: setPrimaryColor,
+			label: 'Primary color',
+			component: ColorInput,
+		},
+		secondaryColor: {
+			state: secondaryColor,
+			setState: setSecondaryColor,
+			label: 'Secondary color',
+			component: ColorInput,
+		},
+		title: {
+			state: title,
+			setState: setTitle,
+			label: 'Talk title',
+			component: Input,
+		},
+		sponsor: {
+			state: sponsor,
+			setState: setSponsor,
+			label: 'Sponsor image',
+			component: Input,
+		},
+		decoration: {
+			state: decoration,
+			setState: setDecoration,
+			label: 'Layer decoration',
+			component: Input,
+		},
+	};
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -69,34 +109,7 @@ export default function LayersPage() {
 				/>
 
 				<div className={styles.formMobile}>
-					<Form>
-						<SelectInput
-							value={mode}
-							setValue={setMode}
-							label="Mode"
-							options={['one', 'two', 'full']}
-						/>
-						<ColorInput
-							setValue={setPrimaryColor}
-							value={primaryColor}
-							label="Primary color"
-						/>
-						<ColorInput
-							setValue={setSecondaryColor}
-							value={secondaryColor}
-							label="Secondary color"
-						/>
-						<Input setValue={setTitle} value={title} label="Talk title" />
-						<Input
-							setValue={setSponsor}
-							value={sponsor}
-							label="Sponsor image"
-						/>
-						<Input
-							setValue={setDecoration}
-							value={decoration}
-							label="Layer decoration"
-						/>
+					<Form formConfig={formConfig}>
 						<button
 							type="button"
 							className={stylesBtn.secondaryButton}
@@ -119,34 +132,7 @@ export default function LayersPage() {
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form>
-						<SelectInput
-							value={mode}
-							setValue={setMode}
-							label="Mode"
-							options={['one', 'two', 'full']}
-						/>
-						<ColorInput
-							setValue={setPrimaryColor}
-							value={primaryColor}
-							label="Primary color"
-						/>
-						<ColorInput
-							setValue={setSecondaryColor}
-							value={secondaryColor}
-							label="Secondary color"
-						/>
-						<Input setValue={setTitle} value={title} label="Talk title" />
-						<Input
-							setValue={setSponsor}
-							value={sponsor}
-							label="Sponsor image"
-						/>
-						<Input
-							setValue={setDecoration}
-							value={decoration}
-							label="Layer decoration"
-						/>
+					<Form formConfig={formConfig}>
 						<button
 							type="button"
 							className={stylesBtn.secondaryButton}

@@ -7,8 +7,7 @@ import {Side} from '../../../../remotion/compositions/templates/silhouette/Silho
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {Form} from '../../../../src/app/forms/Form';
+import {Form, formConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {SelectInput} from '../../../../src/app/forms/selectInput';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
@@ -42,7 +41,42 @@ export default function SilhouettePage() {
 		silhouetteUrl,
 		logoUrl,
 	};
+
 	const encodedParams = encodeObjectValues(props);
+
+	const formConfig: formConfigProps = {
+		title: {
+			state: title,
+			setState: setTitle,
+			label: 'Title',
+			component: Input,
+		},
+		backgroundImg: {
+			state: backgroundImg,
+			setState: setBackgroundImg,
+			label: 'Background Image',
+			component: Input,
+		},
+		side: {
+			state: side,
+			setState: setSide,
+			label: 'Side',
+			component: SelectInput,
+			options: ['right', 'left'],
+		},
+		silhouetteUrl: {
+			state: silhouetteUrl,
+			setState: setSilhouetteUrl,
+			label: 'Url of silhouette',
+			component: Input,
+		},
+		logoUrl: {
+			state: logoUrl,
+			setState: setLogoUrl,
+			label: 'Logo url',
+			component: Input,
+		},
+	};
 
 	return (
 		<>
@@ -64,54 +98,14 @@ export default function SilhouettePage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form>
-						<Input setValue={setTitle} value={title} label="Title" />
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background Image"
-						/>
-						<SelectInput
-							value={side}
-							setValue={setSide}
-							label="Side"
-							options={['right', 'left']}
-						/>
-						<Input
-							setValue={setSilhouetteUrl}
-							value={silhouetteUrl}
-							label="Url of silhouette"
-						/>
-						<Input setValue={setLogoUrl} value={logoUrl} label="Logo url" />
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</div>
 				<Code composition="Silhouette" params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form>
-						<Input setValue={setTitle} value={title} label="Title" />
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background Image"
-						/>
-						<SelectInput
-							value={side}
-							setValue={setSide}
-							label="Side"
-							options={['right', 'left']}
-						/>
-						<Input
-							setValue={setSilhouetteUrl}
-							value={silhouetteUrl}
-							label="Url of silhouette"
-						/>
-						<Input setValue={setLogoUrl} value={logoUrl} label="Logo url" />
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</Sidebar>
 			</ResizeWrapper>
 		</>

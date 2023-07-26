@@ -26,35 +26,29 @@ export type formConfigProps = {
 };
 
 export const Form: React.FC<{
-	formConfig?: formConfigProps;
+	formConfig: formConfigProps;
 	encodedParams?: QueryParams;
 	children?: ReactNode;
 }> = ({formConfig, encodedParams, children}) => {
 	return (
 		<>
 			<form className={styles.videoForm}>
-				{formConfig && (
-					<>
-						{Object.keys(formConfig).map((value) => {
-							const inputParams = formConfig[value];
-							const InputComponent = inputParams.component;
-							const stateValue = inputParams.state as
-								| (string & Date)
-								| undefined;
+				{Object.keys(formConfig).map((value) => {
+					const inputParams = formConfig[value];
+					const InputComponent = inputParams.component;
+					const stateValue = inputParams.state as (string & Date) | undefined;
 
-							return (
-								<InputComponent
-									key={inputParams.label}
-									value={stateValue}
-									setValue={inputParams.setState}
-									label={inputParams.label}
-									placeholder={inputParams.placeholder}
-									options={inputParams.options}
-								/>
-							);
-						})}
-					</>
-				)}
+					return (
+						<InputComponent
+							key={inputParams.label}
+							value={stateValue}
+							setValue={inputParams.setState}
+							label={inputParams.label}
+							placeholder={inputParams.placeholder}
+							options={inputParams.options}
+						/>
+					);
+				})}
 				{children}
 			</form>
 			{encodedParams && <CopyUrlButton urlParameters={encodedParams} />}

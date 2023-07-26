@@ -6,8 +6,7 @@ import {Sponsor} from '../../../../remotion/compositions/templates/sponsor/Spons
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {Form} from '../../../../src/app/forms/Form';
+import {Form, formConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
@@ -34,6 +33,33 @@ export default function SponsorPage() {
 	const props = {companyName, backgroundImg, sponsorLogo, sponsorLocalisation};
 	const encodedParams = encodeObjectValues(props);
 
+	const formConfig: formConfigProps = {
+		companyName: {
+			state: companyName,
+			setState: setCompanyName,
+			label: 'Company',
+			component: Input,
+		},
+		backgroundImg: {
+			state: backgroundImg,
+			setState: setBackgroundImg,
+			label: 'Background image url',
+			component: Input,
+		},
+		sponsorLogo: {
+			state: sponsorLogo,
+			setState: setSponsorLogo,
+			label: 'Sponsor logo url',
+			component: Input,
+		},
+		sponsorLocalisation: {
+			state: sponsorLocalisation,
+			setState: setSponsorLocalisation,
+			label: 'Sponsor localisation',
+			component: Input,
+		},
+	};
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -54,58 +80,14 @@ export default function SponsorPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form>
-						<Input
-							setValue={setCompanyName}
-							value={companyName}
-							label="Company"
-						/>
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background image url"
-						/>
-						<Input
-							setValue={setSponsorLogo}
-							value={sponsorLogo}
-							label="Sponsor logo url"
-						/>
-						<Input
-							setValue={setSponsorLocalisation}
-							value={sponsorLocalisation}
-							label="Sponsor localisation"
-						/>
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</div>
 				<Code composition="Sponsor" params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form>
-						<Input
-							setValue={setCompanyName}
-							value={companyName}
-							label="Company"
-						/>
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background image url"
-						/>
-						<Input
-							setValue={setSponsorLogo}
-							value={sponsorLogo}
-							label="Sponsor logo url"
-						/>
-						<Input
-							setValue={setSponsorLocalisation}
-							value={sponsorLocalisation}
-							label="Sponsor localisation"
-						/>
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</Sidebar>
 			</ResizeWrapper>
 		</>

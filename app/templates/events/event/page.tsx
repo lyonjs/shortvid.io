@@ -6,9 +6,8 @@ import {Event} from '../../../../remotion/compositions/templates/event/Event';
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
 import {FontPicker} from '../../../../src/app/forms/FontPicker';
-import {Form} from '../../../../src/app/forms/Form';
+import {Form, formConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {useSelectedFont} from '../../../../src/app/hooks/useSelectedFont';
@@ -41,6 +40,35 @@ export default function EventPage() {
 	};
 	const encodedParams = encodeObjectValues(props);
 
+	const formConfig: formConfigProps = {
+		title: {
+			state: title,
+			setState: setTitle,
+			label: 'Speaker name',
+			component: Input,
+		},
+		lottieAsset: {
+			state: lottieAsset,
+			setState: setLottieAsset,
+			label: 'Lottie asset (ex: lf20_UDstUT)',
+			component: Input,
+			placeholder: 'lf20_UDstUT',
+		},
+		paillettesAsset: {
+			state: paillettesAsset,
+			setState: setPaillettesAsset,
+			label: 'Paillettes asset (ex: lf20_tiviyc3p)',
+			component: Input,
+			placeholder: 'lf20_tiviyc3p',
+		},
+		backgroundImg: {
+			state: backgroundImg,
+			setState: setBackgroundImg,
+			label: 'Background image url',
+			component: Input,
+		},
+	};
+
 	return (
 		<div className={styles.mainContent}>
 			<section className={styles.videoContainer}>
@@ -61,25 +89,8 @@ export default function EventPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams}>
 						<FontPicker label="Font family" />
-						<Input setValue={setTitle} value={title} label="SpeakerName" />
-						<Input
-							setValue={setLottieAsset}
-							value={lottieAsset}
-							label="LottieAsset (lf20_UDstUT)"
-						/>
-						<Input
-							setValue={setPaillettesAsset}
-							value={paillettesAsset}
-							label="PaillettesAsset (lf20_tiviyc3p)"
-						/>
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background image url"
-						/>
-						<CopyUrlButton urlParameters={encodedParams} />
 					</Form>
 				</div>
 				<Code composition="Event" params={props} />
@@ -87,25 +98,8 @@ export default function EventPage() {
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams}>
 						<FontPicker label="Font family" />
-						<Input setValue={setTitle} value={title} label="Speaker name" />
-						<Input
-							setValue={setLottieAsset}
-							value={lottieAsset}
-							label="Lottie asset (lf20_UDstUT)"
-						/>
-						<Input
-							setValue={setPaillettesAsset}
-							value={paillettesAsset}
-							label="Paillettes asset (lf20_tiviyc3p)"
-						/>
-						<Input
-							setValue={setBackgroundImg}
-							value={backgroundImg}
-							label="Background image url"
-						/>
-						<CopyUrlButton urlParameters={encodedParams} />
 					</Form>
 				</Sidebar>
 			</ResizeWrapper>

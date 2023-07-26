@@ -6,8 +6,7 @@ import {SpotlightNewSponsor} from '../../../../remotion/compositions/templates/s
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {Form} from '../../../../src/app/forms/Form';
+import {Form, formConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
@@ -26,6 +25,21 @@ export default function SpotlightNewSponsorPage() {
 
 	const props = {logo, sponsorLogo};
 	const encodedParams = encodeObjectValues(props);
+
+	const formConfig: formConfigProps = {
+		logo: {
+			state: logo,
+			setState: setLogo,
+			label: 'Logo url',
+			component: Input,
+		},
+		sponsorLogo: {
+			state: sponsorLogo,
+			setState: setSponsorLogo,
+			label: 'Sponsor logo url',
+			component: Input,
+		},
+	};
 
 	return (
 		<>
@@ -47,16 +61,7 @@ export default function SpotlightNewSponsorPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form>
-						<Input setValue={setLogo} value={logo} label="Logo url" />
-						<Input
-							setValue={setSponsorLogo}
-							value={sponsorLogo}
-							label="Sponsor logo url"
-						/>
-
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</div>
 
 				<Code composition="SpotlightNewSponsor" params={props} />
@@ -64,16 +69,7 @@ export default function SpotlightNewSponsorPage() {
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form>
-						<Input setValue={setLogo} value={logo} label="Logo url" />
-						<Input
-							setValue={setSponsorLogo}
-							value={sponsorLogo}
-							label="Sponsor logo url"
-						/>
-
-						<CopyUrlButton urlParameters={encodedParams} />
-					</Form>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
 				</Sidebar>
 			</ResizeWrapper>
 		</>

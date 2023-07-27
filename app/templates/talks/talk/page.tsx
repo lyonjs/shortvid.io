@@ -65,7 +65,7 @@ export default function TalkPage() {
 
 				<Code composition="Talk" params={props} />
 			</section>
-			<ResizeWrapper position={'right'}>
+			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
 						<Input

@@ -68,16 +68,16 @@ export default function EventPage() {
 				<Sidebar>
 					<Form>
 						<FontPicker label="Font family" />
-						<Input setValue={setTitle} value={title} label="SpeakerName" />
+						<Input setValue={setTitle} value={title} label="Speaker name" />
 						<Input
 							setValue={setLottieAsset}
 							value={lottieAsset}
-							label="LottieAsset (lf20_UDstUT)"
+							label="Lottie asset (lf20_UDstUT)"
 						/>
 						<Input
 							setValue={setPaillettesAsset}
 							value={paillettesAsset}
-							label="PaillettesAsset (lf20_tiviyc3p)"
+							label="Paillettes asset (lf20_tiviyc3p)"
 						/>
 						<Input
 							setValue={setBackgroundImg}

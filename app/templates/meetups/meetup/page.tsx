@@ -50,7 +50,7 @@ export default function MeetupPage() {
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
-						<Input setValue={setTitle} value={title} label="SpeakerName" />
+						<Input setValue={setTitle} value={title} label="Speaker name" />
 						<Input setValue={setDate} value={date} label="Date" />
 
 						<Input

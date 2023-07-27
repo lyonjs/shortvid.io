@@ -1,17 +1,16 @@
 import React, {FormEvent, ReactNode} from 'react';
 
 import {CopyUrlButton} from '../CopyUrlButton';
-import {QueryParams} from '../utils/formatUrlWithQuery';
 import {
 	dataForGenerationType,
 	useGenerateVideo,
 } from '../hooks/useGenerateVideo';
+import {QueryParams} from '../utils/formatUrlWithQuery';
 
+import {GenerateButton} from './GenerateButton';
 import {InputProps} from './input';
 import {InputDateProps} from './inputDate';
 import {SelectInputProps} from './selectInput';
-import {GenerateButton} from './GenerateButton';
-
 
 import styles from '../../../styles/app/common/form.module.css';
 

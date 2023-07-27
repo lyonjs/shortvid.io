@@ -1,6 +1,6 @@
 import {useCallback, useState} from 'react';
 
-import stylesBtn from '../../../styles/app/common/buttons.module.css';
+import styles from '../../../styles/app/common/buttons.module.css';
 
 export const FullScreenButtons: React.FC<{
 	compositionName: string;
@@ -19,7 +19,7 @@ export const FullScreenButtons: React.FC<{
 		<>
 			<button
 				type="button"
-				className={stylesBtn.secondaryButton}
+				className={`${styles.btn} ${styles.btnText}`}
 				onClick={() => {
 					window.open(fullScreenUrl, '_blank');
 				}}
@@ -28,7 +28,7 @@ export const FullScreenButtons: React.FC<{
 			</button>
 			<button
 				type="button"
-				className={stylesBtn.primaryButton}
+				className={`${styles.btn} ${styles.btnSecondary}`}
 				onClick={onClickHandler}
 			>
 				{copied ? 'Copied ✅' : `Copy Fullscreen URL 🔗`}

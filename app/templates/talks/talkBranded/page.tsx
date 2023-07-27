@@ -7,7 +7,7 @@ import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {ColorInput} from '../../../../src/app/forms/colorInput';
-import {Form, formConfigProps} from '../../../../src/app/forms/Form';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {InputDate} from '../../../../src/app/forms/inputDate';
 import {SelectInput} from '../../../../src/app/forms/selectInput';
@@ -94,7 +94,7 @@ export default function BrandedTalkPage() {
 		speakersJob,
 	});
 
-	const formConfig: formConfigProps = {
+	const formConfig: FormConfigProps = {
 		backgroundColor: {
 			state: backgroundColor,
 			setState: setBackgroundColor,

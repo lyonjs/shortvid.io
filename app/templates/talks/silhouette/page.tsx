@@ -7,7 +7,7 @@ import {Side} from '../../../../remotion/compositions/templates/silhouette/Silho
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {Form, formConfigProps} from '../../../../src/app/forms/Form';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {SelectInput} from '../../../../src/app/forms/selectInput';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
@@ -44,7 +44,7 @@ export default function SilhouettePage() {
 
 	const encodedParams = encodeObjectValues(props);
 
-	const formConfig: formConfigProps = {
+	const formConfig: FormConfigProps = {
 		title: {
 			state: title,
 			setState: setTitle,

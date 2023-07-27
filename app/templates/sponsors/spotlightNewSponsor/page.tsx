@@ -6,7 +6,7 @@ import {SpotlightNewSponsor} from '../../../../remotion/compositions/templates/s
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {Form, formConfigProps} from '../../../../src/app/forms/Form';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
@@ -26,7 +26,7 @@ export default function SpotlightNewSponsorPage() {
 	const props = {logo, sponsorLogo};
 	const encodedParams = encodeObjectValues(props);
 
-	const formConfig: formConfigProps = {
+	const formConfig: FormConfigProps = {
 		logo: {
 			state: logo,
 			setState: setLogo,

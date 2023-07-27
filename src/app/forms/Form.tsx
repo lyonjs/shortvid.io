@@ -14,7 +14,7 @@ type FormInputTypes =
 	| React.FC<InputDateProps>
 	| React.FC<SelectInputProps>;
 
-export type formConfigProps = {
+export type FormConfigProps = {
 	[key: string]: {
 		state: string | Date | undefined;
 		setState: (event: FormEvent<HTMLInputElement | HTMLSelectElement>) => void;
@@ -26,26 +26,25 @@ export type formConfigProps = {
 };
 
 export const Form: React.FC<{
-	formConfig: formConfigProps;
+	formConfig: FormConfigProps;
 	encodedParams?: QueryParams;
 	children?: ReactNode;
 }> = ({formConfig, encodedParams, children}) => {
 	return (
 		<>
 			<form className={styles.videoForm}>
-				{Object.keys(formConfig).map((value) => {
-					const inputParams = formConfig[value];
-					const InputComponent = inputParams.component;
-					const stateValue = inputParams.state as (string & Date) | undefined;
+				{Object.entries(formConfig).map(([key, value]) => {
+					const InputComponent = value.component;
+					const stateValue = value.state as (string & Date) | undefined;
 
 					return (
 						<InputComponent
-							key={inputParams.label}
+							key={key}
 							value={stateValue}
-							setValue={inputParams.setState}
-							label={inputParams.label}
-							placeholder={inputParams.placeholder}
-							options={inputParams.options}
+							setValue={value.setState}
+							label={value.label}
+							placeholder={value.placeholder}
+							options={value.options}
 						/>
 					);
 				})}

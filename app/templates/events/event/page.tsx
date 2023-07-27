@@ -7,7 +7,7 @@ import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {FontPicker} from '../../../../src/app/forms/FontPicker';
-import {Form, formConfigProps} from '../../../../src/app/forms/Form';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {useSelectedFont} from '../../../../src/app/hooks/useSelectedFont';
@@ -40,7 +40,7 @@ export default function EventPage() {
 	};
 	const encodedParams = encodeObjectValues(props);
 
-	const formConfig: formConfigProps = {
+	const formConfig: FormConfigProps = {
 		title: {
 			state: title,
 			setState: setTitle,

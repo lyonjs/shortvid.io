@@ -50,7 +50,7 @@ export default function SpotlightNewSponsorPage() {
 				<Code composition="SpotlightNewSponsor" params={props} />
 			</section>
 
-			<ResizeWrapper position="right">
+			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
 						<Input setValue={setLogo} value={logo} label="Logo url" />

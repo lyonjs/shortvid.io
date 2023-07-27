@@ -16,8 +16,8 @@
 	font-weight: 700;
 
 	&:hover {
-		background: var(--color-logo);
-		border: 3px solid var(--color-logo);
+		background: var(--color-btn-background);
+		border: 3px solid var(--color-btn-background);
 	}
 }
 

@@ -10,20 +10,21 @@ import {
 import {SidebarProvider} from '../../src/context/SidebarContext';
 
 describe('<ResizeWrapper>', () => {
-	const customRenderWrapper: (side?: 'left' | 'right') => {
+	const customRenderWrapper: (resizableSide?: 'left' | 'right') => {
 		resizeGrabber: HTMLElement;
 		resizableWrapper: HTMLElement;
-	} = (side = 'left') => {
+	} = (resizableSide = 'right') => {
 		render(
 			<SidebarProvider>
 				<div
 					style={{
 						width: 1000,
 						display: 'flex',
-						justifyContent: side === 'left' ? 'flex-start' : 'flex-end',
+						justifyContent:
+							resizableSide === 'right' ? 'flex-start' : 'flex-end',
 					}}
 				>
-					<ResizeWrapper position={side}>
+					<ResizeWrapper resizableSide={resizableSide}>
 						<h1>Content</h1>
 					</ResizeWrapper>
 				</div>

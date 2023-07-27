@@ -118,7 +118,7 @@ export default function BrandedTalkPage() {
 				<Code composition="TalkBranded" params={props} />
 			</section>
 
-			<ResizeWrapper position="right">
+			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
 						<ColorInput

@@ -19,9 +19,9 @@ export const MAX_SIDEBAR_WIDTH = 500;
 export const DEFAULT_GRABBER_WIDTH = 20;
 
 export const ResizeWrapper: React.FC<{
-	position?: 'left' | 'right';
+	resizableSide?: 'left' | 'right';
 	children: ReactNode;
-}> = ({position = 'left', children}) => {
+}> = ({resizableSide = 'right', children}) => {
 	const {expanded} = useContext(SidebarContext);
 
 	const resizableRef = useRef<HTMLDivElement | null>(null);
@@ -35,12 +35,14 @@ export const ResizeWrapper: React.FC<{
 	const resize = useCallback(
 		(event: MouseEvent) => {
 			if (isResizing) {
-				const positionnedLeftWidth = event.clientX - DEFAULT_GRABBER_WIDTH;
-				const positionnedRightWidth =
+				const resizeFromRightWidth = event.clientX - DEFAULT_GRABBER_WIDTH;
+				const resizeFromLeftWidth =
 					window.innerWidth - (event.clientX + DEFAULT_GRABBER_WIDTH);
 
 				const newSidebarWidth =
-					position === 'right' ? positionnedRightWidth : positionnedLeftWidth;
+					resizableSide === 'right'
+						? resizeFromRightWidth
+						: resizeFromLeftWidth;
 
 				setSidebarWidth(
 					Math.min(
@@ -50,7 +52,7 @@ export const ResizeWrapper: React.FC<{
 				);
 			}
 		},
-		[isResizing, position],
+		[isResizing, resizableSide],
 	);
 
 	const disableSelect = (event: MouseEvent) => {
@@ -83,7 +85,7 @@ export const ResizeWrapper: React.FC<{
 			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
 			style={{width: `${sidebarWidth}px`}}
 			data-testid="resizableWrapper"
-			data-position={position}
+			data-resizableSide={resizableSide}
 		>
 			<span onMouseDown={startResize} data-testid="resizeGrabber" />
 			<div ref={resizableRef} style={{width: sidebarWidth}}>

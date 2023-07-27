@@ -188,7 +188,7 @@
 	}
 }
 
-[data-position='right'] {
+[data-resizableSide='left'] {
 	.sidebar {
 		.foldButton {
 			display: none;

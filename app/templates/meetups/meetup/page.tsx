@@ -47,7 +47,7 @@ export default function MeetupPage() {
 
 				<Code composition="Meetup" params={props} />
 			</section>
-			<ResizeWrapper position="right">
+			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
 						<Input setValue={setTitle} value={title} label="SpeakerName" />

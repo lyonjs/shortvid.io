@@ -57,7 +57,7 @@ export default function SponsorPage() {
 				<Code composition="Sponsor" params={props} />
 			</section>
 
-			<ResizeWrapper resizableSide="left">
+			<ResizeWrapper resizableside="left">
 				<Sidebar>
 					<Form>
 						<Input

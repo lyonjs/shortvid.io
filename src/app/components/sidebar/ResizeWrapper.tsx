@@ -85,7 +85,7 @@ export const ResizeWrapper: React.FC<{
 			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
 			style={{width: `${sidebarWidth}px`}}
 			data-testid="resizableWrapper"
-			data-resizableSide={resizableSide}
+			data-resizableside={resizableSide}
 		>
 			<span onMouseDown={startResize} data-testid="resizeGrabber" />
 			<div ref={resizableRef} style={{width: sidebarWidth}}>

@@ -67,7 +67,7 @@ export default function SilhouettePage() {
 				<Code composition="Silhouette" params={props} />
 			</section>
 
-			<ResizeWrapper resizableSide="left">
+			<ResizeWrapper resizableside="left">
 				<Sidebar>
 					<Form>
 						<Input setValue={setTitle} value={title} label="Title" />

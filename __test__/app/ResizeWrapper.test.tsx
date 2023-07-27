@@ -96,11 +96,11 @@ describe('<ResizeWrapper>', () => {
 	});
 
 	it('should resize on the right side', () => {
-		const {resizeGrabber, resizableWrapper} = customRenderWrapper('right');
+		const {resizeGrabber, resizableWrapper} = customRenderWrapper('left');
 		expect(resizableWrapper).toHaveStyle('width: 315px');
 
 		expect(resizableWrapper).toHaveStyle('width: 315px');
-		expect(resizableWrapper).toHaveAttribute('data-position', 'right');
+		expect(resizableWrapper).toHaveAttribute('data-resizableside', 'left');
 
 		resizeSidebar(resizeGrabber, 100, 1000 - DEFAULT_SIDEBAR_WIDTH);
 

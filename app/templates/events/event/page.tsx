@@ -64,7 +64,7 @@ export default function EventPage() {
 				<Code composition="Event" params={props} />
 			</section>
 
-			<ResizeWrapper resizableSide="left">
+			<ResizeWrapper resizableside="left">
 				<Sidebar>
 					<Form>
 						<FontPicker label="Font family" />

@@ -3,11 +3,17 @@ import {format} from 'date-fns';
 
 import styles from '../../../styles/app/common/inputs.module.css';
 
-export const InputDate: React.FC<{
+export interface InputDateProps {
 	value?: Date;
-	setValue: (event: FormEvent<HTMLInputElement>) => void;
+	setValue: (event: FormEvent<HTMLInputElement | HTMLSelectElement>) => void;
 	label: string;
-}> = ({value, setValue, label}) => {
+}
+
+export const InputDate: React.FC<InputDateProps> = ({
+	value,
+	setValue,
+	label,
+}) => {
 	const formatedValue = value && format(value, 'yyyy-MM-dd HH:mm');
 
 	return (

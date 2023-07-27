@@ -68,7 +68,7 @@ export default function LayersPage() {
 					inputProps={props}
 				/>
 			</section>
-			<ResizeWrapper resizableside="left">
+			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form>
 						<SelectInput

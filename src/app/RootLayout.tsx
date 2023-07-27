@@ -14,25 +14,25 @@ import styles from '../../styles/app/layout/main.module.css';
 
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (
-			<main className="mx-auto p-4">
-				<div className={styles.sidebarLayout}>
-					<SidebarProvider>
-						<div className={styles.navigationSidebar}>
-							<ResizeWrapper>
-								<Sidebar>
-									<SidebarNav />
-								</Sidebar>
-							</ResizeWrapper>
-						</div>
-						<SidebarNavMobile />
-					</SidebarProvider>
-					<div>
-						<SidebarProvider>
-							<FontProvider>{children}</FontProvider>
-						</SidebarProvider>
+		<main className="mx-auto p-4">
+			<div className={styles.sidebarLayout}>
+				<SidebarProvider>
+					<div className={styles.navigationSidebar}>
+						<ResizeWrapper>
+							<Sidebar>
+								<SidebarNav />
+							</Sidebar>
+						</ResizeWrapper>
 					</div>
+					<SidebarNavMobile />
+				</SidebarProvider>
+				<div>
+					<SidebarProvider>
+						<FontProvider>{children}</FontProvider>
+					</SidebarProvider>
 				</div>
-				<Analytics />
-			</main>
+			</div>
+			<Analytics />
+		</main>
 	);
 }

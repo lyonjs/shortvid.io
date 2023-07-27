@@ -36,6 +36,7 @@
 		position: sticky;
 		top: 1rem;
 		height: max-content;
+		width: max-content;
 	}
 }
 

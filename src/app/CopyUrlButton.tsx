@@ -3,6 +3,8 @@ import {usePathname} from 'next/navigation';
 
 import {formatUrlWithQuery, QueryParams} from './utils/formatUrlWithQuery';
 
+import styles from '../../styles/app/common/buttons.module.css';
+
 export const CopyUrlButton: React.FC<{urlParameters: QueryParams}> = ({
 	urlParameters,
 }) => {
@@ -21,7 +23,7 @@ export const CopyUrlButton: React.FC<{urlParameters: QueryParams}> = ({
 	return (
 		<button
 			type="button"
-			className="relative text-color-btn-text py-2 px-4 text-center text-xl font-bold bg-primary rounded-xl mt-4 hover:scale-105"
+			className={styles.primaryButton}
 			onClick={onClickHandler}
 		>
 			{copied ? 'Copied ✅' : 'Copy URL 🔗'}

@@ -4,9 +4,10 @@ import {Analytics} from '@vercel/analytics/react';
 import {FontProvider} from '../context/FontContext';
 import {SidebarProvider} from '../context/SidebarContext';
 
-import {Sidebar} from './components/sidebar/navigation/Sidebar';
-import {SidebarMobile} from './components/sidebar/navigation/SidebarMobile';
+import {SidebarNav} from './components/sidebar/navigation/SidebarNav';
+import {SidebarNavMobile} from './components/sidebar/navigation/SidebarNavMobile';
 import {ResizeWrapper} from './components/sidebar/ResizeWrapper';
+import {Sidebar} from './components/sidebar/Sidebar';
 
 import '../../styles/globals.css';
 import styles from '../../styles/app/layout/main.module.css';
@@ -18,14 +19,18 @@ export default function RootLayout({children}: {children: ReactNode}) {
 				<SidebarProvider>
 					<div className={styles.navigationSidebar}>
 						<ResizeWrapper>
-							<Sidebar />
+							<Sidebar>
+								<SidebarNav />
+							</Sidebar>
 						</ResizeWrapper>
 					</div>
-					<SidebarMobile />
+					<SidebarNavMobile />
 				</SidebarProvider>
-				<section>
-					<FontProvider>{children}</FontProvider>
-				</section>
+				<div>
+					<SidebarProvider>
+						<FontProvider>{children}</FontProvider>
+					</SidebarProvider>
+				</div>
 			</div>
 			<Analytics />
 		</main>

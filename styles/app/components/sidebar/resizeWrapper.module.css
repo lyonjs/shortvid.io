@@ -15,12 +15,23 @@
 		z-index: 2;
 	}
 
-	&.folded {
-		max-width: 110px;
-		min-width: 110px;
-
+	&[data-resizableside='left'] {
 		> span {
-			display: none;
+			right: auto;
+			left: -10px;
+			top: 0;
+			height: 100%;
+		}
+	}
+
+	&[data-position='left'] {
+		&.folded {
+			max-width: 110px;
+			min-width: 110px;
+
+			> span {
+				display: none;
+			}
 		}
 	}
 }

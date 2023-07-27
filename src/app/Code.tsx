@@ -23,7 +23,7 @@ export const Code: React.FC<{
 	);
 
 	return (
-		<>
+		<div>
 			<h3 className="text-xl my-6">Generate the video locally 🔗</h3>
 
 			<p className="my-4">
@@ -49,6 +49,6 @@ export const Code: React.FC<{
 					Command copied in clipboard
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };

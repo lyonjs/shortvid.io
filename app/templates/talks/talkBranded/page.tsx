@@ -4,14 +4,18 @@ import {Player} from '@remotion/player';
 
 import {TalkBranded} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {Code} from '../../../../src/app/Code';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
+import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
+import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {ColorInput} from '../../../../src/app/forms/colorInput';
-import {Form, Input} from '../../../../src/app/forms/input';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
+import {Input} from '../../../../src/app/forms/input';
 import {InputDate} from '../../../../src/app/forms/inputDate';
 import {SelectInput} from '../../../../src/app/forms/selectInput';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {useInputDateChange} from '../../../../src/app/hooks/useInputDateChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
+
+import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function BrandedTalkPage() {
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
@@ -90,16 +94,92 @@ export default function BrandedTalkPage() {
 		speakersJob,
 	});
 
+	const formConfig: FormConfigProps = {
+		backgroundColor: {
+			state: backgroundColor,
+			setState: setBackgroundColor,
+			label: 'Background Color (optional)',
+			component: ColorInput,
+		},
+		title: {
+			state: title,
+			setState: setTitle,
+			label: 'Title',
+			component: Input,
+		},
+		startingDate: {
+			state: startingDate,
+			setState: setStartingDate,
+			label: 'Starting Date',
+			component: InputDate,
+		},
+		endingDate: {
+			state: endingDate,
+			setState: setEndingDate,
+			label: 'Ending Date (optional)',
+			component: InputDate,
+		},
+		recurringDay: {
+			state: recurringDay,
+			setState: setRecurringDay,
+			label: 'Recurring day',
+			component: SelectInput,
+			options: ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi'],
+		},
+		location: {
+			state: location,
+			setState: setLocation,
+			label: 'Location (optional)',
+			component: Input,
+			placeholder: 'e.g: 5 Place Jules Ferry, 69006.',
+		},
+		logoUrl: {
+			state: logoUrl,
+			setState: setLogoUrl,
+			label: 'Logo url',
+			component: Input,
+			placeholder:
+				'e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4',
+		},
+		speakerPicture: {
+			state: speakerPicture,
+			setState: setSpeakerPicture,
+			label: 'Speaker picture',
+			component: Input,
+			placeholder:
+				'e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4',
+		},
+		speakersNames: {
+			state: speakersNames,
+			setState: setSpeakersNames,
+			label: 'Name',
+			component: Input,
+		},
+		speakersCompany: {
+			state: speakersCompany,
+			setState: setSpeakersCompany,
+			label: 'Company (optional)',
+			component: Input,
+		},
+		speakersJob: {
+			state: speakersJob,
+			setState: setSpeakersJob,
+			label: 'Job (optional)',
+			component: Input,
+			placeholder: 'e.g: CTO',
+		},
+	};
+
 	return (
 		<>
-			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
+			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
 					controls
 					loop
-					className="shrink-0 shadow-lg"
+					className={styles.video}
 					style={{
-						width: '500px',
+						width: '100%',
 						aspectRatio: '16 / 9',
 					}}
 					durationInFrames={120}
@@ -109,70 +189,17 @@ export default function BrandedTalkPage() {
 					component={TalkBranded}
 					inputProps={props}
 				/>
+				<div className={styles.formMobile}>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
+				</div>
+				<Code composition="TalkBranded" params={props} />
+			</section>
 
-				<Form>
-					<ColorInput
-						setValue={setBackgroundColor}
-						value={backgroundColor}
-						label="Background Color (optional)"
-					/>
-					<Input setValue={setTitle} value={title} label="Title" />
-					<Input
-						setValue={setLogoUrl}
-						value={logoUrl}
-						label="Logo"
-						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
-					/>
-					<Input
-						setValue={setSpeakerPicture}
-						value={speakerPicture}
-						label="Speaker picture"
-						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
-					/>
-					<Input
-						setValue={setSpeakersNames}
-						value={speakersNames}
-						label="Name"
-					/>
-					<Input
-						setValue={setSpeakersCompany}
-						value={speakersCompany}
-						label="Company (optional)"
-						placeholder="e.g: Zenika"
-					/>
-					<Input
-						setValue={setSpeakersJob}
-						value={speakersJob}
-						label="Job (optional)"
-						placeholder="e.g: CTO"
-					/>
-					<InputDate
-						setValue={setStartingDate}
-						value={startingDate}
-						label="Starting Date"
-					/>
-					<InputDate
-						setValue={setEndingDate}
-						value={endingDate}
-						label="Ending Date (optional)"
-					/>
-					<SelectInput
-						setValue={setRecurringDay}
-						value={recurringDay}
-						label="Recurring day"
-						options={['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi']}
-					/>
-					<Input
-						setValue={setLocation}
-						value={location}
-						label="Location (optional)"
-						placeholder="e.g: 5 Place Jules Ferry, 69006."
-					/>
-					<CopyUrlButton urlParameters={encodedParams} />
-				</Form>
-			</div>
-
-			<Code composition="TalkBranded" params={props} />
+			<ResizeWrapper resizableSide="left">
+				<Sidebar>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
+				</Sidebar>
+			</ResizeWrapper>
 		</>
 	);
 }

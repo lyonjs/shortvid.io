@@ -4,10 +4,14 @@ import {Player} from '@remotion/player';
 
 import {Sponsor} from '../../../../remotion/compositions/templates/sponsor/Sponsor';
 import {Code} from '../../../../src/app/Code';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {Form, Input} from '../../../../src/app/forms/input';
+import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
+import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
+import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
+
+import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function SponsorPage() {
 	const [companyName, setCompanyName] = useInputChange<string>(
@@ -28,17 +32,45 @@ export default function SponsorPage() {
 
 	const props = {companyName, backgroundImg, sponsorLogo, sponsorLocalisation};
 	const encodedParams = encodeObjectValues(props);
+
+	const formConfig: FormConfigProps = {
+		companyName: {
+			state: companyName,
+			setState: setCompanyName,
+			label: 'Company',
+			component: Input,
+		},
+		backgroundImg: {
+			state: backgroundImg,
+			setState: setBackgroundImg,
+			label: 'Background image url',
+			component: Input,
+		},
+		sponsorLogo: {
+			state: sponsorLogo,
+			setState: setSponsorLogo,
+			label: 'Sponsor logo url',
+			component: Input,
+		},
+		sponsorLocalisation: {
+			state: sponsorLocalisation,
+			setState: setSponsorLocalisation,
+			label: 'Sponsor localisation',
+			component: Input,
+		},
+	};
+
 	return (
 		<>
-			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
+			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
 					controls
 					loop
-					className="shrink-0 shadow-lg"
+					className={styles.video}
 					style={{
-						width: '400px',
-						height: '400px',
+						width: '100%',
+						aspectRatio: '1/1',
 					}}
 					durationInFrames={200}
 					compositionWidth={1200}
@@ -47,33 +79,17 @@ export default function SponsorPage() {
 					component={Sponsor}
 					inputProps={props}
 				/>
+				<div className={styles.formMobile}>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
+				</div>
+				<Code composition="Sponsor" params={props} />
+			</section>
 
-				<Form>
-					<Input
-						setValue={setCompanyName}
-						value={companyName}
-						label="Company"
-					/>
-					<Input
-						setValue={setBackgroundImg}
-						value={backgroundImg}
-						label="Background image url"
-					/>
-					<Input
-						setValue={setSponsorLogo}
-						value={sponsorLogo}
-						label="Sponsor logo url"
-					/>
-					<Input
-						setValue={setSponsorLocalisation}
-						value={sponsorLocalisation}
-						label="Sponsor localisation"
-					/>
-					<CopyUrlButton urlParameters={encodedParams} />
-				</Form>
-			</div>
-
-			<Code composition="Sponsor" params={props} />
+			<ResizeWrapper resizableSide="left">
+				<Sidebar>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
+				</Sidebar>
+			</ResizeWrapper>
 		</>
 	);
 }

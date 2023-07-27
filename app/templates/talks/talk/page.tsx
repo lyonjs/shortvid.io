@@ -4,10 +4,14 @@ import {Player} from '@remotion/player';
 
 import {Talk} from '../../../../remotion/compositions/templates/talk/Talk';
 import {Code} from '../../../../src/app/Code';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
-import {Form, Input} from '../../../../src/app/forms/input';
+import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
+import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
+import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
+
+import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function TalkPage() {
 	const [talkTitle, setTalkTitle] = useInputChange<string>(
@@ -27,6 +31,7 @@ export default function TalkPage() {
 		undefined,
 		'backgroundImg',
 	);
+
 	const props = {
 		talkTitle,
 		speakersNames,
@@ -38,17 +43,58 @@ export default function TalkPage() {
 
 	const encodedParams = encodeObjectValues(props);
 
+	const formConfig: FormConfigProps = {
+		speakersNames: {
+			state: speakersNames,
+			setState: setSpeakersNames,
+			label: 'Name',
+			component: Input,
+		},
+		speakerPicture: {
+			state: speakerPicture,
+			setState: setSpeakerPicture,
+			label: 'Speaker picture',
+			component: Input,
+		},
+		talkTitle: {
+			state: talkTitle,
+			setState: setTalkTitle,
+			label: 'Title',
+			component: Input,
+		},
+		titleSize: {
+			state: titleSize,
+			setState: setTitleSize,
+			label: 'Title size',
+			component: Input,
+		},
+		backgroundImg: {
+			state: backgroundImg,
+			setState: setBackgroundImg,
+			label: 'Background Image url',
+			component: Input,
+		},
+		eventLogo: {
+			state: eventLogo,
+			setState: setEventLogo,
+			label: 'Logo (optional)',
+			component: Input,
+			placeholder:
+				'e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4',
+		},
+	};
+
 	return (
 		<>
-			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
+			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
 					controls
 					loop
-					className="shrink-0 shadow-lg"
+					className={styles.video}
 					style={{
-						width: '400px',
-						height: '400px',
+						width: '100%',
+						aspectRatio: '1/1',
 					}}
 					durationInFrames={120}
 					compositionWidth={1200}
@@ -57,36 +103,17 @@ export default function TalkPage() {
 					component={Talk}
 					inputProps={props}
 				/>
+				<div className={styles.formMobile}>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
+				</div>
+				<Code composition="Talk" params={props} />
+			</section>
 
-				<Form>
-					<Input
-						setValue={setSpeakerPicture}
-						value={speakerPicture}
-						label="Speaker picture"
-					/>
-					<Input
-						setValue={setSpeakersNames}
-						value={speakersNames}
-						label="Name"
-					/>
-					<Input setValue={setTalkTitle} value={talkTitle} label="Title" />
-					<Input setValue={setTitleSize} value={titleSize} label="Title size" />
-					<Input
-						setValue={setBackgroundImg}
-						value={backgroundImg}
-						label="Background Image url"
-					/>
-					<Input
-						setValue={setEventLogo}
-						value={eventLogo}
-						label="Logo (optional)"
-						placeholder="e.g: https://avatars.githubusercontent.com/u/929689?s=200&v=4"
-					/>
-					<CopyUrlButton urlParameters={encodedParams} />
-				</Form>
-			</div>
-
-			<Code composition="Talk" params={props} />
+			<ResizeWrapper resizableSide="left">
+				<Sidebar>
+					<Form formConfig={formConfig} encodedParams={encodedParams} />
+				</Sidebar>
+			</ResizeWrapper>
 		</>
 	);
 }

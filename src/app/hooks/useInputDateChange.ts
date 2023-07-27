@@ -15,11 +15,14 @@ export const useInputDateChange = <ValueType extends Date | undefined>(
 	const [value, setValue] = useState<ValueType>(
 		formatedInitialValue as ValueType,
 	);
-	const onValueChange = useCallback((event: FormEvent<HTMLInputElement>) => {
-		const newValue = new Date(event.currentTarget.value);
-		newValue.setSeconds(0, 0);
-		setValue(newValue as unknown as ValueType);
-	}, []);
+	const onValueChange = useCallback(
+		(event: FormEvent<HTMLInputElement | HTMLSelectElement>) => {
+			const newValue = new Date(event.currentTarget.value);
+			newValue.setSeconds(0, 0);
+			setValue(newValue as unknown as ValueType);
+		},
+		[],
+	);
 
 	return [value, onValueChange] as const;
 };

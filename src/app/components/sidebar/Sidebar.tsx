@@ -1,17 +1,13 @@
 'use client';
 
-import {useContext} from 'react';
+import {cloneElement, ReactElement, useContext} from 'react';
 import {Icon} from '@iconify/react';
 
-import {SidebarContext} from '../../../../context/SidebarContext';
+import {SidebarContext} from '../../../context/SidebarContext';
 
-import {Footer} from './Footer';
-import {Header} from './Header';
-import {Nav} from './Nav';
+import styles from '../../../../styles/app/components/sidebar/sidebar.module.css';
 
-import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
-
-export const Sidebar = () => {
+export const Sidebar: React.FC<{children: ReactElement}> = ({children}) => {
 	const {expanded, setExpanded} = useContext(SidebarContext);
 
 	return (
@@ -20,9 +16,7 @@ export const Sidebar = () => {
 			aria-expanded={expanded}
 			aria-label="sidebar"
 		>
-			<Header expanded={expanded} />
-			<Nav expanded={expanded} />
-			<Footer expanded={expanded} />
+			{cloneElement(children, {expanded})}
 			<button
 				type="button"
 				aria-label="foldButton"

@@ -4,12 +4,16 @@ import {Player} from '@remotion/player';
 
 import {Event} from '../../../../remotion/compositions/templates/event/Event';
 import {Code} from '../../../../src/app/Code';
-import {CopyUrlButton} from '../../../../src/app/CopyUrlButton';
+import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
+import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {FontPicker} from '../../../../src/app/forms/FontPicker';
-import {Form, Input} from '../../../../src/app/forms/input';
+import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
+import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {useSelectedFont} from '../../../../src/app/hooks/useSelectedFont';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
+
+import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function EventPage() {
 	const [title, setTitle] = useInputChange<string>('Apéro JS 🍾', 'title');
@@ -36,17 +40,46 @@ export default function EventPage() {
 	};
 	const encodedParams = encodeObjectValues(props);
 
+	const formConfig: FormConfigProps = {
+		title: {
+			state: title,
+			setState: setTitle,
+			label: 'Speaker name',
+			component: Input,
+		},
+		lottieAsset: {
+			state: lottieAsset,
+			setState: setLottieAsset,
+			label: 'Lottie asset (ex: lf20_UDstUT)',
+			component: Input,
+			placeholder: 'lf20_UDstUT',
+		},
+		paillettesAsset: {
+			state: paillettesAsset,
+			setState: setPaillettesAsset,
+			label: 'Paillettes asset (ex: lf20_tiviyc3p)',
+			component: Input,
+			placeholder: 'lf20_tiviyc3p',
+		},
+		backgroundImg: {
+			state: backgroundImg,
+			setState: setBackgroundImg,
+			label: 'Background image url',
+			component: Input,
+		},
+	};
+
 	return (
-		<>
-			<div className="flex flex-col pb-4 justify-center items-center md:flex-row md:items-start">
+		<div className={styles.mainContent}>
+			<section className={styles.videoContainer}>
 				<Player
 					autoPlay
 					controls
 					loop
-					className="shrink-0 shadow-lg"
+					className={styles.video}
 					style={{
-						width: '400px',
-						height: '400px',
+						width: '100%',
+						aspectRatio: '1/1',
 					}}
 					durationInFrames={180}
 					compositionWidth={1200}
@@ -55,30 +88,21 @@ export default function EventPage() {
 					component={Event}
 					inputProps={props}
 				/>
+				<div className={styles.formMobile}>
+					<Form formConfig={formConfig} encodedParams={encodedParams}>
+						<FontPicker label="Font family" />
+					</Form>
+				</div>
+				<Code composition="Event" params={props} />
+			</section>
 
-				<Form>
-					<FontPicker label="Font family" />
-					<Input setValue={setTitle} value={title} label="SpeakerName" />
-					<Input
-						setValue={setLottieAsset}
-						value={lottieAsset}
-						label="LottieAsset (lf20_UDstUT)"
-					/>
-					<Input
-						setValue={setPaillettesAsset}
-						value={paillettesAsset}
-						label="PaillettesAsset (lf20_tiviyc3p)"
-					/>
-					<Input
-						setValue={setBackgroundImg}
-						value={backgroundImg}
-						label="Background image url"
-					/>
-					<CopyUrlButton urlParameters={encodedParams} />
-				</Form>
-			</div>
-
-			<Code composition="Event" params={props} />
-		</>
+			<ResizeWrapper resizableSide="left">
+				<Sidebar>
+					<Form formConfig={formConfig} encodedParams={encodedParams}>
+						<FontPicker label="Font family" />
+					</Form>
+				</Sidebar>
+			</ResizeWrapper>
+		</div>
 	);
 }

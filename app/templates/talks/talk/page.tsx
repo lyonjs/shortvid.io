@@ -104,14 +104,24 @@ export default function TalkPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form data={props} compositionId="Test" formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId="Test"
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</div>
 				<Code composition="Talk" params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form data={props} compositionId="Talk" formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId="Talk"
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</Sidebar>
 			</ResizeWrapper>
 		</>

@@ -7,9 +7,9 @@ import {
 } from '../hooks/useGenerateVideo';
 import {QueryParams} from '../utils/formatUrlWithQuery';
 
-import {GenerateButton} from './GenerateButton';
 import {InputProps} from './input';
 import {InputDateProps} from './inputDate';
+import {RenderButton} from './RenderButton';
 import {SelectInputProps} from './selectInput';
 
 import styles from '../../../styles/app/common/form.module.css';
@@ -66,7 +66,7 @@ export const Form: React.FC<{
 					);
 				})}
 				{children}
-				<GenerateButton
+				<RenderButton
 					compositionId={compositionId}
 					isLoading={isLoading}
 					videoUrl={videoUrl}

@@ -24,14 +24,12 @@
 		}
 	}
 
-	&[data-position='left'] {
-		&.folded {
-			max-width: 110px;
-			min-width: 110px;
+	&.folded {
+		max-width: 110px;
+		min-width: 110px;
 
-			> span {
-				display: none;
-			}
+		> span {
+			display: none;
 		}
 	}
 }

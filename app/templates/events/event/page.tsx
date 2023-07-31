@@ -69,6 +69,8 @@ export default function EventPage() {
 		},
 	};
 
+	const compositionId = 'Event';
+
 	return (
 		<div className={styles.mainContent}>
 			<section className={styles.videoContainer}>
@@ -89,16 +91,26 @@ export default function EventPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					>
 						<FontPicker label="Font family" />
 					</Form>
 				</div>
-				<Code composition="Event" params={props} />
+				<Code composition={compositionId} params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					>
 						<FontPicker label="Font family" />
 					</Form>
 				</Sidebar>

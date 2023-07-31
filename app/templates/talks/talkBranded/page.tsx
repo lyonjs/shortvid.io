@@ -170,6 +170,8 @@ export default function BrandedTalkPage() {
 		},
 	};
 
+	const compositionId = 'TalkBranded';
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -190,14 +192,24 @@ export default function BrandedTalkPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</div>
-				<Code composition="TalkBranded" params={props} />
+				<Code composition={compositionId} params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</Sidebar>
 			</ResizeWrapper>
 		</>

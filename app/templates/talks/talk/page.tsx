@@ -84,6 +84,8 @@ export default function TalkPage() {
 		},
 	};
 
+	const compositionId = 'Talk';
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -106,19 +108,19 @@ export default function TalkPage() {
 				<div className={styles.formMobile}>
 					<Form
 						data={props}
-						compositionId="Test"
+						compositionId={compositionId}
 						formConfig={formConfig}
 						encodedParams={encodedParams}
 					/>
 				</div>
-				<Code composition="Talk" params={props} />
+				<Code composition={compositionId} params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
 					<Form
 						data={props}
-						compositionId="Talk"
+						compositionId={compositionId}
 						formConfig={formConfig}
 						encodedParams={encodedParams}
 					/>

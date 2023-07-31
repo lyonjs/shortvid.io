@@ -93,6 +93,19 @@ export default function LayersPage() {
 		},
 	};
 
+	const compositionId = () => {
+		switch (mode) {
+			case 'one':
+				return 'LayerOneSpeaker';
+				break;
+			case 'two':
+				return 'LayerTwoSpeaker';
+				break;
+			case 'full':
+				return 'LayerFullScreen';
+		}
+	};
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -114,7 +127,7 @@ export default function LayersPage() {
 				<div className={styles.formMobile}>
 					<Form
 						data={props}
-						compositionId={mode}
+						compositionId={compositionId()}
 						formConfig={formConfig}
 						encodedParams={encodedParams}
 					>
@@ -130,7 +143,7 @@ export default function LayersPage() {
 				<Sidebar>
 					<Form
 						data={props}
-						compositionId={mode}
+						compositionId={compositionId()}
 						formConfig={formConfig}
 						encodedParams={encodedParams}
 					>

@@ -41,6 +41,8 @@ export default function SpotlightNewSponsorPage() {
 		},
 	};
 
+	const compositionId = 'SpotlightNewSponsor';
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -61,15 +63,25 @@ export default function SpotlightNewSponsorPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</div>
 
-				<Code composition="SpotlightNewSponsor" params={props} />
+				<Code composition={compositionId} params={props} />
 			</section>
 
 			<ResizeWrapper resizableSide="left">
 				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</Sidebar>
 			</ResizeWrapper>
 		</>

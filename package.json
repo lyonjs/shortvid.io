@@ -68,6 +68,7 @@
 		"eslint-plugin-simple-import-sort": "10.0.0",
 		"husky": "8.0.3",
 		"jest-environment-jsdom": "29.6.2",
+		"jest-fetch-mock": "^3.0.3",
 		"lodash": "4.17.21",
 		"postcss": "8.4.27",
 		"postcss-nested": "6.0.1",

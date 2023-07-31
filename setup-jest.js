@@ -1,3 +1,5 @@
+require('jest-fetch-mock').enableMocks();
+
 // This is necessary due to lack of implementation in JSDOM.
 // Check this link for more information : https://jestjs.io/docs/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
 Object.defineProperty(window, 'matchMedia', {

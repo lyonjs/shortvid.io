@@ -21,14 +21,15 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 	return (
 		<div className={styles.generateBtnContainer}>
 			{error && <p className={styles.error}>{error}</p>}
-			<input
+			<button
 				disabled={isLoading}
 				type="submit"
 				className={`${buttonStyles.btn} ${buttonStyles.btnPrimary} ${
 					isLoading ? buttonStyles.disabled : ''
 				}`}
-				value="Generate Video"
-			/>
+			>
+				Generate Video
+			</button>
 			{isLoading && (
 				<span className={`${buttonStyles.btn} ${buttonStyles.btnLoading}`}>
 					Loading <Loader />

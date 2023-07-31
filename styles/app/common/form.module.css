@@ -19,6 +19,6 @@
 	.error {
 		text-align: center;
 		font-size: 0.8rem;
-		color: #df2147;
+		color: var(--color-error);
 	}
 }

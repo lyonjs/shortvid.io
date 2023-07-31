@@ -18,23 +18,26 @@ describe('<RenderButton />', () => {
 				error={error}
 			/>,
 		);
-
-		const generateButton = screen.getByRole('button', {
-			name: 'Generate Video',
-		});
-
-		expect(generateButton).toBeVisible();
 	};
 
 	it('should render the component', () => {
 		customRenderButton(false, undefined, undefined);
+
+		const generateButton = screen.getByRole('button', {
+			name: 'Generate Video',
+		});
+		expect(generateButton).toBeVisible();
 	});
 
 	it('should be loading', () => {
 		customRenderButton(true, undefined, undefined);
 
+		const generateButton = screen.getByRole('button', {
+			name: 'Generate Video',
+		});
 		const loader = screen.getByText('Loading');
 
+		expect(generateButton).toBeVisible();
 		expect(loader).toBeVisible();
 	});
 
@@ -44,10 +47,14 @@ describe('<RenderButton />', () => {
 
 		customRenderButton(false, videoUrl, undefined);
 
+		const generateButton = screen.getByRole('button', {
+			name: 'Generate Video',
+		});
 		const downloadButton = screen.getByRole('link', {
 			name: 'Download',
 		});
 
+		expect(generateButton).toBeVisible();
 		expect(downloadButton).toBeVisible();
 		expect(downloadButton).toHaveAttribute('href', videoUrl);
 	});
@@ -56,8 +63,12 @@ describe('<RenderButton />', () => {
 		const errorMessage = 'Error while generating the video';
 		customRenderButton(false, undefined, errorMessage);
 
+		const generateButton = screen.getByRole('button', {
+			name: 'Generate Video',
+		});
 		const error = screen.getByText(errorMessage);
 
+		expect(generateButton).toBeVisible();
 		expect(error).toBeVisible();
 	});
 });

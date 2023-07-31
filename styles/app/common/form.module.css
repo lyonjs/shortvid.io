@@ -1,6 +1,6 @@
 .videoForm {
 	z-index: 10;
-	overflow: scroll;
+	overflow-y: auto;
 
 	label {
 		margin-bottom: 10px;

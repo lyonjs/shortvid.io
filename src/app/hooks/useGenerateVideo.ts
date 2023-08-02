@@ -36,7 +36,8 @@ export const useGenerateVideo: (
 			})
 			.catch((err) => {
 				console.error(err);
-				setError('Error while generating the video');
+				const generateInstance = videoUrl ? 're' : '';
+				setError(`Error while ${generateInstance}generating the video`);
 				setIsLoading(false);
 			});
 	};

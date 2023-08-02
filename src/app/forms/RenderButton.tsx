@@ -1,6 +1,5 @@
 import React from 'react';
-
-import {Loader} from '../components/Loader';
+import {Icon} from '@iconify/react';
 
 import buttonStyles from '../../../styles/app/common/buttons.module.css';
 import styles from '../../../styles/app/common/form.module.css';
@@ -20,7 +19,39 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 }) => {
 	return (
 		<div className={styles.generateBtnContainer}>
-			{error && <p className={styles.error}>{error}</p>}
+			{error && (
+				<div className={`${styles.infosCard} ${styles.error}`}>
+					<Icon className={styles.statusIcon} icon="mingcute:close-fill" />
+					<p className={styles.error}>{error}</p>
+					<p className={styles.error}>Please wait a moment, then try again.</p>
+				</div>
+			)}
+			{isLoading && (
+				<div className={`${styles.infosCard} ${styles.loading}`}>
+					<span className={`${buttonStyles.btnLoading}`}>
+						Generating the video...
+						<span className={styles.loader}></span>
+					</span>
+					<p style={{fontSize: 12, paddingTop: 5}}>
+						It can take a while so don&apos;t worry !
+					</p>
+				</div>
+			)}
+			{!isLoading && videoUrl && (
+				<div className={`${styles.infosCard} ${styles.success}`}>
+					<p>Video generated successfully !</p>
+					<Icon className={styles.statusIcon} icon="mingcute:check-fill" />
+					<a
+						href={videoUrl}
+						className={styles.download}
+						target="_blank"
+						download={compositionId}
+					>
+						Download
+						<Icon icon="ic:round-download" />
+					</a>
+				</div>
+			)}
 			<button
 				disabled={isLoading}
 				type="submit"
@@ -30,21 +61,6 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 			>
 				Generate Video
 			</button>
-			{isLoading && (
-				<span className={`${buttonStyles.btn} ${buttonStyles.btnLoading}`}>
-					Loading <Loader />
-				</span>
-			)}
-			{!isLoading && videoUrl && (
-				<a
-					href={videoUrl}
-					className={`${buttonStyles.btn} ${buttonStyles.btnValidated}`}
-					target="_blank"
-					download={compositionId}
-				>
-					Download
-				</a>
-			)}
 		</div>
 	);
 };

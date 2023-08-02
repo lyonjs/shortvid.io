@@ -50,22 +50,24 @@ export const Form: React.FC<{
 	return (
 		<>
 			<form className={styles.videoForm} onSubmit={handleSubmit}>
-				{Object.entries(formConfig).map(([key, value]) => {
-					const InputComponent = value.component;
-					const stateValue = value.state as (string & Date) | undefined;
+				<div className={styles.inputs}>
+					{Object.entries(formConfig).map(([key, value]) => {
+						const InputComponent = value.component;
+						const stateValue = value.state as (string & Date) | undefined;
 
-					return (
-						<InputComponent
-							key={key}
-							value={stateValue}
-							setValue={value.setState}
-							label={value.label}
-							placeholder={value.placeholder}
-							options={value.options}
-						/>
-					);
-				})}
-				{children}
+						return (
+							<InputComponent
+								key={key}
+								value={stateValue}
+								setValue={value.setState}
+								label={value.label}
+								placeholder={value.placeholder}
+								options={value.options}
+							/>
+						);
+					})}
+					{children}
+				</div>
 				<RenderButton
 					compositionId={compositionId}
 					isLoading={isLoading}

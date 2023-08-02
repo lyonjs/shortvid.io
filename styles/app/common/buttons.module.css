@@ -1,7 +1,6 @@
 .btn {
 	position: relative;
 	width: 100%;
-	margin-top: 1rem;
 	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
 	transition: all 0.3s ease;
@@ -54,7 +53,7 @@
 		font-weight: 600;
 		padding: 0 1rem;
 		width: max-content;
-		margin: 0 auto;
+		margin: 1rem auto;
 
 		&::after {
 			content: '';
@@ -79,11 +78,10 @@
 	}
 
 	&Loading {
-		background: var(--color-error);
-		color: var(--color-btn-text);
+		width: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 		gap: 20px;
 		pointer-events: none;
 
@@ -94,13 +92,20 @@
 	}
 
 	&Validated {
-		background: var(--color-success);
-		color: var(--color-btn-text);
+		color: var(--color-success);
 		font-size: 1rem;
 		font-weight: 700;
 
+		&::after {
+			background: var(--color-success);
+		}
+
 		&:hover {
-			background: var(--color-success-drak);
+			color: var(--color-success);
+
+			&::after {
+				background: var(--color-success);
+			}
 		}
 	}
 }

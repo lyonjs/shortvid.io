@@ -22,7 +22,6 @@
 
 	--color-error: #d73453;
 	--color-success: #2f942f;
-	--color-success-drak: #5c9a5c;
 
 	--color-primary: var(--purple-200);
 	--color-link: var(--purple-100);
@@ -51,9 +50,10 @@
 }
 
 [data-theme='light'] {
-	--color-error: #df2147;
-	--color-success: #089408;
-	--color-success-drak: #067206;
+	--color-error: #f3ad9e;
+	--color-error-text: #772119;
+	--color-success: #d3e6d0;
+	--color-success-text: #336b2e;
 
 	--color-primary: var(--purple-300);
 	--color-link: var(--purple-300);

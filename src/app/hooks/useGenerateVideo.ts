@@ -21,7 +21,7 @@ export const useGenerateVideo: (
 		setIsLoading(true);
 		setError(undefined);
 
-		fetch(`http://localhost:8000/${compositionId}`, {
+		fetch(`https://api.shortvid.io/${compositionId}`, {
 			headers: {
 				'Content-Type': 'application/json',
 			},

@@ -22,6 +22,8 @@
 
 	--color-error: #d73453;
 	--color-success: #2f942f;
+	--color-success-text: white;
+	--color-success-btn-back: #d3e6d0;
 
 	--color-primary: var(--purple-200);
 	--color-link: var(--purple-100);
@@ -54,6 +56,7 @@
 	--color-error-text: #772119;
 	--color-success: #d3e6d0;
 	--color-success-text: #336b2e;
+	--color-success-btn-back: #438a3e;
 
 	--color-primary: var(--purple-300);
 	--color-link: var(--purple-300);

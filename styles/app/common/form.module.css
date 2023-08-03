@@ -27,25 +27,31 @@
 			margin-bottom: 1rem;
 
 			.statusIcon {
-				position: absolute;
-				right: 10px;
-				top: 10px;
+				display: inline-block;
 				width: 20px;
 				height: 20px;
+				margin-right: 5px;
 			}
 
 			.download {
-				color: var(--color-success-text);
+				background: var(--color-success-btn-back);
+				color: var(--color-btn-text);
 				font-weight: bold;
 				display: flex;
 				align-items: center;
+				justify-content: center;
 				gap: 0.5rem;
-				width: max-content;
-				margin-top: 0.5rem;
+				margin-top: 1rem;
+				padding: 0.5rem 1.5rem;
+				width: 100%;
 
 				> svg {
 					width: 20px;
 					height: 20px;
+				}
+
+				&:hover {
+					background: var(--color-success-text);
 				}
 			}
 
@@ -56,6 +62,7 @@
 			}
 
 			&.success {
+				font-size: 0.8rem;
 				background: var(--color-success);
 				color: var(--color-success-text);
 			}

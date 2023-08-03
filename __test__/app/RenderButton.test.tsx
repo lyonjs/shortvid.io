@@ -35,7 +35,7 @@ describe('<RenderButton />', () => {
 		const generateButton = screen.getByRole('button', {
 			name: 'Generate Video',
 		});
-		const loader = screen.getByText('Loading');
+		const loader = screen.getByText('Generating the video...');
 
 		expect(generateButton).toBeVisible();
 		expect(loader).toBeVisible();

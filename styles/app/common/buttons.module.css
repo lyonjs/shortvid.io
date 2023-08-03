@@ -90,22 +90,4 @@
 			height: 25px;
 		}
 	}
-
-	&Validated {
-		color: var(--color-success);
-		font-size: 1rem;
-		font-weight: 700;
-
-		&::after {
-			background: var(--color-success);
-		}
-
-		&:hover {
-			color: var(--color-success);
-
-			&::after {
-				background: var(--color-success);
-			}
-		}
-	}
 }

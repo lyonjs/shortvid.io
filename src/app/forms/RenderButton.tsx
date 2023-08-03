@@ -21,16 +21,17 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 		<div className={styles.generateBtnContainer}>
 			{error && (
 				<div className={`${styles.infosCard} ${styles.error}`}>
-					<Icon className={styles.statusIcon} icon="mingcute:close-fill" />
-					<p className={styles.error}>{error}</p>
+					<p className={styles.error}>
+						<Icon className={styles.statusIcon} icon="mingcute:close-fill" />
+						{error}
+					</p>
 					<p className={styles.error}>Please wait a moment, then try again.</p>
 				</div>
 			)}
 			{isLoading && (
 				<div className={`${styles.infosCard} ${styles.loading}`}>
-					<span className={`${buttonStyles.btnLoading}`}>
+					<span className={buttonStyles.btnLoading}>
 						Generating the video...
-						<span className={styles.loader}></span>
 					</span>
 					<p style={{fontSize: 12, paddingTop: 5}}>
 						It can take a while so don&apos;t worry !
@@ -39,11 +40,13 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 			)}
 			{!isLoading && videoUrl && (
 				<div className={`${styles.infosCard} ${styles.success}`}>
-					<p>Video generated successfully !</p>
-					<Icon className={styles.statusIcon} icon="mingcute:check-fill" />
+					<p>
+						<Icon className={styles.statusIcon} icon="mingcute:check-fill" />
+						Video generated successfully !
+					</p>
 					<a
 						href={videoUrl}
-						className={styles.download}
+						className={`${styles.download} ${buttonStyles.btn}`}
 						target="_blank"
 						download={compositionId}
 					>

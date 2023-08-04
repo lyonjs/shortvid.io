@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(
 	cors({
-		origin: [/.*.shortvid\.io$/, /shortvid-git-.*-lyonjs.vercel.app$/ ],
+		origin: [/.*.shortvid\.io$/, /shortvid-git-.*-lyonjs.vercel.app$/],
 		optionsSuccessStatus: 200,
 		methods: 'POST',
 	}),

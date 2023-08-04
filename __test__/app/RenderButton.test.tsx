@@ -1,3 +1,4 @@
+import React from 'react';
 import {render, screen} from '@testing-library/react';
 
 import '@testing-library/jest-dom';
@@ -16,6 +17,7 @@ describe('<RenderButton />', () => {
 				videoUrl={videoUrl}
 				isLoading={isLoading}
 				error={error}
+				onSubmit={jest.fn()}
 			/>,
 		);
 	};

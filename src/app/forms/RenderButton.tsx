@@ -1,4 +1,3 @@
-import React from 'react';
 import {Icon} from '@iconify/react';
 
 import buttonStyles from '../../../styles/app/common/buttons.module.css';
@@ -9,6 +8,7 @@ type RenderButtonProps = {
 	isLoading: boolean;
 	videoUrl: string | undefined;
 	error: string | undefined;
+	onSubmit: (event: React.MouseEvent) => void;
 };
 
 export const RenderButton: React.FC<RenderButtonProps> = ({
@@ -16,6 +16,7 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 	videoUrl,
 	error,
 	compositionId,
+	onSubmit,
 }) => {
 	return (
 		<div className={styles.generateBtnContainer}>
@@ -61,6 +62,7 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 				className={`${buttonStyles.btn} ${buttonStyles.btnPrimary} ${
 					isLoading ? buttonStyles.disabled : ''
 				}`}
+				onClick={onSubmit}
 			>
 				Generate Video
 			</button>

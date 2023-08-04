@@ -42,14 +42,14 @@ export const Form: React.FC<{
 		compositionId,
 	);
 
-	const handleSubmit: React.FormEventHandler = (event) => {
+	const handleSubmit = (event: React.MouseEvent<Element, MouseEvent>) => {
 		event.preventDefault();
 		getVideoLink();
 	};
 
 	return (
 		<>
-			<form className={styles.videoForm} onSubmit={handleSubmit}>
+			<form className={styles.videoForm}>
 				<div className={styles.inputs}>
 					{Object.entries(formConfig).map(([key, value]) => {
 						const InputComponent = value.component;
@@ -68,13 +68,14 @@ export const Form: React.FC<{
 					})}
 					{children}
 				</div>
-				<RenderButton
-					compositionId={compositionId}
-					isLoading={isLoading}
-					videoUrl={videoUrl}
-					error={error}
-				/>
 			</form>
+			<RenderButton
+				compositionId={compositionId}
+				isLoading={isLoading}
+				videoUrl={videoUrl}
+				error={error}
+				onSubmit={handleSubmit}
+			/>
 			{encodedParams && <CopyUrlButton urlParameters={encodedParams} />}
 		</>
 	);

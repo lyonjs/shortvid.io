@@ -7,106 +7,104 @@
 	label {
 		margin-bottom: 10px;
 	}
+}
 
-	.generateBtnContainer {
-		position: sticky;
-		bottom: 0;
-		padding-top: 15px;
-		background: var(--color-background);
+.generateBtnContainer {
+	padding-top: 0.5rem;
+	background: var(--color-background);
 
-		.infosCard {
-			position: relative;
-			display: block;
+	.infosCard {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: max-content;
+		overflow: hidden;
+		padding: 30px 20px;
+		border-radius: 5px;
+		background: var(--switch-background);
+		z-index: 0;
+		margin-bottom: 1rem;
+
+		.statusIcon {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-right: 5px;
+		}
+
+		.download {
+			background: var(--color-success-btn-back);
+			color: var(--color-btn-text);
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			margin-top: 1rem;
+			padding: 0.5rem 1.5rem;
 			width: 100%;
-			height: max-content;
-			overflow: hidden;
-			padding: 30px 20px;
-			border-radius: 5px;
-			background: var(--switch-background);
-			z-index: 0;
-			margin-bottom: 1rem;
 
-			.statusIcon {
-				display: inline-block;
+			> svg {
 				width: 20px;
 				height: 20px;
-				margin-right: 5px;
 			}
 
-			.download {
-				background: var(--color-success-btn-back);
-				color: var(--color-btn-text);
-				font-weight: bold;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 0.5rem;
-				margin-top: 1rem;
-				padding: 0.5rem 1.5rem;
-				width: 100%;
+			&:hover {
+				background: var(--color-success-text);
+			}
+		}
 
-				> svg {
-					width: 20px;
-					height: 20px;
-				}
+		&.error {
+			font-size: 0.8rem;
+			background: var(--color-error);
+			color: var(--color-error-text);
+		}
 
-				&:hover {
-					background: var(--color-success-text);
-				}
+		&.success {
+			font-size: 0.8rem;
+			background: var(--color-success);
+			color: var(--color-success-text);
+		}
+
+		&.loading {
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -2;
+				left: -150%;
+				top: -150%;
+				width: 400%;
+				height: 400%;
+				background-color: var(--switch-background);
+				background-repeat: no-repeat;
+				background-size:
+					50% 50%,
+					50% 50%;
+				background-position:
+					0 0,
+					100% 0,
+					100% 100%,
+					0 100%;
+				background-image: linear-gradient(
+						var(--switch-background),
+						var(--switch-background)
+					),
+					linear-gradient(var(--color-primary), var(--color-primary)),
+					linear-gradient(var(--switch-background), var(--switch-background)),
+					linear-gradient(var(--color-primary), var(--color-primary));
+				animation: rotate 3s linear infinite;
 			}
 
-			&.error {
-				font-size: 0.8rem;
-				background: var(--color-error);
-				color: var(--color-error-text);
-			}
-
-			&.success {
-				font-size: 0.8rem;
-				background: var(--color-success);
-				color: var(--color-success-text);
-			}
-
-			&.loading {
-				&::before {
-					content: '';
-					position: absolute;
-					z-index: -2;
-					left: -150%;
-					top: -150%;
-					width: 400%;
-					height: 400%;
-					background-color: var(--switch-background);
-					background-repeat: no-repeat;
-					background-size:
-						50% 50%,
-						50% 50%;
-					background-position:
-						0 0,
-						100% 0,
-						100% 100%,
-						0 100%;
-					background-image: linear-gradient(
-							var(--switch-background),
-							var(--switch-background)
-						),
-						linear-gradient(var(--color-primary), var(--color-primary)),
-						linear-gradient(var(--switch-background), var(--switch-background)),
-						linear-gradient(var(--color-primary), var(--color-primary));
-					animation: rotate 3s linear infinite;
-				}
-
-				&::after {
-					content: '';
-					position: absolute;
-					z-index: -1;
-					left: 3px;
-					top: 3px;
-					width: calc(100% - 6px);
-					height: calc(100% - 6px);
-					background: var(--switch-background);
-					border-radius: 5px;
-				}
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				left: 3px;
+				top: 3px;
+				width: calc(100% - 6px);
+				height: calc(100% - 6px);
+				background: var(--switch-background);
+				border-radius: 5px;
 			}
 		}
 	}

@@ -1,29 +1,6 @@
 .btn {
-	position: relative;
-	width: 100%;
-	padding: 0.5rem 1rem;
-	border-radius: 0.5rem;
-	transition: all 0.3s ease;
-	text-align: center;
-	border: 3px solid transparent;
-
-	&:hover {
-		cursor: pointer;
-	}
-
-	&.disabled {
-		background: var(--grey-500);
-		color: var(--grey-100);
-
-		&:hover {
-			cursor: not-allowed;
-			background: var(--grey-500);
-			color: var(--grey-100);
-			border: 3px solid transparent;
-		}
-	}
-
 	&Primary {
+		width: 100%;
 		color: var(--color-btn-text);
 		background: var(--color-primary);
 		font-size: 1rem;
@@ -36,6 +13,7 @@
 	}
 
 	&Secondary {
+		width: 100%;
 		color: var(--color-link);
 		background: var(--color-background);
 		border: 3px solid var(--color-link);
@@ -49,11 +27,11 @@
 	}
 
 	&Text {
-		display: block;
 		font-weight: 600;
 		padding: 0 1rem;
 		width: max-content;
 		margin: 1rem auto;
+		color: var(--color-text);
 
 		&::after {
 			content: '';

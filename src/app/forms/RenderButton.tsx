@@ -44,7 +44,7 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 				>
 					<a
 						href={videoUrl}
-						className={`${styles.download} ${buttonStyles.btn}`}
+						className={styles.download}
 						target="_blank"
 						download={compositionId}
 					>
@@ -56,9 +56,7 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 			<button
 				disabled={isLoading}
 				type="submit"
-				className={`${buttonStyles.btn} ${buttonStyles.btnPrimary} ${
-					isLoading ? buttonStyles.disabled : ''
-				}`}
+				className={buttonStyles.btnPrimary}
 				onClick={onSubmit}
 			>
 				Generate Video

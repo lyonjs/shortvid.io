@@ -19,7 +19,7 @@ export const FullScreenButtons: React.FC<{
 		<>
 			<button
 				type="button"
-				className={`${styles.btn} ${styles.btnText}`}
+				className={styles.btnText}
 				onClick={() => {
 					window.open(fullScreenUrl, '_blank');
 				}}
@@ -28,7 +28,7 @@ export const FullScreenButtons: React.FC<{
 			</button>
 			<button
 				type="button"
-				className={`${styles.btn} ${styles.btnSecondary}`}
+				className={styles.btnSecondary}
 				onClick={onClickHandler}
 			>
 				{copied ? 'Copied ✅' : `Copy Fullscreen URL 🔗`}

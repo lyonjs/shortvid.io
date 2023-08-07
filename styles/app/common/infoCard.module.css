@@ -37,10 +37,10 @@
 			content: '';
 			position: absolute;
 			z-index: -2;
-			left: -150%;
-			top: -150%;
-			width: 400%;
-			height: 400%;
+			left: -200%;
+			top: -200%;
+			width: 500%;
+			height: 500%;
 			background-color: var(--switch-background);
 			background-repeat: no-repeat;
 			background-size:

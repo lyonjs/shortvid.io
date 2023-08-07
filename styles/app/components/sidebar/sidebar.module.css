@@ -26,6 +26,7 @@
 	.burgerBtn {
 		position: relative;
 		display: none;
+		padding: 0;
 
 		> svg,
 		> svg path {

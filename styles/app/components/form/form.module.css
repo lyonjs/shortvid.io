@@ -1,3 +1,10 @@
+.videoForm,
+.generateBtnContainer {
+	button {
+		transition: all 0.3s ease;
+	}
+}
+
 .videoForm {
 	z-index: 10;
 	overflow-y: auto;
@@ -14,7 +21,7 @@
 	background: var(--color-background);
 
 	.download {
-		background: var(--color-success-btn-back);
+		background: var(--color-download-btn-background);
 		color: var(--color-btn-text);
 		font-weight: bold;
 		display: flex;

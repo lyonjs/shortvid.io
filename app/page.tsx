@@ -1,83 +1,12 @@
 'use client';
 
-import React from 'react';
-import {Player} from '@remotion/player';
 import Image from 'next/image';
 
-import {
-	Event,
-	EventProps,
-} from '../remotion/compositions/templates/event/Event';
-import {
-	Meetup,
-	MeetupProps,
-} from '../remotion/compositions/templates/meetup/Meetup';
-import {
-	Sponsor,
-	SponsorProps,
-} from '../remotion/compositions/templates/sponsor/Sponsor';
-import {Talk, TalkProps} from '../remotion/compositions/templates/talk/Talk';
+import {Header} from '../src/app/components/sidebar/navigation/Header';
 import {Footer} from '../src/app/Footer';
-import RootLayout from '../src/app/RootLayout';
 
-type TemplateTypes =
-	| React.FC<MeetupProps>
-	| React.FC<TalkProps>
-	| React.FC<SponsorProps>
-	| React.FC<EventProps>;
-
-interface Video {
-	id: string;
-	template: TemplateTypes;
-	params: {
-		[key: string]: string;
-	};
-}
-
-const VIDEO_LIST: Video[] = [
-	{
-		id: 'Meetup announce',
-		template: Meetup,
-		params: {
-			title: 'LyonJS de la rentrée 🦁',
-			date: '28 septembre 2022',
-			backgroundImg:
-				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
-		},
-	},
-	{
-		id: 'Talk announce',
-		template: Talk,
-		params: {
-			speakersNames: 'Julien Sulpis',
-			talkTitle:
-				'REX : Mise en place d’un Design System en web components chez Groupama',
-			backgroundImg:
-				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
-			speakerPicture: 'https://avatars2.githubusercontent.com/u/22420399?v=4',
-			titleSize: '50',
-		},
-	},
-	{
-		id: 'Sponsor',
-		template: Sponsor,
-		params: {
-			companyName: 'Indy',
-			sponsorLocalisation: '94 Rue Robert',
-			backgroundImg:
-				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
-			sponsorLogo:
-				'https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg',
-		},
-	},
-	{
-		id: 'Event',
-		template: Event,
-		params: {
-			title: 'Apéro JS 🍾',
-		},
-	},
-];
+import buttonStyles from '../styles/app/common/buttons.module.css';
+import styles from '../styles/app/layout/landing.module.css';
 
 const PARTNERS = [
 	{
@@ -100,52 +29,85 @@ const PARTNERS = [
 export default function Home() {
 	return (
 		<>
-			<RootLayout>
-				<h2 className="text-2xl pb-4 font-bold">
-					What is the goal of this projet ?
-				</h2>
+			<Header expanded={true} className={styles.landingHeader}>
+				<a
+					href="/templates/talks/talk"
+					className={`${buttonStyles.btn} ${buttonStyles.btnPrimary}`}
+				>
+					Get Started
+				</a>
+			</Header>
+			<main className={styles.homeMain}>
+				<div className={styles.hero}>
+					<h1>Simplify your social media communications</h1>
+					<h2>
+						Choose among various templates to customise with your assets and
+						contents.
+						<br />
+						Then generate and download your video in one click
+					</h2>
 
-				<p className="mt-2">
-					For the moment, templates are not very generic and are branded LyonJS
-					but{' '}
-					<strong>
-						we have the ambition to provide much more generic templates that
-						could be used by anyone who wants to generate videos for all the
-						meetups, conferences or companies that want to use them.
-					</strong>
-				</p>
+					<div className={styles.cta}>
+						<a
+							href="/templates/talks/talk"
+							className={`${buttonStyles.btn} ${buttonStyles.btnSecondary}`}
+						>
+							Get Started
+						</a>
+						<a
+							href="https://github.com/lyonjs/shortvid.io/blob/main/CONTRIBUTING.md"
+							className={`${buttonStyles.btn} ${buttonStyles.btnText}`}
+						>
+							Contributing
+						</a>
+					</div>
+				</div>
 
-				<p className="mt-2 font-bold">
-					If you are a meetup or conference organizer and you are interested in
-					this tool and you would like to have some help,{' '}
-					<a href="https://github.com/lyonjs/shortvid.io/discussions/categories/conference-meetup-communication">
-						don&lsquo;t hesitate to open a discussion on our Github and we will
-						see what can be done.
-					</a>
-				</p>
+				{/* <h2 className="text-2xl pb-4 font-bold"> */}
+				{/* 	What is the goal of this projet ? */}
+				{/* </h2> */}
 
-				<p className="mt-2">
-					We know it&lsquo;s a pain to generate all the communication materials
-					for an event, so this project allows us to generate everything from
-					configuration JSON.
-				</p>
+				{/* <p className="mt-2"> */}
+				{/* 	For the moment, templates are not very generic and are branded LyonJS */}
+				{/* 	but{' '} */}
+				{/* 	<strong> */}
+				{/* 		we have the ambition to provide much more generic templates that could */}
+				{/* 		be used by anyone who wants to generate videos for all the meetups, */}
+				{/* 		conferences or companies that want to use them. */}
+				{/* 	</strong> */}
+				{/* </p> */}
 
-				<p className="mt-2">
-					We can generate <strong>MP4 videos, Gif, JPEG, PNG</strong> in a
-					programmatic way. Some common uses:
-				</p>
+				{/* <p className="mt-2 font-bold"> */}
+				{/* 	If you are a meetup or conference organizer and you are interested in */}
+				{/* 	this tool and you would like to have some help,{' '} */}
+				{/* 	<a href="https://github.com/lyonjs/shortvid.io/discussions/categories/conference-meetup-communication"> */}
+				{/* 		don&lsquo;t hesitate to open a discussion on our Github and we will */}
+				{/* 		see what can be done. */}
+				{/* 	</a> */}
+				{/* </p> */}
 
-				<ul className="mt-2 list-disc pl-8">
-					<li>generate a video to announce your sponsors</li>
-					<li>
-						generate images for the display screens of your conference venues.
-					</li>
-					<li>
-						generate videos for your speakers to announce their participation
-						and talks.
-					</li>
-					<li>And many more ideas...</li>
-				</ul>
+				{/* <p className="mt-2"> */}
+				{/* 	We know it&lsquo;s a pain to generate all the communication materials */}
+				{/* 	for an event, so this project allows us to generate everything from */}
+				{/* 	configuration JSON. */}
+				{/* </p> */}
+
+				{/* <p className="mt-2"> */}
+				{/* 	We can generate <strong>MP4 videos, Gif, JPEG, PNG</strong> in a */}
+				{/* 	programmatic way. Some common uses: */}
+				{/* </p> */}
+
+				{/* <ul className="mt-2 list-disc pl-8"> */}
+				{/* 	<li>generate a video to announce your sponsors</li> */}
+				{/* 	<li> */}
+				{/* 		generate images for the display screens of your conference venues. */}
+				{/* 	</li> */}
+				{/* 	<li> */}
+				{/* 		generate videos for your speakers to announce their participation and */}
+				{/* 		talks. */}
+				{/* 	</li> */}
+				{/* 	<li>And many more ideas...</li> */}
+				{/* </ul> */}
 
 				<h2 className="text-2xl pb-4 pt-8 font-bold">
 					Conference and partner events
@@ -174,36 +136,8 @@ export default function Home() {
 					Here you can find a set of example videos
 				</h2>
 
-				<section className="grid grid-cols-1 md:grid-cols-2 gap-12 py-4">
-					{VIDEO_LIST.map((video) => {
-						return (
-							<article key={video.id}>
-								<header>
-									<h3 className="text-xl pb-3 text-primary font-bold">
-										{video.id}
-									</h3>
-								</header>
-								<Player
-									autoPlay
-									loop
-									className="shrink-0 shadow-lg"
-									style={{
-										width: '100%',
-										height: '450px',
-									}}
-									durationInFrames={270}
-									compositionWidth={1200}
-									compositionHeight={1200}
-									fps={30}
-									component={video.template as never}
-									inputProps={video.params}
-								/>
-							</article>
-						);
-					})}
-				</section>
-			</RootLayout>
-			<Footer />
+				<Footer />
+			</main>
 		</>
 	);
 }

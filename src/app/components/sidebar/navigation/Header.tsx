@@ -10,15 +10,16 @@ const wordmarkFont = MuseoModerno({
 	subsets: ['latin'],
 });
 
-export const Header: React.FC<{expanded: boolean; children?: ReactNode}> = ({
-	expanded,
-	children,
-}) => {
+export const Header: React.FC<{
+	expanded: boolean;
+	className?: string;
+	children?: ReactNode;
+}> = ({expanded, className, children}) => {
 	return (
-		<header>
+		<header className={className}>
 			<a href="/" className={styles.logoLink}>
 				<Logo />
-				{expanded && <h1 className={wordmarkFont.className}>Shortvid.io</h1>}
+				{expanded && <h2 className={wordmarkFont.className}>Shortvid.io</h2>}
 			</a>
 			{children}
 		</header>

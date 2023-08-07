@@ -14,7 +14,7 @@ import styles from '../../styles/app/layout/main.module.css';
 
 export default function RootLayout({children}: {children: ReactNode}) {
 	return (
-		<main className="mx-auto p-4">
+		<main className={styles.main}>
 			<div className={styles.sidebarLayout}>
 				<SidebarProvider>
 					<div className={styles.navigationSidebar}>

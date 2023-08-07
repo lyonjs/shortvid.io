@@ -5,8 +5,8 @@
 	align-items: center;
 	text-align: center;
 	gap: 50px;
-	margin: 40px;
-	padding-top: 40px;
+	margin: 2rem;
+	padding-top: 1.5rem;
 	border-top: 1px solid transparent;
 	border-image: linear-gradient(
 			90deg,

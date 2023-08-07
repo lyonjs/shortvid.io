@@ -7,6 +7,15 @@
 	}
 }
 
+.logoLink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	font-size: 1.6rem;
+	color: var(--color-link);
+}
+
 .sidebar {
 	container: sidebar / size;
 	position: relative;
@@ -74,15 +83,6 @@
 		padding-bottom: 15px;
 		border-bottom: 1px solid transparent;
 		border-image: var(--separator);
-
-		.logoLink {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 10px;
-			font-size: 1.6rem;
-			color: var(--color-link);
-		}
 	}
 
 	footer {

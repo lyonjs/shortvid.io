@@ -12,7 +12,7 @@ import {InputDateProps} from './inputDate';
 import {RenderButton} from './RenderButton';
 import {SelectInputProps} from './selectInput';
 
-import styles from '../../../styles/app/common/form.module.css';
+import styles from '../../../styles/app/components/form/form.module.css';
 
 type FormInputTypes =
 	| React.FC<InputProps>

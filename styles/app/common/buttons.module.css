@@ -26,7 +26,7 @@
 	&Primary {
 		color: var(--color-btn-text);
 		background: var(--color-primary);
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-weight: 700;
 
 		&:hover {
@@ -74,20 +74,6 @@
 			&::after {
 				background: var(--color-link);
 			}
-		}
-	}
-
-	&Loading {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 20px;
-		pointer-events: none;
-
-		svg {
-			width: 25px;
-			height: 25px;
 		}
 	}
 }

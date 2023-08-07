@@ -1,6 +1,6 @@
 import React, {ChangeEventHandler} from 'react';
 
-import styles from '../../../styles/app/common/inputs.module.css';
+import styles from '../../../styles/app/components/form/inputs.module.css';
 
 export interface SelectInputProps {
 	value?: string;

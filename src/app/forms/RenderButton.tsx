@@ -1,7 +1,9 @@
 import {Icon} from '@iconify/react';
 
+import {InfoCard} from './InfoCard';
+
 import buttonStyles from '../../../styles/app/common/buttons.module.css';
-import styles from '../../../styles/app/common/form.module.css';
+import styles from '../../../styles/app/components/form/form.module.css';
 
 type RenderButtonProps = {
 	compositionId: string;
@@ -21,30 +23,25 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 	return (
 		<div className={styles.generateBtnContainer}>
 			{error && (
-				<div className={`${styles.infosCard} ${styles.error}`}>
-					<p className={styles.error}>
-						<Icon className={styles.statusIcon} icon="mingcute:close-fill" />
-						{error}
-					</p>
-					<p className={styles.error}>Please wait a moment, then try again.</p>
-				</div>
+				<InfoCard
+					infoStatus="error"
+					textContent={error}
+					iconId="mingcute:close-fill"
+				>
+					<span>Please wait a moment, then try again.</span>
+				</InfoCard>
 			)}
 			{isLoading && (
-				<div className={`${styles.infosCard} ${styles.loading}`}>
-					<span className={buttonStyles.btnLoading}>
-						Generating the video...
-					</span>
-					<p style={{fontSize: 12, paddingTop: 5}}>
-						It can take a while so don&apos;t worry !
-					</p>
-				</div>
+				<InfoCard infoStatus="loading" textContent="Generating the video...">
+					<span>It can take a while so don&apos;t worry !</span>
+				</InfoCard>
 			)}
 			{!isLoading && videoUrl && (
-				<div className={`${styles.infosCard} ${styles.success}`}>
-					<p>
-						<Icon className={styles.statusIcon} icon="mingcute:check-fill" />
-						Video generated successfully !
-					</p>
+				<InfoCard
+					infoStatus="success"
+					textContent="Video generated successfully !"
+					iconId="mingcute:check-fill"
+				>
 					<a
 						href={videoUrl}
 						className={`${styles.download} ${buttonStyles.btn}`}
@@ -54,7 +51,7 @@ export const RenderButton: React.FC<RenderButtonProps> = ({
 						Download
 						<Icon icon="ic:round-download" />
 					</a>
-				</div>
+				</InfoCard>
 			)}
 			<button
 				disabled={isLoading}

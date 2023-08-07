@@ -23,15 +23,6 @@
 			height: 100%;
 		}
 	}
-
-	&.folded {
-		max-width: 110px;
-		min-width: 110px;
-
-		> span {
-			display: none;
-		}
-	}
 }
 
 @media screen and (max-width: 570px) {

@@ -42,6 +42,16 @@
 		top: 1rem;
 		height: max-content;
 		width: max-content;
+		z-index: 10;
+
+		.folded {
+			max-width: 110px;
+			min-width: 110px;
+
+			> span {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -64,5 +74,9 @@
 @media screen and (max-width: 570px) {
 	.sidebarLayout {
 		flex-direction: column;
+
+		.navigationSidebar {
+			display: none;
+		}
 	}
 }

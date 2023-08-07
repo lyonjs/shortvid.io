@@ -12,6 +12,7 @@ import {
 import {SidebarContext} from '../../../context/SidebarContext';
 
 import styles from '../../../../styles/app/components/sidebar/resizeWrapper.module.css';
+import mainStyle from '../../../../styles/app/layout/main.module.css';
 
 export const DEFAULT_SIDEBAR_WIDTH = 315;
 export const MIN_SIDEBAR_WIDTH = 220;
@@ -82,7 +83,7 @@ export const ResizeWrapper: React.FC<{
 
 	return (
 		<div
-			className={`${styles.resizeWrapper} ${!expanded ? styles.folded : ''}`}
+			className={`${styles.resizeWrapper} ${!expanded ? mainStyle.folded : ''}`}
 			style={{width: `${sidebarWidth}px`}}
 			data-testid="resizableWrapper"
 			data-resizableside={resizableSide}

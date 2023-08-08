@@ -15,17 +15,20 @@
 	--purple-700: #240046;
 	--purple-800: #10002b;
 	--purple-900: #0e001c;
-	/* Grey variables */
+	/* Grey variants */
 	--grey-50: #eaeaea;
 	--grey-100: #bab6be;
 	--grey-500: #565656;
+	/* Status variants*/
+	--red-50: #f3ad9e;
+	--red-200: #d73453;
+	--red-300: #772119;
+	--green-50: #d3e6d0;
+	--green-100: #2f942f;
+	--green-200: #438a3e;
+	--green-300: #336b2e;
 
-	--color-error: #d73453;
-	--color-error-text: white;
-	--color-success: #2f942f;
-	--color-success-text: white;
-	--color-download-btn-background: #d3e6d0;
-
+	/* App variables */
 	--color-primary: var(--purple-200);
 	--color-link: var(--purple-100);
 	--color-background: var(--purple-900);
@@ -34,12 +37,20 @@
 
 	--color-btn-text: var(--purple-900);
 	--color-btn-background: white;
+	--color-btn-disabled-background: var(--grey-500);
+	--color-btn-disabled-text: var(--grey-100);
 
 	--color-input-background: #eaeaea;
 
 	--switch-background: var(--purple-500);
 	--switch-unselected: var(--grey-100);
 	--switch-border: var(--grey-100);
+
+	--color-error: var(--red-200);
+	--color-error-text: white;
+	--color-success: var(--green-100);
+	--color-success-text: white;
+	--color-download-btn-background: var(--green-50);
 
 	--color-logo: white;
 
@@ -53,11 +64,11 @@
 }
 
 [data-theme='light'] {
-	--color-error: #f3ad9e;
-	--color-error-text: #772119;
-	--color-success: #d3e6d0;
-	--color-success-text: #336b2e;
-	--color-download-btn-background: #438a3e;
+	--color-error: var(--red-50);
+	--color-error-text: var(--red-300);
+	--color-success: var(--green-50);
+	--color-success-text: var(--green-300);
+	--color-download-btn-background: var(--green-200);
 
 	--color-primary: var(--purple-300);
 	--color-link: var(--purple-300);
@@ -106,13 +117,13 @@ button {
 	}
 
 	&[disabled] {
-		background: var(--grey-500);
-		color: var(--grey-100);
+		background: var(--color-btn-disabled-background);
+		color: var(--color-btn-disabled-text);
 
 		&:hover {
 			cursor: not-allowed;
-			background: var(--grey-500);
-			color: var(--grey-100);
+			background: var(--color-btn-disabled-background);
+			color: var(--color-btn-disabled-text);
 			border: 3px solid transparent;
 		}
 	}

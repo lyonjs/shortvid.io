@@ -41,13 +41,16 @@
 		}
 	}
 
-	.navigationSidebar {
+	.navigationSidebar,
+	.formSidebar {
 		position: sticky;
 		top: 1rem;
 		height: max-content;
 		width: max-content;
 		z-index: 10;
+	}
 
+	.navigationSidebar {
 		.folded {
 			max-width: 110px;
 			min-width: 110px;

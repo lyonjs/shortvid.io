@@ -139,21 +139,23 @@ export default function LayersPage() {
 				</div>
 			</section>
 
-			<ResizeWrapper resizableSide="left">
-				<Sidebar>
-					<Form
-						data={props}
-						compositionId={compositionId()}
-						formConfig={formConfig}
-						encodedParams={encodedParams}
-					>
-						<FullScreenButtons
-							compositionName="Layer"
-							fullScreenUrl={layerUrl}
-						/>
-					</Form>
-				</Sidebar>
-			</ResizeWrapper>
+			<div className={styles.formSidebar}>
+				<ResizeWrapper resizableSide="left">
+					<Sidebar>
+						<Form
+							data={props}
+							compositionId={compositionId()}
+							formConfig={formConfig}
+							encodedParams={encodedParams}
+						>
+							<FullScreenButtons
+								compositionName="Layer"
+								fullScreenUrl={layerUrl}
+							/>
+						</Form>
+					</Sidebar>
+				</ResizeWrapper>
+			</div>
 		</>
 	);
 }

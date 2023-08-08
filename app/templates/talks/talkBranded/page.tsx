@@ -202,16 +202,18 @@ export default function BrandedTalkPage() {
 				<Code composition={compositionId} params={props} />
 			</section>
 
-			<ResizeWrapper resizableSide="left">
-				<Sidebar>
-					<Form
-						data={props}
-						compositionId={compositionId}
-						formConfig={formConfig}
-						encodedParams={encodedParams}
-					/>
-				</Sidebar>
-			</ResizeWrapper>
+			<div className={styles.formSidebar}>
+				<ResizeWrapper resizableSide="left">
+					<Sidebar>
+						<Form
+							data={props}
+							compositionId={compositionId}
+							formConfig={formConfig}
+							encodedParams={encodedParams}
+						/>
+					</Sidebar>
+				</ResizeWrapper>
+			</div>
 		</>
 	);
 }

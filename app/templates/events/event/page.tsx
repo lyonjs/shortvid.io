@@ -103,18 +103,20 @@ export default function EventPage() {
 				<Code composition={compositionId} params={props} />
 			</section>
 
-			<ResizeWrapper resizableSide="left">
-				<Sidebar>
-					<Form
-						data={props}
-						compositionId={compositionId}
-						formConfig={formConfig}
-						encodedParams={encodedParams}
-					>
-						<FontPicker label="Font family" />
-					</Form>
-				</Sidebar>
-			</ResizeWrapper>
+			<div className={styles.formSidebar}>
+				<ResizeWrapper resizableSide="left">
+					<Sidebar>
+						<Form
+							data={props}
+							compositionId={compositionId}
+							formConfig={formConfig}
+							encodedParams={encodedParams}
+						>
+							<FontPicker label="Font family" />
+						</Form>
+					</Sidebar>
+				</ResizeWrapper>
+			</div>
 		</div>
 	);
 }

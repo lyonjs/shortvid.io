@@ -34,8 +34,7 @@ export const useGenerateVideo: (
 				setVideoUrl(fileURL);
 				setIsLoading(false);
 			})
-			.catch((err) => {
-				console.error(err);
+			.catch(() => {
 				setError(`Error while generating the video`);
 				setIsLoading(false);
 			});

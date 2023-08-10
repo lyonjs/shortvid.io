@@ -1,4 +1,12 @@
 .btn {
+	position: relative;
+	display: block;
+	padding: 0.4rem 1.5rem;
+	border-radius: 0.5rem;
+	border: 3px solid transparent;
+	font-size: 1rem;
+	text-align: center;
+
 	&Primary {
 		width: 100%;
 		color: var(--color-btn-text);

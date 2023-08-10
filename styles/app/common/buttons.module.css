@@ -40,6 +40,7 @@
 		width: max-content;
 		margin: 1rem auto;
 		color: var(--color-text);
+		transition: all 0.3s ease;
 
 		&::after {
 			content: '';

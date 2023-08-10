@@ -38,7 +38,7 @@ export default function Home() {
 				</a>
 			</Header>
 			<main className={styles.homeMain}>
-				<div className={styles.hero}>
+				<section className={styles.hero}>
 					<h1>Simplify your social media communications</h1>
 					<h2>
 						Choose among various templates to customise with your assets and
@@ -61,7 +61,7 @@ export default function Home() {
 							Contributing
 						</a>
 					</div>
-				</div>
+				</section>
 
 				<h2 className="text-2xl pb-4 font-bold">
 					What is the goal of this projet ?

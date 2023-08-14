@@ -1,13 +1,17 @@
 import React, {ReactNode} from 'react';
 
+import {useSelectedFont} from '../../../src/app/hooks/useSelectedFont';
+
 export const Text: React.FC<{
 	children: ReactNode;
 	style?: React.CSSProperties;
 }> = ({children, style}) => {
+	const {selectedFont} = useSelectedFont();
+
 	return (
 		<span
 			style={{
-				fontFamily: 'inherit',
+				fontFamily: selectedFont,
 				height: 'max-content',
 				margin: 0,
 				padding: '0 20px',

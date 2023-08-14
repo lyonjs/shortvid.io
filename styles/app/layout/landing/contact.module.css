@@ -1,0 +1,28 @@
+.contactContainer {
+	margin-top: 5rem;
+	padding: 5rem;
+
+	h3 {
+		font-weight: 700;
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2.5rem;
+
+		.contact {
+			display: flex;
+			gap: 1rem;
+
+			img {
+				border-radius: 50%;
+			}
+		}
+	}
+}

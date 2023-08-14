@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import {Contact} from '../src/app/components/landingPage/Contact';
 import {Footer} from '../src/app/components/landingPage/Footer';
 import {Hero} from '../src/app/components/landingPage/Hero';
 import {Header} from '../src/app/components/sidebar/navigation/Header';
@@ -114,6 +115,8 @@ export default function Home() {
 				<h2 className="text-2xl pb-4 pt-8 font-bold">
 					Here you can find a set of example videos
 				</h2>
+
+				<Contact />
 
 				<Footer />
 			</main>

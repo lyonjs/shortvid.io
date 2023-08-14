@@ -26,6 +26,7 @@
 	.burgerBtn {
 		position: relative;
 		display: none;
+		padding: 0;
 
 		> svg,
 		> svg path {
@@ -192,10 +193,6 @@
 	.sidebar {
 		&[aria-expanded='false'] {
 			max-width: 500px;
-		}
-
-		form {
-			width: 100%;
 		}
 
 		.foldButton {

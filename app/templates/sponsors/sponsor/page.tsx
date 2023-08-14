@@ -60,6 +60,8 @@ export default function SponsorPage() {
 		},
 	};
 
+	const compositionId = 'Sponsor';
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -80,16 +82,28 @@ export default function SponsorPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</div>
-				<Code composition="Sponsor" params={props} />
+				<Code composition={compositionId} params={props} />
 			</section>
 
-			<ResizeWrapper resizableSide="left">
-				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
-				</Sidebar>
-			</ResizeWrapper>
+			<div className={styles.formSidebar}>
+				<ResizeWrapper resizableSide="left">
+					<Sidebar>
+						<Form
+							data={props}
+							compositionId={compositionId}
+							formConfig={formConfig}
+							encodedParams={encodedParams}
+						/>
+					</Sidebar>
+				</ResizeWrapper>
+			</div>
 		</>
 	);
 }

@@ -1,6 +1,6 @@
 import React, {FormEvent} from 'react';
 
-import styles from '../../../styles/app/common/inputs.module.css';
+import styles from '../../../styles/app/components/form/inputs.module.css';
 
 export interface InputProps {
 	value?: string;

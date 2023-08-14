@@ -1,13 +1,18 @@
 import React, {FormEvent, ReactNode} from 'react';
 
 import {CopyUrlButton} from '../CopyUrlButton';
+import {
+	dataForGenerationType,
+	useGenerateVideo,
+} from '../hooks/useGenerateVideo';
 import {QueryParams} from '../utils/formatUrlWithQuery';
 
 import {InputProps} from './input';
 import {InputDateProps} from './inputDate';
+import {RenderButton} from './RenderButton';
 import {SelectInputProps} from './selectInput';
 
-import styles from '../../../styles/app/common/form.module.css';
+import styles from '../../../styles/app/components/form/form.module.css';
 
 type FormInputTypes =
 	| React.FC<InputProps>
@@ -26,30 +31,51 @@ export type FormConfigProps = {
 };
 
 export const Form: React.FC<{
+	compositionId: string;
+	data: dataForGenerationType;
 	formConfig: FormConfigProps;
 	encodedParams?: QueryParams;
 	children?: ReactNode;
-}> = ({formConfig, encodedParams, children}) => {
+}> = ({compositionId, data, formConfig, encodedParams, children}) => {
+	const {getVideoLink, isLoading, videoUrl, error} = useGenerateVideo(
+		data,
+		compositionId,
+	);
+
+	const handleSubmit = (event: React.MouseEvent<Element, MouseEvent>) => {
+		event.preventDefault();
+		getVideoLink();
+	};
+
 	return (
 		<>
 			<form className={styles.videoForm}>
-				{Object.entries(formConfig).map(([key, value]) => {
-					const InputComponent = value.component;
-					const stateValue = value.state as (string & Date) | undefined;
+				<div className={styles.inputs}>
+					{Object.entries(formConfig).map(([key, value]) => {
+						const InputComponent = value.component;
+						const stateValue = value.state as (string & Date) | undefined;
 
-					return (
-						<InputComponent
-							key={key}
-							value={stateValue}
-							setValue={value.setState}
-							label={value.label}
-							placeholder={value.placeholder}
-							options={value.options}
-						/>
-					);
-				})}
-				{children}
+						return (
+							<InputComponent
+								key={key}
+								value={stateValue}
+								setValue={value.setState}
+								label={value.label}
+								placeholder={value.placeholder}
+								options={value.options}
+							/>
+						);
+					})}
+					{children}
+				</div>
 			</form>
+			<RenderButton
+				compositionId={compositionId}
+				isLoading={isLoading}
+				videoUrl={videoUrl}
+				error={error}
+				onSubmit={handleSubmit}
+			/>
 			{encodedParams && <CopyUrlButton urlParameters={encodedParams} />}
 		</>
 	);

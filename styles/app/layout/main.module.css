@@ -27,6 +27,10 @@
 			.formMobile {
 				display: none;
 				width: 100%;
+
+				button[type='submit'] {
+					margin-bottom: 1rem;
+				}
 			}
 
 			h2 {
@@ -37,13 +41,16 @@
 		}
 	}
 
-	.navigationSidebar {
+	.navigationSidebar,
+	.formSidebar {
 		position: sticky;
 		top: 1rem;
 		height: max-content;
 		width: max-content;
 		z-index: 10;
+	}
 
+	.navigationSidebar {
 		.folded {
 			max-width: 110px;
 			min-width: 110px;

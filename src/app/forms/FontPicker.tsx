@@ -3,7 +3,7 @@ import {ChangeEventHandler} from 'react';
 import {top250} from '../../data/fonts';
 import {useSelectedFont} from '../hooks/useSelectedFont';
 
-import styles from '../../../styles/app/common/inputs.module.css';
+import styles from '../../../styles/app/components/form/inputs.module.css';
 
 export const FontPicker: React.FC<{
 	label: string;

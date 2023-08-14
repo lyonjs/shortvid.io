@@ -1,4 +1,4 @@
-import {CompositionThumbnailMock} from '../mocks/sideBarCompositionThumbnailMock';
+import {CompositionThumbnailMock} from '../mocks/sideBarCompositionThumbnail.mock';
 import {sideBarNavConfigMock} from '../mocks/sideBarConfig.mock';
 
 import {render, screen} from '@testing-library/react';

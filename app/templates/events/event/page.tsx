@@ -6,7 +6,6 @@ import {Event} from '../../../../remotion/compositions/templates/event/Event';
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {FontPicker} from '../../../../src/app/forms/FontPicker';
 import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
@@ -69,6 +68,8 @@ export default function EventPage() {
 		},
 	};
 
+	const compositionId = 'Event';
+
 	return (
 		<div className={styles.mainContent}>
 			<section className={styles.videoContainer}>
@@ -89,20 +90,28 @@ export default function EventPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
-						<FontPicker label="Font family" />
-					</Form>
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</div>
-				<Code composition="Event" params={props} />
+				<Code composition={compositionId} params={props} />
 			</section>
 
-			<ResizeWrapper resizableSide="left">
-				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
-						<FontPicker label="Font family" />
-					</Form>
-				</Sidebar>
-			</ResizeWrapper>
+			<div className={styles.formSidebar}>
+				<ResizeWrapper resizableSide="left">
+					<Sidebar>
+						<Form
+							data={props}
+							compositionId={compositionId}
+							formConfig={formConfig}
+							encodedParams={encodedParams}
+						/>
+					</Sidebar>
+				</ResizeWrapper>
+			</div>
 		</div>
 	);
 }

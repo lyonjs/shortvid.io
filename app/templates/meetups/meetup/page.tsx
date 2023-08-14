@@ -53,6 +53,8 @@ export default function MeetupPage() {
 		},
 	};
 
+	const compositionId = 'Meetup';
+
 	return (
 		<div className={styles.mainContent}>
 			<section className={styles.videoContainer}>
@@ -73,15 +75,27 @@ export default function MeetupPage() {
 					inputProps={props}
 				/>
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
+					<Form
+						data={props}
+						compositionId={compositionId}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					/>
 				</div>
-				<Code composition="Meetup" params={props} />
+				<Code composition={compositionId} params={props} />
 			</section>
-			<ResizeWrapper resizableSide="left">
-				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams} />
-				</Sidebar>
-			</ResizeWrapper>
+			<div className={styles.formSidebar}>
+				<ResizeWrapper resizableSide="left">
+					<Sidebar>
+						<Form
+							data={props}
+							compositionId={compositionId}
+							formConfig={formConfig}
+							encodedParams={encodedParams}
+						/>
+					</Sidebar>
+				</ResizeWrapper>
+			</div>
 		</div>
 	);
 }

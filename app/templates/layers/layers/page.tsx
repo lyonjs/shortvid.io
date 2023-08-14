@@ -93,6 +93,19 @@ export default function LayersPage() {
 		},
 	};
 
+	const compositionId = () => {
+		switch (mode) {
+			case 'one':
+				return 'LayerOneSpeaker';
+				break;
+			case 'two':
+				return 'LayerTwoSpeaker';
+				break;
+			case 'full':
+				return 'LayerFullScreen';
+		}
+	};
+
 	return (
 		<>
 			<section className={styles.videoContainer}>
@@ -112,7 +125,12 @@ export default function LayersPage() {
 				/>
 
 				<div className={styles.formMobile}>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
+					<Form
+						data={props}
+						compositionId={compositionId()}
+						formConfig={formConfig}
+						encodedParams={encodedParams}
+					>
 						<FullScreenButtons
 							compositionName="Layer"
 							fullScreenUrl={layerUrl}
@@ -121,16 +139,23 @@ export default function LayersPage() {
 				</div>
 			</section>
 
-			<ResizeWrapper resizableSide="left">
-				<Sidebar>
-					<Form formConfig={formConfig} encodedParams={encodedParams}>
-						<FullScreenButtons
-							compositionName="Layer"
-							fullScreenUrl={layerUrl}
-						/>
-					</Form>
-				</Sidebar>
-			</ResizeWrapper>
+			<div className={styles.formSidebar}>
+				<ResizeWrapper resizableSide="left">
+					<Sidebar>
+						<Form
+							data={props}
+							compositionId={compositionId()}
+							formConfig={formConfig}
+							encodedParams={encodedParams}
+						>
+							<FullScreenButtons
+								compositionName="Layer"
+								fullScreenUrl={layerUrl}
+							/>
+						</Form>
+					</Sidebar>
+				</ResizeWrapper>
+			</div>
 		</>
 	);
 }

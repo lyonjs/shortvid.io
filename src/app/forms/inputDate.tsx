@@ -1,7 +1,7 @@
 import {FormEvent} from 'react';
 import {format} from 'date-fns';
 
-import styles from '../../../styles/app/common/inputs.module.css';
+import styles from '../../../styles/app/components/form/inputs.module.css';
 
 export interface InputDateProps {
 	value?: Date;

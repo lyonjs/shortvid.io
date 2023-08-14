@@ -6,7 +6,6 @@ import {Event} from '../../../../remotion/compositions/templates/event/Event';
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
-import {FontPicker} from '../../../../src/app/forms/FontPicker';
 import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
@@ -96,9 +95,7 @@ export default function EventPage() {
 						compositionId={compositionId}
 						formConfig={formConfig}
 						encodedParams={encodedParams}
-					>
-						<FontPicker label="Font family" />
-					</Form>
+					/>
 				</div>
 				<Code composition={compositionId} params={props} />
 			</section>
@@ -111,9 +108,7 @@ export default function EventPage() {
 							compositionId={compositionId}
 							formConfig={formConfig}
 							encodedParams={encodedParams}
-						>
-							<FontPicker label="Font family" />
-						</Form>
+						/>
 					</Sidebar>
 				</ResizeWrapper>
 			</div>

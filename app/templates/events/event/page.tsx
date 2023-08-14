@@ -96,9 +96,7 @@ export default function EventPage() {
 						compositionId={compositionId}
 						formConfig={formConfig}
 						encodedParams={encodedParams}
-					>
-						<FontPicker label="Font family" />
-					</Form>
+					/>
 				</div>
 				<Code composition={compositionId} params={props} />
 			</section>
@@ -111,9 +109,7 @@ export default function EventPage() {
 							compositionId={compositionId}
 							formConfig={formConfig}
 							encodedParams={encodedParams}
-						>
-							<FontPicker label="Font family" />
-						</Form>
+						/>
 					</Sidebar>
 				</ResizeWrapper>
 			</div>

@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 
+import {Footer} from '../src/app/components/landingPage/Footer';
+import {Hero} from '../src/app/components/landingPage/Hero';
 import {Header} from '../src/app/components/sidebar/navigation/Header';
-import {Footer} from '../src/app/Footer';
 
 import buttonStyles from '../styles/app/common/buttons.module.css';
-import styles from '../styles/app/layout/landing.module.css';
+import styles from '../styles/app/layout/landing/landing.module.css';
 
 const PARTNERS = [
 	{
@@ -38,30 +39,7 @@ export default function Home() {
 				</a>
 			</Header>
 			<main className={styles.homeMain}>
-				<section className={styles.hero}>
-					<h1>Simplify your social media communications</h1>
-					<h2>
-						Choose among various templates to customise with your assets and
-						contents.
-						<br />
-						Then generate and download your video in one click
-					</h2>
-
-					<div className={styles.cta}>
-						<a
-							href="/templates/talks/talk"
-							className={`${buttonStyles.btn} ${buttonStyles.btnSecondary}`}
-						>
-							Get Started
-						</a>
-						<a
-							href="https://github.com/lyonjs/shortvid.io/blob/main/CONTRIBUTING.md"
-							className={`${buttonStyles.btn} ${buttonStyles.btnText}`}
-						>
-							Contributing
-						</a>
-					</div>
-				</section>
+				<Hero />
 
 				<h2 className="text-2xl pb-4 font-bold">
 					What is the goal of this projet ?

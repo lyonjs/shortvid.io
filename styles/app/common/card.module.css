@@ -1,12 +1,9 @@
-@property --card-gradient-angle {
-	syntax: '<angle>';
-	initial-value: 0deg;
-	inherits: false;
-}
-
 @keyframes gradient-rotate {
+	from {
+		transform: rotate(0deg);
+	}
 	to {
-		--card-gradient-angle: 360deg;
+		transform: rotate(360deg);
 	}
 }
 
@@ -15,10 +12,10 @@
 	display: block;
 	width: max-content;
 	height: max-content;
-	padding: 1rem;
-	border: 1px solid var(--grey-100);
+	padding: calc(1rem + 4px);
 	border-radius: 10px;
 	transition: all 0.3s linear;
+	overflow: hidden;
 
 	> *:not(.border) {
 		z-index: 5;
@@ -27,25 +24,27 @@
 	.border {
 		position: absolute;
 		display: block;
-		top: -1px;
-		right: -1px;
-		bottom: -1px;
-		left: -1px;
-		background-position: center center;
-		background-image: linear-gradient(
-			var(--card-gradient-angle),
+		width: 125%;
+		height: 250%;
+		top: -75%;
+		left: -12.5%;
+		background: conic-gradient(
 			var(--color-primary),
+			var(--purple-450),
 			#fff,
-			var(--purple-100),
-			var(--purple-450)
+			var(--purple-450),
+			var(--color-primary),
+			var(--purple-450),
+			#fff,
+			var(--purple-450),
+			var(--color-primary)
 		);
-		border-radius: 10px;
 		opacity: 0;
-		transition: all 0.3s linear;
 		z-index: -1;
+		transition: all 0.3s ease;
 	}
 
-	&::after {
+	&::before {
 		content: '';
 		position: absolute;
 		display: block;
@@ -53,17 +52,27 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+		background: var(--grey-50);
+		z-index: -1;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: calc(100% - 4px);
+		height: calc(100% - 4px);
+		top: 2px;
+		left: 2px;
 		background: var(--color-background);
 		z-index: -1;
-		border-radius: 9px;
+		border-radius: 8px;
 	}
 
 	&:hover {
-		border: 1px solid transparent;
-
 		.border {
-			animation: gradient-rotate 5s linear infinite;
 			opacity: 1;
+			animation: gradient-rotate 4s linear infinite;
 		}
 	}
 }

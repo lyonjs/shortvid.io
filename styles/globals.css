@@ -61,6 +61,8 @@
 			transparent
 		)
 		1;
+
+	--card-gradient-angle: 0deg;
 }
 
 [data-theme='light'] {

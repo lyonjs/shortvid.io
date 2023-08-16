@@ -28,17 +28,7 @@
 		height: 250%;
 		top: -75%;
 		left: -12.5%;
-		background: conic-gradient(
-			var(--color-primary),
-			var(--purple-450),
-			#fff,
-			var(--purple-450),
-			var(--color-primary),
-			var(--purple-450),
-			#fff,
-			var(--purple-450),
-			var(--color-primary)
-		);
+		background: var(--card-border-hover);
 		opacity: 0;
 		z-index: -1;
 		transition: all 0.3s ease;
@@ -52,7 +42,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: var(--grey-50);
+		background: var(--card-border);
 		z-index: -1;
 	}
 
@@ -64,12 +54,17 @@
 		height: calc(100% - 4px);
 		top: 2px;
 		left: 2px;
-		background: var(--color-background);
+		background: var(--card-background);
 		z-index: -1;
 		border-radius: 8px;
+		transition: all 0.3s ease;
 	}
 
 	&:hover {
+		&::after {
+			background: var(--card-background-hover);
+		}
+
 		.border {
 			opacity: 1;
 			animation: gradient-rotate 4s linear infinite;

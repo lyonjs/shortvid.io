@@ -1,9 +1,7 @@
+import {Icon} from '@iconify/react';
 import Image from 'next/image';
 
-import {IconWithCaption} from '../../../../remotion/design/molecules/IconWithCaption';
-
 import styles from '../../../../styles/app/layout/landing/contact.module.css';
-import landingStyle from '../../../../styles/app/layout/landing/landing.module.css';
 
 const contacts = [
 	{
@@ -27,12 +25,13 @@ export const Contact = () => {
 
 			<div className={styles.list}>
 				{contacts.map(({name, twitter, pictureUrl}) => (
-					<div key={name} className={`${landingStyle.card} ${styles.contact}`}>
+					<div key={name} className={styles.contact}>
 						<Image src={pictureUrl} alt={name} width={150} height={150} />
 						<div>
 							<h4>{name}</h4>
 							<a href={`https://twitter.com/${twitter}`}>
-								<IconWithCaption iconifyId="mdi:twitter" caption={twitter} />
+								<Icon icon="mdi:twitter" />
+								{twitter}
 							</a>
 						</div>
 					</div>

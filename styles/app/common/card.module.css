@@ -1,0 +1,69 @@
+@property --card-gradient-angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes gradient-rotate {
+	to {
+		--card-gradient-angle: 360deg;
+	}
+}
+
+.card {
+	position: relative;
+	display: block;
+	width: max-content;
+	height: max-content;
+	padding: 1rem;
+	border: 1px solid var(--grey-100);
+	border-radius: 10px;
+	transition: all 0.3s linear;
+
+	> *:not(.border) {
+		z-index: 5;
+	}
+
+	.border {
+		position: absolute;
+		display: block;
+		top: -1px;
+		right: -1px;
+		bottom: -1px;
+		left: -1px;
+		background-position: center center;
+		background-image: linear-gradient(
+			var(--card-gradient-angle),
+			var(--color-primary),
+			#fff,
+			var(--purple-100),
+			var(--purple-450)
+		);
+		border-radius: 10px;
+		opacity: 0;
+		transition: all 0.3s linear;
+		z-index: -1;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: var(--color-background);
+		z-index: -1;
+		border-radius: 9px;
+	}
+
+	&:hover {
+		border: 1px solid transparent;
+
+		.border {
+			animation: gradient-rotate 5s linear infinite;
+			opacity: 1;
+		}
+	}
+}

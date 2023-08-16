@@ -9,6 +9,7 @@
 	padding: 1rem clamp(1rem, 10%, 5rem);
 	border-bottom: 1px solid transparent;
 	border-image: var(--separator);
+	z-index: 10;
 
 	> a:not(:first-child) {
 		display: block;

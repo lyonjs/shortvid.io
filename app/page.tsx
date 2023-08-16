@@ -27,6 +27,11 @@ const PARTNERS = [
 		logo: '/images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
 		site: 'https://camping-speakers.fr/',
 	},
+	{
+		name: 'Volcamp',
+		logo: '/images/showcases/volcamp/volcampText.svg',
+		site: 'https://www.volcamp.io/',
+	},
 ];
 
 export default function Home() {
@@ -111,10 +116,6 @@ export default function Home() {
 						</a>
 					))}
 				</section>
-
-				<h2 className="text-2xl pb-4 pt-8 font-bold">
-					Here you can find a set of example videos
-				</h2>
 
 				<Contact />
 

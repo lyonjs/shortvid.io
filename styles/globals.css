@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+	--black: #1b1b1b;
 	/* Purple variants */
 	--purple-50: #f3e8ff;
 	--purple-100: #e0aaff;
@@ -81,6 +82,9 @@
 	);
 	--card-background: var(--purple-800);
 	--card-background-hover: var(--purple-850);
+
+	--github-card-backgroud: white;
+	--shadow: rgba(255, 255, 255, 0.5);
 }
 
 [data-theme='light'] {
@@ -122,6 +126,9 @@
 	);
 	--card-background: white;
 	--card-background-hover: white;
+
+	--github-card-backgroud: var(--black);
+	--shadow: rgba(0, 0, 0, 0.5);
 }
 
 * {

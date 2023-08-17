@@ -23,6 +23,40 @@
 
 .homeMain {
 	padding: 0 clamp(1rem, 10%, 5rem);
+
+	.github {
+		margin: 10rem auto;
+
+		> a {
+			display: block;
+			max-width: 750px;
+			min-width: 300px;
+			padding: 2rem;
+			margin: 0 auto;
+			color: var(--color-btn-text);
+			background: var(--github-card-backgroud);
+			border-radius: 10px;
+			transition: all 0.3s ease;
+
+			&:hover {
+				box-shadow: 0 0 35px var(--shadow);
+			}
+
+			h3 {
+				font-size: 2rem;
+				font-weight: 700;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				text-align: justify;
+
+				&:last-child {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 570px) {

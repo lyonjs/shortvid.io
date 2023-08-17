@@ -16,7 +16,7 @@ export const Sponsors = () => {
 		<ListBloc sectionTitle="Our Sponsors">
 			{SPONSORS.map(({name, logo, logoDark, url}) => (
 				<Link key={name} href={url} target="_blank">
-					<Card filled>
+					<Card>
 						<div className={styles.logos}>
 							<Image
 								className={styles.sponsorLogos}

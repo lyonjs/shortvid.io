@@ -33,7 +33,7 @@ export const Partners = () => {
 		<ListBloc sectionTitle="They worked with us">
 			{partners.map(({name, logo, url}) => (
 				<a key={name} href={url} target="_blank">
-					<Card filled>
+					<Card>
 						<div className={styles.logos}>
 							<Image width={300} height={300} src={logo} alt={name} />
 						</div>

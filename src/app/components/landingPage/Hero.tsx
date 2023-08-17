@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import buttonStyles from '../../../../styles/app/common/buttons.module.css';
 import styles from '../../../../styles/app/layout/landing/hero.module.css';
 
@@ -13,18 +15,18 @@ export const Hero = () => {
 			</h2>
 
 			<div className={styles.cta}>
-				<a
+				<Link
 					href="/templates/talks/talk"
 					className={`${buttonStyles.btn} ${buttonStyles.btnSecondary}`}
 				>
 					Get Started
-				</a>
-				<a
+				</Link>
+				<Link
 					href="https://github.com/lyonjs/shortvid.io/blob/main/CONTRIBUTING.md"
 					className={`${buttonStyles.btn} ${buttonStyles.btnText}`}
 				>
 					Contributing
-				</a>
+				</Link>
 			</div>
 		</section>
 	);

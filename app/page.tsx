@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {Footer} from '../src/app/components/landingPage/Footer';
 import {Hero} from '../src/app/components/landingPage/Hero';
@@ -31,12 +32,12 @@ export default function Home() {
 	return (
 		<>
 			<Header expanded={true} className={styles.landingHeader}>
-				<a
+				<Link
 					href="/templates/talks/talk"
-					className={`${buttonStyles.btn} ${buttonStyles.btnPrimary}`}
+					className={`${buttonStyles.btn} ${buttonStyles.btnPrimary} ${styles.headerCTA}`}
 				>
 					Get Started
-				</a>
+				</Link>
 			</Header>
 			<main className={styles.homeMain}>
 				<Hero />

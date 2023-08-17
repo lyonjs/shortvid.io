@@ -11,7 +11,7 @@
 	border-image: var(--separator);
 	z-index: 10;
 
-	> a:not(:first-child) {
+	.headerCTA {
 		display: block;
 		width: max-content;
 		font-size: 1rem;
@@ -24,14 +24,8 @@
 
 @media screen and (max-width: 570px) {
 	.landingHeader {
-		display: block;
-
-		> a {
-			margin: 0 auto;
-
-			&:not(:first-child) {
-				margin: 20px auto 10px;
-			}
+		h2 {
+			display: none;
 		}
 	}
 }

@@ -17,6 +17,8 @@ describe('<Footer />', () => {
 			name: 'Vercel',
 		});
 
+		const themeSwitchButtons = screen.getByRole('radiogroup');
+
 		const footer = screen.getByRole('contentinfo');
 		const copyright = screen.getByText(
 			'© Copyright 2023 LyonJs - Made with 💜 and JS',
@@ -28,7 +30,7 @@ describe('<Footer />', () => {
 		expect(vercelLink).toBeVisible();
 
 		expect(footer).toBeVisible();
-
+		expect(themeSwitchButtons).toBeVisible();
 		expect(copyright).toBeVisible();
 	});
 });

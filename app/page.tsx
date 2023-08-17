@@ -6,6 +6,7 @@ import Link from 'next/link';
 import {Contact} from '../src/app/components/landingPage/Contact';
 import {Footer} from '../src/app/components/landingPage/Footer';
 import {Hero} from '../src/app/components/landingPage/Hero';
+import {Sponsors} from '../src/app/components/landingPage/Sponsors';
 import {Header} from '../src/app/components/sidebar/navigation/Header';
 
 import buttonStyles from '../styles/app/common/buttons.module.css';
@@ -117,6 +118,7 @@ export default function Home() {
 					))}
 				</section>
 
+				<Sponsors />
 				<Contact />
 
 				<Footer />

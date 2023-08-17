@@ -15,14 +15,14 @@
 			color: var(--color-primary);
 		}
 
-				.twitter {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					gap: 0.5rem;
-					font-size: 1rem;
-					font-weight: 500;
-					color: var(--color-text);
+		.twitter {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: 1rem;
+			font-weight: 500;
+			color: var(--color-text);
 
 			> svg {
 				width: 20px;

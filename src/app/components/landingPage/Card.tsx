@@ -1,8 +1,11 @@
 import styles from '../../../../styles/app/common/card.module.css';
 
-export const Card: React.FC<{children?: React.ReactNode}> = ({children}) => {
+export const Card: React.FC<{children?: React.ReactNode; filled?: boolean}> = ({
+	children,
+	filled,
+}) => {
 	return (
-		<div className={styles.card}>
+		<div className={`${styles.card} ${filled ? styles.filled : ''}`}>
 			<span className={styles.border} />
 			{children}
 		</div>

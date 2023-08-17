@@ -17,13 +17,15 @@ export const Sponsors = () => {
 			{SPONSORS.map(({name, logo, logoDark, url}) => (
 				<Link key={name} href={url} target="_blank">
 					<Card filled>
-						<Image
-							className={styles.sponsorLogos}
-							width={300}
-							height={300}
-							src={themeName == 'dark' ? logoDark : logo}
-							alt={name}
-						/>
+						<div className={styles.logos}>
+							<Image
+								className={styles.sponsorLogos}
+								width={300}
+								height={300}
+								src={themeName == 'dark' ? logoDark : logo}
+								alt={name}
+							/>
+						</div>
 					</Card>
 				</Link>
 			))}

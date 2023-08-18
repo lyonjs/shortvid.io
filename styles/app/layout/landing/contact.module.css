@@ -33,7 +33,7 @@
 					color: var(--color-primary);
 				}
 
-				a {
+				.twitter {
 					display: flex;
 					justify-content: center;
 					align-items: center;

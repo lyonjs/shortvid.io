@@ -70,16 +70,4 @@
 			animation: gradient-rotate 4s linear infinite;
 		}
 	}
-
-	&.filled {
-		&::after {
-			background: var(--grey-10);
-		}
-
-		&:hover {
-			&::after {
-				background: var(--card-background-hover);
-			}
-		}
-	}
 }

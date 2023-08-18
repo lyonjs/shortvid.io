@@ -67,13 +67,16 @@
 	--card-border: var(--purple-700);
 	--card-border-hover: conic-gradient(
 		var(--purple-500),
-		var(--purple-600),
-		var(--purple-700),
-		var(--purple-600),
 		var(--purple-500),
 		var(--purple-600),
 		var(--purple-700),
 		var(--purple-600),
+		var(--purple-500),
+		var(--purple-500),
+		var(--purple-600),
+		var(--purple-700),
+		var(--purple-600),
+		var(--purple-500),
 		var(--purple-500)
 	);
 	--card-background: var(--purple-800);
@@ -105,13 +108,16 @@
 	--card-border: var(--grey-50);
 	--card-border-hover: conic-gradient(
 		var(--purple-100),
-		var(--purple-50),
-		#fff,
-		var(--purple-50),
 		var(--purple-100),
 		var(--purple-50),
 		#fff,
 		var(--purple-50),
+		var(--purple-100),
+		var(--purple-100),
+		var(--purple-50),
+		#fff,
+		var(--purple-50),
+		var(--purple-100),
 		var(--purple-100)
 	);
 	--card-background: white;

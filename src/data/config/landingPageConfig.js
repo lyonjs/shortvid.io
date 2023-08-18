@@ -1,4 +1,4 @@
-export const sponsors = [
+export const SPONSORS = [
 	{
 		name: 'Vercel',
 		logo: '/images/app/sponsors/light/vercelLogo.svg',

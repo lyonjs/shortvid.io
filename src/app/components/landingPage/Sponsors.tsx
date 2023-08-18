@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import {sponsors} from '../../../data/config/landingPageConfig';
+import {SPONSORS} from '../../../data/config/landingPageConfig';
 import {useSelectedTheme} from '../../hooks/useSelectedTheme';
 
 import {Card} from './Card';
@@ -14,7 +14,7 @@ export const Sponsors = () => {
 
 	return (
 		<ListBloc sectionTitle="Our Sponsors">
-			{sponsors.map(({name, logo, logoDark, url}) => (
+			{SPONSORS.map(({name, logo, logoDark, url}) => (
 				<Link key={name} href={url} target="_blank">
 					<Card filled>
 						<Image

@@ -42,6 +42,10 @@
 	--color-btn-disabled-background: var(--grey-500);
 	--color-btn-disabled-text: var(--grey-100);
 
+	--btn-gradient: linear-gradient(203deg, var(--purple-300), var(--purple-500));
+	--btn-shadow: rgba(90, 24, 154, 0.5) 0px 0px 10px 0px,
+		rgba(182, 111, 239, 0.5) 0px 0px 20px 0px;
+
 	--color-input-background: #eaeaea;
 
 	--switch-background: var(--purple-500);
@@ -152,9 +156,9 @@ button {
 	display: block;
 	padding: 0.4rem 1.5rem;
 	border-radius: 0.5rem;
-	border: 3px solid transparent;
 	font-size: 1rem;
 	text-align: center;
+	transition: all 0.3s ease;
 
 	&:hover {
 		cursor: pointer;

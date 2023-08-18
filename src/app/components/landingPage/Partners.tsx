@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import {SPONSORS} from '../../../data/config/landingPageConfig';
+import {PARTNERS} from '../../../data/config/landingPageConfig';
 import {useSelectedTheme} from '../../hooks/useSelectedTheme';
 
 import {Card} from './Card';
@@ -9,12 +9,12 @@ import {ListBloc} from './ListBloc';
 
 import styles from '../../../../styles/app/layout/landing/parterAndSponsors.module.css';
 
-export const Sponsors = () => {
+export const Partners = () => {
 	const {themeName} = useSelectedTheme();
 
 	return (
-		<ListBloc sectionTitle="Our Sponsors">
-			{SPONSORS.map(({name, logo, logoDark, url}) => (
+		<ListBloc sectionTitle="They worked with us">
+			{PARTNERS.map(({name, logo, logoDark, url}) => (
 				<Link key={name} href={url} target="_blank">
 					<Card>
 						<div className={styles.logos}>

@@ -1,0 +1,34 @@
+import {render, screen} from '@testing-library/react';
+
+import '@testing-library/jest-dom';
+
+import {Contact} from '../../../src/app/components/landingPage/Contact';
+
+describe('<Contact />', () => {
+	it('should render the component', () => {
+		render(<Contact />);
+
+		const sectionTitle = screen.getByRole('heading', {
+			name: 'Contact us',
+		});
+
+		const contacts = screen.getAllByRole('link');
+
+		const pictures = screen.getAllByRole('img');
+		const names = screen.getAllByRole('heading');
+
+		expect(sectionTitle).toBeVisible();
+
+		expect(contacts.length).toEqual(2);
+		expect(contacts[0]).toHaveProperty(
+			'href',
+			'https://twitter.com/Slashgear_',
+		);
+		expect(contacts[1]).toHaveProperty('href', 'https://twitter.com/CruuzAzul');
+
+		expect(pictures[0]).toBeVisible();
+		expect(pictures[1]).toBeVisible();
+		expect(names[1].textContent).toEqual('Antoine Carron');
+		expect(names[2].textContent).toEqual('Mickael Alves');
+	});
+});

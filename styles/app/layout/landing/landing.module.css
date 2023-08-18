@@ -25,34 +25,52 @@
 	padding: 0 clamp(1rem, 10%, 5rem);
 
 	.github {
+		display: block;
+		width: 100%;
+		min-width: 300px;
 		margin: 10rem auto;
+		padding: 2rem;
+		background: var(--github-card-background);
+		border-radius: 10px;
+		transition: all 0.3s ease;
 
-		> a {
-			display: block;
-			max-width: 750px;
-			min-width: 300px;
-			padding: 2rem;
-			margin: 0 auto;
-			color: var(--color-btn-text);
-			background: var(--github-card-backgroud);
-			border-radius: 10px;
-			transition: all 0.3s ease;
+		h3,
+		p {
+			color: var(--github-card-text);
+		}
 
-			&:hover {
-				box-shadow: 0 0 35px var(--shadow);
-			}
+		h3 {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+		}
 
-			h3 {
-				font-size: 2rem;
-				font-weight: 700;
+		p {
+			text-align: justify;
+
+			&:nth-of-type(1) {
 				margin-bottom: 1rem;
 			}
+		}
 
-			p {
-				text-align: justify;
+		a {
+			position: relative;
+			display: block;
+			margin: 1rem 0 0 auto;
+			padding: 0;
+			color: var(--color-btn-text);
 
-				&:last-child {
-					margin-top: 1rem;
+			&::after {
+				background: var(--color-btn-text);
+				transform-origin: left center;
+				width: 100%;
+				left: 0;
+				transform: scaleX(0);
+			}
+
+			&:hover {
+				&::after {
+					transform: scaleX(1);
 				}
 			}
 		}

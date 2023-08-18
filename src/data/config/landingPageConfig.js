@@ -13,7 +13,7 @@ export const SPONSORS = [
 	},
 ];
 
-export const partners = [
+export const PARTNERS = [
 	{
 		name: 'Touraine Tech',
 		logo: '/images/app/partners/light/touraineTechLogo.svg',

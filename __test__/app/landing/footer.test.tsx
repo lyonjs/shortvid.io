@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 
 import '@testing-library/jest-dom';
 
-import {Footer} from '../../src/app/components/landingPage/Footer';
+import {Footer} from '../../../src/app/components/landingPage/Footer';
 
 describe('<Footer />', () => {
 	it('should render the component', () => {

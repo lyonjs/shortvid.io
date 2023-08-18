@@ -16,8 +16,8 @@ export const Header: React.FC<{
 	children?: ReactNode;
 }> = ({expanded, className, children}) => {
 	return (
-		<header>
-			<nav className={className}>
+		<header className={className}>
+			<nav>
 				<a href="/" className={styles.logoLink}>
 					<Logo />
 					{expanded && <h2 className={wordmarkFont.className}>Shortvid.io</h2>}

@@ -2,14 +2,17 @@
 	position: sticky;
 	top: 0;
 	background: var(--color-background);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2rem;
 	padding: 1rem clamp(1rem, 10%, 5rem);
 	border-bottom: 1px solid transparent;
 	border-image: var(--separator);
 	z-index: 10;
+
+	> nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
 
 	.headerCTA {
 		display: block;

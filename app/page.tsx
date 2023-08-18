@@ -1,32 +1,17 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
+import {Contact} from '../src/app/components/landingPage/Contact';
 import {Footer} from '../src/app/components/landingPage/Footer';
+import {Github} from '../src/app/components/landingPage/Github';
 import {Hero} from '../src/app/components/landingPage/Hero';
+import {Partners} from '../src/app/components/landingPage/Partners';
+import {Sponsors} from '../src/app/components/landingPage/Sponsors';
 import {Header} from '../src/app/components/sidebar/navigation/Header';
 
 import buttonStyles from '../styles/app/common/buttons.module.css';
 import styles from '../styles/app/layout/landing/landing.module.css';
-
-const PARTNERS = [
-	{
-		name: 'Touraine Tech',
-		logo: '/images/showcases/touraineTech/touraineTechLogo.svg',
-		site: 'https://touraine.tech/',
-	},
-	{
-		name: 'Mixit',
-		logo: '/images/showcases/mixit/mixitLogo2023.svg',
-		site: 'https://mixitconf.org/',
-	},
-	{
-		name: 'Camping des Speakers',
-		logo: '/images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
-		site: 'https://camping-speakers.fr/',
-	},
-];
 
 export default function Home() {
 	return (
@@ -88,32 +73,10 @@ export default function Home() {
 					<li>And many more ideas...</li>
 				</ul>
 
-				<h2 className="text-2xl pb-4 pt-8 font-bold">
-					Conference and partner events
-				</h2>
-
-				<section className="flex gap-3 items-stretch">
-					{PARTNERS.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.site}
-							className="bg-slate-200 p-4 rounded-md w-1/2 md:w-1/3 flex justify-center"
-							target="_blank"
-						>
-							<Image
-								width={300}
-								height={300}
-								src={partner.logo}
-								alt={partner.name}
-								className="block max-h-32"
-							/>
-						</a>
-					))}
-				</section>
-
-				<h2 className="text-2xl pb-4 pt-8 font-bold">
-					Here you can find a set of example videos
-				</h2>
+				<Partners />
+				<Sponsors />
+				<Github />
+				<Contact />
 
 				<Footer />
 			</main>

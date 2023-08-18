@@ -1,5 +1,6 @@
 import {ReactNode} from 'react';
 import {MuseoModerno} from 'next/font/google';
+import Link from 'next/link';
 
 import {Logo} from '../../../Logo';
 
@@ -18,10 +19,10 @@ export const Header: React.FC<{
 	return (
 		<header className={className}>
 			<nav>
-				<a href="/" className={styles.logoLink}>
+				<Link href="/" className={styles.logoLink}>
 					<Logo />
 					{expanded && <h2 className={wordmarkFont.className}>Shortvid.io</h2>}
-				</a>
+				</Link>
 				{children}
 			</nav>
 		</header>

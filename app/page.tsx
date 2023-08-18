@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import {Contact} from '../src/app/components/landingPage/Contact';
 import {Footer} from '../src/app/components/landingPage/Footer';
+import {Github} from '../src/app/components/landingPage/Github';
 import {Hero} from '../src/app/components/landingPage/Hero';
 import {Partners} from '../src/app/components/landingPage/Partners';
 import {Sponsors} from '../src/app/components/landingPage/Sponsors';
@@ -74,27 +75,7 @@ export default function Home() {
 
 				<Partners />
 				<Sponsors />
-				<section className={styles.github}>
-					<h3>Open Github discussion</h3>
-					<p>
-						If you would like a showcase video for your event or if you have an
-						idea of a new template, we can create them! All you have to do is
-						open a discussion on our Github so that we can exchange with you
-						about it.
-					</p>
-					<p>
-						You can also create your own template and showcases yourself by
-						forking the project, like that you will have access to all the
-						templates already in the app in addition of your customs ones.
-					</p>
-					<Link
-						href="https://github.com/lyonjs/shortvid.io/discussions"
-						target="_blank"
-						className={buttonStyles.btnText}
-					>
-						Open a discussion
-					</Link>
-				</section>
+				<Github />
 				<Contact />
 
 				<Footer />

@@ -49,7 +49,7 @@ describe('<SidebarNav />', () => {
 			name: 'Contributing',
 		});
 		const themeButtonsGroup = screen.getByRole('radiogroup');
-		const nav = screen.getByRole('navigation');
+		const sidebarNav = screen.getAllByRole('navigation')[1];
 
 		const topLevelElement = screen.getAllByRole('listitem')[0];
 		const video = screen.getByRole('link', {
@@ -64,7 +64,7 @@ describe('<SidebarNav />', () => {
 		expect(contributingLink).toBeVisible();
 		expect(themeButtonsGroup).toBeVisible();
 
-		expect(nav).toBeVisible();
+		expect(sidebarNav).toBeVisible();
 
 		expect(topLevelElement).toBeVisible();
 		expect(video).not.toBeVisible();

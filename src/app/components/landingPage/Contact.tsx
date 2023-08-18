@@ -7,7 +7,7 @@ import {Card} from './Card';
 
 import styles from '../../../../styles/app/layout/landing/contact.module.css';
 
-const contacts = [
+const CONTACTS = [
 	{
 		name: 'Antoine Carron',
 		twitter: 'Slashgear_',
@@ -26,7 +26,7 @@ export const Contact = () => {
 			<h3>Contact Us</h3>
 
 			<div className={styles.list}>
-				{contacts.map(({name, twitter, pictureUrl}) => (
+				{CONTACTS.map(({name, twitter, pictureUrl}) => (
 					<Link key={name} href={`https://twitter.com/${twitter}`}>
 						<Card>
 							<div className={styles.contact}>
@@ -34,8 +34,7 @@ export const Contact = () => {
 								<div>
 									<h4>{name}</h4>
 									<span className={styles.twitter}>
-										<Icon icon="mdi:twitter" />
-										{twitter}
+										<Icon icon="mdi:twitter" />@{twitter}
 									</span>
 								</div>
 							</div>

@@ -1,3 +1,8 @@
+.main {
+	margin-inline: auto;
+	padding: 1rem;
+}
+
 .sidebarLayout {
 	display: flex;
 	justify-content: space-between;

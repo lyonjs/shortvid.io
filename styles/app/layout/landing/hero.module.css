@@ -1,0 +1,43 @@
+.hero {
+	text-align: center;
+	padding: 80px 10px;
+
+	h1 {
+		max-width: 700px;
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		margin: 0 auto 40px;
+	}
+
+	h2 {
+		font-size: 1.3rem;
+		font-weight: 300;
+		margin-bottom: 80px;
+	}
+}
+
+.cta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+
+	> a {
+		width: max-content;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.hero {
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 1rem;
+		}
+	}
+}

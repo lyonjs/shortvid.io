@@ -1,106 +1,32 @@
 'use client';
 
-import React from 'react';
-import {Player} from '@remotion/player';
-import Image from 'next/image';
+import Link from 'next/link';
 
-import {
-	Event,
-	EventProps,
-} from '../remotion/compositions/templates/event/Event';
-import {
-	Meetup,
-	MeetupProps,
-} from '../remotion/compositions/templates/meetup/Meetup';
-import {
-	Sponsor,
-	SponsorProps,
-} from '../remotion/compositions/templates/sponsor/Sponsor';
-import {Talk, TalkProps} from '../remotion/compositions/templates/talk/Talk';
-import {Footer} from '../src/app/Footer';
-import RootLayout from '../src/app/RootLayout';
+import {Contact} from '../src/app/components/landingPage/Contact';
+import {Footer} from '../src/app/components/landingPage/Footer';
+import {Github} from '../src/app/components/landingPage/Github';
+import {Hero} from '../src/app/components/landingPage/Hero';
+import {Partners} from '../src/app/components/landingPage/Partners';
+import {Sponsors} from '../src/app/components/landingPage/Sponsors';
+import {Header} from '../src/app/components/sidebar/navigation/Header';
 
-type TemplateTypes =
-	| React.FC<MeetupProps>
-	| React.FC<TalkProps>
-	| React.FC<SponsorProps>
-	| React.FC<EventProps>;
-
-interface Video {
-	id: string;
-	template: TemplateTypes;
-	params: {
-		[key: string]: string;
-	};
-}
-
-const VIDEO_LIST: Video[] = [
-	{
-		id: 'Meetup announce',
-		template: Meetup,
-		params: {
-			title: 'LyonJS de la rentrée 🦁',
-			date: '28 septembre 2022',
-			backgroundImg:
-				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
-		},
-	},
-	{
-		id: 'Talk announce',
-		template: Talk,
-		params: {
-			speakersNames: 'Julien Sulpis',
-			talkTitle:
-				'REX : Mise en place d’un Design System en web components chez Groupama',
-			backgroundImg:
-				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
-			speakerPicture: 'https://avatars2.githubusercontent.com/u/22420399?v=4',
-			titleSize: '50',
-		},
-	},
-	{
-		id: 'Sponsor',
-		template: Sponsor,
-		params: {
-			companyName: 'Indy',
-			sponsorLocalisation: '94 Rue Robert',
-			backgroundImg:
-				'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
-			sponsorLogo:
-				'https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg',
-		},
-	},
-	{
-		id: 'Event',
-		template: Event,
-		params: {
-			title: 'Apéro JS 🍾',
-		},
-	},
-];
-
-const PARTNERS = [
-	{
-		name: 'Touraine Tech',
-		logo: '/images/showcases/touraineTech/touraineTechLogo.svg',
-		site: 'https://touraine.tech/',
-	},
-	{
-		name: 'Mixit',
-		logo: '/images/showcases/mixit/mixitLogo2023.svg',
-		site: 'https://mixitconf.org/',
-	},
-	{
-		name: 'Camping des Speakers',
-		logo: '/images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
-		site: 'https://camping-speakers.fr/',
-	},
-];
+import buttonStyles from '../styles/app/common/buttons.module.css';
+import styles from '../styles/app/layout/landing/landing.module.css';
 
 export default function Home() {
 	return (
 		<>
-			<RootLayout>
+			<Header expanded={true} className={styles.landingHeader}>
+				<Link
+					href="/templates/talks/talk"
+					className={`${buttonStyles.btn} ${buttonStyles.btnPrimary} ${styles.headerCTA}`}
+				>
+					Get Started
+				</Link>
+			</Header>
+			<main className={styles.homeMain}>
+				<Hero />
+
 				<h2 className="text-2xl pb-4 font-bold">
 					What is the goal of this projet ?
 				</h2>
@@ -147,63 +73,13 @@ export default function Home() {
 					<li>And many more ideas...</li>
 				</ul>
 
-				<h2 className="text-2xl pb-4 pt-8 font-bold">
-					Conference and partner events
-				</h2>
+				<Partners />
+				<Sponsors />
+				<Github />
+				<Contact />
 
-				<section className="flex gap-3 items-stretch">
-					{PARTNERS.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.site}
-							className="bg-slate-200 p-4 rounded-md w-1/2 md:w-1/3 flex justify-center"
-							target="_blank"
-						>
-							<Image
-								width={300}
-								height={300}
-								src={partner.logo}
-								alt={partner.name}
-								className="block max-h-32"
-							/>
-						</a>
-					))}
-				</section>
-
-				<h2 className="text-2xl pb-4 pt-8 font-bold">
-					Here you can find a set of example videos
-				</h2>
-
-				<section className="grid grid-cols-1 md:grid-cols-2 gap-12 py-4">
-					{VIDEO_LIST.map((video) => {
-						return (
-							<article key={video.id}>
-								<header>
-									<h3 className="text-xl pb-3 text-primary font-bold">
-										{video.id}
-									</h3>
-								</header>
-								<Player
-									autoPlay
-									loop
-									className="shrink-0 shadow-lg"
-									style={{
-										width: '100%',
-										height: '450px',
-									}}
-									durationInFrames={270}
-									compositionWidth={1200}
-									compositionHeight={1200}
-									fps={30}
-									component={video.template as never}
-									inputProps={video.params}
-								/>
-							</article>
-						);
-					})}
-				</section>
-			</RootLayout>
-			<Footer />
+				<Footer />
+			</main>
 		</>
 	);
 }

@@ -1,0 +1,88 @@
+.landingHeader {
+	position: sticky;
+	top: 0;
+	background: var(--color-background);
+	padding: 1rem clamp(1rem, 10%, 5rem);
+	border-bottom: 1px solid transparent;
+	border-image: var(--separator);
+	z-index: 10;
+
+	> nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	.headerCTA {
+		display: block;
+		width: max-content;
+		font-size: 1rem;
+	}
+}
+
+.homeMain {
+	padding: 0 clamp(1rem, 10%, 5rem);
+
+	.github {
+		display: block;
+		width: 100%;
+		min-width: 300px;
+		margin: 10rem auto;
+		padding: 2rem;
+		background: var(--github-card-background);
+		border-radius: 10px;
+		transition: all 0.3s ease;
+
+		h3,
+		p {
+			color: var(--github-card-text);
+		}
+
+		h3 {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			text-align: justify;
+
+			&:nth-of-type(1) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		a {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			margin: 1rem 0 0 auto;
+			padding: 0;
+			color: var(--color-btn-text);
+
+			&::after {
+				background: var(--color-btn-text);
+				transform-origin: left center;
+				width: 100%;
+				left: 0;
+				transform: scaleX(0);
+			}
+
+			&:hover {
+				&::after {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.landingHeader {
+		h2 {
+			display: none;
+		}
+	}
+}

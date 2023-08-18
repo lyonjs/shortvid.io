@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import {Contact} from '../src/app/components/landingPage/Contact';
 import {Footer} from '../src/app/components/landingPage/Footer';
+import {Github} from '../src/app/components/landingPage/Github';
 import {Hero} from '../src/app/components/landingPage/Hero';
 import {Partners} from '../src/app/components/landingPage/Partners';
 import {Sponsors} from '../src/app/components/landingPage/Sponsors';
@@ -74,6 +75,7 @@ export default function Home() {
 
 				<Partners />
 				<Sponsors />
+				<Github />
 				<Contact />
 
 				<Footer />

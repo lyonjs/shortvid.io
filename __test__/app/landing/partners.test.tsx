@@ -3,6 +3,7 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import {Partners} from '../../../src/app/components/landingPage/Partners';
+import {PARTNERS} from '../../../src/data/config/landingPageConfig';
 
 describe('<Partners />', () => {
 	it('should render the component', () => {
@@ -22,12 +23,8 @@ describe('<Partners />', () => {
 
 		partners.map((partner, id) => {
 			expect(partner).toBeVisible();
+			expect(partner).toHaveProperty('href', PARTNERS[id].url);
 			expect(pictures[id]).toBeVisible();
 		});
-
-		expect(partners[0]).toHaveProperty('href', 'https://touraine.tech/');
-		expect(partners[1]).toHaveProperty('href', 'https://mixitconf.org/');
-		expect(partners[2]).toHaveProperty('href', 'https://camping-speakers.fr/');
-		expect(partners[3]).toHaveProperty('href', 'https://www.volcamp.io/');
 	});
 });

@@ -3,6 +3,7 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import {Sponsors} from '../../../src/app/components/landingPage/Sponsors';
+import {SPONSORS} from '../../../src/data/config/landingPageConfig';
 
 describe('<Sponsors />', () => {
 	it('should render the component', () => {
@@ -22,10 +23,8 @@ describe('<Sponsors />', () => {
 
 		sponsors.map((sponsor, id) => {
 			expect(sponsor).toBeVisible();
+			expect(sponsor).toHaveProperty('href', SPONSORS[id].url);
 			expect(pictures[id]).toBeVisible();
 		});
-
-		expect(sponsors[0]).toHaveProperty('href', 'https://vercel.com/home');
-		expect(sponsors[1]).toHaveProperty('href', 'https://www.clever-cloud.com/');
 	});
 });

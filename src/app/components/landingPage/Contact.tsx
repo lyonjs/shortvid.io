@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {staticFile} from 'remotion';
 
 import {Card} from './Card';
+import {ListBloc} from './ListBloc';
 
 import styles from '../../../../styles/app/layout/landing/contact.module.css';
 
@@ -22,26 +23,22 @@ const CONTACTS = [
 
 export const Contact = () => {
 	return (
-		<section className={styles.contactContainer}>
-			<h3>Contact Us</h3>
-
-			<div className={styles.list}>
-				{CONTACTS.map(({name, twitter, pictureUrl}) => (
-					<Link key={name} href={`https://twitter.com/${twitter}`}>
-						<Card>
-							<div className={styles.contact}>
-								<Image src={pictureUrl} alt={name} width={150} height={150} />
-								<div>
-									<h4>{name}</h4>
-									<span className={styles.twitter}>
-										<Icon icon="mdi:twitter" />@{twitter}
-									</span>
-								</div>
+		<ListBloc sectionTitle="Contact us">
+			{CONTACTS.map(({name, twitter, pictureUrl}) => (
+				<Link key={name} href={`https://twitter.com/${twitter}`}>
+					<Card>
+						<div className={styles.contact}>
+							<Image src={pictureUrl} alt={name} width={150} height={150} />
+							<div>
+								<h4>{name}</h4>
+								<span className={styles.twitter}>
+									<Icon icon="mdi:twitter" />@{twitter}
+								</span>
 							</div>
-						</Card>
-					</Link>
-				))}
-			</div>
-		</section>
+						</div>
+					</Card>
+				</Link>
+			))}
+		</ListBloc>
 	);
 };

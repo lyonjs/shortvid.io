@@ -1,52 +1,32 @@
-.contactContainer {
-	margin-top: 10rem;
-	margin-bottom: 5rem;
+.contact {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
 
-	h3 {
-		font-weight: 700;
-		font-size: 3rem;
-		text-align: center;
-		margin-bottom: 3rem;
+	img {
+		border-radius: 50%;
 	}
 
-	.list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 2.5rem;
+	> div {
+		h4 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: var(--color-primary);
+		}
 
-		.contact {
+		.twitter {
 			display: flex;
+			justify-content: center;
 			align-items: center;
-			justify-content: space-between;
-			gap: 1rem;
+			gap: 0.5rem;
+			font-size: 1rem;
+			font-weight: 500;
+			color: var(--color-text);
 
-			img {
-				border-radius: 50%;
-			}
-
-			> div {
-				h4 {
-					font-size: 1.5rem;
-					font-weight: 700;
-					color: var(--color-primary);
-				}
-
-				.twitter {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					gap: 0.5rem;
-					font-size: 1rem;
-					font-weight: 500;
-					color: var(--color-text);
-
-					> svg {
-						width: 20px;
-						height: 20px;
-					}
-				}
+			> svg {
+				width: 20px;
+				height: 20px;
 			}
 		}
 	}

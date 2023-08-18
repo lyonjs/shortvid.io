@@ -17,6 +17,7 @@
 	--purple-800: #10002b;
 	--purple-900: #0e001c;
 	/* Grey variants */
+	--grey-10: #f3f3f3;
 	--grey-50: #eaeaea;
 	--grey-100: #bab6be;
 	--grey-500: #565656;
@@ -40,6 +41,10 @@
 	--color-btn-background: white;
 	--color-btn-disabled-background: var(--grey-500);
 	--color-btn-disabled-text: var(--grey-100);
+
+	--btn-gradient: linear-gradient(203deg, var(--purple-300), var(--purple-500));
+	--btn-shadow: rgba(90, 24, 154, 0.5) 0px 0px 10px 0px,
+		rgba(182, 111, 239, 0.5) 0px 0px 20px 0px;
 
 	--color-input-background: #eaeaea;
 
@@ -66,17 +71,23 @@
 	--card-border: var(--purple-700);
 	--card-border-hover: conic-gradient(
 		var(--purple-500),
-		var(--purple-600),
-		var(--purple-700),
-		var(--purple-600),
 		var(--purple-500),
 		var(--purple-600),
 		var(--purple-700),
 		var(--purple-600),
+		var(--purple-500),
+		var(--purple-500),
+		var(--purple-600),
+		var(--purple-700),
+		var(--purple-600),
+		var(--purple-500),
 		var(--purple-500)
 	);
 	--card-background: var(--purple-800);
 	--card-background-hover: var(--purple-850);
+
+	--github-card-background: var(--purple-100);
+	--github-card-text: var(--purple-900);
 }
 
 [data-theme='light'] {
@@ -104,17 +115,23 @@
 	--card-border: var(--grey-50);
 	--card-border-hover: conic-gradient(
 		var(--purple-100),
-		var(--purple-50),
-		#fff,
-		var(--purple-50),
 		var(--purple-100),
 		var(--purple-50),
 		#fff,
 		var(--purple-50),
+		var(--purple-100),
+		var(--purple-100),
+		var(--purple-50),
+		#fff,
+		var(--purple-50),
+		var(--purple-100),
 		var(--purple-100)
 	);
 	--card-background: white;
 	--card-background-hover: white;
+
+	--github-card-background: var(--purple-400);
+	--github-card-text: var(--purple-50);
 }
 
 * {
@@ -139,9 +156,9 @@ button {
 	display: block;
 	padding: 0.4rem 1.5rem;
 	border-radius: 0.5rem;
-	border: 3px solid transparent;
 	font-size: 1rem;
 	text-align: center;
+	transition: all 0.3s ease;
 
 	&:hover {
 		cursor: pointer;

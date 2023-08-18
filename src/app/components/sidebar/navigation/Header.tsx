@@ -16,12 +16,14 @@ export const Header: React.FC<{
 	children?: ReactNode;
 }> = ({expanded, className, children}) => {
 	return (
-		<header className={className}>
-			<a href="/" className={styles.logoLink}>
-				<Logo />
-				{expanded && <h2 className={wordmarkFont.className}>Shortvid.io</h2>}
-			</a>
-			{children}
+		<header>
+			<nav className={className}>
+				<a href="/" className={styles.logoLink}>
+					<Logo />
+					{expanded && <h2 className={wordmarkFont.className}>Shortvid.io</h2>}
+				</a>
+				{children}
+			</nav>
 		</header>
 	);
 };

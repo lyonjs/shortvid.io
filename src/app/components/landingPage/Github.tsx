@@ -1,3 +1,4 @@
+import {Icon} from '@iconify/react';
 import Link from 'next/link';
 
 import buttonStyles from '../../../../styles/app/common/buttons.module.css';
@@ -23,6 +24,7 @@ export const Github = () => {
 				className={buttonStyles.btnText}
 			>
 				Open a discussion
+				<Icon icon="majesticons:arrow-right" width={20} height={20} />
 			</Link>
 		</section>
 	);

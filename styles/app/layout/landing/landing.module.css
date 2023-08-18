@@ -55,7 +55,9 @@
 
 		a {
 			position: relative;
-			display: block;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
 			margin: 1rem 0 0 auto;
 			padding: 0;
 			color: var(--color-btn-text);

@@ -52,7 +52,7 @@
 		"@testing-library/react": "14.0.0",
 		"@testing-library/user-event": "14.4.3",
 		"@types/lodash": "4.14.197",
-		"@types/node": "18.17.7",
+		"@types/node": "18.17.8",
 		"@types/react": "18.2.20",
 		"@types/react-dom": "18.2.7",
 		"@types/react-json-editor-ajrm": "^2.5.3",

@@ -89,8 +89,8 @@ devDependencies:
     specifier: 9.3.1
     version: 9.3.1
   '@testing-library/jest-dom':
-    specifier: 6.0.1
-    version: 6.0.1(@types/jest@29.5.4)(jest@29.6.3)
+    specifier: 6.1.0
+    version: 6.1.0(@types/jest@29.5.4)(jest@29.6.3)
   '@testing-library/react':
     specifier: 14.0.0
     version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
@@ -1374,8 +1374,8 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@testing-library/jest-dom@6.0.1(@types/jest@29.5.4)(jest@29.6.3):
-    resolution: {integrity: sha512-0hx/AWrJp8EKr8LmC5jrV3Lx8TZySH7McU1Ix2czBPQnLd458CefSEGjZy7w8kaBRA6LhoPkGjoZ3yqSs338IQ==}
+  /@testing-library/jest-dom@6.1.0(@types/jest@29.5.4)(jest@29.6.3):
+    resolution: {integrity: sha512-EUAg9pvOkzmGXUSyAPt0h6yAXHxsn+FMNS1o7OX8TErmldZML2ywt10lotZXx/a1PDiSnq0fGGyEV/ybKSLPWQ==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
     peerDependencies:
       '@jest/globals': '>= 28'

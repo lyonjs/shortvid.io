@@ -6,29 +6,29 @@ settings:
 
 dependencies:
   '@remotion/bundler':
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
   '@remotion/cli':
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
   '@remotion/google-fonts':
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
   '@remotion/lottie':
-    specifier: 4.0.25
-    version: 4.0.25(lottie-web@5.12.2)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(lottie-web@5.12.2)(react-dom@18.2.0)(react@18.2.0)
   '@remotion/noise':
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
   '@remotion/player':
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
   '@remotion/renderer':
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
   '@remotion/shapes':
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
   '@types/jest':
     specifier: 29.5.4
     version: 29.5.4
@@ -75,16 +75,16 @@ dependencies:
     specifier: ^2.5.14
     version: 2.5.14(react-dom@18.2.0)(react@18.2.0)
   remotion:
-    specifier: 4.0.25
-    version: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.0.27
+    version: 4.0.27(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@iconify/react':
     specifier: ^4.1.0
     version: 4.1.0(react@18.2.0)
   '@remotion/eslint-plugin':
-    specifier: 4.0.25
-    version: 4.0.25(eslint@8.48.0)(typescript@5.2.2)
+    specifier: 4.0.27
+    version: 4.0.27(eslint@8.48.0)(typescript@5.2.2)
   '@testing-library/dom':
     specifier: 9.3.1
     version: 9.3.1
@@ -1129,8 +1129,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@remotion/bundler@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-2HYSc67NmHxMI0aZWTe2wq3qgtpNX9Cr4R3HmHm99M6NXke3WkOLwVTdvcCf7wQuWDZPRibyzSJHG/JWYsqWig==}
+  /@remotion/bundler@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lbJigjB4dC0PigGcIAaKDg95t45TgpMwRA4062UeVGOe6nk/4vlAo3P+yhKNhvvtLL3dGmJc/UnN4+HeM3T6lQ==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -1140,7 +1140,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-refresh: 0.9.0
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
       style-loader: 2.0.0(webpack@5.83.1)
       webpack: 5.83.1(esbuild@0.18.6)
     transitivePeerDependencies:
@@ -1149,17 +1149,17 @@ packages:
       - webpack-cli
     dev: false
 
-  /@remotion/cli@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-pRBiZuFLgesPZEdwxaEatx6vSsjQCMK8QxOzdXG5jhryrtgy5bloHSdspOFx3VLd6Hr4qvBbccI3SsDXYFXEeg==}
+  /@remotion/cli@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-rFAKahCCrS8Tjm2f5UEMmStSAqfF8jpE6LeNYQj8QsxZlp9dZ/3OBB/K/B0nunCnwMcv9o9Xo8Wu4Mn+hy8B2w==}
     hasBin: true
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@remotion/bundler': 4.0.25(react-dom@18.2.0)(react@18.2.0)
-      '@remotion/media-utils': 4.0.25(react-dom@18.2.0)(react@18.2.0)
-      '@remotion/player': 4.0.25(react-dom@18.2.0)(react@18.2.0)
-      '@remotion/renderer': 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      '@remotion/bundler': 4.0.27(react-dom@18.2.0)(react@18.2.0)
+      '@remotion/media-utils': 4.0.27(react-dom@18.2.0)(react@18.2.0)
+      '@remotion/player': 4.0.27(react-dom@18.2.0)(react@18.2.0)
+      '@remotion/renderer': 4.0.27(react-dom@18.2.0)(react@18.2.0)
       dotenv: 9.0.2
       memfs: 3.4.3
       minimist: 1.2.6
@@ -1167,7 +1167,7 @@ packages:
       prompts: 2.4.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
       semver: 7.5.3
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -1179,64 +1179,64 @@ packages:
       - webpack-cli
     dev: false
 
-  /@remotion/compositor-darwin-arm64@4.0.25:
-    resolution: {integrity: sha512-u0ZjfthhyvbIXrFE9YRYugCKpfQmbiB+xBMQN0QxltSjAWS9x02TLxd409LMsaA+3WwTV9eVqrq5PouN+to4WA==}
+  /@remotion/compositor-darwin-arm64@4.0.27:
+    resolution: {integrity: sha512-ubMkzGgNzfdteg4/i1If2v0pq1qIyT1EqAfDe/mxSAZ5rrfhWDYvHArnUFg8L11/132KBwGsRGcSJeyVqngJwg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-darwin-x64@4.0.25:
-    resolution: {integrity: sha512-BtHB6Lg8UfUcek8ODrHGASs1GihFTaJp4cGbx9FFJegc0PtJ5v6EZjpjX8Zmy2jo9obgY2bLqD6LrxwQHEiFfA==}
+  /@remotion/compositor-darwin-x64@4.0.27:
+    resolution: {integrity: sha512-9u2rx2o/QL3tmn9QbEqLZmHeFeWju4/j7LGXxo4f1Vfb9Xw+hRILiOFzDG27fuWu++nySGiDaFPsTsXL0LsydQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-arm64-gnu@4.0.25:
-    resolution: {integrity: sha512-BUKAxm6VZNaXv10PW03aWFS16vDjSFZ6XdeaVNQ3MCxlA2q7L/vMPCLjagsINP8IRCCOIm04MLf8HYRNjoSd4Q==}
+  /@remotion/compositor-linux-arm64-gnu@4.0.27:
+    resolution: {integrity: sha512-YuEiLxuQ8yl4ooqG1rsV/VWxMMuKiVucXIWuIZ94/ohkUwiBNjYIEBhsKK7Z/AQIwA8pApuD1LssdMYQ0pVRHg==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-arm64-musl@4.0.25:
-    resolution: {integrity: sha512-+/OhaxLlae31JCGtWpfploPH1o1Mn3bh3oZ51WHFMmMmtGijAWWZtsEdRPPNvcVLY9AXPidkBlUKnIByVZWJcw==}
+  /@remotion/compositor-linux-arm64-musl@4.0.27:
+    resolution: {integrity: sha512-pHcOLt6hFWtXOaKM4wNg44jB4cZrvwz3ImpXYExAn/uVUnuJznqi3qvOcgPaigtwZ2TAlGtffPrp4GbNzhSIXQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-x64-gnu@4.0.25:
-    resolution: {integrity: sha512-xWfyUEiTZWOcP5ykLMhTo1mr4ewfOzJ7azs2Z28oX+IS/MhY8eNPAsbnuTYfwf2pZddj9MUaU5G11k/4189wxg==}
+  /@remotion/compositor-linux-x64-gnu@4.0.27:
+    resolution: {integrity: sha512-EWPB+GctrDYg56bxdJ6rkUvaMeKr6hVvW/r/G/Rc3UEoBYJHGXeinP+1+FFRjx8c6enYDOTPaNzAghj01nkXgQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-linux-x64-musl@4.0.25:
-    resolution: {integrity: sha512-1ClCls63W6fJh6HJGsTX/v3+4FsAeAxtA51X3mp5uTQMsnnaxMPLRhHNdZhNFhVmH7HihG8rvZS3TR1Z6LJP2w==}
+  /@remotion/compositor-linux-x64-musl@4.0.27:
+    resolution: {integrity: sha512-xVL9V9ziebXK6k/e73tNb8yltu8wp78z5XAv/CEZiiOODDemDaEDmLbXASanF0pBYnDjuANSNTGuB4A48tzykQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/compositor-win32-x64-msvc@4.0.25:
-    resolution: {integrity: sha512-dqT9SiMfN4c84bRM3YaL52ztqVnF4/3EiPgtW2JPMJNvmKNxeOFAMMCWjPMKVdWZ/bvSPXf4H4PgVJtv80E6Cg==}
+  /@remotion/compositor-win32-x64-msvc@4.0.27:
+    resolution: {integrity: sha512-R2lfP1zk7bB1pi/DqpyMZu/vTXjtErg911G/xgp2Pv8N6uMuKwjyu7sTTxareytpbNlmJa6A214F4rsbc7QFcg==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@remotion/eslint-plugin@4.0.25(eslint@8.48.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-F8Dao2nwkB8bihlOAY9QjaqZqaUPGlNdttr2rvD91Ozp1uCcBk4Y2JZqvYOJJOaWPQl3dRbyX9pB5RZ6gjYmDA==}
+  /@remotion/eslint-plugin@4.0.27(eslint@8.48.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-0XGat0Z7Yp5Xm2SGeBJhJ+dX7iguQodzE0Py7rLwFgT6R34l/54jigsGG07c45V4AfnRQupeK/jadg/Uv6cBdg==}
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
@@ -1247,17 +1247,17 @@ packages:
       - typescript
     dev: true
 
-  /@remotion/google-fonts@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-mSL5uMbAuJJ9EsqXCj0UIXjG2txoSiIeN9ZuHCxdqCSkzGpQptpKGz5VW03Vu78zlrocYvymhXDAkHkFatqlLg==}
+  /@remotion/google-fonts@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-mr2o1EQtw1k0B/dTVLjQaXZK0nE/MglXQIuZa6zegtVegEiQnePkC7tMbICnC3Jae+yqo4A7j+AipNSMxzMxYA==}
     dependencies:
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
       - react
       - react-dom
     dev: false
 
-  /@remotion/lottie@4.0.25(lottie-web@5.12.2)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-alkCvEekvx3ZhbTdrcx9xFDjOM9b2pbXJOHLSicv/WnFgUQFjhqoYc5rPDxQ3/xqZB41m9qJErge9QRNsGZ4BQ==}
+  /@remotion/lottie@4.0.27(lottie-web@5.12.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-E6Aa9mVEIyPMtc0Q1sQREVcJZuQRuaaa+JZ5R1WST9ctGQX1oilKupjdNoa37qHZVewNCZ3QPU5kTxDrAcwJ4A==}
     peerDependencies:
       lottie-web: ^5
       react: '>=16.8.0'
@@ -1266,47 +1266,47 @@ packages:
       lottie-web: 5.12.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@remotion/media-utils@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-SKiUoGjLCAad4YZ+QRB0meWs5FJQP8cD3GC7luip4H2Tbl8TrES0nkN5jLYgAbQoauzpHAo5Dds15z3FmDyKIg==}
+  /@remotion/media-utils@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-mRDcTvUynRMELCQsQHyVmZRAJGEefwUdOQt2+/T+70FKODxlb+mwYbnGcPQK9Qs8IveTcf9KdqAHHNEKwi9UEg==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@remotion/noise@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-HK5ykHjUU38TOW+qRn7R5cwuP2+ePms361uIT4qQxjch4aqDiNRR8EY4GgZSVJuN+RIo/WN9CdJH9U8s6TOyZw==}
+  /@remotion/noise@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-8nGszhg13WcKOYS0ovOPuwbkFVic1foK2US5Ew3XcKmUqqurTg1DbHaSkPjM5mO2sOnUmkuDzpdITwBouGPYTA==}
     dependencies:
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
       simplex-noise: 4.0.1
     transitivePeerDependencies:
       - react
       - react-dom
     dev: false
 
-  /@remotion/paths@4.0.25:
-    resolution: {integrity: sha512-4MWnvDiq7tGmM5+AfkNf6NOdo40REO1Kx1X0AjBWODsFo08wxvujABZTeO10ZC9GjyV+cqSfMzuOkWe0hvEarQ==}
+  /@remotion/paths@4.0.27:
+    resolution: {integrity: sha512-v/0ELyneHeUoExA5rK74DVKQverYqea0Ec5CkKY/KBqIuIJPj9Qan2FAa+o1t/Bt/+k+O/4bxemuxdZpPk4vQw==}
     dev: false
 
-  /@remotion/player@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Xwkk0inU0riZIA2Ij375/hxyxmsrzi/ODsxRapxLqhcgOnk0hK3XbQ7egk4xIfa/S0Bg1cjPCY2j9aVpKIDO7A==}
+  /@remotion/player@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-g+8Z8/yjL/f33q7fBp3fNH7x0DxPkuZczp3dyBWiRmglvbaevcSJM9Jbh2wNxTht5TMd4lGaqlhEZea9LIz0GQ==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@remotion/renderer@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-A9kGGPcte0gkM/vsM7q5qcig4YuchsGe7FaBxZeiA83b4zl2P9r+0GvKl7+BHYd3SeAvFgWRXbxtBC19KP4YKg==}
+  /@remotion/renderer@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qBvcqAp/m4F8nkaRHDHMU9gScaDvRpi7gqV2QtqUUOH0yA03PDf75TXlRpYjBiwQbjFfs/VDw+lFkc2AVU6lzw==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -1315,30 +1315,30 @@ packages:
       extract-zip: 2.0.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      remotion: 4.0.25(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.27(react-dom@18.2.0)(react@18.2.0)
       source-map: 0.8.0-beta.0
       ws: 8.7.0
     optionalDependencies:
-      '@remotion/compositor-darwin-arm64': 4.0.25
-      '@remotion/compositor-darwin-x64': 4.0.25
-      '@remotion/compositor-linux-arm64-gnu': 4.0.25
-      '@remotion/compositor-linux-arm64-musl': 4.0.25
-      '@remotion/compositor-linux-x64-gnu': 4.0.25
-      '@remotion/compositor-linux-x64-musl': 4.0.25
-      '@remotion/compositor-win32-x64-msvc': 4.0.25
+      '@remotion/compositor-darwin-arm64': 4.0.27
+      '@remotion/compositor-darwin-x64': 4.0.27
+      '@remotion/compositor-linux-arm64-gnu': 4.0.27
+      '@remotion/compositor-linux-arm64-musl': 4.0.27
+      '@remotion/compositor-linux-x64-gnu': 4.0.27
+      '@remotion/compositor-linux-x64-musl': 4.0.27
+      '@remotion/compositor-win32-x64-msvc': 4.0.27
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
     dev: false
 
-  /@remotion/shapes@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GYwI+ha8tk26HLhWSlgDWNcjPUvgZuuprW4AYK4rmu4Sd4GoxgDTSoe23dVuxe1X8Ko10qqpbi991s1fhHG1vw==}
+  /@remotion/shapes@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-0uFLX8Zsk4rPFt6WuH2GUhBvUw7j10IhWlpjyc8Bbwpbd5LSz2045zYvFYSWNhAlrthqJY6ilaezNL7QisK1jg==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@remotion/paths': 4.0.25
+      '@remotion/paths': 4.0.27
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
@@ -5767,8 +5767,8 @@ packages:
       functions-have-names: 1.2.3
     dev: true
 
-  /remotion@4.0.25(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-FexJxvp843O09MgH2aQVzMPc+kF1hy6+ZwpUJicCm2fC8BHxEbSSqDGkmC3QeMJz5ns/WKJRbvxQvLmQaUWFDg==}
+  /remotion@4.0.27(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-esVzFunTnYXOtlUUJuTXszL3GZnPqdaAPsRsHo2q6J7IPrlgEMxUNqn51T6094Ha/IuZwYA7gnsnVk+HFNGP8w==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'

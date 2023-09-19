@@ -19,14 +19,14 @@
 		"serve": "node server.mjs"
 	},
 	"dependencies": {
-		"@remotion/bundler": "4.0.39",
-		"@remotion/cli": "4.0.39",
-		"@remotion/google-fonts": "4.0.39",
-		"@remotion/lottie": "4.0.39",
-		"@remotion/noise": "4.0.39",
-		"@remotion/player": "4.0.39",
-		"@remotion/renderer": "4.0.39",
-		"@remotion/shapes": "4.0.39",
+		"@remotion/bundler": "4.0.40",
+		"@remotion/cli": "4.0.40",
+		"@remotion/google-fonts": "4.0.40",
+		"@remotion/lottie": "4.0.40",
+		"@remotion/noise": "4.0.40",
+		"@remotion/player": "4.0.40",
+		"@remotion/renderer": "4.0.40",
+		"@remotion/shapes": "4.0.40",
 		"@types/jest": "29.5.5",
 		"@vercel/analytics": "^1.0.0",
 		"body-parser": "1.20.2",
@@ -42,11 +42,11 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-json-editor-ajrm": "^2.5.14",
-		"remotion": "4.0.39"
+		"remotion": "4.0.40"
 	},
 	"devDependencies": {
 		"@iconify/react": "^4.1.0",
-		"@remotion/eslint-plugin": "4.0.39",
+		"@remotion/eslint-plugin": "4.0.40",
 		"@testing-library/dom": "9.3.3",
 		"@testing-library/jest-dom": "6.1.3",
 		"@testing-library/react": "14.0.0",

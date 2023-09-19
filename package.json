@@ -70,7 +70,7 @@
 		"jest-environment-jsdom": "29.7.0",
 		"jest-fetch-mock": "^3.0.3",
 		"lodash": "4.17.21",
-		"postcss": "8.4.29",
+		"postcss": "8.4.30",
 		"postcss-nested": "6.0.1",
 		"prettier": "3.0.3",
 		"pretty-quick": "3.1.3",

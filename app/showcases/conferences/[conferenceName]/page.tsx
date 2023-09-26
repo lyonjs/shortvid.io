@@ -8,6 +8,7 @@ import locale from 'react-json-editor-ajrm/locale/en';
 
 import {AlpesCraft} from '../../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
 import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
+import {DevfestNantes} from '../../../../remotion/compositions/showcases/devfestNantes/DevfestNantes';
 import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
 import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit/MixitIntroTalk';
 import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
@@ -109,6 +110,13 @@ const Template: Record<string, TalkTemplate> = {
 			},
 			defaultTalkValues,
 		),
+	},
+	DevfestNantes: {
+		compositionName: 'DevfestNantes',
+		component: DevfestNantes,
+		width: 1280,
+		height: 720,
+		durationInFrames: 150,
 	},
 };
 export default function ConferencePage({

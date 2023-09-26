@@ -116,7 +116,7 @@ const Template: Record<string, TalkTemplate> = {
 		component: DevfestNantes,
 		width: 1280,
 		height: 720,
-		durationInFrames: 150,
+		durationInFrames: 300,
 	},
 };
 export default function ConferencePage({

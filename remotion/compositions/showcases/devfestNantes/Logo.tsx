@@ -9,7 +9,7 @@ import {
 export const Logo = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const logoWidth = 250
+	const logoWidth = 250;
 
 	const pictureDrop = spring({
 		frame,
@@ -21,7 +21,9 @@ export const Logo = () => {
 
 	return (
 		<Img
-			src={staticFile('/images/showcases/devfestNantes/logo-devfest-mgm_transparent.svg')}
+			src={staticFile(
+				'/images/showcases/devfestNantes/logo-devfest-mgm_transparent.svg',
+			)}
 			width={logoWidth}
 			height="auto"
 			style={{

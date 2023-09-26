@@ -1,18 +1,13 @@
-import {
-	Easing,
-	Img, interpolate,
-	staticFile,
-	useCurrentFrame} from 'remotion'
+import {Easing, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 export const Dino = () => {
 	const frame = useCurrentFrame();
 	const logoWidth = 400;
 
-	const pictureDrop = interpolate(frame,[0, 20], [-logoWidth, 0], {
+	const pictureDrop = interpolate(frame, [0, 20], [-logoWidth, 0], {
 		extrapolateRight: 'clamp',
 		easing: Easing.out(Easing.ease),
-	})
-
+	});
 
 	return (
 		<Img

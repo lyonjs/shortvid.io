@@ -1,8 +1,4 @@
-import {
-	Easing,
-	Img, interpolate,
-	staticFile,
-	useCurrentFrame} from 'remotion'
+import {Easing, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 export const Android = () => {
 	const frame = useCurrentFrame();
@@ -11,10 +7,10 @@ export const Android = () => {
 	const fall = interpolate(frame, [0, 200], [-100, 250], {
 		extrapolateRight: 'clamp',
 	});
-	const rotate = interpolate(frame, [0,50, 150, 200], [-45,45, -45, 45], {
+	const rotate = interpolate(frame, [0, 50, 150, 200], [-45, 45, -45, 45], {
 		extrapolateRight: 'clamp',
-		easing: Easing.inOut(Easing.sin)
-	})
+		easing: Easing.inOut(Easing.sin),
+	});
 
 	return (
 		<Img
@@ -25,7 +21,7 @@ export const Android = () => {
 				position: 'absolute',
 				right: 100,
 				top: fall,
-				transform: `rotate(${rotate}deg)`
+				transform: `rotate(${rotate}deg)`,
 			}}
 		/>
 	);

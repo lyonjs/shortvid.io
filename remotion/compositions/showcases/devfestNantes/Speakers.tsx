@@ -10,7 +10,7 @@ import {
 
 import {Text} from '../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
-import { Speaker } from '../../../types/defaultProps.types'
+import {Speaker} from '../../../types/defaultProps.types';
 
 const {fontFamily} = loadFont();
 

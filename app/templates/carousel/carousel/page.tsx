@@ -5,13 +5,11 @@ import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
 import {Player} from '@remotion/player';
 
-import { Carousel } from '../../../../remotion/compositions/templates/carousel/Carousel'
+import {Carousel} from '../../../../remotion/compositions/templates/carousel/Carousel';
 import {Code} from '../../../../src/app/Code';
-import { RenderButton } from '../../../../src/app/forms/RenderButton'
-import { useGenerateVideo } from '../../../../src/app/hooks/useGenerateVideo'
-import {
-	DefaultPropsTypes,
-} from '../../../../src/app/types/template.types';
+import {RenderButton} from '../../../../src/app/forms/RenderButton';
+import {useGenerateVideo} from '../../../../src/app/hooks/useGenerateVideo';
+import {DefaultPropsTypes} from '../../../../src/app/types/template.types';
 
 import styles from '../../../../styles/app/layout/main.module.css';
 
@@ -23,13 +21,11 @@ const defaultValues = {
 		'https://secure.meetupstatic.com/photos/event/a/8/0/b/highres_515983019.webp',
 	],
 	imageDuration: 90,
-	logoUrl: '/images/showcases/lyonjs/lyonjsSquaredLogo.png'
-}
+	logoUrl: '/images/showcases/lyonjs/lyonjsSquaredLogo.png',
+};
 
 export default function CarouselTemplate() {
-	const [data, setData] = useState(
-		defaultValues,
-	);
+	const [data, setData] = useState(defaultValues);
 	const {getVideoLink, isLoading, videoUrl, error} = useGenerateVideo(
 		data,
 		'Carousel',
@@ -53,7 +49,7 @@ export default function CarouselTemplate() {
 						width: '100%',
 						aspectRatio: '16/9',
 					}}
-					durationInFrames={data.imageDuration*data.imageUrls.length}
+					durationInFrames={data.imageDuration * data.imageUrls.length}
 					compositionWidth={800}
 					compositionHeight={800}
 					fps={30}
@@ -86,10 +82,7 @@ export default function CarouselTemplate() {
 						setData(event.jsObject);
 					}}
 				/>
-				<Code
-					composition="Carousel"
-					params={data || defaultValues}
-				/>
+				<Code composition="Carousel" params={data || defaultValues} />
 			</section>
 		</div>
 	);

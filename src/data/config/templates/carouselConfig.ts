@@ -1,4 +1,4 @@
-import { Carousel } from '../../../../remotion/compositions/templates/carousel/Carousel'
+import {Carousel} from '../../../../remotion/compositions/templates/carousel/Carousel';
 import {CompositionProps} from '../compositionsConfig';
 
 export const CarouselConfig: CompositionProps = {
@@ -16,6 +16,6 @@ export const CarouselConfig: CompositionProps = {
 			'https://secure.meetupstatic.com/photos/event/a/8/0/b/highres_515983019.webp',
 		],
 		imageDuration: 90,
-		logoUrl: '/images/showcases/lyonjs/lyonjsSquaredLogo.png'
+		logoUrl: '/images/showcases/lyonjs/lyonjsSquaredLogo.png',
 	},
 };

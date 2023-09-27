@@ -11,7 +11,7 @@ import {SnowcampConfig} from './showcases/snowcampConfig';
 import {TouraineTechConfig} from './showcases/touraineTechConfig';
 import {VeryTechTripConfig} from './showcases/veryTechTripConfig';
 import {VolcampConfig} from './showcases/volcampConfig';
-import { CarouselConfig } from './templates/carouselConfig'
+import {CarouselConfig} from './templates/carouselConfig';
 import {EventConfig} from './templates/eventConfig';
 import {LayersConfig} from './templates/layersConfig';
 import {MeetupConfig} from './templates/meetupConfig';

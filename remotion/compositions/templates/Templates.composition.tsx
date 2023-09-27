@@ -1,7 +1,7 @@
 import React from 'react';
 import {Folder} from 'remotion';
 
-import { CarouselComposition } from './carousel/Carousel.composition'
+import {CarouselComposition} from './carousel/Carousel.composition';
 import {EventsComposition} from './event/Events.composition';
 import {LayersComposition} from './layers/Layers.composition';
 import {MeetupComposition} from './meetup/Meetup.composition';

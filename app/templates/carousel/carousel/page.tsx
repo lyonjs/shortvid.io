@@ -5,15 +5,17 @@ import JSONInput from 'react-json-editor-ajrm';
 import locale from 'react-json-editor-ajrm/locale/en';
 import {Player} from '@remotion/player';
 
-import {Carousel} from '../../../../remotion/compositions/templates/carousel/Carousel';
+import {
+	Carousel,
+	CarouselType,
+} from '../../../../remotion/compositions/templates/carousel/Carousel';
 import {Code} from '../../../../src/app/Code';
 import {RenderButton} from '../../../../src/app/forms/RenderButton';
 import {useGenerateVideo} from '../../../../src/app/hooks/useGenerateVideo';
-import {DefaultPropsTypes} from '../../../../src/app/types/template.types';
 
 import styles from '../../../../styles/app/layout/main.module.css';
 
-const defaultValues = {
+const defaultValues: CarouselType = {
 	imageUrls: [
 		'https://secure.meetupstatic.com/photos/event/a/9/9/9/highres_511003417.webp',
 		'https://secure.meetupstatic.com/photos/event/4/a/c/7/highres_515299143.webp',
@@ -78,7 +80,7 @@ export default function CarouselTemplate() {
 					}}
 					height="300px"
 					width="100%"
-					onChange={(event: {jsObject: SetStateAction<DefaultPropsTypes>}) => {
+					onChange={(event: {jsObject: SetStateAction<CarouselType>}) => {
 						setData(event.jsObject);
 					}}
 				/>

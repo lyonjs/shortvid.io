@@ -36,16 +36,6 @@ export const sideBarNavConfig: sideBarNavProps = {
 				],
 			},
 			{
-				categoryName: 'carousel',
-				items: [
-					{
-						compositionName: 'Carousel',
-						compositionId: 'Carousel',
-						compositionLink: 'carousel',
-					},
-				],
-			},
-			{
 				categoryName: 'layers',
 				items: [
 					{

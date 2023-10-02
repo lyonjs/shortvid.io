@@ -136,6 +136,11 @@ export const sideBarNavConfig: sideBarNavProps = {
 				compositionId: 'Volcamp2023',
 				compositionLink: 'Volcamp2023',
 			},
+			{
+				compositionName: 'Devfest Nantes 2023',
+				compositionId: 'DevfestNantes',
+				compositionLink: 'DevfestNantes',
+			},
 		],
 	},
 };

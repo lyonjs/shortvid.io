@@ -4,6 +4,7 @@ import {Folder} from 'remotion';
 import {AlpesCraftComposition} from './alpescraft/AlpesCraft.composition';
 import {CampingDesSpeakersComposition} from './campingDesSpeakers/CampingDesSpeakers.composition';
 import {CodeInTheDarkComposition} from './codeInTheDark/CodeInTheDark.composition';
+import {DevfestNantesComposition} from './devfestNantes/DevfestNantes.composition';
 import {DevoxxComposition} from './devoxx/Devoxx.composition';
 import {LyonJSComposition} from './lyonJS/LyonJS.composition';
 import {MixitComposition} from './mixit/Mixit.composition';
@@ -25,6 +26,7 @@ export const ShowcasesComposition: React.FC = () => {
 			<CampingDesSpeakersComposition />
 			<CodeInTheDarkComposition />
 			<VolcampComposition />
+			<DevfestNantesComposition />
 		</Folder>
 	);
 };

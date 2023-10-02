@@ -5,6 +5,7 @@ import {TemplateTypes} from '../../app/types/template.types';
 
 import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
 import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
+import {DevfestNantesConfig} from './showcases/devfestNantesConfig';
 import {DevoxxConfig} from './showcases/devoxxConfig';
 import {MixitConfig} from './showcases/mixitConfig';
 import {SnowcampConfig} from './showcases/snowcampConfig';
@@ -62,5 +63,6 @@ export const CompositionsConfig: CompositionsConfigProps = {
 		AlpesCraft: AlpesCraftConfig,
 		CampingDesSpeakers: CampingDesSpeakersConfig,
 		Volcamp2023: VolcampConfig,
+		DevfestNantes: DevfestNantesConfig,
 	},
 };

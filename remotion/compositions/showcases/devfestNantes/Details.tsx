@@ -1,0 +1,58 @@
+import {loadFont} from '@remotion/google-fonts/LeagueSpartan';
+import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import {TalkDetails} from '../../../design/molecules/TalkDetails';
+
+const {fontFamily} = loadFont();
+
+export const Details: React.FC<{
+	date: string;
+	time: string;
+	location?: string;
+}> = ({date, time, location}) => {
+	const frame = useCurrentFrame();
+	const {fps} = useVideoConfig();
+
+	const drop = spring({
+		frame: frame - 40,
+		from: -40,
+		to: 20,
+		fps,
+		durationInFrames: 40,
+	});
+	const opacity = spring({
+		frame: frame - 40,
+		from: 0,
+		to: 1,
+		fps,
+		durationInFrames: 40,
+	});
+	const textUnblur = interpolate(frame - 40, [0, 18], [5, 0], {
+		extrapolateRight: 'clamp',
+	});
+
+	return (
+		<TalkDetails
+			items={{
+				date,
+				time,
+				location,
+			}}
+			style={{
+				fontFamily,
+				opacity,
+				bottom: `${drop}px`,
+				left: '50%',
+				width: '80%',
+				fontSize: '28px',
+				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+				transform: 'translateX(-50%)',
+				filter: `blur(${textUnblur}px)`,
+			}}
+			iconStyle={{
+				width: '50px',
+				filter: 'drop-shadow(0px 0px 4px black)',
+			}}
+		/>
+	);
+};

@@ -4,7 +4,7 @@ export const Android = () => {
 	const frame = useCurrentFrame();
 	const logoWidth = 200;
 
-	const fall = interpolate(frame, [0, 200], [-100, 250], {
+	const fall = interpolate(frame, [0, 200], [-180, 760], {
 		extrapolateRight: 'clamp',
 	});
 	const rotate = interpolate(frame, [0, 50, 150, 200], [-45, 45, -45, 45], {

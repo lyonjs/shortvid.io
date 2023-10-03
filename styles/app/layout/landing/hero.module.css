@@ -1,16 +1,23 @@
 .hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 	padding: 80px 10px;
 
-	h1 {
+	& img {
+		padding-bottom: 5rem;
+	}
+
+	& h1 {
 		max-width: 700px;
 		font-size: 3.5rem;
-		font-weight: 700;
+		font-weight: 900;
 		line-height: 1.2;
 		margin: 0 auto 40px;
 	}
 
-	h2 {
+	& h2 {
 		font-size: 1.3rem;
 		font-weight: 300;
 		margin-bottom: 80px;
@@ -32,11 +39,11 @@
 
 @media screen and (max-width: 570px) {
 	.hero {
-		h1 {
+		& h1 {
 			font-size: 2.5rem;
 		}
 
-		h2 {
+		& h2 {
 			font-size: 1rem;
 		}
 	}

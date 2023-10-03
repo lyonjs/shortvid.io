@@ -30,7 +30,9 @@ describe('<SidebarNavMobile />', () => {
 
 	it('should render the component', () => {
 		const sidebar = screen.getByTestId('sidebarMobile');
-		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
+		const logo = screen.getByRole('img', {
+			name: 'Shortvid.io logo',
+		});
 		const burgerButton = screen.getByRole('button', {
 			name: 'Open or close navigation',
 		});
@@ -42,7 +44,9 @@ describe('<SidebarNavMobile />', () => {
 
 	it('should open and close the burger menu', async () => {
 		const user = userEvent.setup();
-		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
+		const logo = screen.getByRole('img', {
+			name: 'Shortvid.io logo',
+		});
 		const burgerButton = screen.getByRole('button', {
 			name: 'Open or close navigation',
 		});

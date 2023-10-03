@@ -7,9 +7,9 @@ import {DevfestNantes} from './DevfestNantes';
 
 export const DevfestNantesComposition = () => {
 	return (
-		<Folder name="DevfestNantesComposition">
+		<Folder name="DevfestNantes-2023">
 			<Composition
-				id="DevfestNantesComposition"
+				id="DevfestNantesTalk"
 				component={DevfestNantes}
 				durationInFrames={300}
 				fps={30}

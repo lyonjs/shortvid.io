@@ -7,12 +7,19 @@ import {DefaultProps} from '../../../types/defaultProps.types';
 import {TalkTitle} from '../campingDesSpeakers/components/TalkTitle';
 
 import {Android} from './Android';
+import {Details} from './Details';
 import {Dino} from './Dino';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 
 const {fontFamily} = loadFont();
-export const DevfestNantes = ({title, speakers}: DefaultProps) => {
+export const DevfestNantes = ({
+	title,
+	speakers,
+	date,
+	time,
+	location,
+}: DefaultProps) => {
 	return (
 		<AbsoluteFill
 			style={{
@@ -46,6 +53,9 @@ export const DevfestNantes = ({title, speakers}: DefaultProps) => {
 			<Sequence name="Speakers" from={30}>
 				<Speakers speakers={speakers} />
 				<TalkTitle title={title} style={{}} />
+			</Sequence>
+			<Sequence from={70}>
+				<Details date={date} time={time} location={location} />
 			</Sequence>
 		</AbsoluteFill>
 	);

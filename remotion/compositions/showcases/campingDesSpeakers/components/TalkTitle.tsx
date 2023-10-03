@@ -39,7 +39,7 @@ export const TalkTitle: React.FC<{
 				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
 				position: 'absolute',
 				minHeight: 150,
-				bottom: '130px',
+				bottom: '170px',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
 				...style,

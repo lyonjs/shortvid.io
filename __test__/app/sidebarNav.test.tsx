@@ -26,7 +26,11 @@ jest.mock(
 );
 
 describe('<SidebarNav />', () => {
-	beforeEach(() => {
+	afterEach(() => {
+		window.localStorage.clear();
+	});
+
+	it('should render the component', () => {
 		render(
 			<SidebarProvider>
 				<Sidebar>
@@ -34,17 +38,13 @@ describe('<SidebarNav />', () => {
 				</Sidebar>
 			</SidebarProvider>,
 		);
-	});
 
-	afterEach(() => {
-		window.localStorage.clear();
-	});
-
-	it('should render the component', () => {
 		const sidebar = screen.getByRole('region', {
 			name: 'sidebar',
 		});
-		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
+		const logo = screen.getByRole('img', {
+			name: 'Shortvid.io logo',
+		});
 		const contributingLink = screen.getByRole('link', {
 			name: 'Contributing',
 		});
@@ -76,6 +76,14 @@ describe('<SidebarNav />', () => {
 	});
 
 	it('should display videos list', async () => {
+		render(
+			<SidebarProvider>
+				<Sidebar>
+					<SidebarNav />
+				</Sidebar>
+			</SidebarProvider>,
+		);
+
 		const user = userEvent.setup();
 		const topLevelSummary = screen.getByText('topLevel').parentNode as Element;
 		const firstLevelVideo = screen.getByRole('heading', {
@@ -94,13 +102,21 @@ describe('<SidebarNav />', () => {
 	});
 
 	it('should fold', async () => {
+		render(
+			<SidebarProvider>
+				<Sidebar>
+					<SidebarNav />
+				</Sidebar>
+			</SidebarProvider>,
+		);
+
 		const user = userEvent.setup();
 
 		const foldButton = screen.getByRole('button', {
 			name: 'foldButton',
 		});
-		const logoWordmark = screen.getByRole('heading', {
-			name: 'Shortvid.io',
+		const logoWordmark = screen.getByRole('img', {
+			name: 'Shortvid.io logo',
 		});
 		const topLevelText = screen.getByText('topLevel');
 		const contributingText = screen.getByText('Contributing');
@@ -112,12 +128,24 @@ describe('<SidebarNav />', () => {
 
 		await user.click(foldButton);
 
-		expect(logoWordmark).not.toBeVisible();
+		const monogram = screen.getByRole('img', {
+			name: 'Shortvid.io monogram',
+		});
+
+		expect(monogram).toBeVisible();
 		expect(topLevelText).not.toBeVisible();
 		expect(contributingText).not.toBeVisible();
 	});
 
 	it('should alternate display details when folded', async () => {
+		render(
+			<SidebarProvider>
+				<Sidebar>
+					<SidebarNav />
+				</Sidebar>
+			</SidebarProvider>,
+		);
+
 		const user = userEvent.setup();
 		const foldButton = screen.getByRole('button', {
 			name: 'foldButton',
@@ -150,6 +178,14 @@ describe('<SidebarNav />', () => {
 	});
 
 	it('should save fold preferences', async () => {
+		render(
+			<SidebarProvider>
+				<Sidebar>
+					<SidebarNav />
+				</Sidebar>
+			</SidebarProvider>,
+		);
+
 		const user = userEvent.setup();
 		const foldButton = screen.getByRole('button', {
 			name: 'foldButton',

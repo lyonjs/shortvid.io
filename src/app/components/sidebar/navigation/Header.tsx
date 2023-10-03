@@ -1,15 +1,8 @@
 import {ReactNode} from 'react';
-import {MuseoModerno} from 'next/font/google';
+import Image from 'next/image';
 import Link from 'next/link';
 
-import {Logo} from '../../../Logo';
-
 import styles from '../../../../../styles/app/components/sidebar/sidebar.module.css';
-
-const wordmarkFont = MuseoModerno({
-	weight: '900',
-	subsets: ['latin'],
-});
 
 export const Header: React.FC<{
 	expanded: boolean;
@@ -20,8 +13,21 @@ export const Header: React.FC<{
 		<header className={className}>
 			<nav>
 				<Link href="/" className={styles.logoLink}>
-					<Logo />
-					{expanded && <h2 className={wordmarkFont.className}>Shortvid.io</h2>}
+					{expanded ? (
+						<Image
+							src="/branding/full-logo.svg"
+							alt="Shortvid.io logo"
+							width={170}
+							height={150}
+						/>
+					) : (
+						<Image
+							src="/branding/monogram.svg"
+							alt="Shortvid.io monogram"
+							width={70}
+							height={70}
+						/>
+					)}
 				</Link>
 				{children}
 			</nav>

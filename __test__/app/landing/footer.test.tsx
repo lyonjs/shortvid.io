@@ -8,7 +8,9 @@ describe('<Footer />', () => {
 	it('should render the component', () => {
 		render(<Footer />);
 
-		const logo = screen.getByTitle('Shortvid.io Logo').parentNode;
+		const logo = screen.getByRole('img', {
+			name: 'Shortvid.io monogram',
+		});
 
 		const vercelImg = screen.getByRole('img', {
 			name: 'Vercel',

@@ -14,20 +14,20 @@ export const Details: React.FC<{
 	const {fps} = useVideoConfig();
 
 	const drop = spring({
-		frame: frame - 40,
+		frame: frame,
 		from: -40,
 		to: 20,
 		fps,
 		durationInFrames: 40,
 	});
 	const opacity = spring({
-		frame: frame - 40,
+		frame: frame,
 		from: 0,
 		to: 1,
 		fps,
 		durationInFrames: 40,
 	});
-	const textUnblur = interpolate(frame - 40, [0, 18], [5, 0], {
+	const textUnblur = interpolate(frame, [0, 18], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 

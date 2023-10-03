@@ -54,7 +54,7 @@ export const DevfestNantes = ({
 				<Speakers speakers={speakers} />
 				<TalkTitle title={title} style={{}} />
 			</Sequence>
-			<Sequence from={30}>
+			<Sequence from={70}>
 				<Details date={date} time={time} location={location} />
 			</Sequence>
 		</AbsoluteFill>

@@ -4,7 +4,12 @@ export const Dino = () => {
 	const frame = useCurrentFrame();
 	const logoWidth = 400;
 
-	const pictureDrop = interpolate(frame, [0, 20], [-logoWidth, 0], {
+	const pictureSlide = interpolate(frame, [0, 20], [-logoWidth, 0], {
+		extrapolateRight: 'clamp',
+		easing: Easing.out(Easing.ease),
+	});
+
+	const pictureSlideBack = interpolate(frame, [270, 290], [0, -logoWidth], {
 		extrapolateRight: 'clamp',
 		easing: Easing.out(Easing.ease),
 	});
@@ -16,7 +21,7 @@ export const Dino = () => {
 			height="auto"
 			style={{
 				position: 'absolute',
-				left: pictureDrop,
+				left: pictureSlide + pictureSlideBack,
 				bottom: 0,
 			}}
 		/>

@@ -3,10 +3,10 @@ import React, {ChangeEventHandler} from 'react';
 import styles from '../../../styles/app/components/form/inputs.module.css';
 
 export interface SelectInputProps {
-	value?: string;
+	value?: string | undefined;
 	setValue: ChangeEventHandler<HTMLSelectElement>;
 	label: string;
-	options?: string[];
+	options?: (string | undefined)[];
 }
 
 export const SelectInput = ({

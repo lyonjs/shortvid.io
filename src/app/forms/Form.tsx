@@ -26,7 +26,7 @@ export type FormConfigProps = {
 		label: string;
 		component: FormInputTypes;
 		placeholder?: string;
-		options?: string[];
+		options?: (string | undefined)[];
 	};
 };
 

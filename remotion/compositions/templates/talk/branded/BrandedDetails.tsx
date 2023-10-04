@@ -98,7 +98,13 @@ export const BrandedDetails: React.FC<{
 					{endingTime ? (
 						<TimeRange startingTime={startingTime} endingTime={endingTime} />
 					) : (
-						startingTime
+						<span
+							style={{
+								fontWeight: 'bold',
+							}}
+						>
+							{startingTime}
+						</span>
 					)}
 				</Text>
 			</div>

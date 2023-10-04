@@ -1,5 +1,7 @@
 import {
+	Easing,
 	Img,
+	interpolate,
 	spring,
 	staticFile,
 	useCurrentFrame,
@@ -11,12 +13,18 @@ export const Logo = () => {
 	const {fps} = useVideoConfig();
 	const logoWidth = 250;
 
-	const pictureDrop = spring({
+	const pictureSlide = spring({
 		frame,
 		fps,
 		from: -logoWidth,
 		to: 30,
 		durationInFrames: 30,
+	});
+
+	const pictureSlideBack = interpolate(frame, [300, 320], [0, logoWidth + 30], {
+		extrapolateRight: 'clamp',
+		extrapolateLeft: 'clamp',
+		easing: Easing.out(Easing.ease),
 	});
 
 	return (
@@ -28,7 +36,7 @@ export const Logo = () => {
 			height="auto"
 			style={{
 				position: 'absolute',
-				right: pictureDrop,
+				right: pictureSlide - pictureSlideBack,
 				top: 20,
 			}}
 		/>

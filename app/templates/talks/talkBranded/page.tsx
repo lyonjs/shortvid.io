@@ -43,7 +43,7 @@ export default function BrandedTalkPage() {
 		'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg';
 	const [logoUrl, setLogoUrl] = useInputChange<string>(logoGDG, 'logoUrl');
 	const [recurringDay, setRecurringDay] = useInputChange<string | undefined>(
-		'mardi',
+		undefined,
 		'recurringDay',
 	);
 	const [location, setLocation] = useInputChange<string | undefined>(
@@ -124,7 +124,7 @@ export default function BrandedTalkPage() {
 			setState: setRecurringDay,
 			label: 'Recurring day',
 			component: SelectInput,
-			options: ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi'],
+			options: [undefined, 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi'],
 		},
 		location: {
 			state: location,

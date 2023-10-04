@@ -36,13 +36,17 @@ export const TalkBranded: React.FC<TalkBrandedProps> = ({
 	speaker,
 }) => {
 	const formatedStartingDate = new Date(startingDate);
-	const startingDay = format(formatedStartingDate, 'dd MMMM', {locale: fr});
-	const startingTime = format(formatedStartingDate, 'HH:mm');
+	const startingDay = format(formatedStartingDate, 'dd MMMM yyyy', {
+		locale: fr,
+	});
+	const startingTime = format(formatedStartingDate, "HH 'h' mm");
 
 	const formatedEndingDate = endingDate && new Date(endingDate);
 	const endingDay =
-		formatedEndingDate && format(formatedEndingDate, 'dd MMMM', {locale: fr});
-	const endingTime = formatedEndingDate && format(formatedEndingDate, 'HH:mm');
+		formatedEndingDate &&
+		format(formatedEndingDate, 'dd MMMM yyyy', {locale: fr});
+	const endingTime =
+		formatedEndingDate && format(formatedEndingDate, "HH 'h' mm");
 
 	return (
 		<AbsoluteFill

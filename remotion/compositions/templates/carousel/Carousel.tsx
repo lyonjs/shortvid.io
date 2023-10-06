@@ -8,7 +8,7 @@ export type CarouselType = {
 	imageDuration: number;
 };
 export function Carousel({imageUrls, logoUrl, imageDuration}: CarouselType) {
-	const delayShift = imageDuration * 0.25;
+	const delayShift = imageDuration * 0.2;
 
 	return (
 		<AbsoluteFill style={{overflow: 'hidden', background: 'black'}}>

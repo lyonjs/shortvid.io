@@ -10,7 +10,7 @@ export const CarouselComposition: React.FC = () => {
 		'https://secure.meetupstatic.com/photos/event/a/8/0/b/highres_515983019.webp',
 	];
 
-	const imageDuration = 90;
+	const imageDuration = 120;
 
 	return (
 		<Folder name="Carousel">

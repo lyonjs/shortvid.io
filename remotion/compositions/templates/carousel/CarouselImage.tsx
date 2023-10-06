@@ -19,20 +19,20 @@ export function CarouselImage({
 }) {
 	const frame = useCurrentFrame();
 	const {width} = useVideoConfig();
-	const animationDuration = imageDuration * 0.1;
+	const animationDuration = imageDuration * 0.3;
 	const slide = interpolate(
 		frame,
 		[imageDuration - animationDuration, imageDuration],
-		[0, width / 2],
+		[0, width],
 		{
-			easing: Easing.out(Easing.cubic),
+			easing: Easing.in(Easing.cubic),
 			extrapolateRight: 'clamp',
 		},
 	);
 	const opacity = interpolate(
 		frame,
-		[imageDuration - animationDuration, imageDuration],
-		[1, 0],
+		[0, imageDuration * 0.33, imageDuration * 0.66, imageDuration],
+		[0, 1, 1, 0],
 		{
 			extrapolateRight: 'clamp',
 		},
@@ -59,8 +59,8 @@ export function CarouselImage({
 					height: '100%',
 					filter: 'blur(20px)',
 					transform: 'scale(1.2)',
-					opacity: 0.3,
 					...animation,
+					opacity: 0.5,
 				}}
 			/>
 			<Img

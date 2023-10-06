@@ -5,6 +5,7 @@ import {defaultTalkValues} from '../../../../src/data/defaultValues';
 
 import {DevfestNantes} from './DevfestNantes';
 import {DevfestNantesLoop} from './DevfestNantesLoop';
+import {DevfestNantesPhrase} from './DevfestNantesPhrase';
 
 export const DevfestNantesComposition = () => {
 	return (
@@ -21,6 +22,15 @@ export const DevfestNantesComposition = () => {
 			<Composition
 				id="DevfestNantesTalkLoop"
 				component={DevfestNantesLoop}
+				durationInFrames={350}
+				fps={30}
+				width={1280}
+				height={720}
+				defaultProps={defaultTalkValues}
+			/>
+			<Composition
+				id="DevfestNantesPhrase"
+				component={DevfestNantesPhrase}
 				durationInFrames={350}
 				fps={30}
 				width={1280}

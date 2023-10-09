@@ -33,6 +33,12 @@ export const PARTNERS = [
 		url: 'https://camping-speakers.fr/',
 	},
 	{
+		name: 'Devfest Nantes',
+		logo: '/images/showcases/devfestNantes/logo-devfest-mgm_transparent.svg',
+		logoDark: '/images/showcases/devfestNantes/logo-devfest-mgm_transparent.svg',
+		url: 'https://devfest.gdgnantes.com/',
+	},
+	{
 		name: 'Volcamp',
 		logo: '/images/showcases/volcamp/volcampText.svg',
 		logoDark: '/images/showcases/volcamp/volcampText.svg',

@@ -19,7 +19,7 @@ describe('<Partners />', () => {
 
 		expect(sectionTitle).toBeVisible();
 
-		expect(partners.length).toEqual(4);
+		expect(partners.length).toEqual(5);
 
 		partners.map((partner, id) => {
 			expect(partner).toBeVisible();

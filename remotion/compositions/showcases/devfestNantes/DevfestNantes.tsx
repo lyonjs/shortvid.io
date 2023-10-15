@@ -4,13 +4,13 @@ import {AbsoluteFill, Sequence, staticFile} from 'remotion';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 import {DefaultProps} from '../../../types/defaultProps.types';
-import {TalkTitle} from '../campingDesSpeakers/components/TalkTitle';
 
 import {Android} from './Android';
 import {Details} from './Details';
 import {Dino} from './Dino';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
+import {TalkTitle} from './TalkTitle';
 
 const {fontFamily} = loadFont();
 export const DevfestNantes = ({

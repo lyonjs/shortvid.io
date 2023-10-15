@@ -11,11 +11,11 @@ import {
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 import {DefaultProps} from '../../../types/defaultProps.types';
-import {TalkTitle} from '../campingDesSpeakers/components/TalkTitle';
 
 import {Android} from './Android';
 import {Dino} from './Dino';
 import {Logo} from './Logo';
+import {TalkTitle} from './TalkTitle';
 
 const {fontFamily} = loadFont();
 export const DevfestNantesPhrase = ({title}: DefaultProps) => {

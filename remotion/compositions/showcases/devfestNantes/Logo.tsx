@@ -8,7 +8,9 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-export const Logo = () => {
+import {ComponentDisplayMode} from './types/types';
+
+export const Logo = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const logoWidth = 250;
@@ -37,7 +39,8 @@ export const Logo = () => {
 			style={{
 				position: 'absolute',
 				right: pictureSlide - pictureSlideBack,
-				top: 20,
+				top: isTotemDisplayMode ? undefined : 20,
+				bottom: isTotemDisplayMode ? 20 : undefined,
 			}}
 		/>
 	);

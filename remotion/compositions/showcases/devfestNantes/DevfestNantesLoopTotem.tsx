@@ -20,7 +20,8 @@ import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 
 const {fontFamily} = loadFont();
-export const DevfestNantesLoop = ({
+
+export const DevfestNantesLoopTotem = ({
 	title,
 	speakers,
 	date,
@@ -29,7 +30,7 @@ export const DevfestNantesLoop = ({
 }: DefaultProps) => {
 	const frame = useCurrentFrame();
 
-	const SlideDown = interpolate(frame, [300, 330], [0, 650], {
+	const SlideDown = interpolate(frame, [300, 330], [0, 1300], {
 		extrapolateRight: 'clamp',
 		extrapolateLeft: 'clamp',
 		easing: Easing.bezier(0.51, -0.75, 0.99, 0.75),
@@ -60,10 +61,10 @@ export const DevfestNantesLoop = ({
 				<Dino />
 			</Sequence>
 			<Sequence from={110}>
-				<Android />
+				<Android isTotemDisplayMode />
 			</Sequence>
 			<Sequence>
-				<Logo />
+				<Logo isTotemDisplayMode />
 			</Sequence>
 			<div
 				style={{
@@ -73,10 +74,15 @@ export const DevfestNantesLoop = ({
 			>
 				<Sequence name="Speakers" from={30}>
 					<Speakers speakers={speakers} />
-					<TalkTitle title={title} style={{}} />
+					<TalkTitle title={title} style={{}} isTotemDisplayMode />
 				</Sequence>
 				<Sequence from={70}>
-					<Details date={date} time={time} location={location} />
+					<Details
+						date={date}
+						time={time}
+						location={location}
+						isTotemDisplayMode
+					/>
 				</Sequence>
 			</div>
 		</AbsoluteFill>

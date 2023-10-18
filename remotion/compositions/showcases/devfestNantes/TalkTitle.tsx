@@ -30,7 +30,7 @@ export const TalkTitle: React.FC<{
 		<Title
 			style={{
 				fontFamily,
-				width: isTotemDisplayMode ? '95%' : '75%',
+				width: '95%',
 				left: '50%',
 				transform: 'translateX(-50%)',
 				fontSize: '50px',

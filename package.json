@@ -27,7 +27,7 @@
 		"@remotion/player": "4.0.50",
 		"@remotion/renderer": "4.0.50",
 		"@remotion/shapes": "4.0.50",
-		"@types/jest": "29.5.5",
+		"@types/jest": "29.5.6",
 		"@vercel/analytics": "^1.0.0",
 		"body-parser": "1.20.2",
 		"cors": "2.8.5",

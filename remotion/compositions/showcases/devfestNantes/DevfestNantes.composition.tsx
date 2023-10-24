@@ -5,6 +5,7 @@ import {defaultTalkValues} from '../../../../src/data/defaultValues';
 
 import {DevfestNantes} from './DevfestNantes';
 import {DevfestNantesLoop} from './DevfestNantesLoop';
+import {DevfestNantesLoopTotem} from './DevfestNantesLoopTotem';
 import {DevfestNantesPhrase} from './DevfestNantesPhrase';
 
 export const DevfestNantesComposition = () => {
@@ -26,6 +27,15 @@ export const DevfestNantesComposition = () => {
 				fps={30}
 				width={1280}
 				height={720}
+				defaultProps={defaultTalkValues}
+			/>
+			<Composition
+				id="DevfestNantesTalkLoopTotem"
+				component={DevfestNantesLoopTotem}
+				durationInFrames={350}
+				fps={30}
+				width={720}
+				height={1280}
 				defaultProps={defaultTalkValues}
 			/>
 			<Composition

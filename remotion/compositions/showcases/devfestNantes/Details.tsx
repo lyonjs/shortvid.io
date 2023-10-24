@@ -9,14 +9,15 @@ export const Details: React.FC<{
 	date: string;
 	time: string;
 	location?: string;
-}> = ({date, time, location}) => {
+	isTotemDisplayMode?: boolean;
+}> = ({date, time, location, isTotemDisplayMode}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
 	const drop = spring({
 		frame: frame,
 		from: -40,
-		to: 20,
+		to: isTotemDisplayMode ? 200 : 20,
 		fps,
 		durationInFrames: 40,
 	});
@@ -43,7 +44,7 @@ export const Details: React.FC<{
 				opacity,
 				bottom: `${drop}px`,
 				left: '50%',
-				width: '80%',
+				width: isTotemDisplayMode ? '96%' : '80%',
 				fontSize: '28px',
 				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
 				transform: 'translateX(-50%)',

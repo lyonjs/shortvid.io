@@ -1,6 +1,7 @@
 import {Composition, Folder} from 'remotion';
 
 import {Event} from './Event';
+import {eventSchema} from './event.types';
 
 export const EventsComposition: React.FC = () => {
 	return (
@@ -12,6 +13,7 @@ export const EventsComposition: React.FC = () => {
 				id="Event"
 				fps={30}
 				durationInFrames={270}
+				schema={eventSchema}
 				defaultProps={{
 					backgroundImg:
 						'https://i.pinimg.com/originals/de/0d/19/de0d19d835dd1224c5208701d78bd6e7.jpg',

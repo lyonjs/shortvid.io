@@ -1,13 +1,14 @@
 import {AbsoluteFill, Img, Sequence} from 'remotion';
+import {z} from 'zod';
 
+import {carouselSchema} from './carousel.types';
 import {CarouselImage} from './CarouselImage';
 
-export type CarouselType = {
-	imageUrls: string[];
-	logoUrl?: string;
-	imageDuration: number;
-};
-export function Carousel({imageUrls, logoUrl, imageDuration}: CarouselType) {
+export function Carousel({
+	imageUrls,
+	logoUrl,
+	imageDuration,
+}: z.infer<typeof carouselSchema>) {
 	const delayShift = imageDuration * 0.2;
 
 	return (

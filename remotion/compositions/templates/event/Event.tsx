@@ -1,21 +1,16 @@
+import React from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
+import {z} from 'zod';
 
 import {loadGoogleFont} from '../../../../src/app/utils/loadFont';
 import {LottieAsset} from '../../../design/atoms/LottieAsset';
 import {Paillettes} from '../../../design/atoms/Paillettes';
 
+import {eventSchema} from './event.types';
 import {EventBackground} from './EventBackground';
 import {EventTitle} from './EventTitle';
 
-export type EventProps = {
-	backgroundImg?: string;
-	title: string;
-	lottieAsset?: string;
-	paillettesAsset?: string;
-	fontFamily?: string;
-};
-
-export const Event: React.FC<EventProps> = ({
+export const Event: React.FC<z.infer<typeof eventSchema>> = ({
 	backgroundImg = 'https://i.pinimg.com/originals/de/0d/19/de0d19d835dd1224c5208701d78bd6e7.jpg',
 	title,
 	lottieAsset = 'lf20_UDstUT',

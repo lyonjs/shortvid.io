@@ -29,6 +29,9 @@ dependencies:
   '@remotion/shapes':
     specifier: 4.0.59
     version: 4.0.59(react-dom@18.2.0)(react@18.2.0)
+  '@remotion/zod-types':
+    specifier: ^4.0.59
+    version: 4.0.59(react-dom@18.2.0)(react@18.2.0)(zod@3.22.4)
   '@types/jest':
     specifier: 29.5.6
     version: 29.5.6
@@ -77,6 +80,9 @@ dependencies:
   remotion:
     specifier: 4.0.59
     version: 4.0.59(react-dom@18.2.0)(react@18.2.0)
+  zod:
+    specifier: ^3.22.4
+    version: 3.22.4
 
 devDependencies:
   '@iconify/react':
@@ -1335,6 +1341,18 @@ packages:
       '@remotion/paths': 4.0.59
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@remotion/zod-types@4.0.59(react-dom@18.2.0)(react@18.2.0)(zod@3.22.4):
+    resolution: {integrity: sha512-VUsR/6oaP8ibNJmqphHMAUCe57eeqvO51KRykSdiSY0rwkAnrHdaVKwbFEiwr10DPSaAglyMaynm3XoTsb0Xpw==}
+    peerDependencies:
+      zod: ^3.22.3
+    dependencies:
+      remotion: 4.0.59(react-dom@18.2.0)(react@18.2.0)
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - react
+      - react-dom
     dev: false
 
   /@rushstack/eslint-patch@1.5.1:
@@ -6673,3 +6691,7 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false

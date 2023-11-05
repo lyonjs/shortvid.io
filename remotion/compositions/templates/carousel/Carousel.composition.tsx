@@ -1,6 +1,8 @@
+import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
 
 import {Carousel} from './Carousel';
+import {carouselSchema} from './carousel.types';
 
 export const CarouselComposition: React.FC = () => {
 	const imageUrls = [
@@ -21,6 +23,7 @@ export const CarouselComposition: React.FC = () => {
 				id="Carousel"
 				fps={30}
 				durationInFrames={imageUrls.length * imageDuration}
+				schema={carouselSchema}
 				defaultProps={{
 					imageUrls,
 					imageDuration,

@@ -1,8 +1,10 @@
+import {z} from 'zod';
+
 import {ReplayProps} from '../../../app/templates/replays/replay/page';
 import {AlpesCraftProps} from '../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
 import {CampingDesSpeakersProps} from '../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
 import {VolcampProps} from '../../../remotion/compositions/showcases/volcamp/components/VolcampTalk';
-import {CarouselType} from '../../../remotion/compositions/templates/carousel/Carousel';
+import {carouselSchema} from '../../../remotion/compositions/templates/carousel/carousel.types';
 import {SilhouetteProps} from '../../../remotion/compositions/templates/silhouette/Silhouette';
 import {SponsorProps} from '../../../remotion/compositions/templates/sponsor/Sponsor';
 import {SpotlightNewSponsornProps} from '../../../remotion/compositions/templates/sponsor/spotlightNewSponsor/SpotlightNewSponsor';
@@ -24,7 +26,7 @@ export type DefaultPropsTypes =
 	| SponsorProps
 	| SilhouetteProps
 	| SpotlightNewSponsornProps
-	| CarouselType;
+	| z.infer<typeof carouselSchema>;
 
 export type TemplateTypes =
 	| React.FC<DefaultProps>
@@ -38,4 +40,4 @@ export type TemplateTypes =
 	| React.FC<SponsorProps>
 	| React.FC<SpotlightNewSponsornProps>
 	| React.FC<SilhouetteProps>
-	| React.FC<CarouselType>;
+	| React.FC<z.infer<typeof carouselSchema>>;

@@ -8,7 +8,7 @@ import {TemplatesComposition} from './compositions/templates/Templates.compositi
 import {AtomsComposition} from './design/atoms/Atoms.composition';
 import {MoleculesComposition} from './design/molecules/Molecules.composition';
 
-export const RemotionVideo: React.FC = () => {
+export const RemotionRoot: React.FC = () => {
 	return (
 		<FontProvider>
 			<TemplatesComposition />

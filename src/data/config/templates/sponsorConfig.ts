@@ -1,5 +1,5 @@
-import {Sponsor} from '../../../../remotion/compositions/templates/sponsor/Sponsor';
-import {SpotlightNewSponsor} from '../../../../remotion/compositions/templates/sponsor/spotlightNewSponsor/SpotlightNewSponsor';
+import {Sponsor} from '../../../../remotion/compositions/templates/sponsors/default/Sponsor';
+import {SpotlightNewSponsor} from '../../../../remotion/compositions/templates/sponsors/spotlightNewSponsor/SpotlightNewSponsor';
 import {CompositionProps} from '../compositionsConfig';
 
 export const SponsorConfig: CompositionProps = {

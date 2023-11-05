@@ -3,6 +3,6 @@
 
 import {registerRoot} from 'remotion';
 
-import {RemotionVideo} from './Video';
+import {RemotionRoot} from './Video';
 
-registerRoot(RemotionVideo);
+registerRoot(RemotionRoot);

@@ -1,7 +1,7 @@
 import {AbsoluteFill} from 'remotion';
 
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {SponsorLogo} from '../../templates/sponsor/SponsorLogo';
+import {SponsorLogo} from '../../templates/sponsors/default/SponsorLogo';
 
 import {Logo} from './Logo';
 import {TalkTitle} from './TalkTitle';

@@ -1,10 +1,10 @@
-import React from 'react';
 import {Composition, Folder, staticFile} from 'remotion';
 
+import {Sponsor} from './default/Sponsor';
 import {SpotlightNewSponsor} from './spotlightNewSponsor/SpotlightNewSponsor';
-import {Sponsor} from './Sponsor';
+import {SponsorSchema} from './sponsors.types';
 
-export const SponsorsComposition: React.FC = () => {
+export const SponsorsComposition = () => {
 	return (
 		<Folder name="Sponsors">
 			<Composition
@@ -14,19 +14,14 @@ export const SponsorsComposition: React.FC = () => {
 				id="Sponsor"
 				fps={30}
 				durationInFrames={200}
+				schema={SponsorSchema}
 				defaultProps={{
+					companyName: 'Evilcorp',
 					sponsorLocalisation: '94 Rue Robert - Lyon',
-				}}
-			/>
-			<Composition
-				component={Sponsor}
-				width={1200}
-				height={1200}
-				id="SponsorWithoutLogo"
-				fps={30}
-				durationInFrames={200}
-				defaultProps={{
-					companyName: 'EvilCorp',
+					sponsorLogo: staticFile('/branding/full-logo-with-mono-vertical.svg'),
+					backgroundImg: staticFile(
+						'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
+					),
 				}}
 			/>
 			<Composition

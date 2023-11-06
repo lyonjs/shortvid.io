@@ -1,14 +1,19 @@
-import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
 import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
 
-export const BrandedSpeakerInfos: React.FC<{
+type BrandedSpeakerInfosProps = {
 	name: string;
 	company?: string;
 	job?: string;
-}> = ({name, company, job}) => {
+};
+
+export const BrandedSpeakerInfos = ({
+	name,
+	company,
+	job,
+}: BrandedSpeakerInfosProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const opacity = spring({

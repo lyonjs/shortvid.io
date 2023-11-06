@@ -1,48 +1,27 @@
-import React from 'react';
 import {Icon} from '@iconify/react';
+import {format} from 'date-fns';
+import {fr} from 'date-fns/locale';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
 
-const ReccuringDay: React.FC<{day: string}> = ({day}) => {
-	return (
-		<span>
-			Tout les <b>{day}</b>.{' '}
-		</span>
-	);
-};
-
-const TimeRange: React.FC<{
-	startingTime: string;
-	endingTime: string;
-}> = ({startingTime, endingTime}) => {
-	return (
-		<span>
-			De{' '}
-			<b>
-				{startingTime} à {endingTime}.
-			</b>
-		</span>
-	);
-};
-
-export const BrandedDetails: React.FC<{
-	startingDate: string;
-	endingDate?: string;
-	reccuringDay?: string;
-	startingTime: string;
-	endingTime?: string;
+type BrandedDetailsProps = {
+	startingDateTime: Date;
 	location?: string;
-}> = ({
-	startingDate,
-	endingDate,
-	reccuringDay,
-	startingTime,
-	endingTime,
+};
+
+export const BrandedDetails = ({
+	startingDateTime,
 	location,
-}) => {
+}: BrandedDetailsProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
+
+	const formatedStartingDate = new Date(startingDateTime);
+	const startingDate = format(formatedStartingDate, 'dd MMMM yyyy', {
+		locale: fr,
+	});
+	const startingTime = format(formatedStartingDate, "HH 'h' mm");
 
 	const slideIn = spring({
 		frame,
@@ -83,7 +62,7 @@ export const BrandedDetails: React.FC<{
 						paddingBottom: '5px',
 					}}
 				>
-					{endingDate ? `Du ${startingDate} au ${endingDate}` : startingDate}
+					{startingDate}
 				</Text>
 				<Text
 					style={{
@@ -92,20 +71,10 @@ export const BrandedDetails: React.FC<{
 						display: 'block',
 						textAlign: 'left',
 						fontSize: '1.18rem',
+						fontWeight: 'bold',
 					}}
 				>
-					{reccuringDay && <ReccuringDay day={reccuringDay} />}
-					{endingTime ? (
-						<TimeRange startingTime={startingTime} endingTime={endingTime} />
-					) : (
-						<span
-							style={{
-								fontWeight: 'bold',
-							}}
-						>
-							{startingTime}
-						</span>
-					)}
+					{startingTime}
 				</Text>
 			</div>
 		</div>

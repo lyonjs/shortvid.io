@@ -1,11 +1,12 @@
-import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {IconWithCaption} from '../../../../design/molecules/IconWithCaption';
 
-export const BrandedLocation: React.FC<{
+type BrandedLocationProps = {
 	location: string;
-}> = ({location}) => {
+};
+
+export const BrandedLocation = ({location}: BrandedLocationProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

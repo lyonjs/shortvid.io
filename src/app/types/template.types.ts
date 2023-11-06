@@ -9,8 +9,8 @@ import {CarouselType} from '../../../remotion/compositions/templates/carousel/Ca
 import {SilhouetteProps} from '../../../remotion/compositions/templates/silhouette/Silhouette';
 import {SponsorSchema} from '../../../remotion/compositions/templates/sponsors/sponsors.types';
 import {SpotlightNewSponsornProps} from '../../../remotion/compositions/templates/sponsors/spotlightNewSponsor/SpotlightNewSponsor';
-import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
 import {TalkProps} from '../../../remotion/compositions/templates/talk/Talk';
+import {TalkBrandedSchema} from '../../../remotion/compositions/templates/talk/talks.types';
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 import {LayerByModeProps} from '../LayerByMode';
 
@@ -19,7 +19,7 @@ export type DefaultPropsTypes =
 	| DefaultProps
 	| ReplayProps
 	| TalkProps
-	| TalkBrandedProps
+	| z.infer<typeof TalkBrandedSchema>
 	| AlpesCraftProps
 	| VolcampProps
 	| CampingDesSpeakersProps
@@ -34,7 +34,7 @@ export type TemplateTypes =
 	| React.FC<DefaultProps>
 	| React.FC<ReplayProps>
 	| React.FC<TalkProps>
-	| React.FC<TalkBrandedProps>
+	| React.FC<z.infer<typeof TalkBrandedSchema>>
 	| React.FC<AlpesCraftProps>
 	| React.FC<VolcampProps>
 	| React.FC<CampingDesSpeakersProps>

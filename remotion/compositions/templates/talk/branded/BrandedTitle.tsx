@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	AbsoluteFill,
 	interpolate,
@@ -9,7 +8,11 @@ import {
 
 import {Title} from '../../../../design/atoms/Title';
 
-export const BrandedTitle: React.FC<{title: string}> = ({title}) => {
+type BrandedTitleProps = {
+	title: string;
+};
+
+export const BrandedTitle = ({title}: BrandedTitleProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

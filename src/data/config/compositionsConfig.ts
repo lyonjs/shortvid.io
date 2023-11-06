@@ -1,5 +1,7 @@
+import {z} from 'zod';
+
 import {ReplayProps} from '../../../app/templates/replays/replay/page';
-import {TalkBrandedProps} from '../../../remotion/compositions/templates/talk/branded/TalkBranded';
+import {TalkBrandedSchema} from '../../../remotion/compositions/templates/talk/talks.types';
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 import {TemplateTypes} from '../../app/types/template.types';
 
@@ -35,7 +37,7 @@ export type CompositionProps = {
 		| {[key: string]: string | undefined}
 		| DefaultProps
 		| ReplayProps
-		| TalkBrandedProps;
+		| z.infer<typeof TalkBrandedSchema>;
 };
 
 type CompositionsConfigProps = {

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	AbsoluteFill,
 	interpolate,
@@ -11,12 +10,19 @@ import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption'
 
 import {BrandedSpeakerInfos} from './BrandedSpeakerInfos';
 
-export const BrandedSpeaker: React.FC<{
+type BrandedSpeakerProps = {
 	pictureUrl: string;
 	name: string;
 	company?: string;
 	job?: string;
-}> = ({pictureUrl, name, company, job}) => {
+};
+
+export const BrandedSpeaker = ({
+	pictureUrl,
+	name,
+	company,
+	job,
+}: BrandedSpeakerProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

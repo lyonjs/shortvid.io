@@ -2,7 +2,7 @@
 
 import {Player} from '@remotion/player';
 
-import {SpotlightNewSponsor} from '../../../../remotion/compositions/templates/sponsor/spotlightNewSponsor/SpotlightNewSponsor';
+import {SpotlightNewSponsor} from '../../../../remotion/compositions/templates/sponsors/spotlightNewSponsor/SpotlightNewSponsor';
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';

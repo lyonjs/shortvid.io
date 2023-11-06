@@ -1,9 +1,12 @@
+import React from 'react';
 import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const SponsorLogo: React.FC<{
+type SponsorLogoProps = {
 	sponsorLogo?: string;
 	style?: React.CSSProperties;
-}> = ({sponsorLogo, style}) => {
+};
+
+export const SponsorLogo = ({sponsorLogo, style}: SponsorLogoProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

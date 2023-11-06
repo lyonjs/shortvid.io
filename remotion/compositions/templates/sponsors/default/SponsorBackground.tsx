@@ -1,11 +1,13 @@
 import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
+import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
 
-export const SponsorBackground: React.FC<{backgroundImg: string}> = ({
-	backgroundImg,
-}) => {
+type SponsorBackgroundProps = {
+	backgroundImg: string;
+};
+
+export const SponsorBackground = ({backgroundImg}: SponsorBackgroundProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const ANIMATION_DURATION = 30;

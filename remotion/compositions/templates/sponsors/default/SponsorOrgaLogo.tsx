@@ -1,9 +1,9 @@
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-import {EventLogo} from '../../../design/atoms/EventLogo';
+import {EventLogo} from '../../../../design/atoms/EventLogo';
 
-export const SponsorOrgaLogo: React.FC = () => {
+export const SponsorOrgaLogo = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

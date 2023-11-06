@@ -1,12 +1,14 @@
 import {Lottie} from '@remotion/lottie';
 import {AbsoluteFill, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-import {Title} from '../../../design/atoms/Title';
-import {useLottie} from '../../../hooks/useLottie';
+import {Title} from '../../../../design/atoms/Title';
+import {useLottie} from '../../../../hooks/useLottie';
 
-export const SponsorMap: React.FC<{
-	localisation?: string;
-}> = ({localisation = 'Lyon'}) => {
+type SponsorMapProps = {
+	sponsorLocalisation?: string;
+};
+
+export const SponsorMap = ({sponsorLocalisation}: SponsorMapProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const illustration = useLottie('lf20_svy4ivvy');
@@ -49,7 +51,7 @@ export const SponsorMap: React.FC<{
 					opacity: opacityUp,
 				}}
 			>
-				{localisation}
+				{sponsorLocalisation}
 			</Title>
 		</AbsoluteFill>
 	);

@@ -2,7 +2,7 @@
 
 import {Player} from '@remotion/player';
 
-import {Sponsor} from '../../../../remotion/compositions/templates/sponsor/Sponsor';
+import {Sponsor} from '../../../../remotion/compositions/templates/sponsors/default/Sponsor';
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
@@ -18,8 +18,8 @@ export default function SponsorPage() {
 		'Evilcorp',
 		'companyName',
 	);
-	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
-		undefined,
+	const [backgroundImg, setBackgroundImg] = useInputChange<string>(
+		'https://placehold.co/1200x1200',
 		'backgroundImg',
 	);
 	const [sponsorLogo, setSponsorLogo] = useInputChange<string | undefined>(

@@ -1,10 +1,12 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-import {Text} from '../../../design/atoms/Text';
+import {Text} from '../../../../design/atoms/Text';
 
-export const SponsorName: React.FC<{
+type SponsorNameProps = {
 	companyName: string;
-}> = ({companyName}) => {
+};
+
+export const SponsorName = ({companyName}: SponsorNameProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

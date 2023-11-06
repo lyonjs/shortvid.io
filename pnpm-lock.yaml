@@ -30,8 +30,8 @@ dependencies:
     specifier: 4.0.63
     version: 4.0.63(react-dom@18.2.0)(react@18.2.0)
   '@remotion/zod-types':
-    specifier: 4.0.62
-    version: 4.0.62(react-dom@18.2.0)(react@18.2.0)(zod@3.22.4)
+    specifier: 4.0.63
+    version: 4.0.63(react-dom@18.2.0)(react@18.2.0)(zod@3.22.4)
   '@types/jest':
     specifier: 29.5.7
     version: 29.5.7
@@ -1343,12 +1343,12 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@remotion/zod-types@4.0.62(react-dom@18.2.0)(react@18.2.0)(zod@3.22.4):
-    resolution: {integrity: sha512-WCVfbsloLs7NiJQydmB+LPucwFjqDd1znY+Rds0SczGTrPG76Uzs6gh2xKH54Nc3znAasccFqXDScMJezV54dg==}
+  /@remotion/zod-types@4.0.63(react-dom@18.2.0)(react@18.2.0)(zod@3.22.4):
+    resolution: {integrity: sha512-HJmK62VAgOU7yDi9BRRzPfMXanE/LcKHoG5W3uYOfyypEhMkzWMjwT+EjkQL6OTvGNNMlOuu0ygqjezSbI4BDQ==}
     peerDependencies:
       zod: ^3.22.3
     dependencies:
-      remotion: 4.0.62(react-dom@18.2.0)(react@18.2.0)
+      remotion: 4.0.63(react-dom@18.2.0)(react@18.2.0)
       zod: 3.22.4
     transitivePeerDependencies:
       - react
@@ -5654,16 +5654,6 @@ packages:
       define-properties: 1.2.1
       set-function-name: 2.0.1
     dev: true
-
-  /remotion@4.0.62(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-QYMRq0FKhjO1GhJpDvexgw1hbcbitaI/RCjibC6UfnX61TJvWszqEceL+IJh4FwkoJJjjEAKMYY/RmKi4nCbZA==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /remotion@4.0.63(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-LfJJlJTNPUVfsuaVUc1X7rFGBkzmMnjSX9kH/gAAGivcoY0z8nNP9XLgjcoDlhXMosz5dQ1aJ1pCN8yyfo8yCg==}

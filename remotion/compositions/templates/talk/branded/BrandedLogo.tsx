@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	AbsoluteFill,
 	Img,
@@ -7,10 +6,12 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-export const BrandedLogo: React.FC<{
+type BrandedLogoProps = {
 	logoUrl: string;
-	borderColor?: string;
-}> = ({logoUrl, borderColor = '#EA4335'}) => {
+	borderColor: string;
+};
+
+export const BrandedLogo = ({logoUrl, borderColor}: BrandedLogoProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

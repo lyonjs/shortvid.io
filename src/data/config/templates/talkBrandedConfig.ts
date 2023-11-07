@@ -8,11 +8,9 @@ export const TalkBrandedConfig: CompositionProps = {
 	height: 720,
 	durationInFrames: 140,
 	defaultProps: {
-		backgroundColor: '#EA4335',
+		backgroundColor: '#086fda',
 		title: 'Certification “Google Cloud Architect”',
 		startingDate: new Date(2023, 3, 18, 13),
-		endingDate: new Date(2023, 4, 23, 13, 45),
-		recurringDay: 'mardi',
 		location: '5 Place Jules Ferry, 69006.',
 		logoUrl:
 			'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg',

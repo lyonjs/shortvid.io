@@ -1,8 +1,10 @@
 'use client';
 
 import {Player} from '@remotion/player';
+import {z} from 'zod';
 
 import {TalkBranded} from '../../../../remotion/compositions/templates/talk/branded/TalkBranded';
+import {TalkBrandedSchema} from '../../../../remotion/compositions/templates/talk/talks.types';
 import {Code} from '../../../../src/app/Code';
 import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrapper';
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
@@ -10,7 +12,6 @@ import {ColorInput} from '../../../../src/app/forms/colorInput';
 import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
 import {InputDate} from '../../../../src/app/forms/inputDate';
-import {SelectInput} from '../../../../src/app/forms/selectInput';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {useInputDateChange} from '../../../../src/app/hooks/useInputDateChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
@@ -18,8 +19,14 @@ import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
 import styles from '../../../../styles/app/layout/main.module.css';
 
 export default function BrandedTalkPage() {
+	const defaultDate: Date = new Date();
+	defaultDate.setSeconds(0, 0);
+
+	const logoGDG =
+		'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg';
+
 	const [backgroundColor, setBackgroundColor] = useInputChange<string>(
-		'#EA4335',
+		'#086fda',
 		'backgroundColor',
 	);
 	const [title, setTitle] = useInputChange<string>('Example', 'title');
@@ -38,38 +45,20 @@ export default function BrandedTalkPage() {
 		undefined,
 		'speakersJob',
 	);
-
-	const logoGDG =
-		'https://user-images.githubusercontent.com/72607059/233019842-047a34a4-77c1-4200-adc8-c70a6daf8f10.svg';
 	const [logoUrl, setLogoUrl] = useInputChange<string>(logoGDG, 'logoUrl');
-	const [recurringDay, setRecurringDay] = useInputChange<string | undefined>(
-		undefined,
-		'recurringDay',
-	);
 	const [location, setLocation] = useInputChange<string | undefined>(
 		undefined,
 		'location',
 	);
-
-	const today = new Date();
-	// We set the seconds to 0 to handle a server/client diff
-	today.setSeconds(0, 0);
-
 	const [startingDate, setStartingDate] = useInputDateChange<Date>(
-		today,
+		defaultDate,
 		'startingDate',
 	);
-	const [endingDate, setEndingDate] = useInputDateChange<Date | undefined>(
-		undefined,
-		'endingDate',
-	);
 
-	const props = {
+	const props: z.infer<typeof TalkBrandedSchema> = {
 		backgroundColor,
 		title,
 		startingDate,
-		endingDate,
-		recurringDay,
 		location,
 		logoUrl,
 		speaker: {
@@ -84,8 +73,6 @@ export default function BrandedTalkPage() {
 		backgroundColor,
 		title,
 		startingDate,
-		endingDate,
-		recurringDay,
 		location,
 		logoUrl,
 		speakerPicture,
@@ -98,7 +85,7 @@ export default function BrandedTalkPage() {
 		backgroundColor: {
 			state: backgroundColor,
 			setState: setBackgroundColor,
-			label: 'Background Color (optional)',
+			label: 'Background Color',
 			component: ColorInput,
 		},
 		title: {
@@ -112,19 +99,6 @@ export default function BrandedTalkPage() {
 			setState: setStartingDate,
 			label: 'Starting Date',
 			component: InputDate,
-		},
-		endingDate: {
-			state: endingDate,
-			setState: setEndingDate,
-			label: 'Ending Date (optional)',
-			component: InputDate,
-		},
-		recurringDay: {
-			state: recurringDay,
-			setState: setRecurringDay,
-			label: 'Recurring day',
-			component: SelectInput,
-			options: [undefined, 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi'],
 		},
 		location: {
 			state: location,

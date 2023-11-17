@@ -54,7 +54,7 @@
 		"@testing-library/react": "14.1.0",
 		"@testing-library/user-event": "14.5.1",
 		"@types/lodash": "4.14.201",
-		"@types/node": "20.9.0",
+		"@types/node": "20.9.1",
 		"@types/react": "18.2.37",
 		"@types/react-dom": "18.2.15",
 		"@types/react-json-editor-ajrm": "^2.5.3",

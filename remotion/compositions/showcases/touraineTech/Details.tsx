@@ -42,7 +42,7 @@ export const Details: React.FC<{
 				iconStyle={{
 					opacity,
 					bottom: drop,
-					filter: 'drop-shadow(1px 1px 3px #222333)'
+					filter: 'drop-shadow(1px 1px 3px #222333)',
 				}}
 			/>
 		</Sequence>

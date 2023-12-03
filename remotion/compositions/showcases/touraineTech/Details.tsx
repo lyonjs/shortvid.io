@@ -34,12 +34,15 @@ export const Details: React.FC<{
 					location,
 				}}
 				style={{
+					opacity,
 					fontFamily: 'Noto Sans,sans-serif',
 					fontSize: '32px',
+					textShadow: '1px 1px 3px #222333',
 				}}
 				iconStyle={{
 					opacity,
 					bottom: drop,
+					filter: 'drop-shadow(1px 1px 3px #222333)'
 				}}
 			/>
 		</Sequence>

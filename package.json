@@ -59,7 +59,7 @@
 		"@types/react-dom": "18.2.17",
 		"@types/react-json-editor-ajrm": "^2.5.3",
 		"@types/testing-library__jest-dom": "5.14.9",
-		"@types/web": "0.0.125",
+		"@types/web": "0.0.126",
 		"@typescript-eslint/eslint-plugin": "6.13.2",
 		"@typescript-eslint/parser": "6.13.2",
 		"autoprefixer": "10.4.16",

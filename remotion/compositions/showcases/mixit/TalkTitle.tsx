@@ -30,11 +30,12 @@ export const TalkTitle: React.FC<{
 				fontSize: '2.5rem',
 				color: 'white',
 				position: 'absolute',
-				bottom: '200px',
+				bottom: '170px',
 				textAlign: 'center',
 				opacity: titleOpacity,
 				filter: `blur(${titleUnblur}px)`,
 				textShadow: '`1px 1px 3px white`',
+				WebkitTextStroke: '1px #ff8d4e',
 				...style,
 			}}
 		>

@@ -2,7 +2,7 @@ import {AbsoluteFill} from 'remotion';
 
 import {DefaultProps} from '../../../types/defaultProps.types';
 
-import {Mixit2023} from './Mixit2023';
+import {Mixit} from './Mixit';
 import {MixitIntro} from './MixitIntro';
 
 export const MixitIntroTalk: React.FC<DefaultProps> = ({
@@ -15,7 +15,7 @@ export const MixitIntroTalk: React.FC<DefaultProps> = ({
 	return (
 		<AbsoluteFill>
 			<MixitIntro />
-			<Mixit2023
+			<Mixit
 				title={title}
 				speakers={speakers}
 				date={date}

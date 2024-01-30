@@ -43,7 +43,7 @@ const Template: Record<string, TalkTemplate> = {
 		durationInFrames: 300,
 	},
 	Mixit: {
-		compositionName: 'Mixit2023',
+		compositionName: 'Mixit',
 		component: MixitIntroTalk,
 		width: 1280,
 		height: 720,

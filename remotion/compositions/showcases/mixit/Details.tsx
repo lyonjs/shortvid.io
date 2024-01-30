@@ -36,6 +36,7 @@ export const Details: React.FC<{
 				style={{
 					fontFamily: 'Lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
 					fontSize: '32px',
+					opacity,
 				}}
 				iconStyle={{
 					opacity,

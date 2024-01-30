@@ -3,7 +3,7 @@ import {defaultTalkValues} from '../../defaultValues';
 import {CompositionProps} from '../compositionsConfig';
 
 export const MixitConfig: CompositionProps = {
-	compositionName: 'Mixit2023',
+	compositionName: 'Mixit',
 	component: MixitIntroTalk,
 	width: 1280,
 	height: 720,

@@ -3,17 +3,17 @@ import {Composition, Folder} from 'remotion';
 
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
 
-import {Mixit2023} from './Mixit2023';
+import {Mixit} from './Mixit';
 import {MixitIntro} from './MixitIntro';
 import {MixitIntroTalk} from './MixitIntroTalk';
 import {MixitSponsor} from './MixitSponsor';
 
 export const MixitComposition: React.FC = () => {
 	return (
-		<Folder name="Mixit-2023">
+		<Folder name="Mixit">
 			<Composition
-				id="Mixit2023"
-				component={Mixit2023}
+				id="Mixit"
+				component={Mixit}
 				durationInFrames={150}
 				fps={30}
 				width={1280}

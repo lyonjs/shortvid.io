@@ -8,7 +8,7 @@ import {LyonSkyline} from './LyonSkyline';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 
-export const Mixit2023: React.FC<DefaultProps> = ({
+export const Mixit: React.FC<DefaultProps> = ({
 	title,
 	speakers,
 	date,

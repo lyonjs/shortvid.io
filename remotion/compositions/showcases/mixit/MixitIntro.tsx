@@ -10,7 +10,7 @@ import {
 const MixitLogo: React.FC = () => {
 	return (
 		<Img
-			src={staticFile('/images/showcases/mixit/mixitLogo2023.svg')}
+			src={staticFile('/images/showcases/mixit/mixitLogoDark.svg')}
 			width={1000}
 			height="auto"
 			style={{
@@ -50,7 +50,7 @@ export const MixitIntro: React.FC = () => {
 				style={{
 					...defaultPathStyle,
 					left: slide,
-					clipPath: 'polygon(0% 0%, 30% 0, 49.8% 49%, 31% 100%, 0% 100%)',
+					clipPath: 'polygon(0% 0%, 42% 0, 61.7% 48.8%, 42.3% 100%, 0% 100%)',
 				}}
 			>
 				<MixitLogo />
@@ -60,7 +60,7 @@ export const MixitIntro: React.FC = () => {
 					...defaultPathStyle,
 					right: slide,
 					clipPath:
-						'polygon(100% 0, 100% 100%, 30.9% 100%, 49.7% 49%, 29.9% 0%)',
+						'polygon(100% 0, 100% 100%, 42.3% 100%, 61.5% 48.8%, 42% 0%)',
 				}}
 			>
 				<MixitLogo />

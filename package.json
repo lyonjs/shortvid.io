@@ -51,7 +51,7 @@
 		"@remotion/eslint-plugin": "4.0.102",
 		"@testing-library/dom": "9.3.4",
 		"@testing-library/jest-dom": "6.4.0",
-		"@testing-library/react": "14.1.2",
+		"@testing-library/react": "14.2.0",
 		"@testing-library/user-event": "14.5.2",
 		"@types/lodash": "4.14.202",
 		"@types/node": "20.11.10",

@@ -56,7 +56,7 @@
 		"@types/lodash": "4.14.202",
 		"@types/node": "20.11.16",
 		"@types/react": "18.2.55",
-		"@types/react-dom": "18.2.18",
+		"@types/react-dom": "18.2.19",
 		"@types/react-json-editor-ajrm": "^2.5.3",
 		"@types/testing-library__jest-dom": "5.14.9",
 		"@types/web": "0.0.138",

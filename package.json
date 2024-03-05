@@ -55,7 +55,7 @@
 		"@testing-library/user-event": "14.5.2",
 		"@types/lodash": "4.14.202",
 		"@types/node": "20.11.24",
-		"@types/react": "18.2.62",
+		"@types/react": "18.2.63",
 		"@types/react-dom": "18.2.19",
 		"@types/react-json-editor-ajrm": "^2.5.3",
 		"@types/testing-library__jest-dom": "5.14.9",

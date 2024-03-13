@@ -102,6 +102,11 @@ export const sideBarNavConfig: sideBarNavProps = {
 				compositionLink: 'Devoxx',
 			},
 			{
+				compositionName: 'Devoxx 2024',
+				compositionId: 'Devoxx2024',
+				compositionLink: 'Devoxx2024',
+			},
+			{
 				compositionName: 'Mixit',
 				compositionId: 'Mixit',
 				compositionLink: 'Mixit',

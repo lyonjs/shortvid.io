@@ -26,8 +26,8 @@ export const SponsorLogo = ({sponsorLogo, style}: SponsorLogoProps) => {
 		<Img
 			style={{
 				position: 'absolute',
-				top: 500,
-				maxHeight: '250px',
+				top: 300,
+				maxHeight: '450px',
 				maxWidth: '60%',
 				opacity: opacityUp,
 				filter: 'drop-shadow(0px 0px 15px #000000)',

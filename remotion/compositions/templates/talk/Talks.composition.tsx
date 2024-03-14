@@ -18,11 +18,11 @@ export const TalksComposition: React.FC = () => {
 				fps={30}
 				durationInFrames={120}
 				defaultProps={{
-					titleSize: 50,
-					speakersNames: 'Antoine Caron',
-					talkTitle:
-						'Sécurisons nos utilisateurs grâce au Mozilla Observatory !',
-					speakerPicture: 'https://www.lyonjs.org/orgas/antoine.jpg',
+					speakersNames: 'John Doe',
+					talkTitle: 'Is JS an awesome programing language ?',
+					speakerPicture: staticFile(
+						'/images/showcases/lyonjs/lyonjsSquaredLogo.png',
+					),
 				}}
 			/>
 			<Composition

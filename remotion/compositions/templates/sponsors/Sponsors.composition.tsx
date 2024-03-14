@@ -16,11 +16,12 @@ export const SponsorsComposition = () => {
 				durationInFrames={200}
 				schema={SponsorSchema}
 				defaultProps={{
-					companyName: 'Zenika Lyon',
-					sponsorLocalisation: 'Sponsor du meetup #90',
-					sponsorLogo: 'https://www.lyonjs.org/sponsors/zenika.svg',
-					backgroundImg:
-						'https://secure-content.meetupstatic.com/images/classic-events/518136753/676x380.webp',
+					companyName: 'Evilcorp',
+					sponsorLocalisation: '94 Rue Robert - Lyon',
+					sponsorLogo: staticFile('/branding/full-logo-with-mono-vertical.svg'),
+					backgroundImg: staticFile(
+						'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
+					),
 				}}
 			/>
 			<Composition

@@ -33,6 +33,9 @@ export const Sponsor = ({
 					sponsorLogo={sponsorLogo}
 				/>
 			</Sequence>
+			<Sequence from={80} name="Localisation">
+				<SponsorMap sponsorLocalisation={sponsorLocalisation} />
+			</Sequence>
 		</AbsoluteFill>
 	);
 };

@@ -55,7 +55,10 @@ export const Devoxx2024: React.FC<DefaultProps> = ({
 				}}
 			>
 				<Sequence name="Background">
-					<Img src={staticFile('images/showcases/devoxx/robots_run_hd.png')} />
+					<Img
+						src={staticFile('images/showcases/devoxx/robots_run_hd.png')}
+						style={{width: '100%', height: '100%'}}
+					/>
 				</Sequence>
 			</AbsoluteFill>
 			<Sequence from={10}>

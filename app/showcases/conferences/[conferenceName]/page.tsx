@@ -10,6 +10,7 @@ import {AlpesCraft} from '../../../../remotion/compositions/showcases/alpescraft
 import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
 import {DevfestNantesLoop} from '../../../../remotion/compositions/showcases/devfestNantes/DevfestNantesLoop';
 import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
+import {Devoxx2024} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2024';
 import {MixitIntroTalk} from '../../../../remotion/compositions/showcases/mixit/MixitIntroTalk';
 import {Snowcamp} from '../../../../remotion/compositions/showcases/snowcamp/Snowcamp';
 import {TouraineTech2023} from '../../../../remotion/compositions/showcases/touraineTech/TouraineTech2023';
@@ -38,6 +39,13 @@ const Template: Record<string, TalkTemplate> = {
 	Devoxx: {
 		compositionName: 'Devoxx2023',
 		component: Devoxx2023,
+		width: 1280,
+		height: 720,
+		durationInFrames: 300,
+	},
+	Devoxx2024: {
+		compositionName: 'Devoxx2024',
+		component: Devoxx2024,
 		width: 1280,
 		height: 720,
 		durationInFrames: 300,

@@ -8,7 +8,7 @@ import {TemplateTypes} from '../../app/types/template.types';
 import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
 import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
 import {DevfestNantesConfig} from './showcases/devfestNantesConfig';
-import {DevoxxConfig} from './showcases/devoxxConfig';
+import {Devoxx2024Config, DevoxxConfig} from './showcases/devoxxConfig';
 import {MixitConfig} from './showcases/mixitConfig';
 import {SnowcampConfig} from './showcases/snowcampConfig';
 import {TouraineTechConfig} from './showcases/touraineTechConfig';
@@ -58,6 +58,7 @@ export const CompositionsConfig: CompositionsConfigProps = {
 	},
 	showcases: {
 		Devoxx: DevoxxConfig,
+		Devoxx2024: Devoxx2024Config,
 		Mixit: MixitConfig,
 		Snowcamp: SnowcampConfig,
 		TouraineTech: TouraineTechConfig,

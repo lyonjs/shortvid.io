@@ -15,6 +15,7 @@ import {Details} from './2024/Details';
 import {Logo} from './2024/Logo';
 import {Speakers} from './2024/Speakers';
 import {TalkTitle} from './2024/TalkTitle';
+import {RobotRun} from './2024/RobotRun';
 
 export const Devoxx2024: React.FC<DefaultProps> = ({
 	title,
@@ -56,21 +57,30 @@ export const Devoxx2024: React.FC<DefaultProps> = ({
 			>
 				<Sequence name="Background">
 					<Img
-						src={staticFile('images/showcases/devoxx/robots_run_hd.png')}
+						src={staticFile('images/showcases/devoxx/robotsRunHd.png')}
 						style={{width: '100%', height: '100%'}}
 					/>
 				</Sequence>
 			</AbsoluteFill>
-			<Sequence from={10}>
+			<AbsoluteFill
+				style={{
+					filter: `brightness(${darkscale})`,
+				}}
+			>
+				<Sequence>
+					<RobotRun />
+				</Sequence>
+			</AbsoluteFill>
+			<Sequence from={20}>
 				<Logo />
 			</Sequence>
-			<Sequence from={15}>
+			<Sequence from={25}>
 				<Speakers speakers={speakers} />
 			</Sequence>
-			<Sequence from={25}>
+			<Sequence from={35}>
 				<TalkTitle title={title} delay={ANIMATION_DELAY} />
 			</Sequence>
-			<Sequence from={40}>
+			<Sequence from={50}>
 				<Details date={date} time={time} location={location} />
 			</Sequence>
 		</>

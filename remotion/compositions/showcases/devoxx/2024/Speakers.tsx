@@ -1,3 +1,4 @@
+import {loadFont} from '@remotion/google-fonts/JetBrainsMono';
 import {
 	AbsoluteFill,
 	interpolate,
@@ -10,6 +11,8 @@ import {
 import {Text} from '../../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
 import {Speaker} from '../../../../types/defaultProps.types';
+
+const {fontFamily} = loadFont();
 
 export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 	const frame = useCurrentFrame();
@@ -70,6 +73,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 							>
 								<Text
 									style={{
+										fontFamily,
 										position: 'relative',
 										bottom: '-20%',
 										height: 100,

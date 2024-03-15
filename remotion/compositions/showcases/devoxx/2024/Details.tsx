@@ -75,6 +75,9 @@ export const Details: React.FC<{
 							bottom: drop,
 						}}
 						iconStyle={{fontSize: 40}}
+						textStyle={{
+							fontFamily,
+						}}
 					/>
 				);
 			})}

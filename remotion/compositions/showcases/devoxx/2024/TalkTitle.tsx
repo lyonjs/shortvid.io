@@ -34,11 +34,12 @@ export const TalkTitle: React.FC<{
 				fontSize: '2.15rem',
 				color: 'white',
 				position: 'absolute',
-				bottom: '160px',
+				bottom: '140px',
 				textAlign: 'center',
 				opacity: titleOpacity,
 				filter: `blur(${titleUnblur}px)`,
 				textShadow: '`1px 1px 3px white`',
+				textWrap: 'balance',
 				...style,
 			}}
 		>

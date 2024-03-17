@@ -13,9 +13,9 @@ import {DefaultProps} from '../../../types/defaultProps.types';
 
 import {Details} from './2024/Details';
 import {Logo} from './2024/Logo';
+import {RobotRun} from './2024/RobotRun';
 import {Speakers} from './2024/Speakers';
 import {TalkTitle} from './2024/TalkTitle';
-import {RobotRun} from './2024/RobotRun';
 
 export const Devoxx2024: React.FC<DefaultProps> = ({
 	title,

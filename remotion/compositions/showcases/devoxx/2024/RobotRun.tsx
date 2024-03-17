@@ -1,9 +1,9 @@
 import React from 'react';
-import {staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Img, staticFile} from 'remotion';
 
 export const RobotRun: React.FC = () => {
 	return (
-		<img
+		<Img
 			src={staticFile('/images/showcases/devoxx/robotRun.png')}
 			alt={'Robot Run'}
 			style={{

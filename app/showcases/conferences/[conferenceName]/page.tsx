@@ -1,6 +1,6 @@
 'use client';
 
-import {SetStateAction, useState} from 'react';
+import React, {SetStateAction, useState} from 'react';
 import {Player} from '@remotion/player';
 import _ = require('lodash');
 import JSONInput from 'react-json-editor-ajrm';
@@ -17,6 +17,8 @@ import {TouraineTech2023} from '../../../../remotion/compositions/showcases/tour
 import {VeryTechTrip} from '../../../../remotion/compositions/showcases/veryTechTrip/VeryTechTrip';
 import {Volcamp} from '../../../../remotion/compositions/showcases/volcamp/Volcamp';
 import {Code} from '../../../../src/app/Code';
+import {RenderButton} from '../../../../src/app/forms/RenderButton';
+import {useGenerateVideo} from '../../../../src/app/hooks/useGenerateVideo';
 import {
 	DefaultPropsTypes,
 	TemplateTypes,
@@ -138,6 +140,16 @@ export default function ConferencePage({
 		currentTemplate.defaultProps || defaultTalkValues,
 	);
 
+	const {getVideoLink, isLoading, videoUrl, error} = useGenerateVideo(
+		data,
+		conference,
+	);
+
+	const handleSubmit = (event: React.MouseEvent<Element, MouseEvent>) => {
+		event.preventDefault();
+		getVideoLink();
+	};
+
 	return (
 		<div className={styles.mainContent}>
 			<section className={styles.videoContainer}>
@@ -176,6 +188,13 @@ export default function ConferencePage({
 					onChange={(event: {jsObject: SetStateAction<DefaultPropsTypes>}) => {
 						setData(event.jsObject);
 					}}
+				/>
+				<RenderButton
+					compositionId={currentTemplate.compositionName}
+					isLoading={isLoading}
+					videoUrl={videoUrl}
+					error={error}
+					onSubmit={handleSubmit}
 				/>
 				<Code
 					composition={currentTemplate.compositionName}

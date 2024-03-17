@@ -1,8 +1,12 @@
 import {useState} from 'react';
 
-export type dataForGenerationType = {
-	[key: string]: string | number | object | Date | undefined;
-};
+import {DefaultPropsTypes} from '../types/template.types';
+
+export type dataForGenerationType =
+	| {
+			[key: string]: string | number | object | Date | undefined;
+	  }
+	| DefaultPropsTypes;
 
 export const useGenerateVideo: (
 	data: dataForGenerationType,
@@ -21,7 +25,7 @@ export const useGenerateVideo: (
 		setIsLoading(true);
 		setError(undefined);
 
-		fetch(`https://api.shortvid.io/${compositionId}`, {
+		fetch(`http://localhost:8000/${compositionId}`, {
 			headers: {
 				'Content-Type': 'application/json',
 			},

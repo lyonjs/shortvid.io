@@ -73,10 +73,12 @@ jobs:
         env:
           WORKFLOW_INPUT: ${{ toJson(matrix.event.inputs) }}
       - run: pnpm remotion render remotion/index.tsx ${{matrix.composition.name}} out/${{matrix.composition.name}}.mp4 --props="./input-props.json"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
-          name: video
+          name: video-${{matrix.composition.name}}
           path: out
+          if-no-files-found: "error"
+          compression-level: 0
 
   nextjs:
     name: ⚛️ NextJS application

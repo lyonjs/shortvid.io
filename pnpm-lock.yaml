@@ -146,8 +146,8 @@ devDependencies:
     specifier: 2.29.1
     version: 2.29.1(@typescript-eslint/parser@7.6.0)(eslint@8.57.0)
   eslint-plugin-simple-import-sort:
-    specifier: 12.0.0
-    version: 12.0.0(eslint@8.57.0)
+    specifier: 12.1.0
+    version: 12.1.0(eslint@8.57.0)
   husky:
     specifier: 9.0.11
     version: 9.0.11
@@ -3497,8 +3497,8 @@ packages:
       string.prototype.matchall: 4.0.11
     dev: true
 
-  /eslint-plugin-simple-import-sort@12.0.0(eslint@8.57.0):
-    resolution: {integrity: sha512-8o0dVEdAkYap0Cn5kNeklaKcT1nUsa3LITWEuFk3nJifOoD+5JQGoyDUW2W/iPWwBsNBJpyJS9y4je/BgxLcyQ==}
+  /eslint-plugin-simple-import-sort@12.1.0(eslint@8.57.0):
+    resolution: {integrity: sha512-Y2fqAfC11TcG/WP3TrI1Gi3p3nc8XJyEOJYHyEPEGI/UAgNx6akxxlX74p7SbAQdLcgASKhj8M0GKvH3vq/+ig==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:

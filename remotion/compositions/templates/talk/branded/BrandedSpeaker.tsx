@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	AbsoluteFill,
 	interpolate,
@@ -15,6 +16,9 @@ type BrandedSpeakerProps = {
 	name: string;
 	company?: string;
 	job?: string;
+	offsetY?: number;
+	avatarSize?: number;
+	iconStyle?: React.CSSProperties;
 };
 
 export const BrandedSpeaker = ({
@@ -22,6 +26,9 @@ export const BrandedSpeaker = ({
 	name,
 	company,
 	job,
+	offsetY = 0,
+	avatarSize = 200,
+	iconStyle,
 }: BrandedSpeakerProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -29,8 +36,8 @@ export const BrandedSpeaker = ({
 	const slideIn = spring({
 		frame,
 		fps,
-		from: -300,
-		to: 0,
+		from: -300 - offsetY,
+		to: 0 + offsetY,
 		durationInFrames: 30,
 	});
 
@@ -61,8 +68,8 @@ export const BrandedSpeaker = ({
 			<AvatarWithCaption
 				avatarPictureUrl={pictureUrl}
 				avatarStyle={{
-					width: 200,
-					height: 200,
+					width: avatarSize,
+					height: avatarSize,
 					border: 'none',
 					borderRadius: `${blobRadius1}% ${blobRadius2}% ${blobRadius3}% ${blobRadius4}% / ${blobRadius5}% ${blobRadius5}% ${blobRadius2}% ${blobRadius6}%`,
 					boxShadow: '20px 20px 0 white',
@@ -74,7 +81,7 @@ export const BrandedSpeaker = ({
 					top: slideIn,
 				}}
 			>
-				<BrandedSpeakerInfos name={name} company={company} job={job} />
+				<BrandedSpeakerInfos name={name} company={company} job={job} iconStyle={iconStyle}/>
 			</AvatarWithCaption>
 		</AbsoluteFill>
 	);

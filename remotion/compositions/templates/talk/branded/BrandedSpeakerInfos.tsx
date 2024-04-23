@@ -1,3 +1,4 @@
+import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
@@ -7,12 +8,14 @@ type BrandedSpeakerInfosProps = {
 	name: string;
 	company?: string;
 	job?: string;
+	iconStyle ?: React.CSSProperties;
 };
 
 export const BrandedSpeakerInfos = ({
 	name,
 	company,
 	job,
+	iconStyle,
 }: BrandedSpeakerInfosProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -72,7 +75,7 @@ export const BrandedSpeakerInfos = ({
 					}}
 					caption={company}
 					iconifyId="mdi:company"
-					iconStyle={{width: 35}}
+					iconStyle={{width: 35, ...iconStyle}}
 				/>
 			)}
 			{job && (
@@ -86,7 +89,7 @@ export const BrandedSpeakerInfos = ({
 					}}
 					caption={job}
 					iconifyId="mdi:user"
-					iconStyle={{width: 35, height: 35}}
+					iconStyle={{width: 35, height: 35, ...iconStyle}}
 				/>
 			)}
 		</div>

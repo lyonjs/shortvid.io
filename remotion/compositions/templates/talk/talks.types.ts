@@ -14,6 +14,5 @@ export const TalkBrandedSchema = z.object({
 	startingDate: z.date(),
 	location: z.string().optional(),
 	logoUrl: z.string(),
-	speaker: z.optional(TalkBrandedSpeakerSchema),
-	speakers: z.optional(z.array(TalkBrandedSpeakerSchema)),
+	speakers: z.array(TalkBrandedSpeakerSchema),
 });

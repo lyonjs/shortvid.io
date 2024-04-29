@@ -20,40 +20,56 @@ export const TalkBranded = ({
 	startingDate,
 	location,
 	logoUrl,
-	speaker,
-}: z.infer<typeof TalkBrandedSchema>) => (
-	<AbsoluteFill
-		style={{
-			backgroundColor,
-			fontFamily,
-		}}
-	>
-		<Sequence name="Noise Background">
-			<BackgroundCircleNoise speed={0.01} circleRadius={5} maxOffset={20} />
-		</Sequence>
-		<Sequence name="Logo">
-			<BrandedLogo logoUrl={logoUrl} borderColor={backgroundColor} />
-		</Sequence>
-		<Sequence name="Speaker" from={10}>
-			<BrandedSpeaker
-				pictureUrl={
-					speaker.pictureUrl || staticFile('/images/common/defaultAvatar.svg')
-				}
-				name={speaker.name}
-				company={speaker.company}
-				job={speaker.job}
-			/>
-		</Sequence>
-		<Sequence name="Title" from={40}>
-			<BrandedTitle title={title} />
-		</Sequence>
-		<Sequence name="Details" from={50}>
-			<BrandedDetails startingDateTime={startingDate} location={location} />
-		</Sequence>
-		{location && (
-			<Sequence name="Location" from={55}>
-				<BrandedLocation location={location} />
+	speakers,
+}: z.infer<typeof TalkBrandedSchema>) => {
+
+	const speakersData = speakers;
+	const baseOffsetY = speakersData.length > 1 ? -50 : 0;
+	const avatarSize = speakersData.length > 1 ? 150 : 200;
+	const speakerIconStyle : React.CSSProperties | undefined = speakersData.length > 1 ? { fontSize: "2rem"} : undefined;
+
+	return (
+		<AbsoluteFill
+			style={{
+				backgroundColor,
+				fontFamily,
+			}}
+		>
+			<Sequence name="Noise Background">
+				<BackgroundCircleNoise speed={0.01} circleRadius={5} maxOffset={20} />
 			</Sequence>
-		)}
-	</AbsoluteFill>
-);
+			<Sequence name="Logo">
+				<BrandedLogo logoUrl={logoUrl} borderColor={backgroundColor} />
+			</Sequence>
+			<Sequence name="Speaker" from={10}>
+				{speakersData.map((speaker, index) => {
+					return (
+						<BrandedSpeaker
+							key={index}
+							pictureUrl={
+								speaker.pictureUrl || staticFile('/images/common/defaultAvatar.svg')
+							}
+							name={speaker.name}
+							company={speaker.company}
+							job={speaker.job}
+							offsetY={index * 200 + baseOffsetY}
+							avatarSize={avatarSize}
+							iconStyle={speakerIconStyle}
+						/>
+					);
+				})}
+			</Sequence>
+			<Sequence name="Title" from={40}>
+				<BrandedTitle title={title} />
+			</Sequence>
+			<Sequence name="Details" from={50}>
+				<BrandedDetails startingDateTime={startingDate} location={location} />
+			</Sequence>
+			{location && (
+				<Sequence name="Location" from={55}>
+					<BrandedLocation location={location} />
+				</Sequence>
+			)}
+		</AbsoluteFill>
+	);
+}

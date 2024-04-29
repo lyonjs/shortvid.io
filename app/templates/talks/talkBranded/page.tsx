@@ -61,12 +61,12 @@ export default function BrandedTalkPage() {
 		startingDate,
 		location,
 		logoUrl,
-		speaker: {
+		speakers: [{
 			pictureUrl: speakerPicture,
 			name: speakersNames,
 			company: speakersCompany,
 			job: speakersJob,
-		},
+		}],
 	};
 
 	const encodedParams = encodeObjectValues({

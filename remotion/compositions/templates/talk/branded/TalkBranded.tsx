@@ -22,11 +22,11 @@ export const TalkBranded = ({
 	logoUrl,
 	speakers,
 }: z.infer<typeof TalkBrandedSchema>) => {
-
 	const speakersData = speakers;
 	const baseOffsetY = speakersData.length > 1 ? -50 : 0;
 	const avatarSize = speakersData.length > 1 ? 150 : 200;
-	const speakerIconStyle : React.CSSProperties | undefined = speakersData.length > 1 ? { fontSize: "2rem"} : undefined;
+	const speakerIconStyle: React.CSSProperties | undefined =
+		speakersData.length > 1 ? {fontSize: '2rem'} : undefined;
 
 	return (
 		<AbsoluteFill
@@ -47,7 +47,8 @@ export const TalkBranded = ({
 						<BrandedSpeaker
 							key={index}
 							pictureUrl={
-								speaker.pictureUrl || staticFile('/images/common/defaultAvatar.svg')
+								speaker.pictureUrl ||
+								staticFile('/images/common/defaultAvatar.svg')
 							}
 							name={speaker.name}
 							company={speaker.company}
@@ -72,4 +73,4 @@ export const TalkBranded = ({
 			)}
 		</AbsoluteFill>
 	);
-}
+};

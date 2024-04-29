@@ -8,7 +8,7 @@ type BrandedSpeakerInfosProps = {
 	name: string;
 	company?: string;
 	job?: string;
-	iconStyle ?: React.CSSProperties;
+	iconStyle?: React.CSSProperties;
 };
 
 export const BrandedSpeakerInfos = ({

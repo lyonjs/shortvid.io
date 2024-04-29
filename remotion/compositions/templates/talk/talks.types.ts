@@ -6,7 +6,7 @@ export const TalkBrandedSpeakerSchema = z.object({
 	name: z.string(),
 	company: z.string().optional(),
 	job: z.string().optional(),
-})
+});
 
 export const TalkBrandedSchema = z.object({
 	backgroundColor: zColor(),

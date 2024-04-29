@@ -81,7 +81,12 @@ export const BrandedSpeaker = ({
 					top: slideIn,
 				}}
 			>
-				<BrandedSpeakerInfos name={name} company={company} job={job} iconStyle={iconStyle}/>
+				<BrandedSpeakerInfos
+					name={name}
+					company={company}
+					job={job}
+					iconStyle={iconStyle}
+				/>
 			</AvatarWithCaption>
 		</AbsoluteFill>
 	);

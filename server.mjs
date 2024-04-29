@@ -115,7 +115,7 @@ app.post('/frame/:compositionId/:frameId', async (req, res) => {
 			output: finalOutput,
 			inputProps,
 			composition: composition,
-			frame: parseInt(frameId),
+			frame: parseInt(frameId, 10),
 		});
 
 		sendFile(finalOutput);

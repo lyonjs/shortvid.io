@@ -2,6 +2,7 @@ import {bundle} from '@remotion/bundler';
 import {
 	getCompositions,
 	renderMedia,
+	renderStill,
 	selectComposition,
 } from '@remotion/renderer';
 import express from 'express';
@@ -49,7 +50,7 @@ app.post('/:compositionId/', async (req, res) => {
 		if (!video) {
 			throw new Error(`❌ No video called ${compositionId}`);
 		}
-		console.log(`⏳ Generating video for compositon: ${video.id}`);
+		console.log(`⏳ Generating video for composition: ${video.id}`);
 		res.set('content-type', 'video/mp4');
 		res.set('cache-control', 'public, max-age=3600, immutable');
 
@@ -71,6 +72,57 @@ app.post('/:compositionId/', async (req, res) => {
 	} catch (err) {
 		console.error(
 			`❌ Error while generating video with url ${req.originalUrl}`,
+		);
+		console.error(err);
+		res.json({
+			error: err,
+		});
+	}
+});
+
+app.post('/frame/:compositionId/:frameId', async (req, res) => {
+	const sendFile = (file) => {
+		fs.createReadStream(file)
+			.pipe(res)
+			.on('close', () => {
+				res.end();
+			});
+	};
+	try {
+		const reqParams = req.params.compositionId;
+		const compositionId = reqParams.match(/([^&]+)/i)[0];
+		const frameId = req.params.frameId;
+		const inputProps = req.body || {};
+		const composition = await selectComposition({
+			serveUrl: bundled,
+			id: compositionId,
+			inputProps,
+		});
+		if (!composition) {
+			throw new Error(`❌ No composition called ${compositionId}`);
+		}
+		console.log(`⏳ Generating frame for composition: ${composition.id}`);
+		res.set('content-type', 'image/png');
+		res.set('cache-control', 'public, max-age=3600, immutable');
+
+		const tmpDir = await fs.promises.mkdtemp(
+			path.join(os.tmpdir(), 'remotion-'),
+		);
+		const finalOutput = path.join(tmpDir, 'frame.png');
+
+		await renderStill({
+			serveUrl: bundled,
+			output: finalOutput,
+			inputProps,
+			composition: composition,
+			frame: parseInt(frameId),
+		});
+
+		sendFile(finalOutput);
+		console.log('🎞️ Frame rendered and sent! 🎊');
+	} catch (err) {
+		console.error(
+			`❌ Error while generating frame with url ${req.originalUrl}`,
 		);
 		console.error(err);
 		res.json({

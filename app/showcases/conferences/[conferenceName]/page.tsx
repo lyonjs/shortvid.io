@@ -8,6 +8,7 @@ import locale from 'react-json-editor-ajrm/locale/en';
 
 import {AlpesCraft} from '../../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
 import {CampingDesSpeakers} from '../../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
+import {DevfestLille} from '../../../../remotion/compositions/showcases/devfestLille/DevfestLille';
 import {DevfestNantesLoop} from '../../../../remotion/compositions/showcases/devfestNantes/DevfestNantesLoop';
 import {Devoxx2023} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2023';
 import {Devoxx2024} from '../../../../remotion/compositions/showcases/devoxx/Devoxx2024';
@@ -127,6 +128,14 @@ const Template: Record<string, TalkTemplate> = {
 		width: 1280,
 		height: 720,
 		durationInFrames: 350,
+	},
+	DevfestLille: {
+		compositionName: 'DevfestLille',
+		component: DevfestLille,
+		width: 1280,
+		height: 720,
+		fps: 60,
+		durationInFrames: 300,
 	},
 };
 export default function ConferencePage({

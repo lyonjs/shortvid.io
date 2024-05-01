@@ -1,3 +1,5 @@
+import {staticFile} from 'remotion';
+
 import {Sponsor} from '../../../../remotion/compositions/templates/sponsors/default/Sponsor';
 import {SpotlightNewSponsor} from '../../../../remotion/compositions/templates/sponsors/spotlightNewSponsor/SpotlightNewSponsor';
 import {CompositionProps} from '../compositionsConfig';
@@ -13,8 +15,7 @@ export const SponsorConfig: CompositionProps = {
 		sponsorLocalisation: '94 Rue Robert',
 		backgroundImg:
 			'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
-		sponsorLogo:
-			'https://www.indy.fr/wp-content/themes/indy/img/logo-indy-new.svg',
+		sponsorLogo: staticFile('/images/showcases/lyonjs/lyonjsSquaredLogo.png'),
 	},
 };
 

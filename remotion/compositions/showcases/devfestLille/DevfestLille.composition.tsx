@@ -1,8 +1,8 @@
 import {Composition, Folder} from 'remotion';
 
-import {DevfestLille} from "./DevfestLille";
-import {defaultTalkValues} from "../../../../src/data/defaultValues";
-import React from "react";
+import {DevfestLille} from './DevfestLille';
+import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import React from 'react';
 
 export const DevfestLilleComposition: React.FC = () => {
 	return (

@@ -12,6 +12,7 @@ import {SnowcampComposition} from './snowcamp/Snowcamp.composition';
 import {TouraineTechComposition} from './touraineTech/TouraineTech.composition';
 import {VeryTechTripComposition} from './veryTechTrip/VeryTechTrip.composition';
 import {VolcampComposition} from './volcamp/Volcamp.composition';
+import {DevfestLilleComposition} from './devfestLille/DevfestLille.composition';
 
 export const ShowcasesComposition: React.FC = () => {
 	return (
@@ -27,6 +28,7 @@ export const ShowcasesComposition: React.FC = () => {
 			<CodeInTheDarkComposition />
 			<VolcampComposition />
 			<DevfestNantesComposition />
+			<DevfestLilleComposition />
 		</Folder>
 	);
 };

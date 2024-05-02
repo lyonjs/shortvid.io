@@ -12,7 +12,7 @@ import {TalkTitle} from './TalkTitle';
 
 export type AlpesCraftProps = {
 	title: string;
-	date: string;
+	date?: string;
 	time?: string;
 	location: string;
 	speakers?: Speaker[];

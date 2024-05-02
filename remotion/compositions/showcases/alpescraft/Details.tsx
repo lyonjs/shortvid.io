@@ -5,7 +5,7 @@ import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 import {useLottie} from '../../../hooks/useLottie';
 
 export const Details: React.FC<{
-	date: string;
+	date?: string;
 	time?: string;
 	location: string;
 }> = ({date, time, location}) => {
@@ -40,7 +40,7 @@ export const Details: React.FC<{
 				rowGap: '1.5rem',
 			}}
 		>
-			<IconWithCaption
+			{date && <IconWithCaption
 				iconifyId="mdi:calendar"
 				caption={date}
 				style={{
@@ -53,7 +53,7 @@ export const Details: React.FC<{
 				iconStyle={{
 					fontSize: 50,
 				}}
-			/>
+			/>}
 			{time && (
 				<IconWithCaption
 					iconifyId="mdi:clock"

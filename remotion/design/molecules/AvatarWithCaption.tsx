@@ -1,4 +1,5 @@
 import React, {ReactNode} from 'react';
+import {staticFile} from 'remotion';
 
 import {Avatar} from '../atoms/Avatar';
 import {Text} from '../atoms/Text';
@@ -35,7 +36,7 @@ export const AvatarWithCaption: React.FC<{
 					position: 'relative',
 					...avatarStyle,
 				}}
-				src={avatarPictureUrl}
+				src={avatarPictureUrl || staticFile('images/common/defaultAvatar.svg')}
 			/>
 			{!children && (
 				<Text

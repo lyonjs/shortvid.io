@@ -41,7 +41,8 @@ export const TouraineTechComposition: React.FC = () => {
 				durationInFrames={300}
 				component={Replay}
 				defaultProps={{
-					title: "Remotion : le 7ème art à porté de composants web et d'API 🎬",
+					title:
+						"Remotion : le 7ème art à portée de composants web et d'API 🎬",
 					speakers: [
 						{
 							name: 'Mickaël Alves',

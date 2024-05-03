@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, Folder} from 'remotion';
 
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {AlpesCraft} from './AlpesCraft';
 
@@ -15,6 +16,7 @@ export const AlpesCraftComposition: React.FC = () => {
 				fps={30}
 				width={1280}
 				height={720}
+				schema={ShowcaseSchema}
 				defaultProps={defaultTalkValues}
 			/>
 		</Folder>

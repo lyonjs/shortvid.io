@@ -1,7 +1,9 @@
 import React from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
+import {z} from 'zod';
 
 import {Speaker} from '../../../types/defaultProps.types';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {Details} from './Details';
 import {Logo} from './Logo';
@@ -18,13 +20,13 @@ export type AlpesCraftProps = {
 	speakers?: Speaker[];
 };
 
-export const AlpesCraft: React.FC<AlpesCraftProps> = ({
+export const AlpesCraft = ({
 	title,
 	date,
 	time,
 	location,
 	speakers,
-}) => {
+}: z.infer<typeof ShowcaseSchema>) => {
 	return (
 		<AbsoluteFill
 			style={{

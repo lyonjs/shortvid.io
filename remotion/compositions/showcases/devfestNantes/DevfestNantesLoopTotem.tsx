@@ -8,9 +8,10 @@ import {
 	staticFile,
 	useCurrentFrame,
 } from 'remotion';
+import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
-import {DefaultProps} from '../../../types/defaultProps.types';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {Android} from './Android';
 import {Details} from './Details';
@@ -27,7 +28,7 @@ export const DevfestNantesLoopTotem = ({
 	date,
 	time,
 	location,
-}: DefaultProps) => {
+}: z.infer<typeof ShowcaseSchema>) => {
 	const frame = useCurrentFrame();
 
 	const SlideDown = interpolate(frame, [300, 330], [0, 1300], {

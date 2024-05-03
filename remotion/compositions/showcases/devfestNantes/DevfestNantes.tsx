@@ -1,9 +1,10 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
-import {DefaultProps} from '../../../types/defaultProps.types';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {Android} from './Android';
 import {Details} from './Details';
@@ -19,7 +20,7 @@ export const DevfestNantes = ({
 	date,
 	time,
 	location,
-}: DefaultProps) => {
+}: z.infer<typeof ShowcaseSchema>) => {
 	return (
 		<AbsoluteFill
 			style={{

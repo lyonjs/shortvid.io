@@ -1,14 +1,15 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
 import {AbsoluteFill, Sequence} from 'remotion';
+import {z} from 'zod';
 
-import {DefaultProps} from '../../../types/defaultProps.types';
+import {ShowcaseSchema} from '../showcases.types';
 
+import {Background} from './Background';
 import {Details} from './Details';
+import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
-import {Background} from './Background';
-import {Logo} from './Logo';
 
 const {fontFamily} = loadFont();
 export const DevfestLille = ({
@@ -17,7 +18,7 @@ export const DevfestLille = ({
 	date,
 	time,
 	location,
-}: DefaultProps) => {
+}: z.infer<typeof ShowcaseSchema>) => {
 	return (
 		<AbsoluteFill
 			style={{

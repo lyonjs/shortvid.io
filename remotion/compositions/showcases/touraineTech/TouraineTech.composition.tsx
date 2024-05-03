@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, Folder} from 'remotion';
 
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {Replay} from './Replay';
 import {SponsorTouraineTech2023} from './SponsorTouraineTech2023';
@@ -17,6 +18,7 @@ export const TouraineTechComposition: React.FC = () => {
 				fps={30}
 				width={1280}
 				height={720}
+				schema={ShowcaseSchema}
 				defaultProps={defaultTalkValues}
 			/>
 			<Composition

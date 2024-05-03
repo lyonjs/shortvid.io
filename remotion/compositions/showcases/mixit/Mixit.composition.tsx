@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, Folder} from 'remotion';
 
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {Mixit} from './Mixit';
 import {MixitIntro} from './MixitIntro';
@@ -18,6 +19,7 @@ export const MixitComposition: React.FC = () => {
 				fps={30}
 				width={1280}
 				height={720}
+				schema={ShowcaseSchema}
 				defaultProps={defaultTalkValues}
 			/>
 			<Composition
@@ -35,6 +37,7 @@ export const MixitComposition: React.FC = () => {
 				fps={30}
 				width={1280}
 				height={720}
+				schema={ShowcaseSchema}
 				defaultProps={defaultTalkValues}
 			/>
 			<Composition

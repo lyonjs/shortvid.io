@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition, Folder} from 'remotion';
 
 import {defaultTalkValues} from '../../../../src/data/defaultValues';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {DevfestNantes} from './DevfestNantes';
 import {DevfestNantesLoop} from './DevfestNantesLoop';
@@ -18,6 +19,7 @@ export const DevfestNantesComposition = () => {
 				fps={30}
 				width={1280}
 				height={720}
+				schema={ShowcaseSchema}
 				defaultProps={defaultTalkValues}
 			/>
 			<Composition
@@ -27,6 +29,7 @@ export const DevfestNantesComposition = () => {
 				fps={30}
 				width={1280}
 				height={720}
+				schema={ShowcaseSchema}
 				defaultProps={defaultTalkValues}
 			/>
 			<Composition
@@ -36,6 +39,7 @@ export const DevfestNantesComposition = () => {
 				fps={30}
 				width={720}
 				height={1280}
+				schema={ShowcaseSchema}
 				defaultProps={defaultTalkValues}
 			/>
 			<Composition

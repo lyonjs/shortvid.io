@@ -8,8 +8,9 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+import {z} from 'zod';
 
-import {DefaultProps} from '../../../types/defaultProps.types';
+import {ShowcaseSchema} from '../showcases.types';
 
 import Balloons from './Balloons';
 import {Details} from './Details';
@@ -17,13 +18,13 @@ import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 
-export const Devoxx2023: React.FC<DefaultProps> = ({
+export const Devoxx2023 = ({
 	title,
 	speakers,
 	date,
 	time,
 	location,
-}) => {
+}: z.infer<typeof ShowcaseSchema>) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const ANIMATION_DELAY = 50;

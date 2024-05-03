@@ -1,20 +1,21 @@
 import {AbsoluteFill} from 'remotion';
+import {z} from 'zod';
 
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {DefaultProps} from '../../../types/defaultProps.types';
+import {ShowcaseSchema} from '../showcases.types';
 
 import {Details} from './Details';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 
-export const TouraineTech2023: React.FC<DefaultProps> = ({
+export const TouraineTech2023 = ({
 	title,
 	speakers,
 	date,
 	time,
 	location,
-}) => {
+}: z.infer<typeof ShowcaseSchema>) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Logo />

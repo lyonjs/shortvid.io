@@ -3,7 +3,6 @@ import {
 	AbsoluteFill,
 	interpolate,
 	spring,
-	staticFile,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
@@ -58,12 +57,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 						}}
 					>
 						<AvatarWithCaption
-							avatarPictureUrl={
-								speaker.picture ||
-								staticFile(
-									'images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
-								)
-							}
+							avatarPictureUrl={speaker.picture}
 							avatarStyle={{
 								width: 180,
 								height: 180,

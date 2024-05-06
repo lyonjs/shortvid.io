@@ -15,7 +15,8 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 				width={1280}
 				height={720}
 				defaultProps={{
-					title: "Remotion : le 7ème art à porté de composants web et d'API 🎬",
+					title:
+						"Remotion : le 7ème art à portée de composants web et d'API 🎬",
 					speakers: [
 						{
 							name: 'Mickaël Alves',

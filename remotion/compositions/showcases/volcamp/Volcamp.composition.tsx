@@ -14,7 +14,8 @@ export const VolcampComposition = () => {
 				component={Volcamp}
 				defaultProps={{
 					themeName: 'Web & Mobile',
-					title: "Remotion : le 7ème art à porté de composants web et d'API 🎬",
+					title:
+						"Remotion : le 7ème art à portée de composants web et d'API 🎬",
 					speakers: [
 						{
 							name: 'Mickaël Alves',

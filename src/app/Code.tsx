@@ -2,6 +2,7 @@ import {MouseEvent, useCallback} from 'react';
 import va from '@vercel/analytics';
 
 import {DefaultPropsTypes} from './types/template.types';
+import {JSONStringifyReplacerWithDate} from './utils/JSONStringifyReplacerWithDate';
 
 export const Code: React.FC<{
 	composition: string;
@@ -43,9 +44,10 @@ export const Code: React.FC<{
 				>
 					pnpm remotion render remotion/index.tsx {composition} out/
 					{composition}.mp4 --props=&apos;
-					{JSON.stringify(params, (key, value) =>
-						value === undefined ? null : value,
-					).replace(/'/g, "'\\''")}
+					{JSON.stringify(params, JSONStringifyReplacerWithDate).replace(
+						/'/g,
+						"'\\''",
+					)}
 					&apos;
 				</code>
 				<div className="notif absolute py-2 px-3 bg-primary text-neutral-900 rounded-lg opacity-0 right-0 top-0 pointer-events-none">

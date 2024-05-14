@@ -1,3 +1,5 @@
+import {DateTime} from 'luxon';
+
 type EncodedObject = Record<string, string | undefined>;
 
 export const encodeObjectValues = (
@@ -8,6 +10,13 @@ export const encodeObjectValues = (
 	for (const key in obj) {
 		const value = obj[key];
 		const isDefinedValue = value !== undefined && value !== null;
+
+		if (isDefinedValue && value instanceof Date) {
+			encodedObj[key] = encodeURIComponent(
+				DateTime.fromJSDate(value).toISO() || value.toString(),
+			);
+			continue;
+		}
 
 		encodedObj[key] = isDefinedValue
 			? encodeURIComponent(value.toString())

@@ -4,6 +4,7 @@ const childProcess = require('child_process');
 const {promisify} = require('util');
 const yargs = require('yargs/yargs');
 const snakeCase = require('lodash/snakeCase');
+
 const {argv} = yargs(process.argv);
 const readFile = promisify(fs.readFile);
 

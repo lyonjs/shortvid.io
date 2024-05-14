@@ -1,5 +1,5 @@
 import {FormEvent} from 'react';
-import {format} from 'date-fns';
+import {DateTime} from 'luxon';
 
 import styles from '../../../styles/app/components/form/inputs.module.css';
 
@@ -14,7 +14,7 @@ export const InputDate: React.FC<InputDateProps> = ({
 	setValue,
 	label,
 }) => {
-	const formatedValue = value && format(value, 'yyyy-MM-dd HH:mm');
+	const formatedValue = value && DateTime.fromJSDate(value).toFormat('yyyy-MM-dd HH:mm');
 
 	return (
 		<label className={styles.label}>

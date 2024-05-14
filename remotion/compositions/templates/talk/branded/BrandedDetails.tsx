@@ -1,12 +1,11 @@
 import {Icon} from '@iconify/react';
-import {format} from 'date-fns';
-import {fr} from 'date-fns/locale';
+import {DateTime} from "luxon"
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
 
 type BrandedDetailsProps = {
-	startingDateTime: Date;
+	startingDateTime: Date | string;
 	location?: string;
 };
 
@@ -17,11 +16,12 @@ export const BrandedDetails = ({
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const formatedStartingDate = new Date(startingDateTime);
-	const startingDate = format(formatedStartingDate, 'dd MMMM yyyy', {
-		locale: fr,
-	});
-	const startingTime = format(formatedStartingDate, "HH 'h' mm");
+	const inputDate: string = (startingDateTime instanceof  Date) ? startingDateTime.toISOString() : startingDateTime;
+	const luxonDate = DateTime.fromISO(inputDate, { setZone: !(startingDateTime instanceof  Date) })
+		.setLocale('fr');
+
+	const startingDate = luxonDate.toFormat('dd MMMM yyyy');
+	const startingTime = luxonDate.toFormat("HH 'h' mm");
 
 	const slideIn = spring({
 		frame,

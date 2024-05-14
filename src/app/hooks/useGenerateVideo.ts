@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {DateTime} from 'luxon';
 
 import {DefaultPropsTypes} from '../types/template.types';
 
@@ -7,6 +8,18 @@ export type dataForGenerationType =
 			[key: string]: string | number | object | Date | undefined;
 	  }
 	| DefaultPropsTypes;
+
+/**
+ * Actually keep the timezone when stringifying the date
+ */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const JSONStringifyReplacer = function (this: any, key: string, value: any) {
+		if (this[key] instanceof Date) {
+			return DateTime.fromJSDate(this[key]).toISO()
+	}
+
+	return value;
+}
 
 export const useGenerateVideo: (
 	data: dataForGenerationType,
@@ -30,7 +43,7 @@ export const useGenerateVideo: (
 				'Content-Type': 'application/json',
 			},
 			method: 'POST',
-			body: JSON.stringify(data),
+			body: JSON.stringify(data, JSONStringifyReplacer),
 		})
 			.then((res) => res.blob())
 			.then((blob) => {

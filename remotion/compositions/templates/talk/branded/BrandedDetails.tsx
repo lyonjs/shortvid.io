@@ -1,5 +1,5 @@
 import {Icon} from '@iconify/react';
-import {DateTime} from "luxon"
+import {DateTime} from 'luxon';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
@@ -16,9 +16,13 @@ export const BrandedDetails = ({
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const inputDate: string = (startingDateTime instanceof  Date) ? startingDateTime.toISOString() : startingDateTime;
-	const luxonDate = DateTime.fromISO(inputDate, { setZone: !(startingDateTime instanceof  Date) })
-		.setLocale('fr');
+	const inputDate: string =
+		startingDateTime instanceof Date
+			? startingDateTime.toISOString()
+			: startingDateTime;
+	const luxonDate = DateTime.fromISO(inputDate, {
+		setZone: !(startingDateTime instanceof Date),
+	}).setLocale('fr');
 
 	const startingDate = luxonDate.toFormat('dd MMMM yyyy');
 	const startingTime = luxonDate.toFormat("HH 'h' mm");

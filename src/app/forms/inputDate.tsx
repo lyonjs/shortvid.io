@@ -14,7 +14,8 @@ export const InputDate: React.FC<InputDateProps> = ({
 	setValue,
 	label,
 }) => {
-	const formatedValue = value && DateTime.fromJSDate(value).toFormat('yyyy-MM-dd HH:mm');
+	const formatedValue =
+		value && DateTime.fromJSDate(value).toFormat('yyyy-MM-dd HH:mm');
 
 	return (
 		<label className={styles.label}>

@@ -2,7 +2,7 @@ import fs from 'fs';
 import fetch from 'node-fetch';
 import path, {dirname} from 'path';
 import {fileURLToPath} from 'url';
-import {format} from 'date-fns';
+import {DateTime} from 'luxon';
 
 const YEAR = 2023;
 const BASE_URL = 'https://mixitconf.org/en';
@@ -30,9 +30,9 @@ const run = async () => {
 
 	const enhanceTalks = talks.map((talk) => ({
 		title: talk.title,
-		date: format(new Date(talk.start), 'dd/MM/yyyy'),
+		date: DateTime.fromISO(talk.start).toFormat('dd/MM/yyyy'),
 		location: ROOM_MAPPING[talk.room],
-		time: format(new Date(talk.start), 'H:mm'),
+		time: DateTime.fromISO(talk.start).toFormat('H:mm'),
 		speakers: talk.speakerIds.map((id) => {
 			const found = speakers.find((speaker) => speaker.login === id) || {};
 

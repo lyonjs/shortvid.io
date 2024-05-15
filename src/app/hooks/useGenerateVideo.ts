@@ -1,6 +1,7 @@
 import {useState} from 'react';
 
 import {DefaultPropsTypes} from '../types/template.types';
+import {JSONStringifyReplacerWithDate} from '../utils/JSONStringifyReplacerWithDate';
 
 export type dataForGenerationType =
 	| {
@@ -30,7 +31,7 @@ export const useGenerateVideo: (
 				'Content-Type': 'application/json',
 			},
 			method: 'POST',
-			body: JSON.stringify(data),
+			body: JSON.stringify(data, JSONStringifyReplacerWithDate),
 		})
 			.then((res) => res.blob())
 			.then((blob) => {

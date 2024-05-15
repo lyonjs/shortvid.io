@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	Img,
 	spring,
@@ -5,7 +6,6 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import React from 'react';
 
 export const Background = () => {
 	const frame = useCurrentFrame();

@@ -3,7 +3,7 @@ import {defaultTalkValues} from '../../defaultValues';
 import {CompositionProps} from '../compositionsConfig';
 
 export const DevfestNantesConfig: CompositionProps = {
-	compositionName: 'DevfestNantes',
+	compositionName: 'DevfestNantesTalk',
 	component: DevfestNantesLoop,
 	width: 1280,
 	height: 720,

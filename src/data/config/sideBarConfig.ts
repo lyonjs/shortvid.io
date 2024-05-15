@@ -143,12 +143,12 @@ export const sideBarNavConfig: sideBarNavProps = {
 			},
 			{
 				compositionName: 'Devfest Nantes 2023',
-				compositionId: 'DevfestNantes',
+				compositionId: 'DevfestNantesTalk',
 				compositionLink: 'DevfestNantes',
 			},
 			{
 				compositionName: 'Devfest Lille 2024',
-				compositionId: 'DevfestLille',
+				compositionId: 'DevfestLilleTalk',
 				compositionLink: 'DevfestLille',
 			},
 		],

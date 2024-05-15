@@ -123,14 +123,14 @@ const Template: Record<string, TalkTemplate> = {
 		),
 	},
 	DevfestNantes: {
-		compositionName: 'DevfestNantes',
+		compositionName: 'DevfestNantesTalk',
 		component: DevfestNantesLoop,
 		width: 1280,
 		height: 720,
 		durationInFrames: 350,
 	},
 	DevfestLille: {
-		compositionName: 'DevfestLille',
+		compositionName: 'DevfestLilleTalk',
 		component: DevfestLille,
 		width: 1280,
 		height: 720,

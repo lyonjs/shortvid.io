@@ -3,7 +3,7 @@ import {defaultTalkValues} from '../../defaultValues';
 import {CompositionProps} from '../compositionsConfig';
 
 export const DevfestLilleConfig: CompositionProps = {
-	compositionName: 'DevfestLille',
+	compositionName: 'DevfestLilleTalk',
 	component: DevfestLille,
 	width: 1280,
 	height: 720,

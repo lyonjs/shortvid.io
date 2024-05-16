@@ -123,7 +123,7 @@ const Template: Record<string, TalkTemplate> = {
 		),
 	},
 	DevfestNantes: {
-		compositionName: 'DevfestNantesTalk',
+		compositionName: 'DevfestNantesTalkLoop',
 		component: DevfestNantesLoop,
 		width: 1280,
 		height: 720,

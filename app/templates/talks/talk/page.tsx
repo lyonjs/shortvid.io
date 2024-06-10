@@ -64,6 +64,7 @@ export default function TalkPage() {
 		},
 		titleSize: {
 			state: titleSize,
+			type: 'number',
 			setState: setTitleSize,
 			label: 'Title size',
 			component: Input,

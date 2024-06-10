@@ -26,6 +26,7 @@ export type FormConfigProps = {
 		label: string;
 		component: FormInputTypes;
 		placeholder?: string;
+		type?: string;
 		options?: (string | undefined)[];
 	};
 };
@@ -63,6 +64,7 @@ export const Form: React.FC<{
 								label={value.label}
 								placeholder={value.placeholder}
 								options={value.options}
+								type={value.type}
 							/>
 						);
 					})}

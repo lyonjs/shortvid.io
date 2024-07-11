@@ -37,7 +37,7 @@
 		"lottie-web": "5.12.2",
 		"luxon": "^3.4.4",
 		"morgan": "1.10.0",
-		"next": "14.2.4",
+		"next": "14.2.5",
 		"next-themes": "0.3.0",
 		"node-fetch": "^3.3.0",
 		"react": "18.3.1",

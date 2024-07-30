@@ -44,7 +44,7 @@
 		"react-dom": "18.3.1",
 		"react-json-editor-ajrm": "^2.5.14",
 		"remotion": "4.0.188",
-		"zod": "3.23.8"
+		"zod": "3.22.3"
 	},
 	"devDependencies": {
 		"@iconify/react": "^4.1.0",

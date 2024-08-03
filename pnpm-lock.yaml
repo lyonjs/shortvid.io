@@ -55,7 +55,7 @@ dependencies:
     version: 5.12.2
   luxon:
     specifier: ^3.4.4
-    version: 3.4.4
+    version: 3.5.0
   morgan:
     specifier: 1.10.0
     version: 1.10.0
@@ -5252,8 +5252,8 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /luxon@3.4.4:
-    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
+  /luxon@3.5.0:
+    resolution: {integrity: sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==}
     engines: {node: '>=12'}
     dev: false
 

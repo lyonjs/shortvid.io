@@ -10,25 +10,25 @@
 > One day, LyonJS organisation team wanted to communicate more on their social media.
 > Generating video was really time consuming and we wanted to simplify it.
 
-This github project use [Remotion library](https://www.remotion.dev/) to generate video, take a look at the [remotion doc](https://www.remotion.dev/docs/) in order to understand how to use it.
+This GitHub project uses the [Remotion library](https://www.remotion.dev/) to generate video. Take a look at the [Remotion docs](https://www.remotion.dev/docs/) in order to understand how to use it.
 
 ## 🍻 How to participate in this project?
 
 It depends on who you are and what are your usage of those video.
-First take a look at our [Code of conduct](./CODE_OF_CONDUCT.md) and [Remotion license](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md) in order to be sure you respect both.
+First, take a look at our [Code of conduct](./CODE_OF_CONDUCT.md) and the [Remotion license](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md) in order to be sure you respect both.
 
-This project need more visibility, it you want to help us freely, a ⭐️ could help a lot.
+This project needs more visibility. If you want to help us freely, a ⭐️ could help a lot.
 
 ### If you want to promote public events (Tech Meetup or Conference)
 
 Maintainer team want to be able to help meetups, conferences that need to generate content for their event.
-As LyonJS organisation team, we know this is normally really long to do and we hope this project and initiative could help you on that.
+As LyonJS organization team, we know this is normally really long to do, and we hope this project and initiative could help you on that.
 
 - Generating videos for promoting your event on social medias
 
 <details>
-    <summary>Example</summary>
-    
+    <summary>Example</summary>
+    
 https://user-images.githubusercontent.com/6263857/214966765-a22cc958-95bb-49fc-9ea9-3a4ef1392fae.mp4
 
 </details>
@@ -36,13 +36,13 @@ https://user-images.githubusercontent.com/6263857/214966765-a22cc958-95bb-49fc-9
 - Generating all introduction video / thumbnail for replay of conference talks
 
 <details>
-    <summary>Example</summary>
+    <summary>Example</summary>
 
 <img alt="Example of Video Thumbnail" src="https://user-images.githubusercontent.com/6263857/214966739-aeccd7be-4be7-440b-90e7-cac25a6567ac.jpeg" />
 
 </details>
 
-- Generating image for print usage (posters, feedback board, plannings,...)
+- Generating image for print usage (posters, feedback board, plannings, ...)
 
 We could use Rest API or JSON configuration to generate all your content in few minutes.
 
@@ -50,9 +50,9 @@ Ask maintainers for help by opening [a discussion in our discussion topic dedica
 
 ### If you want to promote corporate events
 
-This project won't handle corporate of private events related to company stuff.
+This project won't handle corporate or private events related to company stuff.
 We want to provide generic templates that you can use in order to generate your content.
-Templates will use _customisation props_ to let you match your color / theme / logos.
+Templates will use _customization props_ to let you match your color / theme / logos.
 
 If you have an idea of a generic template that could be able for all communities, don't hesitate to [present it in our idea discussion](https://github.com/lyonjs/shortvid.io/discussions/categories/ideas)
 

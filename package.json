@@ -47,7 +47,7 @@
 		"zod": "3.22.3"
 	},
 	"devDependencies": {
-		"@iconify/react": "^4.1.0",
+		"@iconify/react": "^5.0.0",
 		"@remotion/eslint-plugin": "4.0.201",
 		"@testing-library/dom": "9.3.4",
 		"@testing-library/jest-dom": "6.4.8",

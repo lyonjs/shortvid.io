@@ -7,7 +7,7 @@ export const useInputChange = <ValueType extends string | undefined>(
 ) => {
 	const searchParams = useSearchParams();
 	const initialValue = query
-		? searchParams.get(query) ?? defaultValue
+		? (searchParams.get(query) ?? defaultValue)
 		: defaultValue;
 
 	const [value, setValue] = useState<ValueType>(initialValue as ValueType);

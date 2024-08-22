@@ -7,7 +7,7 @@ export const useInputDateChange = <ValueType extends Date | undefined>(
 ) => {
 	const searchParams = useSearchParams();
 	const initialValue = query
-		? searchParams.get(query) ?? defaultValue
+		? (searchParams.get(query) ?? defaultValue)
 		: defaultValue;
 
 	const formatedInitialValue = initialValue && new Date(initialValue);

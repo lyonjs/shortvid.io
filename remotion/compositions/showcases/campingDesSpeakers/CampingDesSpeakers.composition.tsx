@@ -21,7 +21,7 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 						{
 							name: 'Mickaël Alves',
 							picture:
-								'https://pbs.twimg.com/profile_images/1635742650090283013/9qflRryB_400x400.jpg',
+								'https://pbs.twimg.com/profile_images/1818749515798614016/5WxluMkh_400x400.jpg',
 							company: 'Zenika',
 						},
 						{

@@ -1,6 +1,5 @@
 import {z} from 'zod';
 
-import {ReplayProps} from '../../../app/templates/replays/replay/page';
 import {AlpesCraftProps} from '../../../remotion/compositions/showcases/alpescraft/AlpesCraft';
 import {CampingDesSpeakersProps} from '../../../remotion/compositions/showcases/campingDesSpeakers/CampingDesSpeakers';
 import {SponsorProps} from '../../../remotion/compositions/showcases/touraineTech/SponsorTouraineTech2023';
@@ -17,7 +16,6 @@ import {LayerByModeProps} from '../LayerByMode';
 export type DefaultPropsTypes =
 	| {[key: string]: string | undefined}
 	| DefaultProps
-	| ReplayProps
 	| TalkProps
 	| z.infer<typeof TalkBrandedSchema>
 	| AlpesCraftProps
@@ -32,7 +30,6 @@ export type DefaultPropsTypes =
 
 export type TemplateTypes =
 	| React.FC<DefaultProps>
-	| React.FC<ReplayProps>
 	| React.FC<TalkProps>
 	| React.FC<z.infer<typeof TalkBrandedSchema>>
 	| React.FC<AlpesCraftProps>

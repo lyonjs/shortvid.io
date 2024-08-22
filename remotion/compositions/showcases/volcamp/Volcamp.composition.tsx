@@ -1,5 +1,7 @@
 import {Composition, Folder} from 'remotion';
 
+import {ShowcaseVolcampSchema} from '../showcases.types';
+
 import {Volcamp} from './Volcamp';
 
 export const VolcampComposition = () => {
@@ -12,6 +14,7 @@ export const VolcampComposition = () => {
 				fps={30}
 				durationInFrames={300}
 				component={Volcamp}
+				schema={ShowcaseVolcampSchema}
 				defaultProps={{
 					themeName: 'Web & Mobile',
 					title:

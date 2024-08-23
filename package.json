@@ -10,7 +10,7 @@
 	},
 	"scripts": {
 		"start": "remotion preview remotion/index.tsx",
-		"run-studio": "remotion studio remotion/index.tsx --port 8080",
+		"run-studio": "remotion studio remotion/index.tsx --port 80",
 		"upgrade": "remotion upgrade",
 		"lint": "eslint remotion app src __test__ --ext ts,tsx,js,jsx",
 		"test": "jest",

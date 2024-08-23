@@ -30,6 +30,8 @@ jobs:
           tags: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/${{ env.DOCKER_IMAGE }}
           file: ./Dockerfile.editor
   deploy:
+    needs:
+      - build
     name: Deploy serverless container
     runs-on: ubuntu-latest
     steps:

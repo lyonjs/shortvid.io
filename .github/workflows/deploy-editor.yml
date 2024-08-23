@@ -43,6 +43,5 @@ jobs:
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ secrets.CONTAINERS_NAMESPACE_ID }}
           scw_registry: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/${{ env.DOCKER_IMAGE }}
-          scw_memory_limit: 4096
+          scw_memory_limit: 2048
           scw_cpu_limit: 1000
-          scw_sandbox: v2

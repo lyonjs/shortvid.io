@@ -6,6 +6,9 @@ on:
     branches:
       - "main"
 
+env:
+  DOCKER_IMAGE: shortvid-editor:latest
+
 jobs:
   build:
     name: 🐋 Build docker image and push
@@ -24,5 +27,20 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/shortvid-editor:latest
+          tags: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/${{ env.DOCKER_IMAGE }}
           file: ./Dockerfile.editor
+  deploy:
+    name: Deploy serverless container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scaleway Container Deploy action
+        uses: philibea/scaleway-containers-deploy@v1.0.5
+        with:
+          type: deploy
+          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_containers_namespace_id: ${{ secrets.CONTAINERS_NAMESPACE_ID }}
+          scw_registry: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/${{ env.DOCKER_IMAGE }}
+          scw_memory_limit: 4096
+          scw_cpu_limit: 1000
+          scw_sandbox: v2

@@ -34,7 +34,7 @@ export type CompositionProps = {
 	frameForThumbnail?: number;
 	fps?: number;
 	defaultProps?:
-		| {[key: string]: string | undefined}
+		| {[key: string]: string | number | undefined}
 		| DefaultProps
 		| z.infer<typeof TalkBrandedSchema>;
 };

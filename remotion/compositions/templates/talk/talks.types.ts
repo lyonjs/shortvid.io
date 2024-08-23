@@ -16,3 +16,13 @@ export const TalkBrandedSchema = z.object({
 	logoUrl: z.string(),
 	speakers: z.array(TalkBrandedSpeakerSchema),
 });
+
+export const TalkSchema = z.object({
+	eventLogo: z.string().optional(),
+	speakersNames: z.string(),
+	talkTitle: z.string(),
+	backgroundImg: z.string().optional(),
+	speakerPicture: z.string().optional(),
+	titleSize: z.number().optional(),
+	titleColor: zColor().optional(),
+});

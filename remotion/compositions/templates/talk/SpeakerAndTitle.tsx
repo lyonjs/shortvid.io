@@ -14,9 +14,10 @@ import {TalkSpeaker} from './TalkSpeaker';
 export const SpeakerAndTitle: React.FC<{
 	speakerPicture?: string;
 	speakersNames: string;
-	titleSize: string;
+	titleSize: number;
 	talkTitle: string;
-}> = ({speakerPicture, speakersNames, titleSize, talkTitle}) => {
+	titleColor: string;
+}> = ({speakerPicture, speakersNames, titleSize, talkTitle, titleColor}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -44,7 +45,7 @@ export const SpeakerAndTitle: React.FC<{
 					speakersNames={speakersNames}
 					speakerNameStyle={{
 						width: '100%',
-						color: '#efdb50',
+						color: titleColor,
 						position: 'absolute',
 						fontSize: 70,
 						top: '55%',

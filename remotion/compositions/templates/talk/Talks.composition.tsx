@@ -3,7 +3,7 @@ import {Composition, Folder, staticFile} from 'remotion';
 
 import {TalkBranded} from './branded/TalkBranded';
 import {Talk} from './Talk';
-import {TalkBrandedSchema} from './talks.types';
+import {TalkBrandedSchema, TalkSchema} from './talks.types';
 
 export const TalksComposition: React.FC = () => {
 	const startingDate = new Date(2023, 3, 18, 13);
@@ -17,6 +17,7 @@ export const TalksComposition: React.FC = () => {
 				id="TalkWithPicture"
 				fps={30}
 				durationInFrames={120}
+				schema={TalkSchema}
 				defaultProps={{
 					speakersNames: 'John Doe',
 					talkTitle: 'Is JS an awesome programing language ?',
@@ -32,6 +33,7 @@ export const TalksComposition: React.FC = () => {
 				id="Talk"
 				fps={30}
 				durationInFrames={120}
+				schema={TalkSchema}
 				defaultProps={{
 					speakersNames: 'Foo bar',
 					talkTitle: 'Is JS an awesome programing language?',

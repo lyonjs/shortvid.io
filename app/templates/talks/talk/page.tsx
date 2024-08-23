@@ -29,7 +29,7 @@ export default function TalkPage() {
 	const [eventLogo, setEventLogo] = useInputChange<string>('', 'eventLogo');
 	const [titleSize, setTitleSize] = useInputChange<number>(50, 'titleSize');
 	const [backgroundImg, setBackgroundImg] = useInputChange<string | undefined>(
-		undefined,
+		'https://placehold.co/1200x1200',
 		'backgroundImg',
 	);
 	const [titleColor, setTitleColor] = useInputChange<string>(

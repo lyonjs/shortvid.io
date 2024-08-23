@@ -21,7 +21,7 @@ type FormInputTypes =
 
 export type FormConfigProps = {
 	[key: string]: {
-		state: string | Date | undefined;
+		state: string | Date | number | undefined;
 		setState: (event: FormEvent<HTMLInputElement | HTMLSelectElement>) => void;
 		label: string;
 		component: FormInputTypes;

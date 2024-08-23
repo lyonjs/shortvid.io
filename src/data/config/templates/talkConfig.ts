@@ -17,6 +17,6 @@ export const TalkConfig: CompositionProps = {
 		backgroundImg:
 			'https://user-images.githubusercontent.com/6263857/188308094-03b94a76-bc0b-4b62-98b0-d041996a3e16.png',
 		speakerPicture: 'https://avatars2.githubusercontent.com/u/22420399?v=4',
-		titleSize: '50',
+		titleSize: 50,
 	},
 };

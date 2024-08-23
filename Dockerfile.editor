@@ -8,7 +8,7 @@ COPY --link package.json package*.json yarn.lock* pnpm-lock.yaml* bun.lockb* tsc
 COPY --link remotion ./remotion
 # If you have a public folder:
 COPY --link public ./public
-COPY --link src/data ./src/data
+COPY --link src ./src
 # Install the right package manager and dependencies. Adjust if needed.
 RUN pnpm install
 CMD ["pnpm", "run-studio"]

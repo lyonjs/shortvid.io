@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Scaleway Container Deploy action
-        uses: philibea/scaleway-containers-deploy@v1.0.5
+        uses: philibea/scaleway-containers-deploy@v1.1.5
         with:
           type: deploy
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}

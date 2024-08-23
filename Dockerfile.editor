@@ -10,5 +10,6 @@ COPY --link remotion ./remotion
 COPY --link public ./public
 COPY --link src ./src
 # Install the right package manager and dependencies. Adjust if needed.
+RUN git init
 RUN pnpm install
 CMD ["pnpm", "run-studio"]

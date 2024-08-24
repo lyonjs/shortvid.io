@@ -48,4 +48,5 @@ jobs:
           scw_min_scale: 0
           scw_max_scale: 1
           scw_container_port: 3000
-          scw_max_concurrency: 100
+          scw_max_concurrency: 80
+          scw_sandbox: v2

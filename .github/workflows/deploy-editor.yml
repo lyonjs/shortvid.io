@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - name: Login to GitLab
+      - name: Login to Docker Registry
         uses: docker/login-action@v3
         with:
           registry: ${{ secrets.SCW_REGISTRY_ENDPOINT }}

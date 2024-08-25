@@ -10,6 +10,8 @@
 	},
 	"scripts": {
 		"start": "remotion preview remotion/index.tsx",
+		"run:studio": "remotion studio remotion/index.tsx",
+		"browser": "remotion browser ensure",
 		"upgrade": "remotion upgrade",
 		"lint": "eslint remotion app src __test__ --ext ts,tsx,js,jsx",
 		"test": "jest",

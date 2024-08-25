@@ -1,0 +1,52 @@
+name: 🚀 Deploy Editor
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+
+env:
+  DOCKER_IMAGE: shortvid-editor:latest
+
+jobs:
+  build:
+    name: 🐋 Build docker image and push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Login to Docker Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.SCW_REGISTRY_ENDPOINT }}
+          username: nologin
+          password: ${{ secrets.SCW_SECRET_KEY }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          tags: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/${{ env.DOCKER_IMAGE }}
+          file: ./Dockerfile.editor
+  deploy:
+    needs:
+      - build
+    name: Deploy serverless container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scaleway Container Deploy action
+        uses: philibea/scaleway-containers-deploy@v1.1.5
+        with:
+          type: deploy
+          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_containers_namespace_id: ${{ secrets.CONTAINERS_NAMESPACE_ID }}
+          scw_registry: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/${{ env.DOCKER_IMAGE }}
+          scw_memory_limit: 6144
+          scw_cpu_limit: 4000
+          scw_min_scale: 0
+          scw_max_scale: 1
+          scw_container_port: 3000
+          scw_max_concurrency: 80
+          scw_sandbox: v2

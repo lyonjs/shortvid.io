@@ -39,7 +39,7 @@ export const DevfestNantesPhrase = ({title}: DefaultProps) => {
 			<Sequence>
 				<BackgroundFiller
 					imageUrl={staticFile(
-						'/images/showcases/devfestNantes/fond-visuel-etoiles.png',
+						'/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png',
 					)}
 					style={{
 						position: 'absolute',

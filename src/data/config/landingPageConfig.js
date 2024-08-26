@@ -34,9 +34,9 @@ export const PARTNERS = [
 	},
 	{
 		name: 'Devfest Nantes',
-		logo: '/images/showcases/devfestNantes/logo-devfest-mgm_transparent.svg',
+		logo: '/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg',
 		logoDark:
-			'/images/showcases/devfestNantes/logo-devfest-mgm_transparent.svg',
+			'/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg',
 		url: 'https://devfest.gdgnantes.com/',
 	},
 	{

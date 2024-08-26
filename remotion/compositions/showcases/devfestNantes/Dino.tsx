@@ -16,7 +16,7 @@ export const Dino = () => {
 
 	return (
 		<Img
-			src={staticFile('/images/showcases/devfestNantes/dino.png')}
+			src={staticFile('/images/showcases/devfestNantes/2023/dino.png')}
 			width={logoWidth}
 			height="auto"
 			style={{

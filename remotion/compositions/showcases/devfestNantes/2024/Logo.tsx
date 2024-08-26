@@ -8,12 +8,12 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-import {ComponentDisplayMode} from './types/types';
+import {ComponentDisplayMode} from '../types/types';
 
 export const Logo = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const logoWidth = 250;
+	const logoWidth = 150;
 
 	const pictureSlide = spring({
 		frame,
@@ -32,7 +32,7 @@ export const Logo = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	return (
 		<Img
 			src={staticFile(
-				'/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg',
+				'/images/showcases/devfestNantes/2024/logo-devfest-2024.png',
 			)}
 			width={logoWidth}
 			height="auto"

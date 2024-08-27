@@ -5,7 +5,6 @@ import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 import {TemplateTypes} from '../../app/types/template.types';
 
 import {EventConfig} from './templates/eventConfig';
-import {LayersConfig} from './templates/layersConfig';
 import {MeetupConfig} from './templates/meetupConfig';
 import {SilhouetteConfig} from './templates/silhouetteConfig';
 import {
@@ -37,7 +36,6 @@ export const CompositionsConfig: CompositionsConfigProps = {
 	templates: {
 		Talk: TalkConfig,
 		TalkBranded: TalkBrandedConfig,
-		Layers: LayersConfig,
 		Sponsor: SponsorConfig,
 		SpotlightNewSponsor: SpotlightNewSponsorConfig,
 		Event: EventConfig,

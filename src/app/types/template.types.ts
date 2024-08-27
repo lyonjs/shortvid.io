@@ -11,7 +11,6 @@ import {SpotlightNewSponsornProps} from '../../../remotion/compositions/template
 import {TalkProps} from '../../../remotion/compositions/templates/talk/Talk';
 import {TalkBrandedSchema} from '../../../remotion/compositions/templates/talk/talks.types';
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
-import {LayerByModeProps} from '../LayerByMode';
 
 export type DefaultPropsTypes =
 	| {[key: string]: string | undefined}
@@ -21,7 +20,6 @@ export type DefaultPropsTypes =
 	| AlpesCraftProps
 	| VolcampProps
 	| CampingDesSpeakersProps
-	| LayerByModeProps
 	| SponsorProps
 	| z.infer<typeof SponsorSchema>
 	| SilhouetteProps
@@ -35,7 +33,6 @@ export type TemplateTypes =
 	| React.FC<AlpesCraftProps>
 	| React.FC<VolcampProps>
 	| React.FC<CampingDesSpeakersProps>
-	| React.FC<LayerByModeProps>
 	| React.FC<SponsorProps>
 	| React.FC<z.infer<typeof SponsorSchema>>
 	| React.FC<SpotlightNewSponsornProps>

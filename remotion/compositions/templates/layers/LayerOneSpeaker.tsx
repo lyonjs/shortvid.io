@@ -1,19 +1,20 @@
 import React from 'react';
 import {AbsoluteFill, Img} from 'remotion';
+import {z} from 'zod';
 
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
 
-import {DefaultLayerProps} from './layers.types';
+import {DefaultLayerSchema} from './layers.types';
 import {LayerTitle} from './LayerTitle';
 
-export const LayerOneSpeaker: React.FC<DefaultLayerProps> = ({
+export const LayerOneSpeaker = ({
 	title,
 	sponsorLogoUrl,
 	primaryColor,
 	secondaryColor,
 	decorationUrl,
-}) => {
+}: z.infer<typeof DefaultLayerSchema>) => {
 	return (
 		<AbsoluteFill
 			style={{backgroundColor: 'white', overflow: 'hidden', gap: '30px'}}

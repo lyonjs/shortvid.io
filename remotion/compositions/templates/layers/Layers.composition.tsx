@@ -3,6 +3,7 @@ import {Folder, Still} from 'remotion';
 
 import {LayerFullScreen} from './LayerFullScreen';
 import {LayerOneSpeaker} from './LayerOneSpeaker';
+import {DefaultLayerSchema, LayerSchema} from './layers.types';
 import {LayerTwoSpeaker} from './LayerTwoSpeaker';
 
 export const LayersComposition: React.FC = () => {
@@ -16,30 +17,39 @@ export const LayersComposition: React.FC = () => {
 			<Still
 				id="LayerFullScreen"
 				component={LayerFullScreen}
+				schema={LayerSchema}
 				width={1920}
 				height={1080}
 				defaultProps={{
 					decorationUrl: defaultDecorationUrl,
+					primaryColor: '#323330',
+					secondaryColor: '#efdb4f',
 				}}
 			/>
 			<Still
 				id="LayerOneSpeaker"
 				component={LayerOneSpeaker}
+				schema={DefaultLayerSchema}
 				width={1920}
 				height={1080}
 				defaultProps={{
 					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
 					sponsorLogoUrl: defaultSponsorLogoUrl,
 					decorationUrl: defaultDecorationUrl,
+					primaryColor: '#323330',
+					secondaryColor: '#efdb4f',
 				}}
 			/>
 			<Still
 				id="LayerTwoSpeaker"
 				component={LayerTwoSpeaker}
+				schema={DefaultLayerSchema}
 				defaultProps={{
 					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
 					sponsorLogoUrl: defaultSponsorLogoUrl,
 					decorationUrl: defaultDecorationUrl,
+					primaryColor: '#323330',
+					secondaryColor: '#efdb4f',
 				}}
 				width={1920}
 				height={1080}

@@ -2,7 +2,7 @@ import {Composition, Folder, staticFile} from 'remotion';
 
 import {Sponsor} from './default/Sponsor';
 import {SpotlightNewSponsor} from './spotlightNewSponsor/SpotlightNewSponsor';
-import {SponsorSchema} from './sponsors.types';
+import {SponsorSchema, SpotlightNewSponsorSchema} from './sponsors.types';
 
 export const SponsorsComposition = () => {
 	return (
@@ -26,6 +26,7 @@ export const SponsorsComposition = () => {
 			/>
 			<Composition
 				component={SpotlightNewSponsor}
+				schema={SpotlightNewSponsorSchema}
 				width={1920}
 				height={1080}
 				id="SpotlightNewSponsor"

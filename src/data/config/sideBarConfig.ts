@@ -9,7 +9,7 @@ export type categoryProps = {
 	items: videoProps[];
 };
 
-export type CompositionType = 'templates' | 'showcases';
+export type CompositionType = 'templates';
 
 type sideBarNavProps = Record<
 	CompositionType,
@@ -89,67 +89,6 @@ export const sideBarNavConfig: sideBarNavProps = {
 						compositionLink: 'silhouette',
 					},
 				],
-			},
-		],
-	},
-	showcases: {
-		iconifyId: 'ph:video',
-		route: '/showcases/conferences/',
-		items: [
-			{
-				compositionName: 'Devoxx 2023',
-				compositionId: 'Devoxx',
-				compositionLink: 'Devoxx',
-			},
-			{
-				compositionName: 'Devoxx 2024',
-				compositionId: 'Devoxx2024',
-				compositionLink: 'Devoxx2024',
-			},
-			{
-				compositionName: 'Mixit',
-				compositionId: 'Mixit',
-				compositionLink: 'Mixit',
-			},
-			{
-				compositionName: 'Snowcamp',
-				compositionId: 'Snowcamp',
-				compositionLink: 'Snowcamp',
-			},
-			{
-				compositionName: 'TouraineTech 2023',
-				compositionId: 'TouraineTech',
-				compositionLink: 'TouraineTech',
-			},
-			{
-				compositionName: 'Very Tech Trip',
-				compositionId: 'VeryTechTrip',
-				compositionLink: 'VeryTechTrip',
-			},
-			{
-				compositionName: 'AlpesCraft',
-				compositionId: 'AlpesCraft',
-				compositionLink: 'AlpesCraft',
-			},
-			{
-				compositionName: 'Camping Des Speakers',
-				compositionId: 'CampingDesSpeakers',
-				compositionLink: 'CampingDesSpeakers',
-			},
-			{
-				compositionName: 'Volcamp 2023',
-				compositionId: 'Volcamp2023',
-				compositionLink: 'Volcamp2023',
-			},
-			{
-				compositionName: 'Devfest Nantes 2023',
-				compositionId: 'DevfestNantes',
-				compositionLink: 'DevfestNantes',
-			},
-			{
-				compositionName: 'Devfest Lille 2024',
-				compositionId: 'DevfestLille',
-				compositionLink: 'DevfestLille',
 			},
 		],
 	},

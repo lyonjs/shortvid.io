@@ -4,16 +4,6 @@ import {TalkBrandedSchema} from '../../../remotion/compositions/templates/talk/t
 import {DefaultProps} from '../../../remotion/types/defaultProps.types';
 import {TemplateTypes} from '../../app/types/template.types';
 
-import {AlpesCraftConfig} from './showcases/alpesCraftConfig';
-import {CampingDesSpeakersConfig} from './showcases/campingDesSpeakersConfig';
-import {DevfestLilleConfig} from './showcases/devfestLilleConfig';
-import {DevfestNantesConfig} from './showcases/devfestNantesConfig';
-import {Devoxx2024Config, DevoxxConfig} from './showcases/devoxxConfig';
-import {MixitConfig} from './showcases/mixitConfig';
-import {SnowcampConfig} from './showcases/snowcampConfig';
-import {TouraineTechConfig} from './showcases/touraineTechConfig';
-import {VeryTechTripConfig} from './showcases/veryTechTripConfig';
-import {VolcampConfig} from './showcases/volcampConfig';
 import {EventConfig} from './templates/eventConfig';
 import {LayersConfig} from './templates/layersConfig';
 import {MeetupConfig} from './templates/meetupConfig';
@@ -41,7 +31,6 @@ export type CompositionProps = {
 
 type CompositionsConfigProps = {
 	templates: Record<string, CompositionProps>;
-	showcases: Record<string, CompositionProps>;
 };
 
 export const CompositionsConfig: CompositionsConfigProps = {
@@ -54,18 +43,5 @@ export const CompositionsConfig: CompositionsConfigProps = {
 		Event: EventConfig,
 		Meetup: MeetupConfig,
 		Silhouette: SilhouetteConfig,
-	},
-	showcases: {
-		Devoxx: DevoxxConfig,
-		Devoxx2024: Devoxx2024Config,
-		Mixit: MixitConfig,
-		Snowcamp: SnowcampConfig,
-		TouraineTech: TouraineTechConfig,
-		VeryTechTrip: VeryTechTripConfig,
-		AlpesCraft: AlpesCraftConfig,
-		CampingDesSpeakers: CampingDesSpeakersConfig,
-		Volcamp2023: VolcampConfig,
-		DevfestNantes: DevfestNantesConfig,
-		DevfestLille: DevfestLilleConfig,
 	},
 };

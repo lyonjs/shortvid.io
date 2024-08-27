@@ -1,29 +1,17 @@
 'use client';
 
-import Link from 'next/link';
-
 import {Contact} from '../src/app/components/landingPage/Contact';
 import {Footer} from '../src/app/components/landingPage/Footer';
 import {Github} from '../src/app/components/landingPage/Github';
 import {Hero} from '../src/app/components/landingPage/Hero';
 import {Partners} from '../src/app/components/landingPage/Partners';
 import {Sponsors} from '../src/app/components/landingPage/Sponsors';
-import {Header} from '../src/app/components/sidebar/navigation/Header';
 
-import buttonStyles from '../styles/app/common/buttons.module.css';
 import styles from '../styles/app/layout/landing/landing.module.css';
 
 export default function Home() {
 	return (
 		<>
-			<Header expanded={true} className={styles.landingHeader}>
-				<Link
-					href="/templates/talks/talk"
-					className={`${buttonStyles.btn} ${buttonStyles.btnPrimary} ${styles.headerCTA}`}
-				>
-					Get Started
-				</Link>
-			</Header>
 			<main className={styles.homeMain}>
 				<Hero />
 

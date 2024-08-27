@@ -15,7 +15,6 @@ import {TouraineTechConfig} from './showcases/touraineTechConfig';
 import {VeryTechTripConfig} from './showcases/veryTechTripConfig';
 import {VolcampConfig} from './showcases/volcampConfig';
 import {EventConfig} from './templates/eventConfig';
-import {LayersConfig} from './templates/layersConfig';
 import {MeetupConfig} from './templates/meetupConfig';
 import {SilhouetteConfig} from './templates/silhouetteConfig';
 import {
@@ -48,7 +47,6 @@ export const CompositionsConfig: CompositionsConfigProps = {
 	templates: {
 		Talk: TalkConfig,
 		TalkBranded: TalkBrandedConfig,
-		Layers: LayersConfig,
 		Sponsor: SponsorConfig,
 		SpotlightNewSponsor: SpotlightNewSponsorConfig,
 		Event: EventConfig,

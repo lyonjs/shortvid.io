@@ -36,16 +36,6 @@ export const sideBarNavConfig: sideBarNavProps = {
 				],
 			},
 			{
-				categoryName: 'layers',
-				items: [
-					{
-						compositionName: 'Layers',
-						compositionId: 'Layers',
-						compositionLink: 'layers',
-					},
-				],
-			},
-			{
 				categoryName: 'meetups',
 				items: [
 					{

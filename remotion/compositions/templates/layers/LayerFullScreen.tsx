@@ -1,16 +1,17 @@
 import React from 'react';
 import {AbsoluteFill, Img} from 'remotion';
+import {z} from 'zod';
 
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
 
-import {LayerBaseProps} from './layers.types';
+import {LayerSchema} from './layers.types';
 
-export const LayerFullScreen: React.FC<LayerBaseProps> = ({
+export const LayerFullScreen = ({
 	primaryColor,
 	secondaryColor,
 	decorationUrl,
-}) => {
+}: z.infer<typeof LayerSchema>) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<BackgroundTriangle

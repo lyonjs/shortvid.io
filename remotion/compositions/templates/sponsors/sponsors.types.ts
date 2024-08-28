@@ -8,6 +8,6 @@ export const SponsorSchema = z.object({
 });
 
 export const SpotlightNewSponsorSchema = z.object({
-	sponsorLogo: z.string().url().optional(),
-	logo: z.string().optional(),
+	sponsorLogo: z.string().url(),
+	logo: z.string(),
 });

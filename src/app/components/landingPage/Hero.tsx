@@ -23,12 +23,6 @@ export const Hero = () => {
 
 			<div className={styles.cta}>
 				<Link
-					href="/templates/talks/talk"
-					className={`${buttonStyles.btn} ${buttonStyles.btnSecondary}`}
-				>
-					Get Started
-				</Link>
-				<Link
 					href="https://github.com/lyonjs/shortvid.io/blob/main/CONTRIBUTING.md"
 					className={`${buttonStyles.btn} ${buttonStyles.btnText}`}
 				>

@@ -14,12 +14,10 @@ describe('<Hero />', () => {
 		const subTitle = screen.getByRole('heading', {
 			name: 'Choose among various templates to customise with your assets and contents. Then generate and download your video in one click',
 		});
-		const ctaButtons = screen.getAllByRole('link');
+		const ctaButtons = screen.getByRole('link');
 
 		expect(title).toBeVisible();
 		expect(subTitle).toBeVisible();
-		expect(ctaButtons.length).toEqual(2);
-		expect(ctaButtons[0]).toHaveClass('btnSecondary');
-		expect(ctaButtons[1]).toHaveClass('btnText');
+		expect(ctaButtons).toHaveClass('btnText');
 	});
 });

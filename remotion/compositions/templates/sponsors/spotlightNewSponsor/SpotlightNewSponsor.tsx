@@ -9,24 +9,20 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+import {z} from 'zod';
 
 import {FadeIn} from '../../../../design/animations/FadeIn';
 import {BackgroundCircleNoise} from '../../../../design/atoms/BackgroundCircleNoise';
 import {useLottie} from '../../../../hooks/useLottie';
+import {SpotlightNewSponsorSchema} from '../sponsors.types';
 
 import {LogosSponsoring} from './LogosSponsoring';
 import {NewSponsorTitle} from './NewSponsorTitle';
 import {Spotlight} from './Spotlight';
 
-export type SpotlightNewSponsornProps = {
-	logo: string;
-	sponsorLogo: string;
-};
-
-export const SpotlightNewSponsor: React.FC<SpotlightNewSponsornProps> = ({
-	logo,
-	sponsorLogo,
-}) => {
+export const SpotlightNewSponsor: React.FC<
+	z.infer<typeof SpotlightNewSponsorSchema>
+> = ({logo, sponsorLogo}) => {
 	const {fps, width} = useVideoConfig();
 	const frame = useCurrentFrame();
 

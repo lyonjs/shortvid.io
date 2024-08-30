@@ -6,3 +6,8 @@ export const SponsorSchema = z.object({
 	companyName: z.string().optional(),
 	sponsorLocalisation: z.string().optional(),
 });
+
+export const SpotlightNewSponsorSchema = z.object({
+	sponsorLogo: z.string().url(),
+	logo: z.string(),
+});

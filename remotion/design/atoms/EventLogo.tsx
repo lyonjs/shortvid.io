@@ -12,7 +12,7 @@ export const EventLogo = ({style, src}: EventLogoProps) => {
 	) : (
 		<Img
 			style={style}
-			src={staticFile('/images/showcases/lyonjs/lyonjsSquaredLogo.png')}
+			src={src || staticFile('/images/showcases/lyonjs/lyonjsSquaredLogo.png')}
 		/>
 	);
 };

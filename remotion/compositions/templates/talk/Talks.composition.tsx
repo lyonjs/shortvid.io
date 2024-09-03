@@ -1,5 +1,5 @@
 import React from 'react';
-import {Composition, Folder, staticFile} from 'remotion';
+import {Composition, Folder} from 'remotion';
 
 import {TalkBranded} from './branded/TalkBranded';
 import {Talk} from './Talk';
@@ -14,29 +14,21 @@ export const TalksComposition: React.FC = () => {
 				component={Talk}
 				width={1200}
 				height={1200}
-				id="TalkWithPicture"
-				fps={30}
-				durationInFrames={120}
-				schema={TalkSchema}
-				defaultProps={{
-					speakersNames: 'John Doe',
-					talkTitle: 'Is JS an awesome programing language ?',
-					speakerPicture: staticFile(
-						'/images/showcases/lyonjs/lyonjsSquaredLogo.png',
-					),
-				}}
-			/>
-			<Composition
-				component={Talk}
-				width={1200}
-				height={1200}
 				id="Talk"
 				fps={30}
 				durationInFrames={120}
 				schema={TalkSchema}
 				defaultProps={{
-					speakersNames: 'Foo bar',
-					talkTitle: 'Is JS an awesome programing language?',
+					speakersNames: 'John Doe',
+					titleColor: '#efdb50',
+					talkTitle: 'Is JS an awesome programing language ?',
+					titleSize: 80,
+					backgroundImg:
+						'https://github.com/lyonjs/shortvid.io/blob/48ffea960b300eb9230786ed0ab043ec3387e877/public/images/showcases/lyonjs/defaultBackgroundImage.jpeg?raw=true',
+					speakerPicture:
+						'https://raw.githubusercontent.com/lyonjs/shortvid.io/main/public/images/common/defaultAvatar.svg',
+					eventLogo:
+						'https://github.com/lyonjs/shortvid.io/blob/main/public/images/showcases/lyonjs/lyonjsSquaredLogo.png?raw=true',
 				}}
 			/>
 			<Composition

@@ -1,22 +1,17 @@
 import React from 'react';
+import {loadFont} from '@remotion/google-fonts/OpenSans';
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+import {z} from 'zod';
 
 import {EventLogo} from '../../../design/atoms/EventLogo';
 
 import {SpeakerAndTitle} from './SpeakerAndTitle';
 import {TalkBackground} from './TalkBackground';
+import {TalkSchema} from './talks.types';
 
-export type TalkProps = {
-	eventLogo?: string;
-	speakersNames: string;
-	talkTitle: string;
-	backgroundImg?: string;
-	speakerPicture?: string;
-	titleSize?: number;
-	titleColor?: string;
-};
+const {fontFamily} = loadFont();
 
-export const Talk: React.FC<TalkProps> = ({
+export const Talk: React.FC<z.infer<typeof TalkSchema>> = ({
 	eventLogo,
 	speakersNames,
 	talkTitle,
@@ -31,6 +26,7 @@ export const Talk: React.FC<TalkProps> = ({
 		<AbsoluteFill
 			style={{
 				overflow: 'hidden',
+				fontFamily,
 			}}
 		>
 			<Sequence name="Background">

@@ -1,19 +1,23 @@
 import React from 'react';
+import {loadFont} from '@remotion/google-fonts/OpenSans';
 import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+import {z} from 'zod';
 
 import {MeetupBackground} from './MeetupBackground';
 import {MeetupDate} from './MeetupDate';
 import {MeetupPresentation} from './MeetupPresentation';
 import {Register} from './Register';
 
-export type MeetupProps = {
-	eventLogo?: string;
-	backgroundImg?: string;
-	title: string;
-	date?: string;
-};
+const {fontFamily} = loadFont();
 
-export const Meetup: React.FC<MeetupProps> = ({
+export const MeetupSchema = z.object({
+	backgroundImg: z.string().optional(),
+	title: z.string(),
+	date: z.string().optional(),
+	eventLogo: z.string().optional(),
+});
+
+export const Meetup: React.FC<z.infer<typeof MeetupSchema>> = ({
 	backgroundImg = staticFile(
 		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
 	),
@@ -25,6 +29,7 @@ export const Meetup: React.FC<MeetupProps> = ({
 		<AbsoluteFill
 			style={{
 				overflow: 'hidden',
+				fontFamily,
 			}}
 		>
 			<MeetupBackground backgroundImg={backgroundImg} />

@@ -23,6 +23,6 @@ export const TalkSchema = z.object({
 	talkTitle: z.string(),
 	backgroundImg: z.string().optional(),
 	speakerPicture: z.string().optional(),
-	titleSize: z.number().optional(),
+	titleSize: z.number().finite().positive().gte(30).optional(),
 	titleColor: zColor().optional(),
 });

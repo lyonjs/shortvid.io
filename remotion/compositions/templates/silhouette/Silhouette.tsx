@@ -1,23 +1,32 @@
 import React from 'react';
-import {AbsoluteFill, Sequence} from 'remotion';
+import {loadFont} from '@remotion/google-fonts/OpenSans';
+import {
+	AbsoluteFill,
+	Easing,
+	interpolate,
+	Sequence,
+	useCurrentFrame,
+} from 'remotion';
+import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
-import {Side} from './Silhouette.type';
 import {SilhouetteLogo} from './SilhouetteLogo';
 import {SilhouettePicture} from './SilhouettePicture';
 import {SilhouetteTitle} from './SilhouetteTitle';
 
-export type SilhouetteProps = {
-	backgroundImg: string;
-	title: string;
-	side?: Side;
-	silhouetteUrl: string;
-	dropShadow?: boolean;
-	logoUrl?: string;
-};
+export const SilhouetteSchema = z.object({
+	backgroundImg: z.string(),
+	title: z.string(),
+	side: z.enum(['left', 'right']).optional(),
+	silhouetteUrl: z.string(),
+	dropShadow: z.boolean().optional(),
+	logoUrl: z.string().optional(),
+});
 
-export const Silhouette: React.FC<SilhouetteProps> = ({
+const {fontFamily} = loadFont();
+
+export const Silhouette: React.FC<z.infer<typeof SilhouetteSchema>> = ({
 	backgroundImg,
 	side = 'left',
 	silhouetteUrl,
@@ -25,13 +34,20 @@ export const Silhouette: React.FC<SilhouetteProps> = ({
 	dropShadow = false,
 	logoUrl,
 }) => {
+	const frame = useCurrentFrame();
+	const blur = interpolate(frame, [40, 45], [0, 20], {
+		extrapolateRight: 'clamp',
+		easing: Easing.out(Easing.ease),
+	});
+
 	return (
 		<AbsoluteFill
 			style={{
 				overflow: 'hidden',
+				fontFamily,
 			}}
 		>
-			<Sequence>
+			<Sequence style={{filter: `blur(${blur}px)`}}>
 				<BackgroundFiller imageUrl={backgroundImg} />
 			</Sequence>
 

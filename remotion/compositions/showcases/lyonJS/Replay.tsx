@@ -1,8 +1,9 @@
 import React from 'react';
 import {AbsoluteFill, Audio, interpolate, Sequence, staticFile} from 'remotion';
+import {z} from 'zod';
 
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {Speaker} from '../../../types/defaultProps.types';
+import {SpeakerSchema} from '../showcases.types';
 
 import {BigSpeakers} from './BigSpeakers';
 import {Details} from './Details';
@@ -10,14 +11,14 @@ import {Logo} from './Logo';
 import {LogoSponsor} from './LogoSponsor';
 import {TalkTitle} from './TalkTitle';
 
-export type LyonJSReplayType = {
-	title: string;
-	date: string;
-	sponsor: string;
-	speakers: Speaker[];
-};
+export const LyonJSReplaySchema = z.object({
+	title: z.string(),
+	date: z.string(),
+	sponsor: z.string(),
+	speakers: z.array(SpeakerSchema),
+});
 
-export const ReplayLyonJS: React.FC<LyonJSReplayType> = ({
+export const ReplayLyonJS: React.FC<z.infer<typeof LyonJSReplaySchema>> = ({
 	title,
 	speakers,
 	date,

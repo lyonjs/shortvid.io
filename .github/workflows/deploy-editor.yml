@@ -45,7 +45,7 @@ jobs:
           scw_registry: ${{ secrets.SCW_REGISTRY_ENDPOINT }}/${{ env.DOCKER_IMAGE }}
           scw_memory_limit: 6144
           scw_cpu_limit: 4000
-          scw_min_scale: 0
+          scw_min_scale: 1
           scw_max_scale: 1
           scw_container_port: 3000
           scw_max_concurrency: 80

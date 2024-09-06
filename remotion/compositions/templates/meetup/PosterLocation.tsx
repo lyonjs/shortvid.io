@@ -30,6 +30,7 @@ export const PosterLocation: React.FC<z.infer<typeof PosterLocationSchema>> = ({
 				justifyContent: 'center',
 				alignItems: 'center',
 				gap: '100px',
+				padding: '20px 20px',
 				fontFamily,
 			}}
 		>
@@ -48,7 +49,7 @@ export const PosterLocation: React.FC<z.infer<typeof PosterLocationSchema>> = ({
 					flexDirection: 'column',
 				}}
 			>
-				<Title style={{display: 'block', fontSize: '40px', color: 'black'}}>
+				<Title style={{display: 'block', fontSize: '75px', color: 'black'}}>
 					{title}
 				</Title>
 				{message && (

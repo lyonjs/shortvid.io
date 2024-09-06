@@ -2,8 +2,8 @@ import React from 'react';
 import {Composition, Folder, Still} from 'remotion';
 
 import {Meetup, MeetupSchema} from './Meetup';
-import {Register} from './Register';
 import {PosterLocation, PosterLocationSchema} from './PosterLocation';
+import {Register} from './Register';
 
 export const MeetupComposition: React.FC = () => {
 	return (

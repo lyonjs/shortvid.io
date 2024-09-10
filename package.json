@@ -32,7 +32,7 @@
 		"@remotion/zod-types": "4.0.209",
 		"@types/jest": "29.5.12",
 		"@vercel/analytics": "^1.0.0",
-		"body-parser": "1.20.2",
+		"body-parser": "1.20.3",
 		"cors": "2.8.5",
 		"express": "4.19.2",
 		"jest": "29.7.0",

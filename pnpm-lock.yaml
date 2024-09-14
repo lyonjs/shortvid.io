@@ -33,8 +33,8 @@ dependencies:
     specifier: 4.0.211
     version: 4.0.211(react-dom@18.3.1)(react@18.3.1)(zod@3.23.8)
   '@types/jest':
-    specifier: 29.5.12
-    version: 29.5.12
+    specifier: 29.5.13
+    version: 29.5.13
   '@vercel/analytics':
     specifier: ^1.0.0
     version: 1.3.1(next@14.2.8)(react@18.3.1)
@@ -1648,8 +1648,8 @@ packages:
     dependencies:
       '@types/istanbul-lib-report': 3.0.3
 
-  /@types/jest@29.5.12:
-    resolution: {integrity: sha512-eDC8bTvT/QhYdxJAulQikueigY5AsdBRH2yDKW3yveW7svY3+DzN84/2NUgkw10RTiJbWqZrTtoGVdYlvFJdLw==}
+  /@types/jest@29.5.13:
+    resolution: {integrity: sha512-wd+MVEZCHt23V0/L642O5APvspWply/rGY5BcW4SUETo2UzPU3Z26qr8jC2qxpimI2jjx9h7+2cj2FwIr01bXg==}
     dependencies:
       expect: 29.7.0
       pretty-format: 29.7.0
@@ -1709,7 +1709,7 @@ packages:
   /@types/testing-library__jest-dom@5.14.9:
     resolution: {integrity: sha512-FSYhIjFlfOpGSRyVoMBMuS3ws5ehFQODymf3vlI7U1K8c7PHwWwFY7VREfmsuzHSOnoKs/9/Y983ayOs7eRzqw==}
     dependencies:
-      '@types/jest': 29.5.12
+      '@types/jest': 29.5.13
     dev: true
 
   /@types/tough-cookie@4.0.5:

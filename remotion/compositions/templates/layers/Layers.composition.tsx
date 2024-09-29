@@ -13,7 +13,7 @@ export const LayersComposition: React.FC = () => {
 		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png';
 
 	return (
-		<Folder name="Layers">
+		<Folder name="OBS-Scenes">
 			<Still
 				id="LayerFullScreen"
 				component={LayerFullScreen}

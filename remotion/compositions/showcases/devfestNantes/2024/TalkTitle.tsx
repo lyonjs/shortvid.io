@@ -1,9 +1,11 @@
 import {loadFont} from '@remotion/google-fonts/Creepster';
+import {loadLocalFont} from '../../../../../src/app/utils/loadFont';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Title} from '../../../../design/atoms/Title';
 
 const {fontFamily} = loadFont();
+loadLocalFont('HigherJump', 'font/HigherJump.ttf', 'truetype');
 
 export const TalkTitle: React.FC<{
 	title: string;
@@ -29,15 +31,16 @@ export const TalkTitle: React.FC<{
 	return (
 		<Title
 			style={{
-				fontFamily,
+				fontFamily: 'HigherJump',
 				width: '95%',
 				left: '50%',
 				transform: 'translateX(-50%)',
-				fontSize: '70px',
-				lineHeight: '1.5',
-				letterSpacing: '0.1rem',
+				fontSize: '35px',
+				lineHeight: '2.2',
+				letterSpacing: '0.2rem',
 				textAlign: 'center',
-				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+				color: '#FFF8F0',//'#1B2C2C',
+				textShadow: '-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
 				textWrap: 'balance',
 				position: 'absolute',
 				minHeight: 150,

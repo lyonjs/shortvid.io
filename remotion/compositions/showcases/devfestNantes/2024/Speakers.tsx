@@ -21,7 +21,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		frame: frame,
 		fps,
 		from: -1000,
-		to: -350,
+		to: -320,
 		durationInFrames: 60,
 	});
 
@@ -59,24 +59,18 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 				return (
 					<div
 						key={speaker.name}
-						style={{
-							display: 'flex',
-							flexDirection: 'column',
-							backgroundImage: `url(${staticFile(
-								'/images/showcases/devfestNantes/2024/background-speaker.png',
-							)})`,
-							backgroundSize: '80%',
-							backgroundRepeat: 'no-repeat',
-							backgroundPosition: `bottom ${backgroundPictureUp}px right 20px`,
-						}}
+						 style={{
+						 	display: 'flex',
+						 	flexDirection: 'column',
+						 }}
 					>
 						<AvatarWithCaption
 							avatarPictureUrl={speaker.picture}
 							avatarStyle={{
-								width: 160,
-								height: 160,
+								width: 180,
+								height: 180,
 								border: 'none',
-								boxShadow: '0 0 0 5px white',
+								boxShadow: '0 0 0 5px #1B2C2C',
 								bottom: pictureUp,
 							}}
 							style={{
@@ -87,18 +81,18 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								<Text
 									style={{
 										fontFamily,
+										color: '#1B2C2C',
 										textShadow:
-											'-2px 0 white, 0 2px white, 2px 0 white, 0 -2px white',
+											'-2px 0 #FFF8F0, 0 2px #FFF8F0, 2px 0 #FFF8F0, 0 -2px #FFF8F0',
 										letterSpacing: '0.1rem',
 										position: 'relative',
-										bottom: '-130%',
-										width: 320,
+										bottom: '-118%',
+										width: 350,
 										height: 100,
 										fontSize: 40,
 										fontWeight: 700,
 										opacity: nameOpacity,
 										filter: `blur(${nameUnblur}px)`,
-										color: 'black',
 									}}
 								>
 									{speaker.name}

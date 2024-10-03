@@ -39,8 +39,9 @@ export const TalkTitle: React.FC<{
 				lineHeight: '2.2',
 				letterSpacing: '0.2rem',
 				textAlign: 'center',
-				color: '#FFF8F0',//'#1B2C2C',
-				textShadow: '-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
+				color: '#FFF8F0', //'#1B2C2C',
+				textShadow:
+					'-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
 				textWrap: 'balance',
 				position: 'absolute',
 				minHeight: 150,

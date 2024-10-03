@@ -2,9 +2,10 @@ import {loadFont} from '@remotion/google-fonts/Creepster';
 import {
 	AbsoluteFill,
 	interpolate,
-	spring, staticFile,
+	spring,
+	staticFile,
 	useCurrentFrame,
-	useVideoConfig
+	useVideoConfig,
 } from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
@@ -59,10 +60,10 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 				return (
 					<div
 						key={speaker.name}
-						 style={{
-						 	display: 'flex',
-						 	flexDirection: 'column',
-						 }}
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+						}}
 					>
 						<AvatarWithCaption
 							avatarPictureUrl={speaker.picture}

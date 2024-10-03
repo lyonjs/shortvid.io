@@ -50,12 +50,13 @@ export const Details: React.FC<{
 				fontSize: '20px',
 				letterSpacing: '0.3rem',
 				color: '#FFF8F0',
-				textShadow: '-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
+				textShadow:
+					'-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
 				transform: 'translateX(-50%)',
 				filter: `blur(${textUnblur}px)`,
 			}}
 			iconStyle={{
-				display: 'none'
+				display: 'none',
 			}}
 		/>
 	);

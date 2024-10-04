@@ -1,9 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {
-	AbsoluteFill,
-	Sequence,
-} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
 import {z} from 'zod';
 
 import {ShowcaseSchema} from '../../showcases.types';

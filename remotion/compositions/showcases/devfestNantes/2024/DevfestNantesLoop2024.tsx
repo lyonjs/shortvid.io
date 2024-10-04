@@ -1,6 +1,12 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {AbsoluteFill, Easing, interpolate, Sequence, useCurrentFrame} from 'remotion';
+import {
+	AbsoluteFill,
+	Easing,
+	interpolate,
+	Sequence,
+	useCurrentFrame,
+} from 'remotion';
 import {z} from 'zod';
 
 import {ShowcaseSchema} from '../../showcases.types';
@@ -36,7 +42,8 @@ export const DevfestNantesLoop2024 = ({
 				overflow: 'hidden',
 				fontFamily,
 				textTransform: 'uppercase',
-				boxShadow: 'inset 0 0px 200px rgba(0, 0, 0, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.5)',
+				boxShadow:
+					'inset 0 0px 200px rgba(0, 0, 0, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.5)',
 			}}
 		>
 			<Sequence from={30}>
@@ -62,9 +69,9 @@ export const DevfestNantesLoop2024 = ({
 					<Details date={date} time={time} location={location} />
 				</Sequence>
 			</div>
-				<Sequence>
-					<Logo />
-				</Sequence>
+			<Sequence>
+				<Logo />
+			</Sequence>
 		</AbsoluteFill>
-);
+	);
 };

@@ -4,7 +4,6 @@ export const Text: React.FC<{
 	children: ReactNode;
 	style?: React.CSSProperties;
 }> = ({children, style}) => {
-
 	return (
 		<span
 			style={{

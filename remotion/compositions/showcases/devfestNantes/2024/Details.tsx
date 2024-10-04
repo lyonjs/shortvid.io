@@ -1,9 +1,11 @@
 import {loadFont} from '@remotion/google-fonts/Creepster';
+import {loadLocalFont} from '../../../../../src/app/utils/loadFont';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {TalkDetails} from '../../../../design/molecules/TalkDetails';
 
 const {fontFamily} = loadFont();
+loadLocalFont('HigherJump', 'font/HigherJump.ttf', 'truetype');
 
 export const Details: React.FC<{
 	date: string;
@@ -40,19 +42,21 @@ export const Details: React.FC<{
 				location,
 			}}
 			style={{
-				fontFamily,
+				fontFamily: 'HigherJump',
 				opacity,
 				bottom: `${drop}px`,
 				left: '50%',
-				width: isTotemDisplayMode ? '96%' : '80%',
-				fontSize: '45px',
+				width: isTotemDisplayMode ? '96%' : '90%',
+				fontSize: '20px',
 				letterSpacing: '0.3rem',
-				textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+				color: '#FFF8F0',
+				textShadow:
+					'-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
 				transform: 'translateX(-50%)',
 				filter: `blur(${textUnblur}px)`,
 			}}
 			iconStyle={{
-				display: 'none'
+				display: 'none',
 			}}
 		/>
 	);

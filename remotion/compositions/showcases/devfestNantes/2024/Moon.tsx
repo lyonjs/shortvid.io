@@ -4,7 +4,7 @@ import {ComponentDisplayMode} from '../types/types';
 
 export const Moon = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const frame = useCurrentFrame();
-	const logoWidth = 350;
+	const logoWidth = 200;
 
 	const fall = interpolate(
 		frame,
@@ -38,7 +38,7 @@ export const Moon = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 				right: moveRight,
 				top: fall,
 				transform: `rotate(${rotate}deg)`,
-				opacity: '0.9',
+				opacity: '0.6',
 				filter:
 					'drop-shadow(0 0 5px #FDC)drop-shadow(0 0 15px #FDC)drop-shadow(0 0 30px #FFD)drop-shadow(0 0 40px #FFD)drop-shadow(0 0 50px #FFD)',
 			}}

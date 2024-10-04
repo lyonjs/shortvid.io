@@ -23,7 +23,9 @@ export const Trees = () => {
 	return (
 		<>
 			<Img
-				src={staticFile('/images/showcases/devfestNantes/2024/backgroundTrees.png')}
+				src={staticFile(
+					'/images/showcases/devfestNantes/2024/backgroundTrees.png',
+				)}
 				width={backgroundTreesWidth}
 				height="70%"
 				style={{

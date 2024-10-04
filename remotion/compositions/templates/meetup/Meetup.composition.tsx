@@ -1,7 +1,8 @@
 import React from 'react';
-import {Composition, Folder} from 'remotion';
+import {Composition, Folder, Still} from 'remotion';
 
 import {Meetup, MeetupSchema} from './Meetup';
+import {PosterLocation, PosterLocationSchema} from './PosterLocation';
 import {Register} from './Register';
 
 export const MeetupComposition: React.FC = () => {
@@ -32,6 +33,20 @@ export const MeetupComposition: React.FC = () => {
 				fps={30}
 				durationInFrames={120}
 				defaultProps={{}}
+			/>
+			<Still
+				id="PosterLocation"
+				height={1200}
+				width={1500}
+				schema={PosterLocationSchema}
+				component={PosterLocation}
+				defaultProps={{
+					title: 'LyonJS #95 - Transpilation 🧬 et Atomic Deployment ⚛️',
+					message: "Sonner à l'inferphone",
+					eventLogo:
+						'https://github.com/lyonjs/shortvid.io/blob/main/public/images/showcases/lyonjs/lyonjsSquaredLogo.png?raw=true',
+					arrow: '⬅',
+				}}
 			/>
 		</Folder>
 	);

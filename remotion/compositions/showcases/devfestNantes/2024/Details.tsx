@@ -1,10 +1,8 @@
-import {loadFont} from '@remotion/google-fonts/Creepster';
-import {loadLocalFont} from '../../../../../src/app/utils/loadFont';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
+import {loadLocalFont} from '../../../../../src/app/utils/loadFont';
 import {TalkDetails} from '../../../../design/molecules/TalkDetails';
 
-const {fontFamily} = loadFont();
 loadLocalFont('HigherJump', 'font/HigherJump.ttf', 'truetype');
 
 export const Details: React.FC<{
@@ -19,7 +17,7 @@ export const Details: React.FC<{
 	const drop = spring({
 		frame: frame,
 		from: -40,
-		to: isTotemDisplayMode ? 200 : 20,
+		to: isTotemDisplayMode ? 180 : 20,
 		fps,
 		durationInFrames: 40,
 	});
@@ -44,10 +42,11 @@ export const Details: React.FC<{
 			style={{
 				fontFamily: 'HigherJump',
 				opacity,
+				paddingLeft: isTotemDisplayMode ? '10px' : 0,
 				bottom: `${drop}px`,
 				left: '50%',
 				width: isTotemDisplayMode ? '96%' : '90%',
-				fontSize: '20px',
+				fontSize: isTotemDisplayMode ? '15px' : '20px',
 				letterSpacing: '0.3rem',
 				color: '#FFF8F0',
 				textShadow:

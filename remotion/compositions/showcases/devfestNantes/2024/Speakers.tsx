@@ -3,7 +3,6 @@ import {
 	AbsoluteFill,
 	interpolate,
 	spring,
-	staticFile,
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
@@ -14,7 +13,10 @@ import {Speaker} from '../../../../types/defaultProps.types';
 
 const {fontFamily} = loadFont();
 
-export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
+export const Speakers: React.FC<{
+	speakers: Speaker[];
+	isTotemDisplayMode?: boolean;
+}> = ({speakers, isTotemDisplayMode}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -22,15 +24,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 		frame: frame,
 		fps,
 		from: -1000,
-		to: -320,
-		durationInFrames: 60,
-	});
-
-	const backgroundPictureUp = spring({
-		frame: frame,
-		fps,
-		from: -480,
-		to: 160,
+		to: isTotemDisplayMode ? -100 : -320,
 		durationInFrames: 60,
 	});
 
@@ -53,7 +47,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 				display: 'flex',
 				flexDirection: 'row',
 				justifyContent: 'center',
-				gap: 100,
+				gap: isTotemDisplayMode ? 0 : 100,
 			}}
 		>
 			{speakers.map((speaker) => {
@@ -87,7 +81,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 											'-2px 0 #FFF8F0, 0 2px #FFF8F0, 2px 0 #FFF8F0, 0 -2px #FFF8F0',
 										letterSpacing: '0.1rem',
 										position: 'relative',
-										bottom: '-118%',
+										bottom: isTotemDisplayMode ? '-50%' : '-118%',
 										width: 350,
 										height: 100,
 										fontSize: 40,

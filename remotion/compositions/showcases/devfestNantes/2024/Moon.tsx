@@ -18,7 +18,7 @@ export const Moon = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const moveRight = interpolate(
 		frame,
 		[0, 250],
-		[100, isTotemDisplayMode ? 1300 : -200],
+		[100, isTotemDisplayMode ? -400 : -200],
 		{
 			extrapolateRight: 'clamp',
 		},

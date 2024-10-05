@@ -1,10 +1,8 @@
-import {loadFont} from '@remotion/google-fonts/Creepster';
-import {loadLocalFont} from '../../../../../src/app/utils/loadFont';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
+import {loadLocalFont} from '../../../../../src/app/utils/loadFont';
 import {Title} from '../../../../design/atoms/Title';
 
-const {fontFamily} = loadFont();
 loadLocalFont('HigherJump', 'font/HigherJump.ttf', 'truetype');
 
 export const TalkTitle: React.FC<{
@@ -33,19 +31,20 @@ export const TalkTitle: React.FC<{
 			style={{
 				fontFamily: 'HigherJump',
 				width: '95%',
-				left: '50%',
-				transform: 'translateX(-50%)',
 				fontSize: '35px',
 				lineHeight: '2.2',
 				letterSpacing: '0.2rem',
 				textAlign: 'center',
-				color: '#FFF8F0', //'#1B2C2C',
+				color: '#FFF8F0',
 				textShadow:
 					'-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
 				textWrap: 'balance',
 				position: 'absolute',
+				top: isTotemDisplayMode ? '50%' : 'unset',
+				left: '50%',
+				transform: isTotemDisplayMode ? 'translate(-50%, -50%)' : 'translateX(-50%)',
 				minHeight: 150,
-				bottom: isTotemDisplayMode ? '600px' : '450px',
+				bottom: isTotemDisplayMode ? '500px' : '450px',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
 				WebkitLineClamp: isTotemDisplayMode ? '10' : '2',

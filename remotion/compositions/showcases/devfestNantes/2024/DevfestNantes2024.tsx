@@ -3,7 +3,7 @@ import {loadFont} from '@remotion/google-fonts/CrimsonText';
 import {AbsoluteFill, Sequence} from 'remotion';
 import {z} from 'zod';
 
-import {ShowcaseSchema} from '../../showcases.types';
+import {ShowcaseDevfestNantes2024Schema} from '../types/types';
 
 import {Details} from './Details';
 import {GhostBackground} from './GhostBackground';
@@ -20,7 +20,8 @@ export const DevfestNantes2024 = ({
 	date,
 	time,
 	location,
-}: z.infer<typeof ShowcaseSchema>) => {
+	titleFontSize,
+}: z.infer<typeof ShowcaseDevfestNantes2024Schema>) => {
 	return (
 		<AbsoluteFill
 			style={{
@@ -43,7 +44,9 @@ export const DevfestNantes2024 = ({
 			</Sequence>
 			<Sequence name="Speakers" from={30}>
 				<Speakers speakers={speakers} />
-				<TalkTitle title={title} />
+				<TalkTitle title={title} style={{
+					fontSize: titleFontSize ?? 35,
+				}} />
 			</Sequence>
 			<Sequence from={70}>
 				<Details date={date} time={time} location={location} />

@@ -11,22 +11,27 @@ import {z} from 'zod';
 
 import {ShowcaseDevfestNantes2024Schema} from '../types/types';
 
+import {Details} from './Details';
 import {GhostBackground} from './GhostBackground';
 import {Logo} from './Logo';
 import {Moon} from './Moon';
-import {Screens} from './Screens';
+import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 import {Trees} from './Trees';
 
 const {fontFamily} = loadFont();
 
-export const DevfestNantesPhrase2024 = ({
+export const DevfestNantesLoopTotem2024 = ({
 	title,
+	speakers,
+	date,
+	time,
+	location,
 	titleFontSize,
 }: z.infer<typeof ShowcaseDevfestNantes2024Schema>) => {
 	const frame = useCurrentFrame();
 
-	const SlideDown = interpolate(frame, [300, 330], [0, 650], {
+	const SlideDown = interpolate(frame, [300, 330], [0, 1300], {
 		extrapolateRight: 'clamp',
 		extrapolateLeft: 'clamp',
 		easing: Easing.bezier(0.51, -0.75, 0.99, 0.75),
@@ -43,17 +48,17 @@ export const DevfestNantesPhrase2024 = ({
 					'inset 0 0px 200px rgba(0, 0, 0, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.5)',
 			}}
 		>
+			<Sequence>
+				<Logo isTotemDisplayMode />
+			</Sequence>
 			<Sequence from={30}>
 				<GhostBackground />
 			</Sequence>
 			<Sequence from={30}>
-				<Screens />
+				<Trees />
 			</Sequence>
 			<Sequence from={110}>
-				<Moon />
-			</Sequence>
-			<Sequence from={30}>
-				<Trees />
+				<Moon isTotemDisplayMode />
 			</Sequence>
 			<div
 				style={{
@@ -62,19 +67,24 @@ export const DevfestNantesPhrase2024 = ({
 				}}
 			>
 				<Sequence name="Speakers" from={30}>
+					<Speakers speakers={speakers} isTotemDisplayMode />
 					<TalkTitle
 						title={title}
 						style={{
-							fontSize: titleFontSize ?? 45,
-							bottom: '40%',
-							WebkitLineClamp: '10',
+							fontSize: titleFontSize ?? 35,
 						}}
+						isTotemDisplayMode
+					/>
+				</Sequence>
+				<Sequence from={70}>
+					<Details
+						date={date}
+						time={time}
+						location={location}
+						isTotemDisplayMode
 					/>
 				</Sequence>
 			</div>
-			<Sequence>
-				<Logo />
-			</Sequence>
 		</AbsoluteFill>
 	);
 };

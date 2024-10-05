@@ -7,6 +7,8 @@ import {ShowcaseSchema} from '../showcases.types';
 import {DevfestNantes2024} from './2024/DevfestNantes2024';
 import {DevfestNantesPhrase2024} from './2024/DevfestNantes2024Phrase';
 import {DevfestNantesLoop2024} from './2024/DevfestNantesLoop2024';
+import {DevfestNantesLoopTotem2024} from './2024/DevfestNantesLoopTotem2024';
+import {ShowcaseDevfestNantes2024Schema} from './types/types';
 import {DevfestNantes} from './DevfestNantes';
 import {DevfestNantesLoop} from './DevfestNantesLoop';
 import {DevfestNantesLoopTotem} from './DevfestNantesLoopTotem';
@@ -64,7 +66,7 @@ export const DevfestNantesComposition = () => {
 					fps={30}
 					width={1280}
 					height={720}
-					schema={ShowcaseSchema}
+					schema={ShowcaseDevfestNantes2024Schema}
 					defaultProps={defaultTalkValues}
 				/>
 				<Composition
@@ -74,7 +76,17 @@ export const DevfestNantesComposition = () => {
 					fps={30}
 					width={1280}
 					height={720}
-					schema={ShowcaseSchema}
+					schema={ShowcaseDevfestNantes2024Schema}
+					defaultProps={defaultTalkValues}
+				/>
+				<Composition
+					id="DevfestNantesTalkLoopTotem2024"
+					component={DevfestNantesLoopTotem2024}
+					durationInFrames={350}
+					fps={30}
+					width={720}
+					height={1280}
+					schema={ShowcaseDevfestNantes2024Schema}
 					defaultProps={defaultTalkValues}
 				/>
 				<Composition
@@ -84,7 +96,7 @@ export const DevfestNantesComposition = () => {
 					fps={30}
 					width={1280}
 					height={720}
-					schema={ShowcaseSchema}
+					schema={ShowcaseDevfestNantes2024Schema}
 					defaultProps={defaultTalkValues}
 				/>
 			</Folder>

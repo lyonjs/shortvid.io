@@ -75,7 +75,7 @@ export const DevfestNantesLoopTotem = ({
 			>
 				<Sequence name="Speakers" from={30}>
 					<Speakers speakers={speakers} />
-					<TalkTitle title={title} style={{}} isTotemDisplayMode />
+					<TalkTitle title={title} isTotemDisplayMode />
 				</Sequence>
 				<Sequence from={70}>
 					<Details

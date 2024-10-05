@@ -6,11 +6,7 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-import {ComponentDisplayMode} from '../types/types';
-
-export const GhostBackground = ({
-	isTotemDisplayMode = false,
-}: ComponentDisplayMode) => {
+export const GhostBackground = () => {
 	const {durationInFrames} = useVideoConfig();
 	const frame = useCurrentFrame();
 	const logoWidth = 350;

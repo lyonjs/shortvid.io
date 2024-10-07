@@ -5,32 +5,33 @@ import {
 	Easing,
 	interpolate,
 	Sequence,
-	staticFile,
 	useCurrentFrame,
 } from 'remotion';
 import {z} from 'zod';
 
-import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
-import {ShowcaseSchema} from '../showcases.types';
+import {ShowcaseDevfestNantes2024Schema} from '../types/types';
 
-import {Android} from './Android';
 import {Details} from './Details';
-import {Dino} from './Dino';
+import {GhostBackground} from './GhostBackground';
 import {Logo} from './Logo';
+import {Moon} from './Moon';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
+import {Trees} from './Trees';
 
 const {fontFamily} = loadFont();
-export const DevfestNantesLoop = ({
+
+export const DevfestNantesLoopTotem2024 = ({
 	title,
 	speakers,
 	date,
 	time,
 	location,
-}: z.infer<typeof ShowcaseSchema>) => {
+	titleFontSize,
+}: z.infer<typeof ShowcaseDevfestNantes2024Schema>) => {
 	const frame = useCurrentFrame();
 
-	const SlideDown = interpolate(frame, [300, 330], [0, 650], {
+	const SlideDown = interpolate(frame, [300, 330], [0, 1300], {
 		extrapolateRight: 'clamp',
 		extrapolateLeft: 'clamp',
 		easing: Easing.bezier(0.51, -0.75, 0.99, 0.75),
@@ -39,32 +40,25 @@ export const DevfestNantesLoop = ({
 	return (
 		<AbsoluteFill
 			style={{
-				backgroundColor: 'white',
+				backgroundColor: '#e4595c',
 				overflow: 'hidden',
 				fontFamily,
 				textTransform: 'uppercase',
+				boxShadow:
+					'inset 0 0px 200px rgba(0, 0, 0, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.5)',
 			}}
 		>
 			<Sequence>
-				<BackgroundFiller
-					imageUrl={staticFile(
-						'/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png',
-					)}
-					style={{
-						position: 'absolute',
-						width: '100%',
-						height: '100%',
-					}}
-				/>
+				<Logo isTotemDisplayMode />
 			</Sequence>
 			<Sequence from={30}>
-				<Dino />
+				<GhostBackground />
+			</Sequence>
+			<Sequence from={30}>
+				<Trees />
 			</Sequence>
 			<Sequence from={110}>
-				<Android />
-			</Sequence>
-			<Sequence>
-				<Logo />
+				<Moon isTotemDisplayMode />
 			</Sequence>
 			<div
 				style={{
@@ -73,11 +67,22 @@ export const DevfestNantesLoop = ({
 				}}
 			>
 				<Sequence name="Speakers" from={30}>
-					<Speakers speakers={speakers} />
-					<TalkTitle title={title} style={{}} />
+					<Speakers speakers={speakers} isTotemDisplayMode />
+					<TalkTitle
+						title={title}
+						style={{
+							fontSize: titleFontSize ?? 35,
+						}}
+						isTotemDisplayMode
+					/>
 				</Sequence>
 				<Sequence from={70}>
-					<Details date={date} time={time} location={location} />
+					<Details
+						date={date}
+						time={time}
+						location={location}
+						isTotemDisplayMode
+					/>
 				</Sequence>
 			</div>
 		</AbsoluteFill>

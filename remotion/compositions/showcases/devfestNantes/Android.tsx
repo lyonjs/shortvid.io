@@ -21,7 +21,7 @@ export const Android = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 
 	return (
 		<Img
-			src={staticFile('/images/showcases/devfestNantes/android.png')}
+			src={staticFile('/images/showcases/devfestNantes/2023/android.png')}
 			width={logoWidth}
 			height="auto"
 			style={{

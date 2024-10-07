@@ -49,7 +49,7 @@ export const DevfestNantesLoopTotem = ({
 			<Sequence>
 				<BackgroundFiller
 					imageUrl={staticFile(
-						'/images/showcases/devfestNantes/fond-visuel-etoiles.png',
+						'/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png',
 					)}
 					style={{
 						position: 'absolute',
@@ -75,7 +75,7 @@ export const DevfestNantesLoopTotem = ({
 			>
 				<Sequence name="Speakers" from={30}>
 					<Speakers speakers={speakers} />
-					<TalkTitle title={title} style={{}} isTotemDisplayMode />
+					<TalkTitle title={title} isTotemDisplayMode />
 				</Sequence>
 				<Sequence from={70}>
 					<Details

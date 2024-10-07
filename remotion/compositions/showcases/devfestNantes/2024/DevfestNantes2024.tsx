@@ -44,9 +44,12 @@ export const DevfestNantes2024 = ({
 			</Sequence>
 			<Sequence name="Speakers" from={30}>
 				<Speakers speakers={speakers} />
-				<TalkTitle title={title} style={{
-					fontSize: titleFontSize ?? 35,
-				}} />
+				<TalkTitle
+					title={title}
+					style={{
+						fontSize: titleFontSize ?? 35,
+					}}
+				/>
 			</Sequence>
 			<Sequence from={70}>
 				<Details date={date} time={time} location={location} />

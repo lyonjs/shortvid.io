@@ -42,7 +42,9 @@ export const TalkTitle: React.FC<{
 				position: 'absolute',
 				top: isTotemDisplayMode ? '50%' : 'unset',
 				left: '50%',
-				transform: isTotemDisplayMode ? 'translate(-50%, -50%)' : 'translateX(-50%)',
+				transform: isTotemDisplayMode
+					? 'translate(-50%, -50%)'
+					: 'translateX(-50%)',
 				minHeight: 150,
 				bottom: isTotemDisplayMode ? '500px' : '450px',
 				opacity: titleOpacity,

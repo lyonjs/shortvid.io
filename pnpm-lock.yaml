@@ -119,8 +119,8 @@ devDependencies:
     specifier: 5.14.9
     version: 5.14.9
   '@types/web':
-    specifier: 0.0.170
-    version: 0.0.170
+    specifier: 0.0.171
+    version: 0.0.171
   '@typescript-eslint/eslint-plugin':
     specifier: 7.18.0
     version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@8.57.1)(typescript@5.6.3)
@@ -1712,8 +1712,8 @@ packages:
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
     dev: true
 
-  /@types/web@0.0.170:
-    resolution: {integrity: sha512-1XVmpB0qlqRtVelEBAYmmyKyE1msKHq2L10084NJMZnZdcqfLnGyaXrD65OUw8OcqjR4DF3YPeiop6IZWJxlpw==}
+  /@types/web@0.0.171:
+    resolution: {integrity: sha512-3Ol3wUjl2LPdFEZkgGjQiX0OlfuYCxr79JWVFcD5YJWBYd3jqHgKYM7t9LayxRZhyKT/++z5r8sX6VWzMn1Nrg==}
     dev: true
 
   /@types/yargs-parser@21.0.3:

@@ -5,10 +5,12 @@ import {
 	Easing,
 	interpolate,
 	Sequence,
+	staticFile,
 	useCurrentFrame,
 } from 'remotion';
 import {z} from 'zod';
 
+import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
 import {ShowcaseDevfestNantes2024Schema} from '../types/types';
 
 import {Details} from './Details';
@@ -40,14 +42,21 @@ export const DevfestNantesLoopTotem2024 = ({
 	return (
 		<AbsoluteFill
 			style={{
-				backgroundColor: '#e4595c',
 				overflow: 'hidden',
 				fontFamily,
 				textTransform: 'uppercase',
-				boxShadow:
-					'inset 0 0px 200px rgba(0, 0, 0, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.5)',
 			}}
 		>
+			<Sequence>
+				<BackgroundFiller
+					imageUrl={staticFile(
+						'/images/showcases/devfestNantes/2024/background-filler-totem.png',
+					)}
+					style={{
+						transform: 'scale(1)',
+					}}
+				/>
+			</Sequence>
 			<Sequence>
 				<Logo isTotemDisplayMode />
 			</Sequence>

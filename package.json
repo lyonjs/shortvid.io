@@ -51,7 +51,7 @@
 		"@iconify/react": "^5.0.0",
 		"@remotion/eslint-plugin": "4.0.221",
 		"@testing-library/dom": "10.4.0",
-		"@testing-library/jest-dom": "6.5.0",
+		"@testing-library/jest-dom": "6.6.1",
 		"@testing-library/react": "16.0.1",
 		"@testing-library/user-event": "14.5.2",
 		"@types/lodash": "4.17.10",

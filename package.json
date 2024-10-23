@@ -30,7 +30,7 @@
 		"@remotion/renderer": "4.0.221",
 		"@remotion/shapes": "4.0.221",
 		"@remotion/zod-types": "4.0.221",
-		"@types/jest": "29.5.13",
+		"@types/jest": "29.5.14",
 		"@vercel/analytics": "^1.0.0",
 		"body-parser": "1.20.3",
 		"cors": "2.8.5",

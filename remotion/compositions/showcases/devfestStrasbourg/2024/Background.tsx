@@ -1,11 +1,12 @@
 import React from 'react';
 import {
 	Easing,
-	Img, interpolate,
+	Img,
+	interpolate,
 	spring,
 	staticFile,
 	useCurrentFrame,
-	useVideoConfig
+	useVideoConfig,
 } from 'remotion';
 
 export const Background = () => {
@@ -33,7 +34,9 @@ export const Background = () => {
 	return (
 		<div>
 			<Img
-				src={staticFile('/images/showcases/devfestStrasbourg/2024/background.jpg')}
+				src={staticFile(
+					'/images/showcases/devfestStrasbourg/2024/background.jpg',
+				)}
 				style={{
 					opacity,
 					position: 'absolute',

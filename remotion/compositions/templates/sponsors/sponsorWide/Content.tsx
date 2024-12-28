@@ -12,9 +12,6 @@ export const Content = ({
 	const appear = interpolate(frame, [20, 45], [0, 1], {
 		extrapolateRight: 'clamp',
 	});
-	const rotation = interpolate(frame, [30, 40], [270, 360], {
-		extrapolateRight: 'clamp',
-	});
 
 	return (
 		<div
@@ -33,8 +30,6 @@ export const Content = ({
 					height: '400px',
 					backgroundColor: logoBackground,
 					borderRadius: '16px',
-					transformStyle: 'preserve-3d',
-					transform: `rotateY(${rotation}deg)`,
 					padding: '30px 40px',
 				}}
 			>

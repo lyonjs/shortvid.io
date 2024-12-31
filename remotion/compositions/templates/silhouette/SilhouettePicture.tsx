@@ -1,11 +1,9 @@
 import React from 'react';
 import {Easing, Img, interpolate, useCurrentFrame} from 'remotion';
 
-import {Side} from './Silhouette.type';
-
 const DURATION = 20;
 export const SilhouettePicture: React.FC<{
-	side?: Side;
+	side?: 'left' | 'right';
 	silhouetteUrl: string;
 	dropShadow: boolean;
 }> = ({side, silhouetteUrl, dropShadow}) => {

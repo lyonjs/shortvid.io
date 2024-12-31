@@ -17,7 +17,7 @@ import {VolcampComposition} from './volcamp/Volcamp.composition';
 
 export const ShowcasesComposition: React.FC = () => {
 	return (
-		<Folder name="Showcases">
+		<Folder name="Conferences">
 			<LyonJSComposition />
 			<AlpesCraftComposition />
 			<TouraineTechComposition />

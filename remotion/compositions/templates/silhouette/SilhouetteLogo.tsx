@@ -1,12 +1,10 @@
 import React from 'react';
 import {Easing, Img, interpolate, useCurrentFrame} from 'remotion';
 
-import {Side} from './Silhouette.type';
-
-export const SilhouetteLogo: React.FC<{logoUrl: string; side: Side}> = ({
-	logoUrl,
-	side,
-}) => {
+export const SilhouetteLogo: React.FC<{
+	logoUrl: string;
+	side: 'left' | 'right';
+}> = ({logoUrl, side}) => {
 	const frame = useCurrentFrame();
 
 	const opacity = interpolate(frame, [0, 30], [0, 1], {

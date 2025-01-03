@@ -21,7 +21,6 @@ export const LightRight: React.FC = () => {
 						<path id="&lt;Path&gt;" className="s2236" d="m2166.1 659.4h13.3v-2.1h-13.3z" />
 					</g>
 					<path id="&lt;Path&gt;" className="s2237" d="m2179.9 642.5h38.3v-4.2h-38.3z" />
-					{/*<path id="&lt;Path&gt;" className="s2237" d="m2186.5 648.8h6.6v-16.8h-6.6z" />*/}
 				</g>
 				<path id="shadow-spot" className="s2238" style={{filter: 'blur(15px)'}}
 							d="m2276 643.2c0-25.7-20.9-46.6-46.6-46.6-25.7 0-46.5 20.9-46.5 46.6 0 25.7 20.8 46.5 46.5 46.5 25.7 0 46.6-20.8 46.6-46.5z" />

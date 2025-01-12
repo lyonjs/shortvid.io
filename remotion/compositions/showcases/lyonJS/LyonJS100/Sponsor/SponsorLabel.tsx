@@ -23,7 +23,7 @@ export const SponsorLabel = (props: {
 						fontSize: props.labelFontSize ?? 40,
 						fontWeight: 'bolder',
 						textAlign: 'center',
-						textWrap: 'balance'
+						textWrap: 'balance',
 					}}
 				>
 					{props.label}

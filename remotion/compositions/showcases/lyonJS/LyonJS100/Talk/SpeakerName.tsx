@@ -24,13 +24,13 @@ export const SpeakerName = (props: {
 				fontSize: 80,
 				fontWeight: 900,
 				transform: `scale(${props.scaleUpAnimation})`,
-				opacity: props.opacityAnimation
+				opacity: props.opacityAnimation,
 			}}
 		>
 			<span
 				style={{
 					fontSize: 100,
-					color: 'black'
+					color: 'black',
 				}}
 			>
 				{props.firstNameContent}
@@ -39,7 +39,7 @@ export const SpeakerName = (props: {
 				style={{
 					color: '#EEDA4E',
 					paintOrder: 'stroke fill',
-					WebkitTextStroke: '10px black'
+					WebkitTextStroke: '10px black',
 				}}
 			>
 				{props.lastNameContent}

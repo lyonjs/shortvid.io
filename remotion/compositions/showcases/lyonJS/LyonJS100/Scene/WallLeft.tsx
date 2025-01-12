@@ -5,7 +5,7 @@ export const WallLeft: React.FC = () => {
 
 	const lightWall = interpolate(
 		frame,
-		[0, 30, 31, 60, 61, 70, 71, 80, 81, 90, 91 ],
+		[0, 30, 31, 60, 61, 70, 71, 80, 81, 90, 91],
 		[0.07, 0.07, 0.15, 0.15, 0.18, 0.18, 0.22, 0.22, 0.26, 0.26, 0.3],
 		{
 			extrapolateLeft: 'clamp',

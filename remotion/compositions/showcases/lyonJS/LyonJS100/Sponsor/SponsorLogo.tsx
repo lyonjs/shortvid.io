@@ -18,7 +18,7 @@ export const SponsorLogo = (props: {
 						transform: `scale(${props.scaleUpAnimation})`,
 						margin: 'auto',
 						width: props.sponsorLogoWidth ?? 900,
-						zIndex: 100
+						zIndex: 100,
 					}}
 				/>
 			) : null}

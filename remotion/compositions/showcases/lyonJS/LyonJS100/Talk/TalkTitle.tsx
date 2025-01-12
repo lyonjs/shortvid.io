@@ -15,7 +15,7 @@ export const TalkTitle = (props: {
 				maxWidth: 660,
 				position: 'absolute',
 				bottom: 40,
-				left: 700
+				left: 700,
 			}}
 		>
 			<p
@@ -25,7 +25,7 @@ export const TalkTitle = (props: {
 					fontSize: props.titleSize ?? 60,
 					fontWeight: 'bold',
 					color: 'black',
-					textWrap: 'balance'
+					textWrap: 'balance',
 				}}
 			>
 				{props.talkTitle}

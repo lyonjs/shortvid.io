@@ -6,7 +6,6 @@ import {SponsorLabel} from './Sponsor/SponsorLabel';
 import {SponsorLogo} from './Sponsor/SponsorLogo';
 import {AnimatedScene} from './AnimatedScene';
 
-
 export const LyonJS100Sponsor = z.object({
 	label: z.string().optional(),
 	labelFontSize: z.number().optional(),

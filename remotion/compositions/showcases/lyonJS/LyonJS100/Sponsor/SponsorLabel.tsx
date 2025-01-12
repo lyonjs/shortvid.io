@@ -4,14 +4,15 @@ import {loadFont} from '@remotion/google-fonts/Arvo';
 const {fontFamily} = loadFont();
 
 export const SponsorLabel = (props: {
-	label: string | undefined;
+	labelSponsor: string | undefined;
+	labeSponsorColor: string | undefined;
 	opacityAnimation: number;
 	scaleUpAnimation: number;
 	labelFontSize: number | undefined;
 }) => {
 	return (
 		<>
-			{props.label ? (
+			{props.labelSponsor ? (
 				<p
 					style={{
 						fontFamily,
@@ -26,7 +27,9 @@ export const SponsorLabel = (props: {
 						textWrap: 'balance',
 					}}
 				>
-					{props.label}
+					Sponsor <span style={{
+						color: props.labeSponsorColor ?? '#222425',
+				}}>{props.labelSponsor}</span>
 				</p>
 			) : null}
 		</>

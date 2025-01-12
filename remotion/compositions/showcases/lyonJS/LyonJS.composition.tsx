@@ -48,7 +48,8 @@ export const LyonJSComposition: React.FC = () => {
 					component={Sponsor}
 					schema={LyonJS100Sponsor}
 					defaultProps={{
-						label: 'Sponsor Gold',
+						labelSponsor: 'Gold',
+						labeSponsorColor: '#efdb50',
 						labelFontSize: 60,
 						sponsorLogoUrl:
 							'https://www.remotion.dev/assets/images/shortvid-logo-648b24f40aea2fb96bf6e2404c3712d7.png',

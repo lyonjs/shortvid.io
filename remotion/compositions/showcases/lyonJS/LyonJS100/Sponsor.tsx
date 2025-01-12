@@ -1,4 +1,5 @@
 import React from 'react';
+import {zColor} from '@remotion/zod-types';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {z} from 'zod';
 
@@ -7,14 +8,16 @@ import {SponsorLogo} from './Sponsor/SponsorLogo';
 import {AnimatedScene} from './AnimatedScene';
 
 export const LyonJS100Sponsor = z.object({
-	label: z.string().optional(),
+	labelSponsor: z.string().optional(),
+	labeSponsorColor: zColor().optional(),
 	labelFontSize: z.number().optional(),
 	sponsorLogoUrl: z.string().optional(),
 	sponsorLogoWidth: z.number().optional(),
 });
 
 export const Sponsor: React.FC<z.infer<typeof LyonJS100Sponsor>> = ({
-	label,
+	labelSponsor,
+	labeSponsorColor,
 	labelFontSize,
 	sponsorLogoUrl,
 	sponsorLogoWidth,
@@ -48,7 +51,8 @@ export const Sponsor: React.FC<z.infer<typeof LyonJS100Sponsor>> = ({
 				sponsorLogoWidth={sponsorLogoWidth}
 			/>
 			<SponsorLabel
-				label={label}
+				labelSponsor={labelSponsor}
+				labeSponsorColor={labeSponsorColor}
 				opacityAnimation={opacityAnimation}
 				scaleUpAnimation={scaleUpAnimation}
 				labelFontSize={labelFontSize}

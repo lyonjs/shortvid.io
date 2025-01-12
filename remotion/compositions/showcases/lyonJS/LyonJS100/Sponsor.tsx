@@ -1,19 +1,11 @@
 import React from 'react';
-import {loadFont} from '@remotion/google-fonts/Arvo';
-import {
-	Easing,
-	Img,
-	interpolate,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {z} from 'zod';
 
+import {SponsorLabel} from './Sponsor/SponsorLabel';
+import {SponsorLogo} from './Sponsor/SponsorLogo';
 import {AnimatedScene} from './AnimatedScene';
 
-const {fontFamily} = loadFont();
 
 export const LyonJS100Sponsor = z.object({
 	label: z.string().optional(),
@@ -32,7 +24,7 @@ export const Sponsor: React.FC<z.infer<typeof LyonJS100Sponsor>> = ({
 	const frame = useCurrentFrame();
 	const startFrame = 170;
 
-	const scaleUpLogo = spring({
+	const scaleUpAnimation = spring({
 		frame: frame - startFrame,
 		from: 0,
 		to: 1,
@@ -40,7 +32,7 @@ export const Sponsor: React.FC<z.infer<typeof LyonJS100Sponsor>> = ({
 		durationInFrames: 80,
 	});
 
-	const opacityUp = spring({
+	const opacityAnimation = spring({
 		frame: frame - startFrame,
 		from: 0,
 		to: 1,
@@ -50,37 +42,18 @@ export const Sponsor: React.FC<z.infer<typeof LyonJS100Sponsor>> = ({
 
 	return (
 		<AnimatedScene>
-			{sponsorLogoUrl ? (
-				<Img
-					src={sponsorLogoUrl}
-					alt="Sponsor Logo"
-					style={{
-						opacity: opacityUp,
-						transform: `scale(${scaleUpLogo})`,
-						margin: 'auto',
-						width: sponsorLogoWidth ?? 900,
-						zIndex: 100,
-					}}
-				/>
-			) : null}
-			{label ? (
-				<p
-					style={{
-						fontFamily,
-						opacity: opacityUp,
-						transform: `scale(${scaleUpLogo})`,
-						color: '#222425',
-						marginTop: 20,
-						marginBottom: 80,
-						fontSize: labelFontSize ?? 40,
-						fontWeight: 'bolder',
-						textAlign: 'center',
-						textWrap: 'balance',
-					}}
-				>
-					{label}
-				</p>
-			) : null}
+			<SponsorLogo
+				sponsorLogoUrl={sponsorLogoUrl}
+				opacityAnimation={opacityAnimation}
+				scaleUpAnimation={scaleUpAnimation}
+				sponsorLogoWidth={sponsorLogoWidth}
+			/>
+			<SponsorLabel
+				label={label}
+				opacityAnimation={opacityAnimation}
+				scaleUpAnimation={scaleUpAnimation}
+				labelFontSize={labelFontSize}
+			/>
 		</AnimatedScene>
 	);
 };

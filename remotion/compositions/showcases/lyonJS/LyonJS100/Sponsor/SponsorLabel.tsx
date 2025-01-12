@@ -27,9 +27,14 @@ export const SponsorLabel = (props: {
 						textWrap: 'balance',
 					}}
 				>
-					Sponsor <span style={{
-						color: props.labeSponsorColor ?? '#222425',
-				}}>{props.labelSponsor}</span>
+					Sponsor{' '}
+					<span
+						style={{
+							color: props.labeSponsorColor ?? '#222425',
+						}}
+					>
+						{props.labelSponsor}
+					</span>
 				</p>
 			) : null}
 		</>

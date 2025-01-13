@@ -56,8 +56,8 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 						<AvatarWithCaption
 							avatarPictureUrl={speaker.picture}
 							avatarStyle={{
-								width: 250,
-								height: 250,
+								width: 220,
+								height: 220,
 								border: 'none',
 								boxShadow: `0 0 0 10px white, 0 0 0 20px ${shadowColor}`,
 								top: pictureDrop,
@@ -70,12 +70,14 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								style={{
 									position: 'relative',
 									bottom: '-20%',
-									width: 250,
+									width: 350,
 									height: 100,
-									fontSize: 30,
+									fontSize: 35,
 									fontWeight: 700,
 									opacity: nameOpacity,
 									filter: `blur(${nameUnblur}px)`,
+									fontFamily: 'Noto Sans,sans-serif',
+									textShadow: '0 0 10px black',
 								}}
 							>
 								{speaker.name}

@@ -23,10 +23,12 @@ export const Details: React.FC<{
 			style={{
 				fontFamily: 'Noto Sans,sans-serif',
 				fontSize: '32px',
+				textShadow: '0 0 10px black',
 			}}
 			iconStyle={{
 				opacity,
 				bottom: drop,
+				filter: 'drop-shadow(0 0 5px black)',
 			}}
 		/>
 	);

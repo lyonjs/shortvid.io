@@ -33,7 +33,7 @@ export const TalkTitle: React.FC<{
 				textAlign: 'center',
 				opacity: titleOpacity,
 				filter: `blur(${titleDeblur}px)`,
-				textShadow: '`1px 1px 3px white`',
+				textShadow: '0 0 10px black',
 				...style,
 			}}
 		>

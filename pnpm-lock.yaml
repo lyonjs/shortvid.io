@@ -84,7 +84,7 @@ dependencies:
 devDependencies:
   '@iconify/react':
     specifier: ^5.0.0
-    version: 5.0.2(react@18.3.1)
+    version: 5.2.0(react@18.3.1)
   '@remotion/eslint-plugin':
     specifier: 4.0.260
     version: 4.0.260(eslint@8.57.1)(typescript@5.6.3)
@@ -800,8 +800,8 @@ packages:
     deprecated: Use @eslint/object-schema instead
     dev: true
 
-  /@iconify/react@5.0.2(react@18.3.1):
-    resolution: {integrity: sha512-wtmstbYlEbo4NDxFxBJkhkf9gJBDqMGr7FaqLrAUMneRV3Z+fVHLJjOhWbkAF8xDQNFC/wcTYdrWo1lnRhmagQ==}
+  /@iconify/react@5.2.0(react@18.3.1):
+    resolution: {integrity: sha512-7Sdjrqq3fkkQNks9SY3adGC37NQTHsBJL2PRKlQd455PoDi9s+Es9AUTY+vGLFOYs5yO9w9yCE42pmxCwG26WA==}
     peerDependencies:
       react: '>=16'
     dependencies:

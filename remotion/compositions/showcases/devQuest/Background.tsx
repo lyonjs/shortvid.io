@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	Easing,
-	Img,
-	interpolate,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {Easing, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 export const Background = () => {
 	const frame = useCurrentFrame();
@@ -22,9 +16,7 @@ export const Background = () => {
 	return (
 		<div>
 			<Img
-				src={staticFile(
-					'/images/showcases/devQuest/background.png',
-				)}
+				src={staticFile('/images/showcases/devQuest/background.png')}
 				style={{
 					opacity,
 					width: '100%',

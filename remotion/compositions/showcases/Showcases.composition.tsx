@@ -8,6 +8,7 @@ import {DevfestLilleComposition} from './devfestLille/DevfestLille.composition';
 import {DevfestNantesComposition} from './devfestNantes/DevfestNantes.composition';
 import {DevfestStrasbourgComposition} from './devfestStrasbourg/2024/DevfestStrasbourg.composition';
 import {DevoxxComposition} from './devoxx/Devoxx.composition';
+import {DevQuestComposition} from './devQuest/DevQuest.composition';
 import {LyonJSComposition} from './lyonJS/LyonJS.composition';
 import {MixitComposition} from './mixit/Mixit.composition';
 import {SnowcampComposition} from './snowcamp/Snowcamp.composition';
@@ -31,6 +32,7 @@ export const ShowcasesComposition: React.FC = () => {
 			<DevfestNantesComposition />
 			<DevfestLilleComposition />
 			<DevfestStrasbourgComposition />
+			<DevQuestComposition />
 		</Folder>
 	);
 };

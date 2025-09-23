@@ -33,7 +33,7 @@ export const Speakers: React.FC<{
 		frame: frame,
 		fps,
 		from: -500,
-		to: isTotemDisplayMode ? -100 : 80,
+		to: isTotemDisplayMode ? 840 : 80,
 		durationInFrames: 50,
 		config: {
 			mass: 1,
@@ -75,14 +75,14 @@ export const Speakers: React.FC<{
 						<Img style={{
 							position: 'absolute',
 							bottom: plantseUp,
-							left: '25%',
+							left: isTotemDisplayMode ? '13%' : '25%',
 							width: '180px',
 							filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
 						}} alt="fdds" src={staticFile('images/showcases/devfestNantes/2025/plantes.png')} />
 						<Img style={{
 							position: 'absolute',
 							bottom: plantseUp,
-							left: '60%',
+							left: isTotemDisplayMode ? '61%' : '60%',
 							width: '180px',
 							filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
 						}} alt="fdds" src={staticFile('images/showcases/devfestNantes/2025/plantes.png')} />

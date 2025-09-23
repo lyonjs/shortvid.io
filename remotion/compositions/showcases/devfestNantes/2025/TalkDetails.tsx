@@ -17,7 +17,8 @@ export const TalkDetails: React.FC<{
 	style?: React.CSSProperties;
 	iconStyle?: React.CSSProperties;
 	textStyle?: React.CSSProperties;
-}> = ({items, style, iconStyle, textStyle}) => {
+	withLeaves?: boolean;
+}> = ({items, style, iconStyle, textStyle, withLeaves = true}) => {
 	const countColumn =
 		(items.date ? 1 : 0) + (items.time ? 1 : 0) + (items.location ? 1 : 0);
 
@@ -55,11 +56,11 @@ export const TalkDetails: React.FC<{
 						}}
 					>
 						<Icon icon={items.icons?.dateIcon || 'mdi:calendar'} style={{fontSize: '4rem', ...iconStyle}} />
-						<Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25}} />
+						{withLeaves && <Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25}} />}
 						<Text style={{fontSize: 'inherit', color: 'inherit', width: 'max-content', padding: 0, ...textStyle}}>
 							{items.date}
 						</Text>
-						<Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25, transform: 'scaleX(-1)'}} />
+						{withLeaves && <Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25, transform: 'scaleX(-1)'}} />}
 					</div>
 				</div>
 			)}
@@ -84,11 +85,11 @@ export const TalkDetails: React.FC<{
 						}}
 					>
 						<Icon icon={items.icons?.timeIcon || 'mdi:clock'} style={{fontSize: '4rem', ...iconStyle}} />
-						<Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25}} />
+						{withLeaves && <Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25}} />}
 						<Text style={{fontSize: 'inherit', color: 'inherit', width: 'max-content', padding: 0, ...textStyle}}>
 							{items.time}
 						</Text>
-						<Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25, transform: 'scaleX(-1)'}} />
+						{withLeaves && <Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25, transform: 'scaleX(-1)'}} />}
 					</div>
 				</div>
 			)}
@@ -113,11 +114,11 @@ export const TalkDetails: React.FC<{
 						}}
 					>
 						<Icon icon={items.icons?.locationIcon || 'mdi:map-marker-radius-outline'} style={{fontSize: '4rem', ...iconStyle}} />
-						<Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25}} />
+						{withLeaves && <Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25}} />}
 						<Text style={{fontSize: 'inherit', color: 'inherit', width: 'max-content', padding: 0, ...textStyle}}>
 							{items.location}
 						</Text>
-						<Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25, transform: 'scaleX(-1)'}} />
+						{withLeaves && <Img src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')} style={{height: 25, transform: 'scaleX(-1)'}} />}
 					</div>
 				</div>
 			)}

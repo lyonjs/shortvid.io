@@ -10,7 +10,8 @@ export const Details: React.FC<{
 	time: string;
 	location?: string;
 	isTotemDisplayMode?: boolean;
-}> = ({date, time, location, isTotemDisplayMode}) => {
+	withLeaves?: boolean;
+}> = ({date, time, location, isTotemDisplayMode, withLeaves = true}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -46,7 +47,7 @@ export const Details: React.FC<{
 				bottom: `${drop}px`,
 				left: '50%',
 				width: isTotemDisplayMode ? '96%' : '90%',
-				fontSize: isTotemDisplayMode ? '15px' : '30px',
+				fontSize: '30px',
 				color: '#FFF8F0',
 				textShadow: '0 0 20px rgb(0,219,255)',
 				transform: 'translateX(-50%)',
@@ -55,6 +56,7 @@ export const Details: React.FC<{
 			iconStyle={{
 				display: 'none',
 			}}
+			withLeaves={withLeaves}
 		/>
 	);
 };

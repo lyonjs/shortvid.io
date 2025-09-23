@@ -25,8 +25,8 @@ export const Speakers: React.FC<{
 		frame: frame,
 		fps,
 		from: -1000,
-		to: isTotemDisplayMode ? -100 : -320,
-		durationInFrames: 60,
+		to: isTotemDisplayMode ? -100 : -280,
+		durationInFrames: 50,
 	});
 
 	const plantseUp = spring({
@@ -34,10 +34,10 @@ export const Speakers: React.FC<{
 		fps,
 		from: -500,
 		to: isTotemDisplayMode ? -100 : 80,
-		durationInFrames: 60,
+		durationInFrames: 50,
 		config: {
 			mass: 1,
-			damping: 11,
+			damping: 10,
 		},
 	});
 
@@ -76,13 +76,15 @@ export const Speakers: React.FC<{
 							position: 'absolute',
 							bottom: plantseUp,
 							left: '25%',
-							width: '180px'
+							width: '180px',
+							filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
 						}} alt="fdds" src={staticFile('images/showcases/devfestNantes/2025/plantes.png')} />
 						<Img style={{
 							position: 'absolute',
 							bottom: plantseUp,
 							left: '60%',
-							width: '180px'
+							width: '180px',
+							filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
 						}} alt="fdds" src={staticFile('images/showcases/devfestNantes/2025/plantes.png')} />
 						<AvatarWithCaption
 							avatarPictureUrl={speaker.picture}
@@ -106,11 +108,11 @@ export const Speakers: React.FC<{
 										textShadow: '0 0 20px black',
 										letterSpacing: '0.1rem',
 										position: 'relative',
-										bottom: isTotemDisplayMode ? '-50%' : '-122%',
+										bottom: isTotemDisplayMode ? '-50%' : '-110%',
 										width: 350,
 										height: 100,
 										fontSize: 25,
-										fontWeight: 700,
+										fontWeight: 900,
 										opacity: nameOpacity,
 										filter: `blur(${nameUnblur}px)`,
 									}}

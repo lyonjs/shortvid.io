@@ -1,7 +1,7 @@
 import {loadFont} from '@remotion/google-fonts/Cinzel';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-import {TalkDetails} from '../../../../design/molecules/TalkDetails';
+import {TalkDetails} from './TalkDetails';
 
 const {fontFamily} = loadFont();
 
@@ -48,7 +48,7 @@ export const Details: React.FC<{
 				width: isTotemDisplayMode ? '96%' : '90%',
 				fontSize: isTotemDisplayMode ? '15px' : '30px',
 				color: '#FFF8F0',
-				textShadow: `0 0 20px black`,
+				textShadow: '0 0 20px rgb(0,219,255)',
 				transform: 'translateX(-50%)',
 				filter: `blur(${textUnblur}px)`,
 			}}

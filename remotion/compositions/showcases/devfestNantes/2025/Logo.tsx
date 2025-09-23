@@ -13,7 +13,7 @@ import {ComponentDisplayMode} from '../types/types';
 export const Logo = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const logoWidth = 150;
+	const logoWidth = 130;
 
 	const pictureSlide = spring({
 		frame,

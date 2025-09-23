@@ -34,11 +34,11 @@ export const TalkTitle: React.FC<{
 				fontSize: '35px',
 				fontWeight: 'bold',
 				textAlign: 'center',
-				textShadow: '0 0 20px black',
+				textShadow: '0 0 20px rgb(0,219,255)',
 				color: '#FFF8F0',
 				textWrap: 'balance',
 				position: 'absolute',
-				top: isTotemDisplayMode ? '50%' : 'unset',
+				top: isTotemDisplayMode ? '50%' : '10%',
 				left: '50%',
 				transform: isTotemDisplayMode
 					? 'translate(-50%, -50%)'

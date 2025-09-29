@@ -6,7 +6,8 @@ import {
 	spring,
 	staticFile,
 	useCurrentFrame,
-	useVideoConfig} from 'remotion';
+	useVideoConfig,
+} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
@@ -70,22 +71,23 @@ export const Speakers: React.FC<{
 						style={{
 							display: 'flex',
 							flexDirection: 'column',
+							position: 'relative',
 						}}
 					>
-						<Img style={{
-							position: 'absolute',
-							bottom: plantseUp,
-							left: isTotemDisplayMode ? '13%' : '25%',
-							width: '180px',
-							filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
-						}} alt="fdds" src={staticFile('images/showcases/devfestNantes/2025/plantes.png')} />
-						<Img style={{
-							position: 'absolute',
-							bottom: plantseUp,
-							left: isTotemDisplayMode ? '61%' : '60%',
-							width: '180px',
-							filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
-						}} alt="fdds" src={staticFile('images/showcases/devfestNantes/2025/plantes.png')} />
+						<Img
+							style={{
+								position: 'absolute',
+								bottom: plantseUp,
+								left: '50%',
+								transform: 'translateX(-50%)',
+								width: '180px',
+								filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
+							}}
+							alt="plante"
+							src={staticFile(
+								'images/showcases/devfestNantes/2025/plantes.png',
+							)}
+						/>
 						<AvatarWithCaption
 							avatarPictureUrl={speaker.picture}
 							avatarStyle={{

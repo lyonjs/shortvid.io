@@ -24,10 +24,8 @@
 		width: 100%;
 		color: var(--color-link);
 		border: 3px solid transparent;
-		background-image: linear-gradient(
-				var(--color-background),
-				var(--color-background)
-			),
+		background-image:
+			linear-gradient(var(--color-background), var(--color-background)),
 			var(--btn-gradient);
 		background-origin: border-box;
 		background-clip: padding-box, border-box;

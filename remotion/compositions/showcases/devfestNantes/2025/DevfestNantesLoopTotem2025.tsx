@@ -1,6 +1,15 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {AbsoluteFill, Easing, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig, Video} from 'remotion';
+import {
+	AbsoluteFill,
+	Easing,
+	interpolate,
+	Sequence,
+	staticFile,
+	useCurrentFrame,
+	useVideoConfig,
+	Video,
+} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
@@ -50,21 +59,26 @@ export const DevfestNantesLoopTotem2025 = ({
 	const darkenLocal = Math.max(0, frame - darkenStart);
 	const darkenOpacity = interpolate(darkenLocal, [30, 65], [0, 0.5], {
 		extrapolateRight: 'clamp',
-		extrapolateLeft: 'clamp'
+		extrapolateLeft: 'clamp',
 	});
 
-    // Fireflies fade-in
-    const firefliesStart = 120;
-    const firefliesLocal = Math.max(0, frame - firefliesStart);
-    const firefliesOpacity = interpolate(firefliesLocal, [0, 20], [0, 1], {
-        extrapolateRight: 'clamp',
-    });
+	// Fireflies fade-in
+	const firefliesStart = 120;
+	const firefliesLocal = Math.max(0, frame - firefliesStart);
+	const firefliesOpacity = interpolate(firefliesLocal, [0, 20], [0, 1], {
+		extrapolateRight: 'clamp',
+	});
 
-    // Fade out to base color for seamless loop
-    const fadeOutOpacity = interpolate(frame, [durationInFrames - 50, durationInFrames - 15], [0, 1], {
-        extrapolateRight: 'clamp',
-        extrapolateLeft: 'clamp',
-    });
+	// Fade out to base color for seamless loop
+	const fadeOutOpacity = interpolate(
+		frame,
+		[durationInFrames - 50, durationInFrames - 15],
+		[0, 1],
+		{
+			extrapolateRight: 'clamp',
+			extrapolateLeft: 'clamp',
+		},
+	);
 
 	const SlideDown = interpolate(frame, [300, 330], [0, 650], {
 		extrapolateRight: 'clamp',
@@ -82,8 +96,10 @@ export const DevfestNantesLoopTotem2025 = ({
 			}}
 		>
 			<Sequence from={110}>
-				<BackgroundFiller 
-					imageUrl={staticFile('images/showcases/devfestNantes/2025/library.png')}
+				<BackgroundFiller
+					imageUrl={staticFile(
+						'images/showcases/devfestNantes/2025/library.png',
+					)}
 					style={{
 						transform: `scale(${bgZoom})`,
 						transformOrigin: 'center center',
@@ -111,6 +127,7 @@ export const DevfestNantesLoopTotem2025 = ({
 					}}
 					playbackRate={1.6}
 					endAt={188}
+					muted
 				/>
 			</Sequence>
 			<Sequence from={118}>
@@ -123,18 +140,45 @@ export const DevfestNantesLoopTotem2025 = ({
 					}}
 				/>
 			</Sequence>
-            <Sequence from={120}>
-                <Fireflies count={50} opacity={firefliesOpacity} />
+			<Sequence from={120}>
+				<Fireflies count={50} opacity={firefliesOpacity} />
 			</Sequence>
-            <Sequence from={122}>
-                <SweepFirefly y={180} size={70} durationInFrames={120} opacity={firefliesOpacity} direction="ltr" driftAmp={10} driftFreq={1.2} flickerAmp={0.18} />
-            </Sequence>
-            <Sequence from={138}>
-                <SweepFirefly y={420} size={60} durationInFrames={140} opacity={firefliesOpacity} direction="rtl" driftAmp={6} driftFreq={2.0} flickerAmp={0.12} />
-            </Sequence>
-            <Sequence from={150}>
-                <SweepFirefly y={300} size={52} durationInFrames={120} opacity={firefliesOpacity} direction="ltr" driftAmp={14} driftFreq={0.9} flickerAmp={0.2} />
-            </Sequence>
+			<Sequence from={122}>
+				<SweepFirefly
+					y={180}
+					size={70}
+					durationInFrames={120}
+					opacity={firefliesOpacity}
+					direction="ltr"
+					driftAmp={10}
+					driftFreq={1.2}
+					flickerAmp={0.18}
+				/>
+			</Sequence>
+			<Sequence from={138}>
+				<SweepFirefly
+					y={420}
+					size={60}
+					durationInFrames={140}
+					opacity={firefliesOpacity}
+					direction="rtl"
+					driftAmp={6}
+					driftFreq={2.0}
+					flickerAmp={0.12}
+				/>
+			</Sequence>
+			<Sequence from={150}>
+				<SweepFirefly
+					y={300}
+					size={52}
+					durationInFrames={120}
+					opacity={firefliesOpacity}
+					direction="ltr"
+					driftAmp={14}
+					driftFreq={0.9}
+					flickerAmp={0.2}
+				/>
+			</Sequence>
 			<div
 				style={{
 					height: '100%',

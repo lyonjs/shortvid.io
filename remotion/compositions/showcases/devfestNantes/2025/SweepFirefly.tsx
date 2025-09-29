@@ -14,14 +14,14 @@ export const SweepFirefly: React.FC<{
 	endX?: number;
 	/** additional opacity multiplier 0..1 */
 	opacity?: number;
-    /** 'ltr' left-to-right or 'rtl' right-to-left */
-    direction?: 'ltr' | 'rtl';
-    /** vertical drift amplitude in px */
-    driftAmp?: number;
-    /** vertical drift frequency multiplier */
-    driftFreq?: number;
-    /** flicker amplitude 0..1 */
-    flickerAmp?: number;
+	/** 'ltr' left-to-right or 'rtl' right-to-left */
+	direction?: 'ltr' | 'rtl';
+	/** vertical drift amplitude in px */
+	driftAmp?: number;
+	/** vertical drift frequency multiplier */
+	driftFreq?: number;
+	/** flicker amplitude 0..1 */
+	flickerAmp?: number;
 }> = ({
 	y,
 	size = 22,
@@ -29,10 +29,10 @@ export const SweepFirefly: React.FC<{
 	startX,
 	endX,
 	opacity = 0.8,
-    direction = 'ltr',
-    driftAmp = 8,
-    driftFreq = 1.5,
-    flickerAmp = 0.15,
+	direction = 'ltr',
+	driftAmp = 8,
+	driftFreq = 1.5,
+	flickerAmp = 0.15,
 }) => {
 	const frame = useCurrentFrame();
 	const {width, fps} = useVideoConfig();
@@ -97,5 +97,3 @@ export const SweepFirefly: React.FC<{
 		</AbsoluteFill>
 	);
 };
-
-

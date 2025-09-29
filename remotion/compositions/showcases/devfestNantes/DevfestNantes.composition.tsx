@@ -138,7 +138,7 @@ export const DevfestNantesComposition = () => {
 				<Composition
 					id="DevfestNantesTalkPhrase2025"
 					component={DevfestNantesPhrase2025}
-					durationInFrames={350}
+					durationInFrames={250}
 					fps={30}
 					width={1280}
 					height={720}

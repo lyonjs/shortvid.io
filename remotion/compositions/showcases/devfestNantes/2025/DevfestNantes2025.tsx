@@ -1,6 +1,13 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {AbsoluteFill, interpolate, Sequence, staticFile, useCurrentFrame, Video} from 'remotion';
+import {
+	AbsoluteFill,
+	interpolate,
+	Sequence,
+	staticFile,
+	useCurrentFrame,
+	Video,
+} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
@@ -47,15 +54,15 @@ export const DevfestNantes2025 = ({
 	const darkenLocal = Math.max(0, frame - darkenStart);
 	const darkenOpacity = interpolate(darkenLocal, [30, 65], [0, 0.5], {
 		extrapolateRight: 'clamp',
-		extrapolateLeft: 'clamp'
+		extrapolateLeft: 'clamp',
 	});
 
-    // Fireflies fade-in
-    const firefliesStart = 120;
-    const firefliesLocal = Math.max(0, frame - firefliesStart);
-    const firefliesOpacity = interpolate(firefliesLocal, [0, 20], [0, 1], {
-        extrapolateRight: 'clamp',
-    });
+	// Fireflies fade-in
+	const firefliesStart = 120;
+	const firefliesLocal = Math.max(0, frame - firefliesStart);
+	const firefliesOpacity = interpolate(firefliesLocal, [0, 20], [0, 1], {
+		extrapolateRight: 'clamp',
+	});
 
 	return (
 		<AbsoluteFill
@@ -67,8 +74,10 @@ export const DevfestNantes2025 = ({
 			}}
 		>
 			<Sequence from={110}>
-				<BackgroundFiller 
-					imageUrl={staticFile('images/showcases/devfestNantes/2025/library.png')}
+				<BackgroundFiller
+					imageUrl={staticFile(
+						'images/showcases/devfestNantes/2025/library.png',
+					)}
 					style={{
 						transform: `scale(${bgZoom})`,
 						transformOrigin: 'center center',
@@ -91,6 +100,7 @@ export const DevfestNantes2025 = ({
 					style={{opacity: videoOpacity}}
 					playbackRate={1.6}
 					endAt={188}
+					muted
 				/>
 			</Sequence>
 			<Sequence from={118}>
@@ -103,18 +113,45 @@ export const DevfestNantes2025 = ({
 					}}
 				/>
 			</Sequence>
-            <Sequence from={120}>
-                <Fireflies count={50} opacity={firefliesOpacity} />
+			<Sequence from={120}>
+				<Fireflies count={50} opacity={firefliesOpacity} />
 			</Sequence>
-            <Sequence from={122}>
-                <SweepFirefly y={180} size={70} durationInFrames={120} opacity={firefliesOpacity} direction="ltr" driftAmp={10} driftFreq={1.2} flickerAmp={0.18} />
-            </Sequence>
-            <Sequence from={138}>
-                <SweepFirefly y={420} size={60} durationInFrames={140} opacity={firefliesOpacity} direction="rtl" driftAmp={6} driftFreq={2.0} flickerAmp={0.12} />
-            </Sequence>
-            <Sequence from={150}>
-                <SweepFirefly y={300} size={52} durationInFrames={120} opacity={firefliesOpacity} direction="ltr" driftAmp={14} driftFreq={0.9} flickerAmp={0.2} />
-            </Sequence>
+			<Sequence from={122}>
+				<SweepFirefly
+					y={180}
+					size={70}
+					durationInFrames={120}
+					opacity={firefliesOpacity}
+					direction="ltr"
+					driftAmp={10}
+					driftFreq={1.2}
+					flickerAmp={0.18}
+				/>
+			</Sequence>
+			<Sequence from={138}>
+				<SweepFirefly
+					y={420}
+					size={60}
+					durationInFrames={140}
+					opacity={firefliesOpacity}
+					direction="rtl"
+					driftAmp={6}
+					driftFreq={2.0}
+					flickerAmp={0.12}
+				/>
+			</Sequence>
+			<Sequence from={150}>
+				<SweepFirefly
+					y={300}
+					size={52}
+					durationInFrames={120}
+					opacity={firefliesOpacity}
+					direction="ltr"
+					driftAmp={14}
+					driftFreq={0.9}
+					flickerAmp={0.2}
+				/>
+			</Sequence>
 			<Sequence name="Speakers" from={135}>
 				<Speakers speakers={speakers} />
 				<TalkTitle

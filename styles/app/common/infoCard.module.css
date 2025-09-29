@@ -51,10 +51,8 @@
 				100% 0,
 				100% 100%,
 				0 100%;
-			background-image: linear-gradient(
-					var(--switch-background),
-					var(--switch-background)
-				),
+			background-image:
+				linear-gradient(var(--switch-background), var(--switch-background)),
 				linear-gradient(var(--color-primary), var(--color-primary)),
 				linear-gradient(var(--switch-background), var(--switch-background)),
 				linear-gradient(var(--color-primary), var(--color-primary));

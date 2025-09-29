@@ -1,4 +1,4 @@
-import {loadFont} from '@remotion/google-fonts/YanoneKaffeesatz';
+import {loadFont} from '@remotion/google-fonts/Cinzel';
 import {
 	AbsoluteFill,
 	interpolate,

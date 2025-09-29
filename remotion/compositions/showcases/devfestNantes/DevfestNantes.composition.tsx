@@ -8,6 +8,10 @@ import {DevfestNantes2024} from './2024/DevfestNantes2024';
 import {DevfestNantesPhrase2024} from './2024/DevfestNantes2024Phrase';
 import {DevfestNantesLoop2024} from './2024/DevfestNantesLoop2024';
 import {DevfestNantesLoopTotem2024} from './2024/DevfestNantesLoopTotem2024';
+import {DevfestNantes2025} from './2025/DevfestNantes2025';
+import {DevfestNantesPhrase2025} from './2025/DevfestNantes2025Phrase';
+import {DevfestNantesLoop2025} from './2025/DevfestNantesLoop2025';
+import {DevfestNantesLoopTotem2025} from './2025/DevfestNantesLoopTotem2025';
 import {ShowcaseDevfestNantes2024Schema} from './types/types';
 import {DevfestNantes} from './DevfestNantes';
 import {DevfestNantesLoop} from './DevfestNantesLoop';
@@ -93,6 +97,48 @@ export const DevfestNantesComposition = () => {
 					id="DevfestNantesTalkPhrase2024"
 					component={DevfestNantesPhrase2024}
 					durationInFrames={350}
+					fps={30}
+					width={1280}
+					height={720}
+					schema={ShowcaseDevfestNantes2024Schema}
+					defaultProps={defaultTalkValues}
+				/>
+			</Folder>
+			<Folder name="DevfestNantes-2025">
+				<Composition
+					id="DevfestNantesTalk2025"
+					component={DevfestNantes2025}
+					durationInFrames={300}
+					fps={30}
+					width={1280}
+					height={720}
+					schema={ShowcaseDevfestNantes2024Schema}
+					defaultProps={defaultTalkValues}
+				/>
+				<Composition
+					id="DevfestNantesTalkLoop2025"
+					component={DevfestNantesLoop2025}
+					durationInFrames={350}
+					fps={30}
+					width={1280}
+					height={720}
+					schema={ShowcaseDevfestNantes2024Schema}
+					defaultProps={defaultTalkValues}
+				/>
+				<Composition
+					id="DevfestNantesTalkLoopTotem2025"
+					component={DevfestNantesLoopTotem2025}
+					durationInFrames={350}
+					fps={30}
+					width={720}
+					height={1280}
+					schema={ShowcaseDevfestNantes2024Schema}
+					defaultProps={defaultTalkValues}
+				/>
+				<Composition
+					id="DevfestNantesTalkPhrase2025"
+					component={DevfestNantesPhrase2025}
+					durationInFrames={250}
 					fps={30}
 					width={1280}
 					height={720}

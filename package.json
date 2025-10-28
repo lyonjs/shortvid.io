@@ -54,7 +54,7 @@
 		"@testing-library/jest-dom": "6.6.3",
 		"@testing-library/react": "16.2.0",
 		"@testing-library/user-event": "14.6.1",
-		"@types/lodash": "4.17.15",
+		"@types/lodash": "4.17.20",
 		"@types/luxon": "^3.4.2",
 		"@types/node": "20.16.6",
 		"@types/react": "18.3.18",

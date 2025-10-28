@@ -101,8 +101,8 @@ devDependencies:
     specifier: 14.6.1
     version: 14.6.1(@testing-library/dom@10.4.0)
   '@types/lodash':
-    specifier: 4.17.15
-    version: 4.17.15
+    specifier: 4.17.20
+    version: 4.17.20
   '@types/luxon':
     specifier: ^3.4.2
     version: 3.4.2
@@ -1687,8 +1687,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/lodash@4.17.15:
-    resolution: {integrity: sha512-w/P33JFeySuhN6JLkysYUK2gEmy9kHHFN7E8ro0tkfmlDOgxBDzWEZ/J8cWA+fHqFevpswDTFZnDx+R9lbL6xw==}
+  /@types/lodash@4.17.20:
+    resolution: {integrity: sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==}
     dev: true
 
   /@types/luxon@3.4.2:

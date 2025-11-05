@@ -1,24 +1,12 @@
 import React, {PropsWithChildren} from 'react';
-import Image from 'next/image';
 import {
 	AbsoluteFill,
-	Audio,
 	Easing,
 	Img,
 	interpolate,
-	Sequence,
 	staticFile,
 	useCurrentFrame,
 } from 'remotion';
-import {z} from 'zod';
-
-import {BackgroundTriangle} from '../../../../design/atoms/BackgroundTriangle';
-import {SpeakerSchema} from '../../showcases.types';
-import {BigSpeakers} from '../BigSpeakers';
-import {Details} from '../Details';
-import {Logo} from '../Logo';
-import {LogoSponsor} from '../LogoSponsor';
-import {TalkTitle} from '../TalkTitle';
 
 import {Cinema} from './Scene/Cinema';
 

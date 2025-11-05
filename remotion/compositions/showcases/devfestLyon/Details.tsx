@@ -1,9 +1,6 @@
-import { loadFont } from '@remotion/google-fonts/TitanOne';
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
 import { TalkDetails } from '../../../design/molecules/TalkDetails';
-
-const { fontFamily } = loadFont();
 
 export const Details: React.FC<{
     date: string;
@@ -41,17 +38,18 @@ export const Details: React.FC<{
                 location,
             }}
             style={{
-                fontFamily,
+                fontFamily: 'Arial Black',
                 opacity,
                 bottom: `${drop}px`,
                 left: '50%',
                 width: '90%',
-                fontSize: '40px',
+                fontSize: '30px',
                 textShadow:
-                    '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+                    '-2px 0 #111e42, 0 2px #111e42, 2px 0 #111e42, 0 -2px #111e42',
                 transform: 'translateX(-50%)',
                 filter: `blur(${textUnblur}px)`,
                 color: '#FFFFFF',
+                textTransform: 'uppercase',
             }}
             iconStyle={{
                 display: 'none',

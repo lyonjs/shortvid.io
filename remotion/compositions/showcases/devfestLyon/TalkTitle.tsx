@@ -1,9 +1,6 @@
-import { loadFont } from '@remotion/google-fonts/TitanOne';
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
 import { Title } from '../../../design/atoms/Title';
-
-const { fontFamily } = loadFont();
 
 export const TalkTitle: React.FC<{
     title: string;
@@ -28,24 +25,24 @@ export const TalkTitle: React.FC<{
     return (
         <Title
             style={{
-                fontFamily,
+                fontFamily: 'Arial Black',
+                textShadow: '0 0 10px #111e42',
                 width: '90%',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                fontSize: '42px',
+                fontSize: '38px',
                 lineHeight: '1.4',
-                letterSpacing: '0.02em',
+                letterSpacing: '0.5px',
                 textAlign: 'center',
                 position: 'absolute',
                 minHeight: 150,
                 bottom: '150px',
                 opacity: titleOpacity,
                 filter: `blur(${titleDeblur}px)`,
-                WebkitLineClamp: '2',
+                WebkitLineClamp: '3',
                 textWrap: 'balance',
                 color: '#ee7cad',
-                textShadow:
-                    '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+                fontWeight: 900,
                 ...style,
             }}
         >

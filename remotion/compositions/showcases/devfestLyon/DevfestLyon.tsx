@@ -29,29 +29,29 @@ export const DevfestLyon = ({
                 <IntroAnimation />
             </Sequence>
 
-            <Sequence name="Logo" from={200}>
+            <Sequence name="Logo" from={150}>
                 <div style={{ zIndex: 1000 }}>
                     <Logo />
                 </div>
             </Sequence>
 
-            <Sequence name="Speakers" from={250}>
+            <Sequence name="Speakers" from={170}>
                 <div style={{ zIndex: 1000 }}>
                     <Speakers speakers={speakers} />
                 </div>
             </Sequence>
 
-            <Sequence name="TalkTitle" from={300}>
+            <Sequence name="TalkTitle" from={210}>
                 <div style={{ zIndex: 1000 }}>
                     <TalkTitle title={title} />
                 </div>
             </Sequence>
 
-            <Sequence name="ParticleBackground" from={215}>
+            <Sequence name="ParticleBackground" from={160}>
                 <ParticleBackground />
             </Sequence>
 
-            <Sequence name="Details" from={350}>
+            <Sequence name="Details" from={260}>
                 <div style={{ zIndex: 1000 }}>
                     <Details date={date} time={time} location={location} />
                 </div>

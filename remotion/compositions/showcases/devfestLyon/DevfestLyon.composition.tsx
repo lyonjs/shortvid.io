@@ -12,7 +12,7 @@ export const DevfestLyonComposition: React.FC = () => {
             <Composition
                 id="DevfestLyonTalk"
                 component={DevfestLyon}
-                durationInFrames={500}
+                durationInFrames={360}
                 fps={60}
                 width={1280}
                 height={720}

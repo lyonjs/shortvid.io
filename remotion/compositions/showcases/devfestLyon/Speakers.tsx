@@ -1,4 +1,3 @@
-import { loadFont } from '@remotion/google-fonts/TitanOne';
 import {
     AbsoluteFill,
     interpolate,
@@ -10,8 +9,6 @@ import {
 import { Text } from '../../../design/atoms/Text';
 import { AvatarWithCaption } from '../../../design/molecules/AvatarWithCaption';
 import { Speaker } from '../../../types/defaultProps.types';
-
-const { fontFamily } = loadFont();
 
 export const Speakers: React.FC<{ speakers: Speaker[] }> = ({ speakers }) => {
     const frame = useCurrentFrame();
@@ -72,10 +69,9 @@ export const Speakers: React.FC<{ speakers: Speaker[] }> = ({ speakers }) => {
                             <>
                                 <Text
                                     style={{
-                                        fontFamily,
+                                        fontFamily: 'Arial Black',
                                         textShadow:
-                                            '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
-                                        letterSpacing: '0.05rem',
+                                            '-2px 0 #111e42, 0 2px #111e42, 2px 0 #111e42, 0 -2px #111e42',
                                         position: 'relative',
                                         bottom: '-45%',
                                         width: 320,
@@ -85,6 +81,7 @@ export const Speakers: React.FC<{ speakers: Speaker[] }> = ({ speakers }) => {
                                         opacity: nameOpacity,
                                         color: 'white',
                                         filter: `blur(${nameUnblur}px)`,
+                                        padding: 0,
                                     }}
                                 >
                                     {speaker.name}

@@ -14,7 +14,7 @@ export const IntroAnimation = () => {
     const { fps } = useVideoConfig();
 
     const saintJeanSlide = spring({
-        frame: frame - 30,
+        frame: frame - 20,
         fps,
         from: 320,
         to: -45,
@@ -23,7 +23,7 @@ export const IntroAnimation = () => {
     });
 
     const crayonSlide = spring({
-        frame: frame - 40,
+        frame: frame - 30,
         fps,
         from: 350,
         to: 30,
@@ -32,7 +32,7 @@ export const IntroAnimation = () => {
     });
 
     const fourviereSlide = spring({
-        frame: frame - 35,
+        frame: frame - 25,
         fps,
         from: 350,
         to: -60,
@@ -41,7 +41,7 @@ export const IntroAnimation = () => {
     });
 
     const incitySlide = spring({
-        frame: frame - 42,
+        frame: frame - 32,
         fps,
         from: 320,
         to: -35,
@@ -50,7 +50,7 @@ export const IntroAnimation = () => {
     });
 
     const bellecourSlide = spring({
-        frame: frame - 38,
+        frame: frame - 28,
         fps,
         from: 300,
         to: -70,
@@ -75,7 +75,7 @@ export const IntroAnimation = () => {
         config: { damping: 10 },
     });
 
-    const transitionStart = 170;
+    const transitionStart = 100;
     const transitionDuration = 90;
 
     const transitionProgress = interpolate(

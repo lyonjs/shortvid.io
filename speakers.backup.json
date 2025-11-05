@@ -1,0 +1,1003 @@
+[
+  {
+    "id": "cmby2mnd402i3pc3mdyqez2gs",
+    "title": "Construire des serveurs MCP plus intelligents : approches génériques vs. spécifiques au domaine",
+    "abstract": "Les Modèles de Langage de Grande Taille (LLMs) sont puissants, mais sans une direction claire, ils peuvent ressembler à un stagiaire brillant mais distrait. C’est là que les serveurs MCP (Model Context Protocol) entrent en jeu, fournissant une méthode structurée pour que les LLMs interagissent avec vos données, outils et APIs.\n\nDans cette session, nous explorerons les deux principales variantes de serveurs MCP : génériques et spécifiques au domaine. Les serveurs MCP génériques sont comme des autoroutes ouvertes : polyvalents mais chaotiques, permettant aux LLMs d'explorer n'importe quelle source de données. Les serveurs MCP spécifiques au domaine, en revanche, ressemblent davantage à des visites guidées : optimisés, sécurisés, mais moins flexibles.\n\nNous plongerons dans des exemples concrets, comme l’utilisation d’un serveur MCP PostgreSQL pour des requêtes ouvertes, par opposition à un serveur MCP spécifique au domaine optimisé pour RAGmonsters. Vous verrez comment ces deux approches influencent les performances, la sécurité et l’expérience des développeurs.\n\nMais ce n’est pas que de la théorie. Nous vous montrerons les avantages et les inconvénients pratiques de chaque approche et comment choisir (ou construire) celle qui convient le mieux à votre prochain projet. Que vous souhaitiez créer un chatbot polyvalent ou un assistant IA spécialisé, cette présentation vous donnera les outils pour le rendre plus intelligent.\nRejoignez-nous pour découvrir comment exploiter la puissance des LLMs avec des serveurs MCP, sans perdre le contrôle.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "Depuis des mois je me suis plongé dans la création de serveurs MCP, des démos et tests au début et des applications réelles par la suite. C'est une technologie fascinante, et dans ce talk j'ai envie de faire un retour d'expérience sur ce que j'ai appris, sur les erreurs à ne pas faire et sur comment structurer et architecturer les serveurs MCP pour offrir un maximum de fonctionnalités, réduire les risques et simplifier le développement.\n\nJ'ai donné une première version de ce talk à Codemotion Madrid.",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cytq1x03qsk73mmgrr9is5",
+        "name": "📊 Data & AI",
+        "description": "LLM, Agents autonomes, Data Mesh, CloudAI, Vibe Coding…"
+      }
+    ],
+    "tags": [],
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "speakers": [
+      {
+        "id": "cmby2mnd102i2pc3mll0qti27",
+        "name": "Horacio Gonzalez",
+        "bio": "Malgré ce que son accent espagnol bien prononcé peut suggérer, Horacio est arrivé en France il y a plus d'une vingtaine d'années. Passionné d'informatique, dans laquelle il est tombé depuis tout petit, il a découvert le développement web en 1997 et depuis il n'a pas arrêté de bosser autour.\n\nHoracio est VP de DevRel chez [Clever Cloud](https://clever-cloud.com). Il est cofondateur du  [FinistDevs](https://twitter.com/finistdevs/), et des [Rdv des Speakers](https://twitter.com/RdvSpeakers).\n\nPassionné par le développement web et tout ce qui gravite autour des composants web et des standards web, Horacio aime aussi discuter de Kubernetes, AI et le cloud en général.",
+        "company": "Clever Cloud",
+        "references": "I have been several times speaker at Devoxx Belgium, Devoxx France, Kubecon Europe, Codemotion Rome, Codemotion Madrid and Codemotion Amsterdam. I have done a keynote at MobiConf in Poland, and been speaker at many regional conferences: DevFest Nantes, DevFest Toulouse, DevFest Paris, Mix It, Sunny Tech, Riviera Dev... And of course lots and lots of meetups, JUGs and GDGs, because those are my roots. \n\nYou can see more about my speaker activity (with links to slides and videos) at https://noti.st/lostinbrittany",
+        "picture": "https://lh4.googleusercontent.com/-6krIgoWnkGk/AAAAAAAAAAI/AAAAAAABR4o/EJH0Fh-m16k/photo.jpg",
+        "location": "Brest, France",
+        "email": "horacio.gonzalez@gmail.com",
+        "socialLinks": [
+          "https://github.com/LostInBrittany",
+          "https://x.com/LostInBrittany"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.6666666666666665,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmbxibt6i00vqpc3myr9jt4c7",
+    "title": "Docker Bake, élégance et standardisation pour le build de vos images Docker",
+    "abstract": "Construire des images **Docker**, nous sommes nombreux à le faire avec la bonne vieille commande **docker build**. Ça marche, mais ça peut vite devenir verbeux, peu lisible, et pénible à maintenir, surtout lorsque l'on doit gérer plusieurs architectures comme ARM et AMD, ou passer à l’échelle dans une CI.\n\nBonne nouvelle : Docker a introduit **Docker Bake**, une façon standard, élégante et efficace de décrire vos builds avec du HCL ou du YAML. C’est propre, lisible, modulaire et surtout pensé pour l’automatisation.\n\nBake étant basé sur **Buildx**, les temps de build sont optimisés.\n\nDans ce talk, nous commencerons par la méthode classique : deux images, du multi-archi, un peu de lourdeur. Puis nous referons tout ça avec Docker Bake : des variables, des targets, une config unique et une publication dans une registry sur le cloud. \n\nNous verrons comment tout ça tourne en local, puis dans une CI comme **Cloud Build**, **GitHub Actions** et **Gitlab CI**.\n\nAprès ce talk, vous aurez (on l’espère !) envie de laisser tomber vos docker build à rallonge pour adopter Docker Bake dans vos projets et rendre vos builds plus simples, élégants et efficaces.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "Dans ce talk, je commencerai par montrer comment builder deux images Docker multi-arch avec des commandes classiques. \nNous verrons rapidement que cela implique de pas mal de paramètres, et que ce n’est ni très lisible, ni très pratique, surtout pour le multi-arch.\n\nJe proposerai ensuite une alternative bien plus élégante avec Docker Bake en HCL, un format déclaratif qui permet de simplifier et standardiser les builds, incluant le multi-arch.\n\nJe choisis le HCL car je trouve que c'est celui qui propose la syntaxe la plus élégante.\n\nJe montrerai des fonctionnalités clés comme les targets, les variables, ou encore des syntaxes dynamiques. \nNous verrons aussi comment intégrer Docker Bake dans des outils de CI comme Cloud Build, GitHub Actions et Gitlab CI, tout en tirant parti du cache pour avoir des builds plus rapides.\n\nEnfin, je publierai les images dans une registry sur le cloud (GCP), appelée Artifact Registry.",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9czy8ep03quk73mqfkzoo0d",
+        "name": "🔧 Cloud, Infra & DevOps",
+        "description": "Containerization, Serverless, Orchestration, CI-CD…"
+      }
+    ],
+    "tags": [],
+    "languages": [],
+    "speakers": [
+      {
+        "id": "cmbxibt6e00vppc3mqcrgn0b5",
+        "name": "Mazlum Tosun",
+        "bio": "# About me 👋\n\nGoogle Developer Expert on Google Cloud and Docker Captain.\n\nLead and Architect Data on Google Cloud\nI explore issues related to Data, Infra As Code, DevOps automation (CI/CD) and best practices.\n\nCo-founder and Head of Data & Cloud of GroupBees, a group of freelances consultants intended to give them access to a framework, to a community based on sharing in order to ensure them a rise in skills as well as better employability:\n\nMy Google Cloud content :\n- Videos : https://bit.ly/gcp-learning-mazlum-gb\n- Article : https://medium.com/@mazlum.tosun",
+        "company": "GroupBees",
+        "references": "DevFest Nantes, DevFest London, Devoxx Morocco, DevFest Afrique Francophone....\n\nBeam College : \n\nException management with Beam : https://www.youtube.com/watch?v=jg2N1V6HlxI&t=974s\n\n\nBeam Summit : \n\nError handling with Apache Beam and Asgarde library : https://www.youtube.com/watch?v=0hPunokBPEE&t=2437s\nMigration Spark to Beam/Dataflow with hexagonal architecture and Domain Driven Design : https://www.youtube.com/watch?v=d-HTrLiwrNU&t=37s\n\nGDG Cloud Paris :\n\nTalk with a full Event Driven and Serverless architecture on Google Cloud, the replay of this talk from my Youtube channel\nEnglish : https://youtu.be/szmKO4Tdyj8\nFrench : https://youtu.be/RtUI5Qzneiw",
+        "picture": "https://avatars.githubusercontent.com/tosun-si",
+        "location": "Arnouville, France",
+        "email": "mazlum.tosun@gmail.com",
+        "socialLinks": [
+          "https://github.com/tosun-si",
+          "https://x.com/MazlumTosun3"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.8,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmbuhmbrw038aqt3ma2ndnsko",
+    "title": "Accessibilité : cochez les cases ✅… et ratez la cible 🎯",
+    "abstract": "**Non**. Votre site n’est pas accessible parce que vous avez mis des balises alt sur toutes les images.\n**Non**. Il ne l'est pas non plus parce qu’il a un score de 100 sur Lighthouse.\n**Non**. Même en respectant à 95 % le RGAA, l’accessibilité réelle de votre site n’est pas assurée.\n\nPourquoi, en 2025, tant de sites et d’applications restent-ils encore largement inaccessibles, malgré les lois, les standards et les bonnes intentions affichées ? Aujourd’hui, on estime à moins de 1% les sites réellement utilisables par les personnes en situation de handicap.\n\nEntre idées reçues, manque de formation et méconnaissance des usages réels, l’accessibilité reste trop souvent le parent pauvre du développement web. Et pourtant, la rendre concrète n’est ni si long, ni si coûteux. Le \"Design Universel\" est une démarche de qualité, qui profite à tout le monde : personnes porteuses d'un handicap, utilisatrices et utilisateurs valides, et même votre business !\n\nDans cette conférence accessible à toutes et tous, nous montreront concrètement comment « rendre votre site accessible : **vraiment** ». Après un rappel sur les besoins des différents handicaps et un point sur les évolutions du RGAA en juin 2025, nous explorerons une démarche concrète à appliquer tout au long du cycle de développement. En insistant sur l'essentiel : savoir tester tout comme vos utilisateurs réels, en apprenant la maîtrise d’un lecteur d’écran.\n\nAnimée par Vanessa, consultante et formatrice en accessibilité, et Gabriel, développeur fullstack, cette session s’adresse aux curieuses et curieux comme à celles et ceux qui veulent enfin passer à l’action, pour participer à rendre le monde numérique plus inclusif.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "Bonjour DevFest 👋 cette conférence est présentée à deux, moi (Gabriel Pillet, dev fullstack) et Vanessa Strub (consultante et formatrice en accessibilité numérique). Pour cette conférence on a besoin de pouvoir diffuser de l'audio, type Voice Over en live, ou des extrait audio depuis la machine qui as les slides. C'est à peu près tout :) Merci !",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cyndci03qlk73mlz80mugy",
+        "name": "📏 Frontend",
+        "description": "Mobile, Web, Tools, Accessibility…"
+      }
+    ],
+    "tags": [
+      "Speakeuse ♀️"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmbuhmbrt0389qt3muavdyng0",
+        "name": "Gabriel Pillet",
+        "bio": "Dev Fullstack depuis 18 ans et toujours intéressé à l'accessibilité, je m'y suis et récemment confronté particulièrement en ayant développé une application 100% dédiée aux personnes aveugles chez Biped.ai.",
+        "company": null,
+        "references": null,
+        "picture": "https://avatars.githubusercontent.com/u/550548?v=4",
+        "location": null,
+        "email": "gabriel+github@tentacode.dev",
+        "socialLinks": []
+      },
+      {
+        "id": "cmbv4kqsk043hqt3myjym7p5t",
+        "name": "Vanessa Strub",
+        "bio": null,
+        "company": null,
+        "references": null,
+        "picture": "https://lh3.googleusercontent.com/a/ACg8ocImyNZRfnm8rg5X3DQAg_cbJ0pWf4l2UMqkxVMO5-Tv-c0WMPScXg=s96-c",
+        "location": null,
+        "email": "strub.vanessa@gmail.com",
+        "socialLinks": []
+      }
+    ],
+    "review": {
+      "average": 3.6666666666666665,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmbovmt0f00ckqt3mcppcgdxh",
+    "title": "Démêler vrais produits et hallucinations, REX d'un agent téléphonique chercheur de chaussettes",
+    "abstract": "Avez-vous déjà essayé de retrouver un produit au nom absurde dans un moteur de recherche  ? Heureusement qu'il y a de l'auto-complétion, les filtres, les menus… Mais comment faire quand tout se passe au téléphone, sans écran, sans clics, juste avec la voix ?\n\nIl y a 18 mois, un client nous a lancé un défi : permettre à des pharmaciens de commander des produits aux noms imprononçables (des bas de contention) par téléphone, via un agent vocal, et de manière fluide.\n\nLa solution ? Des LLMs, bien sûr, mais aussi beaucoup de travail sur la structuration des agents, la recherche full-text, et l’expérience vocale en temps réel.\n\nCe retour d’expérience s’adresse à toutes celles et ceux qui s’intéressent à la recherche hybride (full-text + IA), les LLMs orchestrés en agents spécialisés, la voix comme interface utilisateur, et aux défis derrière la mise en production de ce type d’outil.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "Bonjour,\n\nJ'ai joué ce talk une fois en Anglais lors du meetup Paris Search Party du 28 Mai 2025, pour une durée de 19min. Voici les slides\n- les slides https://docs.google.com/presentation/d/e/2PACX-1vQrQHHCBavWizx1QYHMrlleG0VMfSFrtU2YYFINEYQ0xFXLnlReL3dh9BwwUmDVnA/pub?start=false&loop=false&delayms=3000 , \n- Le public était clairsemé, donc voici le petit openfeedback https://openfeedback.io/jixOz6zRzCkWlhT04BNw/null/2TRGMblVeqFfjlkKUe5B\n\nJ'ai déjà prévu de le rejouer en Français lors du prochain meetup des Duchesses Paris le 25 Juin pour une durée de 15min, mais je ne l'ai pas encore joué en conférence\n\nAmélioration\n- Traduction en Français des slides\n- Je pense retravailler mes schemas\n- Et peut être développer la partie \"What’s Next?\" avec quelque mots sur l'orchestration d'agents\n\nStyle :\nLa thématique \"chaussette\" est expliquée par le produit recherché : des bas de contention\n\nStructure :\n1. Contexte & problématique \n2. Une première POC réussie\n3. Mise en situation à l'échelle qui ne fonctionne pas\n4. Nouvelle solution impliquant la combinaison de plusieurs LLM et l'outil de recherche Algolia \n5. Leçons apprises et R&D en cours\n\nJ'ai préféré ne pas mettre de sommaire dans mes slides pour un effet de surprise entre la partie \"POC reussie\", et la mise en situation à l'échelle, qui elle, ne fonctionne pas. Mais on peut voir l'avancée du talk avec une ligne de progression représentée par des chaussettes pendues sur un fil\n\nNiveau : \nBeaucoup de concepts techniques présentés, mais pas dans le détail.\n\nContraintes :\nRAS",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cytq1x03qsk73mmgrr9is5",
+        "name": "📊 Data & AI",
+        "description": "LLM, Agents autonomes, Data Mesh, CloudAI, Vibe Coding…"
+      }
+    ],
+    "tags": [
+      "Speakeuse ♀️"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmbovmt0c00cjqt3ma8bdwtj9",
+        "name": "Marie Terrier",
+        "bio": "Après 7 ans en de développement web entre l'Inde et la France pour l'agence KRDS, Marie est maintenant CTO de Yelda, la plateforme d'agents vocaux pour les entreprises. Sur son temps libre, elle adore participer à des événements techniques pour encourager les débutants à prendre confiance en eux ou partir à l'aventure à la montagne !",
+        "company": "Yelda",
+        "references": "J'ai déjà été oratrice dans une douzaine d'événements dont : \n- SudWeb 2017, A journey in India, https://vimeo.com/224659211\n- ParisWeb 2017, Namaste qualité, https://vimeo.com/258163531 \n- Meetup Google Developper Group Nantes: REX sur le développement Node.js d'une app transactionelle Google Assistant, https://www.meetup.com/GDG-Nantes/events/249041395/ \n- BlendWebMix 2018: OK Google, comment \"bien\" concevoir un chatbot, https://www.youtube.com/watch?v=N2sn35uBd7U \n- TakeOffConf 2018: OK Google, how to build a Node js transactional application, https://www.youtube.com/watch?time_continue=1&v=-LJ14eSao7I \n- LadiesOfCode Paris meetup Juin 2021, Ca marche pas, https://youtu.be/WaJX5GuyvTw?t=716 \n- Un cours vidéo aux éditions ENI, Bots et chatbots, Concepts, enjeux et mises en pratique, https://www.editions-eni.fr/marie-terrier\n- Episode Tronche de Tech 2024, Une IA qui fait vraiment peur, https://shows.acast.com/tronche-de-tech/episodes/34-marie-terrier-son-ia-fait-peur\n- Paris Search Party Meetup Mai 2025, Not Your Usual RAG: Using Algolia for Phone-Based Product & People Search",
+        "picture": "https://media.licdn.com/dms/image/v2/D4E22AQEptPoudJUMHA/feedshare-shrink_800/feedshare-shrink_800/0/1731355544972?e=1752105600&v=beta&t=ji6E_RItKclZ9WE83OTH4fuZJLIuFViKSgOISmzRodM",
+        "location": "Paris, France",
+        "email": "marie.terrier1@gmail.com",
+        "socialLinks": [
+          "https://github.com/meelie",
+          "https://x.com/materrier"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.8333333333333335,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmbo3iqwq003bqt3mkd9jq7f5",
+    "title": "Coder plus pour coder moins : Comment des outils maison, l'IA et un carnet de notes ont doublé mon efficacité",
+    "abstract": "« Ça ne devrait pas être aussi compliqué. »\n\nTout est parti de là. Je test-drivais un nouvel endpoint, noyé sous un code qui n'avait rien à voir avec le problème à résoudre et, ce jour-là, c'était trop.\n\nCe talk, c'est le résultat de ma quête pour reprendre le contrôle.\n\nComment ? En développent (littéralement) mon propre arsenal: \n\n- Framework et outils sur mesure\n- Scripts d'automatisation avec Playwright \n- Une touche de \"vibe coding\"\n\nCoder plus d'abord pour coder moins ensuite. \n\nOu plutôt: pour coder plus là où ça compte, concentrer ma charge mentale sur là où elle est vraiment utile pour maximiser mon impact.\n\nJe vous montrerais tout ce que j'ai développé, ce qui a marché et ce qui a été une perte de temps et, surtout, ma stratégie pour détecter les points d'améliorations.\n\nMon objectif ? Vous partager ces solutions et, mieux encore, vous donner envie de lancer votre propre quête!",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "**Objectif du talk:**\n\nMontrer tout ce que j'ai fait pour (idéalement) inspirer les gens. L'idée c'est de rappeler qu'en tant que dev on peut vraiment faire tout ce qu'on veut et c'est beaucoup plus facile que ce que l'on pense. Si quelque chose nous bloque (encore plus à l'heure de l'IA) on peut avoir une solution extrêmement rapidement, sans partir de rien.\n\n**Pourquoi je suis motivé à faire ce talk ?**\n\nParce que certains des outils que j'ai développé pour moi on été repris par mes collègues qui eux même ont du coup eu envie de faire les autres. Pour moi c'est toute la joie du dev que je veux partager.\n\n\n**Mon expérience speaker:**\n\n- Speaker Effect Days Italie (2025) - https://www.youtube.com/watch?v=pIXX1QAegCE&t=1s\n- Talk meetup Effect Paris (2025) - https://drive.google.com/file/d/1IkOtxrsNuyXPDrNJaRGZ4EDzA5sgnX4Y/view (video d'entrainement)\n- Talk meetup Effect Paris (2024)\n- Remote class zenika (2022)\n\nEnfin j’ai l’habitude de donner des formations dans mon entreprises sur les tests et la programmation fonctionnel. \n\n** Random **\nMerci beaucou d'avoir pris le temps de regarder :) ",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cyu5q703qtk73mi73n3bm4",
+        "name": "📝 Software Architecture",
+        "description": "Conception, Architecture, Craftsmanship, Design patterns, Best practices…"
+      }
+    ],
+    "tags": [],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmbo3iqwo003aqt3mba95dnp1",
+        "name": "penin edouard",
+        "bio": "Edouard s'épanouit en créant des applications fiables et maintenables avec TypeScript et la programmation fonctionnelle. Adepte des tests et du TDD, il a à cœur de bâtir des systèmes qui soient à la fois robustes et agréables pour les développeurs.\n\nQuand il ne peaufine pas son code, Edouard aime les longues randonnées, réaliser des créations complexes en Lego et apprendre des tours aux chats errants.",
+        "company": "Zenika",
+        "references": null,
+        "picture": "https://lh6.googleusercontent.com/-mY-SiNs7Nr8/AAAAAAAAAAI/AAAAAAAAAgE/A9RQJVWC23g/photo.jpg",
+        "location": "Nantes, France",
+        "email": "e.peninb@gmail.com",
+        "socialLinks": [
+          "https://github.com/isthatcentered",
+          "https://x.com/isthatcentered"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.6,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmbi2iy6r00y9p93mhtly4e70",
+    "title": "Et si votre prochain script… c’était un prompt ? Découvrez GenAIScript!",
+    "abstract": "Il fut un temps où jQuery a révolutionné le développement web: fini les galères de compatibilité entre navigateurs, place à la simplicité et à l'efficacité. Les développeurs pouvaient enfin se concentrer sur leur app, pas sur les bugs.\n\nAujourd’hui, l’IA vit une phase similaire. Les modèles évoluent à toute vitesse, les outils se multiplient... et les agents IA ajoutent une nouvelle couche de complexité. Pas facile de suivre, encore moins d’en tirer vraiment parti!\n\nEt si on pouvait automatiser des tâches fastidieuses, avec les dernières avancées de l'IA, comme par exemples des agents et outils MCP, sans se plonger dans des frameworks obscurs? Juste avec du JS simple et familier? C’est exactement ce que propose **GenAIScript**: un outil qui ne ressemble à aucun autre, qui vous permet d’utiliser l’IA comme si vous écriviez du code classique. Les prompts deviennent des snippets réutilisables, les workflows multi-agents se codent comme des fonctions, et tout devient plus fluide.\n\nDans ce talk (spoiler: il y aura principalement du live-coding), vous découvrirez comment rendre l'automatisation à base d'IA aussi naturelle que d’écrire du JS. Code reviews, generation de changelog, veille techno, refactoring... pas besoin d’être expert en IA pour gagner du temps au quotidien!",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "Talk donné dans une version plus courte (20 min) à dotJS: https://www.youtube.com/watch?v=Aq30zfbWNSQ\n\nLa version conférence sera proche de celle-ci donnée lors de l'AgentHack en ligne: https://www.youtube.com/live/Aq30zfbWNSQ?si=HvM9y9bwp1EHVtfj&t=156\n\nCette session est composée à 90% de live coding, avec au moins 6 use case différents couverts (plus si le temps le permet :)",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cytq1x03qsk73mmgrr9is5",
+        "name": "📊 Data & AI",
+        "description": "LLM, Agents autonomes, Data Mesh, CloudAI, Vibe Coding…"
+      }
+    ],
+    "tags": [],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmbi2iy6o00y8p93magcutd7r",
+        "name": "Yohan Lasorsa",
+        "bio": "Passionné d'open-source et d'artisanat logiciel, le web est le terrain de jeu ultime pour Yohan. Expert en ingénierie full-stack et amateur de projets DIY, il aime repousser les limites de JavaScript et partager ses connaissances avec les autres. Yohan est également Google Developer Expert (GDE) pour Angular, un speaker et formateur international accompli, ainsi que mainteneur et contributeur actif sur de nombreux projets open-source.",
+        "company": "Microsoft",
+        "references": "- Regular meetup and conference speaker: Devoxxs, DevFests, SnowCamp, Riveria Dev,  Sunny Tech...\n- Some talks recordings:\n  * VS Code Day: https://www.youtube.com/watch?v=NNrq2641zTA&list=PLj6YeMhvp2S6uB23beQaffszlavLq3lNq&index=4\n  * Devoxx France (French): https://www.youtube.com/watch?v=cAikQZzKqB4\n  * Paris Containers Day (French) https://www.youtube.com/watch?v=vVX7LMCBnwA\n\n- Created and participated in multiples videos series and live shows, some examples: \n  * https://www.youtube.com/watch?v=FeJVdCz_uco&list=PLlrxD0HtieHje-_287YJKhY8tDeSItwtg&index=1\n  * https://www.youtube.com/watch?v=l3SBq7L13Mk&list=PLlrxD0HtieHgMPeBaDQFx9yNuFxx6S1VG&index=2\n  * https://www.youtube.com/watch?v=ejxtQkfVcJ0&list=PLlrxD0HtieHjU-gOB3ifnFaqikI2kGxUW&index=16",
+        "picture": "https://avatars0.githubusercontent.com/u/593151?v=4",
+        "location": "Grenoble, France",
+        "email": "yohan.lasorsa@gmail.com",
+        "socialLinks": [
+          "https://github.com/sinedied",
+          "https://x.com/sinedied",
+          "https://bsky.app/profile/sinedied.bsky.social",
+          "https://www.linkedin.com/in/yohanlasorsa/"
+        ]
+      }
+    ],
+    "review": {
+      "average": 4.166666666666667,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmb4vkoez004hog3mg7eovaq1",
+    "title": "Un Pixel, puis un autre : Comment faire tourner DOOM sur une liseuse électronique 🕹️",
+    "abstract": "DOOM est un jeu culte qui a été porté des milliers de fois sur toutes sortes de supports, alors pourquoi ne pas essayer de le faire tourner sur ma liseuse électronique Kindle ?\n\nJe n’ai absolument aucune expérience en portage de jeux mais j’ai décidé de tenter l’expérience, un peu par curiosité, un peu pour le défi ! Je vous propose de suivre mon périple, un pixel après l’autre, pour jouer à DOOM avec de l’encre électronique.\n\nCa sera l'occasion de parler d'écrans 8 bits, d'architecture processeur et de bricolage technique pour faire marcher tout ca\net bien sûr de plusieurs démos de DOOM en encre électronique 🚀",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "Talk de vulgarisation tech haut niveau qui aborde plusieurs sujets variés avec plusieurs démos tout au long pour illustrer la théorie (un tout petit peu de C, un peu d'architecture processeurs, de la théorie de la couleur et des algorithmes de traitement d'image)\nTalk ouvert a tous les niveaux (tech de tous niveaux et non tech un peu curieux)\n\nDémos réalisées avec une liseuse électronique en live a l'aide d'une caméra webcam vu du haut.\n\nReplay du talk disponible en privé/interne à Zenika Lyon accessible en privé ici:\nhttps://youtu.be/4HvNVW32e9Q?feature=shared\n\nTalk deja donné au Mixit 2025",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cysb8n03qqk73m2q1dpb6t",
+        "name": "🗃️ Backend",
+        "description": "Frameworks, API, Event-driven, Streaming..."
+      }
+    ],
+    "tags": [
+      "MiXiT 🦁",
+      "Déjà vu 🎙️",
+      "↩️ Backup"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmb4vkoex004gog3m3b0rltjr",
+        "name": "Moustapha Agack",
+        "bio": "Smash my keyboard for a living—results vary, but sometimes cool stuff happens",
+        "company": "Zenika",
+        "references": "Un Pixel, puis un autre : Comment faire tourner DOOM sur une liseuse électronique 🕹️\n\n- Mixit 2025 [Feedbacks](https://imgur.com/y6oRuJ9)\n\nJay-Z, Maths and Signals ! How to clone Shazam 🎧:\n\n- Devfest Nantes 2022  [Replay](https://youtu.be/rPTQ-5iJ-dM) / [Feedback](https://imgur.com/MylO53e)\n- Sunny Tech 2023 [Replay](https://www.youtube.com/watch?v=xSzqySNspSI) / [Feedbacks](https://imgur.com/5N7hqH2)\n- DevFest Toulouse 2023  [Replay](https://youtu.be/2i4nstFJRXU?feature=shared) / [Feedbacks](https://imgur.com/6b4ppoP)\n- Volcamp 2023  [Replay](https://youtu.be/XIiyK-t4n1s?feature=shared)\n- Devoxx FR 2023  [Replay](https://youtu.be/G1DUORT_wfA?feature=shared)\n- MIXIT 2023  [Replay](https://www.youtube.com/watch?v=TKl8nSfQQWQ) / [Feedbacks](https://imgur.com/vaXPh18)\n- IUT Clermont-Ferrand 2024",
+        "picture": "https://lh3.googleusercontent.com/a/ACg8ocL1U9PB5RFKGx2DZMHuIb1M5QlrU_j0Rg_yUEikv5wuFLFfXEhy=s192-c-rg-br100",
+        "location": "Lyon, France",
+        "email": "moustapha.agack@zenika.com",
+        "socialLinks": [
+          "https://github.com/Moussto",
+          "https://x.com/mousstoh"
+        ]
+      }
+    ],
+    "review": {
+      "average": 4,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmasen26z069tpo3mugrvfjct",
+    "title": "La révolution WebGPU : toute la puissance du GPU, sur le web et en dehors 🚀",
+    "abstract": "Si je vous parle de GPU sur le web, vous pensez à ... ? WebGL ! L’API graphique qui est utilisée sur une bonne partie des sites Awwwards, Google Maps, Figma ou encore Tensorflow. Mais elle souffre d'un design un peu daté, celui de l’API OpenGL sortie en 1992. Depuis, d'autres APIs graphiques ont vu le jour (Vulkan, DirectX 12, Metal), mais elles n’étaient pas accessibles dans les navigateurs. Jusqu'à maintenant !\n\nGoogle, Apple et Mozilla ont développé conjointement WebGPU pour succéder à WebGL et amener les APIs graphiques modernes sur le web, et en dehors ! Je vous propose donc de découvrir les améliorations apportées sur le rendu graphique et le calcul sur GPU, avec des mesures de performance pour comparer les différentes implémentations.\n\nDes graphismes 3D aux simulations physiques en passant par l'IA ou le traitement d'image, vous aurez de quoi imaginer des cas d’utilisation possibles de cette API encore peu supportée, mais à l'avenir prometteur ✨",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "# Slides\nen ligne : https://jsulpis.github.io/talk-webgpu\nsource : https://github.com/jsulpis/talk-webgpu\n\n# Étapes du talk\n- pipeline de rendu graphique des GPU\n- rendu graphique et calcul sur GPU avec l'API WebGL et ses limitations\n- historique des APIs graphiques\n- nouveautés de WebGPU pour le rendu graphique et le calcul sur GPU\n- écosystème WebGPU",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cyndci03qlk73mlz80mugy",
+        "name": "📏 Frontend",
+        "description": "Mobile, Web, Tools, Accessibility…"
+      }
+    ],
+    "tags": [],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmanv352x04kopo3m0p4pfaj9",
+        "name": "Julien Sulpis",
+        "bio": "Développeur front-end passionné, j'aime explorer les outils du web moderne pour créer des applications sans compromis entre performance, accessibilité, et design qui sort du lot. CSS, WebGL et librairies JS minimalistes sont mes outils de prédilection.",
+        "company": "Zenika",
+        "references": "Expériences speaker :\n- Devfest Nantes\n- Devoxx FR\n- Paris Web\n- Devfest Toulouse\n- SnowCamp\n- Volcamp\n- RivieraDev\n- LyonJS\n- NightClazz by Zenika",
+        "picture": "https://avatars2.githubusercontent.com/u/22420399?v=4",
+        "location": "Lyon, France",
+        "email": "julien.sulpis@gmail.com",
+        "socialLinks": [
+          "https://github.com/jsulpis",
+          "https://x.com/jsulpis",
+          "https://bsky.app/profile/jsulpis.dev"
+        ]
+      }
+    ],
+    "review": {
+      "average": 4.2,
+      "positives": 1,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmanv2oml04klpo3mxyanln7s",
+    "title": "L'API viewTransition : une révolution pour le web ?",
+    "abstract": "Vous aimeriez pouvoir ajouter des animations à votre front-end web afin de proposer une expérience plus fluide à vos utilisateurs mais vous êtes découragés par la complexité de la tâche ? Vous maîtrisez comme personne transitions CSS, keyframes et animations FLIP mais vous en avez marre de gérer les problèmes d'interface et d'accessibilité causés par ces techniques ? Vous développez un site multi-pages full-stack plus traditionnel (rails, express, laravel...) et vous aimeriez améliorer la navigation entre les différentes pages de votre site ?\n\nPour résoudre tous ces problèmes et plus encore, venez découvrir l'API viewTransition. Grâce à elle, vous pouvez déléguer au navigateur l'essentiel du travail d'animation et réaliser des transitions entre les différents états de votre application devient un jeu d'enfant, même entre des documents HTML différents (🤯) !\n\nAu programme, je montrerai comment fonctionne cette API et quelles sont les meilleures pratiques pour l'utiliser dans tous les contextes. Nous verrons ensemble que l'API viewTransition permet de dépasser des obstacles jusqu'ici infranchissables dans le développement web !",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "Talk joué à Devoxx 2025 (30mn)\nTalk sélectionné pour SunnyTech 2025 (50mn)\n\nPlan :\n* Introduction\n* Utilisation de l'API dans une app single-page (SPA)\n* Utilisation de l'API dans une app multi-page (MPA)\n* Conclusion : ce qui va changer dans le développement web\n\nSlides: https://tgianella.github.io/talk-view-transitions/\nVideo: https://youtu.be/gVYEjvEWPgI",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cyndci03qlk73mlz80mugy",
+        "name": "📏 Frontend",
+        "description": "Mobile, Web, Tools, Accessibility…"
+      }
+    ],
+    "tags": [],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmanv2omi04kkpo3mdfx2e4ju",
+        "name": "Théo GIANELLA",
+        "bio": "Anciennement enseignant-chercheur en littérature française je me suis reconverti dans le développement web en 2023. Je travaille actuellement pour Zenika à Lyon, en mission chez Bedrock Streaming où je contribue à maintenir et améliorer les applications web (React) de certaines des plus grandes plateformes de streaming européenes.\n\nMis à part ma passion pour la littérature, j'ai gardé de ma première carrière l'envie de transmettre mes connaissances sur tous les sujets qui m'intéressent !",
+        "company": "Zenika",
+        "references": "Ayant eu une première carrière dans l'enseignement universitaire je suis habitué à parler devant de larges publics (> 100 personnes). \n\nTalks :\n* L'API viewTransition, une révolution pour le web ?\n    * Sunny Tech 2025\n    * [Devoxx 2025](https://youtu.be/gVYEjvEWPgI?feature=shared)\n* Tu te mets combien en responsive CSS ? (avec Julien Sulpis)\n    * [Devfest Nantes 2024](https://youtu.be/yokgC2LdYFk?feature=shared)\n    * [Mixit 2025](https://youtu.be/SJSVN_P8kt4?feature=shared)\n    * Riviera Dev 2025\n* Comment j'ai trouvé le sens de la vie grâce à WebAssembly\n    * Sunny Tech 2025\n    * Devfest Toulouse 2024\n    * [@Devoxx France - 19/04/2024](https://www.youtube.com/watch?v=I87Lw4ohAmU)\n    * Breizhcamp - 28/06/2024\n    * [@LyonJS - 17/01/2024](https://www.youtube.com/watch?v=sRTVop_TUws)\n* Dessine-moi un mot de passe ou le hachage cryptographique pour les nuls\n    * [Conférence interne Zenika - 24/05/2024](https://www.youtube.com/watch?v=zIxuS2GZJsw)",
+        "picture": "https://lh3.googleusercontent.com/a/ACg8ocJa895bxi87TFcNsEPk4B44wFtCDttC2sPJdhhxt-Cj4Q=s96-c",
+        "location": "Lyon, France",
+        "email": "theo.gianella@zenika.com",
+        "socialLinks": [
+          "https://github.com/TGianella"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.6666666666666665,
+      "positives": 1,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cmami01o503ykpo3mni0cs76t",
+    "title": "Speechless Live",
+    "abstract": "Speechless Live est un show unique en france. Initialement créé dans la Silicon Valley, il s'exporte maintenant dans le monde et a posé ses valises à Nantes depuis 2017. Cettte session hors norme s'exporte maintenant dans les différentes conférences de France afin d'offrir un temps de pause bien mérité pour les neurones.\n\nL'objectif est simple : faire s'affronter des speakers.euses dans un exercice d'improvisation ! Au programme :\n3 speakers.euses\n2 Juré.ées\nUn thème tiré au sort\nUn sujet donné par le public\nDes slides sans queue ni tête imposées\n\nCette session est donc avant tout une performance et un bon moyen de se détendre entre 2 conférences techniques",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "C'est avant tout un truc fun et une sorte de conf alien. Désolé, j'ai pas d'enregistrement car l'objectif est de permettre aux personnes de se marrer. Je formes les speakeur·euses à l'exercice et en général, ça rigole beaucoup :)",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cyndci03qlk73mlz80mugy",
+        "name": "📏 Frontend",
+        "description": "Mobile, Web, Tools, Accessibility…"
+      }
+    ],
+    "tags": [
+      "Original ✨"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cmamhvixe03ycpo3mzoq305t0",
+        "name": "jean-francois garreau",
+        "bio": "GDE Web Technology, je travaille pour Sfeir en tant que Engineering Director de l'agence de Nantes. Je suis un fan de la Web Platform et m'amuse dès que je peux avec les standards :). Mon rôle m'amène à ne pas faire que de la tech mais aussi beaucoup de chose en lien avec le management et la stratégie.\n\nEn dehors du travail, je suis co-fondateur du GDG Nantes, organisateur du DevFest Nantes, Women Tech Makers Amabassador\n\nRetrouvez l'ensemble de mes contributions sur https://github.com/jefBinomed",
+        "company": "Sfeir / GDG Nantes",
+        "references": "Speaker depuis 2009, j'ai donné des conférences dans les conférences suivantes : DevFest (Nantes, Toulouse, Lille, Brest, Paris), Riviera Dev, Touraine Tech, Breizhcamp, Codeur en Seine, Sunny Tech, Devoxx, Snowcamp, JugSummerCamp, MixIT, BestOfWeb. J'ai animé un grand nombre de meetups dans différentes villes (Strasbourg, Paris, Lille, Rennes, Angers). Je suis formateur depuis 2017 sur des technos web et autour de l'art de donner de conférences. Je suis encadrant dans une école en reconversion et intervient régulièrement en master classes dans des écoles ou dans webinares. \nJ'ai pratiqué a peut près tous les types de formats : codelabs, quickies, tools in action, formation longue, conférences, lightning talks, livecoding, sans slides, ....",
+        "picture": "https://pbs.twimg.com/profile_images/1722992762981593088/JSeOp1pY_400x400.jpg",
+        "location": "Nantes, France",
+        "email": "jean.francois.garreau@gmail.com",
+        "socialLinks": [
+          "https://github.com/jefbinomed",
+          "https://x.com/jefbinomed"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.6666666666666665,
+      "positives": 1,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cma5ccf19003epo3mn4wiqp25",
+    "title": "Développer un opérateur Kubernetes en Java, challenge accepted !",
+    "abstract": "Il n'est plus, je pense, nécessaire de présenter Kubernetes tellement il fait parti du paysage informatique. Avec sa généralisation, de nouveaux types de développements et de patterns sont apparus. Lors de ce talk j'aborderai l'un d'eux : les opérateurs.\n\nMerveilleux assistants, aptes à faire énormément de choses. Mais voilà, les nombreuses documentations que l'on trouve tournent principalement autour d'un langage : Go. Ce n'est pas que cela ne me plaise pas, mais l'idée est de pouvoir aussi le faire avec un autre langage que je connais et utilisé par de nombreuses équipes de développement : Java.\n\nLors de ce talk, je vous présenterai, de manière simple, la notion des opérateurs au sein de Kubernetes : à quoi ils servent et comment ils évoluent dans l'éco-système Kubernetes. Nous verrons qu'ils peuvent être de simples aides à l'installation ou à la mise à jour d'une application au sein de Kubernetes mais aussi aller beaucoup plus loin en devenant de vrais Ops pour gérer vos applications pour vous !\n\nPuis, nous développerons un opérateur ensemble et en Java : un bon Hello World nous permettant de prendre en main le SDK Java mais aussi les différents éléments présentés au début du talk.\n\nEnfin, nous essaierons de nous projeter vers un opérateur faisant un peu plus que Hello World afin de voir si vraiment il sait faire de l'Ops !\n\nA la fin de ce talk, vous aurez les différents éléments pour savoir si vous avez besoin développer un opérateur, comment le développer, et choisir entre le faire en Java ou dans un autre langage !",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "Bonjour,\n\nMerci pour l'organisation de cette conférence.  \nCe talk est le résultat d'un constat : je n'aime pas faire du Go mais j'aime faire du Java !\n\nDu coup j'ai cherché un moyen de faire des opérateurs Kubernetes en Java, et j'y suis arrivé :).\n\nPour ne pas perdre l'audience la première partie est de la théorie (légère) sur les opérateurs.\nL'idée n'est pas de faire un cours théorique mais simplement que l'on parle le même langage pour se comprendre lors de la session de démo / coding.\n\nEnsuite place au live coding !\n\nJe commence par un simple _Hello World_ permettant de poser les bases du [Java Operator SDK](https://javaoperatorsdk.io/) et de l'[extension](https://github.com/quarkiverse/quarkus-operator-sdk) Quarkus.\nCela va, notamment, de l'exécution en local sur la machine de la développeuse ou du développeur jusqu'au packaging et déploiement dans un cluster Kubernetes dans le cloud.\n\nA la suite de cela je montre un cas plus réaliste : le déploiement d'une application Quarkus lorsqu'elle est releasée sur GitHub : \n- illustration de la gestion d'évènements externes (ici la release GitHub) \n- création / déploiement au sein de Kubernetes\n\nA la sortie de ce talk les participantes et participants se rendront compte qu'il n'y a pas que Go ou Helm pour développer un opérateur. \nEt qu'il est même possible d'en développer un en Java sans être un expert Kubernetes.\n\nComme vous l'avez vu dans ma bio je travaille pour OVHcloud, l'ensemble des démos est utilisable avec n'importe quel type de distribution Kubernetes (K3s, K8s, OVHcloud, Azure, GCP, ..).\nL'objectif est de se centrer sur les opérateurs qui sont une notion totalement agnostique de la distribution Kubernetes utilisée.\n\nBon courage pour le CFP\n\nStéphane\n\n---\nRéférences du talk :\n\nTalk issu d'une série d'article que j'ai rédigé à titre personnel et professionnel : \n - https://philippart-s.github.io/blog/articles/dev/java-k8s-operator/\n - https://philippart-s.github.io/blog/articles/dev/java-k8s-operator-nginx/\n - https://philippart-s.github.io/blog/articles/dev/springboot-k8s-operator-nginx/\n - https://philippart-s.github.io/blog/articles/dev/quarkus-k8s-operator-nginx/\n - https://docs.ovh.com/gb/en/kubernetes/deploying-helm-operator/\n\nIl a été donné à \n - Paris JUG : https://noti.st/philippart-s/yNQaqB/developper-un-operateur-kubernetes-en-java-challenge-accepted\n - DevDay Mons 2023 : (pas de captation vidéo) : https://noti.st/philippart-s/camyDv/developper-un-operateur-kubernetes-en-java-challenge-accepted\n - DevOps D-Day 2022 (captation vidéo) : https://noti.st/philippart-s/ocKLlg/developper-un-operateur-kubernetes-en-java-challenge-accepted\n - Cloud Sud 2022 (captation vidéo): https://noti.st/philippart-s/kuH9Z3/developper-un-operateur-kubernetes-en-java-cest-possible\n - Cloud Ouest 2022 (captation vidéo) : https://noti.st/philippart-s/5nmi9c/developper-un-operateur-kubernetes-en-java-cest-possible\n - Camping des Speakers 2022 (pas de captation vidéo): https://noti.st/philippart-s/zaXUZp/developper-un-operateur-kubernetes-en-java-cest-possible",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9czy8ep03quk73mqfkzoo0d",
+        "name": "🔧 Cloud, Infra & DevOps",
+        "description": "Containerization, Serverless, Orchestration, CI-CD…"
+      }
+    ],
+    "tags": [],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cma5c5k040039po3mojsasqbo",
+        "name": "Stéphane Philippart",
+        "bio": "Durant plus de 20 ans dans le métier \"d'informaticien\" j'ai pu me confronter à beaucoup de technologies différentes. Et c'est cette diversité qui me fait continuer à autant aimer notre métier.\n\nDepuis maintenant 3 ans j'ai la chance d'évoluer au sein d'OVHcloud en tant que developer advocate. Cette position me permet de découvrir de nouvelles technologies ou disciplines comme l’Intelligence Artificielle ou le \"cloud native\" par exemple.\n\nMais mon cœur de vieux développeur Java ne peut pas trop s'éloigner de cette technologie qui est le fil rouge de mes nombreuses années de développeur.\n\nC'est avec humilité que je partage cette expérience mais aussi les nouveautés de notre écosystème à travers mes conférences et le meetup TADx co-créé à Tours.",
+        "company": "OVHcloud",
+        "references": "La liste des différentes conférences que j'ai donné est disponible ici : https://philippart-s.github.io/blog/conferences/\n\nJ'écris des articles techniques ici : https://philippart-s.github.io/blog/",
+        "picture": "https://avatars0.githubusercontent.com/u/26224751?v=4",
+        "location": "Tours",
+        "email": "s.philippart@gmail.com",
+        "socialLinks": [
+          "https://github.com/philippart-s",
+          "https://x.com/wildagsx",
+          "https://bsky.app/profile/wilda.bsky.social",
+          "https://www.linkedin.com/in/philippartstephane/"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.6,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cma2cwm6u05b9o63m6nip2q3e",
+    "title": "\"C'était dans quel épisode déjà ?\" - Bref, j'ai indexé une série culte",
+    "abstract": "| - Mais si tu sais, c'est quand il dit \"Capitaine ! Capitaine ! Vous n'êtes pas le capitaine !\"\n\nOn a tous·tes une série culte dont on connaît les répliques par cœur. Mais quand il faut retrouver la scène précise pour la montrer à un·e ami·e, on passe souvent plus de temps à chercher qu'à regarder la scène elle-même.\n\nLa sortie de la saison 2 de Bref m'a motivé à chercher à résoudre ce problème pour une de mes séries préférées. J'ai donc développé [brefsearch.com](), un site qui me permet de retrouver (et revoir) n'importe quelle scène de la saison 1 de Bref, juste à partir de quelques mot clés. \n\nDans ce talk, je vous montrerai comment transformer n'importe quelle playlist YouTube en une expérience de recherche immersive. On parlera d'outils en ligne de commande, de services en SaaS, d'optimisation front-end et un peu d'IA.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "J'ai déjà présenté ce talk à plusieurs reprises:\n\nDeux fois en anglais, à une audience qui connaissait déjà Algolia (l'une des briques techniques utilisées), mais ne connaissait pas la série Bref. Dans ce cas, je m'attarde un peu plus à expliquer ce qu'est Bref, et je rentre plus profondément dans les détails de configuration d'Algolia.\nAlgolia DevBit: https://www.youtube.com/watch?v=fRH4KyQS6-g\n\nLes deux autres fois (meetups NantesJS et HumanTalks Paris), je m'adressais à une audience francophone, qui connaissait Bref mais pas Algolia. Dans ce cas, je fais plus de référence à la série, et rentre moins dans le détail d'Algolia (survolant juste la technologie). Les meetups n'ont pas été captés en vidéo malheureusement.\nLien des slides de NantesJS: https://docs.google.com/presentation/d/1GddgYhJexfTJ43BoUaahlRtz4G5Ms_IpAkd5Xkh_Hk8/edit?usp=sharing\n\nMon objectif avec ce talk est de montrer les différentes étapes qui permettent de passer d'une idée à sa réalisation, avec un cas concret. Ici, je montre les différentes technos gratuites et/ou open-source qui m'ont permit de faire le site (youtube-downloader, ffmpeg, algolia, happyscribe, cloudinary, vercel). Mon message sous-jacent, et ma conclusion, sont qu'il faut parfois reprendre d'ancien side-projects qu'on a abandonné, parce que aujourd'hui on a peut-être plus de temps/compétence/outils pour les mener à bien.\n\nDisclaimer: Je travaille chez Algolia, mais mon but n'est pas d'en faire de la publicité. C'est l'une des briques que j'utilise pour contruire le site, donc je la mentionne, mais ce n'est pas un talk promo. Je m'assure aussi que tout ce que je montre puisse être fait avec un plan gratuit.",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cyndci03qlk73mlz80mugy",
+        "name": "📏 Frontend",
+        "description": "Mobile, Web, Tools, Accessibility…"
+      }
+    ],
+    "tags": [
+      "Original ✨"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cma2cwm6q05b8o63m42bfo303",
+        "name": "Tim Carry",
+        "bio": "Je suis développeur advocate chez Algolia; un job qui convient parfaitement à mes deux personnalités. \n\nD’abord, mon côté introverti aime plonger dans le code pour transformer une idée en un projet fini. Autodidacte avec plus de 20 ans d'expérience (essentiellement en front-end) et un esprit “think outside the box”, je vois le code comme un acte fondamentalement créatif, qu’il soit en ligne de commande ou dans un navigateur. \n\nPuis mon côté social me fait sortir de ma bulle pour participer à des événements tech - que ce soit comme participant, speaker, ou même organisateur. Je forme également mes collègues à la prise de parole en public, convaincu que faire un bon talk suit les mêmes règles qu'écrire du bon code : clarté, cohérence et simplicité.\n\nQuand je ne suis pas absorbé par mon code ou engagé dans des discussions lors de meetups tech, vous me trouverez en train d'animer des parties de jeu de rôle. C'est un autre espace où je peux à la fois donner vie à mes idées et les partager avec d’autres sous forme d’histoires.",
+        "company": null,
+        "references": "I have been giving talks since 2015, both personally and professionally. I have been co-organising several meetups (HumanTalks Paris & Nantes, TechLunch) and involved in the tech conference/meetup scene for a long time.\n\nI am currently working in DevRel, and coaching people on how to make great talks.\n\nYou can find a list of my past talks here: https://www.pixelastic.com/talks/",
+        "picture": "https://pbs.twimg.com/profile_images/601300425715908608/0Z1RJjQ8_normal.jpg",
+        "location": "Nantes, France",
+        "email": "tim@pixelastic.com",
+        "socialLinks": [
+          "https://github.com/pixelastic",
+          "https://bsky.app/profile/pixelastic.bsky.social"
+        ]
+      }
+    ],
+    "review": {
+      "average": 4.166666666666667,
+      "positives": 1,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cm9sad2of026yo63mg0s7yqsy",
+    "title": "Let's play Factorio",
+    "abstract": "Factorio est un jeu vidéo d'automatisation hautement addictif (croyez-en mes 300h de jeu).\n\nLe but est simple : le vaisseau spatial du joueur est échoué sur une planète extra-terrestre, il faut construire une fusée pour s'échapper, en utilisant toutes les ressources disponibles sur la planète.\n\nLe joueur construit alors une usine (d'où le nom du jeu) pour créer des matériaux de plus en plus complexes, jusqu'à pouvoir construire la fusée.\n\nMais quel rapport avec la tech ?\n\nArchitectures de code spaghetti, lasagna, refactoring. Urbanisation, ESB et micro-services. Métriques, alertes, root-cause analysis. Scalabilité horizontale, verticale, load-balancing. Charge, débit, performance. Sécurité, firewalls, DDoS.\n\nOn peut retrouver tous ces concepts dans le jeu.\n\nCe talk, intégralement réalisé dans le jeu, reprend et illustre ces différents concepts qui sont au coeur de nos métiers. Pour les débutants, ce sera l'occasion de comprendre ces concepts fondamentaux. Pour les plus expérimentés, ce sera l'occasion de les voir illustrés en dehors d'un schéma d'architecture ennuyeux.\n\nThe Factory Must Grow.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "Les concepts exposés dans ce talk restent simples.\nIci, c'est la façon de l'illustrer qui est au coeur du talk, en le réalisant intégralement dans le jeu.\nJe pense que c'est le genre de talk qui peut-être mémorable pour les participants.\n\nJe me suis inspiré de cette vidéo pour l'idée du talk : https://www.youtube.com/watch?v=vPdUjLqC15Q.\n\nCe talk a été retenu à Sunny Tech 2025",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cyu5q703qtk73mi73n3bm4",
+        "name": "📝 Software Architecture",
+        "description": "Conception, Architecture, Craftsmanship, Design patterns, Best practices…"
+      }
+    ],
+    "tags": [
+      "Original ✨",
+      "Keynote 🎤"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cm9sac8qc026vo63m7mrgvvwe",
+        "name": "Julien WITTOUCK",
+        "bio": "Je suis fan de Star Wars 💫, de Dragon Ball 🐉, et de rock seventies & nineties 🎸🤘.\n\nJe suis aussi Architecte Solution 🏗️  indépendant, associé chez [Ekité](https://ekite.info) et j'enseigne le développement Java / Spring à l'université de Lille 🎓 depuis plus de 10 ans.\nJe suis aussi l'auteur du livre [L’infrastructure as Code avec Terraform](https://www.editions-eni.fr/livre/l-infrastructure-as-code-avec-terraform-deployez-votre-infrastructure-sur-le-cloud-9782409046629) paru aux éditions ENI, et membre du comité d'organisation de la conférence ☁️ Cloud Nord\n\nMes sujets de prédilection:\n\n* ☕ : Java/Spring\n* ☁️ : Cloud/IaC/Terraform\n* 🐋 : Docker/Kubernetes\n* 🐧 : Linux 💙",
+        "company": "Freelance / Associé chez Ekité",
+        "references": "# conferences\n\n* Sunny Tech 2025 - Let's Play Factorio - [youtube](https://youtu.be/TnDRFGkeiwU)\n* DevLille 2025 - Rebase d'image Docker/OCI avec crane - [youtube](https://youtu.be/8069CA0DA4c) - [slides](https://codeka.io/talks/talk-rebase-crane/slides-devlille.pdf)\n* DevOxx France 2025 - Rebase d'image Docker/OCI avec crane - [youtube](https://youtu.be/AMWXJqePDsg) - [slides](https://codeka.io/talks/talk-rebase-crane/slides-devoxx.pdf)\n* DevOxx France 2024 - Mais au fait, ça marche comment les service accounts ? - [youtube](https://youtu.be/7p9NTgkOy_w) - [slides](https://codeka.io/talks/talk-service-accounts/slides.pdf)\n* Cloud Nord 2023 - Laissez tomber vos Dockerfile, adoptez un buildpack ! - [youtube](https://youtu.be/_kvdnCKz4gk) - [slides](https://codeka.io/talks/talk-laissez-tomber-vos-dockerfile-adoptez-un-buildpack/cloudnord2023-talk-laissez-tomber-vos-dockerfile-adoptez-un-buildpack.pdf)\n* Sunny Tech 2023 - Laissez tomber vos Dockerfile, adoptez un buildpack ! - [youtube](https://youtu.be/2Zo34sXsMxU) - [slides](https://codeka.io/talks/talk-laissez-tomber-vos-dockerfile-adoptez-un-buildpack/sunnytech2023-talk-laissez-tomber-vos-dockerfile-adoptez-un-buildpack.pdf)\n* DevFest Lille 2022 - Self-Service infrastructure pour GCP avec Terraform et Gitlab [youtube](https://youtu.be/DxC8gRvqvpA) - [slides](https://www.slideshare.net/JulienWITTOUCK1/selfservice-infrastructure-pour-gcp-avec-terraform-et-gitlabpdf)\n* Journée du Cloud 2019, Meetup CNCF Lille - Riders on the Cloud: provisionner de l'infrastructure AWS à 9500 km de Lille pour Kiabi - [slides](https://journee-cloud.univ-lille.fr/archives/2019/slides/Riders_on_the_Cloud.pdf)\n\n# brown bag lunches\n\n* Spring Boot & Containers - Do's & Don'ts - [slides](https://codeka.io/talks/bbl-spring-boot-and-containers-dos-donts/)\n* Préparer et passer la certification Terraform Certified Associate - [youtube](https://youtu.be/Zb-M1fTRTXc) - [slides](https://codeka.io/talks/bbl-preparer-et-passer-la-certification-terraform/bbl-preparer-et-passer-la-certification-terraform.pdf)",
+        "picture": "https://gravatar.com/avatar/9028e87cd3b536db3b422aa3d50a159149db13ca4d8330708b82aa9cf7886f34?size=200",
+        "location": "Lille, France",
+        "email": "julien.wittouck@gmail.com",
+        "socialLinks": [
+          "https://github.com/juwit",
+          "https://x.com/CodeKaio",
+          "https://bsky.app/profile/codeka.io",
+          "https://www.linkedin.com/in/julien-wittouck/"
+        ]
+      }
+    ],
+    "review": {
+      "average": 4.5,
+      "positives": 1,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cm9s99bne0264o63mgy98ohez",
+    "title": "Embellir des QR Codes à l’ère de la GenAI",
+    "abstract": "Découvrez comment l'intelligence artificielle générative (GenAI) révolutionne la personnalisation des QR Codes !\n\nCette présentation met en lumière les fondements techniques des QR Codes et montre, via des démonstrations pratiques, comment des outils comme **Stable Diffusion** et **ComfyUI** permettent de créer des QR Codes uniques qui allient fonctionnalité et esthétique. \n\nLe tout en local sur un PC. Plongez dans un futur où chaque scan devient une expérience visuelle engageante.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "J’ai déjà rodé une version un peu plus longue dans un webinar interne (très bon accueil) :\n- [Replay](https://youtu.be/YSRdug0ds_k)\n- [Slides](https://www.slideshare.net/slideshow/cotrecs-embellir-des-qr-codes-avec-la-genai/277364827)",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cytq1x03qsk73mmgrr9is5",
+        "name": "📊 Data & AI",
+        "description": "LLM, Agents autonomes, Data Mesh, CloudAI, Vibe Coding…"
+      }
+    ],
+    "tags": [
+      "Original ✨"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cm9s99bn80263o63mvi3w6h7u",
+        "name": "Raphael Semeteys",
+        "bio": "Raphaël Semeteys, architecte IT et responsable DevRel chez Worldline à Paris, possède plus de 25 ans d’expérience dans l’informatique. Spécialiste des logiciels libres et open source, il a animé un centre de compétences pendant neuf ans. Passionné de yoga depuis plus de 30 ans, il allie expertise technologique et bien-être holistique, offrant une vision enrichie de l’écosystème numérique.\nPour en [savoir plus](https://raphiki.github.io/).",
+        "company": "Worldline",
+        "references": "- **2025** (Devoxx France, DevCon): [Génération d'images locale et contrôlée avec Stable Diffusion](https://fr.slideshare.net/slideshow/devcon-n-24-ia-generation-d-images-locales-avec-stable-diffusion/276385964)\n- **2025** (Devoxx France): [D'OpenAI à l'IA Open Source : Naviguer entre la propriété commerciale et la collaboration ouverte](https://www.slideshare.net/slideshow/devoxx-france-2025-d-openai-a-opensource-ai-entre-propriete-commerciale-et-ouverture-collaborative/278146737)\n- **2024** (Devoxx Morocco): [The Future Beyond LLMs: Exploring Agentic AI](https://www.slideshare.net/slideshow/devoxx-morocco-2024-the-future-beyond-llms-exploring-agentic-ai/272174335)\n- **2024** (DevDay): [Dialoguer avec vos documents : découvrez la magie du RAG avec et sans OpenAI](https://www.slideshare.net/slideshow/devday-2024-dialoguer-avec-vos-documents-decouvrez-la-magie-du-rag-avec-et-sans-openai/273102671)\n- **2024** (State of Open Con, I LOVE Tech Romania, AI_dev Europe, Cloud Nord, OCX, Open Source Experience, Normandie.ai): [From OpenAI to Opensource AI: Navigating Between Commercial Ownership and Collaborative Openness](https://www.youtube.com/watch?v=tVTtyLuiYQk)\n- **2024** (Archilocus, Volcamp.io): [Une plateforme à concevoir, deux architectes: trois possibilités ?](https://www.youtube.com/watch?v=kWRMGdEcr_Q)\n- **2023** (Web2day, Nantes JUG): [Will the next version of the Internet be (re)decentralized? Understanding the architecture of Web3](https://web2day.co/en/event/la-prochaine-version-dinternet-sera-t-elle-redecentralisee-comprendre-larchitecture-du-web3/)\n- **2023** (Voxxed Days Brussels): [The hitchhiker's guide to software architecture and design](https://www.youtube.com/watch?v=vxwqD3KwdEY&ab_channel=Devoxx)\n- **2023** (Snowcamp, Orléans Tech & TADx meetups): [Une plateforme à concevoir, deux architectes: trois possibilités ?](https://www.youtube.com/watch?v=Mkol6zyJN8Y)\n- **2006-2009** (Solution Linux): several talks on open source and my QSOS project, some slides are on [SlideShare](https://fr.slideshare.net/raphaelsemeteys/presentations)\n- **2008** (Qualipso international event): keynote _Assessing maturity of open source software/project_",
+        "picture": "https://raphiki.github.io/Raphael.png",
+        "location": "Paris, France",
+        "email": "raphael.semeteys@gmail.com",
+        "socialLinks": [
+          "https://github.com/raphiki",
+          "https://x.com/RaphaelSemeteys",
+          "https://bsky.app/profile/raphiki.bsky.social",
+          "https://www.linkedin.com/in/raphaelsemeteys/"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.5,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cm9r7gery01z2o63m68opsnin",
+    "title": "Les gardiens des données à l'ère de l'IA",
+    "abstract": "Bloquer les accès aux solutions d'intelligence artificielle par peur de fuite de données est-ce vraiment une solution ? A l’ère de l’IA, comment protéger les données confidentielles et le savoir-faire des entreprises ? L'OWASP, l'ANSSI mettent en garde sur les risques de fuite de données sans vraiment fournir les solutions. Dans un monde où les données sont le trésor le plus précieux des entreprises, comment les équipes de cybersécurité vont continuer à assurer la confidentialité des données? A La Poste, on pense qu'il faut plutôt apporter des solutions que de bloquer les accès. Les solutions autour de LLM Guard et Presidio nous aident à anonymiser les données et à en tirer profit des IAs, assurant que les données sensibles restent hors de portée des cybercriminels. LLM Guard permet de rajouter des contrôles sur les prompts d'entrée mais aussi sur les réponses des IAs, en protégeant ainsi contre les attaques type prompt injection et on peut même construire nos propres règles pour compléter. Je vous propose aussi une démo de Presidio sur comment anonymiser les données et comment détecter des données sensibles dans des images générées à partir d'une IA.",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "SunnyTech 2025: Les gardiens des données à l'ère de l'IA et Les héros invisibles des livraisons bien orchestrées\nPolycloud 2025: L'IA et la blockchain, les alliés de la sécurité\nDevoxx 2025 : Quand l'IA fait le tri de manière industrialisée et Les gardiens des données à l'ère de l'IA :  https://www.devoxx.fr/agenda-2025/speaker/carmen-piciorus/ \nM3AAWG Lisbonne 2025: How the supply chain attacks can impact your Business\nDevFest Toulouse 2024: SBOM le début de la transparence: https://www.youtube.com/watch?v=4lU4SgSa9z0\nSunny Tech 2024 : https://sunny-tech.io/sessions/mon-appli-se-refait-une-sante\nPolycloud 2024: Je hack ta pipeline en 30 min\nCloud Native Montpellier 2024: https://community.cncf.io/events/details/cncf-cloud-native-montpellier-presents-chapter-6-securing-the-horizon-advanced-protection-techniques/\nDevFest Toulouse 2023 : Sous le capot du \"docker build\" https://www.youtube.com/watch?v=Yd5ap7rj5u0\nCloudSud 2023: Les dangers des grands modèles de langages https://www.youtube.com/watch?v=7_gDM5idoL0&t=5s\nDevoxx 2023: Docker au service du DevSecOps https://www.youtube.com/watch?v=sQi8HqDawgE&list=PLTbQvx84FrAQ4oAXbCkQugzA0o7ujccM-&index=78\nCloudOuest 2022: Docker: layers and cache https://www.youtube.com/watch?v=W7_2U6wHPps&t=898s",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cytq1x03qsk73mmgrr9is5",
+        "name": "📊 Data & AI",
+        "description": "LLM, Agents autonomes, Data Mesh, CloudAI, Vibe Coding…"
+      }
+    ],
+    "tags": [
+      "Speakeuse ♀️"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cm9r7gerw01z1o63mg0h1i8ig",
+        "name": "Carmen Piciorus",
+        "bio": "Après plusieurs années de développement, et quelques années dédiés à la protection de la messagerie laposte.net, j’intègre à présent une équipe  au service des projets du SI de la branche Services Courrier - Colis de La Poste. Passionnée par la cybersécurité, je me suis dédiée à faciliter la communication entre les développeurs et la sécurité pour aider aux développement des applications sécurisées et cyber-résilientes dans le cloud. Présidente de l'association à but non lucratif Signal Spam, je contribue à la lutte contre le spam et le phishing et à la protection des utilisateurs contre les arnaques transmises par mail.",
+        "company": "La Poste - Branche Services-Courrier-Colis",
+        "references": "DevFest Toulouse 2024: SBOM, le début de la transparence : https://www.youtube.com/watch?v=4lU4SgSa9z0\nSunny Tech 2024 : https://sunny-tech.io/sessions/mon-appli-se-refait-une-sante\nPolycloud 2024: Je hack ton pipeline en 30 min\nCloud Native Montpellier 2024: https://community.cncf.io/events/details/cncf-cloud-native-montpellier-presents-chapter-6-securing-the-horizon-advanced-protection-techniques/\nDevFest Toulouse 2023 : Sous le capot du \"docker build\" https://www.youtube.com/watch?v=Yd5ap7rj5u0\n\nCloudSud 2023: Les dangers des grands modèles de langages https://www.youtube.com/watch?v=7_gDM5idoL0&t=5s\n\nDevoxx 2023: Docker au service du DevSecOps https://www.youtube.com/watch?v=sQi8HqDawgE&list=PLTbQvx84FrAQ4oAXbCkQugzA0o7ujccM-&index=78\n\nCloudOuest 2022: Docker: layers and cache https://www.youtube.com/watch?v=W7_2U6wHPps&t=898s",
+        "picture": "https://lh3.googleusercontent.com/a-/AOh14Ghvp2OiYIdWWmCf7opiM68dBR-gfKTkD8Q4rBAz9g=s96-c",
+        "location": "Montpellier, France",
+        "email": "cpiciorus@gmail.com",
+        "socialLinks": []
+      }
+    ],
+    "review": {
+      "average": 3.5,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cm9mz3bhy01rjo63m5mz0ymqk",
+    "title": "45 min pour mettre son application à genoux : le guide complet du test de charge",
+    "abstract": "*“Le test de charge, c’est souvent celui qu’on fait trop tard”*\n\nDans notre quotidien, on a rencontré beaucoup de contextes où les équipes se sentaient démunies face à des incidents de prod, et n’avaient pas forcément la culture du test de charge. \n\nQuand on entend autour de nous qu’il faut tester son code, on parle la plupart du temps de Tests Unitaires ou d’Intégration. Et pourtant, à l’heure des architectures micro-services, il n’a jamais été aussi important de rester en maitrise de son système distribué. Dans un système critique, il est vital de connaitre ses limites et sa capacité, d’avoir une compétence sur ce qu’il se passe lorsqu’un système “chauffe”, et c’est là que les tests de charge prennent toute leur importance.\n\nNon seulement les équipes qu’on a formées au test de charge trouvent ça très ludique, mais surtout elles progressent beaucoup dans la maitrise de leur environnement technique (Threads, JVM, DB, configuration, isolation de bottlenecks etc…), et deviennent donc bien plus sensibles et résilientes aux enjeux de prod.\n\nL’objectif de ce talk est d’offrir cette première maitrise qui permettra à chacun de repartir avec une nouvelle compétence : la capacité de mettre en oeuvre un test de charge sur un environnement complexe (un service avec DB, une API, et de l’authentification SSO).",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "**👉 Qu’est-ce qu’on va faire exactement ?**\n\n- Comprendre le principe et le contexte dans lequel un test de charge fait sens\n- Savoir comment l’implémenter, avec quelles best practices et où se documenter\n- Savoir comment contourner les problèmes classiques (Auth, injection d’utilisateurs etc…)\n- Comprendre comment organiser ses tests de charge, y compris sur la partie exécution (dans quelle codebase, avec quelle stratégie d’exécution en CI etc…)\n\nVous repartirez avec une compréhension assez fine du test de charge et les clés pour le mettre en oeuvre sur vos projets demain.\n\n **👉 D’autres détails / inputs**\n\nLa partie implémentation sera faite en mode “crash-course” + live-coding d’un sous-ensemble, afin de garder un rythme suffisamment élevé pour tout tenir en 45 minutes. \n\nNous open-sourcerons le résultat qui met en valeur la plupart des bonnes pratiques (validées par les équipes Gatling ^^)\n\nLes points que nous n’allons à priori pas adresser :\n\n- Comment apprendre à isoler des bottlenecks, et l’outillage / observabilité qu’on peut mettre en oeuvre pour mieux analyser\n- La liste des bottlenecks usuels et les comportements qu’on peut observer\n\n—> Ces points là nous semblent plutôt des points du “day-2”, quand les gens sont déjà en mesure de faire leurs tests de charge et ont besoin d’apprendre à en faire quelque chose.\n\n—> On essaiera quand même de donner quelques Next-steps en fin de talk pour que les participants sachent ce qui les attend dans la suite\n\n🫶 Pourquoi nous plutôt qu’un autre ?\n**Nerd-skills :** peu de personnes le savent, mais Gatling a été développé chez Takima pendant 4 ans avant d’avoir sa propre société. Stéphane Landelle, le CTO et co-founder de Gatling, est l’ancien CTO de l’entreprise et a insufflé ce savoir-faire chez Takima. Nous sommes partenaires et formateurs sur le test de charge, et nous intervenons régulièrement dans des missions de conseil sur la performance.\n\n**Speaker-skills :** nous sommes tous les deux formateurs et speakers depuis plusieurs années (c’est même nous qui encadrons et formons les nouveaux speakers et speakeuses de Takima). On est bosseurs, et on travaille méticuleusement nos sujets, on essaie de toujours donner de vraies clés aux participants et à ne rien laisser au hasard pour que les gens “en aient pour leur argent”. Ce talk sera beta-testé à la fois en interne et en meetup externe.\n\n🫶 Ou a-t-il été déjà donné?\nOn le donne cette au devoxx à Paris.",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cysb8n03qqk73m2q1dpb6t",
+        "name": "🗃️ Backend",
+        "description": "Frameworks, API, Event-driven, Streaming..."
+      }
+    ],
+    "tags": [
+      "Speakeuse ♀️"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cm9mz3bhb01rgo63m44vhssyk",
+        "name": "Mathilde LORRAIN",
+        "bio": "Mathilde a percé le secret de la fusion nucléaire et ne s’éteint jamais.\nQuand on lui a dit que son API pourrait être aussi réactive qu’elle, forcément, elle n’a pas pu s’empêcher…\nPassionnée de DevOps et de Backend, elle aime quand les choses sont directes et efficaces. Comme elle.\nD’ailleurs, elle utilise volontiers son surplus d’énergie pour transmettre ses secrets. Il paraît même qu’elle va revenir faire une conf…",
+        "company": "Takima",
+        "references": "Conférencière Devoxx France, Mixit,  VoxxedDays, Volcamp\nFormatrice DevOps en écoles, \nConférencière en écoles",
+        "picture": "https://pbs.twimg.com/profile_images/1662345960305852416/eAcbfTsc_400x400.jpg",
+        "location": null,
+        "email": "mlorrain@takima.fr",
+        "socialLinks": [
+          "https://x.com/mathildelorrain"
+        ]
+      },
+      {
+        "id": "cm9mz3bhw01rio63mmfrd9uzc",
+        "name": "Loïc Ortola",
+        "bio": "Quand Loïc n’est pas en train de militer pour qu’on ne copie-colle pas les réponses de StackOverflow sans regarder la doc, il intervient en architecture dans des contextes variés en tant que CTO de Takima. Il s’implique particulièrement à donner des visions d’ensemble concrètes pour que les développeurs puissent mieux dessiner leur système cible, et des retours d’expérience pour faire gagner du temps à ceux qui se lancent, parce que ça, on le trouve pas sur Stack Overflow.",
+        "company": "Takima",
+        "references": "J'adore transmettre et j'ai commencé à enseigner dès mes débuts en tant que développeur.\nC'est un peu plus tard que j'ai pu commencer à donner des confs, en meetup, puis dans des conférences de devs, depuis environ une dizaine d'années maintenant, notamment : Devoxx, DevFest Nantes / Toulouse, Riviera Dev, DevOps D-Day, etc...",
+        "picture": "https://lh3.googleusercontent.com/a-/AOh14GgeZqPtOh3atNLSXNKqUX39kXarOVbRtG4ED4wfGJA=s96-c",
+        "location": "Paris",
+        "email": "ortola.loic@gmail.com",
+        "socialLinks": []
+      }
+    ],
+    "review": {
+      "average": 3.6666666666666665,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cm9l3ex7u01e5o63m3vovzd1f",
+    "title": "Créer son propre Jeu de Rôle en Agentic AI & MCP",
+    "abstract": "Vous êtes un Développeur ou une Développeuse, fan de Jeu de Rôle et aimez les chats ? Alors venez découvrir Cats' Tail, un Jeu de Rôle transformant des concepts complexes d'IA en une expérience de jeu immersive et évolutive !\n\nDurant ce talk, vous découvrirez comment mettre en oeuvre les techniques d'Agentic AI et MCP (Model Context Protocol) afin de créer un Maître du Jeu (MJ) orchestrant plusieurs agents, chacuns spécialisé dans une tâche particulière.\n\nEn Bonus : Enrichir l'expérience en persistant les échanges entre joueurs et MJ dans une base de données afin de renforcer l'immersion des joueurs et joueuses :)",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "> [Speaker @ Cloud Toulouse 2025](https://cloudtoulouse.com/programme/)\n\n> [Speaker @ Nantes Java User Group](https://nantesjug.org/#/events/2025_04_29)\n\n> [Speaker @ DevDay 2024](https://www.devday.be/Sessions/details/261?slug=it-works-on-my-machine)\n\n> [Speaker @ Cloud Toulouse 2024](https://www.linkedin.com/feed/update/urn:li:activity:7200788767861784576/)\n\n> [Speaker @ This is my Architecture (AWS)](https://www.youtube.com/watch?v=2L0m28ZLmtE)\n\n> User Group Co-organizer & Meetup Speaker",
+    "formats": [
+      {
+        "id": "cm9cyl27n03qkk73mrv447mzq",
+        "name": "📣 Conference",
+        "description": "50 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cytq1x03qsk73mmgrr9is5",
+        "name": "📊 Data & AI",
+        "description": "LLM, Agents autonomes, Data Mesh, CloudAI, Vibe Coding…"
+      }
+    ],
+    "tags": [
+      "Original ✨",
+      "Speakeuse ♀️",
+      "↩️ Backup"
+    ],
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "speakers": [
+      {
+        "id": "cm9l3ex7601e2o63meacbz3x7",
+        "name": "Tiffany Souterre",
+        "bio": "I love science and I love data! After finishing a PhD in genetic engineering, I continued my quest for discovering new patterns through data science and machine learning. I worked for 3 years as a Data/ML Engineer and I am currently DevRel at Microsoft. Someday, I wish to leverage artificial intelligence and genetics to improve people's lives.",
+        "company": "Microsoft",
+        "references": "Please find my references here: https://amagash.github.io/",
+        "picture": "https://lh3.googleusercontent.com/-0XDx36TcjxU/AAAAAAAAAAI/AAAAAAABQkA/-hqGP4ktCDY/photo.jpg",
+        "location": "Paris, France",
+        "email": "tiffanysouterre@gmail.com",
+        "socialLinks": [
+          "https://github.com/amagash",
+          "https://x.com/tiffanysouterre"
+        ]
+      },
+      {
+        "id": "cm9l3ex7s01e4o63mhzqbt9nv",
+        "name": "TheWitcherish",
+        "bio": "Helping Devs build cool stuff, learn faster, and laugh along the way — one bug at a time.",
+        "company": null,
+        "references": "DevFest Nantes 2025\nVolcamp 2025\nCloud Toulouse 2025\nDevDay.be 2024\nCloud Toulouse 2024\nSnowCamp 2024\nAWS Meetups (Co-organizer and Speaker)\nAWS re:Invent 2022, 2023\nAWS Summit 2022, 2023, 2024",
+        "picture": "https://lh3.googleusercontent.com/a/AEdFTp7PvJLVubaFLWMiAONNoTTqX-MzJdYxOyI2oV5lww=s96-c",
+        "location": "Rivia",
+        "email": "arnaud.j0027@gmail.com",
+        "socialLinks": [
+          "https://github.com/TheWitcherish",
+          "https://x.com/TheWitcherish",
+          "https://www.linkedin.com/in/TheWitcherish/",
+          "https://www.twitch.tv/TheWitcherish"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.5,
+      "positives": 1,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cm9k8ml29017xo63mhipga7qm",
+    "title": "Déchaînez le Chaos : Tester la résilience de votre application avec Chaos Monkey",
+    "abstract": "# Déchaînez le Chaos : Tester la Résilience de Votre Application avec Chaos Monkey\nLes systèmes modernes sont de plus en plus complexes, distribués et imprévisibles. Face à cette réalité, une question se pose : **comment s’assurer que votre application peut survivre à l’inattendu ?**\n\nC’est là qu’intervient le **Chaos Engineering**, une discipline qui consiste à introduire volontairement des perturbations pour tester la robustesse et la résilience des systèmes avant qu’un incident réel ne survienne.\n\nDans ce talk, nous explorerons comment **Chaos Monkey for Spring Boot** permet de simuler des comportement inattendu au sein de votre application Spring Boot .",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "BEGINNER",
+    "references": "* **repo github** : https://github.com/ErwanLT/springboot-demo\n* **article lié** : https://www.sfeir.dev/back/introduisez-du-chaos-dans-votre-application-spring-boot/\n\nPlan : \n- présentation du chaos engineering\n- Chaos Monkey par Netflix, les pionniers dans le domaine\n- Chaos Monkey pour Spring Boot\n  - présentation de l’outils\n  - comment l’installer\n  - configurations\n    - les watchers\n    - les assaults\n  - démo\n\n[Liens vers les slides au format PDF](https://drive.google.com/file/d/19OW7kfBqq55BCJJixVm3kvKIeRJS7PMo/view?usp=sharing)",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9cysb8n03qqk73m2q1dpb6t",
+        "name": "🗃️ Backend",
+        "description": "Frameworks, API, Event-driven, Streaming..."
+      }
+    ],
+    "tags": [],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cm9k8ml27017wo63m325bvr7f",
+        "name": "Erwan Le Tutour",
+        "bio": "# LE TUTOUR Erwan\n## 🧑‍💻 Analyste programmeur\nDéveloppeur passionné, curieux et toujours en quête d'amélioration continue, je mets mes compétences au service de projets exigeants avec rigueur et enthousiasme. Mes expériences variées m'ont permis d'évoluer dans des environnements agiles, et de contribuer activement à des projets à fort impact métier. \n\n## 🎯 Mes valeurs\n- Apprendre\n- Transmettre\n- Tout faire avec passion",
+        "company": "SFEIR",
+        "references": "# Talks\n- participation tremplin devQuest 2025 : sujet [chaos engineering](https://www.sfeir.dev/back/introduisez-du-chaos-dans-votre-application-spring-boot/)",
+        "picture": "https://avatars.githubusercontent.com/u/21158564?v=4",
+        "location": "Paris, France",
+        "email": "erwanletutour.elt@gmail.com",
+        "socialLinks": [
+          "https://github.com/ErwanLT",
+          "https://x.com/ErwanLeTutour",
+          "https://www.sfeir.dev/author/erwan/"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.8333333333333335,
+      "positives": 0,
+      "negatives": 0
+    }
+  },
+  {
+    "id": "cm9jodb960103o63mwr1f1r0l",
+    "title": "Comment trois jeunes spéléologues sont descendus dans les entrailles de Linux",
+    "abstract": "S'il y a bien un projet utilisé à l'échelle mondiale, c'est le Kernel Linux. Un énorme morceau de code, que celles et ceux qui en ont entendu parler considèrent comme un code mystique, inaccessible au commun des mortels. Il n'en est pourtant rien : derrière ce nom qui rebute, se cache en réalité du code, des gens, des communautés. Et comme tout code, on y retrouve des features à coder, des bugs à corriger, des smells à nettoyer.\n\nAujourd'hui, je vous propose de vous faire découvrir comment nous avons découvert, investigué, troubleshooté, corrigé, et proposé à la communauté un correctif pour un bug vieux de six ans dans le Kernel ; et ce sans expérience précédente sur cet énorme morceau de code.\n\nEt rassurez-vous ; le code le plus compliqué que vous allez voir aujourd'hui, c'est un `if` de deux lignes. Aucune connaissance n'est requise, nous reprenons tout de zéro pour devenir des héros !",
+    "deliberationStatus": "ACCEPTED",
+    "confirmationStatus": "CONFIRMED",
+    "publicationStatus": "PUBLISHED",
+    "level": "INTERMEDIATE",
+    "references": "- https://forestier.re/posts/2024-11-22-into-the-kernel/\n- https://forestier.re/presentations/talk-kernel-patch.html",
+    "formats": [
+      {
+        "id": "cm9cyiilo03qjk73moc5mccoc",
+        "name": "⚡️ Quickie",
+        "description": "20 minutes ⏱️\n(si vous souhaitez une session de Q&A elle devra être comprise dans cette durée)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "cm9czy8ep03quk73mqfkzoo0d",
+        "name": "🔧 Cloud, Infra & DevOps",
+        "description": "Containerization, Serverless, Orchestration, CI-CD…"
+      }
+    ],
+    "tags": [
+      "Déjà vu 🎙️",
+      "⚡️ plutôt en Quickie"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "speakers": [
+      {
+        "id": "cm9jodb930102o63m2dcdtcei",
+        "name": "Florian Forestier",
+        "bio": "Passionné par l'informatique depuis que j'ai eu un clavier entre les mains (quelque part entre Adibou et Akakliké), et pur produit du terroir Auvergnat, je sévis en tant que consultant pour Zenika, et en tant qu'enseignant à l'Université Clermont-Auvergne sur des sujets liés aux technologies Cloud, la philosophie DevOps, et au Génie Logiciel.\n\nAvant Zenika, j'ai passé 6 ans chez un cloud provider (réellement) souverain, ce qui m'a permis de m'intéresser aux enjeux de souveraineté, de gouvernance de la donnée, mais également à des sujets bien plus terre à terre : infrastructure, virtualisation, développement, philosophie DevOps, etc.\n\nBref, vous l'aurez compris, je suis intéressé par à peu près tout ce qui a un circuit imprimé dedans (ou dehors, ou au milieu) ; et surtout sortir de ma zone de confort, quitte à devenir un \"homme-orchestre\" de l'IT.",
+        "company": "Zenika",
+        "references": "- [Mes trains Jouef passent au numérique, avec TinyGo et des RaspberryPi !](https://www.youtube.com/watch?v=ZI9PwlMAKQM)\n- [On a monté notre cluster Docker Swarm sans downtime](https://www.clermontech.org/talks/api-hour-62/florian-forestier-upgrade-docker-swarm.html)\n- [SigmaLambdaPi, un cluster de Raspberry dans un rack 2U !](https://www.clermontech.org/talks/api-hour-46/Christophe-Prugnaud-and-Florian-Forestier-Sigma-Lambda-Pi.html)\n- [Terraform - Découverte de l'Infrastructure as Code](https://www.clermontech.org/talks/api-hour-43/Florian-Forestier-Decouverte-de-l-Infrastructure-as-Code.html)",
+        "picture": "https://cdn.bsky.app/img/avatar/plain/did:plc:qxjqqquraxm6u4gdlptoqivb/bafkreiaoubwec3gwmzh4g5vijxf6n2lcovwh4y5rdek4pufjqerfzrhl2q@jpeg",
+        "location": "Clermont-Ferrand, France",
+        "email": "florian.forestier15@gmail.com",
+        "socialLinks": [
+          "https://bsky.app/profile/florian.forestier.re",
+          "https://www.linkedin.com/in/florian-forestier/",
+          "https://github.com/florian-forestier",
+          "https://forestier.re/"
+        ]
+      }
+    ],
+    "review": {
+      "average": 3.8,
+      "positives": 0,
+      "negatives": 0
+    }
+  }
+]

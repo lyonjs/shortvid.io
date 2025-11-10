@@ -57,8 +57,8 @@ dependencies:
     specifier: ^3.4.4
     version: 3.5.0
   morgan:
-    specifier: 1.10.0
-    version: 1.10.0
+    specifier: 1.10.1
+    version: 1.10.1
   next:
     specifier: 14.2.32
     version: 14.2.32(react-dom@18.3.1)(react@18.3.1)
@@ -5223,15 +5223,15 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dev: true
 
-  /morgan@1.10.0:
-    resolution: {integrity: sha512-AbegBVI4sh6El+1gNwvD5YIck7nSA36weD7xvIxG4in80j/UoK8AEGaWnnz8v1GxonMCltmlNs5ZKbGvl9b1XQ==}
+  /morgan@1.10.1:
+    resolution: {integrity: sha512-223dMRJtI/l25dJKWpgij2cMtywuG/WiUKXdvwfbhGKBhy1puASqXwFzmWZ7+K73vUPoR7SS2Qz2cI/g9MKw0A==}
     engines: {node: '>= 0.8.0'}
     dependencies:
       basic-auth: 2.0.1
       debug: 2.6.9
       depd: 2.0.0
       on-finished: 2.3.0
-      on-headers: 1.0.2
+      on-headers: 1.1.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5467,8 +5467,8 @@ packages:
       ee-first: 1.1.1
     dev: false
 
-  /on-headers@1.0.2:
-    resolution: {integrity: sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==}
+  /on-headers@1.1.0:
+    resolution: {integrity: sha512-737ZY3yNnXy37FHkQxPzt4UZ2UWPWiCZWLvFZ4fu5cueciegX0zGPnrlY6bwRg4FdQOe9YU8MkmJwGhoMybl8A==}
     engines: {node: '>= 0.8'}
     dev: false
 

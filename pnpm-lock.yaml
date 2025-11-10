@@ -96,7 +96,7 @@ devDependencies:
     version: 6.6.3
   '@testing-library/react':
     specifier: 16.2.0
-    version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.5)(@types/react@18.3.18)(react-dom@18.3.1)(react@18.3.1)
+    version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.7)(@types/react@18.3.26)(react-dom@18.3.1)(react@18.3.1)
   '@testing-library/user-event':
     specifier: 14.6.1
     version: 14.6.1(@testing-library/dom@10.4.0)
@@ -110,11 +110,11 @@ devDependencies:
     specifier: 20.16.6
     version: 20.16.6
   '@types/react':
-    specifier: 18.3.18
-    version: 18.3.18
+    specifier: 18.3.26
+    version: 18.3.26
   '@types/react-dom':
-    specifier: 18.3.5
-    version: 18.3.5(@types/react@18.3.18)
+    specifier: 18.3.7
+    version: 18.3.7(@types/react@18.3.26)
   '@types/testing-library__jest-dom':
     specifier: 5.14.9
     version: 5.14.9
@@ -1559,7 +1559,7 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.5)(@types/react@18.3.18)(react-dom@18.3.1)(react@18.3.1):
+  /@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@18.3.7)(@types/react@18.3.26)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-2cSskAvA1QNtKc8Y9VJQRv0tm3hLVgxRGDB+KYhIaPQJ1I+RHbhIXcM+zClKXzMes/wshsMVzf4B9vS4IZpqDQ==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -1576,8 +1576,8 @@ packages:
     dependencies:
       '@babel/runtime': 7.26.0
       '@testing-library/dom': 10.4.0
-      '@types/react': 18.3.18
-      '@types/react-dom': 18.3.5(@types/react@18.3.18)
+      '@types/react': 18.3.26
+      '@types/react-dom': 18.3.7(@types/react@18.3.26)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     dev: true
@@ -1704,16 +1704,16 @@ packages:
     resolution: {integrity: sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==}
     dev: true
 
-  /@types/react-dom@18.3.5(@types/react@18.3.18):
-    resolution: {integrity: sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==}
+  /@types/react-dom@18.3.7(@types/react@18.3.26):
+    resolution: {integrity: sha512-MEe3UeoENYVFXzoXEWsvcpg6ZvlrFNlOQ7EOsvhI3CfAXwzPfO8Qwuxd40nepsYKqyyVQnTdEfv68q91yLcKrQ==}
     peerDependencies:
       '@types/react': ^18.0.0
     dependencies:
-      '@types/react': 18.3.18
+      '@types/react': 18.3.26
     dev: true
 
-  /@types/react@18.3.18:
-    resolution: {integrity: sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==}
+  /@types/react@18.3.26:
+    resolution: {integrity: sha512-RFA/bURkcKzx/X9oumPG9Vp3D3JUgus/d0b67KB0t5S/raciymilkOa66olh78MUI92QLbEJevO7rvqU/kjwKA==}
     dependencies:
       '@types/prop-types': 15.7.13
       csstype: 3.1.3

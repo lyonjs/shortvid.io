@@ -31,7 +31,7 @@ dependencies:
     version: 4.0.377(react-dom@18.3.1)(react@18.3.1)
   '@remotion/zod-types':
     specifier: 4.0.377
-    version: 4.0.377(react-dom@18.3.1)(react@18.3.1)(zod@3.24.2)
+    version: 4.0.377(react-dom@18.3.1)(react@18.3.1)(zod@3.25.76)
   '@types/jest':
     specifier: 29.5.14
     version: 29.5.14
@@ -78,8 +78,8 @@ dependencies:
     specifier: 4.0.377
     version: 4.0.377(react-dom@18.3.1)(react@18.3.1)
   zod:
-    specifier: 3.24.2
-    version: 3.24.2
+    specifier: 3.25.76
+    version: 3.25.76
 
 devDependencies:
   '@iconify/react':
@@ -1538,13 +1538,13 @@ packages:
       - react-dom
     dev: false
 
-  /@remotion/zod-types@4.0.377(react-dom@18.3.1)(react@18.3.1)(zod@3.24.2):
+  /@remotion/zod-types@4.0.377(react-dom@18.3.1)(react@18.3.1)(zod@3.25.76):
     resolution: {integrity: sha512-yKQFnoID1hqufQW/kRij3UzaodZPzeCImUSJ/SigHhkDasJ15ETCv/Q5bOLVISQ0NBu0R6+hu7o8w8H1lvzFcA==}
     peerDependencies:
       zod: 3.22.3
     dependencies:
       remotion: 4.0.377(react-dom@18.3.1)(react@18.3.1)
-      zod: 3.24.2
+      zod: 3.25.76
     transitivePeerDependencies:
       - react
       - react-dom
@@ -7857,6 +7857,6 @@ packages:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
     dev: false
 
-  /zod@3.24.2:
-    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+  /zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
     dev: false

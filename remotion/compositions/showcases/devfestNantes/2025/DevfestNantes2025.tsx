@@ -14,11 +14,11 @@ import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
 import {ShowcaseDevfestNantes2024Schema} from '../types/types';
 
 import {Details} from './Details';
+import {Fireflies} from './Fireflies';
 import {Logo} from './Logo';
 import {Speakers} from './Speakers';
-import {TalkTitle} from './TalkTitle';
-import {Fireflies} from './Fireflies';
 import {SweepFirefly} from './SweepFirefly';
+import {TalkTitle} from './TalkTitle';
 
 const {fontFamily} = loadFont();
 export const DevfestNantes2025 = ({

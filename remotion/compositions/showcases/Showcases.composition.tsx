@@ -2,6 +2,7 @@ import React from 'react';
 import {Folder} from 'remotion';
 
 import {AlpesCraftComposition} from './alpescraft/AlpesCraft.composition';
+import {BdxioComposition} from './bdxio/Bdxio.composition';
 import {CampingDesSpeakersComposition} from './campingDesSpeakers/CampingDesSpeakers.composition';
 import {CodeInTheDarkComposition} from './codeInTheDark/CodeInTheDark.composition';
 import {DevfestLilleComposition} from './devfestLille/DevfestLille.composition';
@@ -22,6 +23,7 @@ export const ShowcasesComposition: React.FC = () => {
 		<Folder name="Conferences">
 			<LyonJSComposition />
 			<AlpesCraftComposition />
+			<BdxioComposition />
 			<TouraineTechComposition />
 			<SnowcampComposition />
 			<VeryTechTripComposition />

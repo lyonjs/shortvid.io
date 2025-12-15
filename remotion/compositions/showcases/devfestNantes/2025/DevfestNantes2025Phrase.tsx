@@ -8,7 +8,6 @@ import {
 	staticFile,
 	useCurrentFrame,
 	useVideoConfig,
-	Video,
 } from 'remotion';
 import {z} from 'zod';
 

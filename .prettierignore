@@ -1,4 +1,30 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Lock files
 pnpm-lock.yaml
 pnpm-workspace.yaml
+.pnpm-store/
+package-lock.json
 
-.next/
+# Misc
+.DS_Store
+*.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+
+# Vercel
+.vercel/
+
+# Coverage
+coverage/

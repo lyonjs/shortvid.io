@@ -21,6 +21,21 @@ jobs:
       - run: pnpm install --frozen-lockfile --prefer-offline
       - run: pnpm run test
 
+  lint:
+    name: 🔍 Check lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: pnpm/action-setup@v3.0.0
+        name: Install pnpm
+        with:
+          version: 8
+      - uses: actions/setup-node@main
+        with:
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --prefer-offline
+      - run: pnpm lint
+
   format:
     name: 💅 Check format
     runs-on: ubuntu-latest
@@ -34,7 +49,7 @@ jobs:
         with:
           cache: pnpm
       - run: pnpm install --frozen-lockfile --prefer-offline
-      - run: pnpm prettier --check .
+      - run: pnpm format:check
 
   nextjs:
     name: ⚛️ NextJS application

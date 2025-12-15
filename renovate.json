@@ -13,7 +13,7 @@
 		{
 			"matchUpdateTypes": ["minor", "patch"],
 			"automerge": true,
-			"automergeType": "branch"
+			"automergeType": "pr"
 		}
 	]
 }

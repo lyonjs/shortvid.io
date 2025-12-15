@@ -21,11 +21,11 @@ export const DevfestLyon = ({
 }: z.infer<typeof ShowcaseSchema>) => {
 	return (
 		<AbsoluteFill>
-			<Sequence name="Background" from={0}>
+			<Sequence name="Background">
 				<BackgroundRhone />
 			</Sequence>
 
-			<Sequence name="Intro" from={0} durationInFrames={230}>
+			<Sequence name="Intro" durationInFrames={230}>
 				<IntroAnimation />
 			</Sequence>
 

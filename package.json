@@ -24,15 +24,15 @@
 		"serve": "node server.mjs"
 	},
 	"dependencies": {
-		"@remotion/bundler": "4.0.377",
-		"@remotion/cli": "4.0.377",
-		"@remotion/google-fonts": "4.0.377",
-		"@remotion/lottie": "4.0.377",
-		"@remotion/noise": "4.0.377",
-		"@remotion/player": "4.0.377",
-		"@remotion/renderer": "4.0.377",
-		"@remotion/shapes": "4.0.377",
-		"@remotion/zod-types": "4.0.377",
+		"@remotion/bundler": "4.0.390",
+		"@remotion/cli": "4.0.390",
+		"@remotion/google-fonts": "4.0.390",
+		"@remotion/lottie": "4.0.390",
+		"@remotion/noise": "4.0.390",
+		"@remotion/player": "4.0.390",
+		"@remotion/renderer": "4.0.390",
+		"@remotion/shapes": "4.0.390",
+		"@remotion/zod-types": "4.0.390",
 		"@types/jest": "29.5.14",
 		"@vercel/analytics": "^1.0.0",
 		"body-parser": "1.20.3",
@@ -47,7 +47,7 @@
 		"node-fetch": "^3.3.0",
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
-		"remotion": "4.0.377",
+		"remotion": "4.0.390",
 		"zod": "3.25.76"
 	},
 	"devDependencies": {

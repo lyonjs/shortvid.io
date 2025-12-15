@@ -71,7 +71,7 @@ export const DevfestNantesPhrase2025 = ({
 				backgroundColor: '#22170D',
 			}}
 		>
-			<Sequence from={0}>
+			<Sequence>
 				<BackgroundFiller
 					imageUrl={staticFile(
 						'images/showcases/devfestNantes/2025/library.png',

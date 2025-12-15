@@ -14,7 +14,9 @@ export const useSelectedTheme = () => {
 
 	useEffect(() => {
 		const localTheme = localStorage.getItem('theme');
-		localTheme && setSelectedTheme(localTheme);
+		if (localTheme) {
+			setSelectedTheme(localTheme);
+		}
 	}, []);
 
 	const handleSelectTheme = (

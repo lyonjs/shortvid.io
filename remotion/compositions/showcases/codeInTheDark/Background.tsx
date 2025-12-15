@@ -9,13 +9,19 @@ export const Background = () => {
 				display: 'flex',
 				justifyContent: 'center',
 				alignItems: 'center',
-				objectFit: 'cover',
-				backgroundPosition: 'center',
-				backgroundImage: `url(${staticFile(
-					'/images/showcases/codeInTheDark/background.png',
-				)})`,
 			}}
 		>
+			<Img
+				src={staticFile('/images/showcases/codeInTheDark/background.png')}
+				style={{
+					position: 'absolute',
+					top: 0,
+					left: 0,
+					width: '100%',
+					height: '100%',
+					objectFit: 'cover',
+				}}
+			/>
 			<Img
 				src={staticFile(
 					'/images/showcases/codeInTheDark/codeInTheDarkLogo.png',

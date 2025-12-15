@@ -94,7 +94,7 @@ export const DevfestNantes2025 = ({
 					}}
 				/>
 			</Sequence>
-			<Sequence from={0} durationInFrames={118}>
+			<Sequence durationInFrames={118}>
 				<Video
 					src={staticFile('images/showcases/devfestNantes/2025/background.mp4')}
 					style={{opacity: videoOpacity}}

@@ -86,8 +86,8 @@ devDependencies:
     specifier: ^9.17.0
     version: 9.39.2
   '@iconify/react':
-    specifier: ^5.0.0
-    version: 5.2.1(react@18.3.1)
+    specifier: ^6.0.0
+    version: 6.0.2(react@18.3.1)
   '@next/eslint-plugin-next':
     specifier: ^14.2.35
     version: 14.2.35
@@ -865,8 +865,8 @@ packages:
     engines: {node: '>=18.18'}
     dev: true
 
-  /@iconify/react@5.2.1(react@18.3.1):
-    resolution: {integrity: sha512-37GDR3fYDZmnmUn9RagyaX+zca24jfVOMY8E1IXTqJuE8pxNtN51KWPQe3VODOWvuUurq7q9uUu3CFrpqj5Iqg==}
+  /@iconify/react@6.0.2(react@18.3.1):
+    resolution: {integrity: sha512-SMmC2sactfpJD427WJEDN6PMyznTFMhByK9yLW0gOTtnjzzbsi/Ke/XqsumsavFPwNiXs8jSiYeZTmLCLwO+Fg==}
     peerDependencies:
       react: '>=16'
     dependencies:

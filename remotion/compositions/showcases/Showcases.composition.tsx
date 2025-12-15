@@ -5,6 +5,7 @@ import {AlpesCraftComposition} from './alpescraft/AlpesCraft.composition';
 import {CampingDesSpeakersComposition} from './campingDesSpeakers/CampingDesSpeakers.composition';
 import {CodeInTheDarkComposition} from './codeInTheDark/CodeInTheDark.composition';
 import {DevfestLilleComposition} from './devfestLille/DevfestLille.composition';
+import {DevfestLyonComposition} from './devfestLyon/DevfestLyon.composition';
 import {DevfestNantesComposition} from './devfestNantes/DevfestNantes.composition';
 import {DevfestStrasbourgComposition} from './devfestStrasbourg/2024/DevfestStrasbourg.composition';
 import {DevoxxComposition} from './devoxx/Devoxx.composition';
@@ -31,6 +32,7 @@ export const ShowcasesComposition: React.FC = () => {
 			<VolcampComposition />
 			<DevfestNantesComposition />
 			<DevfestLilleComposition />
+			<DevfestLyonComposition />
 			<DevfestStrasbourgComposition />
 			<DevQuestComposition />
 		</Folder>

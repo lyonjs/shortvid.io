@@ -68,7 +68,7 @@
 		"@types/web": "0.0.294",
 		"@typescript-eslint/eslint-plugin": "^8.18.0",
 		"@typescript-eslint/parser": "^8.18.0",
-		"autoprefixer": "10.4.22",
+		"autoprefixer": "10.4.23",
 		"debug": "4.4.3",
 		"eslint": "^9.17.0",
 		"eslint-config-flat-gitignore": "^2.1.0",

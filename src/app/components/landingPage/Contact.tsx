@@ -16,7 +16,7 @@ const CONTACTS = [
 	},
 	{
 		name: 'Mickael Alves',
-		twitter: 'CruuzAzul',
+		twitter: 'mickaelalvs',
 		pictureUrl: staticFile('/images/app/contact/mickael-alves.jpeg'),
 	},
 ];

@@ -1,12 +1,12 @@
 # [0001] Repository structure for composable animations and videos 📝
 
 - 🔢 RFC Number: 0001
-- 👤 Author: @Slashgear, @CruuzAzul
+- 👤 Author: @Slashgear, @mickaelalvs
 - ⏳ Status: _PENDING_
 
 ## Abstract 👋🏼
 
-We started with @CruuzAzul this project a few months ago first to generate the templates of videos of the association LyonJS (first one, then two, then others).
+We started with @mickaelalvs this project a few months ago first to generate the templates of videos of the association LyonJS (first one, then two, then others).
 
 For the sake of simplicity and speed, copy and paste may have been used excessively to duplicate behaviors and displays.
 

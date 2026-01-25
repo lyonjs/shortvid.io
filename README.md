@@ -67,6 +67,8 @@ Don't hesitate to fork this repository to implement your specific needs.
 
 [Take a look at the contributing documentation.](./CONTRIBUTING.md)
 
-## Sponsor
+## Built With
 
-[![Vercel](https://images.ctfassets.net/e5382hct74si/78Olo8EZRdUlcDUFQvnzG7/fa4cdb6dc04c40fceac194134788a0e2/1618983297-powered-by-vercel.svg)](https://vercel.com?utm_source=lyonjs&utm_campaign=oss)
+- [Remotion](https://www.remotion.dev/) - Video generation framework
+- [Next.js](https://nextjs.org/) - React framework
+- [React](https://react.dev/) - UI library

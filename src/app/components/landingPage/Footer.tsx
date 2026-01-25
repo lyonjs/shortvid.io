@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
-import {PoweredByVercel} from '../../PoweredByVercel';
-import {SwitchThemeButtons} from '../../SwitchThemeButtons';
+import Link from 'next/link';
 
 import styles from '../../../../styles/app/layout/footer.module.css';
 
@@ -16,16 +14,38 @@ export const Footer = () => {
 				height={70}
 				className={styles.footerLogo}
 			/>
-			<div className={styles.bottomBar}>
-				<a
-					href="https://vercel.com?utm_source=lyonjs&utm_campaign=oss"
-					className={styles.vercelLight}
+			<nav className={styles.footerNav}>
+				<Link
+					href="https://github.com/lyonjs/shortvid.io"
+					target="_blank"
+					rel="noopener noreferrer"
 				>
-					<PoweredByVercel />
-				</a>
-				<SwitchThemeButtons />
-			</div>
-			<span>© Copyright 2023 LyonJs - Made with 💜 and JS</span>
+					GitHub
+				</Link>
+				<Link
+					href="https://github.com/lyonjs/shortvid.io/discussions"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Discussions
+				</Link>
+				<Link
+					href="https://github.com/lyonjs/shortvid.io/blob/main/CONTRIBUTING.md"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Contributing
+				</Link>
+			</nav>
+			<Link
+				href="https://www.remotion.dev/"
+				target="_blank"
+				rel="noopener noreferrer"
+				className={styles.remotionLink}
+			>
+				Powered by Remotion
+			</Link>
+			<span>© Copyright 2024 Shortvid.io - Made with 💜 and React</span>
 		</footer>
 	);
 };

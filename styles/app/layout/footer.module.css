@@ -4,42 +4,72 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	gap: 1rem;
-	margin: 2rem;
-	padding-top: 1.5rem;
+	gap: 1.5rem;
+	margin: 4rem 2rem 2rem;
+	padding-top: 3rem;
 	border-top: 1px solid transparent;
 	border-image: linear-gradient(
 			90deg,
 			transparent,
-			var(--color-separator),
+			var(--purple-500),
 			transparent
 		)
 		1;
 
 	.footerLogo {
 		position: absolute;
-		top: -20px;
+		top: -35px;
 		background: var(--color-background);
 		padding-inline: 20px;
 		width: 80px;
+		height: auto;
 	}
 
-	.vercelLight {
-		display: block;
-		width: max-content;
-	}
-
-	.bottomBar {
-		width: 100%;
+	.footerNav {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 1rem;
+		gap: 2.5rem;
+		margin-top: 0.5rem;
+
+		a {
+			color: var(--color-text-secondary);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: color 0.2s ease;
+
+			&:hover {
+				color: var(--color-primary);
+			}
+		}
+	}
+
+	.remotionLink {
+		color: var(--purple-200);
+		text-decoration: none;
+		font-size: 0.9rem;
+		font-weight: 500;
+		padding: 0.5rem 1rem;
+		background: var(--purple-800);
+		border-radius: 2rem;
+		transition: all 0.2s ease;
+
+		&:hover {
+			background: var(--purple-700);
+			color: var(--purple-100);
+		}
+	}
+
+	span {
+		color: var(--color-text-secondary);
+		font-size: 0.875rem;
 	}
 }
 
 @media screen and (max-width: 600px) {
-	.bottomBar {
-		flex-direction: column;
+	.footer {
+		.footerNav {
+			flex-direction: column;
+			gap: 1rem;
+		}
 	}
 }

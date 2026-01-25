@@ -9,13 +9,18 @@ describe('<Hero />', () => {
 		render(<Hero />);
 
 		const title = screen.getByRole('heading', {
-			name: 'Simplify your social media communications',
+			name: 'Generate event content in seconds, not hours',
 		});
 		const subTitle = screen.getByRole('heading', {
-			name: 'Choose among various templates to customise with your assets and contents. Then generate and download your video in one click',
+			name: 'Create videos, images, and PDFs for your conferences and meetups. Open-source, powered by React and Remotion.',
 		});
+
+		const editorLink = screen.getByRole('link', {name: 'Try the Editor'});
+		const githubLink = screen.getByRole('link', {name: /View on GitHub/i});
 
 		expect(title).toBeVisible();
 		expect(subTitle).toBeVisible();
+		expect(editorLink).toBeVisible();
+		expect(githubLink).toBeVisible();
 	});
 });

@@ -12,27 +12,24 @@ describe('<Footer />', () => {
 			name: 'Shortvid.io monogram',
 		});
 
-		const vercelImg = screen.getByRole('img', {
-			name: 'Vercel',
+		const githubLink = screen.getByRole('link', {name: 'GitHub'});
+		const discussionsLink = screen.getByRole('link', {name: 'Discussions'});
+		const contributingLink = screen.getByRole('link', {name: 'Contributing'});
+		const remotionLink = screen.getByRole('link', {
+			name: 'Powered by Remotion',
 		});
-		const vercelLink = screen.getByRole('link', {
-			name: 'Vercel',
-		});
-
-		const themeSwitchButtons = screen.getByRole('radiogroup');
 
 		const footer = screen.getByRole('contentinfo');
 		const copyright = screen.getByText(
-			'© Copyright 2023 LyonJs - Made with 💜 and JS',
+			'© Copyright 2024 Shortvid.io - Made with 💜 and React',
 		);
 
 		expect(logo).toBeVisible();
-
-		expect(vercelImg).toBeVisible();
-		expect(vercelLink).toBeVisible();
-
+		expect(githubLink).toBeVisible();
+		expect(discussionsLink).toBeVisible();
+		expect(contributingLink).toBeVisible();
+		expect(remotionLink).toBeVisible();
 		expect(footer).toBeVisible();
-		expect(themeSwitchButtons).toBeVisible();
 		expect(copyright).toBeVisible();
 	});
 });

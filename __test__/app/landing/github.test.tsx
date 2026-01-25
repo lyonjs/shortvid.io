@@ -9,18 +9,16 @@ describe('<Github />', () => {
 		render(<Github />);
 
 		const sectionTitle = screen.getByRole('heading', {
-			name: 'Open Github discussion',
+			name: 'Need a custom template?',
 		});
 
 		const discussionInfos = screen.getByText(
-			'If you would like a showcase video for your event or if you have an idea of a new template, we can create them! All you have to do is open a discussion on our Github so that we can exchange with you about it.',
+			/Want a showcase video for your event/i,
 		);
-		const forkInfos = screen.getByText(
-			'You can also create your own template and showcases yourself by forking the project, like that you will have access to all the templates already in the app in addition of your customs ones.',
-		);
+		const forkInfos = screen.getByText(/You can also fork the project/i);
 
 		const githubLink = screen.getByRole('link', {
-			name: 'Open a discussion',
+			name: /Start a discussion/i,
 		});
 
 		expect(sectionTitle).toBeVisible();

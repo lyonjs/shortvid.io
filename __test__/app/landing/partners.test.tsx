@@ -10,7 +10,7 @@ describe('<Partners />', () => {
 		render(<Partners />);
 
 		const sectionTitle = screen.getByRole('heading', {
-			name: 'They worked with us',
+			name: 'They trust us',
 		});
 
 		const partners = screen.getAllByRole('link');

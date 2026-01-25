@@ -1,0 +1,116 @@
+.useCases {
+	margin: 6rem 0;
+	padding: 4rem 0;
+	text-align: center;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		height: 1px;
+		background: linear-gradient(
+			90deg,
+			transparent,
+			var(--purple-500),
+			transparent
+		);
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+		background: linear-gradient(
+			135deg,
+			var(--color-text) 0%,
+			var(--purple-100) 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+		color: var(--color-text-secondary);
+		margin-bottom: 3rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.useCaseCard {
+		padding: 2rem;
+		text-align: left;
+		background: linear-gradient(
+			180deg,
+			var(--purple-800) 0%,
+			var(--purple-850) 100%
+		);
+		border-radius: 1rem;
+		border: 1px solid var(--purple-700);
+		transition: all 0.3s ease;
+
+		&:hover {
+			transform: translateY(-4px);
+			border-color: var(--purple-500);
+			box-shadow: 0 12px 40px rgba(90, 24, 154, 0.3);
+		}
+
+		.cardIcon {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+		}
+
+		h3 {
+			font-size: 1.35rem;
+			font-weight: 700;
+			margin-bottom: 0.75rem;
+			color: var(--color-text);
+		}
+
+		p {
+			font-size: 0.95rem;
+			color: var(--color-text-secondary);
+			line-height: 1.6;
+			margin-bottom: 1.25rem;
+		}
+
+		.examples {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.tag {
+			display: inline-block;
+			padding: 0.35rem 0.85rem;
+			background: var(--purple-600);
+			border-radius: 2rem;
+			font-size: 0.8rem;
+			color: var(--purple-100);
+			font-weight: 500;
+			transition: background 0.2s ease;
+
+			&:hover {
+				background: var(--purple-500);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.useCases .grid {
+		grid-template-columns: 1fr;
+		max-width: 400px;
+	}
+}

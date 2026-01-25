@@ -1,15 +1,85 @@
-export const SPONSORS = [
+export const FEATURES = [
 	{
-		name: 'Vercel',
-		logo: '/images/app/sponsors/light/vercelLogo.svg',
-		logoDark: '/images/app/sponsors/dark/vercelLogo.svg',
-		url: 'https://vercel.com/home',
+		title: 'Videos',
+		description: 'Generate MP4 and GIF videos for social media announcements',
+		icon: 'mdi:video',
 	},
 	{
-		name: 'Clever Cloud',
-		logo: '/images/app/sponsors/light/cleverCloudLogo.svg',
-		logoDark: '/images/app/sponsors/dark/cleverCloudLogo.svg',
-		url: 'https://www.clever-cloud.com/',
+		title: 'Images',
+		description: 'Create JPEG and PNG images for thumbnails and posters',
+		icon: 'mdi:image',
+	},
+	{
+		title: 'PDF Documents',
+		description: 'Export printable PDFs for schedules and signage',
+		icon: 'mdi:file-pdf-box',
+	},
+	{
+		title: 'Customizable Templates',
+		description: 'Adapt colors, logos, and content to match your brand',
+		icon: 'mdi:palette',
+	},
+];
+
+export const USE_CASES = [
+	{
+		title: 'Conferences',
+		description:
+			'Generate speaker announcements, schedules, and sponsor showcases',
+		examples: ['Devoxx', 'DevFest', 'MiXiT'],
+		emoji: '🎤',
+	},
+	{
+		title: 'Meetups',
+		description: 'Create engaging content for local tech communities',
+		examples: ['LyonJS', 'Paris TypeScript', 'GDG Lyon'],
+		emoji: '👥',
+	},
+	{
+		title: 'Associations',
+		description: 'Produce materials for tech communities and organizations',
+		examples: ['GDG', 'Women Techmakers', 'Duchess France'],
+		emoji: '🤝',
+	},
+];
+
+export const HOW_IT_WORKS = [
+	{
+		step: 1,
+		title: 'Choose a template',
+		description:
+			'Browse our collection of ready-to-use templates designed for events',
+	},
+	{
+		step: 2,
+		title: 'Customize your content',
+		description: 'Add your logos, colors, speaker photos, and event details',
+	},
+	{
+		step: 3,
+		title: 'Generate & download',
+		description: 'Export your content as video, image, or PDF in seconds',
+	},
+];
+
+export const TESTIMONIALS = [
+	{
+		quote:
+			'Shortvid.io saved us hours of work generating speaker announcements for our conference.',
+		author: 'DevFest Nantes',
+		role: 'Conference organizers',
+	},
+	{
+		quote:
+			'The templates are easy to customize and the results look professional.',
+		author: 'Volcamp',
+		role: 'Conference team',
+	},
+	{
+		quote:
+			'A game-changer for creating consistent branding across all our event materials.',
+		author: 'Camping des Speakers',
+		role: 'Event organizers',
 	},
 ];
 

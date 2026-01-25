@@ -1,31 +1,29 @@
 import {ReactNode} from 'react';
 
-import {CustomThemeProvider} from '../src/context/CustomThemeProvider';
-
 import '../styles/globals.css';
 
 export const metadata = {
-	title: 'Shortvid.io',
+	title: 'Shortvid.io - Generate Videos & Images for Events',
 	description:
-		'This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association.',
+		'Open-source platform to generate videos, images, and PDFs programmatically for conferences, meetups, and associations. Built on Remotion.',
 	icons: {
 		icon: '/branding/monogram.svg',
 	},
 	openGraph: {
 		type: 'website',
-		title: 'Shortvid.io',
+		title: 'Shortvid.io - Generate Videos & Images for Events',
 		url: 'https://shortvid.io/',
 		siteName: 'Shortvid.io',
 		description:
-			'This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association.',
+			'Open-source platform to generate videos, images, and PDFs programmatically for conferences, meetups, and associations. Built on Remotion.',
 		images: ['https://shortvid.io/screenshot.png'],
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Shortvid.io',
-		creator: '@Lyonjs',
+		title: 'Shortvid.io - Generate Videos & Images for Events',
+		creator: '@shortvid_io',
 		description:
-			'This application is developed and maintained by the volunteer organizers of the Lyon JS Meetup. It aims to facilitate the generation of video for the social networks of the association.',
+			'Open-source platform to generate videos, images, and PDFs programmatically for conferences, meetups, and associations. Built on Remotion.',
 		images: ['https://shortvid.io/screenshot.png'],
 	},
 	robots: {
@@ -36,9 +34,7 @@ export const metadata = {
 export default function Layout({children}: {children: ReactNode}) {
 	return (
 		<html>
-			<body>
-				<CustomThemeProvider>{children}</CustomThemeProvider>
-			</body>
+			<body>{children}</body>
 		</html>
 	);
 }

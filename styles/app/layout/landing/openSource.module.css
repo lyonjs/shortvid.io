@@ -1,0 +1,123 @@
+.openSource {
+	margin: 6rem 0;
+	padding: 4rem 2rem;
+	background: linear-gradient(
+		135deg,
+		var(--purple-700) 0%,
+		var(--purple-800) 50%,
+		var(--purple-700) 100%
+	);
+	border-radius: 1.5rem;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid var(--purple-600);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(
+			circle,
+			rgba(157, 78, 221, 0.1) 0%,
+			transparent 50%
+		);
+		animation: pulse 8s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			transform: scale(1);
+			opacity: 0.5;
+		}
+		50% {
+			transform: scale(1.1);
+			opacity: 0.8;
+		}
+	}
+
+	.content {
+		max-width: 700px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+
+		.icon {
+			font-size: 4.5rem;
+			color: var(--purple-200);
+			margin-bottom: 1.5rem;
+			filter: drop-shadow(0 4px 12px rgba(199, 125, 255, 0.3));
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 800;
+			margin-bottom: 1.25rem;
+			color: var(--color-text);
+		}
+
+		p {
+			font-size: 1.05rem;
+			line-height: 1.7;
+			color: var(--color-text-secondary);
+			margin-bottom: 1rem;
+
+			a {
+				color: var(--purple-100);
+				font-weight: 600;
+				text-decoration: underline;
+				text-underline-offset: 3px;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+
+		.links {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			margin-top: 2rem;
+			flex-wrap: wrap;
+
+			a {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.875rem 1.75rem;
+				border-radius: 0.75rem;
+				font-weight: 600;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			.githubBtn {
+				background: white;
+				color: var(--purple-900);
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+				&:hover {
+					transform: translateY(-2px);
+					box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+				}
+			}
+
+			.remotionBtn {
+				background: transparent;
+				border: 2px solid var(--purple-200);
+				color: var(--purple-100);
+
+				&:hover {
+					background: var(--purple-200);
+					color: var(--purple-900);
+					transform: translateY(-2px);
+				}
+			}
+		}
+	}
+}

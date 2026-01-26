@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {Github} from '../../../src/app/components/landingPage/Github';
+import {Github} from './Github';
 
 describe('<Github />', () => {
 	it('should render the component', () => {

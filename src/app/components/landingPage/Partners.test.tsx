@@ -1,9 +1,8 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
+import {PARTNERS} from '../../../data/config/landingPageConfig';
 
-import {Partners} from '../../../src/app/components/landingPage/Partners';
-import {PARTNERS} from '../../../src/data/config/landingPageConfig';
+import {Partners} from './Partners';
 
 describe('<Partners />', () => {
 	it('should render the component', () => {

@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {UseCases} from '../../../src/app/components/landingPage/UseCases';
+import {UseCases} from './UseCases';
 
 describe('<UseCases />', () => {
 	it('should render the component with all use cases', () => {

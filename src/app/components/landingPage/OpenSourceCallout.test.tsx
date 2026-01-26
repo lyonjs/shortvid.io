@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {OpenSourceCallout} from '../../../src/app/components/landingPage/OpenSourceCallout';
+import {OpenSourceCallout} from './OpenSourceCallout';
 
 describe('<OpenSourceCallout />', () => {
 	it('should render the component with links', () => {

@@ -1,5 +1,6 @@
 'use client';
 
+import {AnimatedSection} from '../src/app/components/AnimatedSection';
 import {CaseStudy} from '../src/app/components/landingPage/CaseStudy';
 import {Contact} from '../src/app/components/landingPage/Contact';
 import {Faq} from '../src/app/components/landingPage/Faq';
@@ -18,15 +19,33 @@ export default function Home() {
 	return (
 		<main className={styles.homeMain}>
 			<Hero />
-			<Features />
-			<UseCases />
-			<HowItWorks />
-			<Partners />
-			<CaseStudy />
-			<OpenSourceCallout />
-			<Github />
-			<Faq />
-			<Contact />
+			<AnimatedSection>
+				<Features />
+			</AnimatedSection>
+			<AnimatedSection>
+				<UseCases />
+			</AnimatedSection>
+			<AnimatedSection>
+				<HowItWorks />
+			</AnimatedSection>
+			<AnimatedSection>
+				<Partners />
+			</AnimatedSection>
+			<AnimatedSection animation="scale">
+				<CaseStudy />
+			</AnimatedSection>
+			<AnimatedSection animation="fade">
+				<OpenSourceCallout />
+			</AnimatedSection>
+			<AnimatedSection>
+				<Github />
+			</AnimatedSection>
+			<AnimatedSection>
+				<Faq />
+			</AnimatedSection>
+			<AnimatedSection animation="fade">
+				<Contact />
+			</AnimatedSection>
 			<Footer />
 		</main>
 	);

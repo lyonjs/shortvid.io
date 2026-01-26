@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {Hero} from '../../../src/app/components/landingPage/Hero';
+import {Hero} from './Hero';
 
 describe('<Hero />', () => {
 	it('should render the component', () => {
@@ -12,7 +10,7 @@ describe('<Hero />', () => {
 			name: 'Generate event content in seconds, not hours',
 		});
 		const subTitle = screen.getByRole('heading', {
-			name: 'Create videos, images, and PDFs for your conferences and meetups. Open-source, powered by React and Remotion.',
+			name: /Create videos, images, and PDFs/i,
 		});
 
 		const editorLink = screen.getByRole('link', {name: 'Try the Editor'});

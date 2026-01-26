@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {Contact} from '../../../src/app/components/landingPage/Contact';
+import {Contact} from './Contact';
 
 describe('<Contact />', () => {
 	it('should render the component', () => {

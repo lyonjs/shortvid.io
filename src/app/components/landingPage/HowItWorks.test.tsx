@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {HowItWorks} from '../../../src/app/components/landingPage/HowItWorks';
+import {HowItWorks} from './HowItWorks';
 
 describe('<HowItWorks />', () => {
 	it('should render the component with all steps', () => {

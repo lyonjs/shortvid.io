@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {CaseStudy} from '../../../src/app/components/landingPage/CaseStudy';
+import {CaseStudy} from './CaseStudy';
 
 describe('<CaseStudy />', () => {
 	it('should render the DevFest Nantes case study', () => {

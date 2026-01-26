@@ -1,8 +1,6 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {Faq} from '../../../src/app/components/landingPage/Faq';
+import {Faq} from './Faq';
 
 describe('<Faq />', () => {
 	it('should render the FAQ section with title', () => {
@@ -15,8 +13,8 @@ describe('<Faq />', () => {
 		render(<Faq />);
 
 		expect(screen.getByText('What is Shortvid.io?')).toBeVisible();
-		expect(screen.getByText('Is it free to use?')).toBeVisible();
 		expect(screen.getByText('How can I contribute?')).toBeVisible();
+		expect(screen.getByText('Can I self-host Shortvid.io?')).toBeVisible();
 	});
 
 	it('should toggle answer visibility when clicking a question', () => {

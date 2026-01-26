@@ -1,8 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import '@testing-library/jest-dom';
-
-import {Features} from '../../../src/app/components/landingPage/Features';
+import {Features} from './Features';
 
 describe('<Features />', () => {
 	it('should render the component with all features', () => {

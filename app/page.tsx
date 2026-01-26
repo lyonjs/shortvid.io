@@ -2,6 +2,7 @@
 
 import {CaseStudy} from '../src/app/components/landingPage/CaseStudy';
 import {Contact} from '../src/app/components/landingPage/Contact';
+import {Faq} from '../src/app/components/landingPage/Faq';
 import {Features} from '../src/app/components/landingPage/Features';
 import {Footer} from '../src/app/components/landingPage/Footer';
 import {Github} from '../src/app/components/landingPage/Github';
@@ -24,6 +25,7 @@ export default function Home() {
 			<CaseStudy />
 			<OpenSourceCallout />
 			<Github />
+			<Faq />
 			<Contact />
 			<Footer />
 		</main>

@@ -1,5 +1,7 @@
 import {ReactNode} from 'react';
 
+import {JsonLd} from '../src/app/components/JsonLd';
+
 import '../styles/globals.css';
 
 export const metadata = {
@@ -34,6 +36,9 @@ export const metadata = {
 export default function Layout({children}: {children: ReactNode}) {
 	return (
 		<html>
+			<head>
+				<JsonLd />
+			</head>
 			<body>{children}</body>
 		</html>
 	);

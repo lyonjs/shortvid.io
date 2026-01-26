@@ -95,3 +95,31 @@ export const PARTNERS = [
 		url: 'https://www.volcamp.io/',
 	},
 ];
+
+export const FAQ = [
+	{
+		question: 'What is Shortvid.io?',
+		answer:
+			'Shortvid.io is an open-source platform that generates videos, images, and PDFs for tech events like conferences and meetups. It uses React and Remotion to create professional content programmatically.',
+	},
+	{
+		question: 'How can I add my own event templates?',
+		answer:
+			'You can contribute by forking our GitHub repository and creating new templates in the showcases directory. Check our contribution guide for detailed instructions on adding your event branding.',
+	},
+	{
+		question: 'What technologies does it use?',
+		answer:
+			'Shortvid.io is built with Next.js for the web app and Remotion for video generation. It uses React components to create videos, which are then rendered using ffmpeg.',
+	},
+	{
+		question: 'Can I self-host Shortvid.io?',
+		answer:
+			'Absolutely! You can deploy Shortvid.io on your own infrastructure using Docker. The repository includes Docker configurations for easy deployment.',
+	},
+	{
+		question: 'How can I contribute?',
+		answer:
+			'We welcome contributions! You can add new templates, fix bugs, improve documentation, or suggest features. Visit our GitHub repository to get started.',
+	},
+];

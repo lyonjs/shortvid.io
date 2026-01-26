@@ -38,6 +38,27 @@ export const Hero = () => {
 					View on GitHub
 				</Link>
 			</div>
+
+			<div className={styles.demoContainer}>
+				<div className={styles.browserMockup}>
+					<div className={styles.browserHeader}>
+						<div className={styles.browserDots}>
+							<span />
+							<span />
+							<span />
+						</div>
+						<div className={styles.browserUrl}>
+							<Icon icon="mdi:lock" />
+							<span>editor.shortvid.io</span>
+						</div>
+					</div>
+					<div className={styles.browserContent}>
+						<video autoPlay loop muted playsInline className={styles.demoVideo}>
+							<source src="/videos/demo.mp4" type="video/mp4" />
+						</video>
+					</div>
+				</div>
+			</div>
 		</section>
 	);
 };

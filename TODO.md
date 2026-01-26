@@ -13,7 +13,7 @@ Ideas and improvements for the Shortvid.io website.
 
 ## Design & UX
 
-- [ ] Add animated demo/preview video in Hero section
+- [x] Add animated demo/preview video in Hero section (needs `/public/videos/demo.mp4`)
 - [ ] Create an interactive template gallery with live previews
 - [x] Add scroll animations (fade-in, slide-up) for sections using Intersection Observer
 
@@ -24,10 +24,10 @@ Ideas and improvements for the Shortvid.io website.
 ## Technical
 
 - [x] Add structured data (JSON-LD) for better SEO
-- [ ] Add SEO metadata for twitter and OG
+- [x] Add SEO metadata for twitter and OG
 - [x] Replace ESLint by OxLint (50x faster)
+- [x] Replace Prettier by OxFmt (30x faster)
 
 ## Performance
 
-- [ ] Lazy load below-the-fold sections
-- [ ] Add font subsetting for faster load times
+- [x] ~~Add font subsetting for faster load times~~ (N/A: using system fonts)

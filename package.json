@@ -20,7 +20,8 @@
 		"build": "next build",
 		"dev": "next dev",
 		"test:format": "pnpm lint && tsc",
-		"serve": "node server.mjs"
+		"serve": "node server.mjs",
+		"generate:demo": "bash scripts/generate-demo.sh"
 	},
 	"dependencies": {
 		"@remotion/bundler": "4.0.392",

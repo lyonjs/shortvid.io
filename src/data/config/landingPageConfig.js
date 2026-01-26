@@ -1,23 +1,27 @@
 export const FEATURES = [
 	{
-		title: 'Videos',
-		description: 'Generate MP4 and GIF videos for social media announcements',
+		title: 'Video Templates',
+		description: 'Generate MP4 videos for speaker announcements, talk reveals, and event teasers',
 		icon: 'mdi:video',
+		examples: ['Speaker announcements', 'Talk teasers', 'Sponsor showcases'],
 	},
 	{
-		title: 'Images',
-		description: 'Create JPEG and PNG images for thumbnails and posters',
+		title: 'Static Images',
+		description: 'Create thumbnails, posters, and social media graphics in JPEG/PNG',
 		icon: 'mdi:image',
+		examples: ['Event posters', 'Social thumbnails', 'Speaker cards'],
+	},
+	{
+		title: 'OBS Layouts',
+		description: 'Design stream overlays and waiting screens for live broadcasts',
+		icon: 'mdi:broadcast',
+		examples: ['Stream overlays', 'Waiting screens', 'Lower thirds'],
 	},
 	{
 		title: 'PDF Documents',
-		description: 'Export printable PDFs for schedules and signage',
+		description: 'Export printable PDFs for schedules, signage, and LinkedIn carousels',
 		icon: 'mdi:file-pdf-box',
-	},
-	{
-		title: 'Customizable Templates',
-		description: 'Adapt colors, logos, and content to match your brand',
-		icon: 'mdi:palette',
+		examples: ['Event schedules', 'LinkedIn carousels', 'Printed signage'],
 	},
 ];
 

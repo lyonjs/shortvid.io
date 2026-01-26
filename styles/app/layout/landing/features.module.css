@@ -67,6 +67,25 @@
 			line-height: 1.6;
 		}
 
+		.examples {
+			list-style: none;
+			padding: 0;
+			margin: 1rem 0 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0.5rem;
+
+			li {
+				font-size: 0.75rem;
+				padding: 0.25rem 0.75rem;
+				background: var(--purple-700);
+				border-radius: 1rem;
+				color: var(--purple-100);
+				border: 1px solid var(--purple-600);
+			}
+		}
+
 		&:hover .iconWrapper {
 			transform: translateY(-4px);
 			box-shadow: 0 8px 24px rgba(157, 78, 221, 0.3);

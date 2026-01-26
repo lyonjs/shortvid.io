@@ -14,7 +14,11 @@ Ideas and improvements for the Shortvid.io website.
 ## Design & UX
 
 - [x] Add animated demo/preview video in Hero section (needs `/public/videos/demo.mp4`)
-- [ ] Create an interactive template gallery with live previews
+- [x] update feature list with example
+  - video template generation
+  - static image generation
+  - OBS stream layout generation
+  - PDF files for prints or Linkedin carousels
 - [x] Add scroll animations (fade-in, slide-up) for sections using Intersection Observer
 
 ## Content

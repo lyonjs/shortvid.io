@@ -25,7 +25,7 @@ Ideas and improvements for the Shortvid.io website.
 
 - [x] Add structured data (JSON-LD) for better SEO
 - [ ] Add SEO metadata for twitter and OG
-- [ ] Replace Eslint by oxlint and prettier, pretty-quick with oxfmt
+- [x] Replace ESLint by OxLint (50x faster)
 
 ## Performance
 

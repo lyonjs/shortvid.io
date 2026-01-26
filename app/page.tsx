@@ -1,5 +1,6 @@
 'use client';
 
+import {CaseStudy} from '../src/app/components/landingPage/CaseStudy';
 import {Contact} from '../src/app/components/landingPage/Contact';
 import {Features} from '../src/app/components/landingPage/Features';
 import {Footer} from '../src/app/components/landingPage/Footer';
@@ -8,7 +9,6 @@ import {Hero} from '../src/app/components/landingPage/Hero';
 import {HowItWorks} from '../src/app/components/landingPage/HowItWorks';
 import {OpenSourceCallout} from '../src/app/components/landingPage/OpenSourceCallout';
 import {Partners} from '../src/app/components/landingPage/Partners';
-import {Testimonials} from '../src/app/components/landingPage/Testimonials';
 import {UseCases} from '../src/app/components/landingPage/UseCases';
 
 import styles from '../styles/app/layout/landing/landing.module.css';
@@ -21,7 +21,7 @@ export default function Home() {
 			<UseCases />
 			<HowItWorks />
 			<Partners />
-			<Testimonials />
+			<CaseStudy />
 			<OpenSourceCallout />
 			<Github />
 			<Contact />

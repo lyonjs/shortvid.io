@@ -26,19 +26,19 @@ export const USE_CASES = [
 		title: 'Conferences',
 		description:
 			'Generate speaker announcements, schedules, and sponsor showcases',
-		examples: ['Devoxx', 'DevFest', 'MiXiT'],
+		examples: ['Devoxx', 'DevFest Nantes', 'MiXiT', 'Tourraine Tech'],
 		emoji: '🎤',
 	},
 	{
 		title: 'Meetups',
 		description: 'Create engaging content for local tech communities',
-		examples: ['LyonJS', 'Paris TypeScript', 'GDG Lyon'],
+		examples: ['LyonJS', 'Human Talk'],
 		emoji: '👥',
 	},
 	{
 		title: 'Associations',
 		description: 'Produce materials for tech communities and organizations',
-		examples: ['GDG', 'Women Techmakers', 'Duchess France'],
+		examples: ['GDG'],
 		emoji: '🤝',
 	},
 ];
@@ -59,27 +59,6 @@ export const HOW_IT_WORKS = [
 		step: 3,
 		title: 'Generate & download',
 		description: 'Export your content as video, image, or PDF in seconds',
-	},
-];
-
-export const TESTIMONIALS = [
-	{
-		quote:
-			'Shortvid.io saved us hours of work generating speaker announcements for our conference.',
-		author: 'DevFest Nantes',
-		role: 'Conference organizers',
-	},
-	{
-		quote:
-			'The templates are easy to customize and the results look professional.',
-		author: 'Volcamp',
-		role: 'Conference team',
-	},
-	{
-		quote:
-			'A game-changer for creating consistent branding across all our event materials.',
-		author: 'Camping des Speakers',
-		role: 'Event organizers',
 	},
 ];
 

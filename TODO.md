@@ -6,7 +6,7 @@ Ideas and improvements for the Shortvid.io website.
 
 - [x] Add partners with their logo
   - [x] DevLille
-  - [ ] Sunnytech (logo manquant)
+  - [x] Sunnytech
   - [x] BdxIo
   - [x] Devfest Strasbourg
   - [x] Alpescraft

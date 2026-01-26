@@ -118,6 +118,12 @@ export const PARTNERS = [
 		logoDark: '/images/showcases/alpescraft/alpescraftLogo.png',
 		url: 'https://www.alpescraft.fr/',
 	},
+	{
+		name: 'SunnyTech',
+		logo: '/images/showcases/sunnytech/sunnytechLogo.png',
+		logoDark: '/images/showcases/sunnytech/sunnytechLogo.png',
+		url: 'https://sunny-tech.io/',
+	},
 ];
 
 export const FAQ = [

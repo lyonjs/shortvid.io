@@ -44,9 +44,7 @@
 	--color-btn-disabled-text: var(--grey-100);
 
 	--btn-gradient: linear-gradient(203deg, var(--purple-300), var(--purple-500));
-	--btn-shadow:
-		rgba(90, 24, 154, 0.5) 0px 0px 10px 0px,
-		rgba(182, 111, 239, 0.5) 0px 0px 20px 0px;
+	--btn-shadow: rgba(90, 24, 154, 0.5) 0px 0px 10px 0px, rgba(182, 111, 239, 0.5) 0px 0px 20px 0px;
 
 	--color-input-background: #eaeaea;
 
@@ -58,13 +56,7 @@
 
 	--color-logo: white;
 
-	--separator: linear-gradient(
-			90deg,
-			transparent,
-			var(--color-separator),
-			transparent
-		)
-		1;
+	--separator: linear-gradient(90deg, transparent, var(--color-separator), transparent) 1;
 
 	--card-border: var(--purple-700);
 	--card-border-hover: conic-gradient(

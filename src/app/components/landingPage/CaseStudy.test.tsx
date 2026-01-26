@@ -36,10 +36,7 @@ describe('<CaseStudy />', () => {
 			name: /Read the full story/,
 		});
 
-		expect(devfestLink).toHaveAttribute(
-			'href',
-			'https://devfest.gdgnantes.com/',
-		);
+		expect(devfestLink).toHaveAttribute('href', 'https://devfest.gdgnantes.com/');
 		expect(remotionLink).toHaveAttribute(
 			'href',
 			'https://www.remotion.dev/success-stories/shortvid',

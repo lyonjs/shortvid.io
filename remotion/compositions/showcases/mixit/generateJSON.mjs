@@ -11,8 +11,7 @@ const fetchSpeakers = () =>
 		.then((response) => response.json())
 		.then((response) => response.flat());
 
-const fetchTalks = () =>
-	fetch(`${BASE_URL}/api/${YEAR}/talk`).then((response) => response.json());
+const fetchTalks = () => fetch(`${BASE_URL}/api/${YEAR}/talk`).then((response) => response.json());
 
 const ROOM_MAPPING = {
 	ROOM1: 'Gosling',
@@ -39,8 +38,7 @@ const run = async () => {
 			return {
 				name: `${found.firstname} ${found.lastname}`,
 				picture:
-					found.photoUrl ||
-					'https://img.freepik.com/icones-gratuites/utilisateur_318-159711.jpg',
+					found.photoUrl || 'https://img.freepik.com/icones-gratuites/utilisateur_318-159711.jpg',
 			};
 		}),
 	}));

@@ -8,12 +8,5 @@
 		"unicorn/no-new-array": "off",
 		"unicorn/no-empty-file": "off"
 	},
-	"ignorePatterns": [
-		"node_modules",
-		".next",
-		"out",
-		"dist",
-		"*.config.js",
-		"*.config.mjs"
-	]
+	"ignorePatterns": ["node_modules", ".next", "out", "dist", "*.config.js", "*.config.mjs"]
 }

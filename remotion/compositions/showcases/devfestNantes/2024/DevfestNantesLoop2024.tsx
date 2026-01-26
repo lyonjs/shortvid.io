@@ -1,13 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {
-	AbsoluteFill,
-	Easing,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';

@@ -50,8 +50,7 @@ export const MixitComposition: React.FC = () => {
 				defaultProps={{
 					picture: 'https://mixitconf.org/images/sponsors/logo-viseo.svg',
 					category: 'tour de cou',
-					background:
-						'https://live.staticflickr.com/65535/52097860061_1609b2a1c6_b_d.jpg',
+					background: 'https://live.staticflickr.com/65535/52097860061_1609b2a1c6_b_d.jpg',
 					name: 'LyonJS',
 				}}
 			/>

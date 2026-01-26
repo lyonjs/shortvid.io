@@ -1,10 +1,4 @@
-import {
-	AbsoluteFill,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
@@ -59,8 +53,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								width: 180,
 								height: 180,
 								border: 'none',
-								boxShadow:
-									'0 0 0 4px white, 0 0 0 10px #f8ab09, 0 12px 30px rgba(0, 0, 0, 0.5)',
+								boxShadow: '0 0 0 4px white, 0 0 0 10px #f8ab09, 0 12px 30px rgba(0, 0, 0, 0.5)',
 								top: pictureDrop,
 							}}
 							style={{
@@ -71,8 +64,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								<Text
 									style={{
 										fontFamily: 'Arial Black',
-										textShadow:
-											'-2px 0 #111e42, 0 2px #111e42, 2px 0 #111e42, 0 -2px #111e42',
+										textShadow: '-2px 0 #111e42, 0 2px #111e42, 2px 0 #111e42, 0 -2px #111e42',
 										position: 'relative',
 										bottom: '-45%',
 										width: 320,

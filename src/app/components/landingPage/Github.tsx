@@ -8,12 +8,12 @@ export const Github = () => {
 		<section className={styles.github}>
 			<h3>Need a custom template?</h3>
 			<p>
-				Want a showcase video for your event or have an idea for a new template?
-				Open a discussion on GitHub and we&apos;ll work together to create it!
+				Want a showcase video for your event or have an idea for a new template? Open a discussion
+				on GitHub and we&apos;ll work together to create it!
 			</p>
 			<p>
-				You can also fork the project and create your own templates with full
-				access to all existing designs.
+				You can also fork the project and create your own templates with full access to all existing
+				designs.
 			</p>
 			<Link
 				href="https://github.com/lyonjs/shortvid.io/discussions"

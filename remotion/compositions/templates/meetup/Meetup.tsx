@@ -18,9 +18,7 @@ export const MeetupSchema = z.object({
 });
 
 export const Meetup: React.FC<z.infer<typeof MeetupSchema>> = ({
-	backgroundImg = staticFile(
-		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
-	),
+	backgroundImg = staticFile('/images/showcases/lyonjs/defaultBackgroundImage.jpeg'),
 	title,
 	date,
 	eventLogo,

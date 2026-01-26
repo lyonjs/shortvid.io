@@ -2,11 +2,7 @@
 	margin: 6rem 0;
 	padding: 4rem 2rem;
 	text-align: center;
-	background: linear-gradient(
-		180deg,
-		var(--purple-850) 0%,
-		var(--purple-900) 100%
-	);
+	background: linear-gradient(180deg, var(--purple-850) 0%, var(--purple-900) 100%);
 	border-radius: 2rem;
 	position: relative;
 	overflow: hidden;
@@ -18,23 +14,14 @@
 		left: 0;
 		right: 0;
 		height: 1px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			var(--purple-400),
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, var(--purple-400), transparent);
 	}
 
 	h2 {
 		font-size: 2.5rem;
 		font-weight: 800;
 		margin-bottom: 1rem;
-		background: linear-gradient(
-			135deg,
-			var(--color-text) 0%,
-			var(--purple-100) 100%
-		);
+		background: linear-gradient(135deg, var(--color-text) 0%, var(--purple-100) 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;

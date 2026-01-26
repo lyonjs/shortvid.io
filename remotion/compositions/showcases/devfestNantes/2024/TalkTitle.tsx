@@ -36,15 +36,12 @@ export const TalkTitle: React.FC<{
 				letterSpacing: '0.2rem',
 				textAlign: 'center',
 				color: '#FFF8F0',
-				textShadow:
-					'-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
+				textShadow: '-2px 0 #1B2C2C, 0 2px #1B2C2C, 2px 0 #1B2C2C, 0 -2px #1B2C2C',
 				textWrap: 'balance',
 				position: 'absolute',
 				top: isTotemDisplayMode ? '50%' : 'unset',
 				left: '50%',
-				transform: isTotemDisplayMode
-					? 'translate(-50%, -50%)'
-					: 'translateX(-50%)',
+				transform: isTotemDisplayMode ? 'translate(-50%, -50%)' : 'translateX(-50%)',
 				minHeight: 150,
 				bottom: isTotemDisplayMode ? '500px' : '450px',
 				opacity: titleOpacity,

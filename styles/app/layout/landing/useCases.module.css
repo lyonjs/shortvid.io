@@ -12,23 +12,14 @@
 		transform: translateX(-50%);
 		width: 80%;
 		height: 1px;
-		background: linear-gradient(
-			90deg,
-			transparent,
-			var(--purple-500),
-			transparent
-		);
+		background: linear-gradient(90deg, transparent, var(--purple-500), transparent);
 	}
 
 	h2 {
 		font-size: 2.5rem;
 		font-weight: 800;
 		margin-bottom: 1rem;
-		background: linear-gradient(
-			135deg,
-			var(--color-text) 0%,
-			var(--purple-100) 100%
-		);
+		background: linear-gradient(135deg, var(--color-text) 0%, var(--purple-100) 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -51,11 +42,7 @@
 	.useCaseCard {
 		padding: 2rem;
 		text-align: left;
-		background: linear-gradient(
-			180deg,
-			var(--purple-800) 0%,
-			var(--purple-850) 100%
-		);
+		background: linear-gradient(180deg, var(--purple-800) 0%, var(--purple-850) 100%);
 		border-radius: 1rem;
 		border: 1px solid var(--purple-700);
 		transition: all 0.3s ease;

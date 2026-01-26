@@ -6,14 +6,9 @@ export const Screens = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const frame = useCurrentFrame();
 	const logoWidth = 350;
 
-	const up = interpolate(
-		frame,
-		[0, 10],
-		[-230, isTotemDisplayMode ? 1300 : 0],
-		{
-			extrapolateRight: 'clamp',
-		},
-	);
+	const up = interpolate(frame, [0, 10], [-230, isTotemDisplayMode ? 1300 : 0], {
+		extrapolateRight: 'clamp',
+	});
 
 	const upBack = interpolate(frame, [270, 290], [0, -240], {
 		extrapolateRight: 'clamp',

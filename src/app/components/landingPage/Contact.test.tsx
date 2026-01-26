@@ -24,14 +24,8 @@ describe('<Contact />', () => {
 			expect(pictures[id]).toBeVisible();
 		});
 
-		expect(contacts[0]).toHaveProperty(
-			'href',
-			'https://twitter.com/Slashgear_',
-		);
-		expect(contacts[1]).toHaveProperty(
-			'href',
-			'https://twitter.com/mickaelalvs',
-		);
+		expect(contacts[0]).toHaveProperty('href', 'https://twitter.com/Slashgear_');
+		expect(contacts[1]).toHaveProperty('href', 'https://twitter.com/mickaelalvs');
 
 		expect(names[1].textContent).toEqual('Antoine Carron');
 		expect(names[2].textContent).toEqual('Mickael Alves');

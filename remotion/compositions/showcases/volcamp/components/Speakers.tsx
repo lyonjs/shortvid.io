@@ -1,10 +1,4 @@
-import {
-	Img,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
 
@@ -108,10 +102,7 @@ export const Speakers: React.FC<speakerProps> = ({speakers}) => {
 								</span>
 							)}
 							<Img
-								src={
-									speaker.picture ||
-									staticFile('images/common/defaultAvatar.svg')
-								}
+								src={speaker.picture || staticFile('images/common/defaultAvatar.svg')}
 								alt={`Picture of ${speaker.name}`}
 								width={130}
 								height={130}

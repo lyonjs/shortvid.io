@@ -18,9 +18,7 @@ describe('<Footer />', () => {
 		});
 
 		const footer = screen.getByRole('contentinfo');
-		const copyright = screen.getByText(
-			'© Copyright 2024 Shortvid.io - Made with 💜 and React',
-		);
+		const copyright = screen.getByText('© Copyright 2024 Shortvid.io - Made with 💜 and React');
 
 		expect(logo).toBeVisible();
 		expect(githubLink).toBeVisible();

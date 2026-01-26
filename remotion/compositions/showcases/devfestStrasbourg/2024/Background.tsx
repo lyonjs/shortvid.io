@@ -34,9 +34,7 @@ export const Background = () => {
 	return (
 		<div>
 			<Img
-				src={staticFile(
-					'/images/showcases/devfestStrasbourg/2024/background.jpg',
-				)}
+				src={staticFile('/images/showcases/devfestStrasbourg/2024/background.jpg')}
 				style={{
 					opacity,
 					position: 'absolute',

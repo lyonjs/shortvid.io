@@ -24,11 +24,7 @@ export const BackgroundCircleNoise: React.FC<{
 					const py = j / ROWS;
 					const dx = noise3D('x', px, py, frame * speed) * maxOffset;
 					const dy = noise3D('y', px, py, frame * speed) * maxOffset;
-					const opacity = interpolate(
-						noise3D('opacity', i, j, frame * speed),
-						[-1, 1],
-						[0, 1],
-					);
+					const opacity = interpolate(noise3D('opacity', i, j, frame * speed), [-1, 1], [0, 1]);
 
 					const key = `${i}-${j}`;
 

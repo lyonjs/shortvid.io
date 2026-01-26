@@ -9,13 +9,7 @@ import {LyonSkyline} from './LyonSkyline';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 
-export const Mixit = ({
-	title,
-	speakers,
-	date,
-	time,
-	location,
-}: z.infer<typeof ShowcaseSchema>) => {
+export const Mixit = ({title, speakers, date, time, location}: z.infer<typeof ShowcaseSchema>) => {
 	return (
 		<AbsoluteFill
 			style={{

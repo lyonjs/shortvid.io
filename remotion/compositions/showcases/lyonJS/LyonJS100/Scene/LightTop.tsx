@@ -21,21 +21,9 @@ export const LightTop: React.FC = () => {
 				/>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2297"
-							d="m681.9 234.9h-23.2v-10.7h23.2z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m681.9 234.9h-23.2v-3.3h23.2z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m678.2 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2297" d="m681.9 234.9h-23.2v-10.7h23.2z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m681.9 234.9h-23.2v-3.3h23.2z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m678.2 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 				<path
@@ -82,135 +70,51 @@ export const LightTop: React.FC = () => {
 				/>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2298"
-							d="m870.2 234.9h-23.1v-10.7h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m870.2 234.9h-23.1v-3.3h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m866.6 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2298" d="m870.2 234.9h-23.1v-10.7h23.1z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m870.2 234.9h-23.1v-3.3h23.1z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m866.6 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2299"
-							d="m1058.6 234.9h-23.1v-10.7h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m1058.6 234.9h-23.1v-3.3h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m1054.9 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2299" d="m1058.6 234.9h-23.1v-10.7h23.1z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m1058.6 234.9h-23.1v-3.3h23.1z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m1054.9 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2300"
-							d="m1246.9 234.9h-23.1v-10.7h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m1246.9 234.9h-23.1v-3.3h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m1243.3 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2300" d="m1246.9 234.9h-23.1v-10.7h23.1z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m1246.9 234.9h-23.1v-3.3h23.1z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m1243.3 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2301"
-							d="m1435.3 234.9h-23.1v-10.7h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m1435.3 234.9h-23.1v-3.3h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m1431.6 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2301" d="m1435.3 234.9h-23.1v-10.7h23.1z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m1435.3 234.9h-23.1v-3.3h23.1z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m1431.6 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2302"
-							d="m1623.7 234.9h-23.2v-10.7h23.2z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m1623.7 234.9h-23.2v-3.3h23.2z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m1620 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2302" d="m1623.7 234.9h-23.2v-10.7h23.2z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m1623.7 234.9h-23.2v-3.3h23.2z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m1620 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2303"
-							d="m1812 234.9h-23.1v-10.7h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m1812 234.9h-23.1v-3.3h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m1808.4 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2303" d="m1812 234.9h-23.1v-10.7h23.1z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m1812 234.9h-23.1v-3.3h23.1z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m1808.4 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2304"
-							d="m2000.4 234.9h-23.1v-10.7h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m2000.4 234.9h-23.1v-3.3h23.1z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m1996.7 236.6h-15.8v-2.4h15.8z"
-						/>
+						<path id="&lt;Path&gt;" className="s2304" d="m2000.4 234.9h-23.1v-10.7h23.1z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m2000.4 234.9h-23.1v-3.3h23.1z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m1996.7 236.6h-15.8v-2.4h15.8z" />
 					</g>
 				</g>
 			</g>

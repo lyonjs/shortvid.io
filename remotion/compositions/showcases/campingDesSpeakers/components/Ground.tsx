@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-	Img,
-	interpolate,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Ground = () => {
 	const frame = useCurrentFrame();

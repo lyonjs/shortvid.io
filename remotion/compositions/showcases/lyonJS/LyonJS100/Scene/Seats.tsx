@@ -19,10 +19,7 @@ export const Seats: React.FC = () => {
 	return (
 		<g id="seats">
 			<g id="&lt;Group&gt;">
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(15)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(15)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -220,10 +217,7 @@ export const Seats: React.FC = () => {
 								d="m1296.4 1110.3c0 1.2-0.9 2.1-2.1 2.1-1.2 0-2.1-0.9-2.1-2.1 0-1.1 0.9-2.1 2.1-2.1 1.2 0 2.1 1 2.1 2.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -231,10 +225,7 @@ export const Seats: React.FC = () => {
 								d="m1283.3 1097.5c12.8 1 23.2 9.9 23.2 23.6 0 24.6 0 36.9-0.1 61.5 0 7.2-5.7 12.9-12.7 12.9q-50.3-0.1-100.5-0.4c-7-0.1-12.7-5.9-12.6-13 0.2-24.6 0.3-37 0.4-61.6 0.2-14.5 10.6-22.4 23.4-23.4 9.6-0.7 24.1-1.4 38.5-1.4 15.1 0.1 30.1 1 40.4 1.8zm-78.9 0.1c-11 0.8-22.8 7.3-22.9 22.9-0.2 24.6-0.3 37-0.5 61.6-0.1 6.9 5.4 12.5 12.2 12.5q50.2 0.4 100.5 0.5c6.8 0 12.3-5.6 12.3-12.5 0-24.6 0-36.9 0.1-61.5 0-12.6-9.4-22.1-22.8-23.2-6.2-0.5-22.6-1.7-40.4-1.7-18-0.1-34 1-38.5 1.4z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -265,10 +256,7 @@ export const Seats: React.FC = () => {
 							d="m1251.9 1111.8c0 0.1 0 0.2 0 0.3 0-0.7-0.5-1.2-1.1-1.2-5.6 0-8.4 0-13.9-0.1-0.7 0-1.2 0.6-1.2 1.2 0-0.1 0-0.1 0-0.3 0-0.6 0.5-1.1 1.2-1.1 5.5 0 8.3 0 13.9 0 0.6 0 1.1 0.6 1.1 1.2z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -276,10 +264,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(17)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(17)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -477,10 +462,7 @@ export const Seats: React.FC = () => {
 								d="m1452 1109.9c0 1.1-0.9 2.1-2.1 2.1-1.2 0-2.1-0.9-2.1-2.1 0-1.2 0.9-2.1 2.1-2.1 1.1 0 2.1 0.9 2.1 2.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -488,10 +470,7 @@ export const Seats: React.FC = () => {
 								d="m1438.8 1097.1c12.8 1 23.3 9.8 23.4 23.4 0.2 24.6 0.3 37 0.4 61.6 0.1 7.1-5.6 12.9-12.6 13q-50.2 0.3-100.5 0.4c-7 0-12.7-5.7-12.7-12.9 0-24.6-0.1-36.9-0.1-61.5 0-14.6 10.4-22.5 23.2-23.6 9.5-0.8 24-1.7 38.5-1.8 15.1 0 30.1 0.7 40.4 1.4zm-78.9 0.8c-11 1-22.8 7.5-22.7 23.2 0 24.6 0 36.9 0 61.5 0 6.9 5.5 12.5 12.3 12.5q50.3-0.1 100.5-0.5c6.8 0 12.3-5.6 12.2-12.5-0.2-24.6-0.3-37-0.5-61.6-0.1-12.5-9.5-22-22.9-22.9-6.2-0.5-22.6-1.5-40.4-1.4-18 0.1-34 1.3-38.5 1.7z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -522,10 +501,7 @@ export const Seats: React.FC = () => {
 							d="m1407.5 1111.7c0 0.2 0 0.2 0 0.3 0-0.6-0.5-1.2-1.2-1.2-5.5 0.1-8.3 0.1-13.8 0.1-0.7 0-1.2 0.5-1.2 1.2 0-0.1 0-0.2 0-0.3 0-0.6 0.5-1.2 1.2-1.2 5.5 0 8.3 0 13.8 0 0.7 0 1.2 0.5 1.2 1.1z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"
@@ -534,10 +510,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(18)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(18)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -735,10 +708,7 @@ export const Seats: React.FC = () => {
 								d="m1607.6 1108.1c0 1.1-1 2.1-2.1 2.1-1.2 0-2.1-0.9-2.2-2.1 0-1.1 1-2.1 2.1-2.1 1.2 0 2.1 0.9 2.2 2.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -746,10 +716,7 @@ export const Seats: React.FC = () => {
 								d="m1594.3 1095.5c12.7 0.8 23.3 9.5 23.5 23.1 0.4 24.6 0.6 37 1 61.6 0.2 7.1-5.4 13-12.5 13.1q-50.2 0.8-100.4 1.3c-7.1 0.1-12.9-5.7-12.9-12.8-0.3-24.6-0.4-36.9-0.6-61.6-0.1-14.5 10.2-22.5 23-23.7 9.5-0.9 24-1.9 38.5-2.1 15.1-0.2 30 0.4 40.4 1.1zm-78.9 1.4c-11 1.1-22.7 7.7-22.6 23.3 0.3 24.7 0.4 37 0.6 61.6 0.1 6.9 5.7 12.4 12.4 12.4q50.3-0.5 100.5-1.4c6.8-0.1 12.2-5.7 12.1-12.6-0.4-24.6-0.6-36.9-1-61.6-0.2-12.5-9.7-21.9-23.2-22.7-6.2-0.4-22.6-1.3-40.3-1.1-18.1 0.3-34 1.7-38.5 2.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -780,10 +747,7 @@ export const Seats: React.FC = () => {
 							d="m1563.1 1110.3c0 0.1 0 0.2 0 0.3 0-0.7-0.5-1.2-1.2-1.2-5.5 0.1-8.3 0.1-13.9 0.2-0.6 0-1.1 0.5-1.1 1.2 0-0.1 0-0.2 0-0.3 0-0.6 0.5-1.2 1.1-1.2 5.6 0 8.4-0.1 13.9-0.1 0.7-0.1 1.2 0.5 1.2 1.1z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -791,10 +755,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(20)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(20)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -992,10 +953,7 @@ export const Seats: React.FC = () => {
 								d="m1140.8 1109.4c0 1.2-0.9 2.1-2.1 2.1-1.2 0-2.1-1-2.1-2.1 0-1.2 1-2.1 2.1-2.1 1.2 0 2.1 1 2.1 2.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1003,10 +961,7 @@ export const Seats: React.FC = () => {
 								d="m1127.9 1096.5c12.7 1.1 23 10.1 22.9 23.7-0.2 24.7-0.3 37-0.6 61.6 0 7.1-5.8 12.9-12.8 12.8q-50.3-0.5-100.5-1.3c-7-0.1-12.7-6-12.5-13.1 0.4-24.6 0.6-37 1-61.6 0.2-14.5 10.8-22.3 23.5-23.1 9.6-0.7 24.1-1.3 38.6-1.1 15.1 0.2 30 1.2 40.4 2.1zm-78.9-0.6c-11.1 0.7-22.9 7.1-23.2 22.7-0.4 24.7-0.6 37-1 61.6-0.1 6.9 5.3 12.5 12.1 12.6q50.2 0.9 100.5 1.4c6.7 0 12.3-5.5 12.4-12.4 0.2-24.6 0.3-36.9 0.6-61.6 0.1-12.5-9.2-22.1-22.6-23.3-6.2-0.5-22.5-1.9-40.3-2.1-18-0.2-34 0.8-38.5 1.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1037,10 +992,7 @@ export const Seats: React.FC = () => {
 							d="m1096.3 1110.5c0 0.1 0 0.2 0 0.3 0.1-0.7-0.5-1.2-1.1-1.2-5.6-0.1-8.4-0.1-13.9-0.2-0.7 0-1.2 0.5-1.2 1.2 0-0.1 0-0.2 0-0.3 0-0.6 0.5-1.2 1.2-1.1 5.5 0 8.3 0.1 13.9 0.1 0.6 0 1.2 0.6 1.1 1.2z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"
@@ -1049,10 +1001,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(19)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(19)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -1250,10 +1199,7 @@ export const Seats: React.FC = () => {
 								d="m985.2 1107.2c0 1.1-0.9 2.1-2.1 2-1.2 0-2.1-0.9-2.1-2.1 0.1-1.2 1-2.1 2.2-2.1 1.1 0.1 2.1 1 2 2.2z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1261,10 +1207,7 @@ export const Seats: React.FC = () => {
 								d="m972.4 1094.1c12.7 1.3 23 10.3 22.7 24-0.4 24.6-0.6 36.9-1.1 61.6-0.1 7.1-5.9 12.7-13 12.6q-50.2-0.9-100.4-2.2c-7-0.2-12.6-6.1-12.4-13.2 0.6-24.6 0.9-36.9 1.5-61.5 0.4-14.5 11-22.2 23.8-23 9.6-0.6 24.1-1 38.6-0.7 15.1 0.3 30 1.4 40.3 2.4zm-78.9-1.3c-11 0.7-22.9 7-23.3 22.6-0.7 24.6-1 36.9-1.6 61.5-0.2 6.9 5.2 12.6 12 12.8q50.2 1.2 100.5 2.2c6.7 0.1 12.4-5.4 12.5-12.2 0.4-24.7 0.7-37 1.1-61.6 0.2-12.6-9-22.2-22.3-23.5-6.2-0.7-22.6-2.1-40.4-2.5-18-0.4-34 0.5-38.5 0.7z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1295,10 +1238,7 @@ export const Seats: React.FC = () => {
 							d="m940.8 1107.9c0 0.1 0 0.2 0 0.3 0-0.7-0.5-1.2-1.2-1.2-5.6-0.2-8.3-0.2-13.9-0.3-0.6-0.1-1.2 0.5-1.2 1.1 0-0.1 0-0.1 0-0.2 0-0.7 0.6-1.2 1.2-1.2 5.6 0.1 8.3 0.2 13.9 0.3 0.7 0 1.2 0.5 1.2 1.2z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -1306,10 +1246,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(15)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(15)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -1507,10 +1444,7 @@ export const Seats: React.FC = () => {
 								d="m829.7 1103.6c0 1.1-1 2.1-2.2 2-1.1 0-2-1-2-2.1 0-1.2 1-2.1 2.2-2.1 1.1 0.1 2 1 2 2.2z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1518,10 +1452,7 @@ export const Seats: React.FC = () => {
 								d="m817 1090.4c12.7 1.4 22.9 10.5 22.5 24.2-0.7 24.6-1 36.9-1.7 61.5-0.1 7.2-6 12.8-13 12.6q-50.3-1.4-100.5-3.1c-7-0.2-12.5-6.2-12.3-13.3 0.9-24.6 1.3-36.9 2.1-61.5 0.5-14.5 11.2-22.1 24-22.8 9.5-0.5 24.1-0.8 38.5-0.4 15.1 0.5 30.1 1.7 40.4 2.8zm-78.9-2c-11 0.6-23 6.8-23.6 22.4-0.8 24.6-1.2 36.9-2 61.5-0.3 6.9 5.1 12.7 11.8 12.9q50.2 1.7 100.5 3c6.8 0.2 12.4-5.2 12.6-12.1 0.7-24.6 1-36.9 1.7-61.5 0.3-12.6-8.8-22.3-22.2-23.8-6.2-0.6-22.5-2.2-40.3-2.8-18-0.5-34 0.2-38.5 0.4z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1552,10 +1483,7 @@ export const Seats: React.FC = () => {
 							d="m785.2 1103.9c0 0.1 0 0.2 0 0.3 0-0.7-0.5-1.2-1.2-1.2-5.5-0.2-8.3-0.3-13.8-0.5-0.7 0-1.2 0.5-1.3 1.2 0-0.1 0-0.2 0-0.3 0.1-0.6 0.6-1.1 1.3-1.1 5.5 0.1 8.3 0.2 13.9 0.4 0.6 0 1.1 0.6 1.1 1.2z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -1563,10 +1491,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(22)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(22)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -1764,10 +1689,7 @@ export const Seats: React.FC = () => {
 								d="m674.2 1098.6c-0.1 1.2-1 2.1-2.2 2.1-1.2-0.1-2.1-1.1-2-2.2 0-1.2 1-2.1 2.2-2 1.1 0 2 1 2 2.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1775,10 +1697,7 @@ export const Seats: React.FC = () => {
 								d="m661.6 1085.4c12.7 1.4 22.8 10.7 22.3 24.3-0.9 24.6-1.3 36.9-2.2 61.6-0.3 7.1-6.2 12.6-13.2 12.4q-50.2-1.8-100.4-4c-7-0.2-12.5-6.3-12.2-13.4 1-24.6 1.6-36.9 2.6-61.5 0.6-14.5 11.4-22 24.2-22.5 9.5-0.4 24.1-0.7 38.6-0.1 15 0.6 30 2 40.3 3.2zm-78.9-2.7c-11 0.5-23.1 6.5-23.7 22.1-1.1 24.6-1.6 36.9-2.7 61.6-0.3 6.8 5 12.6 11.8 12.9q50.2 2.1 100.4 3.9c6.8 0.3 12.5-5.1 12.8-11.9 0.8-24.7 1.3-37 2.2-61.6 0.4-12.5-8.6-22.4-22-23.9-6.2-0.7-22.5-2.5-40.3-3.2-18-0.7-34-0.1-38.5 0.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -1809,10 +1728,7 @@ export const Seats: React.FC = () => {
 							d="m629.7 1098.6c0 0.1 0 0.1 0 0.2 0-0.6-0.5-1.2-1.2-1.2-5.5-0.2-8.3-0.3-13.8-0.5-0.7-0.1-1.3 0.5-1.3 1.1 0-0.1 0-0.1 0-0.2 0.1-0.7 0.6-1.2 1.3-1.2 5.5 0.2 8.3 0.3 13.8 0.6 0.7 0 1.2 0.5 1.2 1.2z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -1820,10 +1736,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(14)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(14)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -2021,10 +1934,7 @@ export const Seats: React.FC = () => {
 								d="m2074.1 1094.5c0.1 1.2-0.8 2.2-2 2.2-1.1 0.1-2.1-0.8-2.2-2 0-1.2 0.9-2.1 2.1-2.2 1.1 0 2.1 0.9 2.1 2z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2032,10 +1942,7 @@ export const Seats: React.FC = () => {
 								d="m2060.5 1082.3c12.8 0.4 23.6 8.9 24.2 22.5 1 24.6 1.6 36.9 2.6 61.5 0.3 7.1-5.1 13.2-12.2 13.4q-50.2 2.2-100.4 4c-7 0.2-12.9-5.3-13.2-12.4-0.9-24.7-1.3-37-2.2-61.6-0.5-14.5 9.6-22.8 22.4-24.3 9.5-1.2 23.9-2.6 38.4-3.1 15.1-0.6 30.1-0.4 40.4 0zm-78.8 3.5c-11 1.3-22.5 8.3-21.9 23.9 0.8 24.6 1.3 36.9 2.1 61.6 0.3 6.8 6 12.2 12.8 11.9q50.2-1.8 100.4-3.9c6.8-0.3 12.1-6.1 11.8-12.9-1.1-24.7-1.6-37-2.6-61.6-0.6-12.5-10.3-21.6-23.8-22.1-6.2-0.2-22.6-0.7-40.4 0-18 0.7-33.9 2.5-38.4 3.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2066,10 +1973,7 @@ export const Seats: React.FC = () => {
 							d="m2029.8 1098c0 0.1 0 0.1 0 0.2 0-0.6-0.6-1.2-1.2-1.1-5.6 0.2-8.4 0.3-13.9 0.5-0.7 0-1.2 0.6-1.2 1.2 0-0.1 0-0.1 0-0.2 0-0.7 0.5-1.2 1.2-1.2 5.5-0.3 8.3-0.4 13.8-0.6 0.7 0 1.3 0.5 1.3 1.2z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -2083,10 +1987,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(8)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(8)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -2284,10 +2185,7 @@ export const Seats: React.FC = () => {
 								d="m1918.6 1100.4c0.1 1.2-0.8 2.1-2 2.2-1.1 0-2.1-0.9-2.2-2.1 0-1.1 0.9-2.1 2.1-2.1 1.1-0.1 2.1 0.8 2.1 2z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2295,10 +2193,7 @@ export const Seats: React.FC = () => {
 								d="m1905.1 1088c12.8 0.6 23.5 9.1 24 22.8 0.8 24.6 1.3 36.9 2.1 61.5 0.2 7.1-5.3 13.1-12.3 13.3q-50.2 1.7-100.4 3.1c-7.1 0.2-12.9-5.4-13.1-12.6-0.7-24.6-1-36.9-1.7-61.5-0.4-14.5 9.8-22.7 22.5-24.2 9.6-1.1 24-2.3 38.5-2.7 15.1-0.5 30.1-0.2 40.4 0.3zm-78.8 2.8c-11 1.3-22.6 8.2-22.2 23.8 0.7 24.6 1 36.9 1.7 61.5 0.2 6.9 5.9 12.3 12.6 12.1q50.3-1.3 100.5-3c6.8-0.2 12.1-6 11.9-12.9-0.9-24.6-1.3-36.9-2.1-61.5-0.5-12.6-10.1-21.7-23.6-22.4-6.2-0.2-22.6-0.8-40.4-0.3-18 0.5-33.9 2.2-38.4 2.7z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2329,10 +2224,7 @@ export const Seats: React.FC = () => {
 							d="m1874.3 1103.4c0 0.1 0 0.2 0 0.3-0.1-0.7-0.6-1.2-1.3-1.2-5.5 0.2-8.3 0.3-13.8 0.5-0.7 0-1.2 0.5-1.2 1.2 0-0.1 0-0.2 0-0.3 0-0.6 0.5-1.2 1.2-1.2 5.5-0.2 8.3-0.3 13.8-0.4 0.7 0 1.2 0.5 1.3 1.1z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"
@@ -2341,10 +2233,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(7)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(7)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -2542,10 +2431,7 @@ export const Seats: React.FC = () => {
 								d="m1763.1 1104.9c0 1.2-0.9 2.1-2 2.2-1.2 0-2.2-0.9-2.2-2.1 0-1.2 0.9-2.1 2.1-2.1 1.1-0.1 2.1 0.8 2.1 2z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2553,10 +2439,7 @@ export const Seats: React.FC = () => {
 								d="m1749.7 1092.4c12.8 0.7 23.4 9.3 23.8 23 0.6 24.6 0.9 36.9 1.5 61.5 0.2 7.1-5.4 13-12.4 13.2q-50.2 1.3-100.4 2.2c-7.1 0.1-12.9-5.5-13-12.6-0.5-24.7-0.7-37-1.1-61.6-0.3-14.5 10-22.6 22.7-24 9.5-1 24-2.1 38.5-2.4 15.1-0.3 30.1 0.1 40.4 0.7zm-78.8 2.2c-11 1.1-22.7 7.9-22.4 23.5 0.4 24.6 0.7 36.9 1.1 61.6 0.1 6.8 5.8 12.3 12.6 12.2q50.2-1 100.4-2.2c6.8-0.2 12.2-5.9 12-12.8-0.6-24.6-0.9-36.9-1.6-61.5-0.3-12.6-9.9-21.8-23.3-22.6-6.2-0.3-22.6-1-40.4-0.7-18 0.4-34 2-38.4 2.5z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2587,10 +2470,7 @@ export const Seats: React.FC = () => {
 							d="m1718.7 1107.6c0 0.1 0 0.1 0 0.2 0-0.6-0.5-1.2-1.2-1.1-5.6 0.1-8.3 0.1-13.9 0.3-0.6 0-1.2 0.5-1.2 1.2 0-0.1 0-0.2 0-0.3 0-0.7 0.5-1.2 1.2-1.2 5.6-0.1 8.3-0.2 13.9-0.3 0.6 0 1.2 0.5 1.2 1.2z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"
@@ -2601,10 +2481,7 @@ export const Seats: React.FC = () => {
 				</g>
 			</g>
 			<g id="&lt;Group&gt;">
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(0)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(0)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -2802,10 +2679,7 @@ export const Seats: React.FC = () => {
 								d="m1292 1183.8c0 1.4-1.2 2.5-2.5 2.5-1.4 0-2.5-1.1-2.5-2.5 0-1.3 1.1-2.4 2.5-2.4 1.4 0 2.5 1.1 2.5 2.4z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2813,10 +2687,7 @@ export const Seats: React.FC = () => {
 								d="m1276.6 1168.8c15 1.2 27.2 11.6 27.2 27.6 0 28.8 0 43.3-0.1 72.1 0 8.4-6.7 15.1-15 15.1q-59.1-0.1-118.2-0.6c-8.3-0.1-15-6.9-14.9-15.2 0.3-28.9 0.4-43.3 0.7-72.2 0.1-17 12.5-26.1 27.5-27.3 11.2-0.9 28.3-1.7 45.3-1.6 17.8 0.1 35.3 1.1 47.5 2.1zm-92.8 0c-13 1-26.9 8.6-27 26.8-0.3 28.9-0.4 43.3-0.7 72.2-0.1 8 6.4 14.6 14.4 14.7q59.1 0.5 118.2 0.6c8 0 14.5-6.5 14.5-14.6 0.1-28.8 0.1-43.3 0.1-72.1 0-14.7-11-25.9-26.8-27.1-7.3-0.6-26.5-2-47.4-2.1-21.2-0.1-40 1.2-45.3 1.6z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -2847,10 +2718,7 @@ export const Seats: React.FC = () => {
 							d="m1239.7 1185.5c0 0.2 0 0.2 0 0.3 0-0.7-0.7-1.3-1.4-1.3-6.6-0.1-9.8-0.1-16.4-0.1-0.7 0-1.4 0.6-1.4 1.4 0-0.2 0-0.2 0-0.4 0-0.7 0.7-1.3 1.4-1.3 6.6 0 9.8 0 16.4 0 0.7 0 1.4 0.7 1.4 1.4z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -2858,10 +2726,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(13)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(13)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -3059,10 +2924,7 @@ export const Seats: React.FC = () => {
 								d="m1475 1183.2c0 1.3-1.1 2.5-2.5 2.5-1.4 0-2.5-1.1-2.5-2.5 0-1.3 1.1-2.4 2.5-2.4 1.3-0.1 2.4 1 2.5 2.4z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3070,10 +2932,7 @@ export const Seats: React.FC = () => {
 								d="m1459.4 1168.3c15.1 1.1 27.4 11.4 27.6 27.3 0.2 28.9 0.3 43.3 0.6 72.2 0.1 8.3-6.6 15.1-14.9 15.2q-59.1 0.5-118.2 0.6c-8.3 0-15-6.7-15-15.1-0.1-28.8-0.1-43.3-0.1-72.1 0-17 12.2-26.3 27.2-27.6 11.2-1 28.3-2 45.3-2.1 17.8-0.1 35.4 0.7 47.5 1.6zm-92.7 1c-13 1.1-26.8 8.8-26.8 27.1 0 28.8 0 43.3 0.1 72.1 0 8.1 6.5 14.6 14.5 14.6q59.1-0.1 118.2-0.6c8-0.1 14.5-6.7 14.4-14.7-0.3-28.9-0.4-43.3-0.7-72.2-0.1-14.7-11.2-25.7-27-26.8-7.3-0.5-26.6-1.7-47.5-1.6-21.2 0.1-40 1.6-45.2 2.1z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3104,10 +2963,7 @@ export const Seats: React.FC = () => {
 							d="m1422.7 1185.4c0 0.2 0 0.2 0 0.4 0-0.8-0.7-1.4-1.4-1.4-6.6 0-9.8 0-16.4 0.1-0.7 0-1.4 0.6-1.4 1.3 0-0.1 0-0.1 0-0.3 0-0.7 0.7-1.4 1.4-1.4 6.6 0 9.8 0 16.4 0 0.7 0 1.4 0.6 1.4 1.3z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"
@@ -3116,10 +2972,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(10)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(10)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -3317,10 +3170,7 @@ export const Seats: React.FC = () => {
 								d="m1658 1180.7c0 1.4-1.1 2.5-2.5 2.5-1.3 0-2.5-1.1-2.5-2.4 0-1.4 1.1-2.5 2.4-2.5 1.4 0 2.5 1 2.6 2.4z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3328,10 +3178,7 @@ export const Seats: React.FC = () => {
 								d="m1642.3 1166c15 0.9 27.5 11 27.8 27 0.5 28.9 0.8 43.3 1.4 72.2 0.1 8.3-6.5 15.2-14.7 15.3q-59.2 1.1-118.3 1.8c-8.3 0.1-15.1-6.5-15.2-14.9-0.3-28.8-0.5-43.3-0.8-72.1-0.2-17 12-26.5 27-27.9 11.2-1.1 28.2-2.3 45.2-2.5 17.8-0.3 35.4 0.3 47.6 1.1zm-92.8 1.9c-12.9 1.3-26.7 9.1-26.5 27.4 0.3 28.8 0.5 43.3 0.8 72.1 0.1 8.1 6.7 14.5 14.7 14.4q59.1-0.7 118.2-1.8c8-0.1 14.4-6.8 14.3-14.8-0.6-28.9-0.9-43.3-1.4-72.2-0.3-14.7-11.6-25.6-27.4-26.5-7.3-0.5-26.5-1.5-47.4-1.1-21.3 0.3-40 2-45.3 2.5z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3362,10 +3209,7 @@ export const Seats: React.FC = () => {
 							d="m1605.7 1183.5c0 0.1 0 0.2 0 0.3 0-0.8-0.6-1.4-1.4-1.4-6.6 0.1-9.8 0.2-16.4 0.3-0.7 0-1.3 0.6-1.3 1.4 0-0.1 0-0.2 0-0.3 0-0.8 0.6-1.4 1.3-1.4 6.6-0.1 9.8-0.2 16.4-0.3 0.7 0 1.4 0.6 1.4 1.4z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -3373,10 +3217,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(12)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(12)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -3574,10 +3415,7 @@ export const Seats: React.FC = () => {
 								d="m1109 1182.6c-0.1 1.3-1.2 2.4-2.5 2.4-1.4 0-2.5-1.1-2.5-2.5 0-1.3 1.1-2.4 2.5-2.4 1.4 0 2.5 1.1 2.5 2.5z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3585,10 +3423,7 @@ export const Seats: React.FC = () => {
 								d="m1093.7 1167.4c15 1.3 27.2 11.9 27 27.9-0.3 28.8-0.5 43.3-0.8 72.1-0.1 8.4-6.9 15-15.2 14.9q-59.1-0.7-118.2-1.8c-8.3-0.1-14.9-7-14.8-15.3 0.6-28.9 0.9-43.3 1.4-72.2 0.4-17 12.8-26 27.8-27 11.3-0.8 28.3-1.4 45.4-1.2 17.7 0.3 35.3 1.5 47.4 2.6zm-92.7-0.9c-13 0.8-27 8.3-27.4 26.5-0.5 28.9-0.8 43.3-1.3 72.2-0.2 8 6.2 14.7 14.2 14.8q59.1 1.1 118.2 1.8c8 0.1 14.6-6.3 14.7-14.4 0.3-28.8 0.5-43.3 0.8-72.1 0.1-14.7-10.7-26-26.5-27.4-7.3-0.7-26.5-2.3-47.4-2.6-21.2-0.3-40.1 0.8-45.3 1.2z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3619,10 +3454,7 @@ export const Seats: React.FC = () => {
 							d="m1056.6 1183.8c0 0.1 0 0.2 0 0.3 0.1-0.8-0.6-1.4-1.3-1.4-6.6-0.1-9.8-0.2-16.4-0.3-0.7 0-1.4 0.6-1.4 1.4 0-0.1 0-0.2 0-0.3 0-0.8 0.7-1.4 1.4-1.4 6.6 0.1 9.8 0.2 16.4 0.3 0.7 0 1.4 0.6 1.3 1.4z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"
@@ -3631,10 +3463,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(8)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(8)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -3832,10 +3661,7 @@ export const Seats: React.FC = () => {
 								d="m926 1179.5c-0.1 1.4-1.2 2.4-2.6 2.4-1.3 0-2.4-1.2-2.4-2.5 0.1-1.4 1.2-2.4 2.6-2.4 1.3 0 2.4 1.1 2.4 2.5z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3843,10 +3669,7 @@ export const Seats: React.FC = () => {
 								d="m910.9 1164.1c15 1.6 27 12.2 26.7 28.2-0.6 28.9-0.9 43.3-1.6 72.1-0.1 8.4-7 15-15.3 14.8q-59.1-1.3-118.2-3c-8.3-0.3-14.8-7.2-14.6-15.5 0.9-28.9 1.3-43.3 2.1-72.2 0.6-16.9 13.1-25.9 28.1-26.7 11.3-0.7 28.3-1.1 45.4-0.7 17.7 0.4 35.3 1.8 47.4 3zm-92.8-1.8c-12.9 0.7-27 8-27.5 26.3-0.9 28.8-1.3 43.2-2.2 72.1-0.2 8 6.1 14.7 14.1 15q59.1 1.7 118.2 3c8 0.2 14.7-6.2 14.8-14.3 0.6-28.8 1-43.3 1.6-72.1 0.3-14.7-10.5-26.1-26.2-27.7-7.3-0.7-26.5-2.5-47.4-3-21.3-0.5-40.1 0.4-45.4 0.7z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -3877,10 +3700,7 @@ export const Seats: React.FC = () => {
 							d="m873.6 1180.2c0 0.1 0 0.1 0 0.3 0.1-0.8-0.6-1.5-1.3-1.5-6.6-0.1-9.8-0.2-16.4-0.4-0.7 0-1.4 0.6-1.4 1.4 0-0.2 0-0.2 0-0.3 0-0.8 0.7-1.4 1.5-1.4 6.5 0.2 9.8 0.3 16.3 0.4 0.8 0 1.4 0.7 1.3 1.5z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -3888,10 +3708,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(5)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(5)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -4089,10 +3906,7 @@ export const Seats: React.FC = () => {
 								d="m743 1174.5c0 1.4-1.2 2.5-2.5 2.4-1.4 0-2.5-1.2-2.4-2.5 0-1.4 1.2-2.4 2.5-2.4 1.4 0 2.5 1.2 2.4 2.5z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4100,10 +3914,7 @@ export const Seats: React.FC = () => {
 								d="m728.1 1159c15 1.7 26.9 12.5 26.4 28.5-0.9 28.8-1.4 43.2-2.3 72.1-0.2 8.3-7.2 14.8-15.5 14.6q-59.1-1.9-118.2-4.2c-8.2-0.4-14.7-7.4-14.4-15.7 1.2-28.8 1.8-43.3 2.9-72.1 0.7-17 13.3-25.8 28.3-26.5 11.3-0.5 28.4-0.8 45.4-0.2 17.8 0.6 35.3 2.2 47.4 3.5zm-92.7-2.8c-13 0.6-27.2 7.8-27.9 26-1.1 28.9-1.7 43.3-2.9 72.1-0.3 8.1 6 14.8 14 15.2q59.1 2.3 118.2 4.2c8 0.2 14.7-6.1 14.9-14.1 0.9-28.9 1.4-43.3 2.3-72.2 0.5-14.7-10.2-26.1-25.9-27.9-7.3-0.8-26.5-2.7-47.4-3.5-21.2-0.8-40.1 0-45.3 0.2z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4134,10 +3945,7 @@ export const Seats: React.FC = () => {
 							d="m690.7 1174.7c0 0.1 0 0.1 0 0.3 0-0.8-0.6-1.4-1.4-1.5-6.5-0.2-9.8-0.3-16.3-0.6-0.8 0-1.4 0.6-1.4 1.4 0-0.1 0-0.2 0-0.3 0-0.8 0.6-1.4 1.4-1.4 6.5 0.3 9.8 0.4 16.3 0.6 0.8 0 1.4 0.7 1.4 1.5z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -4145,10 +3953,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(7)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(7)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -4346,10 +4151,7 @@ export const Seats: React.FC = () => {
 								d="m560.1 1167.7c0 1.4-1.2 2.4-2.6 2.4-1.3-0.1-2.4-1.2-2.3-2.6 0-1.3 1.2-2.4 2.5-2.3 1.4 0 2.5 1.2 2.4 2.5z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4357,10 +4159,7 @@ export const Seats: React.FC = () => {
 								d="m545.4 1152.1c14.9 1.8 26.7 12.7 26.1 28.7-1.2 28.8-1.8 43.2-3 72.1-0.4 8.3-7.4 14.7-15.7 14.4q-59.1-2.5-118.1-5.4c-8.3-0.4-14.7-7.5-14.3-15.8 1.4-28.9 2.2-43.3 3.6-72.1 0.9-17 13.6-25.6 28.6-26.2 11.3-0.4 28.4-0.5 45.4 0.2 17.7 0.9 35.3 2.6 47.4 4.1zm-92.8-3.8c-13 0.5-27.2 7.5-28.1 25.7-1.4 28.9-2.1 43.3-3.6 72.1-0.4 8 5.8 14.9 13.8 15.3q59.1 2.9 118.1 5.4c8 0.3 14.8-5.9 15.1-14 1.2-28.8 1.8-43.2 3-72.1 0.7-14.7-9.9-26.2-25.6-28.1-7.3-0.9-26.4-3.1-47.3-4-21.2-1-40.1-0.5-45.4-0.3z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4391,10 +4190,7 @@ export const Seats: React.FC = () => {
 							d="m507.8 1167.3c0 0.1 0 0.2 0 0.3 0-0.8-0.6-1.4-1.4-1.4-6.5-0.3-9.8-0.5-16.3-0.8-0.8 0-1.4 0.6-1.5 1.3 0-0.1 0-0.1 0.1-0.3 0-0.7 0.6-1.3 1.4-1.3 6.5 0.3 9.8 0.5 16.3 0.8 0.8 0 1.4 0.6 1.4 1.4z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -4402,10 +4198,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(3)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(3)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -4603,10 +4396,7 @@ export const Seats: React.FC = () => {
 								d="m2206.7 1162.1c0.1 1.3-1 2.5-2.3 2.5-1.4 0.1-2.6-0.9-2.6-2.3-0.1-1.4 1-2.5 2.3-2.6 1.4 0 2.5 1 2.6 2.4z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4614,10 +4404,7 @@ export const Seats: React.FC = () => {
 								d="m2190.6 1147.8c15 0.5 27.8 10.2 28.6 26.2 1.4 28.8 2.2 43.2 3.6 72.1 0.4 8.3-6 15.4-14.2 15.8q-59.1 2.9-118.2 5.4c-8.3 0.3-15.3-6.1-15.6-14.4-1.2-28.9-1.8-43.3-3-72.1-0.8-17 11.1-26.8 26-28.7 11.2-1.5 28.2-3.2 45.2-4 17.8-0.8 35.4-0.7 47.6-0.3zm-92.7 4.8c-12.9 1.6-26.4 9.9-25.6 28.1 1.2 28.9 1.8 43.3 3 72.1 0.3 8.1 7.1 14.3 15.1 14q59.1-2.5 118.1-5.4c8-0.4 14.2-7.3 13.8-15.3-1.5-28.8-2.2-43.2-3.6-72.1-0.7-14.7-12.3-25.2-28.1-25.7-7.4-0.2-26.6-0.6-47.5 0.4-21.2 0.9-40 3.2-45.2 3.9z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4648,10 +4435,7 @@ export const Seats: React.FC = () => {
 							d="m2154.6 1166.4c0 0.2 0 0.2 0 0.3-0.1-0.7-0.7-1.3-1.5-1.3-6.5 0.3-9.8 0.5-16.3 0.8-0.8 0-1.4 0.6-1.4 1.4 0-0.1 0-0.2 0-0.3 0-0.8 0.6-1.4 1.4-1.4 6.5-0.3 9.8-0.5 16.3-0.8 0.8 0 1.4 0.6 1.5 1.3z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							className="s45"
@@ -4665,10 +4449,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(1)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(1)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -4866,10 +4647,7 @@ export const Seats: React.FC = () => {
 								d="m2023.8 1170.1c0.1 1.4-1 2.5-2.3 2.6-1.4 0-2.6-1-2.6-2.4-0.1-1.3 1-2.5 2.4-2.5 1.3-0.1 2.5 1 2.5 2.3z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4877,10 +4655,7 @@ export const Seats: React.FC = () => {
 								d="m2007.9 1155.7c15 0.6 27.7 10.5 28.3 26.5 1.2 28.8 1.7 43.3 2.9 72.1 0.3 8.3-6.1 15.3-14.4 15.7q-59.1 2.3-118.2 4.2c-8.3 0.2-15.3-6.3-15.5-14.6-0.9-28.9-1.4-43.3-2.3-72.1-0.5-17 11.4-26.7 26.4-28.5 11.2-1.3 28.2-2.8 45.2-3.4 17.8-0.7 35.4-0.4 47.6 0.1zm-92.7 3.8c-13 1.6-26.6 9.7-26 27.9 0.9 28.9 1.4 43.3 2.3 72.2 0.2 8 7 14.3 14.9 14.1q59.2-1.9 118.3-4.2c7.9-0.4 14.2-7.1 13.9-15.2-1.2-28.8-1.8-43.2-2.9-72.1-0.6-14.7-12-25.3-27.9-26-7.3-0.3-26.6-0.9-47.5-0.1-21.2 0.7-39.9 2.8-45.1 3.4z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -4911,10 +4686,7 @@ export const Seats: React.FC = () => {
 							d="m1971.6 1174c0.1 0.1 0.1 0.2 0.1 0.3-0.1-0.8-0.7-1.4-1.5-1.4-6.5 0.3-9.8 0.4-16.3 0.6-0.8 0.1-1.4 0.7-1.4 1.5 0-0.2 0-0.2 0-0.3 0-0.8 0.6-1.5 1.4-1.5 6.5-0.2 9.8-0.3 16.3-0.6 0.8 0 1.4 0.6 1.4 1.4z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"
@@ -4923,10 +4695,7 @@ export const Seats: React.FC = () => {
 						/>
 					</g>
 				</g>
-				<g
-					id="&lt;Group&gt;"
-					style={{transform: `translate(0, ${slideUp(9)}px)`}}
-				>
+				<g id="&lt;Group&gt;" style={{transform: `translate(0, ${slideUp(9)}px)`}}>
 					<g id="&lt;Group&gt;">
 						<g id="&lt;Group&gt;">
 							<path
@@ -5124,10 +4893,7 @@ export const Seats: React.FC = () => {
 								d="m1840.9 1176.3c0.1 1.4-1 2.5-2.4 2.6-1.4 0-2.5-1.1-2.5-2.4-0.1-1.4 1-2.5 2.4-2.5 1.3-0.1 2.5 1 2.5 2.3z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -5135,10 +4901,7 @@ export const Seats: React.FC = () => {
 								d="m1825.1 1161.8c15 0.7 27.6 10.8 28.1 26.7 0.8 28.9 1.2 43.3 2.1 72.2 0.2 8.3-6.3 15.2-14.6 15.5q-59.1 1.7-118.2 3c-8.3 0.2-15.2-6.4-15.3-14.8-0.6-28.8-1-43.2-1.6-72.1-0.3-17 11.7-26.6 26.7-28.2 11.2-1.2 28.2-2.5 45.3-3 17.7-0.4 35.3 0.1 47.5 0.7zm-92.7 2.8c-13 1.4-26.7 9.4-26.3 27.7 0.7 28.8 1 43.3 1.6 72.1 0.2 8.1 6.8 14.5 14.8 14.3q59.1-1.3 118.2-3c8-0.3 14.3-7 14.1-15-0.9-28.9-1.3-43.3-2.2-72.1-0.4-14.7-11.7-25.5-27.5-26.3-7.4-0.4-26.6-1.2-47.5-0.6-21.2 0.5-40 2.4-45.2 2.9z"
 							/>
 						</g>
-						<g
-							id="&lt;Group&gt;"
-							style={{opacity: 0.3, mixBlendMode: 'multiply'}}
-						>
+						<g id="&lt;Group&gt;" style={{opacity: 0.3, mixBlendMode: 'multiply'}}>
 							<path
 								id="&lt;Compound Path&gt;"
 								fill-rule="evenodd"
@@ -5169,10 +4932,7 @@ export const Seats: React.FC = () => {
 							d="m1788.7 1179.7c0 0.1 0 0.1 0 0.3 0-0.8-0.7-1.4-1.4-1.4-6.6 0.2-9.8 0.3-16.4 0.4-0.7 0-1.4 0.7-1.3 1.5 0-0.2 0-0.2 0-0.3-0.1-0.8 0.6-1.5 1.3-1.5 6.6-0.1 9.8-0.2 16.4-0.4 0.7 0 1.4 0.6 1.4 1.4z"
 						/>
 					</g>
-					<g
-						id="&lt;Group&gt;"
-						style={{opacity: 0.7, mixBlendMode: 'multiply'}}
-					>
+					<g id="&lt;Group&gt;" style={{opacity: 0.7, mixBlendMode: 'multiply'}}>
 						<path
 							id="&lt;Compound Path&gt;"
 							fill-rule="evenodd"

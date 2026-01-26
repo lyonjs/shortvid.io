@@ -12,15 +12,9 @@ describe('<OpenSourceCallout />', () => {
 		const remotionLink = screen.getByRole('link', {name: /Learn Remotion/i});
 
 		expect(githubLink).toBeVisible();
-		expect(githubLink).toHaveAttribute(
-			'href',
-			'https://github.com/lyonjs/shortvid.io',
-		);
+		expect(githubLink).toHaveAttribute('href', 'https://github.com/lyonjs/shortvid.io');
 
 		expect(remotionLink).toBeVisible();
-		expect(remotionLink).toHaveAttribute(
-			'href',
-			'https://www.remotion.dev/docs',
-		);
+		expect(remotionLink).toHaveAttribute('href', 'https://www.remotion.dev/docs');
 	});
 });

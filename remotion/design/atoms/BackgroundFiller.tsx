@@ -25,8 +25,7 @@ export const BackgroundFiller: React.FC<{
 						position: 'absolute',
 						width: '100%',
 						height: '100%',
-						backgroundImage:
-							'linear-gradient(to top, rgba(12,12,12,1), rgba(255,0,0,0))',
+						backgroundImage: 'linear-gradient(to top, rgba(12,12,12,1), rgba(255,0,0,0))',
 					}}
 				/>
 			)}

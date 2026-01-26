@@ -16,13 +16,7 @@ export const MixitIntroTalk = ({
 	return (
 		<AbsoluteFill>
 			<MixitIntro />
-			<Mixit
-				title={title}
-				speakers={speakers}
-				date={date}
-				time={time}
-				location={location}
-			/>
+			<Mixit title={title} speakers={speakers} date={date} time={time} location={location} />
 		</AbsoluteFill>
 	);
 };

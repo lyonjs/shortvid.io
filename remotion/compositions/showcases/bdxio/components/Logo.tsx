@@ -1,10 +1,4 @@
-import {
-	AbsoluteFill,
-	Img,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 type LogoProps = {
 	logoUrl: string;

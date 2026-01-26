@@ -18,9 +18,7 @@ export const Talk: React.FC<z.infer<typeof TalkSchema>> = ({
 	speakerPicture,
 	titleSize = 80,
 	titleColor = '#efdb50',
-	backgroundImg = staticFile(
-		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
-	),
+	backgroundImg = staticFile('/images/showcases/lyonjs/defaultBackgroundImage.jpeg'),
 }) => {
 	return (
 		<AbsoluteFill

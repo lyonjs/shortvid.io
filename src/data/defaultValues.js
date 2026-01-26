@@ -3,8 +3,7 @@ export const defaultTalkValues = {
 	speakers: [
 		{
 			name: 'Mickaël Alves',
-			picture:
-				'https://pbs.twimg.com/profile_images/1818749515798614016/5WxluMkh_400x400.jpg',
+			picture: 'https://pbs.twimg.com/profile_images/1818749515798614016/5WxluMkh_400x400.jpg',
 		},
 		{
 			name: 'Antoine Caron',

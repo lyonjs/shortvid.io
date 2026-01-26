@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-	Easing,
-	Img,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Easing, Img, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {z} from 'zod';
 
 import {SpeakerSchema} from '../../showcases.types';
@@ -21,11 +14,7 @@ export const LyonJS100Talk = z.object({
 	titleSize: z.number().finite().positive().gte(30).optional(),
 });
 
-export const Talk: React.FC<z.infer<typeof LyonJS100Talk>> = ({
-	speakers,
-	talkTitle,
-	titleSize,
-}) => {
+export const Talk: React.FC<z.infer<typeof LyonJS100Talk>> = ({speakers, talkTitle, titleSize}) => {
 	const {fps} = useVideoConfig();
 	const frame = useCurrentFrame();
 	const startFrame = 170;
@@ -46,16 +35,11 @@ export const Talk: React.FC<z.infer<typeof LyonJS100Talk>> = ({
 		durationInFrames: 50,
 	});
 
-	const textOpacity = interpolate(
-		frame,
-		[startFrame, startFrame + 100],
-		[0, 1],
-		{
-			extrapolateLeft: 'clamp',
-			extrapolateRight: 'clamp',
-			easing: Easing.bezier(0.33, 1, 0.68, 1),
-		},
-	);
+	const textOpacity = interpolate(frame, [startFrame, startFrame + 100], [0, 1], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+		easing: Easing.bezier(0.33, 1, 0.68, 1),
+	});
 
 	return (
 		<AnimatedScene>
@@ -99,11 +83,7 @@ export const Talk: React.FC<z.infer<typeof LyonJS100Talk>> = ({
 					})}
 				</div>
 			</div>
-			<TalkTitle
-				opacity={textOpacity}
-				titleSize={titleSize}
-				talkTitle={talkTitle}
-			/>
+			<TalkTitle opacity={textOpacity} titleSize={titleSize} talkTitle={talkTitle} />
 		</AnimatedScene>
 	);
 };

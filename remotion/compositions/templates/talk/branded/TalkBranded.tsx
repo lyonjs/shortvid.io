@@ -46,10 +46,7 @@ export const TalkBranded = ({
 					return (
 						<BrandedSpeaker
 							key={index}
-							pictureUrl={
-								speaker.pictureUrl ||
-								staticFile('/images/common/defaultAvatar.svg')
-							}
+							pictureUrl={speaker.pictureUrl || staticFile('/images/common/defaultAvatar.svg')}
 							name={speaker.name}
 							company={speaker.company}
 							job={speaker.job}

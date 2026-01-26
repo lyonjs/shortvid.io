@@ -15,8 +15,7 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 				width={1280}
 				height={720}
 				defaultProps={{
-					title:
-						"Remotion : le 7ème art à portée de composants web et d'API 🎬",
+					title: "Remotion : le 7ème art à portée de composants web et d'API 🎬",
 					speakers: [
 						{
 							name: 'Mickaël Alves',
@@ -26,8 +25,7 @@ export const CampingDesSpeakersComposition: React.FC = () => {
 						},
 						{
 							name: 'Antoine Caron',
-							picture:
-								'https://ca.slack-edge.com/T108ZKPMF-U5M2F1A69-36e4b6574de8-192',
+							picture: 'https://ca.slack-edge.com/T108ZKPMF-U5M2F1A69-36e4b6574de8-192',
 							company: 'Bedrock',
 						},
 					],

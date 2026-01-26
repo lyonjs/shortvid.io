@@ -1,12 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
-import {
-	Img,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 

@@ -21417,11 +21417,7 @@ export const Cinema: React.FC = () => {
 			`}</style>
 			<g id="scene">
 				<g id="layer">
-					<path
-						id="background"
-						className="s0"
-						d="m2639.9 1613.3h-2639.8v-1612.8h2639.8z"
-					/>
+					<path id="background" className="s0" d="m2639.9 1613.3h-2639.8v-1612.8h2639.8z" />
 					<Seats />
 					<Screen />
 					<WallLeft />

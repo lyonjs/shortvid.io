@@ -28,9 +28,7 @@ export const ReplayLyonJS: React.FC<z.infer<typeof LyonJSReplaySchema>> = ({
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Audio
 				src={staticFile('sounds/tech-logo.mp3')}
-				volume={(f) =>
-					interpolate(f, [0, 260, 320], [1, 1, 0], {extrapolateRight: 'clamp'})
-				}
+				volume={(f) => interpolate(f, [0, 260, 320], [1, 1, 0], {extrapolateRight: 'clamp'})}
 			/>
 			<Logo />
 			<LogoSponsor sponsor={sponsor} />

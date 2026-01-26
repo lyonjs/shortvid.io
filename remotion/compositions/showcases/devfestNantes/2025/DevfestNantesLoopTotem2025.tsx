@@ -97,9 +97,7 @@ export const DevfestNantesLoopTotem2025 = ({
 		>
 			<Sequence from={110}>
 				<BackgroundFiller
-					imageUrl={staticFile(
-						'images/showcases/devfestNantes/2025/library.png',
-					)}
+					imageUrl={staticFile('images/showcases/devfestNantes/2025/library.png')}
 					style={{
 						transform: `scale(${bgZoom})`,
 						transformOrigin: 'center center',

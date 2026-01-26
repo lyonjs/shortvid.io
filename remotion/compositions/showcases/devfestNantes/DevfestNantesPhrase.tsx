@@ -1,13 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {
-	AbsoluteFill,
-	Easing,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 import {DefaultProps} from '../../../types/defaultProps.types';
@@ -38,9 +31,7 @@ export const DevfestNantesPhrase = ({title}: DefaultProps) => {
 		>
 			<Sequence>
 				<BackgroundFiller
-					imageUrl={staticFile(
-						'/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png',
-					)}
+					imageUrl={staticFile('/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png')}
 					style={{
 						position: 'absolute',
 						width: '100%',

@@ -1,10 +1,4 @@
-import {
-	Img,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {Img, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 
 import {Details} from './components/Details';
 import {Speakers} from './components/Speakers';
@@ -19,13 +13,7 @@ export type TalkProps = {
 	location: string;
 };
 
-export const Talk: React.FC<TalkProps> = ({
-	title,
-	speakers,
-	date,
-	time,
-	location,
-}) => {
+export const Talk: React.FC<TalkProps> = ({title, speakers, date, time, location}) => {
 	const frame = useCurrentFrame();
 	const logoOpacity = interpolate(frame, [300, 320], [0, 1]);
 
@@ -35,9 +23,7 @@ export const Talk: React.FC<TalkProps> = ({
 				<Speakers speakers={speakers} />
 				<TalkTitle title={title} style={{}} />
 				<Img
-					src={staticFile(
-						'images/showcases/campingDesSpeakers/campingDesSpeakersLogoWithText.png',
-					)}
+					src={staticFile('images/showcases/campingDesSpeakers/campingDesSpeakersLogoWithText.png')}
 					alt="Conference logo"
 					style={{
 						position: 'absolute',

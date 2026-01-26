@@ -32,11 +32,7 @@
 		max-width: 600px;
 		margin: 4rem auto;
 		padding: 2.5rem;
-		background: linear-gradient(
-			135deg,
-			var(--purple-200) 0%,
-			var(--purple-300) 100%
-		);
+		background: linear-gradient(135deg, var(--purple-200) 0%, var(--purple-300) 100%);
 		border-radius: 1rem;
 		transition: all 0.3s ease;
 		box-shadow: 0 8px 32px rgba(157, 78, 221, 0.3);

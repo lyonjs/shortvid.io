@@ -21,8 +21,7 @@ export const LyonJSComposition: React.FC = () => {
 					speakers: [
 						{
 							name: 'Maxime Blanc',
-							picture:
-								'https://ca.slack-edge.com/T108ZKPMF-U3VL71HHU-179292d5d86f-512',
+							picture: 'https://ca.slack-edge.com/T108ZKPMF-U3VL71HHU-179292d5d86f-512',
 						},
 					],
 					date: '8 férvrier 2023',

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	interpolate,
-	Sequence,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {interpolate, Sequence, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Title} from '../../../design/atoms/Title';
 

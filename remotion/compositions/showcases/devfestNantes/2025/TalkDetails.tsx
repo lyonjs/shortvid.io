@@ -19,8 +19,7 @@ export const TalkDetails: React.FC<{
 	textStyle?: React.CSSProperties;
 	withLeaves?: boolean;
 }> = ({items, style, iconStyle, textStyle, withLeaves = true}) => {
-	const countColumn =
-		(items.date ? 1 : 0) + (items.time ? 1 : 0) + (items.location ? 1 : 0);
+	const countColumn = (items.date ? 1 : 0) + (items.time ? 1 : 0) + (items.location ? 1 : 0);
 
 	return (
 		<div
@@ -61,9 +60,7 @@ export const TalkDetails: React.FC<{
 						/>
 						{withLeaves && (
 							<Img
-								src={staticFile(
-									'/images/showcases/devfestNantes/2025/leaf.svg',
-								)}
+								src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')}
 								style={{height: 25}}
 							/>
 						)}
@@ -80,9 +77,7 @@ export const TalkDetails: React.FC<{
 						</Text>
 						{withLeaves && (
 							<Img
-								src={staticFile(
-									'/images/showcases/devfestNantes/2025/leaf.svg',
-								)}
+								src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')}
 								style={{height: 25, transform: 'scaleX(-1)'}}
 							/>
 						)}
@@ -115,9 +110,7 @@ export const TalkDetails: React.FC<{
 						/>
 						{withLeaves && (
 							<Img
-								src={staticFile(
-									'/images/showcases/devfestNantes/2025/leaf.svg',
-								)}
+								src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')}
 								style={{height: 25}}
 							/>
 						)}
@@ -134,9 +127,7 @@ export const TalkDetails: React.FC<{
 						</Text>
 						{withLeaves && (
 							<Img
-								src={staticFile(
-									'/images/showcases/devfestNantes/2025/leaf.svg',
-								)}
+								src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')}
 								style={{height: 25, transform: 'scaleX(-1)'}}
 							/>
 						)}
@@ -164,16 +155,12 @@ export const TalkDetails: React.FC<{
 						}}
 					>
 						<Icon
-							icon={
-								items.icons?.locationIcon || 'mdi:map-marker-radius-outline'
-							}
+							icon={items.icons?.locationIcon || 'mdi:map-marker-radius-outline'}
 							style={{fontSize: '4rem', ...iconStyle}}
 						/>
 						{withLeaves && (
 							<Img
-								src={staticFile(
-									'/images/showcases/devfestNantes/2025/leaf.svg',
-								)}
+								src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')}
 								style={{height: 25}}
 							/>
 						)}
@@ -190,9 +177,7 @@ export const TalkDetails: React.FC<{
 						</Text>
 						{withLeaves && (
 							<Img
-								src={staticFile(
-									'/images/showcases/devfestNantes/2025/leaf.svg',
-								)}
+								src={staticFile('/images/showcases/devfestNantes/2025/leaf.svg')}
 								style={{height: 25, transform: 'scaleX(-1)'}}
 							/>
 						)}

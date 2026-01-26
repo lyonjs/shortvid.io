@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	AbsoluteFill,
-	Img,
-	interpolate,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 export const BackgroundRhone = () => {
 	const frame = useCurrentFrame();

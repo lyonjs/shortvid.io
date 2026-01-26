@@ -15,11 +15,7 @@
 		transform: translateX(-50%);
 		width: 800px;
 		height: 800px;
-		background: radial-gradient(
-			circle,
-			rgba(157, 78, 221, 0.15) 0%,
-			transparent 70%
-		);
+		background: radial-gradient(circle, rgba(157, 78, 221, 0.15) 0%, transparent 70%);
 		pointer-events: none;
 	}
 
@@ -35,12 +31,7 @@
 		font-weight: 900;
 		line-height: 1.15;
 		margin: 0 auto 1.5rem;
-		background: linear-gradient(
-			135deg,
-			white 0%,
-			var(--purple-100) 50%,
-			var(--purple-200) 100%
-		);
+		background: linear-gradient(135deg, white 0%, var(--purple-100) 50%, var(--purple-200) 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;

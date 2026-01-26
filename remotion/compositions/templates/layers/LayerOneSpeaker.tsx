@@ -16,13 +16,8 @@ export const LayerOneSpeaker = ({
 	decorationUrl,
 }: z.infer<typeof DefaultLayerSchema>) => {
 	return (
-		<AbsoluteFill
-			style={{backgroundColor: 'white', overflow: 'hidden', gap: '30px'}}
-		>
-			<BackgroundTriangle
-				primaryColor={primaryColor}
-				secondaryColor={secondaryColor}
-			/>
+		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden', gap: '30px'}}>
+			<BackgroundTriangle primaryColor={primaryColor} secondaryColor={secondaryColor} />
 			{decorationUrl && (
 				<Img
 					style={{
@@ -53,10 +48,7 @@ export const LayerOneSpeaker = ({
 				/>
 			)}
 			{sponsorLogoUrl && (
-				<Img
-					src={sponsorLogoUrl}
-					style={{position: 'absolute', top: 10, right: 20, width: 300}}
-				/>
+				<Img src={sponsorLogoUrl} style={{position: 'absolute', top: 10, right: 20, width: 300}} />
 			)}
 		</AbsoluteFill>
 	);

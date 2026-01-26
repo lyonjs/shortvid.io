@@ -1,11 +1,5 @@
 import {loadFont} from '@remotion/google-fonts/Creepster';
-import {
-	AbsoluteFill,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
@@ -77,8 +71,7 @@ export const Speakers: React.FC<{
 									style={{
 										fontFamily,
 										color: '#1B2C2C',
-										textShadow:
-											'-2px 0 #FFF8F0, 0 2px #FFF8F0, 2px 0 #FFF8F0, 0 -2px #FFF8F0',
+										textShadow: '-2px 0 #FFF8F0, 0 2px #FFF8F0, 2px 0 #FFF8F0, 0 -2px #FFF8F0',
 										letterSpacing: '0.1rem',
 										position: 'relative',
 										bottom: isTotemDisplayMode ? '-50%' : '-118%',

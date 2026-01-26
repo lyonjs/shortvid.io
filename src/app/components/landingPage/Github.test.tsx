@@ -10,9 +10,7 @@ describe('<Github />', () => {
 			name: 'Need a custom template?',
 		});
 
-		const discussionInfos = screen.getByText(
-			/Want a showcase video for your event/i,
-		);
+		const discussionInfos = screen.getByText(/Want a showcase video for your event/i);
 		const forkInfos = screen.getByText(/You can also fork the project/i);
 
 		const githubLink = screen.getByRole('link', {
@@ -23,9 +21,6 @@ describe('<Github />', () => {
 		expect(discussionInfos).toBeVisible();
 		expect(forkInfos).toBeVisible();
 		expect(githubLink).toBeVisible();
-		expect(githubLink).toHaveProperty(
-			'href',
-			'https://github.com/lyonjs/shortvid.io/discussions',
-		);
+		expect(githubLink).toHaveProperty('href', 'https://github.com/lyonjs/shortvid.io/discussions');
 	});
 });

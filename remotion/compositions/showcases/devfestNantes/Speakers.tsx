@@ -1,11 +1,5 @@
 import {loadFont} from '@remotion/google-fonts/YanoneKaffeesatz';
-import {
-	AbsoluteFill,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
@@ -73,8 +67,7 @@ export const Speakers: React.FC<{speakers: Speaker[]}> = ({speakers}) => {
 								<Text
 									style={{
 										fontFamily,
-										textShadow:
-											'-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
+										textShadow: '-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black',
 										letterSpacing: '0.1rem',
 										position: 'relative',
 										bottom: '-40%',

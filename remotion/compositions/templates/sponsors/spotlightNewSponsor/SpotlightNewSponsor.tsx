@@ -20,9 +20,10 @@ import {LogosSponsoring} from './LogosSponsoring';
 import {NewSponsorTitle} from './NewSponsorTitle';
 import {Spotlight} from './Spotlight';
 
-export const SpotlightNewSponsor: React.FC<
-	z.infer<typeof SpotlightNewSponsorSchema>
-> = ({logo, sponsorLogo}) => {
+export const SpotlightNewSponsor: React.FC<z.infer<typeof SpotlightNewSponsorSchema>> = ({
+	logo,
+	sponsorLogo,
+}) => {
 	const {fps, width} = useVideoConfig();
 	const frame = useCurrentFrame();
 
@@ -54,9 +55,7 @@ export const SpotlightNewSponsor: React.FC<
 			<Audio
 				src={staticFile('sounds/tip_stevens_miracle.mp3')}
 				startFrom={1900}
-				volume={(frame) =>
-					interpolate(frame, [0, 80], [0, 0.4], {extrapolateLeft: 'clamp'})
-				}
+				volume={(frame) => interpolate(frame, [0, 80], [0, 0.4], {extrapolateLeft: 'clamp'})}
 			/>
 			<Sequence from={10} durationInFrames={300} name="Texte">
 				<NewSponsorTitle />
@@ -87,19 +86,11 @@ export const SpotlightNewSponsor: React.FC<
 			>
 				<Sequence from={420} name="Noise" durationInFrames={330}>
 					<FadeIn duration={50}>
-						<BackgroundCircleNoise
-							speed={0.004}
-							circleRadius={5}
-							maxOffset={50}
-						/>
+						<BackgroundCircleNoise speed={0.004} circleRadius={5} maxOffset={50} />
 					</FadeIn>
 				</Sequence>
 				<Sequence from={420} durationInFrames={300} name="Logos">
-					<LogosSponsoring
-						logo={logo}
-						sponsorLogo={sponsorLogo}
-						scaleUp={scaleUp}
-					/>
+					<LogosSponsoring logo={logo} sponsorLogo={sponsorLogo} scaleUp={scaleUp} />
 				</Sequence>
 			</div>
 		</AbsoluteFill>

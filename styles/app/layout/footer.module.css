@@ -8,13 +8,7 @@
 	margin: 4rem 2rem 2rem;
 	padding-top: 3rem;
 	border-top: 1px solid transparent;
-	border-image: linear-gradient(
-			90deg,
-			transparent,
-			var(--purple-500),
-			transparent
-		)
-		1;
+	border-image: linear-gradient(90deg, transparent, var(--purple-500), transparent) 1;
 
 	.footerLogo {
 		position: absolute;

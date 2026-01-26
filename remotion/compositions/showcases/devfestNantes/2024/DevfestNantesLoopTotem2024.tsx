@@ -1,13 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {
-	AbsoluteFill,
-	Easing,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
@@ -49,9 +42,7 @@ export const DevfestNantesLoopTotem2024 = ({
 		>
 			<Sequence>
 				<BackgroundFiller
-					imageUrl={staticFile(
-						'/images/showcases/devfestNantes/2024/background-filler-totem.png',
-					)}
+					imageUrl={staticFile('/images/showcases/devfestNantes/2024/background-filler-totem.png')}
 					style={{
 						transform: 'scale(1)',
 					}}
@@ -86,12 +77,7 @@ export const DevfestNantesLoopTotem2024 = ({
 					/>
 				</Sequence>
 				<Sequence from={70}>
-					<Details
-						date={date}
-						time={time}
-						location={location}
-						isTotemDisplayMode
-					/>
+					<Details date={date} time={time} location={location} isTotemDisplayMode />
 				</Sequence>
 			</div>
 		</AbsoluteFill>

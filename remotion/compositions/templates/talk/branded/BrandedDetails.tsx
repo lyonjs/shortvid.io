@@ -9,17 +9,12 @@ type BrandedDetailsProps = {
 	location?: string;
 };
 
-export const BrandedDetails = ({
-	startingDateTime,
-	location,
-}: BrandedDetailsProps) => {
+export const BrandedDetails = ({startingDateTime, location}: BrandedDetailsProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
 	const inputDate: string =
-		startingDateTime instanceof Date
-			? startingDateTime.toISOString()
-			: startingDateTime;
+		startingDateTime instanceof Date ? startingDateTime.toISOString() : startingDateTime;
 	const luxonDate = DateTime.fromISO(inputDate, {
 		setZone: !(startingDateTime instanceof Date),
 	}).setLocale('fr');

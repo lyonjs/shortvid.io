@@ -73,9 +73,7 @@ export const DevfestNantesPhrase2025 = ({
 		>
 			<Sequence>
 				<BackgroundFiller
-					imageUrl={staticFile(
-						'images/showcases/devfestNantes/2025/library.png',
-					)}
+					imageUrl={staticFile('images/showcases/devfestNantes/2025/library.png')}
 					style={{
 						opacity: videoOpacity,
 						transform: `scale(${bgZoom})`,

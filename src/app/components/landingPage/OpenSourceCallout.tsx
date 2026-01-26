@@ -11,18 +11,14 @@ export const OpenSourceCallout = () => {
 				<h2>Open Source & Built on Remotion</h2>
 				<p>
 					Shortvid.io is fully open-source and built with{' '}
-					<Link
-						href="https://www.remotion.dev/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<Link href="https://www.remotion.dev/" target="_blank" rel="noopener noreferrer">
 						Remotion
 					</Link>
 					, the React framework for creating videos programmatically.
 				</p>
 				<p>
-					Contribute, customize, or self-host to fit your needs. Join our
-					community and help make event content creation easier for everyone.
+					Contribute, customize, or self-host to fit your needs. Join our community and help make
+					event content creation easier for everyone.
 				</p>
 				<div className={styles.links}>
 					<Link

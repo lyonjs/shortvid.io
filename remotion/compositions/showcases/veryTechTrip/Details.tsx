@@ -3,10 +3,7 @@ import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {TalkDetails} from '../../../design/molecules/TalkDetails';
 
-export const Details: React.FC<{style?: CSSProperties; time: string}> = ({
-	style,
-	time,
-}) => {
+export const Details: React.FC<{style?: CSSProperties; time: string}> = ({style, time}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

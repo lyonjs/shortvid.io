@@ -14,10 +14,7 @@ export const LayerFullScreen = ({
 }: z.infer<typeof LayerSchema>) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
-			<BackgroundTriangle
-				primaryColor={primaryColor}
-				secondaryColor={secondaryColor}
-			/>
+			<BackgroundTriangle primaryColor={primaryColor} secondaryColor={secondaryColor} />
 			<div
 				style={{
 					height: '100%',

@@ -1,11 +1,4 @@
-import {
-	Audio,
-	Easing,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {Audio, Easing, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 
 import {BackTrees} from './components/BackTrees';
 import {FireCamp} from './components/FireCamp';

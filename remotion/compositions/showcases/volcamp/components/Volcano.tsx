@@ -15,15 +15,16 @@ export const Volcano = () => {
 		transform: `scaleY(${lavaDownUp})`,
 	};
 
-	const [lavaFall1, lavaFall2, lavaFall3, lavaFall4, lavaFall5, lavaFall6] =
-		downLavaHeights.map((height, id) => {
+	const [lavaFall1, lavaFall2, lavaFall3, lavaFall4, lavaFall5, lavaFall6] = downLavaHeights.map(
+		(height, id) => {
 			const delay = 30 + id * 2;
 			const speed = 40 + Math.round(height / 1.8);
 			return interpolate(frame, [delay, speed], [0, height], {
 				extrapolateRight: 'clamp',
 				extrapolateLeft: 'clamp',
 			});
-		});
+		},
+	);
 
 	const exploadUp = interpolate(frame, [80, 110], [0, 2], {
 		extrapolateRight: 'clamp',
@@ -67,14 +68,7 @@ export const Volcano = () => {
 						fill="#FF4800"
 						style={lavaUpStyle}
 					/>
-					<rect
-						id="up-rect-3"
-						x="475"
-						width="87"
-						height="631"
-						fill="#E92700"
-						style={lavaUpStyle}
-					/>
+					<rect id="up-rect-3" x="475" width="87" height="631" fill="#E92700" style={lavaUpStyle} />
 					<rect
 						id="up-rect-4"
 						x="562"
@@ -166,54 +160,12 @@ export const Volcano = () => {
 					filter="url(#shadow)"
 				/>
 				<g id="Down-lava">
-					<rect
-						id="Rect-1"
-						x="379"
-						y="390"
-						width="40"
-						height={lavaFall6}
-						fill="#FF6700"
-					/>
-					<rect
-						id="Rect-2"
-						x="419"
-						y="398"
-						width="56"
-						height={lavaFall5}
-						fill="#FF4800"
-					/>
-					<rect
-						id="Rect-3"
-						x="475"
-						y="409"
-						width="87"
-						height={lavaFall4}
-						fill="#E92700"
-					/>
-					<rect
-						id="Rect-4"
-						x="562"
-						y="426"
-						width="91"
-						height={lavaFall3}
-						fill="#FF4800"
-					/>
-					<rect
-						id="Rect-5"
-						x="653"
-						y="440"
-						width="54"
-						height={lavaFall2}
-						fill="#FF6700"
-					/>
-					<rect
-						id="Rect-6"
-						x="707"
-						y="454"
-						width="42"
-						height={lavaFall1}
-						fill="#E92700"
-					/>
+					<rect id="Rect-1" x="379" y="390" width="40" height={lavaFall6} fill="#FF6700" />
+					<rect id="Rect-2" x="419" y="398" width="56" height={lavaFall5} fill="#FF4800" />
+					<rect id="Rect-3" x="475" y="409" width="87" height={lavaFall4} fill="#E92700" />
+					<rect id="Rect-4" x="562" y="426" width="91" height={lavaFall3} fill="#FF4800" />
+					<rect id="Rect-5" x="653" y="440" width="54" height={lavaFall2} fill="#FF6700" />
+					<rect id="Rect-6" x="707" y="454" width="42" height={lavaFall1} fill="#E92700" />
 				</g>
 			</g>
 			<defs>
@@ -236,15 +188,8 @@ export const Volcano = () => {
 					<feOffset dy="-7" />
 					<feGaussianBlur stdDeviation="27.5" />
 					<feComposite in2="hardAlpha" operator="out" />
-					<feColorMatrix
-						type="matrix"
-						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.45 0"
-					/>
-					<feBlend
-						mode="normal"
-						in2="BackgroundImageFix"
-						result="effect1_dropShadow_510_14640"
-					/>
+					<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.45 0" />
+					<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_510_14640" />
 					<feBlend
 						mode="normal"
 						in="SourceGraphic"

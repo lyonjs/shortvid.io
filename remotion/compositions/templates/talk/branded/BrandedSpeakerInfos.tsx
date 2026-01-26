@@ -11,12 +11,7 @@ type BrandedSpeakerInfosProps = {
 	iconStyle?: React.CSSProperties;
 };
 
-export const BrandedSpeakerInfos = ({
-	name,
-	company,
-	job,
-	iconStyle,
-}: BrandedSpeakerInfosProps) => {
+export const BrandedSpeakerInfos = ({name, company, job, iconStyle}: BrandedSpeakerInfosProps) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const opacity = spring({

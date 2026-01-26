@@ -1,8 +1,6 @@
 import React from 'react';
 
-export const GreenScreen: React.FC<{style?: React.CSSProperties}> = ({
-	style,
-}) => {
+export const GreenScreen: React.FC<{style?: React.CSSProperties}> = ({style}) => {
 	return (
 		<div
 			style={{

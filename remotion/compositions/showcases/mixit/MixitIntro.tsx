@@ -1,11 +1,5 @@
 import {CSSProperties} from 'react';
-import {
-	AbsoluteFill,
-	Img,
-	interpolate,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 const MixitLogo: React.FC = () => {
 	return (
@@ -59,8 +53,7 @@ export const MixitIntro: React.FC = () => {
 				style={{
 					...defaultPathStyle,
 					right: slide,
-					clipPath:
-						'polygon(100% 0, 100% 100%, 42.3% 100%, 61.5% 48.8%, 42% 0%)',
+					clipPath: 'polygon(100% 0, 100% 100%, 42.3% 100%, 61.5% 48.8%, 42% 0%)',
 				}}
 			>
 				<MixitLogo />

@@ -24,8 +24,7 @@ export const FEATURES = [
 export const USE_CASES = [
 	{
 		title: 'Conferences',
-		description:
-			'Generate speaker announcements, schedules, and sponsor showcases',
+		description: 'Generate speaker announcements, schedules, and sponsor showcases',
 		examples: ['Devoxx', 'DevFest Nantes', 'MiXiT', 'Tourraine Tech'],
 		emoji: '🎤',
 	},
@@ -47,8 +46,7 @@ export const HOW_IT_WORKS = [
 	{
 		step: 1,
 		title: 'Choose a template',
-		description:
-			'Browse our collection of ready-to-use templates designed for events',
+		description: 'Browse our collection of ready-to-use templates designed for events',
 	},
 	{
 		step: 2,
@@ -84,8 +82,7 @@ export const PARTNERS = [
 	{
 		name: 'Devfest Nantes',
 		logo: '/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg',
-		logoDark:
-			'/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg',
+		logoDark: '/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg',
 		url: 'https://devfest.gdgnantes.com/',
 	},
 	{

@@ -19,9 +19,7 @@ export const SponsorsComposition = () => {
 					companyName: 'Evilcorp',
 					sponsorLocalisation: '94 Rue Robert - Lyon',
 					sponsorLogo: staticFile('/branding/full-logo-with-mono-vertical.svg'),
-					backgroundImg: staticFile(
-						'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
-					),
+					backgroundImg: staticFile('/images/showcases/lyonjs/defaultBackgroundImage.jpeg'),
 				}}
 			/>
 			<Composition

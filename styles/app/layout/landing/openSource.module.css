@@ -20,11 +20,7 @@
 		left: -50%;
 		width: 200%;
 		height: 200%;
-		background: radial-gradient(
-			circle,
-			rgba(157, 78, 221, 0.1) 0%,
-			transparent 50%
-		);
+		background: radial-gradient(circle, rgba(157, 78, 221, 0.1) 0%, transparent 50%);
 		animation: pulse 8s ease-in-out infinite;
 	}
 

@@ -1,10 +1,4 @@
-import {
-	AbsoluteFill,
-	Img,
-	interpolate,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, Img, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Spotlight: React.FC<{sponsorLogo: string}> = ({sponsorLogo}) => {
 	const frame = useCurrentFrame();

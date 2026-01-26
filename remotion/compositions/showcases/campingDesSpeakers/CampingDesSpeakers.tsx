@@ -33,13 +33,7 @@ export const CampingDesSpeakers: React.FC<CampingDesSpeakersProps> = ({
 			<Sequence from={270}>
 				<TalkBackground />
 			</Sequence>
-			<Talk
-				speakers={speakers}
-				date={date}
-				time={time}
-				location={location}
-				title={title}
-			/>
+			<Talk speakers={speakers} date={date} time={time} location={location} title={title} />
 		</AbsoluteFill>
 	);
 };

@@ -44,8 +44,7 @@ export const Details: React.FC<{
 				left: '50%',
 				width: '90%',
 				fontSize: '30px',
-				textShadow:
-					'-2px 0 #111e42, 0 2px #111e42, 2px 0 #111e42, 0 -2px #111e42',
+				textShadow: '-2px 0 #111e42, 0 2px #111e42, 2px 0 #111e42, 0 -2px #111e42',
 				transform: 'translateX(-50%)',
 				filter: `blur(${textUnblur}px)`,
 				color: '#FFFFFF',

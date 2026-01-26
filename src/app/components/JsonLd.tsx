@@ -46,13 +46,9 @@ const organizationSchema = {
 	name: 'Shortvid.io',
 	url: SITE_URL,
 	logo: `${SITE_URL}/branding/monogram.svg`,
-	sameAs: [
-		'https://github.com/lyonjs/shortvid.io',
-		'https://twitter.com/shortvid_io',
-	],
+	sameAs: ['https://github.com/lyonjs/shortvid.io', 'https://twitter.com/shortvid_io'],
 	foundingDate: '2023',
-	description:
-		'Open-source project for generating event content, built by the LyonJS community.',
+	description: 'Open-source project for generating event content, built by the LyonJS community.',
 };
 
 export const JsonLd = () => {

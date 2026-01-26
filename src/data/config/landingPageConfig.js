@@ -94,6 +94,30 @@ export const PARTNERS = [
 		logoDark: '/images/showcases/volcamp/volcampText.svg',
 		url: 'https://www.volcamp.io/',
 	},
+	{
+		name: 'DevFest Lille',
+		logo: '/images/showcases/devfestLille/logo-devfest-lille.svg',
+		logoDark: '/images/showcases/devfestLille/logo-devfest-lille.svg',
+		url: 'https://devfest.gdglille.org/',
+	},
+	{
+		name: 'BDX I/O',
+		logo: '/images/showcases/bdxio/logo.png',
+		logoDark: '/images/showcases/bdxio/logo.png',
+		url: 'https://www.bdxio.fr/',
+	},
+	{
+		name: 'DevFest Strasbourg',
+		logo: '/images/showcases/devfestStrasbourg/2024/logo.png',
+		logoDark: '/images/showcases/devfestStrasbourg/2024/logo.png',
+		url: 'https://devfest.gdgstrasbourg.fr/',
+	},
+	{
+		name: 'AlpesCraft',
+		logo: '/images/showcases/alpescraft/alpescraftLogo.png',
+		logoDark: '/images/showcases/alpescraft/alpescraftLogo.png',
+		url: 'https://www.alpescraft.fr/',
+	},
 ];
 
 export const FAQ = [

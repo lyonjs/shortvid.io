@@ -101,8 +101,8 @@ devDependencies:
     specifier: 19.0.3
     version: 19.0.3(@types/react@19.0.7)
   '@types/web':
-    specifier: 0.0.301
-    version: 0.0.301
+    specifier: 0.0.323
+    version: 0.0.323
   '@vitejs/plugin-react':
     specifier: ^5.1.2
     version: 5.1.2
@@ -2126,8 +2126,8 @@ packages:
       csstype: 3.2.3
     dev: true
 
-  /@types/web@0.0.301:
-    resolution: {integrity: sha512-GAoFovImstIY39EAwGazoeal9+uy+zZz0vLhz/MDbqaHAbK0d8yzF8EKtlSkwNzZu9WEIyYdfSGwVTUSnJMtpw==}
+  /@types/web@0.0.323:
+    resolution: {integrity: sha512-2/3r+jdsu0UdRRIsjOeIALbbC315SjAW/k8TKIJDRMz0BY5/EbBXnXaCV7ZLkN4wDk7RXCaYRW9TA0HJuJ2jWw==}
     dev: true
 
   /@types/yauzl@2.10.3:

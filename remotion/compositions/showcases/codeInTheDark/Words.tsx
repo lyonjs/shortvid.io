@@ -3,13 +3,7 @@ import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 
 export const Words = () => {
 	const frame = useCurrentFrame();
-	const wordsLits = [
-		'IMPRESSIVE !',
-		'OMG !',
-		'Are you god ?',
-		'Fire ! 🔥',
-		'WoooooW !',
-	];
+	const wordsLits = ['IMPRESSIVE !', 'OMG !', 'Are you god ?', 'Fire ! 🔥', 'WoooooW !'];
 
 	return (
 		<AbsoluteFill
@@ -33,15 +27,10 @@ export const Words = () => {
 						extrapolateLeft: 'clamp',
 					});
 
-					const opacity = interpolate(
-						frame - index * 50,
-						[19, 20, 50],
-						[0, 1, 0],
-						{
-							extrapolateRight: 'clamp',
-							extrapolateLeft: 'clamp',
-						},
-					);
+					const opacity = interpolate(frame - index * 50, [19, 20, 50], [0, 1, 0], {
+						extrapolateRight: 'clamp',
+						extrapolateLeft: 'clamp',
+					});
 
 					return (
 						<span

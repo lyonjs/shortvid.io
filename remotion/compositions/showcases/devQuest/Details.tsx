@@ -1,12 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/Teko';
-import {
-	Img,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../design/atoms/Text';
 
@@ -82,11 +76,7 @@ export const Details: React.FC<{
 							bottom: drop,
 						}}
 					>
-						<Img
-							src={staticFile(item.icon)}
-							alt="Icon"
-							style={{width: '5rem'}}
-						/>
+						<Img src={staticFile(item.icon)} alt="Icon" style={{width: '5rem'}} />
 						<Text
 							style={{
 								position: 'relative',

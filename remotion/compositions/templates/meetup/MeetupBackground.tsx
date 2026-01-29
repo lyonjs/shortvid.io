@@ -3,9 +3,7 @@ import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
 
-export const MeetupBackground: React.FC<{backgroundImg: string}> = ({
-	backgroundImg,
-}) => {
+export const MeetupBackground: React.FC<{backgroundImg: string}> = ({backgroundImg}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const ANIMATION_DURATION = 30;

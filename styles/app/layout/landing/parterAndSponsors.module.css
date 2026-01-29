@@ -2,12 +2,22 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 250px;
-	height: 100px;
+	width: 200px;
+	height: 80px;
 	padding: 1rem;
+	filter: grayscale(30%);
+	opacity: 0.85;
+	transition: all 0.3s ease;
 
 	> img {
 		height: 100%;
 		width: auto;
+		object-fit: contain;
 	}
+}
+
+.logos:hover {
+	filter: grayscale(0%);
+	opacity: 1;
+	transform: scale(1.05);
 }

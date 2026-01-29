@@ -18,9 +18,7 @@ export const SilhouettePicture: React.FC<{
 		easing: Easing.out(Easing.ease),
 	});
 
-	const transform = `${
-		side === 'left' ? '' : 'scaleX(-1)'
-	} translateX(-${slideIn}%)`;
+	const transform = `${side === 'left' ? '' : 'scaleX(-1)'} translateX(-${slideIn}%)`;
 
 	return (
 		<div

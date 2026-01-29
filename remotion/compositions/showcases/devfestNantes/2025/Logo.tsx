@@ -31,9 +31,7 @@ export const Logo = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 
 	return (
 		<Img
-			src={staticFile(
-				'/images/showcases/devfestNantes/2025/logo-devfest-2025.png',
-			)}
+			src={staticFile('/images/showcases/devfestNantes/2025/logo-devfest-2025.png')}
 			width={logoWidth}
 			height="auto"
 			style={{

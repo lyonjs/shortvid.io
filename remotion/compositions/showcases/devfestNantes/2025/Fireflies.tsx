@@ -13,11 +13,7 @@ const pseudoRandom = (n: number) => {
 	return x - Math.floor(x);
 };
 
-export const Fireflies: React.FC<FirefliesProps> = ({
-	count = 14,
-	seed = 42,
-	opacity = 0.9,
-}) => {
+export const Fireflies: React.FC<FirefliesProps> = ({count = 14, seed = 42, opacity = 0.9}) => {
 	const frame = useCurrentFrame();
 	const {width, height, fps} = useVideoConfig();
 
@@ -62,7 +58,5 @@ export const Fireflies: React.FC<FirefliesProps> = ({
 		);
 	});
 
-	return (
-		<AbsoluteFill style={{pointerEvents: 'none'}}>{elements}</AbsoluteFill>
-	);
+	return <AbsoluteFill style={{pointerEvents: 'none'}}>{elements}</AbsoluteFill>;
 };

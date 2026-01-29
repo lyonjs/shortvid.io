@@ -1,0 +1,7 @@
+# Git LFS
+# Video files
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+# Large images (optional, for very large assets)
+# *.psd filter=lfs diff=lfs merge=lfs -text

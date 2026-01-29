@@ -32,9 +32,7 @@ export const DevfestNantes = ({
 		>
 			<Sequence>
 				<BackgroundFiller
-					imageUrl={staticFile(
-						'/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png',
-					)}
+					imageUrl={staticFile('/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png')}
 					style={{
 						position: 'absolute',
 						width: '100%',

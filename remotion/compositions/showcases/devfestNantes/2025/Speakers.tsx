@@ -84,9 +84,7 @@ export const Speakers: React.FC<{
 								filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.22))',
 							}}
 							alt="plante"
-							src={staticFile(
-								'images/showcases/devfestNantes/2025/plantes.png',
-							)}
+							src={staticFile('images/showcases/devfestNantes/2025/plantes.png')}
 						/>
 						<AvatarWithCaption
 							avatarPictureUrl={speaker.picture}

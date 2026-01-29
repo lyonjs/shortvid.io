@@ -1,10 +1,4 @@
-import {
-	Img,
-	interpolate,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const LyonSkyline = () => {
 	const frame = useCurrentFrame();

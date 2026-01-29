@@ -1,10 +1,5 @@
 import {CSSProperties} from 'react';
-import {
-	AbsoluteFill,
-	interpolate,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 
 const Rect: React.FC<{style?: CSSProperties}> = ({style}) => {
 	return (
@@ -36,16 +31,8 @@ export const Background = () => {
 	const {durationInFrames} = useVideoConfig();
 
 	const squareUp = interpolate(frame, [0, durationInFrames], [120, 20]);
-	const rectangleToLeft = interpolate(
-		frame,
-		[0, durationInFrames],
-		[-200, -20],
-	);
-	const rectangleToRight = interpolate(
-		frame,
-		[0, durationInFrames],
-		[-100, -60],
-	);
+	const rectangleToLeft = interpolate(frame, [0, durationInFrames], [-200, -20]);
+	const rectangleToRight = interpolate(frame, [0, durationInFrames], [-100, -60]);
 	const enlargingPill = interpolate(frame, [0, durationInFrames], [120, 320]);
 
 	return (

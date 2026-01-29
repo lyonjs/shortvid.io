@@ -1,11 +1,16 @@
 .listContainer {
-	margin: 5rem auto;
+	margin: 6rem auto;
+	text-align: center;
 
 	h3 {
-		font-weight: 700;
-		font-size: 3rem;
+		font-weight: 800;
+		font-size: 2.5rem;
 		text-align: center;
 		margin-bottom: 3rem;
+		background: linear-gradient(135deg, var(--color-text) 0%, var(--purple-100) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
 
 	.list {
@@ -13,6 +18,6 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 2.5rem;
+		gap: 2rem;
 	}
 }

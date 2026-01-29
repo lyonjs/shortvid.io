@@ -1,0 +1,113 @@
+.howItWorks {
+	margin: 6rem 0;
+	padding: 4rem 2rem;
+	text-align: center;
+	background: linear-gradient(180deg, var(--purple-850) 0%, var(--purple-900) 100%);
+	border-radius: 2rem;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--purple-400), transparent);
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+		background: linear-gradient(135deg, var(--color-text) 0%, var(--purple-100) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+		color: var(--color-text-secondary);
+		margin-bottom: 3.5rem;
+	}
+
+	.steps {
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+		flex-wrap: wrap;
+		position: relative;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.step {
+		flex: 1;
+		min-width: 220px;
+		max-width: 280px;
+		text-align: center;
+		position: relative;
+
+		.stepNumber {
+			width: 3.5rem;
+			height: 3.5rem;
+			margin: 0 auto 1.25rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: var(--btn-gradient);
+			border-radius: 50%;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: white;
+			box-shadow: 0 8px 24px rgba(157, 78, 221, 0.4);
+			position: relative;
+			z-index: 1;
+		}
+
+		h3 {
+			font-size: 1.2rem;
+			font-weight: 700;
+			margin-bottom: 0.75rem;
+			color: var(--color-text);
+		}
+
+		p {
+			font-size: 0.95rem;
+			color: var(--color-text-secondary);
+			line-height: 1.6;
+		}
+
+		&:not(:last-child)::after {
+			content: '';
+			position: absolute;
+			top: 1.75rem;
+			right: -1.5rem;
+			width: 3rem;
+			height: 2px;
+			background: linear-gradient(90deg, var(--purple-400), transparent);
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.howItWorks {
+		padding: 3rem 1.5rem;
+
+		.steps {
+			flex-direction: column;
+			align-items: center;
+			gap: 2.5rem;
+		}
+
+		.step {
+			max-width: 100%;
+
+			&:not(:last-child)::after {
+				display: none;
+			}
+		}
+	}
+}

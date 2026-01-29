@@ -22,9 +22,7 @@ export const LeftTriangle = ({
 				height: 3 * height,
 				width: 2 * width,
 				backgroundColor: color,
-				transform: `translateX(-${2 * height}px) rotate(${
-					isAnimated ? rotate : null
-				}deg)`,
+				transform: `translateX(-${2 * height}px) rotate(${isAnimated ? rotate : null}deg)`,
 				border: '10px solid white',
 			}}
 		/>

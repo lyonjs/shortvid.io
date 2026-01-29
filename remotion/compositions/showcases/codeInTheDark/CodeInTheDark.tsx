@@ -15,11 +15,7 @@ export const CodeInTheDark = () => {
 	return (
 		<AbsoluteFill>
 			<Sequence name="KeyboardAudio" durationInFrames={255}>
-				<Audio
-					src={staticFile('sounds/keyboard.mp3')}
-					startFrom={130}
-					volume={0.4}
-				/>
+				<Audio src={staticFile('sounds/keyboard.mp3')} startFrom={130} volume={0.4} />
 			</Sequence>
 			<Sequence name="Background" from={40}>
 				<Background />

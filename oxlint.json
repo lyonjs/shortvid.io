@@ -1,0 +1,12 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"rules": {
+		"no-console": "off",
+		"no-unused-vars": "warn",
+		"no-undef": "off",
+		"eqeqeq": "warn",
+		"unicorn/no-new-array": "off",
+		"unicorn/no-empty-file": "off"
+	},
+	"ignorePatterns": ["node_modules", ".next", "out", "dist", "*.config.js", "*.config.mjs"]
+}

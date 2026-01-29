@@ -11,14 +11,7 @@ export const AvatarWithCaption: React.FC<{
 	avatarStyle?: React.CSSProperties;
 	captionStyle?: React.CSSProperties;
 	style?: React.CSSProperties;
-}> = ({
-	children,
-	avatarPictureUrl,
-	caption,
-	avatarStyle,
-	captionStyle,
-	style,
-}) => {
+}> = ({children, avatarPictureUrl, caption, avatarStyle, captionStyle, style}) => {
 	return (
 		<div
 			style={{

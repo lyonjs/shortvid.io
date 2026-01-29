@@ -49,13 +49,9 @@ export const PosterLocation: React.FC<z.infer<typeof PosterLocationSchema>> = ({
 					flexDirection: 'column',
 				}}
 			>
-				<Title style={{display: 'block', fontSize: '75px', color: 'black'}}>
-					{title}
-				</Title>
+				<Title style={{display: 'block', fontSize: '75px', color: 'black'}}>{title}</Title>
 				{message && (
-					<Title style={{display: 'block', fontSize: '30px', color: 'black'}}>
-						{message}
-					</Title>
+					<Title style={{display: 'block', fontSize: '30px', color: 'black'}}>{message}</Title>
 				)}
 				{arrow && <div style={{fontSize: '200px', lineHeight: 1}}>{arrow}</div>}
 			</header>

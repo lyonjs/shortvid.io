@@ -1,12 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/OpenSans';
-import {
-	AbsoluteFill,
-	Easing,
-	interpolate,
-	Sequence,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, Sequence, useCurrentFrame} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
@@ -59,11 +53,7 @@ export const Silhouette: React.FC<z.infer<typeof SilhouetteSchema>> = ({
 			>
 				<div style={{flex: '1 0 33%', position: 'relative'}}>
 					<Sequence from={25}>
-						<SilhouettePicture
-							silhouetteUrl={silhouetteUrl}
-							side={side}
-							dropShadow={dropShadow}
-						/>
+						<SilhouettePicture silhouetteUrl={silhouetteUrl} side={side} dropShadow={dropShadow} />
 					</Sequence>
 				</div>
 

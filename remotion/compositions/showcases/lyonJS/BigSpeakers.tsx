@@ -34,14 +34,9 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 		durationInFrames: 60,
 	});
 
-	const nameUnblur = interpolate(
-		frame - (animationDelay + 50),
-		[0, 20],
-		[5, 0],
-		{
-			extrapolateRight: 'clamp',
-		},
-	);
+	const nameUnblur = interpolate(frame - (animationDelay + 50), [0, 20], [5, 0], {
+		extrapolateRight: 'clamp',
+	});
 
 	return (
 		<Sequence from={animationDelay} name="Picture">

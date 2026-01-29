@@ -17,10 +17,7 @@ export const LayerTwoSpeaker = ({
 }: z.infer<typeof DefaultLayerSchema>) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
-			<BackgroundTriangle
-				primaryColor={primaryColor}
-				secondaryColor={secondaryColor}
-			/>
+			<BackgroundTriangle primaryColor={primaryColor} secondaryColor={secondaryColor} />
 			{decorationUrl && (
 				<Img
 					style={{
@@ -58,10 +55,7 @@ export const LayerTwoSpeaker = ({
 				</div>
 			)}
 			{sponsorLogoUrl && (
-				<Img
-					src={sponsorLogoUrl}
-					style={{position: 'absolute', top: 10, right: 20, width: 300}}
-				/>
+				<Img src={sponsorLogoUrl} style={{position: 'absolute', top: 10, right: 20, width: 300}} />
 			)}
 		</AbsoluteFill>
 	);

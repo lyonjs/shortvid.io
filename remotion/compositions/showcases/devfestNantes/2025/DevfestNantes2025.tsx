@@ -1,13 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {
-	AbsoluteFill,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-	Video,
-} from 'remotion';
+import {AbsoluteFill, interpolate, Sequence, staticFile, useCurrentFrame, Video} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../../design/atoms/BackgroundFiller';
@@ -75,9 +68,7 @@ export const DevfestNantes2025 = ({
 		>
 			<Sequence from={110}>
 				<BackgroundFiller
-					imageUrl={staticFile(
-						'images/showcases/devfestNantes/2025/library.png',
-					)}
+					imageUrl={staticFile('images/showcases/devfestNantes/2025/library.png')}
 					style={{
 						transform: `scale(${bgZoom})`,
 						transformOrigin: 'center center',

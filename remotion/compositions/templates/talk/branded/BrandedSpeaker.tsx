@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	AbsoluteFill,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {AvatarWithCaption} from '../../../../design/molecules/AvatarWithCaption';
 
@@ -50,18 +44,12 @@ export const BrandedSpeaker = ({
 		[50, 70],
 	];
 
-	const [
-		blobRadius1,
-		blobRadius2,
-		blobRadius3,
-		blobRadius4,
-		blobRadius5,
-		blobRadius6,
-	] = blobRadiuses.map((values) => {
-		return interpolate(frame, [10, 130], values, {
-			extrapolateRight: 'clamp',
+	const [blobRadius1, blobRadius2, blobRadius3, blobRadius4, blobRadius5, blobRadius6] =
+		blobRadiuses.map((values) => {
+			return interpolate(frame, [10, 130], values, {
+				extrapolateRight: 'clamp',
+			});
 		});
-	});
 
 	return (
 		<AbsoluteFill style={{left: 500, top: 70}}>
@@ -81,12 +69,7 @@ export const BrandedSpeaker = ({
 					top: slideIn,
 				}}
 			>
-				<BrandedSpeakerInfos
-					name={name}
-					company={company}
-					job={job}
-					iconStyle={iconStyle}
-				/>
+				<BrandedSpeakerInfos name={name} company={company} job={job} iconStyle={iconStyle} />
 			</AvatarWithCaption>
 		</AbsoluteFill>
 	);

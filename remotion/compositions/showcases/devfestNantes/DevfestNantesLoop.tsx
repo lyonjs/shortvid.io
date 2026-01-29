@@ -1,13 +1,6 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/CrimsonText';
-import {
-	AbsoluteFill,
-	Easing,
-	interpolate,
-	Sequence,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
@@ -47,9 +40,7 @@ export const DevfestNantesLoop = ({
 		>
 			<Sequence>
 				<BackgroundFiller
-					imageUrl={staticFile(
-						'/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png',
-					)}
+					imageUrl={staticFile('/images/showcases/devfestNantes/2023/fond-visuel-etoiles.png')}
 					style={{
 						position: 'absolute',
 						width: '100%',

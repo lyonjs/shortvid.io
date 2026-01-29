@@ -2,12 +2,9 @@ import {useEffect, useState} from 'react';
 import {LottieAnimationData} from '@remotion/lottie';
 import {continueRender, delayRender} from 'remotion';
 
-export const useLottie = (
-	icon: undefined | string,
-): LottieAnimationData | null => {
+export const useLottie = (icon: undefined | string): LottieAnimationData | null => {
 	const [handle] = useState(() => delayRender('Loading Lottie animation'));
-	const [animationData, setAnimationData] =
-		useState<LottieAnimationData | null>(null);
+	const [animationData, setAnimationData] = useState<LottieAnimationData | null>(null);
 
 	useEffect(() => {
 		fetch(`https://assets9.lottiefiles.com/packages/${icon}.json`)

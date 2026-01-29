@@ -20,27 +20,11 @@ export const LightRight: React.FC = () => {
 				/>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2242"
-							d="m2163 657.9h19.4v-31.8h-19.4z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m2163 657.9h19.4v-2.8h-19.4z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m2166.1 659.4h13.3v-2.1h-13.3z"
-						/>
+						<path id="&lt;Path&gt;" className="s2242" d="m2163 657.9h19.4v-31.8h-19.4z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m2163 657.9h19.4v-2.8h-19.4z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m2166.1 659.4h13.3v-2.1h-13.3z" />
 					</g>
-					<path
-						id="&lt;Path&gt;"
-						className="s2237"
-						d="m2179.9 642.5h38.3v-4.2h-38.3z"
-					/>
+					<path id="&lt;Path&gt;" className="s2237" d="m2179.9 642.5h38.3v-4.2h-38.3z" />
 				</g>
 				<path
 					id="shadow-spot"

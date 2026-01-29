@@ -23,9 +23,7 @@ export const Background = () => {
 				}}
 			/>
 			<Img
-				src={staticFile(
-					'/images/showcases/codeInTheDark/codeInTheDarkLogo.png',
-				)}
+				src={staticFile('/images/showcases/codeInTheDark/codeInTheDarkLogo.png')}
 				style={{
 					width: 500,
 					opacity: 0.6,

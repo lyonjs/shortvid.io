@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-	Img,
-	interpolate,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const FireCamp = () => {
 	const frame = useCurrentFrame();
@@ -27,9 +20,7 @@ export const FireCamp = () => {
 
 	return (
 		<Img
-			src={staticFile(
-				'images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png',
-			)}
+			src={staticFile('images/showcases/campingDesSpeakers/campingDesSpeakersLogo.png')}
 			style={{
 				width: 200,
 				position: 'absolute',

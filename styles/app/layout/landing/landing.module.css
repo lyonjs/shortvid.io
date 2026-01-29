@@ -22,31 +22,41 @@
 }
 
 .homeMain {
-	padding: 0 clamp(1rem, 10%, 5rem);
+	padding: 0 clamp(1rem, 8%, 4rem);
+	max-width: 1200px;
+	margin: 0 auto;
 
 	.github {
 		display: block;
 		width: 100%;
-		min-width: 300px;
-		margin: 10rem auto;
-		padding: 2rem;
-		background: var(--github-card-background);
-		border-radius: 10px;
+		max-width: 600px;
+		margin: 4rem auto;
+		padding: 2.5rem;
+		background: linear-gradient(135deg, var(--purple-200) 0%, var(--purple-300) 100%);
+		border-radius: 1rem;
 		transition: all 0.3s ease;
+		box-shadow: 0 8px 32px rgba(157, 78, 221, 0.3);
+
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 12px 40px rgba(157, 78, 221, 0.4);
+		}
 
 		h3,
 		p {
-			color: var(--github-card-text);
+			color: var(--purple-900);
 		}
 
 		h3 {
-			font-size: 2rem;
-			font-weight: 700;
+			font-size: 1.75rem;
+			font-weight: 800;
 			margin-bottom: 1rem;
 		}
 
 		p {
-			text-align: justify;
+			text-align: left;
+			line-height: 1.6;
+			font-size: 1rem;
 
 			&:nth-of-type(1) {
 				margin-bottom: 1rem;
@@ -55,25 +65,21 @@
 
 		a {
 			position: relative;
-			display: flex;
+			display: inline-flex;
 			align-items: center;
 			gap: 0.5rem;
-			margin: 1rem 0 0 auto;
-			padding: 0;
-			color: var(--color-btn-text);
-
-			&::after {
-				background: var(--color-btn-text);
-				transform-origin: left center;
-				width: 100%;
-				left: 0;
-				transform: scaleX(0);
-			}
+			margin: 1.5rem 0 0 0;
+			padding: 0.75rem 1.5rem;
+			background: var(--purple-900);
+			color: white;
+			border-radius: 0.5rem;
+			font-weight: 600;
+			text-decoration: none;
+			transition: all 0.2s ease;
 
 			&:hover {
-				&::after {
-					transform: scaleX(1);
-				}
+				background: var(--purple-800);
+				transform: translateY(-2px);
 			}
 		}
 	}

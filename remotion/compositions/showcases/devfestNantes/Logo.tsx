@@ -31,9 +31,7 @@ export const Logo = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 
 	return (
 		<Img
-			src={staticFile(
-				'/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg',
-			)}
+			src={staticFile('/images/showcases/devfestNantes/2023/logo-devfest-mgm_transparent.svg')}
 			width={logoWidth}
 			height="auto"
 			style={{

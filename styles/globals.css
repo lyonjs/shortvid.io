@@ -36,6 +36,7 @@
 	--color-background: var(--purple-900);
 	--color-separator: var(--grey-100);
 	--color-text: white;
+	--color-text-secondary: var(--grey-100);
 
 	--color-btn-text: var(--purple-900);
 	--color-btn-background: white;
@@ -43,15 +44,9 @@
 	--color-btn-disabled-text: var(--grey-100);
 
 	--btn-gradient: linear-gradient(203deg, var(--purple-300), var(--purple-500));
-	--btn-shadow:
-		rgba(90, 24, 154, 0.5) 0px 0px 10px 0px,
-		rgba(182, 111, 239, 0.5) 0px 0px 20px 0px;
+	--btn-shadow: rgba(90, 24, 154, 0.5) 0px 0px 10px 0px, rgba(182, 111, 239, 0.5) 0px 0px 20px 0px;
 
 	--color-input-background: #eaeaea;
-
-	--switch-background: var(--purple-500);
-	--switch-unselected: var(--grey-100);
-	--switch-border: var(--grey-100);
 
 	--color-error: var(--red-200);
 	--color-error-text: white;
@@ -61,13 +56,7 @@
 
 	--color-logo: white;
 
-	--separator: linear-gradient(
-			90deg,
-			transparent,
-			var(--color-separator),
-			transparent
-		)
-		1;
+	--separator: linear-gradient(90deg, transparent, var(--color-separator), transparent) 1;
 
 	--card-border: var(--purple-700);
 	--card-border-hover: conic-gradient(
@@ -89,50 +78,6 @@
 
 	--github-card-background: var(--purple-100);
 	--github-card-text: var(--purple-900);
-}
-
-[data-theme='light'] {
-	--color-error: var(--red-50);
-	--color-error-text: var(--red-300);
-	--color-success: var(--green-50);
-	--color-success-text: var(--green-300);
-	--color-download-btn-background: var(--green-200);
-
-	--color-primary: var(--purple-300);
-	--color-link: var(--purple-300);
-	--color-background: white;
-	--color-separator: var(--purple-450);
-	--color-text: var(--purple-900);
-
-	--color-btn-text: white;
-	--color-btn-background: var(--purple-600);
-
-	--switch-background: var(--purple-50);
-	--switch-unselected: var(--grey-500);
-	--switch-border: var(--grey-100);
-
-	--color-logo: var(--purple-600);
-
-	--card-border: var(--grey-50);
-	--card-border-hover: conic-gradient(
-		var(--purple-100),
-		var(--purple-100),
-		var(--purple-50),
-		#fff,
-		var(--purple-50),
-		var(--purple-100),
-		var(--purple-100),
-		var(--purple-50),
-		#fff,
-		var(--purple-50),
-		var(--purple-100),
-		var(--purple-100)
-	);
-	--card-background: white;
-	--card-background-hover: white;
-
-	--github-card-background: var(--purple-400);
-	--github-card-text: var(--purple-50);
 }
 
 * {
@@ -176,4 +121,40 @@ button {
 			border: 3px solid transparent;
 		}
 	}
+}
+
+/* Scroll animations */
+.scroll-animate {
+	opacity: 0;
+	transform: translateY(30px);
+	transition:
+		opacity 0.6s ease-out,
+		transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.scroll-animate-fade {
+	opacity: 0;
+	transition: opacity 0.6s ease-out;
+}
+
+.scroll-animate-fade.visible {
+	opacity: 1;
+}
+
+.scroll-animate-scale {
+	opacity: 0;
+	transform: scale(0.95);
+	transition:
+		opacity 0.6s ease-out,
+		transform 0.6s ease-out;
+}
+
+.scroll-animate-scale.visible {
+	opacity: 1;
+	transform: scale(1);
 }

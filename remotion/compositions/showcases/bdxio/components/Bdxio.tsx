@@ -20,10 +20,7 @@ export const Bdxio = ({title, speakers}: z.infer<typeof ShowcaseSchema>) => {
 			}}
 		>
 			<Sequence name="Logo">
-				<Logo
-					logoUrl={staticFile('/images/showcases/bdxio/logo.png')}
-					borderColor="#242457"
-				/>
+				<Logo logoUrl={staticFile('/images/showcases/bdxio/logo.png')} borderColor="#242457" />
 			</Sequence>
 			<Sequence name="Speakers" from={20}>
 				<Speakers speakers={speakers} />

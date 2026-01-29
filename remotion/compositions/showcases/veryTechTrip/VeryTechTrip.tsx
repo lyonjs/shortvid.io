@@ -18,11 +18,7 @@ import {Logo} from './Logo';
 import {Speakers} from './Speakers';
 import {TalkTitle} from './TalkTitle';
 
-export const VeryTechTrip: React.FC<DefaultProps> = ({
-	title,
-	speakers,
-	time,
-}) => {
+export const VeryTechTrip: React.FC<DefaultProps> = ({title, speakers, time}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 

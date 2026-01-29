@@ -10,11 +10,7 @@ export const Combo: React.FC = () => {
 	const MaxCountValue = 51;
 	const loopTimeDuration = 5;
 
-	const inputRange = _.range(
-		0,
-		MaxCountValue * loopTimeDuration,
-		loopTimeDuration,
-	);
+	const inputRange = _.range(0, MaxCountValue * loopTimeDuration, loopTimeDuration);
 	const outputRange = _.range(0, MaxCountValue, 1);
 
 	useEffect(() => {

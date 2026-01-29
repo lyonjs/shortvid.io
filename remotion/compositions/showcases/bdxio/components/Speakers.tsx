@@ -49,26 +49,17 @@ export const Speakers = ({speakers}: SpeakersProps) => {
 					[50, 70],
 				];
 
-				const [
-					blobRadius1,
-					blobRadius2,
-					blobRadius3,
-					blobRadius4,
-					blobRadius5,
-					blobRadius6,
-				] = blobRadiuses.map((values) => {
-					return interpolate(frame, [20, 260], values, {
-						extrapolateRight: 'clamp',
+				const [blobRadius1, blobRadius2, blobRadius3, blobRadius4, blobRadius5, blobRadius6] =
+					blobRadiuses.map((values) => {
+						return interpolate(frame, [20, 260], values, {
+							extrapolateRight: 'clamp',
+						});
 					});
-				});
 
 				return (
 					<AbsoluteFill key={index} style={{left: 500, top: 100}}>
 						<AvatarWithCaption
-							avatarPictureUrl={
-								speaker.picture ||
-								staticFile('/images/common/defaultAvatar.svg')
-							}
+							avatarPictureUrl={speaker.picture || staticFile('/images/common/defaultAvatar.svg')}
 							avatarStyle={{
 								width: avatarSize,
 								height: avatarSize,

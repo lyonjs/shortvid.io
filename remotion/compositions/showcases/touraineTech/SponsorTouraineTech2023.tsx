@@ -11,10 +11,7 @@ export type SponsorProps = {
 	sponsorLogo: string;
 };
 
-export const SponsorTouraineTech2023: React.FC<SponsorProps> = ({
-	message,
-	sponsorLogo,
-}) => {
+export const SponsorTouraineTech2023: React.FC<SponsorProps> = ({message, sponsorLogo}) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<Logo />

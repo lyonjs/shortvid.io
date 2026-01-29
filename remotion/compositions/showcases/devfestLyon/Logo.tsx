@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	Img,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Logo = () => {
 	const frame = useCurrentFrame();
@@ -39,8 +33,7 @@ export const Logo = () => {
 				top: 10,
 				height: '100px',
 				opacity,
-				filter:
-					'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 15px #223364)',
+				filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 15px #223364)',
 			}}
 		/>
 	);

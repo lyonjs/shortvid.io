@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	Img,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Logo: React.FC = () => {
 	const frame = useCurrentFrame();

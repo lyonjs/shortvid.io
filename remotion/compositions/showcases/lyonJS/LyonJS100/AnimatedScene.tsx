@@ -1,12 +1,5 @@
 import React, {PropsWithChildren} from 'react';
-import {
-	AbsoluteFill,
-	Easing,
-	Img,
-	interpolate,
-	staticFile,
-	useCurrentFrame,
-} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
 import {Cinema} from './Scene/Cinema';
 

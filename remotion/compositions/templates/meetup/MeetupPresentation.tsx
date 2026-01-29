@@ -8,10 +8,7 @@ export type MeetupPresentationProps = {
 	title: string;
 };
 
-export const MeetupPresentation = ({
-	title,
-	eventLogo,
-}: MeetupPresentationProps) => {
+export const MeetupPresentation = ({title, eventLogo}: MeetupPresentationProps) => {
 	const endAnimationShift = 50;
 
 	return (

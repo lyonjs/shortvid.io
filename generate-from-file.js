@@ -36,9 +36,7 @@ const run = async () => {
 		process.exit(1);
 	}
 	if (!composition) {
-		console.error(
-			'Please provide remotion composition to render with `--composition`',
-		);
+		console.error('Please provide remotion composition to render with `--composition`');
 		process.exit(1);
 	}
 	console.info(`Generating videos from file: ${jsonFile}`);

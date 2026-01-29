@@ -20,27 +20,11 @@ export const LightLeft: React.FC = () => {
 				/>
 				<g id="&lt;Group&gt;">
 					<g id="&lt;Group&gt;">
-						<path
-							id="&lt;Path&gt;"
-							className="s2239"
-							d="m475.9 657.9h-19.5v-31.8h19.5z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2235"
-							d="m475.9 657.9h-19.5v-2.8h19.5z"
-						/>
-						<path
-							id="&lt;Path&gt;"
-							className="s2236"
-							d="m472.8 659.4h-13.3v-2.1h13.3z"
-						/>
+						<path id="&lt;Path&gt;" className="s2239" d="m475.9 657.9h-19.5v-31.8h19.5z" />
+						<path id="&lt;Path&gt;" className="s2235" d="m475.9 657.9h-19.5v-2.8h19.5z" />
+						<path id="&lt;Path&gt;" className="s2236" d="m472.8 659.4h-13.3v-2.1h13.3z" />
 					</g>
-					<path
-						id="&lt;Path&gt;"
-						className="s2237"
-						d="m458.9 642.5h-38.2v-4.2h38.2z"
-					/>
+					<path id="&lt;Path&gt;" className="s2237" d="m458.9 642.5h-38.2v-4.2h38.2z" />
 				</g>
 				<path
 					id="shadow-spot"

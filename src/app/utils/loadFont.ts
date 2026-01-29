@@ -6,10 +6,7 @@ export function loadLocalFont(
 	format: 'woff2' | 'woff' | 'opentype' | 'truetype',
 ) {
 	const waitForFont = delayRender('Loading local font...');
-	const font = new FontFace(
-		fontName,
-		`url('${staticFile(fontLocalPath)}') format('${format}')`,
-	);
+	const font = new FontFace(fontName, `url('${staticFile(fontLocalPath)}') format('${format}')`);
 
 	font
 		.load()

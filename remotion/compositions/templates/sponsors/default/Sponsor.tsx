@@ -28,10 +28,7 @@ export const Sponsor = ({
 				<SponsorOrgaLogo />
 			</Sequence>
 			<Sequence from={30} name="Titles">
-				<SponsorPresentation
-					companyName={companyName}
-					sponsorLogo={sponsorLogo}
-				/>
+				<SponsorPresentation companyName={companyName} sponsorLogo={sponsorLogo} />
 			</Sequence>
 			<Sequence from={80} name="Localisation">
 				<SponsorMap sponsorLocalisation={sponsorLocalisation} />

@@ -15,8 +15,7 @@ export const TalkDetails: React.FC<{
 	iconStyle?: React.CSSProperties;
 	textStyle?: React.CSSProperties;
 }> = ({items, style, iconStyle, textStyle}) => {
-	const countColumn =
-		(items.date ? 1 : 0) + (items.time ? 1 : 0) + (items.location ? 1 : 0);
+	const countColumn = (items.date ? 1 : 0) + (items.time ? 1 : 0) + (items.location ? 1 : 0);
 
 	return (
 		<div
@@ -83,9 +82,7 @@ export const TalkDetails: React.FC<{
 					}}
 				>
 					<IconWithCaption
-						iconifyId={
-							items.icons?.locationIcon || 'mdi:map-marker-radius-outline'
-						}
+						iconifyId={items.icons?.locationIcon || 'mdi:map-marker-radius-outline'}
 						caption={items.location}
 						style={{
 							position: 'absolute',

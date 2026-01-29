@@ -54,9 +54,7 @@ export const AtomsComposition: React.FC = () => {
 				fps={30}
 				durationInFrames={120}
 				defaultProps={{
-					imageUrl: staticFile(
-						'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
-					),
+					imageUrl: staticFile('/images/showcases/lyonjs/defaultBackgroundImage.jpeg'),
 				}}
 			/>
 			<Composition

@@ -6,14 +6,9 @@ export const Android = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const frame = useCurrentFrame();
 	const logoWidth = 200;
 
-	const fall = interpolate(
-		frame,
-		[0, 200],
-		[-180, isTotemDisplayMode ? 1300 : 760],
-		{
-			extrapolateRight: 'clamp',
-		},
-	);
+	const fall = interpolate(frame, [0, 200], [-180, isTotemDisplayMode ? 1300 : 760], {
+		extrapolateRight: 'clamp',
+	});
 	const rotate = interpolate(frame, [0, 50, 150, 200], [-45, 45, -45, 45], {
 		extrapolateRight: 'clamp',
 		easing: Easing.inOut(Easing.sin),

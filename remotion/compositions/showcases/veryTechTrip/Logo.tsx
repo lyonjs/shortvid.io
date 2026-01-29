@@ -1,10 +1,4 @@
-import {
-	Img,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Logo = () => {
 	const frame = useCurrentFrame();

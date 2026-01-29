@@ -9,10 +9,7 @@ type SponsorPresentationProps = {
 	sponsorLogo?: string;
 };
 
-const SponsorLogoOrName = ({
-	companyName,
-	sponsorLogo,
-}: SponsorPresentationProps) => {
+const SponsorLogoOrName = ({companyName, sponsorLogo}: SponsorPresentationProps) => {
 	if (sponsorLogo) {
 		return <SponsorLogo sponsorLogo={sponsorLogo} />;
 	} else if (companyName !== undefined) {
@@ -20,10 +17,7 @@ const SponsorLogoOrName = ({
 	}
 };
 
-export const SponsorPresentation = ({
-	companyName,
-	sponsorLogo,
-}: SponsorPresentationProps) => {
+export const SponsorPresentation = ({companyName, sponsorLogo}: SponsorPresentationProps) => {
 	const hasSponsorInfo = sponsorLogo || companyName;
 
 	if (!hasSponsorInfo) return null;

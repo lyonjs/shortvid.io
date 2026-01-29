@@ -1,11 +1,4 @@
-import {
-	AbsoluteFill,
-	Img,
-	spring,
-	staticFile,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {AbsoluteFill, Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Title} from '../../../design/atoms/Title';
 

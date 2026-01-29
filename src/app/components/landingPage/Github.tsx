@@ -1,30 +1,27 @@
 import {Icon} from '@iconify/react';
 import Link from 'next/link';
 
-import buttonStyles from '../../../../styles/app/common/buttons.module.css';
 import styles from '../../../../styles/app/layout/landing/landing.module.css';
 
 export const Github = () => {
 	return (
 		<section className={styles.github}>
-			<h3>Open Github discussion</h3>
+			<h3>Need a custom template?</h3>
 			<p>
-				If you would like a showcase video for your event or if you have an idea
-				of a new template, we can create them! All you have to do is open a
-				discussion on our Github so that we can exchange with you about it.
+				Want a showcase video for your event or have an idea for a new template? Open a discussion
+				on GitHub and we&apos;ll work together to create it!
 			</p>
 			<p>
-				You can also create your own template and showcases yourself by forking
-				the project, like that you will have access to all the templates already
-				in the app in addition of your customs ones.
+				You can also fork the project and create your own templates with full access to all existing
+				designs.
 			</p>
 			<Link
 				href="https://github.com/lyonjs/shortvid.io/discussions"
 				target="_blank"
-				className={buttonStyles.btnText}
+				rel="noopener noreferrer"
 			>
-				Open a discussion
-				<Icon icon="majesticons:arrow-right" width={20} height={20} />
+				<Icon icon="mdi:github" width={20} height={20} />
+				Start a discussion
 			</Link>
 		</section>
 	);

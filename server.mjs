@@ -1,10 +1,5 @@
 import {bundle} from '@remotion/bundler';
-import {
-	getCompositions,
-	renderMedia,
-	renderStill,
-	selectComposition,
-} from '@remotion/renderer';
+import {getCompositions, renderMedia, renderStill, selectComposition} from '@remotion/renderer';
 import express from 'express';
 import fs from 'fs';
 import os from 'os';
@@ -54,9 +49,7 @@ app.post('/:compositionId/', async (req, res) => {
 		res.set('content-type', 'video/mp4');
 		res.set('cache-control', 'public, max-age=3600, immutable');
 
-		const tmpDir = await fs.promises.mkdtemp(
-			path.join(os.tmpdir(), 'remotion-'),
-		);
+		const tmpDir = await fs.promises.mkdtemp(path.join(os.tmpdir(), 'remotion-'));
 		const finalOutput = path.join(tmpDir, 'out.mp4');
 
 		await renderMedia({
@@ -70,9 +63,7 @@ app.post('/:compositionId/', async (req, res) => {
 		sendFile(finalOutput);
 		console.log('🎞️ Video rendered and sent ! 🎊');
 	} catch (err) {
-		console.error(
-			`❌ Error while generating video with url ${req.originalUrl}`,
-		);
+		console.error(`❌ Error while generating video with url ${req.originalUrl}`);
 		console.error(err);
 		res.json({
 			error: err,
@@ -105,9 +96,7 @@ app.post('/frame/:compositionId/:frameId', async (req, res) => {
 		res.set('content-type', 'image/png');
 		res.set('cache-control', 'public, max-age=3600, immutable');
 
-		const tmpDir = await fs.promises.mkdtemp(
-			path.join(os.tmpdir(), 'remotion-'),
-		);
+		const tmpDir = await fs.promises.mkdtemp(path.join(os.tmpdir(), 'remotion-'));
 		const finalOutput = path.join(tmpDir, 'frame.png');
 
 		await renderStill({
@@ -121,9 +110,7 @@ app.post('/frame/:compositionId/:frameId', async (req, res) => {
 		sendFile(finalOutput);
 		console.log('🎞️ Frame rendered and sent! 🎊');
 	} catch (err) {
-		console.error(
-			`❌ Error while generating frame with url ${req.originalUrl}`,
-		);
+		console.error(`❌ Error while generating frame with url ${req.originalUrl}`);
 		console.error(err);
 		res.json({
 			error: err,

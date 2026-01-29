@@ -6,23 +6,13 @@ export const Moon = ({isTotemDisplayMode = false}: ComponentDisplayMode) => {
 	const frame = useCurrentFrame();
 	const logoWidth = 200;
 
-	const fall = interpolate(
-		frame,
-		[0, 250],
-		[-450, isTotemDisplayMode ? 1300 : 1000],
-		{
-			extrapolateRight: 'clamp',
-		},
-	);
+	const fall = interpolate(frame, [0, 250], [-450, isTotemDisplayMode ? 1300 : 1000], {
+		extrapolateRight: 'clamp',
+	});
 
-	const moveRight = interpolate(
-		frame,
-		[0, 250],
-		[100, isTotemDisplayMode ? -400 : -200],
-		{
-			extrapolateRight: 'clamp',
-		},
-	);
+	const moveRight = interpolate(frame, [0, 250], [100, isTotemDisplayMode ? -400 : -200], {
+		extrapolateRight: 'clamp',
+	});
 
 	const rotate = interpolate(frame, [0, 400], [0, 200], {
 		extrapolateRight: 'clamp',

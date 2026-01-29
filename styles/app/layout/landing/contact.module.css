@@ -1,18 +1,28 @@
 .contact {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	text-align: center;
 	gap: 1rem;
+	padding: 1rem;
 
 	img {
 		border-radius: 50%;
+		border: 3px solid var(--purple-500);
+		transition: all 0.3s ease;
+	}
+
+	&:hover img {
+		border-color: var(--purple-300);
+		transform: scale(1.05);
 	}
 
 	> div {
 		h4 {
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 			font-weight: 700;
-			color: var(--color-primary);
+			color: var(--color-text);
+			margin-bottom: 0.25rem;
 		}
 
 		.twitter {
@@ -20,13 +30,13 @@
 			justify-content: center;
 			align-items: center;
 			gap: 0.5rem;
-			font-size: 1rem;
+			font-size: 0.95rem;
 			font-weight: 500;
-			color: var(--color-text);
+			color: var(--purple-200);
 
 			> svg {
-				width: 20px;
-				height: 20px;
+				width: 18px;
+				height: 18px;
 			}
 		}
 	}

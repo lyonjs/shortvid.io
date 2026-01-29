@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-	Easing,
-	interpolate,
-	spring,
-	useCurrentFrame,
-	useVideoConfig,
-} from 'remotion';
+import {Easing, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 import {Text} from '../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';

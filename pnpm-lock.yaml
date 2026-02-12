@@ -134,8 +134,8 @@ devDependencies:
     specifier: 8.5.6
     version: 8.5.6
   postcss-nested:
-    specifier: 6.2.0
-    version: 6.2.0(postcss@8.5.6)
+    specifier: 7.0.2
+    version: 7.0.2(postcss@8.5.6)
   tailwindcss:
     specifier: 3.4.19
     version: 3.4.19
@@ -4101,6 +4101,16 @@ packages:
       postcss-selector-parser: 6.1.2
     dev: true
 
+  /postcss-nested@7.0.2(postcss@8.5.6):
+    resolution: {integrity: sha512-5osppouFc0VR9/VYzYxO03VaDa3e8F23Kfd6/9qcZTUI8P58GIYlArOET2Wq0ywSl2o2PjELhYOFI4W7l5QHKw==}
+    engines: {node: '>=18.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss: 8.5.6
+      postcss-selector-parser: 7.1.1
+    dev: true
+
   /postcss-selector-parser@6.1.2:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
@@ -4115,7 +4125,6 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-    dev: false
 
   /postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}

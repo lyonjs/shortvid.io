@@ -3,13 +3,17 @@ import {AbsoluteFill, Audio, interpolate, Sequence, staticFile} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {SpeakerSchema} from '../showcases.types';
 
 import {BigSpeakers} from './BigSpeakers';
 import {Details} from './Details';
 import {Logo} from './Logo';
 import {LogoSponsor} from './LogoSponsor';
 import {TalkTitle} from './TalkTitle';
+
+const SpeakerSchema = z.object({
+	name: z.string(),
+	picture: z.string(),
+});
 
 export const LyonJSReplaySchema = z.object({
 	title: z.string(),

@@ -1,9 +1,8 @@
 import React from 'react';
 import {Composition, Folder} from 'remotion';
 
-import {LyonJSReplaySchema, ReplayLyonJS} from '../showcases/lyonJS/Replay';
-
 import {LayersComposition} from './layers/Layers.composition';
+import {LyonJSReplaySchema, ReplayLyonJS} from './lyonJSReplay/Replay';
 import {Meetup, MeetupSchema} from './meetup/Meetup';
 import {Silhouette, SilhouetteSchema} from './silhouette/Silhouette';
 import {SponsorsComposition} from './sponsors/Sponsors.composition';

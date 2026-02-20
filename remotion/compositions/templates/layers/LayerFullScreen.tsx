@@ -3,7 +3,7 @@ import {AbsoluteFill, Img} from 'remotion';
 import {z} from 'zod';
 
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
-import {GreenScreen} from '../../showcases/lyonJS/GreenScreen';
+import {GreenScreen} from '../../../design/atoms/GreenScreen';
 
 import {LayerSchema} from './layers.types';
 

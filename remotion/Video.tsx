@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {EventComposition} from './compositions/templates/Event.composition';
+import {EventComposition} from './compositions/templates/events/Event.composition';
 import {SponsorsComposition} from './compositions/templates/sponsors/Sponsors.composition';
-import {StreamingComposition} from './compositions/templates/streaming/Streaming.composition';
-import {TalkComposition} from './compositions/templates/Talk.composition';
+import {StreamingComposition} from './compositions/templates/streamings/Streaming.composition';
+import {TalkComposition} from './compositions/templates/talks/Talk.composition';
 
 export const RemotionRoot: React.FC = () => {
 	return (

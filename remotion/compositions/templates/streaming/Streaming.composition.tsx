@@ -6,14 +6,14 @@ import {LayerOneSpeaker} from './LayerOneSpeaker';
 import {DefaultLayerSchema, LayerSchema} from './layers.types';
 import {LayerTwoSpeaker} from './LayerTwoSpeaker';
 
-export const LayersComposition: React.FC = () => {
+export const StreamingComposition: React.FC = () => {
 	const defaultSponsorLogoUrl =
 		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg';
 	const defaultDecorationUrl =
 		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png';
 
 	return (
-		<Folder name="OBS-Scenes">
+		<Folder name="Streaming">
 			<Still
 				id="LayerFullScreen"
 				component={LayerFullScreen}

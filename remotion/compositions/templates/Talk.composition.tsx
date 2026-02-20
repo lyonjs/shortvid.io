@@ -1,20 +1,17 @@
 import React from 'react';
 import {Composition, Folder} from 'remotion';
 
-import {LayersComposition} from './layers/Layers.composition';
-import {LyonJSReplaySchema, ReplayLyonJS} from './lyonJSReplay/Replay';
-import {Meetup, MeetupSchema} from './meetup/Meetup';
+import {LyonJSReplaySchema, ReplayLyonJS} from './replay/Replay';
 import {Silhouette, SilhouetteSchema} from './silhouette/Silhouette';
-import {SponsorsComposition} from './sponsors/Sponsors.composition';
 import {TalkBranded} from './talk/branded/TalkBranded';
 import {Talk} from './talk/Talk';
 import {TalkBrandedSchema, TalkSchema} from './talk/talks.types';
 
 const startingDate = new Date(2023, 3, 18, 13);
 
-export const LyonJSMeetup: React.FC = () => {
+export const TalkComposition: React.FC = () => {
 	return (
-		<Folder name="LyonJS">
+		<Folder name="Talks">
 			<Composition
 				component={Talk}
 				width={1200}
@@ -46,7 +43,7 @@ export const LyonJSMeetup: React.FC = () => {
 				schema={TalkBrandedSchema}
 				defaultProps={{
 					backgroundColor: '#efdb50',
-					title: 'Certification “Google Cloud Architect”',
+					title: 'Certification "Google Cloud Architect"',
 					startingDate,
 					location: '5 Place Jules Ferry, 69006.',
 					logoUrl:
@@ -82,23 +79,6 @@ export const LyonJSMeetup: React.FC = () => {
 				}}
 			/>
 			<Composition
-				component={Meetup}
-				width={1200}
-				height={1200}
-				id="LyonJS-Meetup-Announce"
-				fps={30}
-				durationInFrames={270}
-				schema={MeetupSchema}
-				defaultProps={{
-					title: '#76 - LyonJS de la rentrée 🦁',
-					date: '28 septembre 2022',
-					backgroundImg:
-						'https://github.com/lyonjs/shortvid.io/blob/48ffea960b300eb9230786ed0ab043ec3387e877/public/images/showcases/lyonjs/defaultBackgroundImage.jpeg?raw=true',
-					eventLogo:
-						'https://github.com/lyonjs/shortvid.io/blob/main/public/images/showcases/lyonjs/lyonjsSquaredLogo.png?raw=true',
-				}}
-			/>
-			<Composition
 				width={1920}
 				height={1080}
 				id="LyonJS-Replay"
@@ -119,8 +99,6 @@ export const LyonJSMeetup: React.FC = () => {
 						'https://s3.eu-west-3.amazonaws.com/moovijob.prod/1494438/Horizontal_Black_Logo-Zenika.png',
 				}}
 			/>
-			<LayersComposition />
-			<SponsorsComposition />
 		</Folder>
 	);
 };

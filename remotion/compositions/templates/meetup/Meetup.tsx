@@ -45,10 +45,10 @@ export const Meetup: React.FC<z.infer<typeof MeetupSchema>> = ({
 				</Sequence>
 			)}
 			{registerLogo && (
-			<Sequence from={150}>
-				<Register logo={registerLogo} />
-			</Sequence>
-		)}
+				<Sequence from={150}>
+					<Register logo={registerLogo} />
+				</Sequence>
+			)}
 		</AbsoluteFill>
 	);
 };

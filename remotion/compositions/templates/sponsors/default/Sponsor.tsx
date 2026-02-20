@@ -18,13 +18,15 @@ export const Sponsor = ({
 }: z.infer<typeof SponsorSchema>) => {
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
-			<Sequence name="Background">
-				<SponsorBackground backgroundImg={backgroundImg} />
-			</Sequence>
+			{backgroundImg && (
+				<Sequence name="Background">
+					<SponsorBackground backgroundImg={backgroundImg} />
+				</Sequence>
+			)}
 			<Sequence name="Lottie Thanks">
 				<SponsorThanks />
 			</Sequence>
-			<Sequence from={20} name="LyonJS">
+			<Sequence from={20} name="OrgaLogo">
 				<SponsorOrgaLogo />
 			</Sequence>
 			<Sequence from={30} name="Titles">

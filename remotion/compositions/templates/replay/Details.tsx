@@ -2,6 +2,8 @@ import React from 'react';
 import {loadFont} from '@remotion/google-fonts/Aldrich';
 import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
+import {SHORTVID_COLORS} from '../../../theme';
+
 import {IconWithCaption} from '../../../design/molecules/IconWithCaption';
 
 const {fontFamily} = loadFont();
@@ -57,7 +59,7 @@ export const Details: React.FC<{
 					left: '50%',
 					transform: 'translateX(-50%)',
 					width: '300px',
-					filter: 'drop-shadow(0 0 2px #efdb4f)',
+					filter: `drop-shadow(0 0 2px ${SHORTVID_COLORS.secondary})`,
 				}}
 				src={staticFile('/images/common/underline-white.svg')}
 			/>

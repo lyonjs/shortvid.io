@@ -1,8 +1,6 @@
-import {AbsoluteFill, Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-import {Title} from '../../../design/atoms/Title';
-
-export const Register: React.FC<{size?: number}> = ({size = 200}) => {
+export const Register: React.FC<{logo: string; size?: number}> = ({logo, size = 200}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -24,9 +22,8 @@ export const Register: React.FC<{size?: number}> = ({size = 200}) => {
 					gap: 30,
 				}}
 			>
-				<Title style={{fontSize: 40}}>Inscriptions sur</Title>
 				<Img
-					src={staticFile('/images/showcases/lyonjs/meetupLogo.png')}
+					src={logo}
 					style={{
 						height: size,
 						width: 'auto',

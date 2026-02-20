@@ -1,6 +1,8 @@
 import {loadFont} from '@remotion/google-fonts/Aldrich';
 import {Img, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
+import {SHORTVID_COLORS} from '../../../theme';
+
 const {fontFamily} = loadFont();
 
 export const LogoSponsor: React.FC<{sponsor: string}> = ({sponsor}) => {
@@ -30,7 +32,7 @@ export const LogoSponsor: React.FC<{sponsor: string}> = ({sponsor}) => {
 			<span
 				style={{
 					fontFamily,
-					color: '#323330',
+					color: SHORTVID_COLORS.white,
 					fontSize: 30,
 				}}
 			>

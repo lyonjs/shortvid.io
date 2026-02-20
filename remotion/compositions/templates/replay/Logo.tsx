@@ -1,5 +1,7 @@
 import {Img, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 
+import {SHORTVID_ASSET_PATHS} from '../../../theme';
+
 export const Logo = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -14,7 +16,7 @@ export const Logo = () => {
 
 	return (
 		<Img
-			src={staticFile('/images/showcases/lyonjs/lyonjsSquaredLogo.png')}
+			src={staticFile(SHORTVID_ASSET_PATHS.monogram)}
 			width={150}
 			height="auto"
 			style={{

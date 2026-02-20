@@ -28,7 +28,6 @@ export const MeetupDate: React.FC<{date: string}> = ({date}) => {
 				style={{filter: 'drop-shadow(0px 0px 10px #000000)'}}
 				animationData={illustration}
 			/>
-			;
 			<Title
 				style={{
 					position: 'absolute',

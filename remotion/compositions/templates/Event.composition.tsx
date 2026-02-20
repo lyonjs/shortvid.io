@@ -1,7 +1,15 @@
 import React from 'react';
-import {Composition, Folder} from 'remotion';
+import {Composition, Folder, staticFile} from 'remotion';
+
+import {SHORTVID_ASSET_PATHS} from '../../theme';
 
 import {Meetup, MeetupSchema} from './meetup/Meetup';
+
+const todayFormatted = new Date().toLocaleDateString('fr-FR', {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric',
+});
 
 export const EventComposition: React.FC = () => {
 	return (
@@ -10,17 +18,16 @@ export const EventComposition: React.FC = () => {
 				component={Meetup}
 				width={1200}
 				height={1200}
-				id="LyonJS-Meetup-Announce"
+				id="Meetup-Announce"
 				fps={30}
 				durationInFrames={270}
 				schema={MeetupSchema}
 				defaultProps={{
-					title: '#76 - LyonJS de la rentrée 🦁',
-					date: '28 septembre 2022',
-					backgroundImg:
-						'https://github.com/lyonjs/shortvid.io/blob/48ffea960b300eb9230786ed0ab043ec3387e877/public/images/showcases/lyonjs/defaultBackgroundImage.jpeg?raw=true',
-					eventLogo:
-						'https://github.com/lyonjs/shortvid.io/blob/main/public/images/showcases/lyonjs/lyonjsSquaredLogo.png?raw=true',
+					title: 'Example event title for this template 📅',
+					date: todayFormatted,
+					eventLogo: staticFile(SHORTVID_ASSET_PATHS.monogram),
+					registerLogo: staticFile(SHORTVID_ASSET_PATHS.meetupLogo),
+					backgroundImg: staticFile(SHORTVID_ASSET_PATHS.backgroundImg),
 				}}
 			/>
 		</Folder>

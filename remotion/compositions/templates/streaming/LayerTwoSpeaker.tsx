@@ -1,7 +1,8 @@
 import React from 'react';
-import {AbsoluteFill, Img} from 'remotion';
+import {AbsoluteFill, Img, staticFile} from 'remotion';
 import {z} from 'zod';
 
+import {SHORTVID_ASSET_PATHS} from '../../../theme';
 import {BackgroundTriangle} from '../../../design/atoms/BackgroundTriangle';
 import {GreenScreen} from '../../../design/atoms/GreenScreen';
 
@@ -18,18 +19,16 @@ export const LayerTwoSpeaker = ({
 	return (
 		<AbsoluteFill style={{backgroundColor: 'white', overflow: 'hidden'}}>
 			<BackgroundTriangle primaryColor={primaryColor} secondaryColor={secondaryColor} />
-			{decorationUrl && (
-				<Img
-					style={{
-						zIndex: 1,
-						width: 250,
-						position: 'absolute',
-						bottom: 0,
-						right: 0,
-					}}
-					src={decorationUrl}
-				/>
-			)}
+			<Img
+				style={{
+					zIndex: 1,
+					width: 250,
+					position: 'absolute',
+					bottom: 20,
+					right: 20,
+				}}
+				src={decorationUrl || staticFile(SHORTVID_ASSET_PATHS.logo3D)}
+			/>
 			<div
 				style={{
 					zIndex: 2,

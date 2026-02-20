@@ -1,9 +1,10 @@
+import {SHORTVID_COLORS} from '../../theme';
 import {LeftTriangle} from '../components/LeftTriangle';
 import {RightTriangle} from '../components/RightTriangle';
 
 export const BackgroundTriangle = ({
-	primaryColor = '#323330',
-	secondaryColor = '#efdb4f',
+	primaryColor = SHORTVID_COLORS.primary,
+	secondaryColor = SHORTVID_COLORS.secondary,
 	isAnimated = true,
 }: {
 	primaryColor?: string;

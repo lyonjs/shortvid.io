@@ -15,14 +15,14 @@ const SpeakerSchema = z.object({
 	picture: z.string(),
 });
 
-export const LyonJSReplaySchema = z.object({
+export const ReplaySchema = z.object({
 	title: z.string(),
 	date: z.string(),
 	sponsor: z.string(),
 	speakers: z.array(SpeakerSchema),
 });
 
-export const ReplayLyonJS: React.FC<z.infer<typeof LyonJSReplaySchema>> = ({
+export const Replay: React.FC<z.infer<typeof ReplaySchema>> = ({
 	title,
 	speakers,
 	date,

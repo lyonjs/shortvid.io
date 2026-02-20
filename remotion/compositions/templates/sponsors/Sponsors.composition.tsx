@@ -1,5 +1,7 @@
 import {Composition, Folder, staticFile} from 'remotion';
 
+import {SHORTVID_ASSET_PATHS} from '../../../theme';
+
 import {Sponsor} from './default/Sponsor';
 import {SpotlightNewSponsor} from './spotlightNewSponsor/SpotlightNewSponsor';
 import {SponsorSchema, SpotlightNewSponsorSchema} from './sponsors.types';
@@ -16,10 +18,10 @@ export const SponsorsComposition = () => {
 				durationInFrames={200}
 				schema={SponsorSchema}
 				defaultProps={{
-					companyName: 'Evilcorp',
-					sponsorLocalisation: '94 Rue Robert - Lyon',
-					sponsorLogo: staticFile('/branding/full-logo-with-mono-vertical.svg'),
-					backgroundImg: staticFile('/images/showcases/lyonjs/defaultBackgroundImage.jpeg'),
+					companyName: 'Acme Corp',
+					sponsorLocalisation: '1 rue de la République, 69001 Lyon',
+					sponsorLogo: staticFile(SHORTVID_ASSET_PATHS.logoVertical),
+					backgroundImg: staticFile(SHORTVID_ASSET_PATHS.backgroundImg),
 				}}
 			/>
 			<Composition
@@ -31,9 +33,8 @@ export const SponsorsComposition = () => {
 				fps={60}
 				durationInFrames={750}
 				defaultProps={{
-					logo: staticFile('images/showcases/lyonjs/lyonjsLogo.svg'),
-					sponsorLogo:
-						'https://github.com/lyonjs/shortvid.io/assets/60877626/a4155bda-d6b1-4e2b-8631-6450ef3bf768',
+					logo: staticFile(SHORTVID_ASSET_PATHS.logo),
+					sponsorLogo: staticFile(SHORTVID_ASSET_PATHS.logoHorizontal),
 				}}
 			/>
 		</Folder>

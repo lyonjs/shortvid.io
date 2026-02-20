@@ -4,13 +4,14 @@ import {AbsoluteFill, Easing, interpolate, Sequence, useCurrentFrame} from 'remo
 import {z} from 'zod';
 
 import {BackgroundFiller} from '../../../design/atoms/BackgroundFiller';
+import {SHORTVID_GRADIENTS} from '../../../theme';
 
 import {SilhouetteLogo} from './SilhouetteLogo';
 import {SilhouettePicture} from './SilhouettePicture';
 import {SilhouetteTitle} from './SilhouetteTitle';
 
 export const SilhouetteSchema = z.object({
-	backgroundImg: z.string(),
+	backgroundImg: z.string().optional(),
 	title: z.string(),
 	side: z.enum(['left', 'right']).optional(),
 	silhouetteUrl: z.string(),
@@ -39,11 +40,14 @@ export const Silhouette: React.FC<z.infer<typeof SilhouetteSchema>> = ({
 			style={{
 				overflow: 'hidden',
 				fontFamily,
+				background: SHORTVID_GRADIENTS.primary,
 			}}
 		>
-			<Sequence style={{filter: `blur(${blur}px)`}}>
-				<BackgroundFiller imageUrl={backgroundImg} />
-			</Sequence>
+			{backgroundImg && (
+				<Sequence style={{filter: `blur(${blur}px)`}}>
+					<BackgroundFiller imageUrl={backgroundImg} />
+				</Sequence>
+			)}
 
 			<AbsoluteFill
 				style={{

@@ -1,7 +1,9 @@
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 
+import {SHORTVID_COLORS} from '../../theme';
+
 export const RightTriangle = ({
-	color = '#efdb4f',
+	color = SHORTVID_COLORS.secondary,
 	isAnimated = true,
 }: {
 	color?: string;

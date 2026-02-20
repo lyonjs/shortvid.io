@@ -7,6 +7,7 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
+import {SHORTVID_COLORS} from '../../../theme';
 import {Text} from '../../../design/atoms/Text';
 import {AvatarWithCaption} from '../../../design/molecules/AvatarWithCaption';
 import {Speaker} from '../../../types/defaultProps.types';
@@ -50,7 +51,7 @@ export const BigSpeakers: React.FC<{speakers: Speaker[]; dropTop: number}> = ({
 				}}
 			>
 				{speakers.map((speaker, index) => {
-					const shadowColor = index % 2 === 0 ? '#efdb4f' : '#323330';
+					const shadowColor = index % 2 === 0 ? SHORTVID_COLORS.secondary : SHORTVID_COLORS.primary;
 
 					return (
 						<div

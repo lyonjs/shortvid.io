@@ -1,5 +1,7 @@
 import React from 'react';
-import {Folder, Still} from 'remotion';
+import {Folder, Still, staticFile} from 'remotion';
+
+import {SHORTVID_ASSET_PATHS, SHORTVID_COLORS} from '../../../theme';
 
 import {LayerFullScreen} from './LayerFullScreen';
 import {LayerOneSpeaker} from './LayerOneSpeaker';
@@ -7,10 +9,8 @@ import {DefaultLayerSchema, LayerSchema} from './layers.types';
 import {LayerTwoSpeaker} from './LayerTwoSpeaker';
 
 export const StreamingComposition: React.FC = () => {
-	const defaultSponsorLogoUrl =
-		'https://secure.meetupstatic.com/photos/event/2/8/7/a/600_464230362.jpeg';
-	const defaultDecorationUrl =
-		'https://user-images.githubusercontent.com/60877626/232909816-ca4e61c0-acb2-469b-95dc-beed0cb6b482.png';
+	const defaultSponsorLogoUrl = staticFile(SHORTVID_ASSET_PATHS.logoHorizontal);
+	const defaultDecorationUrl = staticFile(SHORTVID_ASSET_PATHS.logo3D);
 
 	return (
 		<Folder name="Streaming">
@@ -22,8 +22,8 @@ export const StreamingComposition: React.FC = () => {
 				height={1080}
 				defaultProps={{
 					decorationUrl: defaultDecorationUrl,
-					primaryColor: '#323330',
-					secondaryColor: '#efdb4f',
+					primaryColor: SHORTVID_COLORS.primary,
+					secondaryColor: SHORTVID_COLORS.secondary,
 				}}
 			/>
 			<Still
@@ -33,11 +33,11 @@ export const StreamingComposition: React.FC = () => {
 				width={1920}
 				height={1080}
 				defaultProps={{
-					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+					title: 'Example talk title for this template 🚀',
 					sponsorLogoUrl: defaultSponsorLogoUrl,
 					decorationUrl: defaultDecorationUrl,
-					primaryColor: '#323330',
-					secondaryColor: '#efdb4f',
+					primaryColor: SHORTVID_COLORS.primary,
+					secondaryColor: SHORTVID_COLORS.secondary,
 				}}
 			/>
 			<Still
@@ -45,11 +45,11 @@ export const StreamingComposition: React.FC = () => {
 				component={LayerTwoSpeaker}
 				schema={DefaultLayerSchema}
 				defaultProps={{
-					title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+					title: 'Example talk title for this template 🚀',
 					sponsorLogoUrl: defaultSponsorLogoUrl,
 					decorationUrl: defaultDecorationUrl,
-					primaryColor: '#323330',
-					secondaryColor: '#efdb4f',
+					primaryColor: SHORTVID_COLORS.primary,
+					secondaryColor: SHORTVID_COLORS.secondary,
 				}}
 				width={1920}
 				height={1080}

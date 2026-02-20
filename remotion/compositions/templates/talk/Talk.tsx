@@ -1,9 +1,10 @@
 import React from 'react';
 import {loadFont} from '@remotion/google-fonts/OpenSans';
-import {AbsoluteFill, Sequence, staticFile} from 'remotion';
+import {AbsoluteFill, Sequence} from 'remotion';
 import {z} from 'zod';
 
 import {EventLogo} from '../../../design/atoms/EventLogo';
+import {SHORTVID_COLORS, SHORTVID_GRADIENTS} from '../../../theme';
 
 import {SpeakerAndTitle} from './SpeakerAndTitle';
 import {TalkBackground} from './TalkBackground';
@@ -17,19 +18,22 @@ export const Talk: React.FC<z.infer<typeof TalkSchema>> = ({
 	talkTitle,
 	speakerPicture,
 	titleSize = 80,
-	titleColor = '#efdb50',
-	backgroundImg = staticFile('/images/showcases/lyonjs/defaultBackgroundImage.jpeg'),
+	titleColor = SHORTVID_COLORS.secondary,
+	backgroundImg,
 }) => {
 	return (
 		<AbsoluteFill
 			style={{
 				overflow: 'hidden',
 				fontFamily,
+				background: SHORTVID_GRADIENTS.primary,
 			}}
 		>
-			<Sequence name="Background">
-				<TalkBackground backgroundImg={backgroundImg} />
-			</Sequence>
+			{backgroundImg && (
+				<Sequence name="Background">
+					<TalkBackground backgroundImg={backgroundImg} />
+				</Sequence>
+			)}
 			<AbsoluteFill>
 				<SpeakerAndTitle
 					speakersNames={speakersNames}

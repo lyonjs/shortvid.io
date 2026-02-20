@@ -7,14 +7,14 @@ export const SponsorOrgaLogo = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const lyonJSLogoAppear = spring({
+	const logoAppear = spring({
 		frame,
 		fps,
 		from: -400,
 		to: 50,
 		durationInFrames: 30,
 	});
-	const lyonJSLogoDeblur = interpolate(frame, [0, 20], [5, 0], {
+	const logoDeblur = interpolate(frame, [0, 20], [5, 0], {
 		extrapolateRight: 'clamp',
 	});
 
@@ -23,10 +23,10 @@ export const SponsorOrgaLogo = () => {
 			style={{
 				position: 'absolute',
 				bottom: 60,
-				right: lyonJSLogoAppear,
+				right: logoAppear,
 				height: 100,
 				width: 'auto',
-				filter: `blur(${lyonJSLogoDeblur}px)`,
+				filter: `blur(${logoDeblur}px)`,
 			}}
 		/>
 	);

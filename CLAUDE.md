@@ -54,23 +54,6 @@ Render still frame:
 pnpm remotion still <CompositionId> out/<filename>.jpeg --frame=-1 --props='{"key":"value"}'
 ```
 
-Batch render from JSON file:
-
-```bash
-node generate-from-file.js --file=<path-to-json> --composition=<CompositionId> [--withImage]
-```
-
-### Server-Side Rendering
-
-```bash
-pnpm serve                      # Start Express server on port 8000 for SSR video generation
-```
-
-Server endpoints:
-
-- `POST /:compositionId/` - Generate and return video
-- `POST /frame/:compositionId/:frameId` - Generate and return single frame
-
 ## Architecture
 
 ### Directory Structure
@@ -109,8 +92,6 @@ src/
 └── data/                   # Static data and configuration
 
 __test__/                   # Jest test files mirroring app structure
-
-server.mjs                  # Express server for server-side video rendering
 ```
 
 ### Composition System
@@ -192,11 +173,3 @@ docker run -v $(pwd)/out:/usr/src/app/out -it zenika/shortvid pnpm remotion rend
 - **Output Directory**: Rendered videos/images go to `out/` directory
 - **Entry Point**: `remotion/index.tsx` is the required entry point for all Remotion CLI commands
 
-## Server-Side Rendering API
-
-The Express server (`server.mjs`) bundles the Remotion project once on startup, then handles render requests:
-
-- Bundles `remotion/index.tsx` on server start
-- POST to `/:compositionId/` with JSON body containing props
-- Returns rendered MP4 with caching headers
-- CORS configured for `*.shortvid.io` and Vercel preview URLs

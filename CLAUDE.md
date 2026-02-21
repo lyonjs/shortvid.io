@@ -172,4 +172,3 @@ docker run -v $(pwd)/out:/usr/src/app/out -it zenika/shortvid pnpm remotion rend
 - **Props**: Composition props can be passed via JSON files, URL parameters (in web UI), or CLI `--props` flag
 - **Output Directory**: Rendered videos/images go to `out/` directory
 - **Entry Point**: `remotion/index.tsx` is the required entry point for all Remotion CLI commands
-

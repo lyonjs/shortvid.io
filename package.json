@@ -50,7 +50,7 @@
 		"@types/node": "20.16.6",
 		"@types/react": "19.2.10",
 		"@types/react-dom": "19.2.3",
-		"@types/web": "0.0.323",
+		"@types/web": "0.0.337",
 		"@vitejs/plugin-react": "^5.1.2",
 		"@vitest/coverage-v8": "^4.0.18",
 		"autoprefixer": "10.4.23",

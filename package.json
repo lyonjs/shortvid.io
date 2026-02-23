@@ -57,7 +57,7 @@
 		"debug": "4.4.3",
 		"husky": "9.1.7",
 		"jsdom": "^27.4.0",
-		"oxfmt": "^0.34.0",
+		"oxfmt": "^0.35.0",
 		"oxlint": "^1.42.0",
 		"postcss": "8.5.6",
 		"postcss-nested": "6.2.0",

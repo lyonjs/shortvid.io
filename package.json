@@ -53,7 +53,7 @@
 		"@types/web": "0.0.337",
 		"@vitejs/plugin-react": "^5.1.2",
 		"@vitest/coverage-v8": "^4.0.18",
-		"autoprefixer": "10.4.23",
+		"autoprefixer": "10.4.24",
 		"debug": "4.4.3",
 		"husky": "9.1.7",
 		"jsdom": "^27.4.0",

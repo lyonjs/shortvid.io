@@ -31,7 +31,7 @@ dependencies:
     version: 4.0.428(react-dom@19.2.4)(react@19.2.4)
   '@remotion/zod-types':
     specifier: 4.0.428
-    version: 4.0.428(react-dom@19.2.4)(react@19.2.4)(zod@3.25.76)
+    version: 4.0.428(react-dom@19.2.4)(react@19.2.4)(zod@4.3.6)
   lottie-web:
     specifier: 5.13.0
     version: 5.13.0
@@ -51,8 +51,8 @@ dependencies:
     specifier: 4.0.428
     version: 4.0.428(react-dom@19.2.4)(react@19.2.4)
   zod:
-    specifier: 3.25.76
-    version: 3.25.76
+    specifier: 4.3.6
+    version: 4.3.6
 
 devDependencies:
   '@iconify/react':
@@ -1981,18 +1981,6 @@ packages:
     resolution: {integrity: sha512-3Z2nXkH8Se6+ubVwEqS+SLRdsuobo20HfOeXzQYrjzqYeFa45nW+bLKWR03bkxu/hU+0XzbfTaPCodE0igaxSg==}
     dependencies:
       '@remotion/media-parser': 4.0.428
-    dev: false
-
-  /@remotion/zod-types@4.0.428(react-dom@19.2.4)(react@19.2.4)(zod@3.25.76):
-    resolution: {integrity: sha512-C91WHt09JF3gu8eIzU6WiPfPCHfvY5vZNtR8jronxnLF/uM2pdrVYJ7UimTsqCxD+jeqMfmSl8SmFA9ednAy3Q==}
-    peerDependencies:
-      zod: 4.3.6
-    dependencies:
-      remotion: 4.0.428(react-dom@19.2.4)(react@19.2.4)
-      zod: 3.25.76
-    transitivePeerDependencies:
-      - react
-      - react-dom
     dev: false
 
   /@remotion/zod-types@4.0.428(react-dom@19.2.4)(react@19.2.4)(zod@4.3.6):
@@ -5001,10 +4989,6 @@ packages:
     dependencies:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
-    dev: false
-
-  /zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
     dev: false
 
   /zod@4.3.6:

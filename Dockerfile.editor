@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.21
-FROM node:20-bookworm
+FROM node:24-bookworm
 RUN apt-get update
 RUN apt install -y \
   libnss3 \

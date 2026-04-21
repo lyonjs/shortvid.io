@@ -14,7 +14,7 @@ jobs:
       - uses: pnpm/action-setup@v3.0.0
         name: Install pnpm
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@main
         with:
           node-version: "24"
@@ -30,7 +30,7 @@ jobs:
       - uses: pnpm/action-setup@v3.0.0
         name: Install pnpm
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@main
         with:
           node-version: "24"
@@ -46,7 +46,7 @@ jobs:
       - uses: pnpm/action-setup@v3.0.0
         name: Install pnpm
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@main
         with:
           node-version: "24"
@@ -62,7 +62,7 @@ jobs:
       - uses: pnpm/action-setup@v3.0.0
         name: Install pnpm
         with:
-          version: 8
+          version: 10
       - uses: actions/setup-node@main
         with:
           node-version: "24"

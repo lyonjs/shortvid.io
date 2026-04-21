@@ -17,6 +17,7 @@ jobs:
           version: 8
       - uses: actions/setup-node@main
         with:
+          node-version: "24"
           cache: pnpm
       - run: pnpm install --frozen-lockfile --prefer-offline
       - run: pnpm run test
@@ -32,6 +33,7 @@ jobs:
           version: 8
       - uses: actions/setup-node@main
         with:
+          node-version: "24"
           cache: pnpm
       - run: pnpm install --frozen-lockfile --prefer-offline
       - run: pnpm lint
@@ -47,6 +49,7 @@ jobs:
           version: 8
       - uses: actions/setup-node@main
         with:
+          node-version: "24"
           cache: pnpm
       - run: pnpm install --frozen-lockfile --prefer-offline
       - run: pnpm format:check
@@ -62,6 +65,7 @@ jobs:
           version: 8
       - uses: actions/setup-node@main
         with:
+          node-version: "24"
           cache: pnpm
       - run: pnpm install --frozen-lockfile --prefer-offline
       - run: pnpm build

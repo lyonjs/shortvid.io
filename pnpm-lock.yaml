@@ -31,7 +31,7 @@ dependencies:
     version: 4.0.459(react-dom@19.2.6)(react@19.2.6)
   '@remotion/zod-types':
     specifier: 4.0.459
-    version: 4.0.459(react-dom@19.2.6)(react@19.2.6)(zod@3.25.76)
+    version: 4.0.459(react-dom@19.2.6)(react@19.2.6)(zod@4.4.3)
   lottie-web:
     specifier: 5.13.0
     version: 5.13.0
@@ -51,8 +51,8 @@ dependencies:
     specifier: 4.0.459
     version: 4.0.459(react-dom@19.2.6)(react@19.2.6)
   zod:
-    specifier: 3.25.76
-    version: 3.25.76
+    specifier: 4.4.3
+    version: 4.4.3
 
 devDependencies:
   '@iconify/react':
@@ -1795,18 +1795,6 @@ packages:
       remotion: 4.0.459(react-dom@19.2.6)(react@19.2.6)
     dev: false
 
-  /@remotion/zod-types@4.0.459(react-dom@19.2.6)(react@19.2.6)(zod@3.25.76):
-    resolution: {integrity: sha512-j/fNgjKO9ATpaCBbWxJK07FoVIUPoGae2lqrws1MoSD4tZkoFssgkl5dLt/HimNKi6zTz+FrcUZ4c4tIZsUq1A==}
-    peerDependencies:
-      zod: 4.3.6
-    dependencies:
-      remotion: 4.0.459(react-dom@19.2.6)(react@19.2.6)
-      zod: 3.25.76
-    transitivePeerDependencies:
-      - react
-      - react-dom
-    dev: false
-
   /@remotion/zod-types@4.0.459(react-dom@19.2.6)(react@19.2.6)(zod@4.3.6):
     resolution: {integrity: sha512-j/fNgjKO9ATpaCBbWxJK07FoVIUPoGae2lqrws1MoSD4tZkoFssgkl5dLt/HimNKi6zTz+FrcUZ4c4tIZsUq1A==}
     peerDependencies:
@@ -1814,6 +1802,18 @@ packages:
     dependencies:
       remotion: 4.0.459(react-dom@19.2.6)(react@19.2.6)
       zod: 4.3.6
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
+
+  /@remotion/zod-types@4.0.459(react-dom@19.2.6)(react@19.2.6)(zod@4.4.3):
+    resolution: {integrity: sha512-j/fNgjKO9ATpaCBbWxJK07FoVIUPoGae2lqrws1MoSD4tZkoFssgkl5dLt/HimNKi6zTz+FrcUZ4c4tIZsUq1A==}
+    peerDependencies:
+      zod: 4.3.6
+    dependencies:
+      remotion: 4.0.459(react-dom@19.2.6)(react@19.2.6)
+      zod: 4.4.3
     transitivePeerDependencies:
       - react
       - react-dom
@@ -4772,10 +4772,10 @@ packages:
       fd-slicer: 1.1.0
     dev: false
 
-  /zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
-    dev: false
-
   /zod@4.3.6:
     resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+    dev: false
+
+  /zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
     dev: false

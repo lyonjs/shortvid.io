@@ -38,7 +38,7 @@
 		"react": "19.2.6",
 		"react-dom": "19.2.6",
 		"remotion": "4.0.459",
-		"zod": "3.25.76"
+		"zod": "4.4.3"
 	},
 	"devDependencies": {
 		"@iconify/react": "^5.0.0",

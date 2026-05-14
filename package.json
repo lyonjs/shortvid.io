@@ -51,7 +51,7 @@
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
 		"@types/web": "0.0.349",
-		"@vitejs/plugin-react": "^5.1.2",
+		"@vitejs/plugin-react": "^6.0.0",
 		"@vitest/coverage-v8": "^4.0.18",
 		"autoprefixer": "10.5.0",
 		"debug": "4.4.3",

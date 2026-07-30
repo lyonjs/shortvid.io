@@ -51,8 +51,8 @@ dependencies:
     specifier: 4.0.501
     version: 4.0.501(react-dom@19.2.8)(react@19.2.8)
   zod:
-    specifier: 3.25.76
-    version: 3.25.76
+    specifier: 4.4.3
+    version: 4.4.3
 
 devDependencies:
   '@iconify/react':
@@ -4984,10 +4984,6 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-    dev: false
-
-  /zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
     dev: false
 
   /zod@4.4.3:

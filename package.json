@@ -34,7 +34,7 @@
 		"@remotion/zod-types": "4.0.501",
 		"lottie-web": "5.13.0",
 		"luxon": "^3.4.4",
-		"next": "16.2.12",
+		"next": "16.3.3",
 		"react": "19.2.8",
 		"react-dom": "19.2.8",
 		"remotion": "4.0.501",

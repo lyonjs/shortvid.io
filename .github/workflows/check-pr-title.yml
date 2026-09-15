@@ -14,6 +14,6 @@ jobs:
     if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
-      - uses: Slashgear/action-check-pr-title@v4.3.0
+      - uses: Slashgear/action-check-pr-title@v5.0.1
         with:
           regexp: '^(revert: )?(chore|ci|docs|feat|fix|perf|refactor|style|test)\(.{1,15}\): .{1,50}'

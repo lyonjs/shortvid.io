@@ -43,7 +43,7 @@
 	"devDependencies": {
 		"@iconify/react": "^5.0.0",
 		"@testing-library/dom": "10.4.2",
-		"@testing-library/jest-dom": "6.9.1",
+		"@testing-library/jest-dom": "7.0.1",
 		"@testing-library/react": "16.3.3",
 		"@testing-library/user-event": "14.6.8",
 		"@types/luxon": "^3.4.2",
